@@ -16,6 +16,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# 支持md格式
+from recommonmark.parser import CommonMarkParser
 
 # -- Project information -----------------------------------------------------
 
