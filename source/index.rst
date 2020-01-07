@@ -15,7 +15,7 @@ Contents
    :maxdepth: 1
    :caption: 首页
 
-   index.md
+   home/index
 
 .. _start-docs:
 
