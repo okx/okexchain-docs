@@ -12,6 +12,14 @@ Contents
 ========
 
 .. toctree::
+   :maxdepth: 1
+   :caption: 首页
+
+   index.md
+
+.. _start-docs:
+
+.. toctree::
    :maxdepth: 3
    :caption: 快速开始
 
@@ -44,10 +52,8 @@ Contents
    concepts/general-concepts
    concepts/sentry-nodes
    getting-start/genesis
-   developers/index
-   fee.rst
+   fee.md
    concepts/gov
-   legal.rst
    trade/periodic_auction
    concepts/upgrade-concept
 
@@ -64,7 +70,6 @@ Contents
    features/backend
    governance/overview
    features/upgrade-overview
-
 
 .. _cmdClient-docs:
 
@@ -86,11 +91,9 @@ Contents
    :caption: API服务
 
    api/http
-   api/websocket
    api/node_rpc
    api/sdk
    api/msg
-
 
 .. _tool-docs:
 
@@ -107,4 +110,4 @@ Contents
    :maxdepth: 1
    :caption: 常见问题
 
-   faq.rst
+   faq.md
