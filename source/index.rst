@@ -10,7 +10,7 @@ OKChain介绍文档
 快速开始
 --------
 
--  想要快速了解OKChain请看\ `这里`_
+-  想要快速了解OKChain请看\ `这里 <getting-start/introduction.html>`__
 -  快速安装请看\ `这里 <getting-start/install.html>`__
 -  快速数字资产发行和数字资产交易对申请请看\ `这里 <getting-start/ico.html>`__
 
