@@ -3,21 +3,45 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-==================
-OKChain 文档
-==================
 
+OKChain介绍文档
+===============
+
+快速开始
+--------
+
+-  想要快速了解OKChain请看\ `这里`_
+-  快速安装请看\ `这里 <getting-start/install.md>`__
+-  快速数字资产发行和数字资产交易对申请请看\ `这里 <getting-start/ico.md>`__
+
+接口服务
+--------
+
+-  API接口请查看\ `这里 <api/http.md>`__
+-  RPC接口请查看\ `这里 <api/node_rpc.md>`__
+
+DEX
+---
+
+DEX是基于OKChain建立的去中心化交易系统。采用链上撮合和链上订单簿的设计。
+
+-  关于集合竞价请看\ `这里 <trade/periodic_auction.md>`__
+-  关于手续费请看\ `这里 <fee.md>`__
+
+版本
+----
+
+此文档对应程序的版本为：0.1
+
+
+
+
+
+
+.. _这里: getting-start/introduction.md
 
 Contents
 ========
-
-.. toctree::
-   :maxdepth: 1
-   :caption: 首页
-
-   home/index
-
-.. _start-docs:
 
 .. toctree::
    :maxdepth: 3
