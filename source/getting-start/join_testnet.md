@@ -26,7 +26,9 @@ Monikers只能包含ASCII字符. Unicode字符可能导致节点在网络中不�
 ## 2. 创世文件
 
 创世文件介绍请参考[Genesis介绍](genesis.md)
+
 ### 2.1 下载创世文件:
+
 从官网[genesis文件](http://gitlab.okcoin-inc.com/dex/launch/blob/testnet01/genesis.json)链接下载genesis.json创世文件
 
 并校验genesis.json的完整性，保证与测试网使用的是同一个创世文件
@@ -54,7 +56,9 @@ seeds = "b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656,d7eec05e6449
 ```
 
 ## 4. 启动节点
+
 ### 4.1 使用okchaind启动
+
 通过`config.toml`中配置的种子节点连接到OKChain
 ```bash
 okchaind start 
@@ -62,7 +66,9 @@ okchaind start
 
 
 ### 4.2 使用docker启动
+
 #### 4.2.1 使用docker命令启动
+
 okchaind也可以通过容器的方式启动，目前官方发布了多个docker镜像，$TAG表示对应的okchaind版本, 测试网`$TAG=v0.1.0`.
 ```bash
 $ docker run \
@@ -77,6 +83,7 @@ $ docker run \
     okchaind start
 ```
 #### 4.2.2 使用docker-compose命令启动
+
 首先，保存下面到`okchain_full_node.yml`文件中。
 ```yml
 version: '2'
@@ -106,27 +113,32 @@ services:
 
 
 ### 4.3 开启backend模块
+
 如果需要从节点中获取额外数据（如K线、行情、订单列表、交易列表等），那么在启动节点时需要开启backend模块。
 ```bash
 okchaind start --backend.enable_backend=1 --backend.orm_engine.engine_type=sqlite3 --backend.orm_engine.connect_str=$db_filepath
 ```
 
 ## 5. 关闭节点
+
 当需要关闭节点的时候，需要按照如下方式让okchaind优雅退出, 否则会造成区块数据损坏：
 
 ### 5.1 关闭okchaind start方式启动的节点
+
 ```bash
 # grep "okchaind" | grep -v grep |awk '{print "kill -2 "$1""}' |  bash
 okchaind stop
 ```
 
 ### 5.2 关闭docker方式启动的节点
+
 ```bash
 # docker exec -i <container_id> ps -ef| grep "okchaind" | grep -v grep |awk '{print "kill -2 "$1""}' | docker exec -i <container_id> /bin/bash
 docker exec -i <container_id> okchaind stop
 ```
 
 ### 5.3 关闭docker-compose方式启动的节点
+
 ```bash
 # docker-compose exec -i <container_id> ps -ef| grep "okchaind" | grep -v grep |awk '{print "kill -2 "$1""}' | docker-compose exec -i <container_id> /bin/bash
 docker-compose exec -i <container_id> okchaind stop

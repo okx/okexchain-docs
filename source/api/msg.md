@@ -1,6 +1,6 @@
-# 不同类型Msg对应的Transaction查询结果
+# Msg
 
-## 1. gov
+## gov
 
 ### Text
 ```json
@@ -154,7 +154,7 @@
 }
 ```
 
-### 上币提案
+### 数字资产交易对申请提案
 ```json
 {
   "height": "1436",
@@ -303,7 +303,7 @@
   "timestamp": "2019-08-05T08:07:35Z"
 }
 ```
-#### deposit
+### deposit
 ```json
 {
   "height": "1557",
@@ -422,7 +422,7 @@
   "timestamp": "2019-08-05T08:02:41Z"
 }
 ```
-### 上币激活
+### 数字资产交易对激活
 ```json
 {
   "height": "2259",
@@ -497,7 +497,7 @@
 }
 ```
 
-## 2. staking
+## staking
 
 ### 创建验证人
 ```json
@@ -830,7 +830,7 @@
 	}
 }
 ```
-## 3. token
+## token
 ### issue
 ```json
 {
@@ -1280,7 +1280,7 @@
 }
 
 ```
-## 4. distribution
+## distribution
 ### 修改自己的分红取款地址
 ```json
 {
@@ -1335,7 +1335,7 @@
  }
 }
 ```
-## 5. order
+## order
 
 ### 下单
 ```json

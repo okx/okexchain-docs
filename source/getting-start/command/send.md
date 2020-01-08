@@ -1,25 +1,27 @@
-# 转账
+# Send
 
-## 1. 转账
+## 转账
 
 ```bash
 okchaincli tx send <addr> <amount> --from <name>
 ```
 
-### 参数说明
+#### 参数说明
   
 | **Name** | **Type** |                    **Description**                    |
   | :------: | :------: | :---------------------------------------------------: |
   |   addr   |  string  |                  要转给的用户的地址                   |
-  |  amount  |  string  | 要转账的数量，可以包含多个币种以逗号分隔比如1okt,2bcoin |
-  |   from   |  String  |                      币的所有者                       |
+  |  amount  |  string  | 要转账的数量，可以包含多个数字资产以逗号分隔比如1okt,2bcoin |
+  |   from   |  String  |                      数字资产的所有者                       |
   
-### 示例
+#### 示例
 
 ```bash
 okchaincli tx send okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2okt --from alice -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "63",
@@ -45,11 +47,12 @@ okchaincli tx send okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2okt --from al
 }
 ```
 
-## 2. 多签转账
+## 多签转账
 
 多签分成以下多个步骤：
 
-### 2.1. 创建账户p1, p2, p3：
+### 创建账户p1, p2, p3：
+
 示例：
 ```bash
 okchaincli keys add --pubkey=cosmospub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
@@ -59,7 +62,7 @@ okchaincli keys add --pubkey=cosmospub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtq
 okchaincli keys add --pubkey=cosmospub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
-### 2.2. 生成多签公钥： 
+### 生成多签公钥： 
 
 * 聚合p1，p2，p3的多签公钥，设置签名阈值为N，即任意N人的签名即可让签名通过。
 
@@ -80,10 +83,14 @@ okchaincli keys show -a p1p2p3
 okchaincli tx send cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1okt --from=alice
 okchaincli query account cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 ```
-### 2.3. 多签：
+### 多签：
+
 #### 构造未签名交易：
+
 构造未签名交易`unsignedTx.json`
+
 ##### 示例：
+
 ```bash
 okchaincli tx send cosmos1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10okt \
   --chain-id=okchain \
@@ -91,6 +98,7 @@ okchaincli tx send cosmos1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10okt \
   --generate-only > unsignedTx.json
 ```
 #### p1, p2, p3分别签名：
+
 ##### 示例：
 ```bash
 okchaincli tx sign \
@@ -107,17 +115,24 @@ okchaincli tx sign \
   unsignedTx.json 
 ```
 #### 构造聚合签名：
+
 构造聚合签名`signedTx.json`，因为门限设定的是2，所有有p1p2两个就可以执行
+
 ##### 示例：
+
 ```bash 
 okchaincli tx multisign \
   unsignedTx.json \
   p1p2p3 \
   p1signature.json p2signature.json > signedTx.json
 ```
-### 2.4. 执行交易signedTx.json：
+
+### 执行交易signedTx.json：
+
 执行离线签名过的`signedTx.json`,并查询余额确认。
+
 #### 示例：
+
 ```bash 
 okchaincli tx broadcast signedTx.json
 

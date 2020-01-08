@@ -1,7 +1,8 @@
-# 治理
+# Governance
 
-## 1. Text提案命令：
-### 参数说明：  
+## Text提案命令：
+
+#### 参数说明：  
 
 | Name                | Description                                                           |
 | :------             | :------                                                               |
@@ -13,11 +14,14 @@
 | --home              | 账户名称和okchaincli配置所在目录<br>如果为~/.okchaincli可以忽略该参数 |
 | -b/--broadcast-mode | 指定交易广播方式（async、sync、block）                                |
 
-### 示例：
+#### 示例：
+
 ```bash
 okchaincli tx gov submit-text-proposal --title="test" --description="test" --type=Text --deposit="80okt" --from alice --home ~/.okchaincli -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "156",
@@ -47,8 +51,10 @@ okchaincli tx gov submit-text-proposal --title="test" --description="test" --typ
   ]
 }
 ```
-## 2. 参数修改提案命令：
-### 参数说明：
+
+## 参数修改提案命令：
+
+#### 参数说明：
 
 | Name                | Description                                                                                                                                                                                                                                                             |
 | :------             | :------                                                                                                                                                                                                                                                                 |
@@ -61,11 +67,14 @@ okchaincli tx gov submit-text-proposal --title="test" --description="test" --typ
 | --home              | 账户名称和okchaincli配置所在目录<br>如果为~/.okchaincli可以忽略该参数                                                                                                                                                                                                   |
 | -b/--broadcast-mode | 指定交易广播方式（async、sync、block）                                                                                                                                                                                                                                  |
 
-### 示例：
+#### 示例：
+
 ```bash
 okchaincli tx gov submit-param-change-proposal --title="Change gov/MinDeposit" --type="ParameterChange" --deposit="60okt" --from alice --param='gov/MinDeposit=1000okt' --height=1000 -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "723",
@@ -99,30 +108,35 @@ okchaincli tx gov submit-param-change-proposal --title="Change gov/MinDeposit" -
   ]
 }
 ```
-## 3. 上币申请提案命令：
-### 参数说明：
+
+## 数字资产交易对申请提案命令：
+
+#### 参数说明：
 
 | Name                | Description                                                                                                                                                                                                    |
 | :------             | :------                                                                                                                                                                                                        |
 | --title             | 提案的标题内容                                                                                                                                                                                                 |
 | --type              | 发起提案的类型（这里指定为ParameterChange）                                                                                                                                                                    |
 | --deposit           | 发起提案时指定的初始抵押                                                                                                                                                                                       |
-| --listAsset         | 指定上币的币种（上币之前需先发行该币，发行参见[该链接](/api/command/token/#11)）                                                                                                                               |
-| --quoteAsset        | 指定与listAsset构交易币对的币种（目前只支持okt）                                                                                                                                                               |
-| --initPrice         | 是在上币时指定的币对初始价格，该价格作为初始交易的参考价格                                                                                                                                                     |
+| --listAsset         | 指定数字资产交易对（数字资产交易对申请之前需先发行该数字资产，发行参见[该链接](/api/command/token/#11)）                                                                                                                               |
+| --quoteAsset        | 指定与listAsset构交易数字资产交易对的数字资产                                                                                                                                                               |
+| --initPrice         | 是在数字资产交易对申请时指定的数字资产交易对初始价格，该价格作为初始交易的参考价格                                                                                                                                                     |
 | --maxPriceDigit     | 挂单时价格指定的精度（<=8）<br>例如该值为4则挂单指定价格不能指定小数点后大于4位的小数                                                                                                                                   |
 | --maxSizeDigit      | 挂单时数量指定的精度（<=8）<br>例如该值为4则挂单指定数量不能指定小数点后大于4位的小数                                                                                                                                   |
 | --minTradeSize      | 挂单时指定的数量不能小于该值                                                                                                                                                                                   |
 | --from              | 指定要发送交易的账户名称                                                                                                                                                                                         |
-| --blockHeight       | 指定上币提案生效块高（自动执行激活上币的块高）<br>如果提案通过后通过[上币激活命令](/api/command/gov/#_13)激活上币则无需指定该参数<br>指定高度需满足：小于等于当前块高与[MaxBlockHeight](/api/command/gov/#_33)之和<br>如果指定1000但提案通过时块高为1500则立即执行上币激活 |
+| --blockHeight       | 指定数字资产交易对申请提案生效块高（自动执行数字资产交易对激活的块高）<br>如果提案通过后通过[数字资产交易对激活命令](/api/command/gov/#_13)数字资产交易对激活则无需指定该参数<br>指定高度需满足：小于等于当前块高与[MaxBlockHeight](/api/command/gov/#_33)之和<br>如果指定1000但提案通过时块高为1500则立即执行数字资产交易对激活 |
 | --home              | 账户名称和okchaincli配置所在目录<br>如果为~/.okchaincli可以忽略该参数                                                                                                                                          |
 | -b/--broadcast-mode | 指定交易广播方式（async、sync、block）                                                                                                                                                                         |
 
-### 示例：
+#### 示例：
+
 ```bash
 okchaincli tx gov submit-dex-list-proposal --title="list bcoin-7a4/okt" --type=DexList --deposit="1000okt"   --listAsset="bcoin-7a4" --quoteAsset="okt"  --initPrice="2500.25" --maxPriceDigit=4 --maxSizeDigit=4 --minTradeSize="0.001" --from alice --home=~/.okchaincli -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "1048",
@@ -152,21 +166,26 @@ okchaincli tx gov submit-dex-list-proposal --title="list bcoin-7a4/okt" --type=D
   ]
 }
 ```
-## 4. 上币激活命令：
-### 参数说明：
+
+## 数字资产交易对激活命令：
+
+#### 参数说明：
 
 | Name                | Description                                                           |
 | :------             | :------                                                               |
-| --proposal          | 指定要激活的上币提案的proposal id                                     |
+| --proposal          | 指定要激活的数字资产交易对申请提案的proposal id                                     |
 | --from              | 指定要发送交易的账户名称                                                |
 | --home              | 账户名称和okchaincli配置所在目录<br>如果为~/.okchaincli可以忽略该参数 |
 | -b/--broadcast-mode | 指定交易广播方式（async、sync、block）                                |
 
-### 示例：
+#### 示例：
+
 ```bash
 okchaincli tx gov dexlist --proposal=4 --from alice --home ~/.okchaincli -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "1685",
@@ -215,15 +234,22 @@ okchaincli tx gov dexlist --proposal=4 --from alice --home ~/.okchaincli -b bloc
   ]
 }
 ```
-## 5. 版本升级提案命令：
+
+## 版本升级提案命令：
+
 请参考[该链接](/governance/upgrade/)
-## 6. 提案抵押命令：
-### 示例：
+
+## 提案抵押命令：
+
+#### 示例：
+
 通过指定要抵押的提案的proposal id来对提案进行抵押
 ```bash
 okchaincli tx gov deposit 1 500okt --from alice --home ~/.okchaincli/ -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "1328",
@@ -256,13 +282,17 @@ okchaincli tx gov deposit 1 500okt --from alice --home ~/.okchaincli/ -b block
   ]
 }
 ```
-## 7. 提案投票命令：
-### 示例：
+##  提案投票命令：
+
+#### 示例：
+
 通过指定要投票的提案的proposal id来对提案进行投票(可投Yes、No、Abstain、NoWithVeto四种类型票)
 ```bash
 okchaincli tx gov vote 2 Yes --from alice --home ~/.okchaincli/ -b block
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 {
   "height": "1550",
@@ -295,14 +325,20 @@ okchaincli tx gov vote 2 Yes --from alice --home ~/.okchaincli/ -b block
   ]
 }
 ```
-## 8. 提案查询命令：
+
+##  提案查询命令：
+
 ### 查询指定提案：
+
 #### 示例：
+
 根据提案的proposal id查询该提案
 ```bash
 okchaincli query gov proposal 4 --home ~/.okchaincli/
 ```
+
 #### 成功返回：
+
 ```
 {
   "type": "gov/DexListProposal",
@@ -343,12 +379,17 @@ okchaincli query gov proposal 4 --home ~/.okchaincli/
   }
 }
 ```
+
 ### 查询所有提案：
+
 #### 示例：
+
 ```bash
 okchaincli query gov proposals --home ~/.okchaincli/
 ```
+
 #### 成功返回：
+
 ```
 [
   {
@@ -445,12 +486,17 @@ okchaincli query gov proposals --home ~/.okchaincli/
   }
 ]
 ```
+
 ### 查询治理模块参数：
+
 #### 示例：
+
 ```bash
 okchaincli query gov params --home ~/.okchaincli/
 ```
+
 #### 成功返回：
+
 ```
 {
   "max_deposit_period": "86400000000000",
@@ -490,6 +536,7 @@ okchaincli query gov params --home ~/.okchaincli/
   "max_tx_num_per_block": "2000"
 }
 ```
+
 #### 治理模块参数：
 
 | Parameters              | Descriptions                                                                                               |
@@ -497,13 +544,13 @@ okchaincli query gov params --home ~/.okchaincli/
 | MaxDepositPeriod        | Text/参数修改/app升级提案抵押周期                                                                          |
 | MinDeposit              | Text/参数修改/app升级提案抵押额度<br>提案抵押超过该值则提案进入Voting Period                               |
 | VotingPeriod            | Text/参数修改/app升级提案投票周期                                                                          |
-| DexListMaxDepositPeriod | 上币提案提案抵押周期                                                                                       |
-| DexListMinDeposit       | 上币提案提案抵押额度                                                                                       |
-| DexListVotingPeriod     | 上币提案提案投票周期                                                                                       |
-| DexListVoteFee          | 上币提案投票手续费<br>对上币提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费 |
-| DexListMaxBlockHeight   | 指定自动激活上币的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
-| DexListFee              | 上币激活所需费用                                                                                           |
-| DexListExpireTime       | 上币提案通过后到上币激活的有效期                                                                           |
+| DexListMaxDepositPeriod | 数字资产交易对申请提案提案抵押周期                                                                                       |
+| DexListMinDeposit       | 数字资产交易对申请提案提案抵押额度                                                                                       |
+| DexListVotingPeriod     | 数字资产交易对申请提案提案投票周期                                                                                       |
+| DexListVoteFee          | 数字资产交易对申请提案投票手续费<br>对数字资产交易对申请提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费 |
+| DexListMaxBlockHeight   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
+| DexListFee              | 数字资产交易对激活所需费用                                                                                           |
+| DexListExpireTime       | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
 | Quorum                  | 全网参与投票的权重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                                     |
 | Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                        |
 | Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                       |

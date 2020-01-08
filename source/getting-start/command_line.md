@@ -1,8 +1,8 @@
-# 连接OKChain
+# 用命令行工具连接OKChain
 
 `okchaincli`是连接OKChain的命令行工具
 
-## 1. 配置okchaincli的运行环境：
+## 配置okchaincli的运行环境：
 
 * 设置chain-id, 必须是okchain
 ```bash
@@ -59,7 +59,7 @@ okchaincli config trust-node true
 ```
 客户端配置trust-node为true，查询链上数据直接返回，查询效率较高；配置为false，会对节点返回数据的真实性进行检查，安全性较高。
 
-## 2. okchaincli用户手册
+## okchaincli用户手册
 
 * [account](command/account.md) 
 
@@ -67,7 +67,7 @@ okchaincli config trust-node true
 
 * [token](command/token.md) 
 
-    Token相关操作, 包括发币, 冻结, 解冻, Token拥有权转移
+    Token相关操作, 包括数字资产发行, 冻结, 解冻, Token拥有权转移
 
 * [send](command/send.md) 
 

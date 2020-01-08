@@ -1,8 +1,9 @@
 # 账户
 
-## 1. Key：
+## Key：
 
-### 1.1 增加账号：
+### 增加账号：
+
 #### 参数说明：
 
   | Parameter |        Description         |
@@ -10,11 +11,14 @@
   |   name    | 添加账号的名字（比如bob） |
 
 #### 示例：
+
 系统会随机生成助记词、公钥和地址等信息
 ```bash
 okchaincli keys add <name> [flags]
 ```
+
 #### 成功返回：
+
 ```
 okchaincli keys add wind
   
@@ -31,16 +35,19 @@ okchaincli keys add wind
 okchaincli keys add --recover admin   -y -m "keen border system oil inject hotel hood potato shed pumpkin legend actor"
 ```
 
-### 1.2 显示本地所有key信息：
+### 显示本地所有key信息：
+
 #### 参数说明：
 
   无
 
 #### 示例：
+
 显示本地所有的key信息
 ```bash
 okchaincli keys list [flags]
 ```
+
 #### 成功返回：
 ```
   okchaincli keys list
@@ -62,7 +69,8 @@ okchaincli keys list [flags]
   ]
 ```
 
-### 1.3 显示指定用户的key信息：
+### 显示指定用户的key信息：
+
 #### 参数说明：
 
   | Parameter |           Description           |
@@ -70,11 +78,14 @@ okchaincli keys list [flags]
   |   name    | 要显示账号信息的名字（比如bob) |
 
 #### 示例：
+
 显示指定用户的key信息
 ```bash
 okchaincli keys show [name [name...]] [flags]
 ```
+
 #### 成功返回：
+
 ```
   okchaincli keys show bob
   
@@ -87,7 +98,8 @@ okchaincli keys show [name [name...]] [flags]
   }
 ```
 
-### 1.4 删除指定用户的key信息：
+### 删除指定用户的key信息：
+
 #### 参数说明：
 
   | Parameter |           Description           |
@@ -95,11 +107,14 @@ okchaincli keys show [name [name...]] [flags]
   |   name    | 要删除账号信息的名字（比如bob) |
 
 #### 示例：
+
 删除指定用户的key信息
 ```bash
 okchaincli keys delete <name> [flags]
 ```
+
 #### 成功返回：
+
 ```
   okchaincli keys delete bob
   
@@ -108,7 +123,8 @@ okchaincli keys delete <name> [flags]
   Key deleted forever (uh oh!)
 ```
 
-### 1.5 更新指定用户的key信息：
+### 更新指定用户的key信息：
+
 #### 参数说明：
 
   | Parameter | Description               |
@@ -116,11 +132,14 @@ okchaincli keys delete <name> [flags]
   | name      | 更新用户的名字（比如bob) |
 
 #### 示例：
+
 更新指定用户的密码信息
 ```bash
 okchaincli keys update <name> [flags]
 ```
+
 #### 成功返回：
+
 ```
   okchaincli keys update bob
   
@@ -130,17 +149,21 @@ okchaincli keys update <name> [flags]
   Repeat the new passphrase:
   Password successfully updated!
 ```
-### 1.6 生成bip39助记词：
+### 生成bip39助记词：
+
 #### 参数说明：
 
   无
 
 #### 示例：
+
 生成一个bip39的助记词
 ```bash
 okchaincli keys mnemonic [flags]
 ```
+
 #### 成功返回：
+
 ```
 okchaincli keys mnemonic
 
@@ -148,9 +171,10 @@ okchaincli keys mnemonic
 board zone elevator lesson welcome meadow love card obey cruise unlock double
 ```
 
-## 2. Account：
+## Account：
 
 ### 查询账号余额：
+
 #### 参数说明：
 
   | Parameter |                         Description                          |
@@ -158,11 +182,14 @@ board zone elevator lesson welcome meadow love card obey cruise unlock double
   |  Address  | 用户的地址（比如okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya） |
 
 #### 示例：
+
 查询用户的的信息，包括序列号，公钥以及token余额等信息
 ```bash
 okchaincli query account <address>
 ```
+
 #### 成功返回：
+
 ```
   okchaincli query account okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya
   

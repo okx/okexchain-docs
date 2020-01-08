@@ -1,8 +1,8 @@
-## Go SDK
+# Go SDK
 
-### 1 账户功能
+## 账户功能
 
-#### 1.1 创建账户
+### 创建账户
 
 ```go
 func CreateAccount(name, passWd string)(keys.Info, string, error)
@@ -28,7 +28,7 @@ type localInfo struct {
 string
 ```
 
-#### 1.2 导入助记词生成账户
+### 导入助记词生成账户
 
 ```go
 func CreateAccountWithMnemo(mnemo, name, passWd string)(keys.Info, string, error)
@@ -55,7 +55,7 @@ type localInfo struct {
 string
 ```
 
-#### 1.3 导入私钥生成账户
+### 导入私钥生成账户
 
 ```go
 func CreateAccountWithPrivateKey(privateKey, name, passWd string) (keys.Info, error)
@@ -79,7 +79,7 @@ type localInfo struct {
 }
 ```
 
-#### 1.4 生成新的助记词
+### 生成新的助记词
 
 ```go
 func GenerateMnemonic() (string, error)
@@ -94,9 +94,9 @@ string
 ```
 
 
-### 2 tx交易功能
+## tx交易功能
 
-#### 2.1 转账
+### 转账
 
 ```go
 func (cli *OKChainClient) Send(fromInfo keys.Info, passWd, toAddr, coinsStr, memo string, accNum, seqNum uint64) (resp types.TxResponse, err error) 
@@ -135,7 +135,7 @@ type TxResponse struct {
 }
 ```
 
-#### 2.2 挂单
+### 挂单
 
 ```go
 func (cli *OKChainClient) NewOrder(fromInfo keys.Info, passWd, product, side, price, quantity, memo string, accNum, seqNum uint64) (types.TxResponse, error)
@@ -147,7 +147,7 @@ func (cli *OKChainClient) NewOrder(fromInfo keys.Info, passWd, product, side, pr
 | ---- | ------ | ----------- |
 | fromInfo | keys.Info | 挂单方账户  |
 | passWd | string | 挂单方账户密码    |
-| product | string | 币对名称    |
+| product | string | 数字资产交易对名称    |
 | side | string | "BUY"或"SELL"    |
 | price | string | 挂单价格（精度不能大于一位小数）   |
 | quantity | string | 挂单数量（精度不能大于两位小数）    |
@@ -176,7 +176,7 @@ type TxResponse struct {
 }
 ```
 
-#### 2.3 撤单
+### 撤单
 
 ```go
 func (cli *OKChainClient) CancelOrder(fromInfo keys.Info, passWd, orderID, memo string, accNum, seqNum uint64) (types.TxResponse, error) 
@@ -214,9 +214,9 @@ type TxResponse struct {
 }
 ```
 
-### 3 信息查询
+## 信息查询
 
-#### 3.1 账户信息查询
+### 账户信息查询
 
 ```go
 func (cli *OKChainClient) GetAccountInfoByAddr(addr string) (types.Account, error)
@@ -241,7 +241,7 @@ type BaseAccount struct {
 }
 ```
 
-#### 3.2 账户持有币种信息查询
+### 账户持有数字资产信息查询
 
 ```go
 func (cli *OKChainClient) GetTokensInfoByAddr(addr string) (types.AccountTokensInfo, error)
@@ -256,14 +256,14 @@ func (cli *OKChainClient) GetTokensInfoByAddr(addr string) (types.AccountTokensI
 返回结果：
 
 ```go
-// 返回持有币种信息
+// 返回持有数字资产信息
 type AccountTokensInfo struct{
 	Address    string    `json:"address"`
 	Currencies CoinsInfo `json:"currencies"`
 }
 ```
 
-#### 3.3 账户持有特定币种信息查询
+### 账户持有特定数字资产信息查询
 
 ```go
 func (cli *OKChainClient) GetTokenInfoByAddr(addr, symbol string) (types.AccountTokensInfo, error)
@@ -274,19 +274,19 @@ func (cli *OKChainClient) GetTokenInfoByAddr(addr, symbol string) (types.Account
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
 | addr | string | 查询账户地址  |
-| symbol | string | 查询币种名称  |
+| symbol | string | 查询数字资产名称  |
 
 返回结果：
 
 ```go
-// 返回持有币种信息
+// 返回持有数字资产信息
 type AccountTokensInfo struct{
 	Address    string    `json:"address"`
 	Currencies CoinsInfo `json:"currencies"`
 }
 ```
 
-#### 3.4 链上所有币种信息查询
+### 链上所有数字资产信息查询
 
 ```go
 func (cli *OKChainClient) GetTokensInfo() ([]types.Token, error)
@@ -297,11 +297,11 @@ func (cli *OKChainClient) GetTokensInfo() ([]types.Token, error)
 返回结果：
 
 ```go
-// 返回币种信息切片
+// 返回数字资产信息切片
 []types.Token
 ```
 
-#### 3.5 链上特定币种信息查询
+### 链上特定数字资产信息查询
 
 ```go
 func (cli *OKChainClient) GetTokenInfo(symbol string) (types.Token, error)
@@ -311,12 +311,12 @@ func (cli *OKChainClient) GetTokenInfo(symbol string) (types.Token, error)
 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
-| symbol | string | 查询币种名称  |
+| symbol | string | 查询数字资产名称  |
 
 返回结果：
 
 ```go
-// 返回币种信息
+// 返回数字资产信息
 type Token struct {
 	Desc           string     `json:"desc"`
 	Symbol         string     `json:"symbol"`
@@ -328,7 +328,7 @@ type Token struct {
 }
 ```
 
-#### 3.6 链上所有币对信息查询
+### 链上所有数字资产交易对信息查询
 
 ```go
 func (cli *OKChainClient) GetProductsInfo() ([]types.TokenPair, error)
@@ -339,11 +339,11 @@ func (cli *OKChainClient) GetProductsInfo() ([]types.TokenPair, error)
 返回结果：
 
 ```go
-// 返回币对信息切片
+// 返回数字资产交易对信息切片
 []types.TokenPair
 ```
 
-#### 3.7 交易深度信息查询
+### 交易深度信息查询
 
 ```go
 func (cli *OKChainClient) GetDepthbookInfo(product string) (types.BookRes, error)
@@ -353,19 +353,19 @@ func (cli *OKChainClient) GetDepthbookInfo(product string) (types.BookRes, error
 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 
 返回结果：
 
 ```go
-// 返回某币对的交易深度信息
+// 返回某数字资产交易对的交易深度信息
 type BookRes struct {
 	Asks []BookResItem `json:"asks"`
 	Bids []BookResItem `json:"bids"`
 }
 ```
 
-#### 3.8 K线信息查询
+### K线信息查询
 
 ```go
 func (cli *OKChainClient) GetCandlesInfo(product string, granularity, size int) ([][]string, error)
@@ -375,18 +375,18 @@ func (cli *OKChainClient) GetCandlesInfo(product string, granularity, size int) 
 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 | granularity | int | 时间颗粒度，时间粒度，以秒为单位，如[60/180/300/900/1800/3600/7200/14400/21600/43200/86400/604800]  |
 | size | int | 获取k线数据的数量，最多1000条  |
 
 返回结果：
 
 ```go
-// 返回某币对的K线信息
+// 返回某数字资产交易对的K线信息
 [][]string
 ```
 
-#### 3.9 交易行情信息查询
+### 交易行情信息查询
 
 ```go
 func (cli *OKChainClient) GetTickersInfo(count int) (types.Tickers, error)
@@ -405,7 +405,7 @@ func (cli *OKChainClient) GetTickersInfo(count int) (types.Tickers, error)
 type Tickers []Ticker
 ```
 
-#### 3.10 某币对最近成交记录信息查询
+### 某数字资产交易对最近成交记录信息查询
 
 ```go
 func (cli *OKChainClient) GetRecentTxRecord(product string, start, end, page, perPage int) ([]types.MatchResult, error)
@@ -415,7 +415,7 @@ func (cli *OKChainClient) GetRecentTxRecord(product string, start, end, page, pe
 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 | start | int | 起始日期（时间戳，以秒为单位）  |
 | end | int | 结束日期（时间戳，以秒为单位）  |
 | page | int | 页号  |
@@ -428,7 +428,7 @@ func (cli *OKChainClient) GetRecentTxRecord(product string, start, end, page, pe
 []types.MatchResult
 ```
 
-#### 3.11 某地址未成交订单信息查询
+### 某地址未成交订单信息查询
 
 ```go
 func (cli *OKChainClient) GetOpenOrders(addr, product, side string, start, end, page, perPage int) ([]types.Order, error)
@@ -439,7 +439,7 @@ func (cli *OKChainClient) GetOpenOrders(addr, product, side string, start, end, 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
 | addr | string | 账户地址  |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 | side | string | "BUY"或"SELL"  |
 | start | int | 起始日期（时间戳，以秒为单位）  |
 | end | int | 结束日期（时间戳，以秒为单位）  |
@@ -453,7 +453,7 @@ func (cli *OKChainClient) GetOpenOrders(addr, product, side string, start, end, 
 []types.Order
 ```
 
-#### 3.12 某地址已成交订单信息查询
+### 某地址已成交订单信息查询
 
 ```go
 func (cli *OKChainClient) GetClosedOrders(addr, product, side string, start, end, page, perPage int) ([]types.Order, error)
@@ -464,7 +464,7 @@ func (cli *OKChainClient) GetClosedOrders(addr, product, side string, start, end
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
 | addr | string | 账户地址  |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 | side | string | "BUY"或"SELL"  |
 | start | int | 起始日期（时间戳，以秒为单位）  |
 | end | int | 结束日期（时间戳，以秒为单位）  |
@@ -478,7 +478,7 @@ func (cli *OKChainClient) GetClosedOrders(addr, product, side string, start, end
 []types.Order
 ```
 
-#### 3.13 某地址的成交明细信息查询
+### 某地址的成交明细信息查询
 
 ```go
 func (cli *OKChainClient) GetDealsInfo(addr, product, side string, start, end, page, perPage int) ([]types.Deal, error)
@@ -489,7 +489,7 @@ func (cli *OKChainClient) GetDealsInfo(addr, product, side string, start, end, p
 | Name | Type   | Description |
 | ---- | ------ | ----------- |
 | addr | string | 账户地址  |
-| product | string | 查询币对名称  |
+| product | string | 查询数字资产交易对名称  |
 | side | string | "BUY"或"SELL"  |
 | start | int | 起始日期（时间戳，以秒为单位）  |
 | end | int | 结束日期（时间戳，以秒为单位）  |
@@ -503,7 +503,7 @@ func (cli *OKChainClient) GetDealsInfo(addr, product, side string, start, end, p
 []types.Deal
 ```
 
-#### 3.14 某地址的交易记录信息查询
+### 某地址的交易记录信息查询
 
 ```go
 func (cli *OKChainClient) GetTransactionsInfo(addr string, type_, start, end, page, perPage int) ([]types.Transaction, error)
@@ -527,9 +527,9 @@ func (cli *OKChainClient) GetTransactionsInfo(addr string, type_, start, end, pa
 []types.Transaction
 ```
 
-### 4 节点信息查询
+## 节点信息查询
 
-#### 4.1 某高度区块信息查询
+### 某高度区块信息查询
 
 ```go
 func (cli *OKChainClient) QueryBlock(height *int64) (*ctypes.ResultBlock, error)
@@ -551,7 +551,7 @@ type ResultBlock struct {
 }
 ```
 
-#### 4.2 某交易查询
+### 某交易查询
 
 ```go
 func (cli *OKChainClient) QueryTx(txHash []byte, prove bool) (*ctypes.ResultTx, error)
@@ -578,7 +578,7 @@ type ResultTx struct {
 }
 ```
 
-#### 4.3 当前所有Validator信息查询
+### 当前所有Validator信息查询
 
 ```go
 func (cli *OKChainClient) QueryCurrentValidators() (sdktypes.ResultValidatorsOutput, error)
@@ -597,7 +597,7 @@ type ResultValidatorsOutput struct {
 }
 ```
 
-#### 4.4 当前所有提案查询
+### 当前所有提案查询
 
 ```go
 func (cli *OKChainClient) QueryProposals() (sdktypes.Proposals, error)
@@ -612,7 +612,7 @@ func (cli *OKChainClient) QueryProposals() (sdktypes.Proposals, error)
 sdktypes.Proposals
 ```
 
-#### 4.5 根据提案ID查询提案
+### 根据提案ID查询提案
 
 ```go
 func (cli *OKChainClient) QueryProposalByID(proposalID uint64) (sdktypes.Proposal, error)

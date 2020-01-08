@@ -4,11 +4,11 @@ order: 1
 
 # 监控工具
 
-### prometheus
+## prometheus
 
 Tendermint 本身也支持使用prometheus metrics（指标。通过设置 `config/config.toml` 中的 `prometheus=true` 开启该功能. 通过设置`prometheus_listen_addr`改变默认 `:26660`的监听地址。目前okchain测试网已经默认开启该功能。
 
-### okchain 目前提供的指标
+## okchain 目前提供的指标
 
 | Name                                            | Type      |     Tags      | Description                         |
 | :---------------------------------------------- | :-------- | :-----------: | :---------------------------------- |
@@ -48,7 +48,7 @@ Tendermint 本身也支持使用prometheus metrics（指标。通过设置 `conf
 | x_order_partial_filled                          | Gauge     |       √       | 处理部分的挂单                      |
 | x_order_pending                                 | Gauge     |       √       | 待处理的挂单                        |
 
-### 监控工具
+## 配置
 
 编写`monitor.yml`
 

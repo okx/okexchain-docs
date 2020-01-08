@@ -226,16 +226,16 @@ checksum的字符串都是以冒号连接的ask和bid中的price和数量，例�
 - dex_spot/candle604800s // 1周
 - **<font color= #9f0050>dex_spot/matches // 交易信息</font>**
 - dex_spot/optimized_depth // 深度数据，首次200档，后续增量
-- dex_spot/account // 用户账户信息，按币种订阅（二期改为私有频道）
+- dex_spot/account // 用户账户信息，按数字资产订阅（二期改为私有频道）
 - dex_spot/order //用户未成交订单（二期改为私有频道）
 
 ### 私有频道
 
-- dex_spot/account // 用户账户信息，按币种订阅（二期改为私有频道）
+- dex_spot/account // 用户账户信息，按数字资产订阅（二期改为私有频道）
 - dex_spot/order // 用户未成交订单 （二期改为私有频道）
 
 ###详细说明
-#### 1、用户币币账户频道（币种Symbol）
+#### 1、用户数字资产账户频道（数字资产Symbol）
 
 TODO：直接开发登录态
 
@@ -245,7 +245,7 @@ TODO：直接开发登录态
 {"op": "subscribe", "args": ["dex_spot/account:bcoin-190628"]}
 ```
 
-其中dex_spot/account为频道名，`okt`和`usd-190628`为币种名称
+其中dex_spot/account为频道名，`okt`和`usd-190628`为数字资产名称
 
 ######返回示例
 
@@ -275,7 +275,7 @@ TODO：直接开发登录态
 }
 ```
 
-#### 2、用户未成交订单频道（币对Product）
+#### 2、用户未成交订单频道（数字资产交易对Product）
 
 获取用户交易数据，无需登录
 
@@ -285,7 +285,7 @@ TODO：直接开发登录态
 {"op": "subscribe", "args": ["dex_spot/order:*"]}
 ```
 
-其中`dex_spot/order`为频道名。*指所有币对。
+其中`dex_spot/order`为频道名。*指所有数字资产交易对。
 
 ######返回示例
 
@@ -312,7 +312,7 @@ TODO：直接开发登录态
 
 
 
-#### 3、行情ticker频道（币对Product）
+#### 3、行情ticker频道（数字资产交易对Product）
 
 ######send示例
 
@@ -342,7 +342,7 @@ TODO：直接开发登录态
 }
 ```
 
-#### 4、全量ticker频道（所有币对Products）
+#### 4、全量ticker频道（所有数字资产交易对Products）
 
 客户端订阅方式
 
@@ -360,7 +360,7 @@ TODO：直接开发登录态
     "table":"dex_spot/all_ticker_3s",
     "data":[
       {
-            "id":"ACOIN-USDT", # id就是币对名
+            "id":"ACOIN-USDT", # id就是数字资产交易对名
             "p": "13.0000", # price相当于close收盘价
             "o": "13.8366", # 最近24小时open
             "l": "12.7930", # 最近24小时low
@@ -408,7 +408,7 @@ TODO：直接开发登录态
 }
 ```
 
-#### 6、深度频道（币对Product）
+#### 6、深度频道（数字资产交易对Product）
 
 首次返回200档，后续为增量
 
@@ -584,7 +584,7 @@ TODO：直接开发登录态
 
 ```
 
-#### 7、最新成交matches频道（币对Product）
+#### 7、最新成交matches频道（数字资产交易对Product）
 
 ######send示例
 

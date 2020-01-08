@@ -1,12 +1,12 @@
-## Node RPC
+# Node RPC
 
 RPC端点可以通过HTTP或websokets与节点进行交互。
 
-### 1. 连接
+## 连接
 
 用户可以在自己本地运行一个节点，然后通过该节点与OKChain进行交互。
 
-### 2. 协议
+## 协议
 
 支持下面列出的协议：
 
@@ -16,11 +16,11 @@ RPC端点可以通过HTTP或websokets与节点进行交互。
 
 RPC是基于Tendermint中自带的RPC库构建的。具体细节可以参见Tendermint中自带的文档说明和测试文件。入口地址：https://github.com/tendermint/tendermint/tree/master/rpc/lib
 
-### 3. 参数
+## 参数
 
 输入的参数推荐使用字节数组或字符串。
 
-#### 3.1 URI/HTTP
+### URI/HTTP
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/tokens'
@@ -56,11 +56,11 @@ curl 'http://localhost:26659/okchain/v1/tokens'
 }
 ```
 
-#### 3.2 JSONRPC/HTTP
+### JSONRPC/HTTP
 
 JSONRPC请求可以通过HTTP发送到根RPC端点。
 
-#### 3.3 JSONRPC/WEBSOCKET
+### JSONRPC/WEBSOCKET
 
 JSONRPC也可以通过websocket。通过gosdk可以进行该请求访问，返回对应查询的结构体。
 
@@ -71,7 +71,7 @@ JSONRPC也可以通过websocket。通过gosdk可以进行该请求访问，返�
 [{"desc":"super coin of the COINLESS WORLD","symbol":"gyc-8f0","originalSymbol":"gyc","wholeName":"gycoin","totalSupply":100000000,"owner":"okchain1k232hksp266udmcf88s96t6vrjla62j7esy7wv","mintable":true} {"desc":"OKT","symbol":"okt","originalSymbol":"okt","wholeName":"ok group coin","totalSupply":1000000000,"owner":"okchain1ez6dnyru9076e5n8nkhcalasql4c9ul5yqd8qa","mintable":true}]
 ```
 
-### 4. RPC端点的请求列表
+## RPC端点的请求列表
 
 ```shell
 获取已连接的节点信息
@@ -88,7 +88,7 @@ JSONRPC也可以通过websocket。通过gosdk可以进行该请求访问，返�
 /okchain/v1/validatorsets/{height}
 ```
 
-#### 4.1 获取已连接的节点信息
+### 获取已连接的节点信息
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/node_info'
@@ -128,7 +128,7 @@ curl 'http://localhost:26659/okchain/v1/syncing'
 false
 ```
 
-#### 4.3 获取最近的区块信息
+### 获取最近的区块信息
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/blocks/latest'
@@ -239,7 +239,7 @@ curl 'http://localhost:26659/okchain/v1/blocks/latest'
 }
 ```
 
-#### 4.4 获取某高度的区块信息
+### 获取某高度的区块信息
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/blocks/1'
@@ -333,7 +333,7 @@ curl 'http://localhost:26659/okchain/v1/blocks/1'
 }
 ```
 
-#### 4.5 获取最近的验证者集合信息
+### 获取最近的验证者集合信息
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/validatorsets/latest'
@@ -355,7 +355,7 @@ curl 'http://localhost:26659/okchain/v1/validatorsets/latest'
 }
 ```
 
-#### 4.6 获取某一高度的验证者集合信息
+### 获取某一高度的验证者集合信息
 
 ```shell
 curl 'http://localhost:26659/okchain/v1/validatorsets/1'
@@ -377,9 +377,9 @@ curl 'http://localhost:26659/okchain/v1/validatorsets/1'
 }
 ```
 
-### 5. 适用于开发者的APIs
+## 适用于开发者的APIs
 
-#### 5.1 ABCI信息查询
+### ABCI信息查询
 
 返回结构：
 
@@ -419,7 +419,7 @@ func RpcQueryABCIInfo() (abci.ResponseInfo, error) {
 }
 ```
 
-#### 5.2 共识状态查询
+### 共识状态查询
 
 返回结构：
 
@@ -465,7 +465,7 @@ func RPCQueryConsenusState() ([]byte, error) {
 }
 ```
 
-#### 5.3 转储共识状态查询
+### 转储共识状态查询
 
 返回结构：
 
@@ -573,7 +573,7 @@ func RPCQueryDumpConsenusState() ([]byte, error) {
 }
 ```
 
-#### 5.4 网络信息查询
+### 网络信息查询
 
 返回结构：
 
@@ -612,7 +612,7 @@ func RPCQueryNetInfo() (*ctypes.ResultNetInfo, error) {
 }
 ```
 
-#### 5.5 创世文件查询
+### 创世文件查询
 
 返回结构：
 
@@ -1104,7 +1104,7 @@ func RPCQueryGenesusFile() (*types.GenesisDoc, error) {
 }
 ```
 
-#### 5.6 节点健康情况查询
+### 节点健康情况查询
 
 返回结构：
 
@@ -1131,7 +1131,7 @@ func RPCQueryHealthInfo() (*ctypes.ResultHealth, error) {
 {}
 ```
 
-#### 5.7 未确认交易数量查询
+### 未确认交易数量查询
 
 返回结构：
 
@@ -1168,7 +1168,7 @@ func RPCQueryUnconfirmedTxsNum(limit int) (*ctypes.ResultUnconfirmedTxs, error) 
 }
 ```
 
-#### 5.8 节点状态查询
+### 节点状态查询
 
 返回结构：
 
@@ -1297,7 +1297,7 @@ func RPCQueryStateInfo() (*ctypes.ResultStatus, error) {
 }
 ```
 
-#### 5.9 ABCI查询
+### ABCI查询
 
 有效查询路径：
 
@@ -1325,7 +1325,7 @@ type ResponseQuery struct {
 }
 ```
 
-例子：以查询公链中所有的币对的信息为例——`/custom/token/tokenpair`
+例子：以查询公链中所有的数字资产交易对的信息为例——`/custom/token/tokenpair`
 
 ```go
 func RPCQueryABCITokenpair() (abci.ResponseQuery, error) {
@@ -1348,7 +1348,7 @@ func RPCQueryABCITokenpair() (abci.ResponseQuery, error) {
 
 注：这个返回对象是经过amino编码的。如果需要提取其内部成员信息，请进行amino解码操作。
 
-#### 5.10 区块查询
+### 区块查询
 
 返回结构：
 
@@ -1476,7 +1476,7 @@ func RPCQueryBlock() (*ctypes.ResultBlock, error) {
 }
 ```
 
-#### 5.11 区块结果查询
+### 区块结果查询
 
 返回结构：
 
@@ -1561,7 +1561,7 @@ func RPCQueryBlockResults() (*ctypes.ResultBlockResults, error) {
 }
 ```
 
-#### 5.12 区块链信息查询
+### 区块链信息查询
 
 返回结构：
 
@@ -1780,7 +1780,7 @@ func RPCQueryBlockchainInfo() (*ctypes.ResultBlockchainInfo, error) {
 }
 ```
 
-#### 5.13 提交查询
+### 提交查询
 
 返回结构：
 
@@ -1877,7 +1877,7 @@ func RPCQueryCommit() (*ctypes.ResultCommit, error) {
 }
 ```
 
-#### 5.14 交易查询
+### 交易查询
 
 返回结构：
 
@@ -1952,7 +1952,7 @@ func RPCQueryTx() (*ctypes.ResultTx, error) {
 
 注：该返回结果中有许多信息是经过amino编码的。如果需要提取其内部信息，需要人工进行amino解码。
 
-#### 5.15 某一高度上的所有交易查询
+### 某一高度上的所有交易查询
 
 返回结构：
 

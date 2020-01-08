@@ -1,5 +1,6 @@
 # java-sdk
-### 通过远程区块链节点获取account信息
+
+## 通过远程区块链节点获取account信息
 ```java
 public JSONObject getAccountFromNode(String userAddress) throws NullPointerException;
 ```
@@ -29,7 +30,7 @@ public JSONObject getAccountFromNode(String userAddress) throws NullPointerExcep
 }
 ```
 
-### 创建私钥，并生成对应公钥，地址
+## 创建私钥，并生成对应公钥，地址
 ```java
     public AddressInfo createAddressInfo();
 ```
@@ -44,7 +45,7 @@ public class AddressInfo {
     private String userAddress;//地址
 }
 ```
-### 输入私钥，获得对应公钥，地址
+## 输入私钥，获得对应公钥，地址
 ```java
     public AddressInfo getAddressInfo(String privateKey) throws NullPointerException;
 ```
@@ -61,7 +62,7 @@ public class AccountInfo extends AddressInfo {
     private String sequenceNumber;//该账户下次发送交易应有的序号
 }
 ```
-### 通过私钥获得account信息
+## 通过私钥获得account信息
 ```java
     public AccountInfo getAccountInfo(String privateKey) throws NullPointerException;
 ```
@@ -72,15 +73,15 @@ public class AccountInfo extends AddressInfo {
 |privateKey|String|私钥|
 
 返回结果：同上
-### 通过助记词生成私钥
+## 通过助记词生成私钥
 ```java
     public String getPrivateKeyFromMnemonic(String mnemonic);
 ```
-### 生成新的助记词
+## 生成新的助记词
 ```java
     public String generateMnemonic();
 ```
-### 在当前目录下生成KeyStore文件
+## 在当前目录下生成KeyStore文件
 ```java
     public String generateKeyStore(String privateKey, String passWord) throws CipherException, IOException;
 ```
@@ -97,7 +98,7 @@ public class AccountInfo extends AddressInfo {
 |---|---|---|
 |KeyStoreName|String|KeyStore文件名|
 
-### 从指定文件路径的KeyStore文件恢复私钥
+## 从指定文件路径的KeyStore文件恢复私钥
 ```java
     public String getPrivateKeyFromKeyStore(String keyStoreFilePath, String passWord) throws IOException, CipherException;
 ```
@@ -114,7 +115,7 @@ public class AccountInfo extends AddressInfo {
 |---|---|---|
 |privateKey|String|私钥|
 
-### 发起转账Transaction
+## 发起转账Transaction
 ```java
     public JSONObject sendSendTransaction(AccountInfo account, String to, List<Token> amount, String memo) throws NullPointerException, IOException;
 ```
@@ -124,13 +125,13 @@ public class AccountInfo extends AddressInfo {
 |---|---|---|
 |account|AccountInfo|账户信息|
 |to|String|被转账方地址|
-|amount|Token[]|转账币种信息|
+|amount|Token[]|转账数字资产信息|
 |memo|String|备注|
 
 ```java
 public class Token {
-    private String amount;//币种数量，必须是八位小数，如1.00000000
-    private String denom;//币种信息，如okt
+    private String amount;//数字资产数量，必须是八位小数，如1.00000000
+    private String denom;//数字资产信息，如okt
 }
 ```
 返回结果：
@@ -140,7 +141,7 @@ public class Token {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
-### 发起下单Transaction
+## 发起下单Transaction
 ```java
     public JSONObject sendPlaceOrderTransaction(AccountInfo account, RequestPlaceOrderParams parms, String memo) throws NullPointerException, IOException;
 ```
@@ -149,9 +150,9 @@ public class Token {
 |Name|Type|Description|
 |---|---|---|
 |account|AccountInfo|账户信息|
-|price|String|币种价格，需要是八位小数|
-|product|String|币对，比acoin_okt|
-|quantity|String|币种数量，需要是八位小数|
+|price|String|数字资产价格，需要是八位小数|
+|product|String|数字资产交易对，比acoin_okt|
+|quantity|String|数字资产数量，需要是八位小数|
 |side|String|"BUY"or"SELL"|
 |memo|String|备注|
 
@@ -162,7 +163,7 @@ public class Token {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
-### 发起取消订单Transaction
+## 发起取消订单Transaction
 ```java
     public JSONObject sendCancelOrderTransaction(AccountInfo account, String orderId, String memo) throws NullPointerException, IOException;
 ```
@@ -181,7 +182,7 @@ public class Token {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
-### 发起同时给多个人转账的Transaction
+## 发起同时给多个人转账的Transaction
 ```java
     public JSONObject sendMultiSendTransaction(AccountInfo account, List<TransferUnit> transfers, String memo) throws IOException;
 
@@ -196,7 +197,7 @@ public class Token {
 
 ```java
 public class TransferUnit {
-    private List<Token> coins;//被转账方币种信息
+    private List<Token> coins;//被转账方数字资产信息
     private String to;//被转账方地址
 }
 ```
@@ -208,7 +209,7 @@ public class TransferUnit {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
-### 获取用户所有币种的资产信息
+## 获取用户所有数字资产信息
 ```java
     public BaseModel getAccountALLTokens(String address, String show) throws NullPointerException;
 ```
@@ -224,62 +225,62 @@ public class BaseModel {
     private String detailMsg;
 }
 ```
-### 获取用户单个币种的资产信息
+## 获取用户单个数字资产信息
 ```java
     public BaseModel getAccountToken(String address, String symbol) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取所有币种的信息
+## 获取所有数字资产的信息
 ```java
     public BaseModel getTokens();
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取单个币种的信息
+## 获取单个数字资产的信息
 ```java
     public BaseModel getToken(String symbol) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取所有币对的信息
+## 获取所有数字资产交易对的信息
 ```java
     public BaseModel getProducts();
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取交易深度信息
+## 获取交易深度信息
 ```java
     public BaseModel getDepthBook(String product) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取交易K线信息
+## 获取交易K线信息
 ```java
     public BaseModel getCandles(String granularity, String instrumentId, String size) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取所有的交易行情信息
+## 获取所有的交易行情信息
 ```java
     public BaseModel getTickers(String count);
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取某币对最近成交记录
+## 获取某数字资产交易对最近成交记录
 ```java
 public BaseModel getMatches(String product, String start, String end, String page, String perPage) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 未成交订单
+## 未成交订单
 ```java
     public BaseModel getOrderListOpen(RequestOrderListOpenParams params) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 历史订单
+## 历史订单
 ```java
     public BaseModel getOrderListClosed(RequestOrderListClosedParams params) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取成交明细
+## 获取成交明细
 ```java
     public BaseModel getDeals(RequestDealsParams params) throws NullPointerException;
 ```
 参数和返回值信息参考http api对应接口描述
-### 获取交易记录
+## 获取交易记录
 ```java
     public BaseModel getTransactions(RequestTransactionsParams params) throws NullPointerException;
 ```

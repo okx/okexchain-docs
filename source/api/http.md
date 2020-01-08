@@ -1,10 +1,10 @@
 
 [TOC]
 
-## HTTP API
+# HTTP API
 The OKChain HTTP API provides access to an OKChain Chain node deployment and market data services.
 
-## 1. 账户（Accounts）
+## 账户（Accounts）
 ### 获取account地址信息
 
 http接口：
@@ -40,7 +40,7 @@ Response:
     
 ```
 
-###获取用户所有币种的资产信息
+###获取用户所有数字资产信息
 
 http接口:
 
@@ -53,7 +53,7 @@ GET  okchain/v1/accounts/{address}?show=all
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---|
 |address|String|	true|	账户地址|
-|show|String|false|是否显示所有币种，all或者partial,默认为partial|
+|show|String|false|是否显示所有数字资产，all或者partial,默认为partial|
 
 Response:
 
@@ -81,7 +81,7 @@ Response:
 
 
 
-### 获取用户单个币种的资产信息
+### 获取用户单个数字资产信息
 
 http接口:
 
@@ -94,7 +94,7 @@ GET okchain/v1/accounts/{address}?symbol="bcoin"
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---:|
 |address|String|	true|	账户地址|
-|symbol|	String|	true|	币种|
+|symbol|	String|	true|	数字资产|
 
 Response:
 
@@ -119,8 +119,8 @@ Response:
 	"msg": ""
 }
 ```
-## 2. 行情（Markets）
-###获取所有币种的信息
+## 行情（Markets）
+###获取所有数字资产的信息
 
 http接口:
 
@@ -149,7 +149,7 @@ Response:
 }
 ```
 
-### 获取单个币种的信息
+### 获取单个数字资产的信息
 
 http接口:
 
@@ -161,7 +161,7 @@ GET okchain/v1/token/{symbol}
 
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---:|
-|symbol|	String|	true|	币种名称|
+|symbol|	String|	true|	数字资产名称|
 
 Response:
 
@@ -182,7 +182,7 @@ Response:
 }
 ```
 
-### 获取所有币对的信息
+### 获取所有数字资产交易对的信息
 
 http接口: 
 
@@ -222,7 +222,7 @@ GET okchain/v1/order/depthbook
 
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---:|
-|product|String|    true| 币种对信息eg:btc_okt |
+|product|String|    true| 数字资产对信息eg:btc_okt |
 |~~size~~|Number|false|档位（maxSize:200）,第一版固定为200|
 
 
@@ -260,7 +260,7 @@ GET okchain/v1/candles/{product}?granularity=21600&size=1000
 
 |Name |Type |Required|Example|Description|
 |:---:|:---:|:------:|:--- : |:-------:|
-|product|String|     true|bcoin_okt|币对名称|
+|product|String|     true|bcoin_okt|数字资产交易对名称|
 |granularity|int|false|180<br>60|时间颗粒度，时间粒度，以秒为单位，默认值60. 如[60/180/300/900/1800/3600/7200/14400/21600/43200/86400/604800]<br>对应{1min,3min,5min,15min,30min,1hour,2hour,4hour,6hour,12hour,1day,1week}|
 |size|int|false|100|获取k线数据的数量，最多1000条.默认值100|
 
@@ -309,7 +309,7 @@ Response:
         "low": "22.22", #最低成交价
         "open": "55.44",#24小时 open
         "price": "29.777",#最新成交价
-        "product": "bcoin-2ac_okt",#币对
+        "product": "bcoin-2ac_okt",#数字资产交易对
         "symbol": "bcoin-2ac_okt",
         "timestamp": "2019-07-25T09:49:04.954Z",#时间戳
         "volume": "266.64",#成交量
@@ -320,7 +320,7 @@ Response:
 
 ```
 
-### 获取某币对最近成交记录
+### 获取某数字资产交易对最近成交记录
 
 http接口: 
 ```http
@@ -331,7 +331,7 @@ GET okchain/v1/matches
 
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---|
-|product|String|    true|    币对|
+|product|String|    true|    数字资产交易对|
 |start|    int|    false|起始日期（时间戳，以秒为单位）|
 |end|    int    |false    |结束日期（时间戳，以秒为单位）|
 |page    |int    |false    |页号|
@@ -379,7 +379,7 @@ Response:
 
 ```
 
-## 3. 交易（Trades）
+## 交易（Trades）
 ###下单（在base中）
 
 http接口： 
@@ -398,7 +398,7 @@ post发送内容：
             "value": {
                 "BatchNumber": "0",//后端测试用，可忽略，将来会去掉
                 "Sender": "okchain1t2cvfv58764q4wdly7qjx5d2z89lewvwq2448n",//发送者address
-                "Product": "mycoin_okt",//币对
+                "Product": "mycoin_okt",//数字资产交易对
                 "Side": "BUY",
                 "Price": "1",//价格
                 "Quantity": "0.1"//数量
@@ -648,7 +648,7 @@ GET okchain/v1/order/list/open？product=mycoin_okt&address=cosmos1hghms6dtm8qux
 
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---|
-|product    |String|    false|    币对|
+|product    |String|    false|    数字资产交易对|
 |address|    String|    true|    地址|
 |start    |int|    false|    开始时间戳|
 |end    |int|    false|    结束时间戳|
@@ -658,7 +658,7 @@ GET okchain/v1/order/list/open？product=mycoin_okt&address=cosmos1hghms6dtm8qux
 
 Response:
 
-参数：获取全部币对的委托单时不传product参数
+参数：获取全部数字资产交易对的委托单时不传product参数
 
 Response:
 
@@ -702,11 +702,11 @@ http接口:
 GET okchain/v1/order/list/closed
 ```
 
-接口参数：address, product, start, end, page, perPage。全部币对时不传product参数
+接口参数：address, product, start, end, page, perPage。全部数字资产交易对时不传product参数
 
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---|
-|product    |String|    false|    币对|
+|product    |String|    false|    数字资产交易对|
 |address|    String|    true|    地址|
 |side|String|false|没有该字段则都要"BULL","SELL"|
 |<font color=#DC143C >hideNoFill</font>|<font color=#DC143C>int</font>|<font color=#DC143C >false</font>|<font color=#DC143C >关于完全撤销或者完全过期订单 0:不隐藏 1:隐藏</font>|
@@ -808,7 +808,7 @@ Response:
 ```
 
 
-## 4. 账单（Deals）
+## 账单（Deals）
 ###获取成交明细
 
 http接口: 
@@ -821,7 +821,7 @@ GET okchain/v1/deals
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---|
 |address|String|	true|	账户地址|
-|product|String|	false|	币对|
+|product|String|	false|	数字资产交易对|
 |side|String|false|没有该字段则都要 "BUY", "SELL"|
 |start|	int|	false|起始日期（时间戳，以秒为单位）|
 |end|	int	|false	|结束日期（时间戳，以秒为单位）|
@@ -919,7 +919,7 @@ Response:
 }
 
 ```
-## 5. 区块（Blocks）
+## 区块（Blocks）
 
 ### 获取最新区块
 
@@ -1257,7 +1257,7 @@ Response:
     
 ```
 
-## 6. 抵押(Staking)
+## 抵押(Staking)
 
 ### 获取所有validators
 

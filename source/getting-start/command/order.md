@@ -1,6 +1,6 @@
-# 交易订单
+# Order 
 
-订单属性
+## 订单属性
 
 |      Name       |      Type       |       Mark        |
 | :-------------: | :-------------: | :------------------: |
@@ -18,7 +18,7 @@
 | timestamp       |int64            | created timestamp|
 | extraInfo       |string           | extra info of order in json format|
 
-## 1. 下单撤单：
+## 下单撤单：
 
 去中心化交易所支持下单、撤单功能，命令行如下:
 
@@ -28,8 +28,10 @@ okchaincli tx order
 
 二级子命令主要包含以下2个功能
 
-### 1.1 下单：
+### 下单：
+
 #### 示例：
+
 创建一个新的限价单
 ```bash
 # place an order
@@ -63,7 +65,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli tx order new mycoin_okt BUY 9.9 2.0 --from alice
@@ -72,7 +76,7 @@ okchaincli tx order new mycoin_okt BUY 9.9 2.0 --from alice
   "txhash": "57A390CBBE43548F112956DF6CA7146E14A02720F2895908B3A057136CE0324D"
 }
 ```
-`product`表示币对名称
+`product`表示数字资产交易对名称
 
 `side`表示买卖方向，取值BUY/SELL
 
@@ -81,8 +85,10 @@ okchaincli tx order new mycoin_okt BUY 9.9 2.0 --from alice
 `quantity`表示购买或出售的数量
 
 
-### 1.2 取消订单：
+### 取消订单：
+
 #### 示例：
+
 ```bash
 okchaincli tx order cancel [orderId]
 
@@ -114,7 +120,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli tx order cancel ID0000000054-0000 --from alice 
@@ -126,7 +134,7 @@ okchaincli tx order cancel ID0000000054-0000 --from alice
 ```
 `orderId`表示订单Id，这是由应用层自动生成的唯一id
 
-## 2. 操作查询：
+## 操作查询：
 
 去中心化交易所支持查询订单详情、深度表、用户订单列表等功能，命令行如下:
 
@@ -135,8 +143,11 @@ okchaincli query order
 ```
 
 二级子命令主要包含以下几个功能
-### 2.1 订单详情：
+
+### 订单详情：
+
 #### 示例：
+
 ```bash
 okchaincli query order detail [orderId]
 
@@ -155,7 +166,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli query order detail ID0000000007-0000
@@ -174,8 +187,11 @@ okchaincli query order detail ID0000000007-0000
  "timestamp": "1554273977"
 }
 ```
-### 2.2 订单深度表：
+
+### 订单深度表：
+
 #### 示例：
+
 ```bash
 okchaincli query order depthbook [product]
 
@@ -195,7 +211,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli query order depthbook mycoin_okt
@@ -225,8 +243,11 @@ okchaincli query order depthbook mycoin_okt
  ]
 }
 ```
-### 2.3 查看order模块的存储信息：
+
+### 查看order模块的存储信息：
+
 #### 示例：
+
 ```bash
 okchaincli query order store
 
@@ -247,7 +268,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli query order store
@@ -264,8 +287,11 @@ okchaincli query order store
 }
 
 ```
-### 2.4 查询治理过程中的全部params：
+
+### 查询治理过程中的全部params：
+
 #### 示例：
+
 ```bash
 okchaincli query order params
 
@@ -284,7 +310,9 @@ Global Flags:
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 ```
+
 #### 成功返回：
+
 ```
 # example
 okchaincli query order params

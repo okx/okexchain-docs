@@ -1,5 +1,5 @@
 
-# backend相关的查询操作
+# Backend
 
 backend模块支持未成交订单、已成交订单历史、交易列表、手续费明细、撮合结果、K线数据、Ticker数据查询等功能，命令行如下:
 
@@ -8,8 +8,11 @@ okchaincli backend
 ```
 
 二级子命令主要包含以下几个功能
-## 1. 用户订单列表：
-### 示例：
+
+## 用户订单列表：
+
+#### 示例：
+
 ```bash
 okchaincli backend orders [open/closed] [addr] [flags]
 
@@ -34,7 +37,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend orders open $(okchaincli keys show bob -a)
@@ -66,8 +71,10 @@ okchaincli backend orders open $(okchaincli keys show bob -a)
 }
 ```
 
-## 2. 交易列表：
-### 示例：
+## 交易列表：
+
+#### 示例：
+
 ```bash
 okchaincli backend deals [flags]
 
@@ -91,7 +98,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend deals --address=$(okchaincli keys show bob -a)
@@ -120,8 +129,11 @@ okchaincli backend deals --address=$(okchaincli keys show bob -a)
 	}
 }
 ```
-## 3. 用户手续费明细：
-### 示例：
+
+## 用户手续费明细：
+
+#### 示例：
+
 ```bash
 okchaincli backend fees [addr] [flags]
 
@@ -140,7 +152,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend fees $(okchaincli keys show bob -a)
@@ -170,8 +184,10 @@ okchaincli backend fees $(okchaincli keys show bob -a)
 }
 ```
 
-## 4. 获得撮合结果列表：
-### 示例：
+## 获得撮合结果列表：
+
+#### 示例：
+
 ```bash
 okchaincli backend matches [flags]
 
@@ -194,7 +210,9 @@ Global Flags:
 
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend matches
@@ -219,8 +237,11 @@ okchaincli backend matches
 	}
 }
 ```
-## 5. 获得用户地址的历史交易列表：
-### 示例：
+
+## 获得用户地址的历史交易列表：
+
+#### 示例：
+
 ```bash
 okchaincli backend txs [addr] [flags]
 
@@ -242,7 +263,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend txs $(okchaincli keys show bob -a)
@@ -288,8 +311,11 @@ okchaincli backend txs $(okchaincli keys show bob -a)
 	}
 }
 ```
-## 6. 获取特定高度区块中的tx hash：
-### 示例：
+
+## 获取特定高度区块中的tx hash：
+
+#### 示例：
+
 ```bash
 okchaincli backend block_tx_hashes [height] [flags]
 
@@ -306,7 +332,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend block-tx-hashes 105
@@ -315,8 +343,10 @@ okchaincli backend block-tx-hashes 105
 
 ```
 
-## 7. 查询k线信息：
-### 示例：
+## 查询k线信息：
+
+#### 示例：
+
 ```bash
 okchaincli backend klines [flags]
 
@@ -336,7 +366,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend klines -p mycoin_okt 
@@ -359,8 +391,11 @@ okchaincli backend klines -p mycoin_okt
 }
 
 ```
-## 8. 查询行情：
-### 示例：
+
+## 查询行情：
+
+#### 示例：
+
 ```bash
 okchaincli backend tickers [flags]
 
@@ -380,7 +415,9 @@ Global Flags:
       --trace             print out full stack trace on errors
 
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 # example
 okchaincli backend tickers -p mycoin_okt

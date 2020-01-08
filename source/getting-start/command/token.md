@@ -1,5 +1,6 @@
 # Token
 
+## 属性
 Token属性
 
 |      Name      |      Type       |            Description             |
@@ -19,27 +20,29 @@ Token属性
 okchaincli tx token [command]
 ```
 
-二级子命令主要包含以下7个功能
+## 发行Token：
 
-## 1. 发行Token：
-### 参数说明：
+#### 参数说明：
 
   |        Name        |  Type  |                       **Description**                        |
   | :----------------: | :----: | :----------------------------------------------------------: |
-  |       symbol       | string | symbol是币的标识，限制为6个字母数字字符，不区分大小写，但是第一个字符不能是数字，例如“bcoin”。因为系统会自动添加3个随机字符，例如“bcoin-gf6”。 |
-  |        desc        | string |           对币种的描述，长度有限制，上限256个字符            |
-  |  total-supply(-n)  |  int   |                         币的发行总量                         |
-  |   whole-name(-w)   | string |                           币的全称                           |
-  |      mintable      | string |                      表示币是否可以增发                      |
-  |        from        | string |                          币的所有者                          |
+  |       symbol       | string | symbol是数字资产的标识，限制为6个字母数字字符，不区分大小写，但是第一个字符不能是数字，例如“bcoin”。因为系统会自动添加3个随机字符，例如“bcoin-gf6”。 |
+  |        desc        | string |           对数字资产的描述，长度有限制，上限256个字符            |
+  |  total-supply(-n)  |  int   |                         数字资产的发行总量                         |
+  |   whole-name(-w)   | string |                           数字资产的全称                           |
+  |      mintable      | string |                      表示数字资产是否可以增发                      |
+  |        from        | string |                          数字资产的所有者                          |
   | broadcast-mode(-b) | string |               交易广播模式(sync\|async\|block)               |
 
-### 示例：
+#### 示例：
+
 发行新的Token
 ```bash
 okchaincli tx token issue [flags]
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' -b block --mintable  
 # example  
@@ -70,21 +73,25 @@ okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --des
   ]
 }
 ```
-## 2. 增发Token：
-### 参数说明：
+## 增发Token：
+
+#### 参数说明：
 
   |  Name  |  Type  |    **Description**    |
   | :----: | :----: | :-------------------: |
   | amount |  int   |      增发的数量       |
   | symbol | string | 要增发的token的symbol |
-  |  from  | string |      币的所有者       |
+  |  from  | string |      数字资产的所有者       |
 
-### 示例：
+#### 示例：
+
 已经发行的Token增发一定的数量，只有发行Token时指定了mintable参数的Token才可以增发
 ```bash
 okchaincli tx token mint [flags]
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 okchaincli tx token mint --amount 10000000 --symbol okt --from alice -b block
 # 示例输出
@@ -112,21 +119,25 @@ okchaincli tx token mint --amount 10000000 --symbol okt --from alice -b block
 }
 ```
 
-## 3. 销毁Token：
-### 参数说明：
+## 销毁Token：
+
+#### 参数说明：
 
  |  Name  |  Type  |        Description         |
  | :----: | :----: | :------------------------: |
- | amount | string | 销毁的货币的数量，支持小数 |
+ | amount | string | 销毁的数字资产的数量，支持小数 |
  | symbol | string |   要销毁的token的symbol    |
- |  from  | string |         币的所有者         |
+ |  from  | string |         数字资产的所有者         |
 
-### 示例：
+#### 示例：
+
 已经发行的Token销毁一定的数量
 ```bash
 okchaincli tx token burn [flags]
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 okchaincli tx token burn --from alice --symbol okt --amount 100.0 -b block
   # 示例输出
@@ -154,21 +165,25 @@ okchaincli tx token burn --from alice --symbol okt --amount 100.0 -b block
 }
 ```
 
-## 4. 冻结Token：
-### 参数说明：
+## 冻结Token：
+
+#### 参数说明：
 
   |  Name  |  Type  |       Description        |
   | :----: | :----: | :----------------------: |
-  | amount | string | 冻结货币的数量，支持小数 |
+  | amount | string | 冻结数字资产的数量，支持小数 |
   | symbol | string |  要冻结的token的symbol   |
-  |  from  | string |        币的所有者        |
+  |  from  | string |        数字资产的所有者        |
 
-### 示例：
+#### 示例：
+
 用户冻结自己账号里面的Token
 ```bash
 okchaincli tx token freeze [flags]
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
 okchaincli tx token freeze --from alice --symbol okt --amount 0.1 -b block
   # 示例输出
@@ -196,21 +211,23 @@ okchaincli tx token freeze --from alice --symbol okt --amount 0.1 -b block
 }
 ```
 
-## 5. 解冻Token：
-### 参数说明：
+## 解冻Token：
+
+#### 参数说明：
 
   |  Name  |  Type  |       Description        |
   | :----: | :----: | :----------------------: |
-  | amount | string | 解冻货币的数量，支持小数 |
+  | amount | string | 解冻数字资产的数量，支持小数 |
   | symbol | string |  要解冻的token的symbol   |
-  |  from  | string |        币的所有者        |
+  |  from  | string |        数字资产的所有者        |
 
-### 示例：
+#### 示例：
+
 解冻账号里面冻结的Token
 ```bash
 okchaincli tx token unfreeze [flags]
 ```
-### 成功返回：
+#### 成功返回：
 
 ```
   okchaincli tx token unfreeze --from alice --symbol okt --amount 0.1 -b block
@@ -240,13 +257,17 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 6. 查询Token信息：
-### 示例：
+## 查询Token信息：
+
+#### 示例：
+
 查询Token的信息
 ```bash
   okchaincli query token info <symbol>
 ```
-### 成功返回：
+
+#### 成功返回：
+
 ```
   # 示例输出
   {
@@ -260,13 +281,16 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 7. 给多个人转多种Token：
-### 示例：
+## 给多个人转多种Token：
+
+#### 示例：
+
 同时给多个人和转多种Token，也可以通过--transfers-file指定转账的文件，当指定--transfers-file时，忽略--transfers参数
 ```bash
 okchaincli tx token multi-send [flags]
 ```
-### 成功返回：
+
+#### 成功返回：
 
 ```
   okchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1okt,2btc-254"}]' -b block
@@ -297,16 +321,20 @@ okchaincli tx token multi-send [flags]
 ```
 
 
-## 8. 转移Token的所有权：
+## 转移Token的所有权：
 
 我们支持将Token的所有者转移给另外一个人。为了保证转移Token所有权时的安全性，必须通过多签才可以进行Token所有权的转移，具体分成以下四步：
 
 ### 原owner(from)生成未签名的tx：
+
 #### 示例：
+
 ```bash
 okchaincli tx token chown [flags]
 ```
+
 #### 成功返回：
+
 ```
 # from alice to jack
 okchaincli tx token chown --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt > unsignedTx.json
@@ -334,11 +362,15 @@ okchaincli tx token chown --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp 
 ```
 
 ### 转移的owner(to)来签名：
+
 #### 示例：
+
 ```bash
 okchaincli tx token multisigns unsignedTx.json
 ```
+
 #### 成功返回：
+
 ```
 okchaincli tx token multisigns unsignedTx.json --from jack > signedTx1.json -y
 
@@ -368,11 +400,15 @@ okchaincli tx token multisigns unsignedTx.json --from jack > signedTx1.json -y
 ```
 
 ### 原owner(from)签名：
+
 #### 示例：
+
 ```bash
 okchaincli tx sign [flags]
 ```
+
 #### 成功返回：
+
 ```
 okchaincli tx sign --from alice signedTx1.json > signedTx.json -y
 
@@ -412,11 +448,15 @@ okchaincli tx sign --from alice signedTx1.json > signedTx.json -y
 ```
 
 ### 广播多签后的tx：
+
 #### 示例：
+
 ```bash
 okchaincli tx broadcast signedTx.json
 ```
+
 #### 成功返回：
+
 ```
 okchaincli tx broadcast signedTx.json -b block -y
 
