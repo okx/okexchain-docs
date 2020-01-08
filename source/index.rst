@@ -11,22 +11,22 @@ OKChain介绍文档
 --------
 
 -  想要快速了解OKChain请看\ `这里`_
--  快速安装请看\ `这里 <getting-start/install.md>`__
--  快速数字资产发行和数字资产交易对申请请看\ `这里 <getting-start/ico.md>`__
+-  快速安装请看\ `这里 <getting-start/install.html>`__
+-  快速数字资产发行和数字资产交易对申请请看\ `这里 <getting-start/ico.html>`__
 
 接口服务
 --------
 
--  API接口请查看\ `这里 <api/http.md>`__
--  RPC接口请查看\ `这里 <api/node_rpc.md>`__
+-  API接口请查看\ `这里 <api/http.html>`__
+-  RPC接口请查看\ `这里 <api/node_rpc.html>`__
 
 DEX
 ---
 
 DEX是基于OKChain建立的去中心化交易系统。采用链上撮合和链上订单簿的设计。
 
--  关于集合竞价请看\ `这里 <trade/periodic_auction.md>`__
--  关于手续费请看\ `这里 <fee.md>`__
+-  关于集合竞价请看\ `这里 <trade/periodic_auction.html>`__
+-  关于手续费请看\ `这里 <fee.html>`__
 
 版本
 ----

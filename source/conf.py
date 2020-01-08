@@ -50,6 +50,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx_markdown_tables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -110,7 +111,7 @@ html_theme_options = {
     'display_version': False,  # Display the docs version
     # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
 }
-html_logo = 'img/okex_logo_white.png'
+html_logo = 'img/okchain_logo_white.png'
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
