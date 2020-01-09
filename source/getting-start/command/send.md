@@ -51,7 +51,7 @@ okchaincli tx send okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2okt --from al
 
 多签分成以下多个步骤：
 
-### 创建账户p1, p2, p3：
+### 创建账户p1, p2, p3
 
 示例：
 ```bash
@@ -62,7 +62,7 @@ okchaincli keys add --pubkey=cosmospub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtq
 okchaincli keys add --pubkey=cosmospub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
-### 生成多签公钥： 
+### 生成多签公钥
 
 * 聚合p1，p2，p3的多签公钥，设置签名阈值为N，即任意N人的签名即可让签名通过。
 
@@ -127,7 +127,7 @@ okchaincli tx multisign \
   p1signature.json p2signature.json > signedTx.json
 ```
 
-### 执行交易signedTx.json：
+### 执行交易signedTx.json
 
 执行离线签名过的`signedTx.json`,并查询余额确认。
 

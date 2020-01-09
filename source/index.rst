@@ -82,7 +82,6 @@ OKChain是DEX的基础设施，提供了\ `链上数据资产钱包管理 <featu
    features/account
    features/asset
    features/order
-   features/send
    features/backend
    governance/overview
    features/upgrade-overview

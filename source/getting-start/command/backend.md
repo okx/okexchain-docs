@@ -9,7 +9,7 @@ okchaincli backend
 
 二级子命令主要包含以下几个功能
 
-## 用户订单列表：
+## 用户订单列表
 
 #### 示例：
 
@@ -71,7 +71,7 @@ okchaincli backend orders open $(okchaincli keys show bob -a)
 }
 ```
 
-## 交易列表：
+## 交易列表
 
 #### 示例：
 
@@ -130,7 +130,7 @@ okchaincli backend deals --address=$(okchaincli keys show bob -a)
 }
 ```
 
-## 用户手续费明细：
+## 用户手续费明细
 
 #### 示例：
 
@@ -184,7 +184,7 @@ okchaincli backend fees $(okchaincli keys show bob -a)
 }
 ```
 
-## 获得撮合结果列表：
+## 获得撮合结果列表
 
 #### 示例：
 
@@ -238,7 +238,7 @@ okchaincli backend matches
 }
 ```
 
-## 获得用户地址的历史交易列表：
+## 获得用户地址的历史交易列表
 
 #### 示例：
 
@@ -312,7 +312,7 @@ okchaincli backend txs $(okchaincli keys show bob -a)
 }
 ```
 
-## 获取特定高度区块中的tx hash：
+## 获取特定高度区块中的tx hash
 
 #### 示例：
 
@@ -343,7 +343,7 @@ okchaincli backend block-tx-hashes 105
 
 ```
 
-## 查询k线信息：
+## 查询k线信息
 
 #### 示例：
 
@@ -392,7 +392,7 @@ okchaincli backend klines -p mycoin_okt
 
 ```
 
-## 查询行情：
+## 查询行情
 
 #### 示例：
 

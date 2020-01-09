@@ -1,6 +1,6 @@
 # Governance
 
-## Text提案命令：
+## Text提案命令
 
 #### 参数说明：  
 
@@ -52,7 +52,7 @@ okchaincli tx gov submit-text-proposal --title="test" --description="test" --typ
 }
 ```
 
-## 参数修改提案命令：
+## 参数修改提案命令
 
 #### 参数说明：
 
@@ -109,7 +109,7 @@ okchaincli tx gov submit-param-change-proposal --title="Change gov/MinDeposit" -
 }
 ```
 
-## 数字资产交易对申请提案命令：
+## 数字资产交易对申请提案命令
 
 #### 参数说明：
 
@@ -167,7 +167,7 @@ okchaincli tx gov submit-dex-list-proposal --title="list bcoin-7a4/okt" --type=D
 }
 ```
 
-## 数字资产交易对激活命令：
+## 数字资产交易对激活命令
 
 #### 参数说明：
 
@@ -235,7 +235,7 @@ okchaincli tx gov dexlist --proposal=4 --from alice --home ~/.okchaincli -b bloc
 }
 ```
 
-## 版本升级提案命令：
+## 版本升级提案命令
 
 请参考[该链接](/governance/upgrade/)
 
@@ -282,7 +282,7 @@ okchaincli tx gov deposit 1 500okt --from alice --home ~/.okchaincli/ -b block
   ]
 }
 ```
-##  提案投票命令：
+##  提案投票命令
 
 #### 示例：
 
@@ -326,9 +326,9 @@ okchaincli tx gov vote 2 Yes --from alice --home ~/.okchaincli/ -b block
 }
 ```
 
-##  提案查询命令：
+##  提案查询命令
 
-### 查询指定提案：
+### 查询指定提案
 
 #### 示例：
 
@@ -380,7 +380,7 @@ okchaincli query gov proposal 4 --home ~/.okchaincli/
 }
 ```
 
-### 查询所有提案：
+### 查询所有提案
 
 #### 示例：
 
@@ -487,7 +487,7 @@ okchaincli query gov proposals --home ~/.okchaincli/
 ]
 ```
 
-### 查询治理模块参数：
+### 查询治理模块参数
 
 #### 示例：
 

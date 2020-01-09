@@ -1,10 +1,10 @@
-# Account
+# Account&Keys
 
-## Key：
+## Keys
 
-### 增加账号：
+### 增加账号
 
-#### 参数说明：
+#### 参数说明
 
   | Parameter |        Description         |
   | :-------: | :------------------------: |
@@ -35,7 +35,7 @@ okchaincli keys add wind
 okchaincli keys add --recover admin   -y -m "keen border system oil inject hotel hood potato shed pumpkin legend actor"
 ```
 
-### 显示本地所有key信息：
+### 显示本地所有key信息
 
 #### 参数说明：
 
@@ -69,7 +69,7 @@ okchaincli keys list [flags]
   ]
 ```
 
-### 显示指定用户的key信息：
+### 显示指定用户的key信息
 
 #### 参数说明：
 
@@ -98,7 +98,7 @@ okchaincli keys show [name [name...]] [flags]
   }
 ```
 
-### 删除指定用户的key信息：
+### 删除指定用户的key信息
 
 #### 参数说明：
 
@@ -123,7 +123,7 @@ okchaincli keys delete <name> [flags]
   Key deleted forever (uh oh!)
 ```
 
-### 更新指定用户的key信息：
+### 更新指定用户的key信息
 
 #### 参数说明：
 
@@ -149,7 +149,7 @@ okchaincli keys update <name> [flags]
   Repeat the new passphrase:
   Password successfully updated!
 ```
-### 生成bip39助记词：
+### 生成bip39助记词
 
 #### 参数说明：
 
@@ -171,9 +171,9 @@ okchaincli keys mnemonic
 board zone elevator lesson welcome meadow love card obey cruise unlock double
 ```
 
-## Account：
+## Account
 
-### 查询账号余额：
+### 查询账号余额
 
 #### 参数说明：
 

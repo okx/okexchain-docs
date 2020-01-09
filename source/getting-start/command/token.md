@@ -20,7 +20,7 @@ Token属性
 okchaincli tx token [command]
 ```
 
-## 数字资产发行：
+## 数字资产发行
 
 #### 参数说明：
 
@@ -73,7 +73,7 @@ okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --des
   ]
 }
 ```
-## 数字资产增发：
+## 数字资产增发
 
 #### 参数说明：
 
@@ -119,7 +119,7 @@ okchaincli tx token mint --amount 10000000 --symbol okt --from alice -b block
 }
 ```
 
-## 数字资产销毁：
+## 数字资产销毁
 
 #### 参数说明：
 
@@ -165,7 +165,7 @@ okchaincli tx token burn --from alice --symbol okt --amount 100.0 -b block
 }
 ```
 
-## 数字资产冻结：
+## 数字资产冻结
 
 #### 参数说明：
 
@@ -211,7 +211,7 @@ okchaincli tx token freeze --from alice --symbol okt --amount 0.1 -b block
 }
 ```
 
-## 数字资产解冻：
+## 数字资产解冻
 
 #### 参数说明：
 
@@ -257,7 +257,7 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 查询数字资产信息：
+## 查询数字资产信息
 
 #### 示例：
 
@@ -281,7 +281,7 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 给多个人转多种数字资产：
+## 给多个人转多种数字资产
 
 #### 示例：
 
@@ -321,11 +321,11 @@ okchaincli tx token multi-send [flags]
 ```
 
 
-## 转移数字资产的所有权：
+## 转移数字资产的所有权
 
 我们支持将数字资产的所有者权限转移给另外一个用户。为了保证转移Token所有权时的安全性，必须通过多签才可以进行数字资产所有权的转移，具体分成以下四步：
 
-### 原owner(from)生成未签名的tx：
+### 原owner(from)生成未签名的tx
 
 #### 示例：
 
@@ -361,7 +361,7 @@ okchaincli tx token chown --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp 
 }
 ```
 
-### 转移的owner(to)来签名：
+### 转移的owner(to)来签名
 
 #### 示例：
 
@@ -399,7 +399,7 @@ okchaincli tx token multisigns unsignedTx.json --from jack > signedTx1.json -y
 }
 ```
 
-### 原owner(from)签名：
+### 原owner(from)签名
 
 #### 示例：
 
@@ -447,7 +447,7 @@ okchaincli tx sign --from alice signedTx1.json > signedTx.json -y
 }
 ```
 
-### 广播多签后的tx：
+### 广播多签后的tx
 
 #### 示例：
 

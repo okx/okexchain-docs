@@ -18,7 +18,7 @@
 | timestamp       |int64            | created timestamp|
 | extraInfo       |string           | extra info of order in json format|
 
-## 下单撤单：
+## 下单撤单
 
 去中心化交易所支持下单、撤单功能，命令行如下:
 
@@ -28,7 +28,7 @@ okchaincli tx order
 
 二级子命令主要包含以下2个功能
 
-### 下单：
+### 下单
 
 #### 示例：
 
@@ -85,7 +85,7 @@ okchaincli tx order new mycoin_okt BUY 9.9 2.0 --from alice
 `quantity`表示购买或出售的数量
 
 
-### 取消订单：
+### 取消订单
 
 #### 示例：
 
@@ -134,7 +134,7 @@ okchaincli tx order cancel ID0000000054-0000 --from alice
 ```
 `orderId`表示订单Id，这是由应用层自动生成的唯一id
 
-## 操作查询：
+## 操作查询
 
 去中心化交易所支持查询订单详情、深度表、用户订单列表等功能，命令行如下:
 
@@ -144,7 +144,7 @@ okchaincli query order
 
 二级子命令主要包含以下几个功能
 
-### 订单详情：
+### 订单详情
 
 #### 示例：
 
@@ -188,7 +188,7 @@ okchaincli query order detail ID0000000007-0000
 }
 ```
 
-### 订单深度表：
+### 订单深度表
 
 #### 示例：
 
@@ -244,7 +244,7 @@ okchaincli query order depthbook mycoin_okt
 }
 ```
 
-### 查看order模块的存储信息：
+### 查看order模块的存储信息
 
 #### 示例：
 
@@ -288,7 +288,7 @@ okchaincli query order store
 
 ```
 
-### 查询治理过程中的全部params：
+### 查询治理过程中的全部params
 
 #### 示例：
 
