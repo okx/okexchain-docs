@@ -2,7 +2,6 @@
 
 ## OKChain简介
 
-OKChain是OKEx研发的一组商业链。以建立安全、高效Defi基础设施为目标，我们的第一条链，是在已经实现解决效率敏感需求的前提下，向用户提供更全面的增信服务，解决用户加密资产交换时对增信服务的需求。
 
 OKChain目前包括两个可执行程序，okchaind和okchaincli。
 
@@ -11,14 +10,12 @@ OKChain目前包括两个可执行程序，okchaind和okchaincli。
 
 主要包含以下几个模块：
 
-* x/auth：账户模块
-* x/token：token模块
+* x/auth：用户管理模块
+* x/token：数字资产模块
 * x/order：订单模块
-* x/gov：治理模块
-* x/staking：抵押模块
-* x/distribution：分红模块
-* x/upgrade：升级模块
-* x/backend：行情模块
+* x/gov：提案模块
+* x/upgrade：版本升级模块
+* x/backend：backend模块
 
 # OKChain软件
 

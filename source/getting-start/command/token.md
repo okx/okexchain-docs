@@ -20,7 +20,7 @@ Token属性
 okchaincli tx token [command]
 ```
 
-## 发行Token：
+## 数字资产发行：
 
 #### 参数说明：
 
@@ -36,7 +36,7 @@ okchaincli tx token [command]
 
 #### 示例：
 
-发行新的Token
+发行新的数字资产
 ```bash
 okchaincli tx token issue [flags]
 ```
@@ -73,7 +73,7 @@ okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --des
   ]
 }
 ```
-## 增发Token：
+## 数字资产增发：
 
 #### 参数说明：
 
@@ -119,7 +119,7 @@ okchaincli tx token mint --amount 10000000 --symbol okt --from alice -b block
 }
 ```
 
-## 销毁Token：
+## 数字资产销毁：
 
 #### 参数说明：
 
@@ -131,7 +131,7 @@ okchaincli tx token mint --amount 10000000 --symbol okt --from alice -b block
 
 #### 示例：
 
-已经发行的Token销毁一定的数量
+已经发行的数字资产销毁一定的数量
 ```bash
 okchaincli tx token burn [flags]
 ```
@@ -165,7 +165,7 @@ okchaincli tx token burn --from alice --symbol okt --amount 100.0 -b block
 }
 ```
 
-## 冻结Token：
+## 数字资产冻结：
 
 #### 参数说明：
 
@@ -177,7 +177,7 @@ okchaincli tx token burn --from alice --symbol okt --amount 100.0 -b block
 
 #### 示例：
 
-用户冻结自己账号里面的Token
+用户冻结自己账号里面的数字资产
 ```bash
 okchaincli tx token freeze [flags]
 ```
@@ -211,7 +211,7 @@ okchaincli tx token freeze --from alice --symbol okt --amount 0.1 -b block
 }
 ```
 
-## 解冻Token：
+## 数字资产解冻：
 
 #### 参数说明：
 
@@ -223,7 +223,7 @@ okchaincli tx token freeze --from alice --symbol okt --amount 0.1 -b block
 
 #### 示例：
 
-解冻账号里面冻结的Token
+解冻账号里面冻结的数字资产
 ```bash
 okchaincli tx token unfreeze [flags]
 ```
@@ -257,11 +257,11 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 查询Token信息：
+## 查询数字资产信息：
 
 #### 示例：
 
-查询Token的信息
+查询数字资产的信息
 ```bash
   okchaincli query token info <symbol>
 ```
@@ -281,11 +281,11 @@ okchaincli tx token unfreeze [flags]
   }
 ```
 
-## 给多个人转多种Token：
+## 给多个人转多种数字资产：
 
 #### 示例：
 
-同时给多个人和转多种Token，也可以通过--transfers-file指定转账的文件，当指定--transfers-file时，忽略--transfers参数
+同时给多个人和转多种数字资产，也可以通过--transfers-file指定转账的文件，当指定--transfers-file时，忽略--transfers参数
 ```bash
 okchaincli tx token multi-send [flags]
 ```
@@ -321,9 +321,9 @@ okchaincli tx token multi-send [flags]
 ```
 
 
-## 转移Token的所有权：
+## 转移数字资产的所有权：
 
-我们支持将Token的所有者转移给另外一个人。为了保证转移Token所有权时的安全性，必须通过多签才可以进行Token所有权的转移，具体分成以下四步：
+我们支持将数字资产的所有者权限转移给另外一个用户。为了保证转移Token所有权时的安全性，必须通过多签才可以进行数字资产所有权的转移，具体分成以下四步：
 
 ### 原owner(from)生成未签名的tx：
 
@@ -485,4 +485,4 @@ okchaincli tx broadcast signedTx.json -b block -y
 }
 ```
 
-必须由原owner(from)和转移后的owner(to)共同签名才可以成功转移Token的所有权。
+必须由原owner(from)和转移后的owner(to)共同签名才可以成功转移数字资产的所有权。

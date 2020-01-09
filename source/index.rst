@@ -7,40 +7,32 @@
 OKChain介绍文档
 ===============
 
-快速开始
---------
+OKChain是OKEx推出的一组开源跨链项目。OKChain秉承去中心化和开放原则，赋予每一个参与者应享有同等地位的权利，可以畅通无阻地发布和运行各种各样去中心化应用。
 
--  想要快速了解OKChain请看\ `这里 <getting-start/introduction.html>`__
--  快速安装请看\ `这里 <getting-start/install.html>`__
--  快速数字资产发行和数字资产交易对申请请看\ `这里 <getting-start/ico.html>`__
+在全球去中心化基础设施建设的大潮中，我们也在努力尝试，OKChain就是基于此产生的。我们希望通过OKChain对去中心化技术的应用做出自己的贡献。
 
-接口服务
---------
+OKChain依托于OKEx的全域视野，从区块链底层切入，针对不同金融应用场景而进行优化的区块链基础设施解决方案。
+我们推出的第一个区块链项目是去DeFi最重要的基础设施--现货交易的DEX。现在基于OKChain，人人都可以发布自己的DEX。
 
--  API接口请查看\ `这里 <api/http.html>`__
--  RPC接口请查看\ `这里 <api/node_rpc.html>`__
 
 DEX
----
+------
 
-DEX是基于OKChain建立的去中心化交易系统。采用链上撮合和链上订单簿的设计。
-
--  关于集合竞价请看\ `这里 <trade/periodic_auction.html>`__
--  关于手续费请看\ `这里 <fee.html>`__
-
-版本
-----
-
-此文档对应程序的版本为：0.1
+OKChain是DEX的基础设施，提供了\ `链上数据资产钱包管理 <features/account.html>`__，\ `数字资产和数字资产之间的交易对的发行 <getting-start/ico.html>`__，以及\ `撮合引擎 <trade/periodic_auction.html>`__等相关功能。DEX运营方可以将精力专注于交易UI和数字资产交易对的甄选而无需关心底层细节。我们也会通过社区推出一些通用的交易UI，帮助用户更快的建立自己的DEX。
 
 
 
+你可能想要了解。。。
+--------
+
+-  \ `快速安装 <getting-start/install.html>`__
+-  \ `链上治理 <concepts/gov.html>`__
+-  \ `API接口 <api/http.html>`__
+-  \ `费率模型 <fee.html>`__
 
 
 
-.. _这里: getting-start/introduction.md
-
-Contents
+目录
 ========
 
 .. toctree::
