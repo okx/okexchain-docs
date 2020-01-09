@@ -15,7 +15,7 @@ $ okchaincli tx token issue --from alice --symbol mycoin -n 21000000 --whole-nam
  ...
 }
 ```
-其中，参数`--from alice`表示新token拥有者，`--symbol mycoin`代表发行token的标识，更详细参数说明请参考[[发行数字资产](./command/token.md##发行数字资产)]， 查询发行结果：
+其中，参数`--from alice`表示新token拥有者，`--symbol mycoin`代表发行token的标识，更详细参数说明请参考[[发行数字资产](./command/token.html##发行数字资产)]， 查询发行结果：
 
 ```sh
 $ okchaincli query token info mycoin
@@ -28,7 +28,7 @@ $ okchaincli query token info mycoin
  "mintable": false
 }
 ```
-更多功能，请参考[增发token](./command/token.md##增发), [销毁token](./command/token.md##销毁)
+更多功能，请参考[增发token](./command/token.html##增发), [销毁token](./command/token.html##销毁)
 
 发行token的手续费目前为`20000okt`，因此发行新token成功后alice账户会被扣除20000okt；如果余额过少，发行将失败。
 
@@ -43,7 +43,7 @@ $ okchaincli tx gov submit-dex-list-proposal --title="list mycoin/okt" --descrip
  "txhash": "D78534FBA22688F482CCE36F368A99DB77F9886CA4016C7A3325DEA940C34B83",
 }
 ```
-其中，参数`--deposit 1000okt`表示发起的案时指定的初始抵押，`--initPrice`是在数字资产交易对申请时指定的数字资产交易对初始价格，`--from alice`表示发起提案的账户。更详细参数说明请参考[[数字资产交易对申请提案命令](./command/gov.md###数字资产交易对申请提案命令)]。   
+其中，参数`--deposit 1000okt`表示发起的案时指定的初始抵押，`--initPrice`是在数字资产交易对申请时指定的数字资产交易对初始价格，`--from alice`表示发起提案的账户。更详细参数说明请参考[[数字资产交易对申请提案命令](./command/gov.html###数字资产交易对申请提案命令)]。   
 
 OKChain会为提交成功的提案生成一个`proposal-id`用于唯一标识该提案，查询交易：
 ```sh
@@ -132,7 +132,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
   ...
 }
 ```
-用户也可以采用[自动激活](../governance/dexlist.md)方式来进行数字资产交易对激活。
+用户也可以采用[自动激活](../governance/dexlist.html)方式来进行数字资产交易对激活。
 
 最后，可以通过查询数字资产交易对的方式来检查数字资产交易对申请是否被激活:
 ```sh 

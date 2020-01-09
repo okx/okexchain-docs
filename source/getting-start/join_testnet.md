@@ -5,7 +5,7 @@
 ```
 注：在开始下面的操作之前，你需要安装并配置好okchaind
 ```
-okchaind的安装请参考[OKChain安装](install.md##OKChain安装)
+okchaind的安装请参考[OKChain安装](install.html##OKChain安装)
 
 ## 1. 初始化新节点
 
