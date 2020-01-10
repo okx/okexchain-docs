@@ -18,7 +18,7 @@ OKChain依托于OKEx的全域视野，从区块链底层切入，针对不同金
 DEX
 ------
 
-OKChain是DEX的基础设施，提供了\ `链上数据资产钱包管理 <features/account.html>`__，\ `数字资产和数字资产之间的交易对的发行 <getting-start/ico.html>`__，以及\ `撮合引擎 <trade/periodic_auction.html>`__等相关功能。DEX运营方可以将精力专注于交易UI和数字资产交易对的甄选而无需关心底层细节。我们也会通过社区推出一些通用的交易UI，帮助用户更快的建立自己的DEX。
+OKChain是DEX的基础设施，提供了\ `链上数据资产钱包管理 <features/account.html>`__，\ `数字资产和数字资产之间的交易对的发行 <getting-start/ico.html>`__，以及链上撮合等相关功能。DEX运营方可以将精力专注于交易UI和数字资产交易对的甄选而无需关心底层细节。我们也会通过社区推出一些通用的交易UI，帮助用户更快的建立自己的DEX。
 
 
 
