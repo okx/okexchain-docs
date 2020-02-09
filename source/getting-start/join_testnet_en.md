@@ -45,11 +45,11 @@ Your full node has been initialized!
 ### [What is the Genesis](genesis_en.md)
 
 ### Download the genesis file:
-[genesis](http://gitlab.okcoin-inc.com/dex/launch/blob/dev/genesis.json)
+[genesis](https://github.com/okex/okchain-binaries/blob/master/genesis.json)
 
 ```
 $ shasum -a 256 genesis.json
-a22d5d16ec2666b0a8cca9bd374fe26c1c0f2f52b1dc1ccf6e0cb8c93eefc771  -
+f2ae29a36f5872571f8130197433ace6b163f56608eb116c8bb51449252ca363  -
 ```
 Fetch the testnet's genesis.json file into okchaind's config directory.
 ```
