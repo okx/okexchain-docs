@@ -112,10 +112,19 @@ services:
 
 ### 4.3 开启backend模块
 
-如果需要从节点中获取额外数据（如K线、行情、订单列表、交易列表等），那么在启动节点时需要开启backend模块。
+如果需要从节点中获取额外数据（如K线、行情、订单列表、交易列表等），那么在启动节点时需要开启backend模块。  
 ```bash
 okchaind start --backend.enable_backend=1 --backend.orm_engine.engine_type=sqlite3 --backend.orm_engine.connect_str=$db_filepath
 ```
+1、本地跑一个sqlite3数据库，命令如下  
+```bash
+sqlite3 backend.db 
+``` 
+2、启动加载backend.db  
+```bash
+okchaind start --backend.enable_backend=1 --backend.orm_engine.engine_type=sqlite3 --backend.orm_engine.connect_str=/root/backend.db
+```
+
 
 ## 5. 关闭节点
 
