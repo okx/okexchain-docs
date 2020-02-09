@@ -2,7 +2,7 @@
 
 ## gov
 
-### Text
+### Text提案
 ```json
 {
   "height": "19",
@@ -230,7 +230,7 @@
   "timestamp": "2019-08-05T07:57:08Z"
 }
 ```
-### App升级
+### App升级提案
 ```json
 {
   "height": "1861",

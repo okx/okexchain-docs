@@ -1,6 +1,6 @@
 # staking
 
-staking是支撑DEX PoS(Proof of Stake)共识机制的重要基础模块，它根据超级节点所接受委托的权益总量确定每个选举周期内的出块者集合，并根据voting power来动态确定出块顺序。同时也为distribution和gov模块提供必要的委托关系与超级节点信息查询的支持。
+staking是支撑DEX PoS(Proof of Stake)共识机制的重要基础模块，它根据验证人所接受委托的权益总量确定每个选举周期内的出块者集合，并根据voting power来动态确定出块顺序。同时也为distribution和gov模块提供必要的委托关系与验证人信息查询的支持。
 
 通过staking可以自由地创建validator、更新validator、委托权益给信赖的validator、从不再信任的validator那里解除委托以及将当前委托给某个validator的权益重新委托给其它validator。
 
