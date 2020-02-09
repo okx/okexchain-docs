@@ -28,12 +28,12 @@ Monikers只能包含ASCII字符. Unicode字符可能导致节点在网络中不�
 
 ### 2.1 下载创世文件:
 
-从官网[genesis文件](https://github.com/okex/okchain-binaries/genesis.json)链接下载genesis.json创世文件
+从官网[genesis文件](https://github.com/okex/okchain-binaries/blob/master/genesis.json)链接下载genesis.json创世文件
 
 并校验genesis.json的完整性，保证与测试网使用的是同一个创世文件
 ```
 $ shasum -a 256 genesis.json
-5b96c28ca7352ea83304e3d41fc5c24bb373a0cbf269f6e65504cb8128aae5fa
+f2ae29a36f5872571f8130197433ace6b163f56608eb116c8bb51449252ca363
 ```
 将测试网genesis.json复制到okchaind配置目录下，配置目录为`$HOME/.okchaind/config`
 
