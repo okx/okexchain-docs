@@ -551,9 +551,9 @@ okchaincli query gov params --home ~/.okchaincli/
 | DexListMaxBlockHeight   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
 | DexListFee              | 数字资产交易对激活所需费用                                                                                           |
 | DexListExpireTime       | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
-| Quorum                  | 全网参与投票的权重阈值，用于[投票统计](/concepts/gov.html#id4)                                                                                     |
-| Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](/concepts/gov.html#id4)                                                                        |
-| Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](/concepts/gov.html#id4)                                                                       |
+| Quorum                  | 全网参与投票的权重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                                     |
+| Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                        |
+| Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                       |
 | MaxBlockHeightPeriod    | 参数修改提案指定自动生效的块高不超过当前块高与MaxBlockHeightPeriod之和                                     |
 | MaxTxNumPerBlock        | 每个块中包含的最大交易数量                                                                                 |
 

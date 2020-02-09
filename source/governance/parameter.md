@@ -38,10 +38,10 @@
 | DexListMaxBlockHeight   | uint64   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
 | DexListFee              | DecCoins | 数字资产交易对激活所需费用                                                                                           |
 | DexListExpireTime       | time     | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
-| Quorum                  | Dec      | 投票周期结束时全网参与投票的权重阈值，用于[投票统计](/governance/overview/#_2)                                                                                     |
-| Threshold               | Dec      | 投票周期结束时投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](/governance/overview/#_2)                                                                        |
-| Veto                    | Dec      | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](/governance/overview/#_2)                                                                       |
-| YesInVotePeriod         | Dec      | 在投票结束前投Yes票在所有投票中（包含已投和未投）比重阈值，<br>用于用于[投票统计](/governance/overview/#_2)                                                                       |
+| Quorum                  | Dec      | 投票周期结束时全网参与投票的权重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                                     |
+| Threshold               | Dec      | 投票周期结束时投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                        |
+| Veto                    | Dec      | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                       |
+| YesInVotePeriod         | Dec      | 在投票结束前投Yes票在所有投票中（包含已投和未投）比重阈值，<br>用于用于[投票统计](../../concepts/gov.html#id4)                                                                       |
 | MaxTxNumPerBlock        | int64    | 每个块中包含的最大交易数量                                                                                 |
 
 
