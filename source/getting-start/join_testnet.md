@@ -78,8 +78,7 @@ $ docker run \
     -p 26656:26656 \
     -p 26657:26657 \
     -p 26659:26659 \
-    okchain/testnet:v0.1.0 \
-    okchaind start
+    okchain/testnet:v0.1.0
 ```
 #### 4.2.2 使用docker-compose命令启动
 
