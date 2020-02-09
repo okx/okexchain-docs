@@ -17,12 +17,12 @@ $ okchaincli version
 ```sh
 $ okchaind version
 version: 0.1.0
-git commit: d465b5998b534772c53385370067ad08c7f7f40d
-vendor hash: 63a7a90a0a940f9213a1a57d7e76fcff1a2ccce1
+git commit: 20d0f89a430a654fef1b4acfc9d8a0b7c0cd0e9b
+vendor hash: d4d8ee8e21167b59436b409c577e7becaa0be2528da66754b22e7fc11c0aaeaa
 build tags: netgo
-cosmos-sdk: v0.34.7
-tendermint: v0.31.5
-go version go1.12 darwin/amd64
+cosmos-sdk: 0.34.10
+tendermint: 0.31.11
+go version go1.12.5 linux/amd64
 ```
 
 <!--
