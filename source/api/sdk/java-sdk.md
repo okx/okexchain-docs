@@ -34,7 +34,7 @@ public JSONObject getAccountFromNode(String userAddress) throws NullPointerExcep
 
 ## 创建私钥，并生成对应公钥，地址
 ```java
-    public AddressInfo createAddressInfo();
+    public AccountInfo createAccount();
 ```
 传入参数：无
 
@@ -45,6 +45,10 @@ public class AddressInfo {
     private String privateKey;//私钥
     private String publicKey;//公钥
     private String userAddress;//地址
+}
+public class AccountInfo extends AddressInfo {
+    private String accountNumber;//账户在okchain上的id
+    private String sequenceNumber;//该账户下次发送交易应有的序号
 }
 ```
 ## 输入私钥，获得对应公钥，地址
@@ -59,9 +63,10 @@ public class AddressInfo {
 
 返回结果：
 ```java
-public class AccountInfo extends AddressInfo {
-    private String accountNumber;//账户在okchain上的id
-    private String sequenceNumber;//该账户下次发送交易应有的序号
+public class AddressInfo {
+    private String privateKey;//私钥
+    private String publicKey;//公钥
+    private String userAddress;//地址
 }
 ```
 ## 通过私钥获得account信息
