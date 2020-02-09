@@ -19,30 +19,30 @@
 
 ###### gov模块可修改参数：
 
-| Parameters              | Type | Descriptions                                                                                               |
-| :----                   | ----     | :----                                                                                                      |
-| TextMaxDepositPeriod        | time     | Text提案抵押周期                                                                          |
-| TextMinDeposit              | DecCoins | Text提案抵押额度<br>提案抵押超过该值则提案进入Voting Period                               |
-| TextVotingPeriod            | time     | Text提案投票周期                                                                          |
-| ParamChangeMaxDepositPeriod        | time     | 参数修改提案抵押周期                                                                          |
-| ParamChangeMinDeposit              | DecCoins | 参数修改提案抵押额度<br>提案抵押超过该值则提案进入Voting Period                               |
-| ParamChangeVotingPeriod            | time     | 参数修改提案投票周期                                                                          |
-| ParamChangeMaxBlockHeight    | int64    | 参数修改提案指定自动生效的块高不超过当前块高与ParamChangeMaxBlockHeight之和                                     |
-| AppUpgradeMaxDepositPeriod        | time     | app升级提案抵押周期                                                                          |
-| AppUpgradeMinDeposit              | DecCoins | app升级提案抵押额度<br>提案抵押超过该值则提案进入Voting Period                               |
-| AppUpgradeVotingPeriod            | time     | app升级提案投票周期                                                                          |
-| DexListMaxDepositPeriod | time     | 数字资产交易对申请提案提案抵押周期                                                                                       |
-| DexListMinDeposit       | DecCoins | 数字资产交易对申请提案提案抵押额度                                                                                       |
-| DexListVotingPeriod     | time     | 数字资产交易对申请提案提案投票周期                                                                                       |
-| DexListVoteFee          | DecCoins | 数字资产交易对申请提案投票手续费<br>对数字资产交易对申请提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费 |
-| DexListMaxBlockHeight   | uint64   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
-| DexListFee              | DecCoins | 数字资产交易对激活所需费用                                                                                           |
-| DexListExpireTime       | time     | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
-| Quorum                  | Dec      | 投票周期结束时全网参与投票的权重阈值，用于[投票统计](/governance/overview/#_2)                                                                                     |
-| Threshold               | Dec      | 投票周期结束时投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](/governance/overview/#_2)                                                                        |
-| Veto                    | Dec      | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](/governance/overview/#_2)                                                                       |
-| YesInVotePeriod         | Dec      | 在投票结束前投Yes票在所有投票中（包含已投和未投）比重阈值，<br>用于用于[投票统计](/governance/overview/#_2)                                                                       |
-| MaxTxNumPerBlock        | int64    | 每个块中包含的最大交易数量                                                                                 |
+|      Parameters       |      Type       |       Descriptions        |
+| :-------------: | :-------------: | :------------------: |
+| TextMaxDepositPeriod          |time           | Text提案抵押周期|
+| TextMinDeposit                |DecCoins            | Text提案抵押额度<br>提案抵押超过该值则提案进入Voting Period|
+| TextVotingPeriod              |time                | Text提案投票周期|
+| ParamChangeMaxDepositPeriod        |time                | 参数修改提案抵押周期|
+| ParamChangeMinDeposit              |DecCoins            | 参数修改提案抵押额度<br>提案抵押超过该值则提案进入Voting Period|
+| ParamChangeVotingPeriod            |time                | 参数修改提案投票周期|
+| ParamChangeMaxBlockHeight      |int64               | 参数修改提案指定自动生效的块高不超过当前块高与ParamChangeMaxBlockHeight之和|
+| AppUpgradeMaxDepositPeriod        |time                | app升级提案抵押周期|
+| AppUpgradeMinDeposit              |DecCoins            | app升级提案抵押额度<br>提案抵押超过该值则提案进入Voting Period|
+| AppUpgradeVotingPeriod            |time                | app升级提案投票周期|
+| DexListMaxDepositPeriod   |time                | 数字资产交易对申请提案提案抵押周期|
+| DexListMinDeposit         |DecCoins            | 数字资产交易对申请提案提案抵押额度|
+| DexListVotingPeriod       |time                | 数字资产交易对申请提案提案投票周期|
+| DexListVoteFee            |DecCoins            | 数字资产交易对申请提案投票手续费<br>对数字资产交易对申请提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费|
+| DexListMaxBlockHeight     |uint64              | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和|
+| DexListFee                |DecCoins            | 数字资产交易对激活所需费用|
+| DexListExpireTime         |time                | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期|
+| Quorum                    |Dec                 | 投票周期结束时全网参与投票的权重阈值，用于[投票统计](/governance/overview/#_2)|
+| Threshold                 |Dec                 | 投票周期结束时投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](/governance/overview/#_2)|
+| Veto                      |Dec                 | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](/governance/overview/#_2)|
+| YesInVotePeriod           |Dec                 | 在投票结束前投Yes票在所有投票中（包含已投和未投）比重阈值，<br>用于用于[投票统计](/governance/overview/#_2)|
+| MaxTxNumPerBlock          |int64               | 每个块中包含的最大交易数量|
 
 
 ###### token模块可修改参数：   
