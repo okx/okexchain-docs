@@ -14,10 +14,12 @@ OKChain目前包括两个可执行程序，okchaind和okchaincli。
 * token：token模块
 * order：订单模块
 * gov：治理模块
+* backend：行情模块
+<!--
 * staking：抵押模块
 * distribution：分红模块
-* upgrade：升级模块
-* backend：行情模块
+* upgrade：升级模块 
+-->
 
 
 ## okchaind后台程序

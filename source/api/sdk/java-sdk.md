@@ -184,6 +184,8 @@ public class Token {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
+
+<!--
 ## 发起同时给多个人转账的Transaction
 ```java
     public JSONObject sendMultiSendTransaction(AccountInfo account, List<TransferUnit> transfers, String memo) throws IOException;
@@ -211,6 +213,8 @@ public class TransferUnit {
 	"txhash": "A1F5688C769621E04FFF2617BD1C1931607FD3178368A362CEC8EFAD9D8FFB46"//Transaction哈希
 }
 ```
+-->
+
 ## 获取用户所有数字资产信息
 ```java
     public BaseModel getAccountALLTokens(String address, String show) throws NullPointerException;
