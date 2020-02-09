@@ -1,6 +1,4 @@
 
-[TOC]
-
 # HTTP API
 The OKChain HTTP API provides access to an OKChain Chain node deployment and market data services.
 
@@ -223,7 +221,7 @@ GET okchain/v1/order/depthbook
 |Name|Type|Required|Description|
 |:---:|:---:|:---:|:---:|
 |product|String|    true| 数字资产对信息eg:btc_okt |
-|~~size~~|Number|false|档位（maxSize:200）,第一版固定为200|
+|size|Number|false|档位（maxSize:200）,第一版固定为200|
 
 
 Response:
@@ -709,7 +707,7 @@ GET okchain/v1/order/list/closed
 |product    |String|    false|    数字资产交易对|
 |address|    String|    true|    地址|
 |side|String|false|没有该字段则都要"BULL","SELL"|
-|<font color=#DC143C >hideNoFill</font>|<font color=#DC143C>int</font>|<font color=#DC143C >false</font>|<font color=#DC143C >关于完全撤销或者完全过期订单 0:不隐藏 1:隐藏</font>|
+|hideNoFill|int|false|关于完全撤销或者完全过期订单 0:不隐藏 1:隐藏|
 |start    |int|    false|    开始时间戳|
 |end    |int|    false|    结束时间戳|
 |page    |int|    false|    第几页|
