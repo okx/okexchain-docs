@@ -11,14 +11,14 @@ OKChain目前包括两个可执行程序，okchaind和okchaincli。
 
 主要包含以下几个模块：
 
-* x/auth：账户模块
-* x/token：token模块
-* x/order：订单模块
-* x/gov：治理模块
-* x/staking：抵押模块
-* x/distribution：分红模块
-* x/upgrade：升级模块
-* x/backend：行情模块
+* auth：账户模块
+* token：token模块
+* order：订单模块
+* gov：治理模块
+* staking：抵押模块
+* distribution：分红模块
+* upgrade：升级模块
+* backend：行情模块
 
 # OKChain软件
 
