@@ -1,5 +1,7 @@
 # Go SDK
 
+SDK [repo](https://github.com/okex/okchain-go-sdk)
+
 ## 账户功能
 
 ### 创建账户
