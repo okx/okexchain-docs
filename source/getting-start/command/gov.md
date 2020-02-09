@@ -1,4 +1,4 @@
-# Governance
+# gov
 
 ## Text提案命令：
 
@@ -61,7 +61,7 @@ okchaincli tx gov submit-text-proposal --title="test" --description="test" --typ
 | --title             | 提案的标题内容                                                                                                                                                                                                                                                          |
 | --type              | 发起提案的类型（这里指定为ParameterChange）                                                                                                                                                                                                                             |
 | --deposit           | 发起提案时指定的初始抵押                                                                                                                                                                                                                                                |
-| --param             | 指定要修改的参数和值（gov/MinDeposit=1000okt<br>即将gov模块中的MinDeposit参数修改为1000okt。<br>各模块可修改参数参考[该链接](http://gitlab.okcoin-inc.com/dex/okchain/wikis/%E5%90%84%E6%A8%A1%E5%9D%97%E5%8F%AF%E4%BF%AE%E6%94%B9%E5%8F%82%E6%95%B0%E6%B1%87%E6%80%BB) |
+| --param             | 指定要修改的参数和值（gov/MinDeposit=1000okt<br>即将gov模块中的MinDeposit参数修改为1000okt。<br>各模块可修改参数参考[该链接](/governance/parameter.html#id1) |
 | --height            | 指定参数修改提案生效（即将要修改参数改为指定的值）时的块高，<br>指定高度需满足：大于当前块高并小于等于当前块高与[MaxBlockHeightPeriod](/api/command/gov/#_33)之和                                                                                                  |
 | --from              | 指定要发送交易的账户名称                                                                                                                                                                                                                                                  |
 | --home              | 账户名称和okchaincli配置所在目录<br>如果为~/.okchaincli可以忽略该参数                                                                                                                                                                                                   |
@@ -551,9 +551,9 @@ okchaincli query gov params --home ~/.okchaincli/
 | DexListMaxBlockHeight   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
 | DexListFee              | 数字资产交易对激活所需费用                                                                                           |
 | DexListExpireTime       | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
-| Quorum                  | 全网参与投票的权重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                                     |
-| Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                        |
-| Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](http://gitlab.okcoin-inc.com/dex/okchain/wikis/gov%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0#%E6%8F%90%E6%A1%88%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B)                                                                       |
+| Quorum                  | 全网参与投票的权重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                                     |
+| Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                        |
+| Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                       |
 | MaxBlockHeightPeriod    | 参数修改提案指定自动生效的块高不超过当前块高与MaxBlockHeightPeriod之和                                     |
 | MaxTxNumPerBlock        | 每个块中包含的最大交易数量                                                                                 |
 

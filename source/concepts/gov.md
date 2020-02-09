@@ -67,4 +67,4 @@ Text提案参数：
 &emsp;&emsp;NoWithVeto票在所有投票中的比重阈值(`Veto`)：0.334  
 &emsp;&emsp;在投票结束前投Yes票在所有投票中（包含已投和未投）比重阈值(`YesInVotePeriod`)：0.667
 
-详细信息请参阅[提案参数](../governance/parameter.md)
+详细信息请参阅[提案参数](../governance/parameter.html#id1)

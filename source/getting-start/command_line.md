@@ -1,4 +1,4 @@
-# 用命令行工具连接OKChain
+# 用okchaincli连接OKChain
 
 `okchaincli`是连接OKChain的命令行工具
 
@@ -82,4 +82,6 @@ okchaincli config trust-node true
     治理相关操作
 
 * [backend](command/backend.md) 
+    
+    K线数据、Ticker数据等查询功能
 

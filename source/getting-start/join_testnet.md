@@ -19,12 +19,12 @@ okchaind init --chain-id okchain
 moniker = "<your_custom_moniker>"
 ```
 说明：
-Monikers只能包含ASCII字符. Unicode字符可能导致节点在网络中不可见！
+moniker只能包含ASCII字符. Unicode字符可能导致节点在网络中不可见！
 
 
 ## 2. 创世文件
 
-创世文件介绍请参考[Genesis介绍](genesis.md)
+创世文件介绍请参考[genesis文件](genesis.md)
 
 ### 2.1 下载创世文件:
 
@@ -78,7 +78,7 @@ $ docker run \
     -p 26656:26656 \
     -p 26657:26657 \
     -p 26659:26659 \
-    okchain/testnet:v0.1.0
+    -d okchain/testnet:v0.1.0
 ```
 #### 4.2.2 使用docker-compose命令启动
 
