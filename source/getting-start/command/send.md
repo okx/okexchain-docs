@@ -8,8 +8,8 @@ okchaincli tx send <addr> <amount> --from <name>
 
 #### 参数说明
   
-| **Name** | **Type** |                    **Description**                    |
-  | :------: | :------: | :---------------------------------------------------: |
+  |      Name       |      Type       |       Description        |
+  | :-------------: | :-------------: | :------------------: |
   |   addr   |  string  |                  要转给的用户的地址                   |
   |  amount  |  string  | 要转账的数量，可以包含多个数字资产以逗号分隔比如1okt,2bcoin |
   |   from   |  String  |                      数字资产的所有者                       |
