@@ -33,7 +33,7 @@ Monikers只能包含ASCII字符. Unicode字符可能导致节点在网络中不�
 并校验genesis.json的完整性，保证与测试网使用的是同一个创世文件
 ```
 $ shasum -a 256 genesis.json
-f2ae29a36f5872571f8130197433ace6b163f56608eb116c8bb51449252ca363
+f2ae29a36f5872571f8130197433ace6b163f56608eb116c8bb51449252ca363 genesis.json
 ```
 将测试网genesis.json复制到okchaind配置目录下，配置目录为`$HOME/.okchaind/config`
 
@@ -47,7 +47,7 @@ b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656
 d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:26656
 223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:26656
 ```
-将种子节点配置到`~/.okchaind/config/config.toml`。
+将种子节点配置到`$HOME/.okchaind/config/config.toml`。
 ```
 # Comma separated list of seed nodes to connect to
 seeds = "b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:26656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:26656"
