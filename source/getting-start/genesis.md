@@ -1,4 +1,4 @@
-# Genesis 文件
+# genesis文件
 
 ## 创世块文件
 

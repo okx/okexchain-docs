@@ -1,6 +1,5 @@
-# 什么是OKChain
+# OKChain简介
 
-## OKChain简介
 
 OKChain是OKEx研发的一组商业链。以建立安全、高效Defi基础设施为目标，我们的第一条链，是在已经实现解决效率敏感需求的前提下，向用户提供更全面的增信服务，解决用户加密资产交换时对增信服务的需求。
 
@@ -20,9 +19,8 @@ OKChain目前包括两个可执行程序，okchaind和okchaincli。
 * upgrade：升级模块
 * backend：行情模块
 
-# OKChain软件
 
-## okchaind后台程序
+# okchaind后台程序
 
 okchaind用于初始化和启动OKChain全节点，是OKChain后台程序，详细信息请参考`okchaind -h`, 如下：
 ```sh
@@ -62,7 +60,7 @@ Flags:
 Use "okchaind [command] --help" for more information about a command.
 ```
 
-## okchaincli客户端
+# okchaincli客户端
 
 okchaincli是OKChain命令行客户端，提供了丰富的功能与OKChain后台程序进行交互，主要包含两类功能：tx功能和query功能。详细信息请参考`okchaincli -h`, 如下：
 ```sh 

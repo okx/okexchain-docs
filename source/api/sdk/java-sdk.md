@@ -1,6 +1,6 @@
 # Java SDK
 
-SDK [repo](https://github.com/okex/okchain-java-sdk)
+SDK [下载](https://github.com/okex/okchain-java-sdk)
 
 ## 通过远程区块链节点获取account信息
 ```java
