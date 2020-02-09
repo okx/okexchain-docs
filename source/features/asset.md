@@ -7,7 +7,7 @@
 ## 操作
 
 ### 发行Token
-用户通过自定义数字资产相关参数来发行新的Token，如数字资产描述、发行总量等。详细信息请参阅[发行Token](/getting-start/command/token.html#id2) 
+用户通过自定义数字资产相关参数来发行新的Token，如数字资产描述、发行总量等。详细信息请参阅[发行Token](../getting-start/command/token.html#id2) 
 
 ### 增发Token
 用户可以对已经发行的Token增发一定的数量。详细信息请参阅[增发Token](../getting-start/command/token.html#id6)
