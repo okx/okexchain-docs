@@ -20,7 +20,7 @@ OKChain目前包括两个可执行程序，okchaind和okchaincli。
 * backend：行情模块
 
 
-# okchaind后台程序
+## okchaind后台程序
 
 okchaind用于初始化和启动OKChain全节点，是OKChain后台程序，详细信息请参考`okchaind -h`, 如下：
 ```sh
@@ -60,7 +60,7 @@ Flags:
 Use "okchaind [command] --help" for more information about a command.
 ```
 
-# okchaincli客户端
+## okchaincli客户端
 
 okchaincli是OKChain命令行客户端，提供了丰富的功能与OKChain后台程序进行交互，主要包含两类功能：tx功能和query功能。详细信息请参考`okchaincli -h`, 如下：
 ```sh 

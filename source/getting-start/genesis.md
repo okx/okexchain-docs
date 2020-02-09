@@ -4,7 +4,7 @@
 
 Genesis文件是定义区块链初始状态的JSON文件。它可以被视为区块链的第一个区块的信息，即高度为0的区块的数据，下一个区块（高度为1）将引用Genesis文件作为其父块。
 
-Genesis文件中定义的状态包含所有必要的初始信息，如初始测试币分配、"创世块"时间、默认参数等。下面是OKChain测试网genesis文件内容(有删减，详情请参考[launch repo](http://gitlab.okcoin-inc.com/dex/launch))，如下：
+Genesis文件中定义的状态包含所有必要的初始信息，如初始测试币分配、"创世块"时间、默认参数等。下面是OKChain测试网genesis文件内容(有删减，详情请参考[创世块文件](https://github.com/okex/okchain-binaries/blob/master/genesis.json))，如下：
 ```sh
 {
       "genesis_time": "2019-03-13T23:00:00Z",

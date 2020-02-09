@@ -15,7 +15,7 @@ $ okchaincli tx token issue --from alice --symbol mycoin -n 21000000 --whole-nam
  ...
 }
 ```
-其中，参数`--from alice`表示新token拥有者，`--symbol mycoin`代表发行token的标识，更详细参数说明请参考[[发行数字资产](./command/token.html##发行数字资产)]， 查询发行结果：
+其中，参数`--from alice`表示新token拥有者，`--symbol mycoin`代表发行token的标识，更详细参数说明请参考[[发行数字资产](./command/token.html#id2)]， 查询发行结果：
 
 ```sh
 $ okchaincli query token info mycoin
@@ -28,7 +28,7 @@ $ okchaincli query token info mycoin
  "mintable": false
 }
 ```
-更多功能，请参考[增发token](./command/token.html##增发), [销毁token](./command/token.html##销毁)
+更多功能，请参考[增发token](./command/token.html#id6), [销毁token](./command/token.html#id10)
 
 发行token的手续费目前为`20000okt`，因此发行新token成功后alice账户会被扣除20000okt；如果余额过少，发行将失败。
 
