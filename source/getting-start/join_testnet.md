@@ -1,7 +1,6 @@
 
 # 加入OKChain测试网络
 
-首先从[launch repo](http://gitlab.okcoin-inc.com/dex/launch) 获取测试网信息，其中包含OKChain测试网中节点配置文件和创世文件。
 ```
 注：在开始下面的操作之前，你需要安装并配置好okchaind
 ```
@@ -29,7 +28,7 @@ Monikers只能包含ASCII字符. Unicode字符可能导致节点在网络中不�
 
 ### 2.1 下载创世文件:
 
-从官网[genesis文件](http://gitlab.okcoin-inc.com/dex/launch/blob/testnet01/genesis.json)链接下载genesis.json创世文件
+从官网[genesis文件](https://github.com/okex/okchain-binaries/genesis.json)链接下载genesis.json创世文件
 
 并校验genesis.json的完整性，保证与测试网使用的是同一个创世文件
 ```
@@ -84,7 +83,7 @@ $ docker run \
 ```
 #### 4.2.2 使用docker-compose命令启动
 
-首先，保存下面到`okchain_full_node.yml`文件中。
+首先，保存下面内容到`okchain_full_node.yml`文件中。
 ```yml
 version: '2'
 

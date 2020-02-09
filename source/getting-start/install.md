@@ -1,6 +1,6 @@
 # OKChain安装
 
-目前，`OKChain`暂未开源，可以通过[官方渠道](https://github.com/ok-chain/binaries)下载可执行程序`okchaind`和`okchaincli`。  
+目前，`OKChain`暂未开源，可以通过[官方渠道](https://github.com/okex/okchain-binaries)下载可执行程序`okchaind`和`okchaincli`。  
 下载成功后，你就可以使用`OKChain`程序的相关功能了。
 
 > 注：
