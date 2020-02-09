@@ -60,17 +60,18 @@
 | ListProposalMinDeposit | Dec      |
 
 ###### order模块可修改参数：   
-| Parameters              | Type | Descriptions |
+
+|      Parameters       |      Type       |       Descriptions        |
 | :-------------: | :-------------: | :------------------: |
-| OrderExpireBlocks  | int64    | 订单过期参数，经过若干个块之后订单自动过期 |
-| MaxDealsPerBlock   | int64    | 每个块撮合的订单数量限制|
-| NewOrder           | Dec      | 下单手续费，默认为0|
-| Cancel             | Dec      | 取消订单手续费（采用非okt支付时，等价的okt数量|
-| CancelNative       | Dec      | 取消订单手续费（需要支付的okt数量）|
-| Expire             | Dec      | 订单过期手续费（采用非okt支付时，等价的okt数量）|
-| ExpireNative       | Dec      | 订单过期手续费（需要支付的okt数量）|
-| TradeFeeRate       | Dec      | 订单成交手续费率（使用非okt数字资产支付时）|
-| TradeFeeRateNative | Dec      | 订单成交手续费率（使用okt支付时）|
+| OrderExpireBlocks          |int64           | 订单过期参数，经过若干个块之后订单自动过期|
+| MaxDealsPerBlock   |int64    | 每个块撮合的订单数量限制|
+| NewOrder           |Dec      | 下单手续费，默认为0|
+| Cancel             |Dec      | 取消订单手续费（采用非okt支付时，等价的okt数量|
+| CancelNative       |Dec      | 取消订单手续费（需要支付的okt数量）|
+| Expire             |Dec      | 订单过期手续费（采用非okt支付时，等价的okt数量）|
+| ExpireNative       |Dec      | 订单过期手续费（需要支付的okt数量）|
+| TradeFeeRate       |Dec      | 订单成交手续费率（使用非okt数字资产支付时）|
+| TradeFeeRateNative |Dec      | 订单成交手续费率（使用okt支付时）|
 
 ###### staking模块可修改参数：   
 
