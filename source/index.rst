@@ -27,6 +27,7 @@ DEX是基于OKChain建立的去中心化交易系统。采用链上撮合和链�
 
 -  \ `集合竞价 <trade/periodic_auction.html>`__
 -  \ `手续费 <fee.html>`__
+-  \ `立即去交易 <https://www.okex.com/dex-test>`__
 
 版本
 ----
