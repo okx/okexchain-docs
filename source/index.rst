@@ -135,3 +135,11 @@ Contents
    :caption: 常见问题
 
    faq.md
+
+.. _link-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 相关链接
+
+   link.md
