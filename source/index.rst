@@ -10,9 +10,9 @@ OKChain介绍文档
 快速开始
 --------
 
--  \ `快速了解OKChain <getting-start/introduction.html>`__
--  \ `快速安装 <getting-start/install.html>`__
--  \ `快速数字资产发行和数字资产交易对申请 <getting-start/ico.html>`__
+-  \ `了解OKChain <getting-start/introduction.html>`__
+-  \ `安装 <getting-start/install.html>`__
+-  \ `发行数字资产和申请数字资产交易对 <getting-start/ico.html>`__
 
 接口服务
 --------
@@ -32,7 +32,7 @@ DEX是基于OKChain建立的去中心化交易系统。采用链上撮合和链�
 版本
 ----
 
-此文档对应程序的版本为：0.1
+此文档对应程序的版本为：0.8
 
 
 
