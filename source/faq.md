@@ -46,7 +46,7 @@
 
 ## OKChain和cosmos还有Tendermint是什么关系？
 
->OKChain基于cosmos-sdk开发自己的dex业务，复用了Tendermint的网路和共识的代码，这为我们以后对接其他基于cosmos的链做好了基础。但是基于DEX独特的业务需求，我们队治理和共识中的选举等模块进行了重新设计，以支撑我们的业务。
+>OKChain基于cosmos-sdk开发自己的dex业务，复用了Tendermint的网路和共识的代码，这为我们以后对接其他基于cosmos的链做好了基础。但是基于DEX独特的业务需求，我们重新设计了治理和选举等模块，以支撑我们的业务。
 
 ## OKChain共有多少个验证人？
 
