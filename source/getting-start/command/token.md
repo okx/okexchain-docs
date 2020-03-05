@@ -330,21 +330,21 @@ okchaincli tx token multi-send [flags]
 #### 示例：
 
 ```bash
-okchaincli tx token chown [flags]
+okchaincli tx token transfer-ownership [flags]
 ```
 
 #### 成功返回：
 
 ```
 # from alice to jack
-okchaincli tx token chown --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt > unsignedTx.json
+okchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt > unsignedTx.json
 
 # unsignedTx.json
 {
 	"type": "auth/StdTx",
 	"value": {
 		"msg": [{
-			"type": "token/Chown",
+			"type": "token/TransferOwnership",
 			"value": {
 				"from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
 				"to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
