@@ -12,7 +12,7 @@ OKChain介绍文档
 
 -  \ `了解OKChain <getting-start/introduction.html>`__
 -  \ `安装 <getting-start/install.html>`__
--  \ `发行数字资产和申请数字资产交易对 <getting-start/ico.html>`__
+
 
 接口服务
 --------

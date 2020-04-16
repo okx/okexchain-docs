@@ -31,13 +31,6 @@
 | AppUpgradeMaxDepositPeriod        |time                | app升级提案抵押周期|
 | AppUpgradeMinDeposit              |DecCoins            | app升级提案抵押额度<br>提案抵押超过该值则提案进入Voting Period|
 | AppUpgradeVotingPeriod            |time                | app升级提案投票周期|
-| DexListMaxDepositPeriod   |time                | 数字资产交易对申请提案提案抵押周期|
-| DexListMinDeposit         |DecCoins            | 数字资产交易对申请提案提案抵押额度|
-| DexListVotingPeriod       |time                | 数字资产交易对申请提案提案投票周期|
-| DexListVoteFee            |DecCoins            | 数字资产交易对申请提案投票手续费<br>对数字资产交易对申请提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费|
-| DexListMaxBlockHeight     |uint64              | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和|
-| DexListFee                |DecCoins            | 数字资产交易对激活所需费用|
-| DexListExpireTime         |time                | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期|
 | Quorum                    |Dec                 | 投票周期结束时全网参与投票的权重阈值，用于[投票统计](/governance/overview/#_2)|
 | Threshold                 |Dec                 | 投票周期结束时投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](/governance/overview/#_2)|
 | Veto                      |Dec                 | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](/governance/overview/#_2)|

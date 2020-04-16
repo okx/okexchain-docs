@@ -419,13 +419,6 @@ okchaincli query gov params --home ~/.okchaincli/
 | MaxDepositPeriod        | Text/参数修改/app升级提案抵押周期                                                                          |
 | MinDeposit              | Text/参数修改/app升级提案抵押额度<br>提案抵押超过该值则提案进入Voting Period                               |
 | VotingPeriod            | Text/参数修改/app升级提案投票周期                                                                          |
-| DexListMaxDepositPeriod | 数字资产交易对申请提案提案抵押周期                                                                                       |
-| DexListMinDeposit       | 数字资产交易对申请提案提案抵押额度                                                                                       |
-| DexListVotingPeriod     | 数字资产交易对申请提案提案投票周期                                                                                       |
-| DexListVoteFee          | 数字资产交易对申请提案投票手续费<br>对数字资产交易对申请提案投Yes/NoWithVeto的账户按照<br>DexListVoteFee*账户staking所占权重收取手续费 |
-| DexListMaxBlockHeight   | 指定自动数字资产交易对激活的块高不超过当前块高与DexListMaxBlockHeight之和                                            |
-| DexListFee              | 数字资产交易对激活所需费用                                                                                           |
-| DexListExpireTime       | 数字资产交易对申请提案通过后到数字资产交易对激活的有效期                                                                           |
 | Quorum                  | 全网参与投票的权重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                                     |
 | Threshold               | 投Yes票在所有投非弃权票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                        |
 | Veto                    | 投NoWithVeto票在所有投票中的比重阈值，用于[投票统计](../../concepts/gov.html#id4)                                                                       |

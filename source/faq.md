@@ -62,7 +62,7 @@
 
 ## 如何联系我们的开发人员？
 
->你可以选择给我们发送邮件【okchain@okcoin.net】，或者加入我们的[电报群](https://t.me/okchaintech)，获得更多的技术支持。
+>你可以选择给我们发送邮件【okchain@okex.com】，或者加入我们的[电报群](https://t.me/okchaintech)，获得更多的技术支持。
 
 
 
