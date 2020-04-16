@@ -18,9 +18,8 @@
 ## 提案类型
 针对不同用途，OKChain提供以下4种提案类型：   
 1. [Text提案（Text Proposal）](../governance/text.md)：用于获取某个topic网络意见。   
-2. [参数修改提案（Parameter Proposal）](../governance/parameter.md)：用于修改系统参数。   
-3. [数字资产交易对申请提案（DexList Proposal）](../governance/dexlist.md)：用于项目方数字资产交易对申请。   
-4. [版本升级提案（Software Upgrade Proposal）](../governance/upgrade.md)：用于进行全网升级操作。   
+2. [参数修改提案（Parameter Proposal）](../governance/parameter.md)：用于修改系统参数。     
+3. [版本升级提案（Software Upgrade Proposal）](../governance/upgrade.md)：用于进行全网升级操作。   
 
 除了Text提案外，提案均由发起，抵押阶段（deposit_period），投票阶段（vote_period）和执行阶段组成，Text提案则没有执行阶段。
 
@@ -53,14 +52,6 @@ Text提案参数：
 &emsp;&emsp;抵押周期(`AppUpgradeMaxDepositPeriod`): 24h   
 &emsp;&emsp;抵押额度(`AppUpgradeMinDeposit`): 100okt   
 &emsp;&emsp;投票周期(`AppUpgradeVotingPeriod`): 72h   
-数字资产交易对申请提案参数：    
-&emsp;&emsp;抵押周期(`DexListMaxDepositPeriod`): 24h   
-&emsp;&emsp;抵押额度(`DexListMinDeposit`): 20000okt   
-&emsp;&emsp;投票周期(`DexListVotingPeriod`): 72h   
-&emsp;&emsp;投票费用(`DexListVoteFee`): 0okt  
-&emsp;&emsp;自动数字资产交易对申请指定的最大块高(`DexListMaxBlockHeight`): 10000   
-&emsp;&emsp;数字资产交易对激活费用(`DexListFee`): 100000okt   
-&emsp;&emsp;数字资产交易对激活到期时间(`DexListExpireTime`): 数字资产交易对申请提案通过后24h内激活否则提案失效     
 所有提案的投票统计参数：   
 &emsp;&emsp;参与投票的权重占比阈值(`Quorum`)：0.334   
 &emsp;&emsp;投Yes票在所有投非弃权票中的比重阈值(`Threshold`)：0.5   

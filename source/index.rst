@@ -60,13 +60,7 @@ Contents
    getting-start/join_testnet
    getting-start/command_line
 
-.. _merchant-docs:
 
-.. toctree::
-   :maxdepth: 3
-   :caption: 商户
-
-   getting-start/ico
 
 .. _concept-docs:
 
