@@ -6,7 +6,7 @@ order: 2
 
 This guide will explain how to install the `okchaind` and `okchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-mainnet as either a [Full Node](./join-okchain-mainnet.html) or a
+testnet as either a [Full Node](./join-okchain-mainnet.html) or a
 [Validator](../validators/validators-guide-cli.html).
 
 ## Install Go

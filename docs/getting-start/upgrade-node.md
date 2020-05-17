@@ -34,7 +34,7 @@ To upgrade the genesis file, you can either fetch it from a trusted source or ex
 
 ### Fetching from a Trusted Source
 
-If you are joining the mainnet, fetch the genesis from the [mainnet repo](https://github.com/cosmos/launch). If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/cosmos/testnets). Otherwise, fetch it from your trusted source.
+If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/cosmos/testnets). Otherwise, fetch it from your trusted source.
 
 Save the new genesis as `new_genesis.json`. Then replace the old `genesis.json` with `new_genesis.json`
 

@@ -85,7 +85,7 @@ Running a full-node on the OKChain Testnet
 ------------------------------------------
 
 In order to run a full-node for the OKChain mainnet, you must first
-`install ``okchaind`` <../getting-start/install-okchain.html>`__. Then,
+`install okchaind <../getting-start/install-okchain.html>`__. Then,
 follow `the guide <../getting-start/install-okchain.html>`__.
 
 If you are looking to run a validator node, follow the `validator setup
@@ -183,7 +183,6 @@ Contents
    resources/genesis
    resources/okchaincli
    resources/service-providers
-   resources/archives
 
 .. toctree::
    :maxdepth: 3

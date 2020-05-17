@@ -33,5 +33,4 @@ Seek legal advice if you intend to run a Validator.
 
 Discuss the finer details of being a validator on our community chat and forum:
 
-* [Validator Chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org)
-* [Validator Forum](https://forum.cosmos.network/c/validating)
+* [Validator Chat](https://t.me/okchaintech)
