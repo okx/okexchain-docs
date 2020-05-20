@@ -28,7 +28,7 @@ Reward allocation calculation is performed once for each block, and the reward w
 
 validators need to collect it manually.
 
-\
+
 
 
 
