@@ -23,7 +23,7 @@ We anticipate that network requirements will be low initially. The current testn
 
 ## Set Up a Website
 
-Set up a dedicated validator's website and signal your intention to become a validator on our [forum](https://forum.cosmos.network/t/validator-candidates-websites/127/3). This is important since delegators will want to have information about the entity they are delegating their okts to.
+Set up a dedicated validator's website and signal your intention to become a validator on our [chat](https://t.me/okchaintech). This is important since delegators will want to have information about the entity they are delegating their okts to.
 
 ## Seek Legal Advice
 
