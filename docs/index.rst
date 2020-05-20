@@ -79,17 +79,17 @@ OKChain CLI
 the OKChain. ``okchaincli`` is the only tool that supports 100% of the
 OKChain features, including accounts, transfers, delegation, and
 governance. Learn more about ``okchaincli`` with the `delegator's CLI
-guide <../delegators/delegators-guide-cli.html>`__.
+guide <./delegators/delegators-guide-cli.html>`__.
 
 Running a full-node on the OKChain Testnet
 ------------------------------------------
 
 In order to run a full-node for the OKChain mainnet, you must first
-`install okchaind <../getting-start/install-okchain.html>`__. Then,
-follow `the guide <../getting-start/install-okchain.html>`__.
+`install okchaind <./getting-start/install-okchain.html>`__. Then,
+follow `the guide <./getting-start/install-okchain.html>`__.
 
 If you are looking to run a validator node, follow the `validator setup
-guide <../validators/validators-guide-cli.html>`__.
+guide <./validators/validators-guide-cli.html>`__.
 
 Join the Community
 ------------------
