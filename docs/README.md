@@ -19,7 +19,7 @@ OKChain-OpenDEX, as the first project of the OKChain ecosystem, is a middleware 
 
 Do you have OKT tokens? With OKT, you have the superpower to contribute to the security and governance of the OKChain. Delegate your OKT to one or more of the 100 validators on the OKChain blockchain to earn more OKT through Proof-of-Stake. You can also vote with your OKT to influence the future of the OKChain through on-chain governance proposals.
 
-Learn more about [being a delegator](../delegators/delegators-faq.html).
+Learn more about [being a delegator](./latest/delegators/delegators-faq.html).
 
 
 
@@ -36,9 +36,9 @@ These block explorers allow you to search, view and analyze OKChain data&mdash;l
 
 ## Running a full-node on the OKChain Testnet
 
-In order to run a full-node for the OKChain mainnet, you must first [install `okchaind`](./getting-start/install-okchain.html). Then, follow [the guide](./getting-start/install-okchain.html).
+In order to run a full-node for the OKChain mainnet, you must first [install `okchaind`](./latest/getting-start/install-okchain.html). Then, follow [the guide](./latest/getting-start/install-okchain.html).
 
-If you are looking to run a validator node, follow the [validator setup guide](./validators/validators-guide-cli.html).
+If you are looking to run a validator node, follow the [validator setup guide](./latest/validators/validators-guide-cli.html).
 
 ## Join the Community
 
