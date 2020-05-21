@@ -8,7 +8,7 @@
 | Validator | Exercise the right to generate blocks and enjoy the right of on-chain governance | Top 21 nodes with the highest number of okt delegations to be the validators in the next cycle | 21 |
 | User | A user holding okt | Hold okt | Unlimited ||
 | Delegator | A user who can enjoy the reward from the validator | Vote on a node which will become a validator after the next election | Unlimited ||
-| Proposer | Pack transactions and notify other validators for verification | Generate a sequential list of proposers based on the number of pledged okt and voting okt of each validator and each supernode may become a proposer | Only one each time ||
+| Proposer | Pack transactions and notify other validators for verification | Generate a sequential list of proposers based on the number of pledged okt and voting okt of each validator and each validators may become a proposer | Only one each time ||
 
 
 

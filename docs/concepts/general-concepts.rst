@@ -26,7 +26,7 @@ validator
 The role of a validator is to exercise block generation rights and enjoy
 on-chain governance rights. In a voting session, 21 nodes that have
 obtained the highest numbers of votes from okt voters are elected as
-super nodes in the next cycle.
+vaildator in the next cycle.
 
 types of OKChain users
 ----------------------
