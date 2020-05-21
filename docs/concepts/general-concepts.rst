@@ -50,7 +50,7 @@ successfully linking to OKChain’s network and pledging 10w OKT.
 proposer
 ~~~~~~~~
 
-A proposer packs transactions and notifies other super nodes of
+A proposer packs transactions and notifies other validators of
 verification.
 
 candidate proposers
