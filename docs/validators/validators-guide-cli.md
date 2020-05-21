@@ -5,7 +5,7 @@ order: 2
 -->
 
 
-Staking is an important basic module supporting DEX’s PoS (Proof of Stake) consensus mechanism. It determines the number of block producer sets in each election period according to the total amount of delegated proof of stake accepted by super nodes, and dynamically determines the block order according to the voting power. Meanwhile, it also provides necessary support for delegation relationships and information query of super nodes to distribution and gov modules.
+Staking is an important basic module supporting DEX’s PoS (Proof of Stake) consensus mechanism. It determines the number of block producer sets in each election period according to the total amount of delegated proof of stake accepted by validators, and dynamically determines the block order according to the voting power. Meanwhile, it also provides necessary support for delegation relationships and information query of validators to distribution and gov modules.
 
 Through staking, you can freely create validators, update validators, delegate proof of stake to trusted validators, cancel delegation from validators that you no longer trust, and re-delegate proof of stake currently delegated to a validator to other validators.
 
@@ -63,8 +63,9 @@ okchain users can
 
 ```bash
 okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
-* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of okt to be vote.
 ```
+
+* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of okt to be vote.
 
 * from indicates the user account to be re-delegated, which is rose here
 
@@ -82,8 +83,9 @@ Unbond shares and withdraw the same amount of votes
 
 ```bash
 okchaincli tx staking unbond 10okt --from rose
-* In the example, 10 is the number of the unbond share to be undelegated
 ```
+
+* In the example, 10 is the number of the unbond share to be undelegated
 
 * from indicates the user account to be undelegated, which is rose here
 
