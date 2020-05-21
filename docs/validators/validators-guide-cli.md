@@ -83,8 +83,9 @@ Unbond shares and withdraw the same amount of votes
 
 ```bash
 okchaincli tx staking unbond 10okt --from rose
-* In the example, 10 is the number of the unbond share to be undelegated
 ```
+
+* In the example, 10 is the number of the unbond share to be undelegated
 
 * from indicates the user account to be undelegated, which is rose here
 
