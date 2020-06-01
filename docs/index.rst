@@ -132,6 +132,7 @@ Contents
    getting-start/deploy-you-own-okchain-testnet
    getting-start/join-okchain-testnet
    getting-start/join-okchain-mainnet
+   getting-start/install-faq
 
 .. toctree::
    :maxdepth: 3
