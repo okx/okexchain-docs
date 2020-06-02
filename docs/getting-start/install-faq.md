@@ -1,4 +1,4 @@
-# install faq
+# Install faq
 ## 1. How to resolve error: too many open files ?
 * open file `/etc/sysctl.conf`, add follow config
 ```shell script
