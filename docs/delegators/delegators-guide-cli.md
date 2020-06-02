@@ -277,7 +277,7 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 ## Sending Transactions
 
 ::: warning
-On OKChain testnet, the accepted denom is `uatom`, where `1atom = 1,000,000uatom`
+On OKChain testnet, the accepted denom is okt
 :::
 
 ### A Note on Gas and Fees
@@ -295,7 +295,7 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block. 
 
 ::: tip
-For testnet, the recommended `gas-prices` is `0.025uatom`. 
+For testnet, the recommended `gas-prices` is `0.005tokt`. 
 ::: 
 
 ### Sending Tokens
