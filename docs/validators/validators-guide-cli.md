@@ -29,7 +29,7 @@ staking cli contains the following 5 commands for PoS operations, providing comp
 
 ### Create a validator
 
-Upgrade a node to a validator through self-delegation and set the description, commission rate and related change limits on a validator.
+Upgrade a node to a validator and set the description on a validator.
 
 ```bash
   okchaincli tx staking create-validator --amount=2okt --pubkey=$(okchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
@@ -56,16 +56,21 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - details indicate the detailed description of the validator to be updated
 - from specifies the operator’s account, which is jack here
 
+### Delegate
+user need delegate a certain amount of okts to the staking account to become a delegator
+```bash
+okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
 
 ### Vote
 
-okchain users can 
+okchain delegator can vote to self or other validator by following command
 
 ```bash
 okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
 ```
 
-* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of okt to be vote.
+* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of delegated okt will be voted.
 
 * from indicates the user account to be re-delegated, which is rose here
 
