@@ -23,7 +23,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port>
 
-# example: okchaincli config node https://35.176.62.211:26657
+# example: okchaincli config node tcp://35.176.62.211:26657
 ```
 
 Or any of the following address ports:
