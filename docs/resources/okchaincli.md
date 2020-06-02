@@ -23,18 +23,14 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port>
 
-# example: okchaincli config node https://3.13.150.20:26657
+# example: okchaincli config node https://35.176.62.211:26657
 ```
 
 Or any of the following address ports:
 ```
 35.176.62.211:26657
 18.132.46.47:26657
-18.162.213.211:26657
 15.164.104.138:26657
-54.180.2.185:26657
-13.231.233.159:26657
-52.42.114.80:26657
 ```
 
 
