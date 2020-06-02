@@ -57,14 +57,14 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - from specifies the operator’s account, which is jack here
 
 ### Delegate
-Delegate a certain amount of okts to the staking account
+user need delegate a certain amount of okts to the staking account to become a delegator
 ```bash
 okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ### Vote
 
-okchain users can vote to self or others by following command
+okchain delegator can vote to self or other validator by following command
 
 ```bash
 okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
