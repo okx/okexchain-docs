@@ -366,7 +366,7 @@ To confirm that your transaction went through, you can use the following queries
 okchaincli query account
 
 // you should have delegations after you bond okt
-okchaincli query staking delegaator <delegatorAddress>
+okchaincli query staking delegator <delegatorAddress>
 
 // this returns your tx if it has been included
 // use the tx hash that was displayed when you created the tx
