@@ -241,17 +241,20 @@ okchaincli query account <yourAddress>
 // query the list of validators
 okchaincli query staking validators
 
-// query the information of a validator given their address (e.g. cosmosvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27)
+// query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
 okchaincli query staking validator <validatorAddress>
 
-// query all delegations made from a delegator given their address (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
-okchaincli query staking delegations <delegatorAddress>
+// query all information of delegations and all votes recently made by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
+okchaincli query staking delegator <delegatorAddress>
 
-// query a specific delegation made from a delegator (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg) to a validator (e.g. cosmosvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27) given their addresses
-okchaincli query staking delegation <delegatorAddress> <validatorAddress>
+// query the information of all votes recently made to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
+okchaincli query staking votes-to <validatorAddress>
 
-// query the rewards of a delegator given a delegator address (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
-okchaincli query distribution rewards <delegatorAddress> 
+// query the addresses of delegators by a specific proxy (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph) 
+okchaincli query staking proxy <proxyAddress>
+
+// query the unwithdrawn rewards of a given validator address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
+okchaincli query distr commission <validatorAddress> 
 
 // query all proposals currently open for depositing
 okchaincli query gov proposals --status deposit_period
@@ -307,10 +310,10 @@ For testnet, the recommended `gas-prices` is `0.025uatom`.
 
 ```bash
 // Send a certain amount of tokens to an address
-// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=cosmos16m93fezfiezhvnjajzrfyszml8qm92a0w67ntjhd3d0 <amount>=1000000uatom 
-// Ex value for flags: <gasPrice>=0.025uatom
+// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph <amount>=1024okt 
+// Ex value for flags: <gasPrice>=0.005okt
 
-okchaincli tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ### Bonding okts and Withdrawing Rewards
@@ -328,31 +331,28 @@ okchaincli tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-a
 ::: 
 
 ```bash
-// Bond a certain amount of okts to a given validator
-// ex value for flags: <validatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToBound>=10000000uatom, <gasPrice>=0.025uatom
+// Delegate a certain amount of okts to the staking account
+// ex value for flags: <amountToDelegate>=1024okt, <gasPrice>=0.005okt
 
-okchaincli tx staking delegate <validatorAddress> <amountToBond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-
-// Redelegate a certain amount of okts from a validator to another
-// Can only be used if already bonded to a validator
-// Redelegation takes effect immediately, there is no waiting period to redelegate
-// After a redelegation, no other redelegation can be made from the account for the next 3 weeks
-// ex value for flags: <stcValidatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToRedelegate>=100000000uatom, <gasPrice>=0.025uatom
-
-okchaincli tx staking redelegate <srcValidatorAddress> <destValidatorAddress> <amountToRedelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-// Withdraw all rewards
-// ex value for flag: <gasPrice>=0.025uatom
-
-okchaincli tx distribution withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
 
-// Unbond a certain amount of okts from a given validator 
+// Vote on one or more validator(s) by the weight of tokens delegated to the staking account
+// ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
+
+okchaincli tx staking vote <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+
+// Withdraw the rewards by the owner of a specific validator
+// ex value for flag: <gasPrice>=0.005okt
+
+okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+
+
+// Unbond shares and withdraw the same amount of votes 
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
-// ex value for flags: <validatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToUnbound>=10000000uatom, <gasPrice>=0.025uatom
+// ex value for flags: <amountToUnbound>=1024okt, <gasPrice>=0.005okt
 
-okchaincli tx staking unbond <validatorAddress> <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking unbond <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ::: warning
@@ -366,7 +366,7 @@ To confirm that your transaction went through, you can use the following queries
 okchaincli query account
 
 // you should have delegations after you bond okt
-okchaincli query staking delegations <delegatorAddress>
+okchaincli query staking delegaator <delegatorAddress>
 
 // this returns your tx if it has been included
 // use the tx hash that was displayed when you created the tx
@@ -405,13 +405,13 @@ At the end of the voting period, the proposal is accepted if there are more than
 ```bash
 // Submit a Proposal
 // <type>=text/parameter_change/software_upgrade
-// ex value for flag: <gasPrice>=0.025uatom
+// ex value for flag: <gasPrice>=0.005okt
 
-okchaincli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=10000000uatom --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
+okchaincli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=100okt --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
 // Increase deposit of a proposal
 // Retrieve proposalID from $okchaincli query gov proposals --status deposit_period
-// ex value for parameter: <deposit>=10000000uatom
+// ex value for parameter: <deposit>=100okt
 
 okchaincli tx gov deposit <proposalID> <deposit> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
@@ -428,9 +428,9 @@ If you do not have a ledger device and want to interact with your private key on
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToBound>=10000000uatom, <bech32AddressOfValidator>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <gasPrice>=0.025uatom, <delegatorAddress>=cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg
+// ex value for flags: <amountToDelegate>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
 
-okchaincli tx staking delegate <validatorAddress> <amountToBond> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
+okchaincli tx staking delegate <amountToDelegate> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
