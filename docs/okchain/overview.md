@@ -47,7 +47,7 @@ If you are looking to run a validator node, follow the [validator setup guide](.
 
 Have questions, comments, or new ideas? Participate in the OKChain community through one of the following channels.
 
-* [OKChain Validator Chat](https://t.me/joinchat/HuUCNktBLftzEY1fZPStkw)
+* [OKChain Validator Chat](https://t.me/OKChainValidator)
 * [OKChain Developer Chat](https://t.me/okchaintech)
 
 

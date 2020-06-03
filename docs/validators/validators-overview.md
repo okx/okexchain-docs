@@ -23,7 +23,7 @@ We anticipate that network requirements will be low initially. The current testn
 
 ## Set Up a Website
 
-Set up a dedicated validator's website and signal your intention to become a validator on our [chat](https://t.me/okchaintech). This is important since delegators will want to have information about the entity they are delegating their okts to.
+Set up a dedicated validator's website and signal your intention to become a validator on our [chat](https://t.me/OKChainValidator). This is important since delegators will want to have information about the entity they are delegating their okts to.
 
 ## Seek Legal Advice
 
@@ -33,4 +33,4 @@ Seek legal advice if you intend to run a Validator.
 
 Discuss the finer details of being a validator on our community chat and forum:
 
-* [Validator Chat](https://t.me/okchaintech)
+* [Validator Chat](https://t.me/OKChainValidator)
