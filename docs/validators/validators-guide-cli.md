@@ -83,7 +83,7 @@ okchain users can unbond the deposit token while canceling all the votes, it tak
    - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
    - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
    - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
-   
+
 Unbond shares and withdraw the same amount of votes
 
 ```bash
@@ -94,3 +94,10 @@ okchaincli tx staking unbond 10okt --from rose
 
 * from indicates the user account to be undelegated, which is rose here
 
+### Reward
+
+Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command bellow
+
+```
+okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```

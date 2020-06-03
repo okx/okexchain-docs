@@ -251,10 +251,7 @@ okchaincli query staking delegator <delegatorAddress>
 okchaincli query staking votes-to <validatorAddress>
 
 // query the addresses of delegators by a specific proxy (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph) 
-okchaincli query staking proxy <proxyAddress>
-
-// query the unwithdrawn rewards of a given validator address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
-okchaincli query distr commission <validatorAddress> 
+okchaincli query staking proxy <proxyAddress> 
 
 // query all proposals currently open for depositing
 okchaincli query gov proposals --status deposit_period
@@ -341,12 +338,6 @@ okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --ga
 // ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
 
 okchaincli tx staking vote <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-// Withdraw the rewards by the owner of a specific validator
-// ex value for flag: <gasPrice>=0.005okt
-
-okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
 
 // Unbond shares and withdraw the same amount of votes 
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
