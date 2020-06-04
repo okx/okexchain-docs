@@ -57,6 +57,7 @@ e.g.
 or
 
 .. code:: bash
+
     okchainli tx send ... --gas-prices=0.00000001tokt
 
 
