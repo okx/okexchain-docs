@@ -19,7 +19,7 @@ mkdir -p $HOME/go/bin
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
 source ~/.bash_profile
 ```
-Under Windows, you may set environment variables through the "Environment Variables" 
+Under Windows, you may set environment variables(`HOME` or `GO111MODULE`) through the "Environment Variables" 
 button on the "Advanced" tab of the "System" control panel. Some versions of Windows 
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
@@ -38,7 +38,7 @@ git clone -b <latest-release-tag> https://github.com/okex/okchain
 export GO111MODULE=on
 cd okchain && make install
 ```
-In Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
+Under Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
 ```shell script
 # Enable the go modules feature
 $env:GO111MODULE="on"
