@@ -19,6 +19,10 @@ mkdir -p $HOME/go/bin
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
 source ~/.bash_profile
 ```
+Under Windows, you may set environment variables through the "Environment Variables" 
+button on the "Advanced" tab of the "System" control panel. Some versions of Windows 
+provide this control panel through the "Advanced System Settings" option inside the 
+"System" control panel.
 
 ::: tip
 **Go 1.12+** is required for the OKChain.
