@@ -25,7 +25,7 @@
 ```shell script
   reboot
 ```
-## 2. Configure `trust-node` and `chain-id` ?
+## 2. Configure `trust-node` and `chain-id`
 When using `okchaincli` to query block/tx or send tx, the following errors may occur:
 ```shell script
 $ okchaincli query block 6547302
