@@ -32,7 +32,7 @@ staking cli contains the following 5 commands for PoS operations, providing comp
 Upgrade a node to a validator and set the description on a validator.
 
 ```bash
-  okchaincli tx staking create-validator --amount=2okt --pubkey=$(okchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
+  okchaincli tx staking create-validator --pubkey=$(okchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
 ```
 
 * pubkey represents the tendermint public key of the current node
