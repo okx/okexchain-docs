@@ -61,7 +61,7 @@ or
     okchainli tx send ... --gas-prices=0.00000001tokt
 
 
-You Need to use the gas flag to specify the gas quantity you want to provide for this transaction, either use ``--gas number``
+You Need to use the ``--gas`` flag to specify the gas quantity you want to provide for this transaction, either use ``--gas number``
 or ``--gas auto``. When use ``--gas auto`` to automatic estimate gas needed, a good advice is also to provide ``--gas-adjustment ratio``,
 where ratio should be 1.5 or 2.0.
 
