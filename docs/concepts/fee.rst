@@ -60,6 +60,10 @@ or
     okchainli tx send ... --gas-prices=0.00000001tokt
 
 
+You Need to use the gas flag to specify the gas quantity you want to provide for this transaction, either use ``--gas number``
+or ``--gas auto``. When use ``--gas auto`` to automatic estimate gas needed, a good advice is also to provide ``--gas-adjustment ratio``,
+where ratio should be 1.5 or 2.0.
+
 
 Other fees
 ----------
@@ -68,7 +72,7 @@ In addition to the above fees, okchain will also charge some additional fees as 
 
 
 +----------------+-------------------------------+------------------------------------------------+
-| Module         | Order                         |  Business Fee      (OKT)                       |
+| Module         | Command                       |  Business Fee      (OKT)                       |
 +================+===============================+================================================+
 | Dex            | List                          | 20000                                          |
 +----------------+-------------------------------+------------------------------------------------+
@@ -79,3 +83,15 @@ In addition to the above fees, okchain will also charge some additional fees as 
 |                | Burn                          | 10                                             |
 +----------------+-------------------------------+------------------------------------------------+
 
+
+Fee Related FAQ
+----------
+
+**1. Fee deduction rules**
+* If provide ``--fees numFees``, chain will deduction "numFees" from operation account, no matter success or fail.
+* If provide ``--gas-prices``, chain will deduction ``gas_wanted*gas-prices`` from operation account, no matter success or failed.
+* Currently cosmos will not return the exceed gas provided, ie. if provided gas(gas_wanted) is small than gas used(gas_used), chain will consume gas_wanted gas and fail; if gas_wanted is bigger than gas_used, chain will also consume gas_wanted.
+
+
+**2. Why account balance is not integer when provided ``--fees intFees``**
+* Besides gas fee, chain will also consume some other additional transaction fees for Dex and Token as list above.
