@@ -34,6 +34,11 @@ git clone -b <latest-release-tag> https://github.com/okex/okchain
 export GO111MODULE=on
 cd okchain && make install
 ```
+In Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
+```shell script
+# Enable the go modules feature
+$env:GO111MODULE="on"
+```
 
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
