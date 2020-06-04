@@ -29,7 +29,7 @@ staking cli contains the following 5 commands for PoS operations, providing comp
 
 ### Create a validator
 
-Upgrade a node to a validator through self-delegation and set the description, commission rate and related change limits on a validator.
+Upgrade a node to a validator and set the description on a validator.
 
 ```bash
   okchaincli tx staking create-validator --amount=2okt --pubkey=$(okchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
@@ -56,16 +56,21 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - details indicate the detailed description of the validator to be updated
 - from specifies the operator’s account, which is jack here
 
+### Delegate
+user need delegate a certain amount of okts to the staking account to become a delegator
+```bash
+okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
 
 ### Vote
 
-okchain users can 
+okchain delegator can vote to self or other validator by following command
 
 ```bash
 okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
 ```
 
-* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of okt to be vote.
+* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of delegated okt will be voted.
 
 * from indicates the user account to be re-delegated, which is rose here
 
@@ -78,7 +83,7 @@ okchain users can unbond the deposit token while canceling all the votes, it tak
    - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
    - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
    - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
-   
+
 Unbond shares and withdraw the same amount of votes
 
 ```bash
@@ -89,3 +94,10 @@ okchaincli tx staking unbond 10okt --from rose
 
 * from indicates the user account to be undelegated, which is rose here
 
+### Reward
+
+Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command bellow
+
+```
+okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
