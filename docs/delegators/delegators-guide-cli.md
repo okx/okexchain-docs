@@ -173,7 +173,6 @@ In order to connect to the full-node, you will need an address of the following 
 
 **Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-okchian-network)**  
 
-
 > _NOTE_:  
 **Please check that you are always using the latest stable release of `okchaincli`**
 

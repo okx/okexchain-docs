@@ -560,8 +560,8 @@ Display user addresses p1, p2, p3 and deposit 100.1 TOKT into them
 * Example:
 ```bash
 okchaincli keys show -a p1p2p3
-okchaincli tx send cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1tokt --from=alice
-okchaincli query account cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+okchaincli tx send okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1tokt --from=alice
+okchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 
 ```
 #### 7.3. Multi-signature:
@@ -569,7 +569,7 @@ okchaincli query account cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
-okchaincli tx send cosmos1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
+okchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
   --chain-id=okchain \
   --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --generate-only > unsignedTx.json

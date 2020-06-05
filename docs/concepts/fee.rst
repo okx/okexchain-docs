@@ -92,7 +92,7 @@ Fee Related FAQ
 
 * If provide ``--fees numFees``, chain will deduction "numFees" from operation account, no matter success or fail.
 * If provide ``--gas-prices``, chain will deduction ``gas_wanted*gas-prices`` from operation account, no matter success or failed.
-* Currently cosmos will not return the exceed gas provided, ie. if provided gas(gas_wanted) is small than gas used(gas_used), chain will consume gas_wanted gas and fail; if gas_wanted is bigger than gas_used, chain will also consume gas_wanted.
+* Currently okchain will not return the exceed gas provided, ie. if provided gas(gas_wanted) is small than gas used(gas_used), chain will consume gas_wanted gas and fail; if gas_wanted is bigger than gas_used, chain will also consume gas_wanted.
 
 
 **2. Why account balance is not integer when provided "--fees intFees"**
