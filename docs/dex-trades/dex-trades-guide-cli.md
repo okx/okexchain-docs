@@ -71,7 +71,7 @@ okchaincli query order detail ID0000000007-0000
 {
  "txHash": "CF8CEC36B97F089DEA243655A70D1CB2AE906D712D71210BCDEBC47F184DB6C2",
  "orderId": "ID0000000007-0000",
- "sender": "cosmos1cwvqt96wj222k2hue4pxcy5nxch6maaklknn7p",
+ "sender": "okchain1cwvqt96wj222k2hue4pxcy5nxch6maaklknn7p",
  "product": "mycoin_okt",
  "side": "BUY",
  "price": "10.000000000000000000",

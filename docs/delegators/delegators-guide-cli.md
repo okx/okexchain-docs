@@ -29,9 +29,9 @@ Please exercise extreme caution!
 ## Table of Contents
 
 - [Installing `okchaincli`](#installing-okchaincli)
-- [OKChain Accounts](#cosmos-accounts)
+- [OKChain Accounts](#okchian-accounts)
     + [Creating an Account](#creating-an-account)
-- [Accessing the OKChain Network](#accessing-the-cosmos-hub-network)
+- [Accessing the OKChain Network](#accessing-the-okchian-hub-network)
     + [Running Your Own Full-Node](#running-your-own-full-node)
     + [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
 - [Setting Up `okchaincli`](#setting-up-okchaincli)
@@ -160,7 +160,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space. 
 
-You will find the tutorial on how to install `okchaind` [here](https://cosmos.network/docs/cosmos-hub/installation.html), and the guide to run a full-node [here](https://cosmos.network/docs/cosmos-hub/join-mainnet.html).
+You will find the tutorial on how to install `okchaind` [here](https://okchain-docs.readthedocs.io/en/latest/getting-start/install-okchain.html), and the guide to run a full-node [here](https://okchain-docs.readthedocs.io/en/latest/getting-start/join-okchain-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -170,7 +170,9 @@ In order to connect to the full-node, you will need an address of the following 
 
 ## Setting Up `okchaincli`
 
-**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-cosmos-hub-network)**  
+
+**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-okchian-network)**  
+
 
 > _NOTE_:  
 **Please check that you are always using the latest stable release of `okchaincli`**
@@ -284,6 +286,7 @@ For testnet, the recommended `gas-prices` is `0.005tokt`.
 
 ```bash
 // Send a certain amount of tokens to an address
+
 // Ex value for parameters (do not actually use these values in your tx!!): <to_address>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph <amount>=1024okt 
 // Ex value for flags: <gasPrice>=0.005okt
 
@@ -294,11 +297,12 @@ okchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can bond okts and withdraw rewards, you need to [set up `okchaincli`](#setting-up-okchaincli) and [create an account](#creating-an-account)**
 
-**Before bonding okts, please read the [delegator faq](https://cosmos.network/resources/delegators) to understand the risk and responsibilities involved with delegating**
+**Before bonding okts, please read the [delegator faq](https://okchain-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating**
 
 > _NOTE_: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
 
 ```bash
+
 // Delegate a certain amount of okts to the staking account
 // ex value for flags: <amountToDelegate>=1024okt, <gasPrice>=0.005okt
 
