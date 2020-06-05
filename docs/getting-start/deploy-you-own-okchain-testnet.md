@@ -67,7 +67,7 @@ This setup puts all the data for `okchaind` in `~/.okchaind`. You can examine th
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/cosmos/okchain/tree/master/networks/local):
+From the [networks/local directory](https://github.com/okex/okchain/tree/master/networks/local):
 
 ### Requirements
 

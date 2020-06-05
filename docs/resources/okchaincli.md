@@ -535,11 +535,11 @@ Multi-signature transfer consists of multiple steps:
 #### 7.1. Creat accounts p1, p2, p3：
 Example:
 ```bash
-okchaincli keys add --pubkey=cosmospub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
+okchaincli keys add --pubkey=okchainpub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
 
-okchaincli keys add --pubkey=cosmospub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
+okchaincli keys add --pubkey=okchainpub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
 
-okchaincli keys add --pubkey=cosmospub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
+okchaincli keys add --pubkey=okchainpub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
 #### 7.2. Generate multi-signature public keys:
@@ -562,6 +562,7 @@ Display user addresses p1, p2, p3 and deposit 100.1 TOKT into them
 okchaincli keys show -a p1p2p3
 okchaincli tx send cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1tokt --from=alice
 okchaincli query account cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+
 ```
 #### 7.3. Multi-signature:
 ##### Create an unsigned transaction:
@@ -570,21 +571,21 @@ Create an unsigned transaction `unsignedTx.json`
 ```bash
 okchaincli tx send cosmos1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
   --chain-id=okchain \
-  --from=cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --generate-only > unsignedTx.json
 ```
 ##### p1, p2, p3 sign:
 ###### Example:
 ```bash
 okchaincli tx sign \
-  --multisig=cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --from=alice \
   --output-document=p1signature.json \
   unsignedTx.json
 
  
 okchaincli tx sign \
-  --multisig=cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --from=jack \
   --output-document=p2signature.json \
   unsignedTx.json 
@@ -604,7 +605,7 @@ Execute a signed `signedTx.json` offline and query the balance for confirmation.
 ```bash 
 okchaincli tx broadcast signedTx.json
 
-okchaincli query account cosmos1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+okchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 ```
 ### 8. Transfer token ownership:
 
@@ -2710,8 +2711,8 @@ $ okchaincli query gov proposals -h
 Query for a all proposals. You can filter the returns with the following flags.
 
 Example:
-  okchaincli query gov proposals --depositor cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
-  okchaincli query gov proposals --voter cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+  okchaincli query gov proposals --depositor okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+  okchaincli query gov proposals --voter okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
   okchaincli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
 
 Usage:
