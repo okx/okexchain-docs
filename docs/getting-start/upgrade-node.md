@@ -16,9 +16,8 @@ git fetch --all && git checkout <new_version>
 make install
 ```
 
-::: tip
-_NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
-:::
+> _NOTE_:
+If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which public testnet, and the [OKChain release page](https://github.com/cosmos/OKChain/releases) for details on each release.
 
@@ -26,9 +25,7 @@ Your full node has been cleanly upgraded!
 
 ## Upgrade Genesis File
 
-:::warning
 If the new version you are upgrading to has breaking changes, you will have to restart your chain. If it is not breaking, you can skip to [Restart](#restart)
-:::
 
 To upgrade the genesis file, you can either fetch it from a trusted source or export it locally.
 
@@ -68,17 +65,12 @@ At this point, you might want to run a script to update the exported genesis int
 
 ## Reset Data
 
-:::warning
 If the version <new_version> you are upgrading to is not breaking from the previous one, you should not reset the data. If it is not breaking, you can skip to [Restart](#restart)
-:::
 
-::: warning
 If you are running a **validator node** on the mainnet, always be careful when doing `okchaind unsafe-reset-all`. You should never use this command if you are not switching `chain-id`.
-:::
 
-::: danger IMPORTANT
 Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to get slashed due to double sign !
-:::
+
 
 First, remove the outdated files and reset the data. **If you are running a validator node, make sure you understand what you are doing before resetting**.
 

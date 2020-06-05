@@ -6,9 +6,8 @@ order: 1
 
 This document contains all the necessary information for delegators to interact with the OKChain through the Command-Line Interface (CLI).
 
-
-::: danger
-**Very Important**: Please assure that you follow the steps described hereinafter
+> _NOTE_:
+Please assure that you follow the steps described hereinafter
 carefully, as negligence in this significant process could lead to an indefinite
 loss of your okts. Therefore, read through the following instructions in their 
 entirety prior to proceeding and reach out to us in case you need support.
@@ -23,7 +22,7 @@ By using the software, you confirm that you understand the inherent risks
 associated with cryptographic software. Any use of this open source software released under the Apache 2.0 license is
 done at your own risk and on a "AS IS" basis, without warranties or conditions
 of any kind.
-:::
+
 
 Please exercise extreme caution!
 
@@ -47,21 +46,19 @@ Please exercise extreme caution!
 
 `okchaincli`: This is the command-line interface to interact with a `okchaind` full-node. 
 
-::: warning
+> _NOTE_:
 **Please check that you download the latest stable release of `okchaincli` that is available**
-:::
 
 [**Download the binaries**]
 Not available yet.
 
 [**Install from source**](../getting-start/install-okchain.html)
 
-::: tip
 `okchaincli` is used from a terminal. To open the terminal, follow these steps:
 - **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
 - **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
 - **Linux**: `Ctrl` + `Alt` + `T`
-:::
+
 
 ## OKChain Accounts
 
@@ -102,9 +99,9 @@ At the core of every OKChain account, there is a seed, which takes the form of a
 
 The funds stored in an account are controlled by the private key. This private key is generated using a one-way function from the mnemonic. If you lose the private key, you can retrieve it using the mnemonic. However, if you lose the mnemonic, you will lose access to all the derived private keys. Likewise, if someone gains access to your mnemonic, they gain access to all the associated accounts. 
 
-::: danger
+> _NOTE_:
 **Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
-:::
+
 
 The address is a public string with a human-readable prefix (e.g. `okchain1e9mh6ypht7ncfc482qcl0tj2q6j84fkqtl4x9k`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address. 
 
@@ -113,10 +110,7 @@ The address is a public string with a human-readable prefix (e.g. `okchain1e9mh6
 
 To create an account, you just need to have `okchaincli` installed. Before creating it, you need to know where you intend to store and interact with your private keys. The best options are to store them in an offline dedicated computer or a ledger device. Storing them on your regular online computer involves more risk, since anyone who infiltrates your computer through the internet could exfiltrate your private keys and steal your funds.
 
-
-::: warning
-**NOTE: It is more secure to perform this action on an offline computer**
-:::
+> _NOTE_: It is more secure to perform this action on an offline computer**
 
 To generate an account, just use the following command:
 
@@ -130,24 +124,17 @@ Each time you want to send a transaction, you will need to unlock your system's 
 If you lose access to your credentials storage, you can always recover the private key with the
 mnemonic.
 
-::: tip
+> _NOTE_:  
 **You may not be prompted for password each time you send a transaction since most operating systems
 unlock user's credentials store upon login by default. If you want to change your credentials
-store security policies please refer to your operating system manual.**
-:::
-
-::: danger
+store security policies please refer to your operating system manual.**  
 **Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
-::: 
 
-::: warning
 After you have secured your mnemonic (triple check!), you can delete bash history to ensure no one can retrieve it:
-
 ```bash
 history -c
 rm ~/.bash_history
 ```
-:::
 
 - `<yourKeyName>` is the name of the account. It is a reference to the account number used to derive the key pair from the mnemonic. You will use this name to identify your account when you want to send a transaction.
 - You can add the optional `--account` flag to specify the path (`0`, `1`, `2`, ...) you want to use to generate your account. By default, account `0` is generated. 
@@ -166,9 +153,8 @@ This command will prompt you to input a passphrase as well as your mnemonic. Cha
 
 In order to query the state and send transactions, you need a way to access the network. To do so, you can either run your own full-node, or connect to someone else's.
 
-::: danger
-**NOTE: Do not share your mnemonic (12 or 24 words) with anyone. The only person who should ever need to know it is you. This is especially important if you are ever approached via email or direct message by someone requesting that you share your mnemonic for any kind of blockchain services or support. No one from OKChain, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to share any kind of account credentials or your mnemonic."**.
-::: 
+> _NOTE_: Do not share your mnemonic (12 or 24 words) with anyone. The only person who should ever need to know it is you. This is especially important if you are ever approached via email or direct message by someone requesting that you share your mnemonic for any kind of blockchain services or support. No one from OKChain, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to share any kind of account credentials or your mnemonic."**.
+
 
 ### Running Your Own Full-Node
 
@@ -184,13 +170,11 @@ In order to connect to the full-node, you will need an address of the following 
 
 ## Setting Up `okchaincli`
 
-::: tip
-**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-cosmos-hub-network)**
-:::
+**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-cosmos-hub-network)**  
 
-::: warning
+> _NOTE_:  
 **Please check that you are always using the latest stable release of `okchaincli`**
-:::
+
 
 `okchaincli` is the tool that enables you to interact with the node that runs on the OKChain network, whether you run it yourself or not. Let us set it up properly.
 
@@ -228,9 +212,8 @@ okchaincli config chain-id okchain
 
 ## Querying the State
 
-::: tip
 **Before you can bond okts and withdraw rewards, you need to [set up `okchaincli`](#setting-up-okchaincli)**
-:::
+
 
 `okchaincli` lets you query all relevant information from the blockchain, like account balances, amount of bonded tokens, outstanding rewards, governance proposals and more. Next is a list of the most useful commands for delegator. 
 
@@ -273,9 +256,7 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
 
-::: warning
 On OKChain testnet, the accepted denom is okt
-:::
 
 ### A Note on Gas and Fees
 
@@ -291,19 +272,15 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block. 
 
-::: tip
 For testnet, the recommended `gas-prices` is `0.005tokt`. 
-::: 
+
 
 ### Sending Tokens
 
-::: tip
 **Before you can bond okts and withdraw rewards, you need to [set up `okchaincli`](#setting-up-okchaincli) and [create an account](#creating-an-account)**
-:::
 
-::: warning
-**Note: These commands need to be run on an online computer. It is more secure to perform them commands using a Ledger Nano S device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
-::: 
+> _NOTE_: These commands need to be run on an online computer. It is more secure to perform them commands using a Ledger Nano S device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
+
 
 ```bash
 // Send a certain amount of tokens to an address
@@ -315,17 +292,11 @@ okchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 ### Bonding okts and Withdrawing Rewards
 
-::: tip
 **Before you can bond okts and withdraw rewards, you need to [set up `okchaincli`](#setting-up-okchaincli) and [create an account](#creating-an-account)**
-:::
 
-::: warning
 **Before bonding okts, please read the [delegator faq](https://cosmos.network/resources/delegators) to understand the risk and responsibilities involved with delegating**
-:::
 
-::: warning
-**Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
-::: 
+> _NOTE_: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
 
 ```bash
 // Delegate a certain amount of okts to the staking account
@@ -345,10 +316,7 @@ okchaincli tx staking vote <validator-addr1, validator-addr2, validator-addr3, .
 
 okchaincli tx staking unbond <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
-
-::: warning
-**If you use a connected Ledger, you will be asked to confirm the transaction on the device before it is signed and broadcast to the network. Note that the command will only work while the Ledger is plugged in and unlocked.**
-::: 
+> _NOTE_: **If you use a connected Ledger, you will be asked to confirm the transaction on the device before it is signed and broadcast to the network. Note that the command will only work while the Ledger is plugged in and unlocked.**
 
 To confirm that your transaction went through, you can use the following queries:
 
@@ -385,13 +353,10 @@ At the end of the voting period, the proposal is accepted if there are more than
 
 #### In Practice
 
-::: tip
 **Before you can bond okts and withdraw rewards, you need to [bond okts](#bonding-okts-and-withdrawing-rewards)**
-:::
 
-::: warning
-**Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
-::: 
+> _NOTE_: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click [here](#signing-transactions-from-an-offline-computer).**
+
 
 ```bash
 // Submit a Proposal

@@ -24,9 +24,8 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-::: tip
-**Go 1.12+** is required for the OKChain.
-:::
+> _NOTE_: **Go 1.12+** is required for the OKChain.
+
 
 ## Install the binaries
 
