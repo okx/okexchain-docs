@@ -187,9 +187,7 @@ okchaincli keys list --home ./build/node0/okchaincli
 Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
-::: tip
-**Note**: Each node's seed is located at `./build/nodeN/okchaincli/key_seed.json` and can be restored to the CLI using the `okchaincli keys add --restore` command
-:::
+> _NOTE_: Each node's seed is located at `./build/nodeN/okchaincli/key_seed.json` and can be restored to the CLI using the `okchaincli keys add --restore` command
 
 ### Special Binaries
 

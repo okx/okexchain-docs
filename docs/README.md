@@ -19,7 +19,7 @@ OKChain-OpenDEX, as the first project of the OKChain ecosystem, is a middleware 
 
 Do you have OKT tokens? With OKT, you have the superpower to contribute to the security and governance of the OKChain. Delegate your OKT to one or more of the 100 validators on the OKChain blockchain to earn more OKT through Proof-of-Stake. You can also vote with your OKT to influence the future of the OKChain through on-chain governance proposals.
 
-Learn more about [being a delegator](../delegators/delegators-faq.html).
+Learn more about [being a delegator](./delegators/delegators-faq.html).
 
 
 
@@ -32,7 +32,7 @@ These block explorers allow you to search, view and analyze OKChain data&mdash;l
 
 ## OKChain CLI
 
-`okchaincli` is a command-line interface that lets you interact with the OKChain. `okchaincli` is the only tool that supports 100% of the OKChain features, including accounts, transfers, delegation, and governance. Learn more about `okchaincli` with the [delegator's CLI guide](../delegators/delegators-guide-cli.html).
+`okchaincli` is a command-line interface that lets you interact with the OKChain. `okchaincli` is the only tool that supports 100% of the OKChain features, including accounts, transfers, delegation, and governance. Learn more about `okchaincli` with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
 
 ## Running a full-node on the OKChain Testnet
 
