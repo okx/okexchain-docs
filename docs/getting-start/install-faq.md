@@ -1,4 +1,4 @@
-# Install faq
+# Install FAQ
 ## 1. How to resolve error: too many open files ?
 ### For Linux
 * open file `/etc/sysctl.conf`, add follow config
