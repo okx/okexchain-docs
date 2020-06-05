@@ -30,9 +30,9 @@ Please exercise extreme caution!
 ## Table of Contents
 
 - [Installing `okchaincli`](#installing-okchaincli)
-- [OKChain Accounts](#cosmos-accounts)
+- [OKChain Accounts](#okchian-accounts)
     + [Creating an Account](#creating-an-account)
-- [Accessing the OKChain Network](#accessing-the-cosmos-hub-network)
+- [Accessing the OKChain Network](#accessing-the-okchian-hub-network)
     + [Running Your Own Full-Node](#running-your-own-full-node)
     + [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
 - [Setting Up `okchaincli`](#setting-up-okchaincli)
@@ -174,7 +174,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space. 
 
-You will find the tutorial on how to install `okchaind` [here](https://cosmos.network/docs/cosmos-hub/installation.html), and the guide to run a full-node [here](https://cosmos.network/docs/cosmos-hub/join-mainnet.html).
+You will find the tutorial on how to install `okchaind` [here](https://okchain-docs.readthedocs.io/en/latest/getting-start/install-okchain.html), and the guide to run a full-node [here](https://okchain-docs.readthedocs.io/en/latest/getting-start/join-okchain-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -185,7 +185,7 @@ In order to connect to the full-node, you will need an address of the following 
 ## Setting Up `okchaincli`
 
 ::: tip
-**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-cosmos-hub-network)**
+**Before setting up `okchaincli`, make sure you have set up a way to [access the OKChain network](#accessing-the-okchain-hub-network)**
 :::
 
 ::: warning
@@ -241,16 +241,16 @@ okchaincli query account <yourAddress>
 // query the list of validators
 okchaincli query staking validators
 
-// query the information of a validator given their address (e.g. cosmosvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27)
+// query the information of a validator given their address (e.g. okchianvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27)
 okchaincli query staking validator <validatorAddress>
 
-// query all delegations made from a delegator given their address (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
+// query all delegations made from a delegator given their address (e.g. okchain10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
 okchaincli query staking delegations <delegatorAddress>
 
-// query a specific delegation made from a delegator (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg) to a validator (e.g. cosmosvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27) given their addresses
+// query a specific delegation made from a delegator (e.g. okchain10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg) to a validator (e.g. okchainvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27) given their addresses
 okchaincli query staking delegation <delegatorAddress> <validatorAddress>
 
-// query the rewards of a delegator given a delegator address (e.g. cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
+// query the rewards of a delegator given a delegator address (e.g. okchian10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg)
 okchaincli query distribution rewards <delegatorAddress> 
 
 // query all proposals currently open for depositing
@@ -307,7 +307,7 @@ For testnet, the recommended `gas-prices` is `0.025uatom`.
 
 ```bash
 // Send a certain amount of tokens to an address
-// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=cosmos16m93fezfiezhvnjajzrfyszml8qm92a0w67ntjhd3d0 <amount>=1000000uatom 
+// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=okchain16m93fezfiezhvnjajzrfyszml8qm92a0w67ntjhd3d0 <amount>=1000000uatom 
 // Ex value for flags: <gasPrice>=0.025uatom
 
 okchaincli tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
@@ -320,7 +320,7 @@ okchaincli tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-a
 :::
 
 ::: warning
-**Before bonding okts, please read the [delegator faq](https://cosmos.network/resources/delegators) to understand the risk and responsibilities involved with delegating**
+**Before bonding okts, please read the [delegator faq](https://okchain-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating**
 :::
 
 ::: warning
@@ -329,7 +329,7 @@ okchaincli tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-a
 
 ```bash
 // Bond a certain amount of okts to a given validator
-// ex value for flags: <validatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToBound>=10000000uatom, <gasPrice>=0.025uatom
+// ex value for flags: <validatorAddress>=okchianvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToBound>=10000000uatom, <gasPrice>=0.025uatom
 
 okchaincli tx staking delegate <validatorAddress> <amountToBond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -338,7 +338,7 @@ okchaincli tx staking delegate <validatorAddress> <amountToBond> --from <delegat
 // Can only be used if already bonded to a validator
 // Redelegation takes effect immediately, there is no waiting period to redelegate
 // After a redelegation, no other redelegation can be made from the account for the next 3 weeks
-// ex value for flags: <stcValidatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToRedelegate>=100000000uatom, <gasPrice>=0.025uatom
+// ex value for flags: <stcValidatorAddress>=okchainvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToRedelegate>=100000000uatom, <gasPrice>=0.025uatom
 
 okchaincli tx staking redelegate <srcValidatorAddress> <destValidatorAddress> <amountToRedelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -350,7 +350,7 @@ okchaincli tx distribution withdraw-all-rewards --from <delegatorKeyName> --gas 
 
 // Unbond a certain amount of okts from a given validator 
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
-// ex value for flags: <validatorAddress>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToUnbound>=10000000uatom, <gasPrice>=0.025uatom
+// ex value for flags: <validatorAddress>=okchainvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <amountToUnbound>=10000000uatom, <gasPrice>=0.025uatom
 
 okchaincli tx staking unbond <validatorAddress> <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -428,7 +428,7 @@ If you do not have a ledger device and want to interact with your private key on
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToBound>=10000000uatom, <bech32AddressOfValidator>=cosmosvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <gasPrice>=0.025uatom, <delegatorAddress>=cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg
+// ex value for flags: <amountToBound>=10000000uatom, <bech32AddressOfValidator>=okchainvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <gasPrice>=0.025uatom, <delegatorAddress>=okchain10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg
 
 okchaincli tx staking delegate <validatorAddress> <amountToBond> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
