@@ -4,9 +4,7 @@ order: 3
 
 # Validator FAQ
 
-::: warning Disclaimer
 This is work in progress. Mechanisms and values are susceptible to change.
-:::
 
 ## General Concepts
 

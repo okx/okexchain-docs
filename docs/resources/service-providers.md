@@ -30,13 +30,10 @@ Then, you can start [running a full-node(testnet)](../getting-start/join-okchain
 
 ## Setting Up `okchaincli`
 
-::: tip
 **Before setting up `okchaincli`, make sure you have set up a way to access the OKChain network**
-:::
 
-::: warning
 **Please check that you are always using the latest stable release of `okchaincli`**
-:::
+
 
 `okchaincli` is the tool that enables you to interact with the node that runs on the OKChain network, whether you run it yourself or not. Let us set it up properly.
 
@@ -69,7 +66,7 @@ okchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id cosmoshub-2
+okchaincli config chain-id okchain
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.
