@@ -4,15 +4,11 @@ order: 4
 
 # Join the Public Testnet 
 
-::: tip Current Testnet
 See the [testnet repo](https://github.com/okex/testnets) for
 information on the latest testnet, including the correct version
 of OKChain to use and details about the genesis file.
-:::
 
-::: warning
 **You need to [install okchain](./install-okchain.html) before you go further**
-:::
 
 ## Supported Platforms
 
@@ -37,9 +33,9 @@ First, initialize the node and create the necessary config files:
 okchaind init <your_custom_moniker>
 ```
 
-::: warning Note
+> _NOTE_:
 Monikers can contain only ASCII characters. Using Unicode characters will render your node unreachable.
-:::
+
 
 You can edit this `moniker` later, in the `~/.okchaind/config/config.toml` file:
 
@@ -118,9 +114,9 @@ Your node is now in a pristine state while keeping the original `priv_validator.
 your node will still try to connect to them, but may fail if they haven't also
 been upgraded.
 
-::: danger Warning
+> _NOTE_:
 Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
-:::
+
 
 ### Software Upgrade
 
@@ -133,9 +129,7 @@ git fetch --all && git checkout master
 make install
 ```
 
-::: tip
-_NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
-:::
+> _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
 See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which testnet, and the [OKChain release page](https://github.com/okex/okchain/releases) for details on each release.

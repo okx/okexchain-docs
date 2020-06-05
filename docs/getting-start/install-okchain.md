@@ -17,6 +17,9 @@ Remember to set your `$PATH` environment variable, for example:
 ```bash
 mkdir -p $HOME/go/bin
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
+echo "export GOPATH=$HOME/go" >> ~/.bash_profile
+echo "export GOBIN=$GOPATH/bin" >> ~/.bash_profile
+echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 Under Windows, you may set environment variables(`HOME` or `GO111MODULE`) through the "Environment Variables" 
@@ -24,9 +27,8 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-::: tip
-**Go 1.12+** is required for the OKChain.
-:::
+> _NOTE_: **Go 1.12+** is required for the OKChain.
+
 
 ## Install the binaries
 
