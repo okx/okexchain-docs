@@ -1016,8 +1016,7 @@ Flags:
   -y, --yes                     Skip tx broadcasting prompt confirmation
 ```
 
-必须由原owner(from)和转移后的owner(to)共同签名才可以成功转移Token的所有权。
-
+The original owner (from) and the transferred owner (to) must sign together to successfully transfer the ownership of the token.
 
 ### Query the listed token pairs
 
@@ -2074,11 +2073,11 @@ Usage:
 Unbond the deposit token while canceling all the votes, it takes 14 days for unbonding the tokens.
 
   
-   - [ ] allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
-   - [ ] if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
-   - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
-   - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
-   - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
+   - allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
+   - if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
+   - if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
+   - if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
+   - users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
    
 Unbond shares and withdraw the same amount of votes
 

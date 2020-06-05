@@ -40,7 +40,7 @@ Any user can issue a token pair to become a DEX operator. In opendex, any two to
 okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
 
 ```
-  
+
 * base-asset ：base-asset should be issued before listed to opendex (default "btc")
 * from ：Name or address of private key with which to sign
 * init-price ：init-price should be valid price (default "0.01")
@@ -53,7 +53,7 @@ In order to make fair and open use of the matching resources of the blockchain, 
 
 
 ```shell
-    okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
+okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
 ```
 
 
@@ -64,5 +64,5 @@ In contrast, DEX operator can also withdrawn their product deposits, and the wit
 
 
 ```shell
-    okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
+okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
 ```
