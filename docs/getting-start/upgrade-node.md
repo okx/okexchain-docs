@@ -19,7 +19,7 @@ make install
 > _NOTE_:
 If you have issues at this step, please check that you have the latest stable version of GO installed.
 
-See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which public testnet, and the [OKChain release page](https://github.com/cosmos/OKChain/releases) for details on each release.
+See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OKChain release page](https://github.com/okex/okchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 
@@ -31,7 +31,7 @@ To upgrade the genesis file, you can either fetch it from a trusted source or ex
 
 ### Fetching from a Trusted Source
 
-If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/cosmos/testnets). Otherwise, fetch it from your trusted source.
+If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/okex/testnets). Otherwise, fetch it from your trusted source.
 
 Save the new genesis as `new_genesis.json`. Then replace the old `genesis.json` with `new_genesis.json`
 
@@ -60,8 +60,6 @@ Then, replace the old `genesis.json` with `new_genesis.json`.
 cp -f genesis.json new_genesis.json
 mv new_genesis.json genesis.json
 ```
-
-At this point, you might want to run a script to update the exported genesis into a genesis that is compatible with your new version. For example, the attributes of a the `Account` type changed, a script should query encoded account from the account store, unmarshall them, update their type, re-marshal and re-store them. You can find an example of such script [here](https://github.com/cosmos/cosmos-sdk/blob/02c6c9fafd58da88550ab4d7d494724a477c8a68/contrib/migrate/v0.33.x-to-v0.34.0.py).
 
 ## Reset Data
 
