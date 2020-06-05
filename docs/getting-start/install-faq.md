@@ -1,5 +1,6 @@
 # Install faq
 ## 1. How to resolve error: too many open files ?
+### For Linux
 * open file `/etc/sysctl.conf`, add follow config
 ```shell script
   fs.file-max = 500000
@@ -25,6 +26,17 @@
 ```shell script
   reboot
 ```
+### For MACOS
+* if you are running under `zsh`, open file `/etc/zshrc`, add follow config
+```shell script
+  ulimit -n 20480
+```
+
+* if you are running under `bash`, open file `~/.bash_profile`, add follow config
+```shell script
+  ulimit -n 20480
+```
+
 ## 2. Configure `trust-node` and `chain-id`
 When using `okchaincli` to query block/tx or send tx, the following errors may occur:
 ```shell script
