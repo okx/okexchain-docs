@@ -152,26 +152,18 @@ Flags:
 
 The recommended way to listen for incoming transaction is to periodically query the blockchain through the following endpoint of the LCD:
 
-[`/bank/balance/{address}`](https://cosmos.network/rpc/#/ICS20/get_bank_balances__address_)
+[`/okchain/v1/accounts/{address}`](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#f5bc92c9-4e8c-40f5-b3fe-d9635c418402)
 
 ## Rest API
 
 The Rest API documents all the available endpoints that you can use to interact
-with your full node. It can be found [here](https://cosmos.network/rpc/).
-
-The API is divided into ICS standards for each category of endpoints. For
-example, the [ICS20](https://cosmos.network/rpc/#/ICS20/) describes the API to
-interact with tokens.
+with your full node. It can be found [here](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest).
 
 To give more flexibility to developers, we have included the ability to
-generate unsigned transactions, [sign](https://cosmos.network/rpc/#/ICS20/post_tx_sign)
-and [broadcast](https://cosmos.network/rpc/#/ICS20/post_tx_broadcast) them with
+generate unsigned transactions, [sign](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8)
+and [broadcast](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) them with
 different API endpoints. This allows service providers to use their own signing
 mechanism for instance.
-
-In order to generate an unsigned transaction (example with
-[coin transfer](https://cosmos.network/rpc/#/ICS20/post_bank_accounts__address__transfers)),
-you need to use the field `generate_only` in the body of `base_req`.
 
 ## OKChain SDK Transaction Signing
 

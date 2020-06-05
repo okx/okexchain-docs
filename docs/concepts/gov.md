@@ -7,13 +7,13 @@ The overall process of a proposal is shown below:
 Details:  
 1. The proposer should pledge okt when initiating a proposal to prevent malicious initiation of a proposal.
 2. The voting participants are bond okt holders, except for the following two cases:
-&emsp;&emsp;a. the okt holder bond/unbond to validator after entering vote_period
-&emsp;&emsp;b. the okt holder becomes validator after entering vote_period
+ - a. the okt holder bond/unbond to validator after entering vote_period
+ - b. the okt holder becomes validator after entering vote_period
 3. The weight of the vote depends on the amount of okts in the bond.
 4. To prevent duplicate voting:
-&emsp;&emsp;a. the voting period is smaller than unbond_period. The minimum length of the voting period is 72h (adjustable depending on the type of proposals) .
-&emsp;&emsp;b. if the delegator votes before the validator votes on his behalf, the weight of the validator's vote does not include the weight of okt in his bond.  
-&emsp;&emsp;c. if the delegator votes after the validator votes on his behalf, the weight of the voting result replaces the weight of the vote cast by the validator on behalf of the delegator.
+  - a. the voting period is smaller than unbond_period. The minimum length of the voting period is 72h (adjustable depending on the type of proposals) .
+  - b. if the delegator votes before the validator votes on his behalf, the weight of the validator's vote does not include the weight of okt in his bond.  
+  - c. if the delegator votes after the validator votes on his behalf, the weight of the voting result replaces the weight of the vote cast by the validator on behalf of the delegator.
 
 ## Proposal types
 OKChain offers 4 types of proposals for different purposes: 
@@ -27,7 +27,7 @@ Except for text proposals, there are four proposal stages, including initiation,
 ## Proposal voting statistics
 ![](../img/gov-tally.png) 
 Meanings of variables:   
-1.totalBonded： the sum of bonded okt that can vote on the entire network
+1. totalBonded： the sum of bonded okt that can vote on the entire network
 2.totalVotingPower： the sum of bonded okt that participate in voting
 3.percentVoting = totalVotingPower / totalBonded   
 4.Quorum： voting weight threshold for participating voters (0.334)
