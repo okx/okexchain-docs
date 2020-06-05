@@ -1,5 +1,6 @@
 # Install faq
 ## 1. How to resolve error: too many open files ?
+### For Linux
 * open file `/etc/sysctl.conf`, add follow config
 ```shell script
   fs.file-max = 500000
@@ -25,7 +26,7 @@
 ```shell script
   reboot
 ```
-### for mac system
+### For MACOS
 * if you are running under `zsh`, open file `/etc/zshrc`, add follow config
 ```shell script
   ulimit -n 20480
