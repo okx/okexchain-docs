@@ -2,6 +2,7 @@
 
 In OKChain-OpenDEX，any user can issue their own Token and Tokenpairs。
 
+> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
 
 ## cli command
 staking cli contains the following 3 commands for DEX operator, providing complete support for equity circulation.

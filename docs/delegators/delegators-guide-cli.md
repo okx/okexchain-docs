@@ -257,7 +257,7 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
 
-On OKChain testnet, the accepted denom is okt
+On OKChain testnet, the accepted denom is tokt, If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
 
 ### A Note on Gas and Fees
 
