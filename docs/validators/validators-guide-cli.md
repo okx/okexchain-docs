@@ -23,11 +23,11 @@ staking cli contains the following 5 commands for PoS operations, providing comp
 
 *  edit-validator：update a validator
 
-*  delegate：delegate proof of stake
+*  deposit：deposit the token 
 
-*  unbond：undelegate
+*  add shares：add shares that are calculated by deposited token
 
-*  redelegate：re-delegate
+*  withdraw：withdraw the deposited token
 
 ### Create a validator
 
@@ -58,13 +58,13 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - details indicate the detailed description of the validator to be updated
 - from specifies the operator’s account, which is jack here
 
-### Delegate
+### Deposit
 user need deposit a certain amount of okts to the staking account to become a delegator
 ```bash
 okchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-### Vote
+### Add shares
 
 okchain delegator can add shares to self or other validator by following command
 
@@ -76,9 +76,9 @@ okchaincli tx staking add-shares okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lc
 
 * from indicates the user account to be re-delegated, which is rose here
 
-### Unbond
+### Withdraw
 
-okchain users can unbond the deposit token while canceling all the votes, it takes 14 days for unbonding the tokens.
+okchain users can withdraw the deposited token while canceling all the votes, it takes 14 days for withdrawing the tokens.
 
    - [ ] allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
    - [ ] if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
