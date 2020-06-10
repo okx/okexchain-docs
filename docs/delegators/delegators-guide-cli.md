@@ -228,11 +228,11 @@ okchaincli query staking validators
 // query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
 okchaincli query staking validator <validatorAddress>
 
-// query all information of delegations and all votes recently made by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
+// query all information of delegations and all shares recently be added by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
 okchaincli query staking delegator <delegatorAddress>
 
-// query the information of all votes recently made to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
-okchaincli query staking votes-to <validatorAddress>
+// query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
+okchaincli query staking shares-added-to <validatorAddress>
 
 // query the addresses of delegators by a specific proxy (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph) 
 okchaincli query staking proxy <proxyAddress> 
@@ -302,22 +302,22 @@ okchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 ```bash
 
-// Delegate a certain amount of okts to the staking account
-// ex value for flags: <amountToDelegate>=1024okt, <gasPrice>=0.005okt
+// Deposit an amount of okt to delegator account. Deposited okt in delegator account is a prerequisite for adding shares
+// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt
 
-okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
 
-// Vote on one or more validator(s) by the weight of tokens delegated to the staking account
+// Add shares to one or more validators by all deposited okt
 // ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
 
-okchaincli tx staking vote <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
-// Unbond shares and withdraw the same amount of votes 
+// Withdraw an amount of okt and the corresponding shares from all validators.
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
-// ex value for flags: <amountToUnbound>=1024okt, <gasPrice>=0.005okt
+// ex value for flags: <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
 
-okchaincli tx staking unbond <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 > _NOTE_: **If you use a connected Ledger, you will be asked to confirm the transaction on the device before it is signed and broadcast to the network. Note that the command will only work while the Ledger is plugged in and unlocked.**
 
@@ -387,9 +387,9 @@ If you do not have a ledger device and want to interact with your private key on
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToDelegate>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
 
-okchaincli tx staking delegate <amountToDelegate> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
+okchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
