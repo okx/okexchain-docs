@@ -228,7 +228,7 @@ okchaincli query staking validators
 // query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
 okchaincli query staking validator <validatorAddress>
 
-// query all information of delegations and all shares recently be added by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
+// query all information of delegations and all shares recently added by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
 okchaincli query staking delegator <delegatorAddress>
 
 // query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
