@@ -59,20 +59,20 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - from specifies the operator’s account, which is jack here
 
 ### Delegate
-user need delegate a certain amount of okts to the staking account to become a delegator
+user need deposit a certain amount of okts to the staking account to become a delegator
 ```bash
-okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ### Vote
 
-okchain delegator can vote to self or other validator by following command
+okchain delegator can add shares to self or other validator by following command
 
 ```bash
-okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
+okchaincli tx staking add-shares okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from <delegatorKeyName>
 ```
 
-* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of delegated okt will be voted.
+* in this example, `okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5`,`okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g`,`okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m`,`okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx` are the validator’s addresses, and all of deposited okt will be calculated into shares added on the above-mentioned validators.
 
 * from indicates the user account to be re-delegated, which is rose here
 
@@ -89,10 +89,10 @@ okchain users can unbond the deposit token while canceling all the votes, it tak
 Unbond shares and withdraw the same amount of votes
 
 ```bash
-okchaincli tx staking unbond 10okt --from rose
+okchaincli tx staking withdraw 10okt --from rose
 ```
 
-* In the example, 10 is the number of the unbond share to be undelegated
+* In the example, 10 is the number of the deposited okts to be undelegated
 
 * from indicates the user account to be undelegated, which is rose here
 
