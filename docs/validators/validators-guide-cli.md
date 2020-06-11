@@ -80,11 +80,11 @@ okchaincli tx staking add-shares okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lc
 
 okchain users can withdraw the deposited token while cancelling all the shares, it takes 14 days for withdrawing the tokens.
 
-   - [ ] allow the user to exchange votes into tokens multiple times, and the number of tokens allowed to be withdrawn from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
-   - [ ] if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
-   - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
-   - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
-   - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
+* Allow users to exchange tokens for votes multiple times, and the number of tokens allowed to be withdrawn is supposed to be 0.0001 ~ n (total number of tokens deposited by the user)
+* If a user has added shares on some validators, after executing the command, the number of shares will be automatically updated. Essentially, it could be considered as a `re-vote` behavior.
+* If the user has already added shares, after executing the command to withdraw all the tokens, it could be considered as an `unbond` behavior.
+* If the user hasn't added shares, the new tokens will not be transformed into shares after executing the command. 
+* Users are allowed to operate withdrawing deposited tokens many times. Still, it will refresh the time about getting the tokens back, and all the withdrawn tokens will be accumulated. After 14 days, it will be converted into tokens and given back to the user's account.
 
 Withdraw an amount of okt and the corresponding shares from all validators
 
