@@ -92,7 +92,7 @@ Withdraw an amount of okt and the corresponding shares from all validators
 okchaincli tx staking withdraw 10okt --from rose
 ```
 
-* In the example, 10 is the number of the deposited okts to be undelegated
+* In the example, 10 is the number of the deposited okts to be withdrawn
 
 * from indicates the user account to be withdrawn, which is rose here
 
