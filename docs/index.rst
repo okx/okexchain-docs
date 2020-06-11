@@ -184,6 +184,7 @@ Contents
    resources/genesis
    resources/okchaincli
    resources/service-providers
+   resources/snapshot
 
 .. toctree::
    :maxdepth: 3
