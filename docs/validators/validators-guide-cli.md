@@ -78,15 +78,15 @@ okchaincli tx staking add-shares okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lc
 
 ### Withdraw
 
-okchain users can withdraw the deposited token while canceling all the votes, it takes 14 days for withdrawing the tokens.
+okchain users can withdraw the deposited token while cancelling all the shares, it takes 14 days for withdrawing the tokens.
 
-   - [ ] allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
+   - [ ] allow the user to exchange votes into tokens multiple times, and the number of tokens allowed to be withdrawn from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
    - [ ] if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
    - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
    - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
    - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
 
-Unbond shares and withdraw the same amount of votes
+Withdraw an amount of okt and the corresponding shares from all validators
 
 ```bash
 okchaincli tx staking withdraw 10okt --from rose
@@ -94,11 +94,11 @@ okchaincli tx staking withdraw 10okt --from rose
 
 * In the example, 10 is the number of the deposited okts to be undelegated
 
-* from indicates the user account to be undelegated, which is rose here
+* from indicates the user account to be withdrawn, which is rose here
 
 ### Reward
 
-Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command bellow
+Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command below
 
 ```
 okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
