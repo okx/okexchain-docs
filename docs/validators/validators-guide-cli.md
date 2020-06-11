@@ -23,11 +23,11 @@ staking cli contains the following 5 commands for PoS operations, providing comp
 
 *  edit-validator：update a validator
 
-*  delegate：delegate proof of stake
+*  deposit：deposit the token 
 
-*  unbond：undelegate
+*  add shares：add shares that are calculated by deposited token
 
-*  redelegate：re-delegate
+*  withdraw：withdraw the deposited token
 
 ### Create a validator
 
@@ -58,47 +58,47 @@ okchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 - details indicate the detailed description of the validator to be updated
 - from specifies the operator’s account, which is jack here
 
-### Delegate
-user need delegate a certain amount of okts to the staking account to become a delegator
+### Deposit
+user need deposit a certain amount of okts to the staking account to become a delegator
 ```bash
-okchaincli tx staking delegate <amountToDelegate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+okchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-### Vote
+### Add shares
 
-okchain delegator can vote to self or other validator by following command
+okchain delegator can add shares to self or other validator by following command
 
 ```bash
-okchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
+okchaincli tx staking add-shares okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from <delegatorKeyName>
 ```
 
-* In the example, okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx is the validator’s address, and all of delegated okt will be voted.
+* in this example, `okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5`,`okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g`,`okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m`,`okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx` are the validator’s addresses, and all of deposited okt will be calculated into shares added on the above-mentioned validators.
 
 * from indicates the user account to be re-delegated, which is rose here
 
-### Unbond
+### Withdraw
 
-okchain users can unbond the deposit token while canceling all the votes, it takes 14 days for unbonding the tokens.
+okchain users can withdraw the deposited token while cancelling all the shares, it takes 14 days for withdrawing the tokens.
 
-   - [ ] allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
-   - [ ] if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
-   - [ ] if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
-   - [ ] if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
-   - [ ] users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
+* Allow users to exchange tokens for votes multiple times, and the number of tokens allowed to be withdrawn is supposed to be 0.0001 ~ n (total number of tokens deposited by the user)
+* If a user has added shares on some validators, after executing the command, the number of shares will be automatically updated. Essentially, it could be considered as a `re-vote` behavior.
+* If the user has already added shares, after executing the command to withdraw all the tokens, it could be considered as an `unbond` behavior.
+* If the user hasn't added shares, the new tokens will not be transformed into shares after executing the command. 
+* Users are allowed to operate withdrawing deposited tokens many times. Still, it will refresh the time about getting the tokens back, and all the withdrawn tokens will be accumulated. After 14 days, it will be converted into tokens and given back to the user's account.
 
-Unbond shares and withdraw the same amount of votes
+Withdraw an amount of okt and the corresponding shares from all validators
 
 ```bash
-okchaincli tx staking unbond 10okt --from rose
+okchaincli tx staking withdraw 10okt --from rose
 ```
 
-* In the example, 10 is the number of the unbond share to be undelegated
+* In the example, 10 is the number of the deposited okts to be withdrawn
 
-* from indicates the user account to be undelegated, which is rose here
+* from indicates the user account to be withdrawn, which is rose here
 
 ### Reward
 
-Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command bellow
+Validator will be rewarded by its well performance. The owner can withdraw the rewards by the command below
 
 ```
 okchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
