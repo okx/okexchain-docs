@@ -37,6 +37,22 @@
   ulimit -n 20480
 ```
 
+### For docker-compose
+* if you started up okchaind with docker-compose, edit your `compose.yml` and add
+```
+    ulimits:
+        nproc: 65535
+        nofile:
+            soft: 65535
+            hard: 65535
+```
+
+* restarting docker-compose to apply new setting
+```
+    docker-compose -f ${compose.yml} down
+    docker-compose -f ${compose.yml} up -d
+```
+
 ## 2. Configure `trust-node` and `chain-id`
 When using `okchaincli` to query block/tx or send tx, the following errors may occur:
 ```shell script
