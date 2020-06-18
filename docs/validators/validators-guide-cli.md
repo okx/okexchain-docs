@@ -36,6 +36,7 @@ Upgrade a node to a validator and set the description on a validator.
 ```bash
   okchaincli tx staking create-validator --pubkey=$(okchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
 ```
+> _NOTE_: If you set home flag when execute `okchaind start`, `okchaind tendermint show-validator` here should be also with home flag same as `okcahind start`
 
 * pubkey represents the tendermint public key of the current node
 * moniker indicates the alias of the validator
