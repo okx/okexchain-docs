@@ -33,7 +33,7 @@ provide this control panel through the "Advanced System Settings" option inside 
 ## Install the binaries
 
 Next, let's install the latest version of OKChain. Make sure you `git checkout` the
-correct [released version](https://github.com/okex/okchain/releases).
+correct [latest released version](https://github.com/okex/okchain/releases).
 
 ```bash
 git clone -b <latest-release-tag> https://github.com/okex/okchain
