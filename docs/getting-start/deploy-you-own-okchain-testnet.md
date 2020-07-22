@@ -168,7 +168,7 @@ Each `./build/nodeN` directory is mounted to the `/okchaind` directory in each c
 
 ### Logging
 
-Logs are saved under each `./build/nodeN/okchaind/okchain.log`. You can also watch logs
+Logs are saved under each `./build/nodeN/okchaind/okchaind.log`. You can also watch logs
 directly via Docker, for example:
 
 ```
