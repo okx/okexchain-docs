@@ -46,9 +46,12 @@ In the proxy voting mechanism, there are two roles:
 The weight of the number of votes decayed weekly (0:00 UTC time every Saturday), the total decay period is 1 year, reduced to 50%
 After re-voting, the ballot weights will be refreshed
 formula:
-block_timestamp_epoch = 946684800 (ie 00:00:00 UTC on January 1, 2000)
-weight = int64_t ((now_timestamp-block_timestamp_epoch) / (seconds_per_day * 7)) / double (52)
-last_vote_weight = double (votes) * pow (2, weight)
+```
+start_timestamp = 946684800 (ie 00:00:00 UTC on January 1, 2000)
+weeks_per_year = 52
+weight = (now_timestamp - start_timestamp) / (seconds_per_day * 7) / weeks_per_year
+shares = delegated_tokens * 2^weight
+```
 The best voting strategy is: update the voting in the hands once a week to ensure that the weight of the votes held is always up to date
 
 ## Punishment
