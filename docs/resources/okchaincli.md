@@ -300,7 +300,7 @@ Secondary sub-commands mainly include the following 7 functions
 ### 1. Transfer
 
 ```bash
-okchaincli tx send <addr> <amount> --from <name>
+okchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 ```
 
 #### Parameter description
@@ -316,7 +316,7 @@ okchaincli tx send <addr> <amount> --from <name>
 #### Example
 
 ```bash
-okchaincli tx send okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt --from alice -b block
+okchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
 ```
 #### Successful response:
 ```
@@ -334,7 +334,7 @@ okchaincli tx send okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt --from a
   "tags": [
     {
       "key": "fee",
-      "value": "0.01250000 tokt"
+      "value": "0.00020000 tokt"
     },
     {
       "key": "action",
@@ -363,7 +363,7 @@ okchaincli tx token issue [flags]
 ```
 #### Successful response:
 ```
-okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' -b block --mintable  
+okchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block --mintable  
 # example  
 {
   "height": "340949",
@@ -408,7 +408,7 @@ okchaincli tx token mint [flags]
 ```
 #### Successful response:
 ```
-okchaincli tx token mint --amount 10000000 --symbol tokt --from alice -b block
+okchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
 # Example output
 {
   "height": "341001",
@@ -449,7 +449,7 @@ okchaincli tx token burn [flags]
 ```
 #### Successful response:
 ```
-okchaincli tx token burn --from alice --symbol tokt --amount 100.0 -b block
+okchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
   # Example output
 {
   "height": "341036",
@@ -502,7 +502,7 @@ okchaincli tx token multi-send [flags]
 #### Successful response:
 
 ```
-  okchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1tokt,2btc-254"}]' -b block
+  okchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1tokt,2btc-254"}]' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
   
   # Example output
   {
@@ -789,7 +789,7 @@ Secondary subcommand including features as below
 $ okchaincli tx dex list -h
 
 Example:
-    okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
+    okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okchaincli tx dex list [flags]
@@ -811,7 +811,7 @@ Flags:
 $ okchaincli tx dex deposit -h
 
 Example:
-    okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
+    okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okchaincli tx dex deposit [product] [amount] [flags]
@@ -830,7 +830,7 @@ Flags:
 $ okchaincli tx dex  withdraw -h
 
 Example:
-    okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50tokt --from mykey -b block -y
+    okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50tokt --from mykey --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okchaincli tx dex withdraw [product] [amount] [flags]
@@ -854,7 +854,7 @@ Create transfer transaction by  previous owner
 $ okchaincli tx dex transfer-ownership -h
 
 Example:
-    okchaincli tx dex transfer-ownership --from mykey --to  okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_tokt > unsignedTx.json
+    okchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_tokt > unsignedTx.json
 
 Usage:
     okchaincli tx dex transfer-ownership [flags]
