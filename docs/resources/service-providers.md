@@ -50,7 +50,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port
 
-// example: okchaincli config node https://77.87.106.33:26657
+// example: okchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address. 

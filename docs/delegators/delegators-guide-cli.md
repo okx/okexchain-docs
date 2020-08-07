@@ -166,7 +166,7 @@ You will find the tutorial on how to install `okchaind` [here](https://okchain-d
 
 If you do not want or cannot run your own node, you can connect to someone else's full-node. You should pick an operator you trust, because a malicious operator could return  incorrect query results or censor your transactions. However, they will never be able to steal your funds, as your private keys are stored locally on your computer or ledger device. Possible options of full-node operators include validators, wallet providers or exchanges. 
 
-In order to connect to the full-node, you will need an address of the following form: `https://77.87.106.33:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-okchaincli).
+In order to connect to the full-node, you will need an address of the following form: `https://35.176.62.211:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-okchaincli).
 
 ## Setting Up `okchaincli`
 
@@ -192,7 +192,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port
 
-// example: okchaincli config node https://77.87.106.33:26657
+// example: okchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address. 
