@@ -66,7 +66,7 @@ okchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id okchain
+okchaincli config chain-id okchain-testnet1
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.

@@ -47,7 +47,7 @@ okchaincli config trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id okchain
+okchaincli config chain-id okchain-testnet1
 ```
 
 Set the output format of okchaincli request response
@@ -570,7 +570,7 @@ Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
 okchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
-  --chain-id=okchain \
+  --chain-id=okchain-testnet1 \
   --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --generate-only > unsignedTx.json
 ```

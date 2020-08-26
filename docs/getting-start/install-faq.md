@@ -68,10 +68,10 @@ ERROR: chain ID required but not specified
 You should use the flag
 ```shell script
 $ okchaincli query block 6547302 --trust-node
-$ okchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1tokt -y --fees 0.002tokt --chain-id okchain
+$ okchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1tokt -y --fees 0.002tokt --chain-id okchain-testnet1
 ```
 or local configuration
 ```shell script
-$ okchaincli config chain-id okchain
+$ okchaincli config chain-id okchain-testnet1
 $ okchaincli config trust-node true
 ```
