@@ -166,7 +166,7 @@ You will find the tutorial on how to install `okchaind` [here](https://okchain-d
 
 If you do not want or cannot run your own node, you can connect to someone else's full-node. You should pick an operator you trust, because a malicious operator could return  incorrect query results or censor your transactions. However, they will never be able to steal your funds, as your private keys are stored locally on your computer or ledger device. Possible options of full-node operators include validators, wallet providers or exchanges. 
 
-In order to connect to the full-node, you will need an address of the following form: `https://77.87.106.33:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-okchaincli).
+In order to connect to the full-node, you will need an address of the following form: `https://35.176.62.211:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-okchaincli).
 
 ## Setting Up `okchaincli`
 
@@ -192,7 +192,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port
 
-// example: okchaincli config node https://77.87.106.33:26657
+// example: okchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address. 
@@ -208,7 +208,7 @@ okchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id okchain
+okchaincli config chain-id okchain-testnet1
 ```
 
 ## Querying the State
@@ -397,7 +397,7 @@ In order to sign, you will also need the `chain-id`, `account-number` and `seque
 Get the chain-id from the genesis file (`okchain`), and the two other fields using the account query:
 
 ```bash
-okchaincli query account <yourAddress> --chain-id okchain
+okchaincli query account <yourAddress> --chain-id okchain-testnet1
 ```
 
 Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, [create an account on the offline computer](#using-a-computer). For additional security, you can double check the parameters of your transaction before signing it using the following command:
@@ -409,7 +409,7 @@ cat unsignedTx.json
 Now, sign the transaction using the following command. You will need the `chain-id`, `sequence` and `account-number` obtained earlier:
 
 ```bash
-okchaincli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id okchain --sequence <sequence> --account-number <account-number> > signedTx.json
+okchaincli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id okchain-testnet1 --sequence <sequence> --account-number <account-number> > signedTx.json
 ```
 
 Copy `signedTx.json` and transfer it back to the online computer. Finally, use the following command to broadcast the transaction:

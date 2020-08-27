@@ -50,7 +50,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okchaincli config node <host>:<port
 
-// example: okchaincli config node https://77.87.106.33:26657
+// example: okchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address. 
@@ -66,7 +66,7 @@ okchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id okchain
+okchaincli config chain-id okchain-testnet1
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.
