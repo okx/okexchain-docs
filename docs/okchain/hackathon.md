@@ -9,39 +9,6 @@
     allowfullscreen>
 </iframe>
 
-<video src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312" width="200px" height="150px" controls="controls"></video>
-<video src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312" width="200px" height="150px" controls="controls"></video>
-<video src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__" width="200px" height="150px" controls="controls"></video>
-<video src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312" width="200px" height="150px" controls="controls"></video>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aMoBobgeYbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&amp;id=34341360&amp;auto=1&amp;height=66"></iframe>
 
-
-<iframe 
-    width="200px" 
-    height="150px" 
-    src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-<iframe 
-    width="200px" 
-    height="150px" 
-    src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-<iframe 
-    width="200px" 
-    height="150px" 
-    src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-<iframe 
-    width="200px" 
-    height="150px" 
-    src="blob:https://www.youtube.com/e3c9c01f-f182-4bd2-a737-e144d597d312"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
