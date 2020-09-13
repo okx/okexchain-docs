@@ -86,7 +86,11 @@ okexchaintool addr
 ~~~~~~~~~~~~~~~~
 
 okexchain account address format conversion
+<<<<<<< HEAD
 ``bash okexchaintool addr okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a``
+=======
+``bash okchaintool addr okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a``
+>>>>>>> master
 
 return
 
@@ -117,7 +121,11 @@ okexchaintool hack
 ~~~~~~~~~~~~~~~~
 
 for the current ``okexchaind`` state
+<<<<<<< HEAD
 ``bash  okexchaintool hack $HOME/.okexchaind```
+=======
+``bash  okchaintool hack $HOME/.okexchaind```
+>>>>>>> master
 
 return
 
