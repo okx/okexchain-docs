@@ -11,9 +11,9 @@ OKExChain is a set of open-source blockchain projects developed by OKEx, aiming 
 
 ## What is OpenDEX？
 
-OKExChain-OpenDEX, as the first project of the OKExChain ecosystem, is a middleware that can freely issue DEX. With the design concept of "everyone can create DEX", it provides various basic functions needed to operate a DEX. Compared with traditional DEX, it adopts full on-chain matching and on-chain order book management to make matching information more transparent and safe; compared with Ethereum-based projects, the matching engine based on OKExChain's call auction can achieve matching in seconds, which is similar to the operating experience of a centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but to provide a platform to achieve the separation of technology and operations. Just as Ethereum makes digital asset issuance easy  through smart contract technology, OKExChain lowers the barrier for operating digital asset trading pairs by OpenDEX.
+OKExChain-OKExDEX, as the first project of the OKExChain ecosystem, is a middleware that can freely issue DEX. With the design concept of "everyone can create DEX", it provides various basic functions needed to operate a DEX. Compared with traditional DEX, it adopts full on-chain matching and on-chain order book management to make matching information more transparent and safe; compared with Ethereum-based projects, the matching engine based on OKExChain's call auction can achieve matching in seconds, which is similar to the operating experience of a centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but to provide a platform to achieve the separation of technology and operations. Just as Ethereum makes digital asset issuance easy  through smart contract technology, OKExChain lowers the barrier for operating digital asset trading pairs by OKExDEX.
 
-![OpenDEX multi-operator relation](./img/operators.jpg)
+![OKExDEX multi-operator relation](./img/operators.jpg)
 
 ## The OKT
 

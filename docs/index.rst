@@ -31,10 +31,10 @@ the value-added system.
    :alt: okexchain multi-chain
 
    okexchain multi-chain
-What is OpenDEX？
+What is OKExDEX？
 -----------------
 
-OKExChain-OpenDEX, as the first project of the OKExChain ecosystem, is a
+OKExChain-OKExDEX, as the first project of the OKExChain ecosystem, is a
 middleware that can freely issue DEX. With the design concept of
 "everyone can create DEX", it provides various basic functions needed to
 operate a DEX. Compared with traditional DEX, it adopts full on-chain
@@ -46,12 +46,12 @@ exchange. In addition, its unique design idea is not to build a DEX
 belonging to a certain stakeholder, but to provide a platform to achieve
 the separation of technology and operations. Just as Ethereum makes
 digital asset issuance easy through smart contract technology, OKExChain
-lowers the barrier for operating digital asset trading pairs by OpenDEX.
+lowers the barrier for operating digital asset trading pairs by OKExDEX.
 
 .. figure:: ./img/operators.jpg
-   :alt: OpenDEX multi-operator relation
+   :alt: OKExDEX multi-operator relation
 
-   OpenDEX multi-operator relation
+   OKExDEX multi-operator relation
 The OKT
 -------
 

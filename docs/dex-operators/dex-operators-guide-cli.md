@@ -1,6 +1,6 @@
 # DEX Operators Guide (CLI)
 
-In OKExChain-OpenDEX，any user can issue their own Token and Tokenpairs。
+In OKExChain-OKExDEX，any user can issue their own Token and Tokenpairs。
 
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
 
