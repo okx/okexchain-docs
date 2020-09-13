@@ -16,7 +16,7 @@ Details:
   - c. if the delegator votes after the validator votes on his behalf, the weight of the voting result replaces the weight of the vote cast by the validator on behalf of the delegator.
 
 ## Proposal types
-OKChain offers 4 types of proposals for different purposes: 
+OKExChain offers 4 types of proposals for different purposes: 
 1. [Text Proposal](./governance/text.html)： to obtain network views of a topic.
 2. [Parameter Proposal](./governance/parameter.html)： to change system parameters. 
 3. [Delist Proposal](./governance/delist.html): to delist a token pair from DEX.

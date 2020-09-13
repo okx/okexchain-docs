@@ -7,7 +7,7 @@
 Basic concepts
 ==============
 
-types of OKChain nodes
+types of OKExChain nodes
 ----------------------
 
 full node
@@ -28,7 +28,7 @@ on-chain governance rights. In a voting session, 21 nodes that have
 obtained the highest numbers of votes from okt voters are elected as
 vaildator in the next cycle.
 
-types of OKChain users
+types of OKExChain users
 ----------------------
 
 normal user
@@ -39,13 +39,13 @@ A normal user is an OKT holder.
 delegator
 ~~~~~~~~~
 
-OKChain relies on a group of proposers to maintain network security. The
+OKExChain relies on a group of proposers to maintain network security. The
 role of a validation node is to run a full node and participate in
 consensus through broadcast voting (including ciphertext signed by the
 sender’s private key). Validation nodes are able to keep track of
 on-chain data, place new blocks on the blockchain and earn yields to
 incentivize their operation. Validation nodes can only be elected after
-successfully linking to OKChain’s network and pledging 10w OKT.
+successfully linking to OKExChain’s network and pledging 10w OKT.
 
 proposer
 ~~~~~~~~

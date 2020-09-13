@@ -1,7 +1,7 @@
 # Governance App Upgrade
 
 Description:
-Compared with the traditional hard fork, app upgrade is a smoother and more fault-tolerant system upgrade method. The app here refers to the OKChain software running on the tendermint consensus layer. When the app version update is completed and the new validation node’s “voting power” is lower than a certain threshold, the new app can continue to run based on the logic of its old version in the same situation where the entire block network remains in the old version, which will not result in network fork; when the new validation node’s “voting power” reaches the threshold, the logic of its new version will swap at a specified height, and the entire block network will run using such logic.
+Compared with the traditional hard fork, app upgrade is a smoother and more fault-tolerant system upgrade method. The app here refers to the OKExChain software running on the tendermint consensus layer. When the app version update is completed and the new validation node’s “voting power” is lower than a certain threshold, the new app can continue to run based on the logic of its old version in the same situation where the entire block network remains in the old version, which will not result in network fork; when the new validation node’s “voting power” reaches the threshold, the logic of its new version will swap at a specified height, and the entire block network will run using such logic.
 
 ## Reference
 proposal parameters:
@@ -24,7 +24,7 @@ proposal parameters:
 ### 1. Submit an app upgrade proposal
 Before the app upgrade, you need to submit an `upgrade proposal` first, assuming that the current version of the app running on the network is  `0` and you want to upgrade it to version `1`
 ```sh
-$ okchaincli tx gov submit-app-upgrade-proposal --title="app upgrade" --description="app upgrade, version 1" --deposit="50okt" --version=1 --software="http://newappdownloadingurl" --switchHeight="1000" --threshold="0.8" --type="AppUpgrade" --from jack -b block
+$ okexchaincli tx gov submit-app-upgrade-proposal --title="app upgrade" --description="app upgrade, version 1" --deposit="50okt" --version=1 --software="http://newappdownloadingurl" --switchHeight="1000" --threshold="0.8" --type="AppUpgrade" --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -55,9 +55,9 @@ confirm transaction before signing and broadcasting [Y/n]: y
   ]
 }
 ```
-OKChain will generate a proposal-id to uniquely label the successfully submitted proposal. The proposal_id of the proposal in this example is 1. Query proposal information:
+OKExChain will generate a proposal-id to uniquely label the successfully submitted proposal. The proposal_id of the proposal in this example is 1. Query proposal information:
 ```sh
-$ okchaincli query gov proposal 1
+$ okexchaincli query gov proposal 1
 {
   "type": "gov/AppUpgradeProposal",
   "value": {
@@ -100,7 +100,7 @@ ERROR: {"codespace":"gov","code":1,"message":"Unknown proposal with id 1"}
 which means that the proposal faces a timeout after entering the DepositPeriod state (the timeouts during the DepositPeriod and VotingPeriod are 24h and 72h respectively) and fails to meet the deposit conditions, and the proposal will be deleted on-chain, so that the above error is obtained.
 ### 2. Deposit an app upgrade proposal
 ```sh
-$ okchaincli tx gov deposit 1 50okt --from jack -b block
+$ okexchaincli tx gov deposit 1 50okt --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -138,7 +138,7 @@ When the query is made through the above commands again after deposit, the propo
 
 ### 3. Vote on an app upgrade proposal
 ```sh
-$ okchaincli tx gov vote 1 yes --from jack -b block
+$ okexchaincli tx gov vote 1 yes --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -175,10 +175,10 @@ confirm transaction before signing and broadcasting [Y/n]: y
 Query the proposal at the end of the VotingPeriod. The proposal status is Passed. That means the proposal is approved.
 
 ### 4. Run the new app version
-Once the app upgrade proposal is approved, the administrator of each node can obtain version `1` and restart the background program of `okchain` via the download address specified by `--software="http://newappdownloadingurl"` in the proposal.
+Once the app upgrade proposal is approved, the administrator of each node can obtain version `1` and restart the background program of `okexchain` via the download address specified by `--software="http://newappdownloadingurl"` in the proposal.
 #### Query the current app version
 ```sh
-$ okchaincli query upgrade version
+$ okexchaincli query upgrade version
 {
   "version": "1"
 }
@@ -187,7 +187,7 @@ $ okchaincli query upgrade version
 When the block reaches the block height `--switchHeight="1000"` specified by the proposal, if most nodes on the network have updated the app to version `1`, the network will automatically and smoothly switch to the new version. Otherwise, maintain the original version.
 #### Test if the new version is activated
 ```sh
-$ okchaincli query upgrade failed-version
+$ okexchaincli query upgrade failed-version
 {
   "version": "0"
 }

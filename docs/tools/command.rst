@@ -85,7 +85,7 @@ return
 okchaintool addr
 ~~~~~~~~~~~~~~~~
 
-okchain account address format conversion
+okexchain account address format conversion
 ``bash okchaintool addr okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a``
 
 return
@@ -116,15 +116,15 @@ return
 okchaintool hack
 ~~~~~~~~~~~~~~~~
 
-for the current ``okchaind`` state
-``bash  okchaintool hack $HOME/.okchaind```
+for the current ``okexchaind`` state
+``bash  okchaintool hack $HOME/.okexchaind```
 
 return
 
 .. code:: bash
 
     I[2019-12-18|18:18:23.281][8016] Protocol V0: LoadContext
-    D[2019-12-18|18:18:23.282][8016] &{EnableBackend:false EnableMktCompute:false LogSQL:false CleanUpsKeptDays:map[kline_m1:120 kline_m3:120 kline_m5:120] CleanUpsTime:00:00:00 OrmEngine:{EngineType:sqlite3 ConnectStr:/Users/hanxueyang/.okchaind/data/sqlite3/backend.sqlite3}}
+    D[2019-12-18|18:18:23.282][8016] &{EnableBackend:false EnableMktCompute:false LogSQL:false CleanUpsKeptDays:map[kline_m1:120 kline_m3:120 kline_m5:120] CleanUpsTime:00:00:00 OrmEngine:{EngineType:sqlite3 ConnectStr:/Users/hanxueyang/.okexchaind/data/sqlite3/backend.sqlite3}}
     I[2019-12-18|18:18:23.282][8016] launch app with version: 0
     ID CommitID{[]:0}
     LastBlockHeight 0

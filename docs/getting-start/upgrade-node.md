@@ -4,14 +4,14 @@ order: 5
 
 # Upgrade Your Node
 
-This document describes the upgrade procedure of a `okchaind` full-node to a new version.
+This document describes the upgrade procedure of a `okexchaind` full-node to a new version.
 
 ## Software Upgrade
 
-First, stop your instance of `okchaind`. Next, upgrade the software:
+First, stop your instance of `okexchaind`. Next, upgrade the software:
 
 ```bash
-cd okchain
+cd okexchain
 git fetch --all && git checkout <new_version>
 make install
 ```
@@ -19,7 +19,7 @@ make install
 > _NOTE_:
 If you have issues at this step, please check that you have the latest stable version of GO installed.
 
-See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OKChain release page](https://github.com/okex/okchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OKExChain release page](https://github.com/okex/okexchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 
@@ -36,7 +36,7 @@ If you are joining a public testnet, fetch the genesis from the appropriate test
 Save the new genesis as `new_genesis.json`. Then replace the old `genesis.json` with `new_genesis.json`
 
 ```bash
-cd $HOME/.okchaind/config
+cd $HOME/.okexchaind/config
 cp -f genesis.json new_genesis.json
 mv new_genesis.json genesis.json
 ```
@@ -48,8 +48,8 @@ Then, go to the [reset data](#reset-data) section.
 If you were running a node in the previous version of the network and want to build your new genesis locally from a state of this previous network, use the following command:
 
 ```bash
-cd $HOME/.okchaind/config
-okchaind export --for-zero-height --height=<export-height> > new_genesis.json
+cd $HOME/.okexchaind/config
+okexchaind export --for-zero-height --height=<export-height> > new_genesis.json
 ```
 
 The command above take a state at a certain height `<export-height>` and turns it into a new genesis file that can be used to start a new network.
@@ -65,7 +65,7 @@ mv new_genesis.json genesis.json
 
 If the version <new_version> you are upgrading to is not breaking from the previous one, you should not reset the data. If it is not breaking, you can skip to [Restart](#restart)
 
-If you are running a **validator node** on the mainnet, always be careful when doing `okchaind unsafe-reset-all`. You should never use this command if you are not switching `chain-id`.
+If you are running a **validator node** on the mainnet, always be careful when doing `okexchaind unsafe-reset-all`. You should never use this command if you are not switching `chain-id`.
 
 Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to get slashed due to double sign !
 
@@ -73,7 +73,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 First, remove the outdated files and reset the data. **If you are running a validator node, make sure you understand what you are doing before resetting**.
 
 ```bash
-okchaind unsafe-reset-all
+okexchaind unsafe-reset-all
 ```
 
 Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
@@ -83,5 +83,5 @@ Your node is now in a pristine state while keeping the original `priv_validator.
 To restart your node, just type:
 
 ```bash
-okchaind start
+okexchaind start
 ```

@@ -17,12 +17,12 @@ Voting is the primary way for token holders participate in the on-chain governan
 
 On the other hand is the community ecology aspect. validators need to work together. If there are any problems, then they need to be put in a room. They need to be able to work together to be good leaders in their communities and to spread the word and be highly transparent.
 
-You will choose whether to become a delegator of okchain. So please vote seriously, because the future of the chain depends on those votes and who will manage it.
+You will choose whether to become a delegator of okexchain. So please vote seriously, because the future of the chain depends on those votes and who will manage it.
 
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly in [OKLink](https://www.oklink.com/okchain-test) or other OKChain block explorers.
+In order to choose their validators, delegators have access to a range of information directly in [OKLink](https://www.oklink.com/okexchain-test) or other OKExChain block explorers.
 
 - **Validator's moniker**: Name of the validator candidate.
 - **Validator's description**: Description provided by the validator operator.
