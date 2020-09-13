@@ -3,7 +3,7 @@
 
 # Introduction
 
-## What is OKChain？
+## What is OKExChain？
 
 OKExChain is a set of open-source blockchain projects developed by OKEx, aiming to promote the landing of large-scale commercial applications based on blockchain technology. It gives each participating node the same rights, allowing users to launch a variety of decentralized applications smoothly, issue their digital assets, create their own digital asset trading pairs, and trade freely. The cross-chain technology is the key to achieving the landing. Through the cross-chain module, the value interconnectivity, user interconnectivity, and scenario application interconnectivity of blockchain can be realized simply and efficiently, so that we can co-construct the ecosystem and the value-added system.
 
