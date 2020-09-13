@@ -11,7 +11,7 @@ Validators provide the machine configuration required by OKExChain, DEX Operator
 
 ## Get market information
 
-OKChian-OKExDEX provides basic functions. Orders and matching occur on the chain, but these are not enough. Trading users need to use a more friendly UI page to help their trading decisions.About this part of the program construction is solved by other projects of OKExChain-OKExDEX ecology, we provide a [template](https://www.okex.com/dex-test) about data display.
+OKExChain-OKExDEX provides basic functions. Orders and matching occur on the chain, but these are not enough. Trading users need to use a more friendly UI page to help their trading decisions.About this part of the program construction is solved by other projects of OKExChain-OKExDEX ecology, we provide a [template](https://www.okex.com/dex-test) about data display.
 
 But at the same time, OKExChain itself is an open source project, anyone can develop their own set of UI to help DEX Trade make better trading decisions.
 
