@@ -17,7 +17,7 @@ Furthermore, an exchange actually plays the role of ** building trust **  in the
 
 We think the reason is that there is a lack of operating entities. Just like the e-commerce model we are exposed to, Taobao is a platform, and it is Taobao sellers who really provide services to users.  As a platform, Taobao provides trust-building service for the sellers, but it does not mean that the merchants are not required to do any commercial operations. As for exchanges, the traditional decentralized exchange model puts too much emphasis on the platform and ignores the merchants, which are the main operating entities.
 
-Therefore, the DEX operator of OKChain is proposed to solve the problem of operating entities.
+Therefore, the DEX operator of OKExChain is proposed to solve the problem of operating entities.
 
 ## Set Up a Website
 

@@ -7,7 +7,7 @@ source_parsers = {
 }
 source_suffix = ['.rst', '.md']
 # source_suffix = '.rst'
-site_url = 'https://okchain-docs.readthedocs.io/en/latest/'
+site_url = 'https://okexchain-docs.readthedocs.io/en/latest/'
 
 exclude_patterns = ['out/**', 'tmp/**', 'eggs/**', 'requirements.txt', 'README.rst']
 

@@ -1,6 +1,6 @@
 # DEX Operators Guide (CLI)
 
-In OKChain-OpenDEX，any user can issue their own Token and Tokenpairs。
+In OKExChain-OpenDEX，any user can issue their own Token and Tokenpairs。
 
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
 
@@ -21,7 +21,7 @@ staking cli contains the following 3 commands for DEX operator, providing comple
 Any user can issue their own Token and will be charged a portion of the OKT as a fee in addition to the system fee charged by GAS. Please refer to [Fee Model](../concepts/fee.html) for specific rates.
 
 ```shell
-okchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
+okexchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
 
 ```
 
@@ -38,7 +38,7 @@ okchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --wh
 Any user can issue a token pair to become a DEX operator. In opendex, any two tokens can form one and only one Tokenpair.
 
 ```shell
-okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
+okexchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
 
 ```
 
@@ -54,7 +54,7 @@ In order to make fair and open use of the matching resources of the blockchain, 
 
 
 ```shell
-okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
+okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
 ```
 
 
@@ -65,5 +65,5 @@ In contrast, DEX operator can also withdrawn their product deposits, and the wit
 
 
 ```shell
-okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
+okexchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
 ```

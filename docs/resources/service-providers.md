@@ -4,7 +4,7 @@ order: 5
 
 # Service Providers
 
-We define 'service providers' as entities providing services for end-users that involve some form of interaction with a OKChain-SDK based blockchain (this includes the OKChain). More specifically, this document will be focused around interactions with tokens.
+We define 'service providers' as entities providing services for end-users that involve some form of interaction with a OKExChain-SDK based blockchain (this includes the OKExChain). More specifically, this document will be focused around interactions with tokens.
 
 This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact to the blockchain for their end-users. 
 
@@ -20,27 +20,27 @@ There are three main pieces to consider:
 
 ### Installation and configuration
 
-We will describe the steps to run and interact with a full-node for the OKChain. For other SDK-based blockchain, the process should be similar. 
+We will describe the steps to run and interact with a full-node for the OKExChain. For other SDK-based blockchain, the process should be similar. 
 
-First, you need to [install the software](../getting-start/install-okchain.html).
+First, you need to [install the software](../getting-start/install-okexchain.html).
 
-Then, you can start [running a full-node(testnet)](../getting-start/join-okchain-testnet.html).
+Then, you can start [running a full-node(testnet)](../getting-start/join-okexchain-testnet.html).
 
 ### Command-Line interface
 
-## Setting Up `okchaincli`
+## Setting Up `okexchaincli`
 
-**Before setting up `okchaincli`, make sure you have set up a way to access the OKChain network**
+**Before setting up `okexchaincli`, make sure you have set up a way to access the OKExChain network**
 
-**Please check that you are always using the latest stable release of `okchaincli`**
+**Please check that you are always using the latest stable release of `okexchaincli`**
 
 
-`okchaincli` is the tool that enables you to interact with the node that runs on the OKChain network, whether you run it yourself or not. Let us set it up properly.
+`okexchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
 
-In order to set up `okchaincli`, use the following command:
+In order to set up `okexchaincli`, use the following command:
 
 ```bash
-okchaincli config <flag> <value>
+okexchaincli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag. 
@@ -48,9 +48,9 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-okchaincli config node <host>:<port
+okexchaincli config node <host>:<port
 
-// example: okchaincli config node https://35.176.62.211:26657
+// example: okexchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address. 
@@ -58,7 +58,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Then, let us set the default value of the `--trust-node` flag:
 
 ```bash
-okchaincli config trust-node false
+okexchaincli config trust-node false
 
 // Set to true if you run a light-client node, false otherwise
 ```
@@ -66,7 +66,7 @@ okchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okchaincli config chain-id okchain-testnet1
+okexchaincli config chain-id okexchain-testnet1
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.
@@ -76,7 +76,7 @@ Next you will find a few useful CLI commands to interact with the Full-Node.
 To generate a new key (default secp256k1 elliptic curve):
 
 ```bash
-okchaincli keys add <your_key_name>
+okexchaincli keys add <your_key_name>
 ```
 
 You will be asked to create a password (at least 8 characters) for this key-pair. This will return the information listed below:
@@ -90,7 +90,7 @@ You will be asked to create a password (at least 8 characters) for this key-pair
 You can see all your available keys by typing:
 
 ```bash
-okchaincli keys list
+okexchaincli keys list
 ```
 
 #### Checking your balance
@@ -98,7 +98,7 @@ okchaincli keys list
 After receiving tokens to your address, you can view your account's balance by typing:
 
 ```bash
-okchaincli query account <YOUR_ADDRESS>
+okexchaincli query account <YOUR_ADDRESS>
 ```
 
 *Note: When you query an account balance with zero tokens, you will get this error: No account with address <YOUR_ADDRESS> was found in the state. This is expected! We're working on improving our error messages.*
@@ -108,7 +108,7 @@ okchaincli query account <YOUR_ADDRESS>
 Here is the command to send coins via the CLI:
 
 ```bash
-okchaincli tx send <from_key_or_address> <to_address> <amount> \
+okexchaincli tx send <from_key_or_address> <to_address> <amount> \
     --chain-id=<name_of_testnet_chain> 
 ```
 
@@ -127,7 +127,7 @@ Flags:
 If you need to do something else, the best command you can run is:
 
 ```bash
-okchaincli 
+okexchaincli 
 ```
 
 It will display all the available commands. For each command, you can use the `--help` flag to get further information. 
@@ -139,7 +139,7 @@ The Rest Server acts as an intermediary between the front-end and the full-node.
 To start the Rest server: 
 
 ```bash
-okchaincli rest-server --node=<full_node_address:full_node_port>
+okexchaincli rest-server --node=<full_node_address:full_node_port>
 ```
 
 Flags:
@@ -152,7 +152,7 @@ Flags:
 
 The recommended way to listen for incoming transaction is to periodically query the blockchain through the following endpoint of the LCD:
 
-[`/okchain/v1/accounts/{address}`](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#f5bc92c9-4e8c-40f5-b3fe-d9635c418402)
+[`/okexchain/v1/accounts/{address}`](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#f5bc92c9-4e8c-40f5-b3fe-d9635c418402)
 
 ## Rest API
 
@@ -165,11 +165,11 @@ and [broadcast](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=
 different API endpoints. This allows service providers to use their own signing
 mechanism for instance.
 
-## OKChain SDK Transaction Signing
+## OKExChain SDK Transaction Signing
 
-OKChain SDK transaction signing is a fairly simple process.
+OKExChain SDK transaction signing is a fairly simple process.
 
-Every OKChain SDK transaction has a canonical JSON representation. The `okchaincli`
+Every OKExChain SDK transaction has a canonical JSON representation. The `okexchaincli`
 and Stargate REST interfaces provide canonical JSON representations of transactions
 and their "broadcast" functions will provide compact Amino (a protobuf-like wire format)
 encoding translations.

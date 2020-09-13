@@ -2,6 +2,6 @@
 order: 3
 -->
 
-# Join the OKChain Mainnet
+# Join the OKExChain Mainnet
 
 Coming soon...
