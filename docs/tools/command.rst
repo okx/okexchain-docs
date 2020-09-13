@@ -10,7 +10,7 @@ Command line tool
 Introduction
 ------------
 
-``okchaintool`` is a tool for simple debugging.
+``okexchaintool`` is a tool for simple debugging.
 
 Accept hexadecimal and base64 formats and return readable responses.
 
@@ -20,12 +20,12 @@ the bytes as base64.
 Usage
 -----
 
-okchaintool pubkey
+okexchaintool pubkey
 ~~~~~~~~~~~~~~~~~~
 
 The public key is converted in different formats. The following two
 commands get the same result:
-``bash okchaintool pubkey TZTQnfqOsi89SeoXVnIw+tnFJnr4X8qVC0U8AsEmFk4= okchaintool pubkey 4D94D09DFA8EB22F3D49EA17567230FAD9C5267AF85FCA950B453C02C126164E``
+``bash okexchaintool pubkey TZTQnfqOsi89SeoXVnIw+tnFJnr4X8qVC0U8AsEmFk4= okexchaintool pubkey 4D94D09DFA8EB22F3D49EA17567230FAD9C5267AF85FCA950B453C02C126164E``
 return
 
 .. code:: bash
@@ -37,15 +37,15 @@ return
     Bech32 Validator Operator: okchainvaloperpub1zcjduepqfk2dp80636ez702fagt4vu3sltvu2fn6lp0u49gtg57q9sfxze8qzrmxpe
     Bech32 Validator Consensus: okchainvalconspub1zcjduepqfk2dp80636ez702fagt4vu3sltvu2fn6lp0u49gtg57q9sfxze8q0fuqw3
 
-okchaintool tx
+okexchaintool tx
 ~~~~~~~~~~~~~~
 
 Input hex/base64 encoded tx and return full JSON response
 
 .. code:: bash
 
-    okchaintool tx <hex or base64 transaction>
-    okchaintool tx tQEoKBapCkPJ7iE/ChR4HjtQEydR5yWMX4aw3+6hy78kcBIUYekVgLqZUXYQ32AIYki+ocuP4wMaEQoDb2tiEgoxMDAwMDAwMDAwEmoKJuta6YchAgYaL1tZ7ekqvweQhKojG8sDHUfN23qJWviAsTDIWvYUEkDuA/WIXaA1hccZUzn/DNgytttVfUR8wXxberfB0ZKMoQ2rtR1p/le4wl066D1SRR9xuTs0iBeVxzwgoEFdfbeW
+    okexchaintool tx <hex or base64 transaction>
+    okexchaintool tx tQEoKBapCkPJ7iE/ChR4HjtQEydR5yWMX4aw3+6hy78kcBIUYekVgLqZUXYQ32AIYki+ocuP4wMaEQoDb2tiEgoxMDAwMDAwMDAwEmoKJuta6YchAgYaL1tZ7ekqvweQhKojG8sDHUfN23qJWviAsTDIWvYUEkDuA/WIXaA1hccZUzn/DNgytttVfUR8wXxberfB0ZKMoQ2rtR1p/le4wl066D1SRR9xuTs0iBeVxzwgoEFdfbeW
 
 return
 
@@ -82,11 +82,11 @@ return
       }
     }
 
-okchaintool addr
+okexchaintool addr
 ~~~~~~~~~~~~~~~~
 
 okexchain account address format conversion
-``bash okchaintool addr okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a``
+``bash okexchaintool addr okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a``
 
 return
 
@@ -97,15 +97,15 @@ return
     Bech32 Acc: okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a
     Bech32 Val: okchainvaloper1v853tq96n9ghvyxlvqyxyj97589clccrd04xtm
 
-okchaintool raw-bytes
+okexchaintool raw-bytes
 ~~~~~~~~~~~~~~~~~~~~~
 
 output raw bytes (eg. [10 21 13 255]) and convert them into hex
 
 .. code:: bash
 
-    okchaintool raw-bytes <raw-bytes>
-    okchaintool raw-bytes "[10 21 13 255]"
+    okexchaintool raw-bytes <raw-bytes>
+    okexchaintool raw-bytes "[10 21 13 255]"
 
 return
 
@@ -113,11 +113,11 @@ return
 
     0A150DFF
 
-okchaintool hack
+okexchaintool hack
 ~~~~~~~~~~~~~~~~
 
 for the current ``okexchaind`` state
-``bash  okchaintool hack $HOME/.okexchaind```
+``bash  okexchaintool hack $HOME/.okexchaind```
 
 return
 
