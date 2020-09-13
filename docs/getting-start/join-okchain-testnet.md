@@ -16,7 +16,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 ## Minimum System Requirements
 
-The hardware must meet certain requirements to run `okchiand`.
+The hardware must meet certain requirements to run `okexchaind`.
 
  * Desktop or laptop hardware running recent versions of Mac OS X, Windows, or Linux.
  * 500 GB of free disk space, accessible at a minimum read/write speed of 100 MB/s.
