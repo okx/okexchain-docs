@@ -3,7 +3,7 @@
 ## Proposal process
 
 The overall process of a proposal is shown below:
-![](../img/OKChainProposal.png)   
+![](../img/OKExChainProposal.png)   
 Details:  
 1. The proposer should pledge okt when initiating a proposal to prevent malicious initiation of a proposal.
 2. The voting participants are bond okt holders, except for the following two cases:
