@@ -28,9 +28,9 @@ All future liquidity providers deposit ETH and OKT’s using the exchange rate a
 ```bash
 $ okexchaincli tx swap add-liquidity --max-base-amount 10eth-355 --quote-amount 100okt --min-liquidity 0.001
 ```
---max-base-amount: Maximum number of base amount deposited. Deposits max amount if total pool token supply is 0. For example "100okt"
---quote-amount: The number of quote amount. For example "100okt"
---min-liquidity: Minimum number of sender will mint if total pool token supply is greater than 0
+--max-base-amount: Maximum number of base amount deposited. Deposits max amount if total pool token supply is 0. For example "100okt"  
+--quote-amount: The number of quote amount. For example "100okt"  
+--min-liquidity: Minimum number of sender will mint if total pool token supply is greater than 0  
 
 ### Remove liquidity
 Liquidity providers use the removeLiquidity function to withdraw their portion of the reserves.
@@ -40,8 +40,8 @@ Liquidity is withdrawn at the same ratio as the reserves at the time of withdraw
 $ okexchaincli tx swap remove-liquidity --liquidity 1 --min-base-amount 10eth-355 --min-quote-amount 1okt
 ```
 --liquidity: Liquidity amount of sender will burn  
---min-base-amount: Minimum number of base amount withdrawn
---min-quote-amount: Minimum number of quote amount withdrawn
+--min-base-amount: Minimum number of base amount withdrawn  
+--min-quote-amount: Minimum number of quote amount withdrawn  
 
 ### query
 1. Query pool info by token name
