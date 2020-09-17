@@ -609,9 +609,9 @@ okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 ```
 ### 8. Transfer token ownership:
 
-We support the function where token ownership can be transferred to another person. In order to ensure the security of token ownership transfer, multi signatures are required to validate the transfer. The process consists of the following 4 steps:
+We support the function where token ownership can be transferred to another person. In order to ensure the security of token ownership transfer, new owner need to confirm the transfer. The process consists of the following 2 steps:
 
-#### original owner(from) generates an unsigned tx：
+#### original owner(from) executes transfer-ownership command：
 ##### Example:
 ```bash
 okexchaincli tx token transfer-ownership [flags]
@@ -619,143 +619,138 @@ okexchaincli tx token transfer-ownership [flags]
 ##### Successful response:
 ```
 # from alice to jack
-okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt > unsignedTx.json
+okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt
 
-# unsignedTx.json
+# response
 {
-	"type": "auth/StdTx",
-	"value": {
-		"msg": [{
-			"type": "token/TransferOwnership",
-			"value": {
-				"from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-				"to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-				"symbol": "tokt",
-				"to_signature": {
-					"pub_key": null,
-					"signature": null
-				}
-			}
-		}],
-		"signatures": null,
-		"memo": ""
-	}
-}
-```
-
-#### owner(to) signs to validate the transfer：
-##### Example:
-```bash
-okexchaincli tx token multisigns unsignedTx.json
-```
-##### Successful response:
-```
-okexchaincli tx token multisigns unsignedTx.json --from jack > signedTx1.json -y
-
-# signedTx1.json
-{
-	"type": "auth/StdTx",
-	"value": {
-		"msg": [{
-			"type": "token/Chown",
-			"value": {
-				"from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-				"to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-				"symbol": "tokt",
-				"to_signature": {
-					"pub_key": {
-						"type": "tendermint/PubKeySecp256k1",
-						"value": "A6zP2A10dBxpR6oNKD8Q+j285lJ63PEecFyK19mcYodh"
-					},
-					"signature": "lfL+i1YRtddruRpd2PloI7Ss1CYTyu5bBz4AmBm9eVYEvmghUqNrkERm12fetiGh1ux1R/WiXijeomjFQHNkrQ=="
-				}
-			}
-		}],
-		"signatures": null,
-		"memo": ""
-	}
-}
-```
-
-#### original owner(from) signs：
-##### Example:
-```bash
-okexchaincli tx sign [flags]
-```
-##### Successful response:
-```
-okexchaincli tx sign --from alice signedTx1.json > signedTx.json -y
-
-# signedTx.json
-{
-  "type": "auth/StdTx",
-  "value": {
-    "msg": [
-      {
-        "type": "token/Chown",
-        "value": {
-          "from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-          "to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-          "symbol": "tokt",
-          "to_signature": {
-            "pub_key": {
-              "type": "tendermint/PubKeySecp256k1",
-              "value": "A6zP2A10dBxpR6oNKD8Q+j285lJ63PEecFyK19mcYodh"
-            },
-            "signature": "lfL+i1YRtddruRpd2PloI7Ss1CYTyu5bBz4AmBm9eVYEvmghUqNrkERm12fetiGh1ux1R/WiXijeomjFQHNkrQ=="
-          }
-        }
-      }
-    ],
-    "signatures": [
-      {
-        "pub_key": {
-          "type": "tendermint/PubKeySecp256k1",
-          "value": "A/EpsisD1SuP2aMjErP/RmCiPgFbMQcd2ADUM4dCmYvk"
-        },
-        "signature": "5G3e8VjKulShcgbp3gL4Wfk3QhFVRyQ/YgVdCsokJTplAT58P5jfkkn0Qjwuv3kKNIOYC8k1n4jhauqM0WCZWQ=="
-      }
-    ],
-    "memo": ""
-  }
-}
-```
-
-#### tx upon multi-signature broadcast：
-##### Example:
-```bash
-okexchaincli tx broadcast signedTx.json
-```
-##### Successful response:
-```
-okexchaincli tx broadcast signedTx.json -b block -y
-
-# Example
-{
-  "height": "136",
-  "txhash": "C59A61BE30A15D57702C32C2C2DBBEA740B372135E89831205C51B2880CBA0B9",
-  "raw_log": "[{\"msg_index\":\"0\",\"success\":true,\"log\":\"\"}]",
+  "height": "82",
+  "txhash": "64B15998B1CAEE893565FEC13698B0F1C55491C9E58E0AECB06543639CFBD8ED",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
   "logs": [
     {
-      "msg_index": "0",
+      "msg_index": 0,
       "success": true,
-      "log": ""
+      "log": "",
+      "events": null
     }
   ],
-  "tags": [
+  "gas_wanted": "200000",
+  "gas_used": "68438",
+  "events": [
     {
-      "key": "fee",
-      "value": "10.00000000 tokt"
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+        },
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "transfer"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+        }
+      ]
     },
     {
-      "key": "action",
-      "value": "transfer"
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "10.00000000okt"
+        },
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
     }
   ]
 }
 ```
 
-The transfer of token ownership is successful only after the original owner(from) and the owner(to) sign upon and after the transfer.
+#### new owner(to) executes confirm-ownership command：
+##### Example:
+```bash
+okexchaincli tx token confirm-ownership [flags]
+```
+##### Successful response:
+```
+okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt
+
+# response
+{
+  "height": "137",
+  "txhash": "3801632ED2010CB478EAD1346D8F53C72BBF6716577A57100A5969DC5D809DEB",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
+    }
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "43091",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "confirm"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
+}
+```
+
+The transfer of token ownership is successful only after the new owner(to) confirmed the transfer. If new owner(to) does not confirm the transfer, the transaction will automatically expire after a period of time(default 24h).
 
 
 ## Dex
