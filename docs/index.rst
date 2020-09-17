@@ -136,6 +136,13 @@ Contents
 
 .. toctree::
    :maxdepth: 3
+   :caption: Swap
+
+   swap/swap-overview
+   swap/swap-guide-cli
+
+.. toctree::
+   :maxdepth: 3
    :caption: Delegators
 
    delegators/delegators-overview
