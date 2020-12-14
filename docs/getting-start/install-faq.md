@@ -62,13 +62,13 @@ panic: runtime error: invalid memory address or nil pointer dereference
 ```
 
 ```shell script
-$ okexchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1tokt -y --fees 0.002tokt
+$ okexchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1okt -y --fees 0.002okt
 ERROR: chain ID required but not specified
 ```
 You should use the flag
 ```shell script
 $ okexchaincli query block 6547302 --trust-node
-$ okexchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1tokt -y --fees 0.002tokt --chain-id okexchain-testnet1
+$ okexchaincli tx send boos okchain1hzttsww347hz7v3unp5g4834mxcte3pw8639ny 1okt -y --fees 0.002okt --chain-id okexchain-testnet1
 ```
 or local configuration
 ```shell script
