@@ -257,7 +257,7 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
 
-On OKExChain testnet, the accepted denom is tokt, If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
+On OKExChain testnet, the accepted denom is okt, If you need to get okt, you can get it [here](https://www.okex.com/drawdex).
 
 ### A Note on Gas and Fees
 
@@ -273,7 +273,7 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block. 
 
-For testnet, the recommended `gas-prices` is `0.005tokt`. 
+For testnet, the recommended `gas-prices` is `0.005okt`. 
 
 
 ### Sending Tokens

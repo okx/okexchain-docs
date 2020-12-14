@@ -260,7 +260,7 @@ okexchaincli query account <address>
           "amount": "200000.00000000"
         },
         {
-          "denom": "tokt",
+          "denom": "okt",
           "amount": "9920000.00000000"
         },
       ],
@@ -309,14 +309,14 @@ okexchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 |      Name      |      Type       |            Description             |
 | -------------- | --------------- | ---------------------------------- |
 |     amount     |     string      |    recipient address  |
-| amount |     string      | transfer amount, covering various cryptocurrencies separated by commas, eg. 1tokt, 2bcoin |
+| amount |     string      | transfer amount, covering various cryptocurrencies separated by commas, eg. 1okt, 2bcoin |
 |      from      |     string      |     token owner     |
 
 
 #### Example
 
 ```bash
-okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 ```
 #### Successful response:
 ```
@@ -334,7 +334,7 @@ okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt 
   "tags": [
     {
       "key": "fee",
-      "value": "0.00020000 tokt"
+      "value": "0.00020000 okt"
     },
     {
       "key": "action",
@@ -363,7 +363,7 @@ okexchaincli tx token issue [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block --mintable  
+okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block --mintable  
 # example  
 {
   "height": "340949",
@@ -379,7 +379,7 @@ okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --d
   "tags": [
     {
       "key": "fee",
-      "value": "20000.00000000 tokt"
+      "value": "20000.00000000 okt"
     },
     {
       "key": "action",
@@ -408,7 +408,7 @@ okexchaincli tx token mint [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+okexchaincli tx token mint --amount 10000000 --symbol okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 # Example output
 {
   "height": "341001",
@@ -424,7 +424,7 @@ okexchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-pr
   "tags": [
      {
        "key": "fee",
-       "value": "2000.00000000 tokt"
+       "value": "2000.00000000 okt"
      },
      {
        "key": "action",
@@ -449,7 +449,7 @@ okexchaincli tx token burn [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+okexchaincli tx token burn --from alice --symbol okt --amount 100.0 --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   # Example output
 {
   "height": "341036",
@@ -465,7 +465,7 @@ okexchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-price
   "tags": [
     {
       "key": "fee",
-      "value": "10.00000000 tokt"
+      "value": "10.00000000 okt"
     },
     {
       "key": "action",
@@ -502,7 +502,7 @@ okexchaincli tx token multi-send [flags]
 #### Successful response:
 
 ```
-  okexchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1tokt,2btc-254"}]' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+  okexchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   
   # Example output
   {
@@ -519,7 +519,7 @@ okexchaincli tx token multi-send [flags]
     "tags": [
       {
         "key": "fee",
-        "value": "0.02000000 tokt"
+        "value": "0.02000000 okt"
       },
       {
         "key": "action",
@@ -556,11 +556,11 @@ okexchaincli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
 `--multisig` tag must contain the names of sub-public keys to be aggregated into a single public key, which will be generated in a local database and stored as `new_key_name`. All names provided via `--multisig` must have already existed in the local database.
 
 * Display user addresses and deposit into them:
-Display user addresses p1, p2, p3 and deposit 100.1 TOKT into them
+Display user addresses p1, p2, p3 and deposit 100.1 okt into them
 * Example:
 ```bash
 okexchaincli keys show -a p1p2p3
-okexchaincli tx send okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1tokt --from=alice
+okexchaincli tx send okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1okt --from=alice
 okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 
 ```
@@ -569,7 +569,7 @@ okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
-okexchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
+okexchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10okt \
   --chain-id=okexchain-testnet1 \
   --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
   --generate-only > unsignedTx.json
@@ -619,7 +619,7 @@ okexchaincli tx token transfer-ownership [flags]
 ##### Successful response:
 ```
 # from alice to jack
-okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt
+okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt
 
 # response
 {
@@ -694,7 +694,7 @@ okexchaincli tx token confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
-okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt
+okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt
 
 # response
 {
@@ -784,7 +784,7 @@ Secondary subcommand including features as below
 $ okexchaincli tx dex list -h
 
 Example:
-    okexchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    okexchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okexchaincli tx dex list [flags]
@@ -795,18 +795,18 @@ Flags:
       --from string             Name or address of private key with which to sign
   -h, --help                    help for list
       --init-price string       init-price should be valid price (default "0.01")
-      --quote-asset string      quote-asset should be issued before listed to opendex (default "tokt")
+      --quote-asset string      quote-asset should be issued before listed to opendex (default "okt")
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 ```
 
-### Deposit an amount of tokt on a token pair
+### Deposit an amount of okt on a token pair
 
 ```shell
 $ okexchaincli tx dex deposit -h
 
 Example:
-    okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okexchaincli tx dex deposit [product] [amount] [flags]
@@ -819,13 +819,13 @@ Flags:
 ```
 
 
-### Withdraw an amount of tokt from a token pairs
+### Withdraw an amount of okt from a token pairs
 
 ```shell
 $ okexchaincli tx dex  withdraw -h
 
 Example:
-    okexchaincli tx dex withdraw tusdk-9a2_tbtc-965 50tokt --from mykey --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    okexchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
     okexchaincli tx dex withdraw [product] [amount] [flags]
@@ -849,7 +849,7 @@ Create transfer transaction by  previous owner
 $ okexchaincli tx dex transfer-ownership -h
 
 Example:
-    okexchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_tokt > unsignedTx.json
+    okexchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_okt > unsignedTx.json
 
 Usage:
     okexchaincli tx dex transfer-ownership [flags]
@@ -875,7 +875,7 @@ Flags:
                 "value":{
                     "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
                     "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_tokt",
+                    "product":"eox-22d_okt",
                     "to_signature":{
                         "pub_key":null,
                         "signature":null
@@ -919,7 +919,7 @@ Flags:
                 "value":{
                     "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
                     "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_tokt",
+                    "product":"eox-22d_okt",
                     "to_signature":{
                         "pub_key":{
                             "type":"tendermint/PubKeySecp256k1",
@@ -967,7 +967,7 @@ Flags:
         "value": {
           "from_address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
           "to_address": "okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-          "product": "eox-22d_tokt",
+          "product": "eox-22d_okt",
           "to_signature": {
             "pub_key": {
               "type": "tendermint/PubKeySecp256k1",
@@ -1148,7 +1148,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
   -p, --price string            The price of the order
-      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_tokt".
+      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
@@ -1167,7 +1167,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001tokt" --gas "200000" -y -b block
+okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 # example return
 {
   "height": "373",
@@ -1209,7 +1209,7 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
         },
         {
           "key": "fee",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         },
         {
           "key": "sender",
@@ -1226,7 +1226,7 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
@@ -1234,7 +1234,7 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
@@ -1242,7 +1242,7 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
         },
         {
           "key": "amount",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         }
       ]
     }
@@ -1270,7 +1270,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
   -p, --price string            The price of the order
-      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_tokt".
+      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
@@ -1289,7 +1289,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001tokt" --gas "200000" -y -b block
+okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 
 # example return
 {
@@ -1324,7 +1324,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "orders",
-          "value": "[{\"code\":0,\"msg\":\"0.00000000tokt\",\"orderid\":\"ID0000000373-1\"},{\"code\":0,\"msg\":\"0.00000000tokt\",\"orderid\":\"ID0000000373-2\"}]"
+          "value": "[{\"code\":0,\"msg\":\"0.00000000okt\",\"orderid\":\"ID0000000373-1\"},{\"code\":0,\"msg\":\"0.00000000okt\",\"orderid\":\"ID0000000373-2\"}]"
         },
         {
           "key": "action",
@@ -1332,7 +1332,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "fee",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         },
         {
           "key": "sender",
@@ -1349,7 +1349,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
@@ -1357,7 +1357,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
@@ -1365,7 +1365,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "amount",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         }
       ]
     }
@@ -1415,7 +1415,7 @@ okexchaincli query order detail ID0000000525-1
 	"txhash": "B32EC706A2B5ACCF4FC43D6530588C0C9E36E79AC572D3443653281500D46FDA",
 	"order_id": "ID0000000525-1",
 	"sender": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-	"product": "xxb-08a_tokt",
+	"product": "xxb-08a_okt",
 	"side": "BUY",
 	"price": "1.00000000",
 	"quantity": "1.00000000",
@@ -1426,10 +1426,10 @@ okexchaincli query order detail ID0000000525-1
 	"timestamp": "1589539376",
 	"order_expire_blocks": "259200",
 	"fee_per_block": {
-		"denom": "tokt",
+		"denom": "okt",
 		"amount": "0.00000000"
 	},
-	"extra_info": "{\"newFee\":\"0.00000000tokt\"}"
+	"extra_info": "{\"newFee\":\"0.00000000okt\"}"
 }
 ```
 #### 2.2 Order depthbook:
@@ -1458,7 +1458,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli query order depthbook mycoin_tokt
+okexchaincli query order depthbook mycoin_okt
 # example return
 {
 	"asks": null,
@@ -1501,10 +1501,10 @@ okexchaincli query order store
 {
 	"StoreOrderNum": "2",
 	"DepthBookNum": {
-		"xxb-08a_tokt": "1"
+		"xxb-08a_okt": "1"
 	},
 	"BookOrderIDsNum": {
-		"xxb-08a_tokt:1.00000000:BUY": "2"
+		"xxb-08a_okt:1.00000000:BUY": "2"
 	}
 }
 ```
@@ -1540,7 +1540,7 @@ okexchaincli query order params
   "order_expire_blocks": "259200",
   "max_deals_per_block": "1000",
   "fee_per_block": {
-    "denom": "tokt",
+    "denom": "okt",
     "amount": "0.00000000"
   },
   "trade_fee_rate": "0.00100000"
@@ -1599,7 +1599,7 @@ okexchaincli backend orders open $(okexchaincli keys show bob -a)
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"orderId": "ID0000000011-1",
 			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"product": "mycoin_tokt",
+			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": "11.10000000",
 			"quantity": "1.00000000",
@@ -1657,11 +1657,11 @@ okexchaincli backend deals --address=$(okexchaincli keys show bob -a)
 			"blockHeight": 127,
 			"orderId": "ID0000000105-1",
 			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"product": "mycoin_tokt",
+			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": 4,
 			"volume": 1,
-			"fee": "0.00160000tokt"
+			"fee": "0.00160000okt"
 		}],
 		"paramPage": {
 			"page": 1,
@@ -1703,12 +1703,12 @@ okexchaincli backend fees $(okexchaincli keys show bob -a)
 	"data": {
 		"data": [{
 			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"fee": "0.00160000tokt",
+			"fee": "0.00160000okt",
 			"feeType": "deal",
 			"timestamp": 1563890996
 		}, {
 			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"fee": "0.01250000tokt",
+			"fee": "0.01250000okt",
 			"feeType": "transfer",
 			"timestamp": 1563890942
 		}],
@@ -1758,7 +1758,7 @@ okexchaincli backend matches
 		"data": [{
 			"timestamp": 1563890996,
 			"blockHeight": 127,
-			"product": "mycoin_tokt",
+			"product": "mycoin_okt",
 			"price": 4,
 			"volume": 1
 		}],
@@ -1807,28 +1807,28 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 			"txHash": "550101C97C83028F228542755F76A806D00D6635C64E5762EF6FD1667A900D81",
 			"type": 2,
 			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "mycoin_tokt",
+			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
-			"fee": "0.00000000tokt",
+			"fee": "0.00000000okt",
 			"timestamp": 1563890974
 		}, {
 			"txHash": "B287E99E1938FD2C4A6D31F6EBD928920572B4A9385FB4D1C630436985046112",
 			"type": 1,
 			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "tokt",
+			"symbol": "okt",
 			"side": 3,
 			"quantity": "10000.00000000",
-			"fee": "0.01250000tokt",
+			"fee": "0.01250000okt",
 			"timestamp": 1563890942
 		}, {
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"type": 2,
 			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "mycoin_tokt",
+			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
-			"fee": "0.00000000tokt",
+			"fee": "0.00000000okt",
 			"timestamp": 1563890879
 		}],
 		"paramPage": {
@@ -1875,7 +1875,7 @@ Flags:
   -g, --granularity int   [60/180/300/900/1800/3600/7200/14400/21600/43200/86400/604800], second in unit (default 60)
   -h, --help              help for klines
       --node string       <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-  -p, --product string    product of coin pairs (default "tokt_xxx")
+  -p, --product string    product of coin pairs (default "okt_xxx")
   -s, --size int          at most 1000 (default 1)
 
 Global Flags:
@@ -1890,7 +1890,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend klines -p mycoin_tokt 
+okexchaincli backend klines -p mycoin_okt 
 
 # example return
 {
@@ -1919,7 +1919,7 @@ Flags:
   -c, --count int        ticker count (default 10)
   -h, --help             help for tickers
       --node string      <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-  -p, --product string   product of coin pairs (default "mycoin_tokt")
+  -p, --product string   product of coin pairs (default "mycoin_okt")
   -s, --sort             true or false (default true)
 
 Global Flags:
@@ -1934,15 +1934,15 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend tickers -p mycoin_tokt
+okexchaincli backend tickers -p mycoin_okt
 
 # example return
 {
   "code": 0,
   "data": [
     {
-      "symbol": "mycoin_tokt",
-      "product": "mycoin_tokt",
+      "symbol": "mycoin_okt",
+      "product": "mycoin_okt",
       "timestamp": 1563893602,
       "open": 4,
       "close": 11,
@@ -2033,13 +2033,13 @@ Flags:
 #### Delegate
 
 
-Delegate an amount of tokt
+Delegate an amount of okt
 
 ```shell
 $ okexchaincli tx staking delegate -h
 
 Example:
-	  okexchaincli tx staking delegate 1024.1024tokt --from mykey
+	  okexchaincli tx staking delegate 1024.1024okt --from mykey
 	  
 Usage:
     okexchaincli tx staking delegate [amount] [flags]
@@ -2049,7 +2049,7 @@ Usage:
 
 #### Vote 
 
-Vote on one or more validator(s) by delegate tokt
+Vote on one or more validator(s) by delegate okt
 
 Vote on one or more validator(s)
 
@@ -2081,7 +2081,7 @@ Unbond shares and withdraw the same amount of votes
 $ okexchaincli tx staking unbond -h
 
 Example:
-    okexchaincli tx staking unbond 1024.1024tokt --from mykey
+    okexchaincli tx staking unbond 1024.1024okt --from mykey
 
 Usage:
     okexchaincli tx staking unbond [amount] [flags]
@@ -2314,13 +2314,13 @@ Example:
 Where proposal.json contains:
 
 {
- "title": "delist xxx/tokt",
+ "title": "delist xxx/okt",
  "description": "delist asset from dex",
  "base_asset": "xxx",
- "quote_asset": "tokt",
+ "quote_asset": "okt",
  "deposit": [
    {
-     "denom": "tokt",
+     "denom": "okt",
      "amount": "100"
    }
  ]
@@ -2333,11 +2333,11 @@ Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for delist-proposal
       --indent                  Add indent to JSON response
@@ -2376,13 +2376,13 @@ Where proposal.json contains:
   "title": "Test Proposal",
   "description": "My awesome proposal",
   "type": "Text",
-  "deposit": "10tokt"
+  "deposit": "10okt"
 }
 
 Which is equivalent to:
 
   okexchaincli tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" \
-	--deposit="10tokt" --from mykey
+	--deposit="10okt" --from mykey
 
 Usage:
   okexchaincli tx gov submit-proposal [flags]
@@ -2400,11 +2400,11 @@ Flags:
       --deposit string          deposit of proposal
       --description string      description of proposal
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for submit-proposal
       --indent                  Add indent to JSON response
@@ -2492,11 +2492,11 @@ Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1 tokt
+      --fees string             Fees to pay along with transaction; eg: 1 okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for param-change
       --indent                  Add indent to JSON response
@@ -2523,8 +2523,8 @@ Global Flags:
 | --title             | title of the proposal  |
 | --type              | type of the proposal initiated (for parameterchange proposals only) |
 | --deposit           | initial deposit specified when the proposal is initiated |
-| --param             | specific parameters and values to be modified (gov/MinDeposit=1000tokt
-modify the MinDeposit parameters in the module to be governed to 1000tokt. |
+| --param             | specific parameters and values to be modified (gov/MinDeposit=1000okt
+modify the MinDeposit parameters in the module to be governed to 1000okt. |
 | --height            | block height when the specific parameter change proposal becomes effective (parameters to be modified changed to specific values),the specific height must meet: higher than the current block height and lower than or equal to the sum of the current block height and MaxBlockHeightPeriod |
 | --from              | account name specified for sending a transaction  |
 | --home              | account name and the directory where okexchaincli is configured
@@ -2543,7 +2543,7 @@ Submit a deposit for an active proposal. You can
 find the proposal-id by running "<appcli> query gov proposals".
 
 Example:
-  okexchaincli tx gov deposit 1 10tokt --from mykey
+  okexchaincli tx gov deposit 1 10okt --from mykey
 
 Usage:
   okexchaincli tx gov deposit [proposal-id] [deposit] [flags]
@@ -2552,11 +2552,11 @@ Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for deposit
       --indent                  Add indent to JSON response
@@ -2598,11 +2598,11 @@ Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for vote
       --indent                  Add indent to JSON response
@@ -2635,17 +2635,17 @@ Example:
 Where proposal.json contains:
 {
   "title": "Community Pool Spend",
-  "description": "Pay me some tokt!",
+  "description": "Pay me some okt!",
   "recipient": "okchain5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
   "amount": [
     {
-      "denom": "tokt",
+      "denom": "okt",
       "amount": "10000"
     }
   ],
   "deposit": [
     {
-      "denom": "tokt",
+      "denom": "okt",
       "amount": "10000"
     }
   ]

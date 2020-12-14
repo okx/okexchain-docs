@@ -2,7 +2,7 @@
 
 In OKExChain-OKExDEX，any user can issue their own Token and Tokenpairs。
 
-> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
+> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get okt, you can get it [here](https://www.okex.com/drawdex).
 
 ## cli command
 staking cli contains the following 3 commands for DEX operator, providing complete support for equity circulation.
@@ -54,7 +54,7 @@ In order to make fair and open use of the matching resources of the blockchain, 
 
 
 ```shell
-okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
+okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey -b block -y
 ```
 
 

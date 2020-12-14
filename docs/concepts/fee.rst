@@ -51,14 +51,14 @@ e.g.
 
 .. code:: bash
 
-    okexchaincli tx send ... --fees=0.002tokt
+    okexchaincli tx send ... --fees=0.002okt
 
 
 or
 
 .. code:: bash
 
-    okexchaincli tx send ... --gas-prices=0.00000001tokt
+    okexchaincli tx send ... --gas-prices=0.00000001okt
 
 
 You need to use the ``--gas`` flag to specify the gas quantity you want to provide for this transaction, either use ``--gas number``
