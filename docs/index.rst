@@ -143,6 +143,13 @@ Contents
 
 .. toctree::
    :maxdepth: 3
+   :caption: Farm
+
+   farm/farm-overview
+   farm/farm-guide-cli
+
+.. toctree::
+   :maxdepth: 3
    :caption: Delegators
 
    delegators/delegators-overview
