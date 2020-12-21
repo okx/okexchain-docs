@@ -4,44 +4,43 @@ order: 3
 
 # Validator FAQ
 
-This is work in progress. Mechanisms and values are susceptible to change.
+This content is not yet presented under its final version. Mechanisms and values are susceptible to change.
 
 ## General Concepts
 
 ### What is a validator?
 
-The [OKExChain](../okexchain/overview.html) is based on [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The [OKExChain](../okexchain/overview.html) is based on [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
-The OKExChain is a public Proof-Of-Stake (PoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (okts) bonded as collateral. These okts can be self-delegated directly by the validator or delegated to them by other okt holders.
+The OKExChain blockchain utilises a public Proof-Of-Stake (PoS)  mechanism. The weight of each validator is determined by the amount of  tokens staked (OKT) and bonded as collateral. These OKTs can be self-delegated directly by the validator or delegated to them by other OKT holders.
 
-Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they become validator candidates.
+Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they can become validator candidates.
 
-The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 21 validators with the most voting power will be active validators.
+The weight (i.e. voting power) of a validator determines whether or not they are  active validators. Initially, only the top 21 validators with the largest voting power will be active validators.
 
 ### What is a full-node?
 
-A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node that only processes block headers and a small subset of transactions. Running a full-node requires more resources than a light-node but is necessary in order to be a validator. In practice, running a full-node only implies running a non-compromised and up-to-date version of the software with low network latency and without downtime.
+A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node that only processes block headers and a small subset of transactions. Running a full-node requires more resources than a light-node but is necessary in order to be a validator. In practice, running a full-node only implies running a non-compromised and up-to-date version of the software with low network latency and no downtime.
 
-Of course, it is possible and encouraged for users to run full-nodes even if they do not plan to be validators.
+Of course, it is possible and encouraged for users to run full-nodes even if they do not plan to become validators.
 
 ## Becoming a Validator
 
 ### How to become a validator?
 
-Any participant in the network can signal that they want to become a validator by sending a `create-validator` transaction, where they must fill out the following parameters:
+Any participant in the network can signal their willingness to become a validator by sending a `create-validator` transaction, where they must fill out the following parameters:
 
-- **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _prevotes_ and _precommits_.
+- **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign prevotes and precommits.
 - **Validator's Address:** Application level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
 - **Validator's name (moniker)**
 - **Validator's website (Optional)**
 - **Validator's description (Optional)**
 
+Once a validator is created, OKT holders can delegate OKTs to them, effectively adding stake to their pool. The total stake of an address is the combination of OKTs bonded by delegators and OKTs self-bonded by the entity that designated themselves.
 
-Once a validator is created, okt holders can delegate okts to them, effectively adding stake to their pool. The total stake of an address is the combination of okts bonded by delegators and okts self-bonded by the entity which designated themselves.
-
-Out of all validator candidates that signaled themselves, the 21 with the most total stake are the ones who are designated as validators. They become **validators** If a validator's total stake falls below the top 21 then that validator loses their validator privileges: they don't participate in consensus and generate rewards any more. 
+Out of all validator candidates that signaled themselves, the 21 with the highest stake are the ones who are designated as **validators**. If a validator’s total stake falls below the top 21 then that validator loses the validator privileges: therefore they can’t participate in consensus and generate rewards any more.
 
 ## Testnet
 
@@ -60,29 +59,29 @@ In short, there are two types of keys:
   - It is generated when the node is created with okexchaind init.
 - **Application key**: This key is created from `okexchaincli` and used to sign transactions. Application keys are associated with a public key prefixed by `okchainpub` and an address prefixed by `okexchain`. Both are derived from account keys generated by `okexchaincli keys add`.
 
-Note: A validator's operator key is directly tied to an application key, but
-uses reserved prefixes solely for this purpose: `okchainvaloper` and `okchainvaloperpub`
+Note: A validator’s operator key is directly tied to an application key, but uses reserved prefixes solely for this purpose: `okchainvaloper` and `okchainvaloperpub`.
 
 ### What are the different states a validator can be in?
 
 After a validator is created with a `create-validator` transaction, they can be in three states:
 
-- `in validator set`: Validator is in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
-- `jailed`: Validator misbehaved and is in jail, i.e. outisde of the validator set. If the jailing is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the validator set. If the jailing is due to double signing, the validator cannot unjail.
-- `unbonded`: Validator is not in the active set, and therefore not signing blocs. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate okts to this validator. Un-delegating from an `unbonded` validator is immediate.
+* **bonded**: The validator is active  and participates in the consensus. The validator is earning rewards and can potentially be slashed in case of  misbehaviour.
+* **jailed**: The validator misbehaved and is in jail, i.e. suspended. If the jailing is caused by having been offline for too long, the validator can send an `unjail` transaction in order to re-obtain his validator full rights. If the jailing is due to a double signing, the validator cannot unjail himself.
+* **unbonded**: The validator is not  active, and therefore cannot sign blocks. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate OKTs to this validator. Un-delegating from an `unbonded` validator is immediate.
 
-### Is there a minimum amount of okts that must be delegated to be an active (=bonded) validator?
+
+### Is there a minimum amount of okts that must be delegated to become an active (bonded) validator?
 
 The minimum is `1 okt`.
 
 ### How will delegators choose their validators?
 
-Delegators are free to choose validators according to their own subjective criteria. This said, criteria anticipated to be important include:
+Delegators are free to choose validators according to their own subjective criteria. Some of the  criterias we consider significant are:
 
-- **Amount of delegated okts:** Total number of okts delegated to a validator. A high voting power shows that the community trusts this validator, but it also means that this validator is a bigger target for hackers. Bigger validators also decrease the decentralisation of the network.
-- **Track record:** Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime and how often the node was compromised.
+* **Amount of delegated OKTs:** Total number of OKTs delegated to a validator. A high voting power shows that the community trusts this validator, but it also means that this validator may be a bigger target for hackers. Bigger validators also decrease the decentralisation of the network.
+* **Track record:** Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime and how often the node may have been compromised.
 
-Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build reputation one way or another to attract delegators. For example, it would be a good practice for validators to have their setup audited by third parties. Note though, that the Tendermint team will not approve or conduct any audit themselves. For more on due diligence, see [this blog post](https://medium.com/@interchain_io/3d0faf10ce6f)
+Apart from these criteria, there will be a possibility for validators to add a website address to complete and enhance their resume. Validators will need to build reputation one way or another in order to attract delegators. For example, it would be a good practice for validators to have their setup audited by third parties. Note though, that the OKExChain team will not approve or conduct any audit themselves. For more on due diligence, see [this blog post](https://medium.com/@interchain_io/3d0faf10ce6f).
 
 ## Responsibilities
 
@@ -94,38 +93,39 @@ No, they do not. Each delegator will value validators based on their own criteri
 
 Validators have two main responsibilities:
 
-- **Be able to constantly run a correct version of the software:**Validators need to make sure that their servers are always online and their private keys are not compromised.
-- **Actively participate in governance:** Validators are required to vote on every proposal.
+* **Be able to constantly run a correct version of the software:** Validators need to make sure that their servers are always online and their private keys are not compromised.
+* **Actively participate in governance:** Validators are required to vote on every proposal.
 
-Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
+
+Additionally, validators are expected to be active members of the community. They should always remain up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
 
 ### What does 'participate in governance' entail?
 
 Validators and delegators on the OKExChain can vote on proposals to change operational parameters (such as the block gas limit), coordinate upgrades, or make a decision on any given matter.
 
-Validators play a special role in the governance system. Being the pillars of the system, they are required to vote on every proposal. It is especially important since delegators who do not vote will inherit the vote of their validator.
+Validators play a special role in the governance system. hey are for instance required to vote on every proposal which is especially important since delegators who do not vote will inherit the vote of their validator.
 
 ### What does staking imply?
 
-Staking okts can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, okts undergo a **2 weeks unbonding period** during which they are liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
+Staking OKTs can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, OKTs undergo a **2 weeks unbonding period** during which they are liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
 Validators, and by association delegators, receive block rewards, fees, and have the right to participate in governance.
 
-### Can a validator run away with their delegators' okts?
+### Can a validator run away with their delegators’ OKTs?
 
-By delegating to a validator, a user delegates voting power. The more voting power a validator have, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' okts. **By no means can a validator run away with its delegator's funds**.
+By delegating to a validator, a user delegates voting power. The more voting power a validator has, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators’ OKTs. **By no means can a validator run away with its delegator’s funds.**
 
 Even though delegated funds cannot be stolen by their validators, delegators are still liable if their validators misbehave.
 
-### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded okts?
+### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded OKTs?
 
-The validator that is selected to propose the next block is called proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded okts) of the validator. For example, if the total bonded stake across all validators is 100 okts and a validator's total stake is 10 okts, then this validator will proposer ~10% of the blocks.
+The validator that is selected to propose the next block is called **proposer**. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded OKTs) of the validator. For example, if the total bonded stake across all validators is 100 OKTs and a validator’s total stake is 10 OKTs, then this validator will propose ~10% of the blocks.
 
 
 
 ## Incentives
 
-For more on due incentives, see [Reward distribution](../validators/detail/distr.html).
+For more information on incentives, see [Reward distribution](../validators/detail/distr.html).
 
 
 
@@ -143,11 +143,11 @@ In addition to running a OKExChain node, validators should develop monitoring, a
 
 ### What are bandwidth requirements?
 
-The OKExChain network has the capacity for very high throughput relative to chains like Ethereum or Bitcoin.
+The OKExChain network has the capacity for very high throughput compared to  Ethereum or Bitcoin.
 
 We recommend that the data center nodes only connect to trusted full-nodes in the cloud or other validators that know each other socially. This relieves the data center node from the burden of mitigating denial-of-service attacks.
 
-Ultimately, as the network becomes more heavily used, multigigabyte per day bandwidth is very realistic.
+Ultimately, as the network becomes more heavily used, multi-gigabyte per day bandwidth is very realistic.
 
 ### What does running a validator imply in terms of logistics?
 
@@ -162,11 +162,11 @@ Validators should expect to run an HSM that supports ed25519 keys. Here are pote
 - Ledger BOLOS SGX enclave
 - Thales nShield support
 
-The Tendermint team does not recommend one solution above the other. The community is encouraged to bolster the effort to improve HSMs and the security of key management.
+The OKExChain team does not recommend one solution above the other. The community is encouraged to bolster the effort to improve HSMs and the security of key management.
 
 ### What can validators expect in terms of operations?
 
-Running effective operation is the key to avoiding unexpectedly unbonding or being slashed. This includes being able to respond to attacks, outages, as well as to maintain security and isolation in your data center.
+Running an effective operation is the key to avoiding unexpectedly unbonding or being slashed. This includes being able to respond to attacks, outages, as well as to maintain security and isolation in your data center.
 
 ### What are the maintenance requirements?
 
@@ -176,13 +176,13 @@ Validators should expect to perform regular software updates to accommodate upgr
 
 Denial-of-service attacks occur when an attacker sends a flood of internet traffic to an IP address to prevent the server at the IP address from connecting to the internet.
 
-An attacker scans the network, tries to learn the IP address of various validator nodes and disconnect them from communication by flooding them with traffic.
+An attacker scans the network, tries to learn the IP address of various validator nodes and disconnects them from communication by flooding them with traffic.
 
 One recommended way to mitigate these risks is for validators to carefully structure their network topology in a so-called sentry node architecture.
 
-Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. A validator node will typically run in a data center. Most data centers provide direct links the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator's node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
+Validator nodes should only connect to full-nodes they trust because they operate them themselves or are run by other validators they know socially. A validator node will typically run in a data center. Most data centers provide direct links to the networks of major cloud providers. The validator can use those links to connect to sentry nodes in the cloud. This shifts the burden of denial-of-service from the validator’s node directly to its sentry nodes, and may require new sentry nodes be spun up or activated to mitigate attacks on existing ones.
 
-Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet based attacked cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
+Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet based attack cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
 
 It is expected that good operating procedures on that part of validators will completely mitigate these threats.
 
