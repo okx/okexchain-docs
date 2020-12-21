@@ -2,20 +2,19 @@
 
 ## Introduction
 
-In OKExChain-OKExDEX, users who want to exchange coins are called DEX Traders.
+In OKExDEX, an application built on top of OKExChain, users who want to exchange tokens are called DEX Traders.
 
-OKExChain-OKExDEX, as the first project of the OKExChain ecosystem, is a middleware that can freely issue DEX. With the design concept of "everyone can create DEX", it provides various basic functions needed to operate a DEX. 
-
-Validators provide the machine configuration required by OKExChain, DEX Operators provide the tokenpair, and DEX Trader can realize the currency exchange function.
+OKExDEX is the first project of the OKExChain ecosystem, and represents a middleware that can freely issue DEX. With the design concept of “everyone can create DEX”, it provides various basic functions needed to operate a DEX.
 
 
 ## Get market information
 
-OKExChain-OKExDEX provides basic functions. Orders and matching occur on the chain, but these are not enough. Trading users need to use a more friendly UI page to help their trading decisions.About this part of the program construction is solved by other projects of OKExChain-OKExDEX ecology, we provide a [template](https://www.okex.com/dex-test) about data display.
+OKExChain-OKExDEX provides essential functions. Orders and matching occur on-chain, but these are not enough. The user experience has to be friendly and to help traders make their trading decisions in a frictionless manner.The OKExChain community welcomes all developers to participate in developing and strengthening the OKExDEX ecosystem.
 
-But at the same time, OKExChain itself is an open source project, anyone can develop their own set of UI to help DEX Trade make better trading decisions.
+OKExChain itself is an open source project allowing anyone to develop their own set of UI to enable DEX Traders to make better trading decisions.
 
 
 ## About Matching System
 
-For a practical guide on matching engine , click [periodic auction](../concepts/periodic-auction.html).
+For a practical guide on the matching engine , click [periodic auction](../concepts/periodic-auction.html).
+
