@@ -9,15 +9,15 @@ order: 2
 
 ### Create token pair
 
-The `create-pair` function is used to create a token pair for tokens that do not yet have one. 
+The `create-pair` function is used to create new token pairs.
 
-All token pair are created against OKT, so you only need to specify one token.
+All token pairs are created against OKT, so you only need to specify one token.
 
 ```bash
 $ okexchaincli tx swap create-pair --token [token]
 ```
 
-- --token: the token name you want to create token pair against OKT.
+- --token: the token name you want to create  against OKT.
 
 Example:
 
@@ -87,13 +87,13 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
 
 ### Swap token
 
-User can trade between any of the two tokens, each of which have a trading pair against okt. The swap of these two tokens is via the intermediary token okt, ie. swap token A for okt, and then swap okt for token B.
+Users can trade between any tokens having a trading pair against OKT. The swap between two tokens takes place via the intermediary token OKT, ie. SWAP token A for OKT, and  SWAP OKT for token B.
 
 ```bash
 $ okexchaincli tx swap token --sell-amount [amount sellToken] --min-buy-amount [amount wantToken]
 ```
 
-- --sell-amount：token amount and  token name you want to sell.
+- --sell-amount：token amount and token name you want to sell.
 - --min-buy-amount: the minimum token amount and token name you expect.(If the actual amount of the desired token you could swap, according to the real-time exchange rate, is less than what you expected, then all the transactions happened before would be reverted. In other words, the order you placed will be processed only when the predefined condition you set is satisfied.)
 
 Example:
@@ -181,19 +181,19 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
 
 ### Add liquidity
 
-Anyone who wants can join a liquidity pool by calling the addLiquidity function.
+Anyone who can join a liquidity pool by calling the addLiquidity function.
 
 Adding liquidity requires depositing an equivalent value of token and OKT.
 
 The first liquidity provider to join a pool sets the initial exchange rate by depositing what they believe to be an equivalent value of token and OKT. If this ratio is off, arbitrage traders will bring the prices to equilibrium at the expense of the initial liquidity provider.
 
-All future liquidity providers deposit token and OKT using the exchange rate at the moment of their deposit. If the exchange rate is bad there is a profitable arbitrage opportunity that will correct the price.
+All future liquidity providers deposit token and OKT using the exchange rate at the moment of their deposit. If the exchange rate is not attractive there is a profitable arbitrage opportunity that will correct the price.
 ```bash
 $ okexchaincli tx swap add-liquidity --max-base-amount [amount token] --quote-amount [amount okt] --min-liquidity [amount]
 ```
-- --max-base-amount: the maximum amount of the base token user is willing to add in the pool. (Given the desired quote token to be added constant, if the amount of the coresponding base token is more than predetermined max-base-amount, then the transaction is reverted.)
-- --quote-amount: the amount of the quote token to be added in the pool, namely okt in our case. 
-- --min-liquidity: the amount of liqudity the user expect to have after depositing the tokens.
+- --max-base-amount: the maximum amount of the base token user is willing to add in the pool. (Given the desired quote token to be added , if the amount of the corresponding base token is more than the predetermined max-base-amount, then the transaction is reverted.)
+- --quote-amount: the token quote to be added in the pool, namely OKT in our case.
+- --min-liquidity: the amount of liquidity the user expects to have after depositing the tokens.
 
 Example:
 
@@ -284,13 +284,13 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
 ### Remove liquidity
 Liquidity providers use the removeLiquidity function to withdraw their portion of the reserves.
 
-Liquidity is withdrawn at the same ratio as the reserves at the time of withdrawal. If the exchange rate is bad there is a profitable arbitrage opportunity that will correct the price.
+Liquidity is withdrawn at the same ratio as the reserves at the time of withdrawal. If the exchange rate is not attractive, a profitable arbitrage opportunity will correct the price.
 ```bash
 $ okexchaincli tx swap remove-liquidity --liquidity [amount] --min-base-amount [amount token] --min-quote-amount [amount okt]
 ```
-- --liquidity:  the amount of the token (liquidity providing certificate) user want to burn. 
+- --liquidity: the amount tokens (liquidity providing certificate) users want to burn.
 - --min-base-amount: the minimum redeemable amount of base token.
-- --min-quote-amount: the minimum redeemable of the quote token.  
+- --min-quote-amount: the minimum redeemable of the quote token.
 
 Example:
 

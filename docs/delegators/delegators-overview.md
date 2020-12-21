@@ -4,34 +4,34 @@
 
 ## Introduction
 
-OKExChain is based on Tendermint and relies on a set of validators who are responsible for submitting blocks. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
+OKExChain is based on Tendermint and relies on a set of validators responsible for submitting blocks. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
 
-Token holders can get votes through the "delegation" command, and select the validators that they think are meaningful to the ecology. For these token holders, they are called the delegators.
-
-
-For a practical guide on how to become a delegator, click [here](./delegator-guide-cli.html).
+Token holders can delegate staking rights through the “delegation” command, and select the validators that they think are meaningful to the ecosystem. These token holders are called delegators.
 
 
+To have a look at a practical guide on how to become a delegator, please click [here](./delegator-guide-cli.html).
 
 
-## Voting Mechanics
-
-In OKExChain, any user who has staked OKT tokens can vote. Each user is allowed to vote for up to 30 validator candidates using the full weight of their stake. For example, if a user has 1000 OKT staked, she can cast 1000 votes each for up to 30 validators. The top 21 validator candidates by total number of votes received form the core set of validators. Additional validators, ranked by total votes, are also compensated by the network to serve as validator candidates.
-
-OKExChain is a liquid, delegative democracy. Users have the option of voting directly for validator, but they can also delegate their voting power to another account to vote on their behalf. The delegate account, called a proxy, has no control over the original user’s account — the user can proxy her vote trustlessly without handing over any keys. The proxy simply has the power to direct that user’s voting power towards certain validators, but the user can revoke her voting power from the proxy at any point.
 
 
-In the proxy voting mechanism, there are two roles:
-* Ordinary voters
-* Proxy voter
+## Staking Mechanics
 
-### Ordinary voter
-* You can only register as an agent voter by initiating a transaction with a registered agent
-* Only one agent can be selected as a voting agent
-* Established a voting agency relationship with an agent by executing an agent binding transaction
-* Once an agent is selected, all votes in the user account are managed by the agent (vote, not vote, to whom)
-* The number of proxy votes obtained by making up the mortgage and reducing the mortgage will be updated in real time.
-* Dissolve the agency relationship by executing a transaction that cancels the agency relationship
+In OKExChain, any user who has staked OKT tokens can add staking rights to target validators. Each user is allowed to add staking rights for up to 30 validator candidates using the full weight of their stake. For example, if a user has staked  OKT, he has staking rights to share to up to 30 validators. The top 21 validators are determined by the total number of OKT staking rights gathered . Additional validators, ranked by their total number of OKT staked, are also compensated by the network to serve as validator candidates.
+
+OKExChain is implementing a delegative governance. Users have the option to add staking rights directly to the validators, but they can also delegate their staking  rights to other accounts in order to allow others to participate in the POS protocol on their behalf. The delegated account, called a proxy, has no control over the original user’s account — the user can proxy his staking rights trustlessly without handing over any keys. The proxy has the power to use the delegated staking power towards certain validators, but the user can revoke this staking power from the proxy at any point of time.
+
+
+In the proxy staking mechanism, there are two roles:
+* Delegator
+* Proxy delegator
+
+### Delegator
+* You can register as a Proxy Delegator by sending a Proxy Delegator Registration transaction.
+* Only one proxy can be selected as a proxy delegator.
+* Establish a staking relationship with a proxy delegator by executing a proxy binding transaction.
+* Once a proxy is selected, all staking rights in the user account are managed by the proxy delegator.
+* The number of proxy staking rights obtained will be updated in real time.
+* Put an end to  the proxy relationship by executing a transaction that cancels the proxy relationship.
 
 ### proxy voter
 * Become an ordinary voter by initiating a specific tx anti-registration
