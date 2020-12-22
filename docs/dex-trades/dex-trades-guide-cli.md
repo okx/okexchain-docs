@@ -1,7 +1,7 @@
 # DEX Traders Guide (CLI)
 
 
-DEX Traders can perform pending orders and cancel orders through okexchaincli, or through the UI provided by OKExChain ecological partners.
+DEX Traders can perform pending orders and cancel orders through okexchaincli, or through the UI provided by OKExChain ecosystem partners.
 
 
 ### Order depthbook
@@ -51,7 +51,7 @@ okexchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 
   "txhash": "57A390CBBE43548F112956DF6CA7146E14A02720F2895908B3A057136CE0324D"
 }
 ```
-  
+
 * product ：Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
 * side ：BUY or SELL (default "SELL")
 * price ：The price of the order
@@ -59,7 +59,7 @@ okexchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 
 
 
 
-  
+
 ### Order details
 
 Query order details.
@@ -82,8 +82,8 @@ okexchaincli query order detail ID0000000007-0000
  "timestamp": "1554273977"
 }
 ```
-  
+
 ## More
 
-For a practical guide on how to trade on okexchain , click [okexchaincli](../resources/okexchaincli.html).
+For more details on how to use OKExChain client, click [okexchaincli](../resources/okexchaincli.html).
 

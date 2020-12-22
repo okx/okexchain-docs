@@ -768,7 +768,9 @@ Available Commands:
   deposit            deposit an amount of token on a product
   withdraw           withdraw an amount of token from a product
   transfer-ownership change the owner of the product
-  multisign          append signature to the unsigned tx file of transfer-ownership
+  confirm-ownership  confirm the transfer-ownership of the product
+  register-operator  register a dex operator
+  edit-operator      edit a dex operator
 
 Flags:
   -h, --help   help for dex
@@ -838,181 +840,149 @@ Flags:
 ```
 
 ### transfer the ownership of token pair
+We support the function where token pair ownership can be transferred to another DEX operator. In order to ensure the security of ownership transfer, new owner need to confirm the transfer. The process consists of the following 2 steps:
 
-We support to transfer ownership of the token pairs to others. It needs multi-sign for the security of transfer transaction. The procedure can be divided into 4 steps:
-
-#### Step 1: Previous owner(from) generate unsigned tx：
-
-Create transfer transaction by  previous owner
-
-```shell
-$ okexchaincli tx dex transfer-ownership -h
-
-Example:
-    okexchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_okt > unsignedTx.json
-
-Usage:
-    okexchaincli tx dex transfer-ownership [flags]
-
-Flags:
-  -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for transfer-ownership
-  -p, --product string          product to be transfered
-      --to string               the user to be transfered
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-
+#### original owner(from) executes transfer-ownership command：
+##### Example:
+```bash
+okexchaincli tx dex transfer-ownership [flags]
 ```
-
-##### unsignedTx.json
+##### Successful response:
 ```
+# from alice to jack
+okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okexchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
+
+# response
 {
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_okt",
-                    "to_signature":{
-                        "pub_key":null,
-                        "signature":null
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
+  "height": "82",
+  "txhash": "64B15998B1CAEE893565FEC13698B0F1C55491C9E58E0AECB06543639CFBD8ED",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
     }
-}
-```
-
-#### Step 2:Target owner(to) sigh
-
-Sign transaction file of transfer-ownership by target owner
-
-```
-$ okexchaincli tx dex multisign -h
-
-Example:
-    okexchaincli tx dex multisign --from okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy unsignedTx.json > signedTx1.json -y
-
-Usage:
-    okexchaincli tx dex multisign [flags]
-  
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for multisign
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-```
-
-##### signedTx1.json
-```
-{
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_okt",
-                    "to_signature":{
-                        "pub_key":{
-                            "type":"tendermint/PubKeySecp256k1",
-                            "value":"AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-                        },
-                        "signature":"mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
-    }
-}
-```
-
-#### Step 3:Previous owner(from) sign
-
-Sign transaction file of multisign by previous owner
-```shell
-$ okexchaincli tx sign  -h
-
-Example:
-    okexchaincli tx sign --from alice signedTx1.json > signedTx.json -y
-
-Usage:
-    okexchaincli tx sign [file] [flags]
-
-Flags:
-      --from string              Name or address of private key with which to sign
-      --multisig string          Address of the multisig account on behalf of which the transaction shall be signed
-  -y, --yes                      Skip tx broadcasting prompt confirmation
-
-```
-
-##### signedTx.json
-
-```json
-{
-  "type": "cosmos-sdk/StdTx",
-  "value": {
-    "msg": [
-      {
-        "type": "dex/MsgTransferOwnership",
-        "value": {
-          "from_address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-          "to_address": "okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-          "product": "eox-22d_okt",
-          "to_signature": {
-            "pub_key": {
-              "type": "tendermint/PubKeySecp256k1",
-              "value": "AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-            },
-            "signature": "mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-          }
-        }
-      }
-    ],
-    "signatures": [
-      {
-        "pub_key": {
-          "type": "tendermint/PubKeySecp256k1",
-          "value": "AgYaL1tZ7ekqvweQhKojG8sDHUfN23qJWviAsTDIWvYU"
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "68438",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
         },
-        "signature": "82HJ0dHE1la3/fph1IDcl6Uarxi1lKOAIQ51Q6Z0YgBnilXPgGzy+9er+RQFnTZa2SG8cyTK6LWr8LyiGMTQWQ=="
-      }
-    ],
-    "memo": ""
-  }
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "transfer"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "10.00000000okt"
+        },
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-#### Step 4:Broadcast transactions after multi-signed
-
-Broadcast transactions created 
-
+#### new owner(to) executes confirm-ownership command：
+##### Example:
+```bash
+okexchaincli tx dex confirm-ownership [flags]
 ```
-$ okexchaincli tx broadcast -h
+##### Successful response:
+```
+okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
 
-Example:
-    okexchaincli tx broadcast signedTx.json --from alice -b block -y
-
-Usage:
-    okexchaincli tx broadcast [file_path] [flags]
-
-
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for broadcast
-  -y, --yes                     Skip tx broadcasting prompt confirmation
+# response
+{
+  "height": "137",
+  "txhash": "3801632ED2010CB478EAD1346D8F53C72BBF6716577A57100A5969DC5D809DEB",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
+    }
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "43091",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "confirm"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-The original owner (from) and the transferred owner (to) must sign together to successfully transfer the ownership of the token.
+The transfer of token pair ownership is successful only after the new owner(to) confirmed the transfer. If new owner(to) does not confirm the transfer, the transaction will automatically expire after a period of time(default 24h).
+
 
 ### Query the listed token pairs
 
@@ -1069,7 +1039,7 @@ Flags:
 
 ### Query relevant parameters from DEX
 
-Query the all the parameters for the governance process
+Query all the parameters for the governance process
 
 ```shell
 $ okexchaincli query dex  params -h
@@ -1084,7 +1054,7 @@ Usage:
 
 ### Query all the delisting token pairs
 
-Query all the products' names involved in dex delisting
+Query all products’ names involved in a DEX delisting
 
 ```shell
 $ okexchaincli query dex  products-delisting -h
@@ -1985,16 +1955,13 @@ Flags:
 
 #### Destroy validator
 
-Unbonding of MSD causes the validator to enter unbonding from the bonded state while jailed, and the operation will not affect the voting of other delegators on this validator.
+* The unbonding of min-self-delegation causes the validator to move from bonded status to unbonding status while being jailed, and this operation will not affect the staking rights distribution of other delegators on this validator.
 
-After the operation is performed, the delegator can still withdraw the vote (unbond or change the vote) from the validator. Once the number of votes and MSD of the validator are both 0, the validator will be completely removed from the validator set.
+* After the operation is performed, the delegator can still withdraw its deposited tokens directly or unbind the staking rights from the proxy delegator or redelegate to other validators. Once the number of shares(staking  rights) and min-self-delegation of the validator are both 0, the validator will be completely removed from the validator set.
 
+* The  min-self-delegationSD in unbonding status has a freeze period of 14 days (the same as the normal unbounding time parameter)
 
-The Unbonded MSD has a freeze period of 14 days (the same as the normal unboundingtime parameter)
-
-
-
-Destroy a validator and withdraw the self-delegation
+* Destroy a validator and withdraw the self-delegation
 
 ```shell
 $ okexchaincli tx staking destroy-validator -h
@@ -2066,15 +2033,14 @@ Usage:
 
 #### Unbond
 
-Unbond the deposit token while canceling all the votes, it takes 14 days for unbonding the tokens.
+When a delegator withdraws its deposit token, the according shares will be deducted from the validator that the delegator delegated to. It will take 14 days for the unbonding process of the tokens to take place.
 
-  
-   - allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
-   - if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
-   - if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
-   - if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
-   - users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
-   
+* Allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawn from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
+* If the user status is “voted”, after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re-voting
+* If the user status is “voted”, executing the command and withdrawing all the votes will essentially execute the unbond behavior.
+* If the user’s status is “not voted”, after the command is executed, the votes will not be affected. After 14 days, it will be converted into tokens and returned to the user’s account.
+* Users are allowed to perform the “unbond” operation as many times as they wish, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the unbonding process.
+
 Unbond shares and withdraw the same amount of votes
 
 ```shell
@@ -2298,9 +2264,9 @@ Flags：
 
 ## Governance
 
-### Dex delist proposal
+### DEX delisting proposal
 
-Submit a dex delist proposal along with an initial deposit.
+Submit a DEX delisting proposal along with an initial deposit.
 
 ```shell
 $ okexchaincli tx gov submit-proposal delist-proposal -h
@@ -2624,7 +2590,7 @@ Global Flags:
 
 ### withdraw rewards
 
-Send a proposal used for withdraw rewards from community pool
+Send a proposal  for rewards withdrawal from the community pool.
 
 ```shell
 $ okexchaincli tx gov submit-proposal community-pool-spend -h
@@ -2697,7 +2663,7 @@ Global Flags:
 #### Query all proposals
 
 
-Query for a all proposals. 
+Query for all proposals.
 
 ```shell
 $ okexchaincli query gov proposals -h
@@ -2739,7 +2705,7 @@ Query parameters of params:
 
 #### Query governance parameters
 
-Query the all the parameters for the governance process.
+Query all the parameters for the governance process.
 
 ```shell
 okexchaincli query params params -h
