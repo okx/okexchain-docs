@@ -768,7 +768,9 @@ Available Commands:
   deposit            deposit an amount of token on a product
   withdraw           withdraw an amount of token from a product
   transfer-ownership change the owner of the product
-  multisign          append signature to the unsigned tx file of transfer-ownership
+  confirm-ownership  confirm the transfer-ownership of the product
+  register-operator  register a dex operator
+  edit-operator      edit a dex operator
 
 Flags:
   -h, --help   help for dex
@@ -838,181 +840,149 @@ Flags:
 ```
 
 ### transfer the ownership of token pair
+We support the function where token pair ownership can be transferred to another DEX operator. In order to ensure the security of ownership transfer, new owner need to confirm the transfer. The process consists of the following 2 steps:
 
-We support the  transfer of ownership of  token pairs to others. It requires a multi-signature process to make sure the transaction is highly secure. The procedure can be divided into 4 steps:
-
-#### Step 1: Previous owner(from) generate unsigned tx：
-
-Create transfer transaction by  previous owner
-
-```shell
-$ okexchaincli tx dex transfer-ownership -h
-
-Example:
-    okexchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_okt > unsignedTx.json
-
-Usage:
-    okexchaincli tx dex transfer-ownership [flags]
-
-Flags:
-  -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for transfer-ownership
-  -p, --product string          product to be transfered
-      --to string               the user to be transfered
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-
+#### original owner(from) executes transfer-ownership command：
+##### Example:
+```bash
+okexchaincli tx dex transfer-ownership [flags]
 ```
-
-##### unsignedTx.json
+##### Successful response:
 ```
+# from alice to jack
+okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okexchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
+
+# response
 {
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_okt",
-                    "to_signature":{
-                        "pub_key":null,
-                        "signature":null
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
+  "height": "82",
+  "txhash": "64B15998B1CAEE893565FEC13698B0F1C55491C9E58E0AECB06543639CFBD8ED",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
     }
-}
-```
-
-#### Step 2:Target owner(to) sigh
-
-Sign transaction file of transfer-ownership by target owner
-
-```
-$ okexchaincli tx dex multisign -h
-
-Example:
-    okexchaincli tx dex multisign --from okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy unsignedTx.json > signedTx1.json -y
-
-Usage:
-    okexchaincli tx dex multisign [flags]
-  
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for multisign
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-```
-
-##### signedTx1.json
-```
-{
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_okt",
-                    "to_signature":{
-                        "pub_key":{
-                            "type":"tendermint/PubKeySecp256k1",
-                            "value":"AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-                        },
-                        "signature":"mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
-    }
-}
-```
-
-#### Step 3:Previous owner(from) sign
-
-Sign transaction file of multisign by previous owner
-```shell
-$ okexchaincli tx sign  -h
-
-Example:
-    okexchaincli tx sign --from alice signedTx1.json > signedTx.json -y
-
-Usage:
-    okexchaincli tx sign [file] [flags]
-
-Flags:
-      --from string              Name or address of private key with which to sign
-      --multisig string          Address of the multisig account on behalf of which the transaction shall be signed
-  -y, --yes                      Skip tx broadcasting prompt confirmation
-
-```
-
-##### signedTx.json
-
-```json
-{
-  "type": "cosmos-sdk/StdTx",
-  "value": {
-    "msg": [
-      {
-        "type": "dex/MsgTransferOwnership",
-        "value": {
-          "from_address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-          "to_address": "okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-          "product": "eox-22d_okt",
-          "to_signature": {
-            "pub_key": {
-              "type": "tendermint/PubKeySecp256k1",
-              "value": "AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-            },
-            "signature": "mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-          }
-        }
-      }
-    ],
-    "signatures": [
-      {
-        "pub_key": {
-          "type": "tendermint/PubKeySecp256k1",
-          "value": "AgYaL1tZ7ekqvweQhKojG8sDHUfN23qJWviAsTDIWvYU"
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "68438",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
         },
-        "signature": "82HJ0dHE1la3/fph1IDcl6Uarxi1lKOAIQ51Q6Z0YgBnilXPgGzy+9er+RQFnTZa2SG8cyTK6LWr8LyiGMTQWQ=="
-      }
-    ],
-    "memo": ""
-  }
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "transfer"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "10.00000000okt"
+        },
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-#### Step 4:Broadcast transactions after multi-signed
-
-Broadcast transactions created 
-
+#### new owner(to) executes confirm-ownership command：
+##### Example:
+```bash
+okexchaincli tx dex confirm-ownership [flags]
 ```
-$ okexchaincli tx broadcast -h
+##### Successful response:
+```
+okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
 
-Example:
-    okexchaincli tx broadcast signedTx.json --from alice -b block -y
-
-Usage:
-    okexchaincli tx broadcast [file_path] [flags]
-
-
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for broadcast
-  -y, --yes                     Skip tx broadcasting prompt confirmation
+# response
+{
+  "height": "137",
+  "txhash": "3801632ED2010CB478EAD1346D8F53C72BBF6716577A57100A5969DC5D809DEB",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
+    }
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "43091",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "confirm"
+        },
+        {
+          "key": "sender",
+          "value": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-The original owner (from) and the transferred owner (to) must sign together to successfully transfer the ownership of the token.
+The transfer of token pair ownership is successful only after the new owner(to) confirmed the transfer. If new owner(to) does not confirm the transfer, the transaction will automatically expire after a period of time(default 24h).
+
 
 ### Query the listed token pairs
 
