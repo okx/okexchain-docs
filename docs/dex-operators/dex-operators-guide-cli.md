@@ -1,19 +1,19 @@
 # DEX Operators Guide (CLI)
 
-In OKChain-OpenDEX，any user can issue their own Token and Tokenpairs。
+In OKExChain-OKExDEX，any user can issue their own Token and Tokenpairs.
 
-> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get tokt, you can get it [here](https://www.okex.com/drawdex).
+> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first.
 
 ## cli command
-staking cli contains the following 3 commands for DEX operator, providing complete support for equity circulation.
+There are 4 commands for DEX operators, providing complete support for equity circulation.
 
 *  issue: issue token
 
 *  list: list a token pair
 
-*  deposit: deposit an amount of okt on a tokenpair
+*  deposit: deposit an amount of OKT on a tokenpair
 
-*  withdraw: withdraw an amount of okt from a tokenpair
+*  withdraw: withdraw an amount of OKT from a tokenpair
 
 
 ### Issue token
@@ -21,7 +21,7 @@ staking cli contains the following 3 commands for DEX operator, providing comple
 Any user can issue their own Token and will be charged a portion of the OKT as a fee in addition to the system fee charged by GAS. Please refer to [Fee Model](../concepts/fee.html) for specific rates.
 
 ```shell
-okchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
+okexchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
 
 ```
 
@@ -35,10 +35,10 @@ okchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --wh
 
 ### List a tokenpair
 
-Any user can issue a token pair to become a DEX operator. In opendex, any two tokens can form one and only one Tokenpair.
+Only a DEX operator can list a token pair. In a DEX, any pair of tokens can form one and only one Tokenpair.
 
 ```shell
-okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
+okexchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
 
 ```
 
@@ -50,20 +50,20 @@ okchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from myke
 
 ### Deposit an amount of okt on a tokenpair
 
-In order to make fair and open use of the matching resources of the blockchain,  OpenDex allocates the system resources in the way of competitive ranking. By adding digital asset matching alloy, DEX can prioritize the matching of its own transaction pairs.
+In order to make fair and open use of the matching resources of the blockchain, OKExChain allocates the system resources in the way of competitive ranking. Deposit OKT to a token pair can make the orders of this token pair matched earlier.
 
 
 ```shell
-okchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey -b block -y
+okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey -b block -y
 ```
 
 
 
 ### Withdraw an amount of okt from a tokenpair
 
-In contrast, DEX operator can also withdrawn their product deposits, and the withdrawn part will be back to the operator's account after 2 weeks.
+In contrast with the deposit operation, DEX operators can also withdraw their deposits. The withdrawn amount will be back to the operator’s account after 3 days.
 
 
 ```shell
-okchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
+okexchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
 ```

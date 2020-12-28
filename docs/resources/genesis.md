@@ -4,25 +4,25 @@ order: 2
 
 # Genesis File
 
-This document explains how the genesis file of the OKChain testnet is structured. It also explains how you can build a genesis file for your own `okchain` testnet.
+This document explains how the genesis file of the OKExChain testnet is structured. It also explains how you can build a genesis file for your own `okexchain` testnet.
 
 Note that you can generate a default genesis file for your own testnet by running the following command:
 
 ```bash
-okchaind init <moniker> --chain-id <chain-id>
+okexchaind init <moniker> --chain-id <chain-id>
 ```
 
-The genesis file is stored in `~/.okchaind/config/genesis.toml`.
+The genesis file is stored in `~/.okexchaind/config/genesis.toml`.
 
 ## What is a Genesis File
 
 A genesis file is a JSON file which defines the initial state of your blockchain. It can be seen as height `0` of your blockchain. The first block, at height `1`, will reference the genesis file as its parent.
 
-The state defined in the genesis file contains all the necessary information, like initial token allocation, genesis time, default parameters, and more. Let us break down these information.
+The state defined in the genesis file contains all the necessary information, like initial token allocation, genesis time, default parameters, and more. Let us break down this information.
 
 ## Genesis Time and Chain_id
 
-The `genesis_time` is defined at the top of the genesis file. It is a `UTC` timestamps which specifies when the blockchain is due to start. At this time, genesis validators are supposed to come online and start participating in the consensus process. The blockchain starts when more than 2/3rd of the genesis validators (weighted by voting power) are online.
+The `genesis_time` is defined at the top of the genesis file. It is a UTC timestamps which specifies when the blockchain is due to start. At this time, genesis validators are supposed to come online and start participating in the consensus process. The blockchain starts when more than 2/3rd of the genesis validators (weighted by voting power) are online.
 
 ```json
 "genesis_time": "2019-03-13T17:00:00.000000000Z",
@@ -31,20 +31,20 @@ The `genesis_time` is defined at the top of the genesis file. It is a `UTC` time
 The `chain_id` is a unique identifier for your chain. It helps differentiate between different chains using the same version of the software.
 
 ```json
-"chain_id": "okchain",
+"chain_id": "okexchain",
 ```
 
 ## Consensus Parameters
 
-Next, the genesis file defines consensus parameters. Consensus parameters regroup all the parameters that are related to the consensus layer, which is `Tendermint` in the case of `okchain`. Let us look at these parameters:
+Next, the genesis file defines consensus parameters. Consensus parameters regroup all the parameters that are related to the consensus layer, which is `Tendermint` in the case of `okexchain`. Let us look at these parameters:
 
-- `block`
+* `block`
   - `max_bytes`: Maximum number of bytes per block.
   - `max_gas`: Gas limit per block. Each transaction included in the block will consume some gas. The total gas used by transactions included in a block cannot exceed this limit.
-- `evidence`
-  - `max_age`: An evidence is a proof that a validator signed two different blocks at the same height (and round). This is an explicitly malicious behaviour that is punished at the state-machine level. The `max_age` defines the maximum number of **blocks** after which an evidence is not valid anymore.
-- `validator`
-  - `pub_key_types`: The types of pubkey (`ed25519`, `secp256k1`, ...) that are accepted for validators. Currently only `ed25519` is accepted.
+* `evidence`
+  - `max_age`: An evidence is a proof that a validator signed two different blocks at the same height (and round). This is an explicitly malicious behaviour that is punished at the state-machine level. The max_age defines the maximum number of blocks after which an evidence is not valid anymore.
+* `validator`
+  - `pub_key_types`: The types of pubkey (`ed25519`, `secp256k1`, …) that are accepted for validators. Currently only `ed25519` is accepted.
 
 ```json
 "consensus_params": {
@@ -72,9 +72,9 @@ The application state defines the initial state of the state-machine.
 In this section, initial allocation of tokens is defined. It is possible to add accounts manually by directly editing the genesis file, but it is also possible to use the following command:
 
 ```bash
-// Example: okchaind add-genesis-account okchain1qs8tnw2t8l6amtzvdemnnsq9dzk0ag0z37gh3h 10000000tokt
+// Example: okexchaind add-genesis-account okchain1qs8tnw2t8l6amtzvdemnnsq9dzk0ag0z37gh3h 10000000okt
 
-okchaind add-genesis-account <account-address> <amount><denom>
+okexchaind add-genesis-account <account-address> <amount><denom>
 ```
 
 This command creates an item in the `accounts` list, under the `app_state` section.
@@ -106,18 +106,17 @@ This command creates an item in the `accounts` list, under the `app_state` secti
 ```
 
 Let us break down the parameters:
-
 - `sequence_number`: This number is used to count the number of transactions sent by this account. It is incremented each time a transaction is included in a block, and used to prevent replay attacks. Initial value is `0`.
 - `account_number`: Unique identifier for the account. It is generated the first time a transaction including this account is included in a block.
-- `original_vesting`: Vesting is natively supported by `okchain`. You can define an amount of token owned by the account that needs to be vested for a period of time before they can be transferred. Vested tokens can be delegated. Default value is `null`.
-- `delegated_free`: Amount of delegated tokens that can be transferred after they've been vested. Most of the time, will be `null` in genesis.
+- `original_vesting`: Vesting is natively supported by `okexchain`. You can define an amount of token owned by the account that needs to be vested for a period of time before it can be transferred. Vested tokens can be delegated. Default value is `null`.
+- `delegated_free`: Amount of delegated tokens that can be transferred after they’ve been vested. Most of the time, will be `null` in genesis.
 - `delegated_vesting`: Amount of delegated tokens that are still vesting. Most of the time, will be `null` in genesis.
 - `start_time`: Block at which the vesting period starts. `0` most of the time in genesis.
 - `end_time`: Block at which the vesting period ends. `0` if no vesting for this account.
 
 ### Bank
 
-The `bank` module handles tokens. The only parameter that needs to be defined in this section is wether `transfers` are enabled at genesis or not.
+The `bank` module handles tokens. The only parameter that needs to be defined in this section is whether `transfers` are enabled at genesis or not.
 
 ```json
 "bank": {
@@ -151,26 +150,25 @@ The `staking` module handles the bulk of the Proof-of-Stake logic of the state-m
 ```
 
 Let us break down the parameters:
-
 - `params`
-  - `unbonding_time`: Time in **nanosecond** it takes for tokens to complete unbonding.
+  - `unbonding_time`: Time in nanosecond it takes for tokens to complete unbonding.
   - `max_validators`: Maximum number of active validators.
   - `bond_denom`: Denomination of the staking token.
   - `min_delegation`: The minimum amount of token in an operation of delegating or unbonding.
   - `epoch`: The period to start the update of next validator set.
-  - `max_validators_to_vote`: The maximum number of validator to vote in an operation of voting.
-- `last_total_power`: Total amount of voting power. Generally `0` in genesis (except if genesis was generated using a previous state).
-- `last_validator_powers`: Power of each validator in last known state. Generally `null` in genesis (except if genesis was generated using a previous state).
-- `validators`: List of last known validators. Generally `null` in genesis (except if genesis was generated using a previous state).
+  - `max_validators_to_vote`: The maximum number of validators  that can be delegated by a delegator
+- `last_total_power`: Total amount of staking power. Generally `0` in genesis (except if genesis was generated using a previous state).
+- `last_validator_powers`: Power of each validator in last known state. Generally null in genesis (except if genesis was generated using a previous state).
+- `validators`: List of last known validators. Generally null in genesis (except if genesis was generated using a previous state).
 - `unbonding_delegations`: List of last known unbonding delegations. Generally `null` in genesis (except if genesis was generated using a previous state).
-- `exported`: Wether this genesis was generated using the export of a previous state.
-- `delegators`: The info of delegator who has staked any token. 
+- `exported`: Whether this genesis was generated using the export of a previous state.
+- `delegators`: The info of the delegator who has staked any token.
 - `proxy_delegator_keys`: The keys records the relationship between proxies and delegators.
-- `votes`: The details of delegator's votes related to validators.    
+- `votes`: The details of delegator’s votes related to validators.
 
 ### Mint
 
-The `mint` module governs the logic of inflating the supply of token. The `mint` section in the genesis file looks like the follwing:
+The `mint` module governs the logic of inflating the supply of token. The `mint` section in the genesis file looks like the following:
 
 ```json
 "mint": {
@@ -205,7 +203,7 @@ Let us break down the parameters:
 
 ### Distribution
 
-The `distribution` module handles the logic of distribution block provisions and fees to validators and delegators. The `distribution` section in the genesis file looks like the follwing:
+The `distribution` module handles the logic of distribution block provisions and fees to validators and delegators. The `distribution` section in the genesis file looks like the following:
 
 ```json
     "distribution": {
@@ -282,7 +280,7 @@ Let us break down the parameters:
 
 ### Slashing
 
-The `slashing` module handles the logic to slash delegators if their validator misbehave. The `slashing` section in genesis looks as follows:
+The `slashing` module handles the logic to slash delegators if their validator misbehaves. The `slashing` section in genesis looks as follows:
 
 ```json
 "slashing": {
@@ -438,12 +436,12 @@ The `dex` module handles the main logic for the DEX on the chain. The `dex` sect
 
 ### Genesis Transactions
 
-By default, the genesis file do not contain any `gentxs`. A `gentx` is a transaction that bonds staking token present in the genesis file under `accounts` to a validator, essentially creating a validator at genesis. The chain will start as soon as more than 2/3rds of the validators (weighted by voting power) that are the recipient of a valid `gentx` come online after `genesis_time`.
+By default, the genesis file does not contain any `gentxs`. A `gentx` is a transaction creating a validator in the genesis file. The chain will start as soon as more than 2/3rds of the validators (weighted by voting power) that are the recipient of a valid `gentx` come online after `genesis_time`.
 
 A `gentx` can be added manually to the genesis file, or via the following command:
 
 ```bash
-okchaind collect-gentxs
+okexchaind collect-gentxs
 ```
 
-This command will add all the `gentxs` stored in `~/.okchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](../validators/validators-guide-cli.html#participate-in-genesis-as-a-validator).
+This command will add all the `gentxs` stored in `~/.okexchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](../validators/validators-guide-cli.html#participate-in-genesis-as-a-validator).

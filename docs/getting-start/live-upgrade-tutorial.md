@@ -6,20 +6,20 @@ governance process.
 1. Start the network and trigger upgrade
 
    ```bash
-   # start a okchain application full-node
-   $ okchaind start
+   # start a okexchain application full-node
+   $ okexchaind start
 
    # set up the cli config
-   $ okchaincli config trust-node true
-   $ okchaincli config chain-id testing
+   $ okexchaincli config trust-node true
+   $ okexchaincli config chain-id testing
 
    # create an upgrade governance proposal
-   $ okchaincli tx gov submit-proposal software-upgrade <plan-name> \
+   $ okexchaincli tx gov submit-proposal software-upgrade <plan-name> \
    --title <proposal-title> --description <proposal-description> \
    --from <name-or-key> --upgrade-height <desired-upgrade-height> --deposit 10000000stake
 
    # once the proposal passes you can query the pending plan
-   $ okchaincli query upgrade plan
+   $ okexchaincli query upgrade plan
    ```
 
 2. Performing an upgrade
@@ -39,9 +39,9 @@ governance process.
    ```
 
    Note that the process will hang indefinitely (doesn't exit to avoid restart loops). So, you must
-   manually kill the process and replace it with a new binary. Do so now with `Ctrl+C` or `killall okchaind`.
+   manually kill the process and replace it with a new binary. Do so now with `Ctrl+C` or `killall okexchaind`.
 
-   In `okchain/app/app.go`, after `upgrade.Keeper` is initialized and set in the app, set the the
+   In `okexchain/app/app.go`, after `upgrade.Keeper` is initialized and set in the app, set the the
    corresponding upgrade `Handler` with the correct `<plan-name>`:
 
    ```go
@@ -58,17 +58,17 @@ governance process.
    Now, compile the new binary and run the upgraded code to complete the upgrade:
 
    ```bash
-   # create a new binary of okchain with the added upgrade handler
+   # create a new binary of okexchain with the added upgrade handler
    $ make install
 
    # Restart the chain using the new binary. You should see the chain resume from
    # the upgrade height:
    # `I[2019-11-05|12:48:15.184] applying upgrade <plan-name> at height: <desired-upgrade-height>      module=main`
-   $ okchaind start
+   $ okexchaind start
 
    # verify there is no pending plan
-   $ okchaincli query upgrade plan
+   $ okexchaincli query upgrade plan
 
    # verify you can query the block header of the completed upgrade
-   $ okchaincli query upgrade applied <plan-name>
+   $ okexchaincli query upgrade applied <plan-name>
    ```

@@ -1,0 +1,215 @@
+# FARM GUIDE(CLI)
+
+## cli command
+
+### create a farm pool
+
+The project team can use this command to create a farm pool for users to participate in the farming of their project. 
+
+```shell
+$ okexchaincli tx farm create-pool [pool-name] [min-lock-amount] [yield-token]
+```
+
+- pool-name： the name of the farm pool, which is used to identify the pool.
+- min-lock-amount：the minimum amount of farm tokens to join farm.
+- yield-token：the name of reward token .
+
+#### example：
+
+```shell
+$ okexchaincli tx farm create-pool pool-airtoken1-eth 10eth xxb --from mykey
+```
+
+
+
+### provide reward token to farm pool
+
+After the project team creates the farm pool, it needs to provide the reward token to the farm pool to make it work. 
+
+> After the rewards of the farm pool are distributed, the project team can also use this command to continue adding rewards to extend the farming.
+
+```shell
+$ okexchaincli tx farm provide [pool-name] [amount] [yield-per-block] [start-height-to-yield]
+```
+
+- pool-name: the name of the farm pool.
+- amount：the total amount of  the reward tokens that the project team want to provide .
+- yield-per-block: rewards amount per block.
+- start-height-to-yield：block height at the beginning of farming.
+
+#### example
+
+```shell
+$ okexchaincli tx farm provide pool-airtoken1-eth 1000xxb 5 10000 --from mykey
+```
+
+
+
+### lock tokens for yield farming
+
+The farmer can lock the farm token into the farm pool and start farming through this command. 
+
+```shell
+$ okexchaincli tx farm lock [pool-name] [amount]
+```
+
+- pool-name：the name of the farm pool.
+- amount:  the amount of farm tokens the farmer wants to lock.
+
+#### example
+
+```shell
+$ okexchaincli tx farm lock pool-airtoken1-eth 5eth --from mykey
+```
+
+
+
+### unlock token for yield farming
+
+The farmer can unlock the farm tokens locked in the farm pool through this command, and receive all rewards. 
+
+```shell
+$ okexchaincli tx farm unlock [pool-name] [amount]
+```
+
+- pool-name：the name of the farm pool.
+- amount: the amount of farm tokens the farmer wants to unlock.
+
+#### example
+
+```shell
+$ okexchaincli tx farm lock pool-airtoken1-eth 1eth --from mykey
+```
+
+
+
+### claim yield farming rewards
+
+Farmers can use this command to claim farming rewards without unlocking the farming token.
+
+```shell
+$ okexchaincli tx farm claim [pool-name]
+```
+
+- pool-name：the name of the farm pool.
+
+#### example
+
+```shell
+$ okexchaincli tx farm claim pool-airtoken1-eth --from mykey
+```
+
+
+
+### destroy a farm pool
+
+The project team can destroy the farming pool created by itself through this command, provided that the reward token has been collected and the locked farming token has been unlocked. 
+
+```shell
+$ okexchaincli tx farm destroy-pool [pool-name]
+```
+
+- pool-name：the name of the farm pool.
+
+#### example
+
+```shell
+$ okexchaincli tx farm destroy-pool pool-airtoken1-eth --from mykey
+```
+
+
+
+### query command
+
+#### 1. query the information of the specified farming pool
+
+```shell
+$ okexchaincli query farm pool [pool-name]
+```
+
+##### example:
+
+```shell
+$ okexchaincli query farm pool pool-airtoken1-eth
+```
+
+
+
+#### 2. query the information of all farming pools
+
+```shell
+$ okexchaincli query farm pools
+```
+
+
+
+#### 3. query the number of farming pools
+
+```shell
+$ okexchaincli query farm pool-num
+```
+
+
+
+#### 4. query the lock info of an account on a pool
+
+```shell
+$ okexchaincli query farm lock-info [pool-name] [address]
+```
+
+##### example:
+
+```shell
+$ okexchaincli query farm lock-info pool-airtoken1-eth okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+```
+
+
+
+#### 5. query the current rewards of an account
+
+```shell
+$ okexchaincli query farm rewards [pool-name] [address]
+```
+
+##### example:
+
+```shell
+$ okexchaincli query farm rewards pool-airtoken1-eth okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+```
+
+
+
+#### 6. query the name of pools that an account has locked coins in
+
+```shell
+$ okexchaincli query farm account [address]
+```
+
+##### example:
+
+```shell
+$ okexchaincli query farm account okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+```
+
+
+
+#### 7. query the addresses of accounts locked in a pool
+
+```shell
+$ okexchaincli query farm accounts-locked-to [pool-name]
+```
+
+##### example:
+
+```shell
+$ okexchaincli query farm accounts-locked-to pool-airtoken1-eth
+```
+
+
+
+#### 8. query the whitelist of pools to farm okt
+
+```shell
+$ okexchaincli query farm whitelist
+```
+

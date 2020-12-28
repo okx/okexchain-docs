@@ -1,7 +1,7 @@
 Java SDK
 ========
 
-SDK `download <https://github.com/okex/okchain-java-sdk>`__
+SDK `download <https://github.com/okex/okexchain-java-sdk>`__
 
 Obtain account information through a remote blockchain node
 -----------------------------------------------------------
@@ -78,7 +78,7 @@ Results returned:
 .. code:: java
 
     public class AccountInfo extends AddressInfo {
-        private String accountNumber;//Account ID on OKChain
+        private String accountNumber;//Account ID on OKExChain
         private String sequenceNumber;//Corresponding serial number sent by the account next time
     }
 

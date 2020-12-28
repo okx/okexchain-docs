@@ -4,13 +4,13 @@ parent:
   order: 3
 -->
 
-# OKChain Tutorials
+# OKExChain Tutorials
 
-This folder contains tutorials related to the `okchain` application.
+This folder contains tutorials related to the `okexchain` application.
 
-- [Introduction to the `okchain` application](what-is-okchain.md)
-- [Installing `okchaind`](./install-okchain.md)
-- [Running a full-node for the OKChain Mainnet](./join-okchain-mainnet.md)
-- [Running a full-node for a `okchain` testnet](./join-okchain-testnet.md)
+- [Introduction to the `okexchain` application](what-is-okexchain.md)
+- [Installing `okexchaind`](./install-okexchain.md)
+- [Running a full-node for the OKExChain Mainnet](./join-okexchain-mainnet.md)
+- [Running a full-node for a `okexchain` testnet](./join-okexchain-testnet.md)
 - [Upgrading a Node from a previous version](./upgrade-node.md)
-- [Deploying a `okchain` testnet](./deploy-you-own-okchain-testnet.md)
+- [Deploying a `okexchain` testnet](./deploy-you-own-okexchain-testnet.md)

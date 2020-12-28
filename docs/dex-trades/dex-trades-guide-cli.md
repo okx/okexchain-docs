@@ -1,7 +1,7 @@
 # DEX Traders Guide (CLI)
 
 
-DEX Traders can perform pending orders and cancel orders through okchaincli, or through the UI provided by OKchain ecological partners.
+DEX Traders can perform pending orders and cancel orders through okexchaincli, or through the UI provided by OKExChain ecosystem partners.
 
 
 ### Order depthbook
@@ -10,7 +10,7 @@ Query tokenpair's order depthbook.
 
 ```bash
 # example
-okchaincli query order depthbook mycoin_okt
+okexchaincli query order depthbook mycoin_okt
 # example return
 # example return
 {
@@ -45,13 +45,13 @@ Create a new limit order.
 
 ```bash
 # example
-okchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
+okexchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
 # example return
 {
   "txhash": "57A390CBBE43548F112956DF6CA7146E14A02720F2895908B3A057136CE0324D"
 }
 ```
-  
+
 * product ：Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
 * side ：BUY or SELL (default "SELL")
 * price ：The price of the order
@@ -59,14 +59,14 @@ okchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 
 
 
 
-  
+
 ### Order details
 
 Query order details.
 
 ```bash
 # example
-okchaincli query order detail ID0000000007-0000
+okexchaincli query order detail ID0000000007-0000
 # example return
 {
  "txHash": "CF8CEC36B97F089DEA243655A70D1CB2AE906D712D71210BCDEBC47F184DB6C2",
@@ -82,8 +82,8 @@ okchaincli query order detail ID0000000007-0000
  "timestamp": "1554273977"
 }
 ```
-  
+
 ## More
 
-For a practical guide on how to trade on okchain , click [okchaincli](../resources/okchaincli.html).
+For more details on how to use OKExChain client, click [okexchaincli](../resources/okexchaincli.html).
 

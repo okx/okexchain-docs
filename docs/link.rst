@@ -5,7 +5,7 @@ References
 Mainnet
 -------
 
-`OKChain Source Code <https://github.com/okex/okchain>`__
+`OKExChain Source Code <https://github.com/okex/okexchain>`__
 
 
 Testnet
@@ -13,9 +13,9 @@ Testnet
 
 `Testnet <https://www.okex.com/dex-test>`__
 
-`Testnet Tokt <https://www.okex.com/activities/pro/drawdex>`__
+`Testnet okt <https://www.okex.com/activities/pro/drawdex>`__
 
-`Testnet explorer <https://www.oklink.com/explorer/okchain-test>`__
+`Testnet explorer <https://www.oklink.com/explorer/okexchain-test>`__
 
 
 Cosmos

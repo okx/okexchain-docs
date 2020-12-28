@@ -1,7 +1,7 @@
 Go SDK
 ======
 
-SDK `download <https://github.com/okex/okchain-go-sdk>`__
+SDK `download <https://github.com/okex/okexchain-go-sdk>`__
 
 1 Account function
 ~~~~~~~~~~~~~~~~~~
