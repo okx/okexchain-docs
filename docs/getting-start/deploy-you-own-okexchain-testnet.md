@@ -51,7 +51,7 @@ okexchaincli keys add validator
 # Add that key into the genesis.app_state.accounts array in the genesis file
 # NOTE: this command lets you set the number of coins. Make sure this account has some coins
 # with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-okexchaind add-genesis-account $(okexchaincli keys show validator -a) 1000000000okt
+okexchaind add-genesis-account $(okexchaincli keys show validator -a) 1000000000tokt
 
 # Generate the transaction that creates your validator
 okexchaind gentx --name validator
@@ -61,7 +61,7 @@ okexchaind collect-gentxs
 
 # Now its safe to start `okexchaind`
 okexchaind start --chain-id okexchaintestnet-1
-```
+
 
 This setup puts all the data for `okexchaind` in `~/.okexchaind`. You can examine the genesis file you created at `~/.okexchaind/config/genesis.json`. With this configuration `okexchaincli` is also ready to use and has an account with tokens (both staking and custom).
 
