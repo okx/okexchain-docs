@@ -60,7 +60,7 @@ okexchaind gentx --name validator
 okexchaind collect-gentxs
 
 # Now its safe to start `okexchaind`
-okexchaind start testnet --chain-id okexchaintestnet-1 --keyring-backend test
+okexchaind start --chain-id okexchaintestnet-1
 ```
 
 This setup puts all the data for `okexchaind` in `~/.okexchaind`. You can examine the genesis file you created at `~/.okexchaind/config/genesis.json`. With this configuration `okexchaincli` is also ready to use and has an account with tokens (both staking and custom).
