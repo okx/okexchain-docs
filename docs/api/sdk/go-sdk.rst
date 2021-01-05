@@ -32,6 +32,7 @@ Printed results:
         Name         string        `json:"name"`
         PubKey       crypto.PubKey `json:"pubkey"`
         PrivKeyArmor string        `json:"privkey.armor"`
+        Algo         SigningAlgo   `json:"algo"`
     }
 
     // Mnemonic phrase
@@ -65,6 +66,7 @@ Results returned:
         Name         string        `json:"name"`
         PubKey       crypto.PubKey `json:"pubkey"`
         PrivKeyArmor string        `json:"privkey.armor"`
+        Algo         SigningAlgo   `json:"algo"`
     }
 
     // Mnemonic phrase
@@ -98,6 +100,7 @@ Results returned:
         Name         string        `json:"name"`
         PubKey       crypto.PubKey `json:"pubkey"`
         PrivKeyArmor string        `json:"privkey.armor"`
+        Algo         SigningAlgo   `json:"algo"`
     }
 
 1.4 Generate a new mnemonic phrase
@@ -115,16 +118,71 @@ Results returned:
 
     // Mnemonic phrase
     string
+2 module
+~~~~~~~~
 
-2 Tx function
-~~~~~~~~~~~~~
+2.1 token
+~~~~~~~~~
 
-2.1 Transfer
-~~~~~~~~~~~~
+2.1.1 tx
+~~~~~~~~
+
+2.1.1.1 Send transfers coins to other receiver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: go
 
-    func (cli *OKChainClient) Send(fromInfo keys.Info, passWd, toAddr, coinsStr, memo string, accNum, seqNum uint64) (resp types.TxResponse, err error) 
+    func (tc tokenClient) Send(fromInfo keys.Info, passWd, toAddrStr, coinsStr, memo string, accNum, seqNum uint64)(resp sdk.TxResponse, err error)
+
+Parameters entered:
+
++--------------+----------+---------------------------+
+| Name         | Type     | Mark                      |
++==============+==========+===========================+
+| fromInfo     | keys.Info| sender account            |
++--------------+----------+---------------------------+
+| passWd       | string   | sender account password   |
++--------------+----------+---------------------------+
+| toAddrStr    | string   | recipient address         |
++--------------+----------+---------------------------+
+| coinsStr     | string   | transfer amount string    |
++--------------+----------+---------------------------+
+| toAddrStr    | string   | recipient address         |
++--------------+----------+---------------------------+
+| memo         | string   | remarks                   |
++--------------+----------+---------------------------+
+| accNum       | string   | sender AccountNumber      |
++--------------+----------+---------------------------+
+| seqNum       | string   | sender SequenceNumber     |
++--------------+----------+---------------------------+
+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+        type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.1.1.2  MultiSend multi-sends coins to several receivers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (tc tokenClient) MultiSend(fromInfo keys.Info, passWd string, transfers []types.TransferUnit, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
 
 Enter parameters:
 
@@ -135,7 +193,148 @@ Enter parameters:
 +------------+-------------+---------------------------+
 | passWd     | string      | sender account password   |
 +------------+-------------+---------------------------+
-| toAddr     | string      | recipient address         |
+| transfers  | string      | recipient address list    |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.1.1.3  Issue issues a kind of token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+func (tc tokenClient) Issue(fromInfo keys.Info, passWd, orgSymbol, wholeName, totalSupply, tokenDesc, memo string, mintable bool, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| orgSymbol  | string      | new token symbol          |
++------------+-------------+---------------------------+
+| wholeName  | string      | whole name                |
++------------+-------------+---------------------------+
+| totalSupply| uint64      | total supply              |
++------------+-------------+---------------------------+
+| tokenDesc  | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| mintable   | bool        | token can be minted       |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.1.1.4  Mint increases the total supply of a kind of token by its owner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (tc tokenClient) Mint(fromInfo keys.Info, passWd, coinsStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| coinsStr   | string      | transfer amount string    |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | string      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.1.1.5  Burn decreases the total supply of a kind of token by burning a specific amount of that from the own account
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+func (tc tokenClient) Burn(fromInfo keys.Info, passWd, coinsStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
 +------------+-------------+---------------------------+
 | coinsStr   | string      | transfer amount string    |
 +------------+-------------+---------------------------+
@@ -154,49 +353,50 @@ Results returned:
     type TxResponse struct {
         Height    int64           `json:"height"`
         TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
         Code      uint32          `json:"code,omitempty"`
         Data      string          `json:"data,omitempty"`
         RawLog    string          `json:"raw_log,omitempty"`
         Logs      ABCIMessageLogs `json:"logs,omitempty"`
         Info      string          `json:"info,omitempty"`
-        GasWanted int64           `json:"-"`
-        GasUsed   int64           `json:"-"`
-        Tags      StringTags      `json:"tags,omitempty"`
-        Codespace string          `json:"codespace,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
         Tx        Tx              `json:"tx,omitempty"`
         Timestamp string          `json:"timestamp,omitempty"`
     }
 
-2.2 Maker
-~~~~~~~~~
+2.1.1.6  Edit modifies the info of a specific token by its owner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: go
 
-    func (cli *OKChainClient) NewOrder(fromInfo keys.Info, passWd, product, side, price, quantity, memo string, accNum, seqNum uint64) (types.TxResponse, error)
+func (tc tokenClient) Edit(fromInfo keys.Info, passWd, symbol, description, wholeName, memo string, isDescEdit, isWholeNameEdit bool, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
 
 Enter parameters:
 
-+------------+-------------+-----------------------------------------------+
-| Name       | Type        | Mark                                          |
-+============+=============+===============================================+
-| fromInfo   | keys.Info   | maker account                                 |
-+------------+-------------+-----------------------------------------------+
-| passWd     | string      | maker account password                        |
-+------------+-------------+-----------------------------------------------+
-| product    | string      | pair name                                     |
-+------------+-------------+-----------------------------------------------+
-| side       | string      | "BUY" or "SELL"                               |
-+------------+-------------+-----------------------------------------------+
-| price      | string      | maker price (up to 1 decimal place)           |
-+------------+-------------+-----------------------------------------------+
-| quantity   | string      | maker order number (up to 2 decimal places)   |
-+------------+-------------+-----------------------------------------------+
-| memo       | string      | remarks                                       |
-+------------+-------------+-----------------------------------------------+
-| accNum     | uint64      | maker AccountNumber                           |
-+------------+-------------+-----------------------------------------------+
-| seqNum     | uint64      | maker SequenceNumber                          |
-+------------+-------------+-----------------------------------------------+
++-----------------+-------------+---------------------------+
+| Name            | Type        | Mark                      |
++=================+=============+===========================+
+| fromInfo        | keys.Info   | sender account            |
++-----------------+-------------+---------------------------+
+| passWd          | string      | sender account password   |
++-----------------+-------------+---------------------------+
+| symbol          | string      | symbol of the token       |
++-----------------+-------------+---------------------------+
+| description     | string      | description of the token  |
++-----------------+-------------+---------------------------+
+| wholeName       | string      | whole name                |
++-----------------+-------------+---------------------------+
+| memo            | string      | remarks                   |
++-----------------+-------------+---------------------------+
+| isDescEdit      | bool        | description is need edit  |
++-----------------+-------------+---------------------------+
+| isWholeNameEdit | bool        | whole name is need edit   |
++-----------------+-------------+---------------------------+
+| accNum          | string      | sender AccountNumber      |
++-----------------+-------------+---------------------------+
+| seqNum          | uint64      | sender SequenceNumber     |
++-----------------+-------------+---------------------------+
 
 Results returned:
 
@@ -206,64 +406,630 @@ Results returned:
     type TxResponse struct {
         Height    int64           `json:"height"`
         TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
         Code      uint32          `json:"code,omitempty"`
         Data      string          `json:"data,omitempty"`
         RawLog    string          `json:"raw_log,omitempty"`
         Logs      ABCIMessageLogs `json:"logs,omitempty"`
         Info      string          `json:"info,omitempty"`
-        GasWanted int64           `json:"-"`
-        GasUsed   int64           `json:"-"`
-        Tags      StringTags      `json:"tags,omitempty"`
-        Codespace string          `json:"codespace,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
         Tx        Tx              `json:"tx,omitempty"`
         Timestamp string          `json:"timestamp,omitempty"`
     }
 
-2.3 Taker
-~~~~~~~~~
+2.1.2 query
+~~~~~~~~~~~
+
+2.1.2.1 QueryTokenInfo gets token info with a specific symbol or the owner address
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: go
 
-    func (cli *OKChainClient) CancelOrder(fromInfo keys.Info, passWd, orderID, memo string, accNum, seqNum uint64) (types.TxResponse, error) 
+    func (tc tokenClient) QueryTokenInfo(ownerAddr, symbol string) (tokens []types.TokenResp, err error)
+
+Enter parameters:
+
++-----------------+-------------+---------------------------+
+| Name            | Type        | Mark                      |
++=================+=============+===========================+
+| ownerAddr       | string      | owner address             |
++-----------------+-------------+---------------------------+
+| symbol          | string      | symbol of the token       |
++-----------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Return array token response
+    type TokenResp struct {
+        Description         string         `json:"description" v2:"description"`
+        Symbol              string         `json:"symbol" v2:"symbol"`
+        OriginalSymbol      string         `json:"original_symbol" v2:"original_symbol"`
+        WholeName           string         `json:"whole_name" v2:"whole_name"`
+        OriginalTotalSupply sdk.Dec        `json:"original_total_supply" v2:"original_total_supply"`
+        Type                int            `json:"type"`
+        Owner               sdk.AccAddress `json:"owner" v2:"owner"`
+        Mintable            bool           `json:"mintable" v2:"mintable"`
+        TotalSupply         sdk.Dec        `json:"total_supply" v2:"total_supply"`
+    }
+
+
+2.2 auth
+~~~~~~~~
+
+2.2.1 query
+~~~~~~~~~~~
+
+2.2.1.1 QueryAccount gets the account info
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (ac authClient) QueryAccount(accAddrStr string) (account types.Account, err error)
+
+Enter parameters:
+
++-----------------+-------------+---------------------------+
+| Name            | Type        | Mark                      |
++=================+=============+===========================+
+| accAddrStr      | string      | string of account address |
++-----------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Return account type
+    account types.Account
+
+2.3 staking
+~~~~~~~~
+
+2.3.1 tx
+~~~~~~~~~~~
+
+2.3.1.1 Deposit deposits an amount of okt to delegator account
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) Deposit(fromInfo keys.Info, passWd, coinsStr, memo string, accNum, seqNum uint64)(resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| coinsStr   | string      | transfer amount string    |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.2 Withdraw withdraws an amount of okt and the corresponding shares from all validators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) Withdraw(fromInfo keys.Info, passWd, coinsStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| coinsStr   | string      | transfer amount string    |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.3 Vote votes to the some specific validators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+   func (sc stakingClient) AddShares(fromInfo keys.Info, passWd string, valAddrsStr []string, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| valAddrsStr| string      | the string array of val   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.4 DestroyValidator deregisters the validator and unbond the min-self-delegation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) DestroyValidator(fromInfo keys.Info, passWd string, memo string, accNum, seqNum uint64)(resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.5 DestroyValidator deregisters the validator and unbond the min-self-delegation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) CreateValidator(fromInfo keys.Info, passWd, pubkeyStr, moniker, identity, website, details, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| pubkeyStr  | string      | string of public key      |
++------------+-------------+---------------------------+
+| moniker    | string      | validator's name          |
++------------+-------------+---------------------------+
+| identity   | string      | identity's signature      |
++------------+-------------+---------------------------+
+| website    | string      | validator's website       |
++------------+-------------+---------------------------+
+| details    | string      | validator's details       |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.6 EditValidator edits the description on a validator by the owner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) EditValidator(fromInfo keys.Info, passWd, moniker, identity, website, details, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| moniker    | string      | validator's name          |
++------------+-------------+---------------------------+
+| identity   | string      | identity's signature      |
++------------+-------------+---------------------------+
+| website    | string      | validator's website       |
++------------+-------------+---------------------------+
+| details    | string      | validator's details       |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.7 RegisterProxy registers the identity of proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) RegisterProxy(fromInfo keys.Info, passWd, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.8 UnregisterProxy registers the identity of proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) UnregisterProxy(fromInfo keys.Info, passWd, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.8 BindProxy binds the staking tokens to a proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) BindProxy(fromInfo keys.Info, passWd, proxyAddrStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.1.9 UnbindProxy unbinds the staking tokens from a proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) UnbindProxy(fromInfo keys.Info, passWd, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+
+Enter parameters:
+
++------------+-------------+---------------------------+
+| Name       | Type        | Mark                      |
++============+=============+===========================+
+| fromInfo   | keys.Info   | sender account            |
++------------+-------------+---------------------------+
+| passWd     | string      | sender account password   |
++------------+-------------+---------------------------+
+| memo       | string      | remarks                   |
++------------+-------------+---------------------------+
+| accNum     | uint64      | sender AccountNumber      |
++------------+-------------+---------------------------+
+| seqNum     | uint64      | sender SequenceNumber     |
++------------+-------------+---------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Tx reply message
+    type TxResponse struct {
+        Height    int64           `json:"height"`
+        TxHash    string          `json:"txhash"`
+        Codespace string          `json:"codespace,omitempty"`
+        Code      uint32          `json:"code,omitempty"`
+        Data      string          `json:"data,omitempty"`
+        RawLog    string          `json:"raw_log,omitempty"`
+        Logs      ABCIMessageLogs `json:"logs,omitempty"`
+        Info      string          `json:"info,omitempty"`
+        GasWanted int64           `json:"gas_wanted,omitempty"`
+        GasUsed   int64           `json:"gas_used,omitempty"`
+        Tx        Tx              `json:"tx,omitempty"`
+        Timestamp string          `json:"timestamp,omitempty"`
+    }
+
+2.3.2 query
+~~~~~~~~~~~
+
+
+2.3.2.1 QueryValidators gets all the validators info
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) QueryValidators() (vals []types.Validator, err error)
+
+Enter parameters: null
+
+Results returned:
+
+.. code:: go
+
+    // Return array of validator
+    []types.Validator
+
+2.3.2.2 QueryValidator gets the info of a specific validator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) QueryValidator(valAddrStr string) (val types.Validator, err error)
 
 Enter parameters:
 
 +------------+-------------+--------------------------+
 | Name       | Type        | Mark                     |
 +============+=============+==========================+
-| fromInfo   | keys.Info   | taker account            |
-+------------+-------------+--------------------------+
-| passWd     | string      | taker account password   |
-+------------+-------------+--------------------------+
-| orderID    | string      | taker order id           |
-+------------+-------------+--------------------------+
-| memo       | string      | remarks                  |
-+------------+-------------+--------------------------+
-| accNum     | uint64      | taker AccountNumber      |
-+------------+-------------+--------------------------+
-| seqNum     | uint64      | taker SequenceNumber     |
+| valAddrStr | string      | string of validator addr |
 +------------+-------------+--------------------------+
 
 Results returned:
 
 .. code:: go
 
-    // Tx reply message
-    type TxResponse struct {
-        Height    int64           `json:"height"`
-        TxHash    string          `json:"txhash"`
-        Code      uint32          `json:"code,omitempty"`
-        Data      string          `json:"data,omitempty"`
-        RawLog    string          `json:"raw_log,omitempty"`
-        Logs      ABCIMessageLogs `json:"logs,omitempty"`
-        Info      string          `json:"info,omitempty"`
-        GasWanted int64           `json:"-"`
-        GasUsed   int64           `json:"-"`
-        Tags      StringTags      `json:"tags,omitempty"`
-        Codespace string          `json:"codespace,omitempty"`
-        Tx        Tx              `json:"tx,omitempty"`
-        Timestamp string          `json:"timestamp,omitempty"`
+    // Return validator info
+    type Validator struct {
+        OperatorAddress sdk.ValAddress `json:"operator_address" yaml:"operator_address"`
+        ConsPubKey crypto.PubKey `json:"consensus_pubkey" yaml:"consensus_pubkey"`
+        Jailed bool `json:"jailed" yaml:"jailed"`
+        Status sdk.BondStatus `json:"status" yaml:"status"`
+        Tokens sdk.Int `json:"tokens" yaml:"tokens"`
+        DelegatorShares sdk.Dec `json:"delegator_shares" yaml:"delegator_shares"`
+        Description Description `json:"description" yaml:"description"`
+        UnbondingHeight int64 `json:"unbonding_height" yaml:"unbonding_height"`
+        UnbondingCompletionTime time.Time `json:"unbonding_time" yaml:"unbonding_time"`
+        Commission Commission `json:"commission" yaml:"commission"`
+        MinSelfDelegation sdk.Dec `json:"min_self_delegation" yaml:"min_self_delegation"`
     }
+
+2.3.2.3 QueryDelegator gets the detail info of a delegator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: go
+
+    func (sc stakingClient) QueryDelegator(delAddrStr string) (delResp types.DelegatorResponse, err error)
+
+Enter parameters:
+
++------------+-------------+--------------------------+
+| Name       | Type        | Mark                     |
++============+=============+==========================+
+| delAddrStr | string      | string of delegator addr |
++------------+-------------+--------------------------+
+
+Results returned:
+
+.. code:: go
+
+    // Return delegator response
+    type DelegatorResponse struct {
+        DelegatorAddress     sdk.AccAddress   `json:"delegator_address" yaml:"delegator_address"`
+        ValidatorAddresses   []sdk.ValAddress `json:"validator_address" yaml:"validator_address"`
+        Shares               sdk.Dec          `json:"shares" yaml:"shares"`
+        Tokens               sdk.Dec          `json:"tokens" yaml:"tokens"`
+        UnbondedTokens       sdk.Dec          `json:"unbonded_tokens" yaml:"unbonded_tokens"`
+        CompletionTime       time.Time        `json:"completion_time" yaml:"completion_time"`
+        IsProxy              bool             `json:"is_proxy" yaml:"is_proxy"`
+        TotalDelegatedTokens sdk.Dec          `json:"total_delegated_tokens" yaml:"total_delegated_tokens"`
+        ProxyAddress         sdk.AccAddress   `json:"proxy_address" yaml:"proxy_address"`
+    }
+
 
 3 Information query
 ~~~~~~~~~~~~~~~~~~~
