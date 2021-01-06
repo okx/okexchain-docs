@@ -30,7 +30,7 @@ These instructions are for setting up a brand new full node from scratch.
 First, initialize the node and create the necessary config files:
 
 ```bash
-okexchaind init <your_custom_moniker>
+okexchaind init <your_custom_moniker> --chain-id okexchaintestnet-1
 ```
 
 > _NOTE_:
@@ -54,7 +54,7 @@ You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable 
 
 # The minimum gas prices a validator is willing to accept for processing a
 # transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (Our recommended quantity is  10^-7 okt).
+# specified in this config (Our recommended quantity is  10^-8 okt).
 
 minimum-gas-prices = ""
 ```
@@ -72,7 +72,7 @@ Note we use the `latest` directory in the [testnets repo](https://github.com/oke
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind start
+okexchaind start --chain-id okexchaintestnet-1
 ```
 
 ### Add Seed Nodes
@@ -93,7 +93,7 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-okexchaind start
+okexchaind start --chain-id okexchaintestnet-1
 ```
 
 Check that everything is running smoothly:

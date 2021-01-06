@@ -43,7 +43,7 @@ This guide helps you create a single validator node that runs a network locally 
 cd $HOME
 
 # Initialize the genesis.json file that will help you to bootstrap the network
-okexchaind init --chain-id=okexchaintestnet-1 okexchaintestnet-1
+okexchaind init <your_custom_moniker> --chain-id testchain-1
 
 # Create a key to hold your validator account
 okexchaincli keys add validator
@@ -60,7 +60,7 @@ okexchaind gentx --name validator
 okexchaind collect-gentxs
 
 # Now its safe to start `okexchaind`
-okexchaind start --chain-id okexchaintestnet-1
+okexchaind start --chain-id testchain-1
 ```
 
 This setup puts all the data for `okexchaind` in `~/.okexchaind`. You can examine the genesis file you created at `~/.okexchaind/config/genesis.json`. With this configuration `okexchaincli` is also ready to use and has an account with tokens (both staking and custom).
