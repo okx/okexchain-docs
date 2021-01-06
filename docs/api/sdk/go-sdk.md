@@ -183,7 +183,7 @@ import "github.com/okex/okexchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
 cli := gosdk.NewClient(config)
-_, _ = cli.Auth().QueryAccount("okexchain1ntvyep3suq5z7789g7d5dejwzameu08m6gh7yl")
+_, _ = cli.Auth().QueryAccount(accAddrStr)
 ```
 
 #### 2.1 Query
@@ -951,6 +951,93 @@ Enter parameters:
 | memo  | string |memo to note|
 | accNum  | uint64 |account number of sender's account on chain|
 | seqNum  | uint64 |sequence number of sender's account on chain|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+### 5 Distribution module
+
+All distribution functions are defined in the package `distribution` under path `okexchain-go-sdk/module/distribution`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Distribution().WithdrawRewards(info, defaultPassWd, valAddrStr, memo, accountNumber, sequence)
+```
+
+#### 5.1 Transaction
+##### 5.1.1 Change the withdraw address of validator to receive rewards
+
+```go
+func (dc distrClient) SetWithdrawAddr(fromInfo keys.Info, passWd, withdrawAddrStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| withdrawAddrStr  | string | account address in bech32 to receive the rewards of validator|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 5.1.2 Withdraw the rewards of validator by the owner
+
+```go
+func (dc distrClient) WithdrawRewards(fromInfo keys.Info, passWd, valAddrStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| valAddrStr  | string | target validator's address in bech32|
 
 Printed results:
 
