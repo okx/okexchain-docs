@@ -11,7 +11,7 @@ order: 2
 
 The `create-pair` function is used to create new token pairs.
 
-All token pairs are created against OKT, so you only need to specify one token.
+You could create swap pair with any 2 tokens.
 
 ```bash
 $ okexchaincli tx swap create-pair --token [token]
