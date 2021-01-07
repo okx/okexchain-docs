@@ -17,7 +17,7 @@ $ okexchaincli tx farm create-pool [pool-name] [min-lock-amount] [yield-token]
 #### example：
 
 ```shell
-$ okexchaincli tx farm create-pool pool-airtoken1-eth 10eth xxb --from mykey
+$ okexchaincli tx farm create-pool pool-eth-xxb 10eth xxb --from mykey
 ```
 
 
@@ -40,7 +40,7 @@ $ okexchaincli tx farm provide [pool-name] [amount] [yield-per-block] [start-hei
 #### example
 
 ```shell
-$ okexchaincli tx farm provide pool-airtoken1-eth 1000xxb 5 10000 --from mykey
+$ okexchaincli tx farm provide pool-eth-xxb 1000xxb 5 10000 --from mykey
 ```
 
 
@@ -59,7 +59,7 @@ $ okexchaincli tx farm lock [pool-name] [amount]
 #### example
 
 ```shell
-$ okexchaincli tx farm lock pool-airtoken1-eth 5eth --from mykey
+$ okexchaincli tx farm lock pool-eth-xxb 5eth --from mykey
 ```
 
 
@@ -78,7 +78,7 @@ $ okexchaincli tx farm unlock [pool-name] [amount]
 #### example
 
 ```shell
-$ okexchaincli tx farm lock pool-airtoken1-eth 1eth --from mykey
+$ okexchaincli tx farm lock pool-eth-xxb 1eth --from mykey
 ```
 
 
@@ -96,7 +96,7 @@ $ okexchaincli tx farm claim [pool-name]
 #### example
 
 ```shell
-$ okexchaincli tx farm claim pool-airtoken1-eth --from mykey
+$ okexchaincli tx farm claim pool-eth-xxb --from mykey
 ```
 
 
@@ -114,7 +114,7 @@ $ okexchaincli tx farm destroy-pool [pool-name]
 #### example
 
 ```shell
-$ okexchaincli tx farm destroy-pool pool-airtoken1-eth --from mykey
+$ okexchaincli tx farm destroy-pool pool-eth-xxb --from mykey
 ```
 
 
@@ -130,7 +130,7 @@ $ okexchaincli query farm pool [pool-name]
 ##### example:
 
 ```shell
-$ okexchaincli query farm pool pool-airtoken1-eth
+$ okexchaincli query farm pool pool-eth-xxb
 ```
 
 
@@ -160,7 +160,7 @@ $ okexchaincli query farm lock-info [pool-name] [address]
 ##### example:
 
 ```shell
-$ okexchaincli query farm lock-info pool-airtoken1-eth okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+$ okexchaincli query farm lock-info pool-eth-xxb okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
 ```
 
 
@@ -174,7 +174,7 @@ $ okexchaincli query farm rewards [pool-name] [address]
 ##### example:
 
 ```shell
-$ okexchaincli query farm rewards pool-airtoken1-eth okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+$ okexchaincli query farm rewards pool-eth-xxb okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
 ```
 
 
@@ -202,7 +202,7 @@ $ okexchaincli query farm accounts-locked-to [pool-name]
 ##### example:
 
 ```shell
-$ okexchaincli query farm accounts-locked-to pool-airtoken1-eth
+$ okexchaincli query farm accounts-locked-to pool-eth-xxb
 ```
 
 
