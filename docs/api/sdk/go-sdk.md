@@ -2,6 +2,8 @@
 
 github: https://github.com/okex/okexchain-go-sdk
 
+---
+
 ### 1 utils function
 
 All utils functions are defined in the package `utils` under path `okexchain-go-sdk/utils`. They can be invoked by the way like:
@@ -174,6 +176,8 @@ type TransferUnit struct {
 }
 ```
 
+---
+
 ### 2 Auth module
 
 All auth functions are defined in the package `auth` under path `okexchain-go-sdk/module/auth`. They can be invoked by the way like:
@@ -183,7 +187,7 @@ import "github.com/okex/okexchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
 cli := gosdk.NewClient(config)
-_, _ = cli.Auth().QueryAccount("okexchain1ntvyep3suq5z7789g7d5dejwzameu08m6gh7yl")
+_, _ = cli.Auth().QueryAccount(accAddrStr)
 ```
 
 #### 2.1 Query
@@ -224,6 +228,8 @@ type Account interface {
     String() string
 }
 ```
+
+---
 
 ### 3 Token module
 
@@ -499,6 +505,8 @@ type TxResponse struct {
     Timestamp string
 }
 ```
+
+---
 
 ### 4 Staking module
 
@@ -951,6 +959,233 @@ Enter parameters:
 | memo  | string |memo to note|
 | accNum  | uint64 |account number of sender's account on chain|
 | seqNum  | uint64 |sequence number of sender's account on chain|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+---
+
+### 5 Distribution module
+
+All distribution functions are defined in the package `distribution` under path `okexchain-go-sdk/module/distribution`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Distribution().WithdrawRewards(info, defaultPassWd, valAddrStr, memo, accountNumber, sequence)
+```
+
+#### 5.1 Transaction
+##### 5.1.1 Change the withdraw address of validator to receive rewards
+
+```go
+func (dc distrClient) SetWithdrawAddr(fromInfo keys.Info, passWd, withdrawAddrStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| withdrawAddrStr  | string | account address in bech32 to receive the rewards of validator|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 5.1.2 Withdraw the rewards of validator by the owner
+
+```go
+func (dc distrClient) WithdrawRewards(fromInfo keys.Info, passWd, valAddrStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| valAddrStr  | string | target validator's address in bech32|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+---
+
+### 6 Slashing module
+
+All slashing functions are defined in the package `slashing` under path `okexchain-go-sdk/module/slashing`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Slashing().Unjail(info, defaultPassWd, memo, accountNumber, sequence)
+```
+
+#### 6.1 Transaction
+##### 6.1.1 Unjail the own validator which was jailed by slashing
+
+```go
+func (sc slashingClient) Unjail(fromInfo keys.Info, passWd, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+---
+
+### 7 Dex module
+
+All dex functions are defined in the package `dex` under path `okexchain-go-sdk/module/dex`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Dex().RegisterDexOperator(info, defaultPassWd, "", website, memo, accountNumber, sequence)
+```
+
+#### 7.1 Query
+##### 7.1.1 Get token pair info
+
+```go
+func (dc dexClient) QueryProducts(ownerAddr string, page, perPage int) (tokenPairs []types.TokenPair, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| ownerAddr  | string |owner account address in bech32 of a token pair. If it's set empty, all token pairs' info will be returned|
+| page  | int |page number|
+| perPage  | int | items number per page|
+
+Printed results:
+
+```go
+// TokenPair slice
+type TokenPair struct {
+    BaseAssetSymbol  string
+    QuoteAssetSymbol string
+    InitPrice        sdk.Dec
+    MaxPriceDigit    int64
+    MaxQuantityDigit int64
+    MinQuantity      sdk.Dec
+    ID               uint64
+    Delisting        bool
+    Owner            sdk.AccAddress
+    Deposits         sdk.SysCoin
+    BlockHeight      int64
+}
+```
+
+#### 7.2 Transaction
+##### 7.2.1 Register a dex operator
+
+```go
+func (dc dexClient) RegisterDexOperator(fromInfo keys.Info, passWd, handleFeeAddrStr, website, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| handleFeeAddrStr  | string |account address in bech32 to receive fees of tokenpair's matched order|
+| website  | string |a valid http link to describe DEXOperator which ends with "operator.json" defined in OIP-{xxx}，and its length should be less than 1024|
 
 Printed results:
 
