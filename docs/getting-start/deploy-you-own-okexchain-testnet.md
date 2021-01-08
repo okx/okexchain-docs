@@ -86,11 +86,8 @@ git clone https://github.com/okex/okexchain.git
 # Work from the SDK repo
 cd okexchain
 
-# Build the linux binary in ./build
-make build-linux
-
 # Build okexchain/node image
-make build-docker-okchainnode
+make build-docker-okexchainnode
 ```
 
 ### Run Your Testnet
@@ -101,7 +98,7 @@ To start a 4 node testnet run:
 make localnet-start
 ```
 
-This command creates a 4-node network using the okchaindnode image.
+This command creates a 4-node network using the okexchaindnode image.
 The ports for each node are found in this table:
 
 | Node ID     | P2P Port | RPC Port |
@@ -110,12 +107,6 @@ The ports for each node are found in this table:
 | `okchainnode1` | `26659`  | `26660`  |
 | `okchainnode2` | `26661`  | `26662`  |
 | `okchainnode3` | `26663`  | `26664`  |
-
-To update the binary, just rebuild it and restart the nodes:
-
-```
-make build-linux localnet-start
-```
 
 ### Configuration
 
