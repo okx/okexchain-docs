@@ -103,10 +103,10 @@ The ports for each node are found in this table:
 
 | Node ID     | P2P Port | RPC Port |
 | ----------- | -------- | -------- |
-| `okchainnode0` | `26656`  | `26657`  |
-| `okchainnode1` | `26659`  | `26660`  |
-| `okchainnode2` | `26661`  | `26662`  |
-| `okchainnode3` | `26663`  | `26664`  |
+| `okexchainnode0` | `26656`  | `26657`  |
+| `okexchainnode1` | `26659`  | `26660`  |
+| `okexchainnode2` | `26661`  | `26662`  |
+| `okexchainnode3` | `26663`  | `26664`  |
 
 ### Configuration
 
@@ -117,8 +117,6 @@ calling the `okexchaind testnet` command. This outputs a handful of files in the
 ```bash
 $ tree -L 3 build/
 build/
-├── okexchaincli
-├── okexchaind
 ├── gentxs
 │   ├── node0.json
 │   ├── node1.json
@@ -127,30 +125,29 @@ build/
 ├── node0
 │   ├── okexchaincli
 │   │   ├── key_seed.json
-│   │   └── keys
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 ├── node1
 │   ├── okexchaincli
-│   │   └── key_seed.json
+│   │   ├── key_seed.json
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 ├── node2
 │   ├── okexchaincli
-│   │   └── key_seed.json
+│   │   ├── key_seed.json
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 └── node3
     ├── okexchaincli
-    │   └── key_seed.json
+    │   ├── key_seed.json
+    │   └── keyring-test-okexchain
     └── okexchaind
-        ├── okexchaind.log
         ├── config
         └── data
 ```
@@ -163,7 +160,7 @@ Logs are saved under each `./build/nodeN/okexchaind/okexchaind.log`. You can als
 directly via Docker, for example:
 
 ```
-docker logs -f okchaindnode0
+docker logs -f okexchaindnode0
 ```
 
 ### Keys & Accounts
