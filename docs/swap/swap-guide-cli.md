@@ -22,7 +22,7 @@ $ okexchaincli tx swap create-pair --token [token]
 Example:
 
 ```shell
-okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.002okt
+okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.02okt
 {
   "height": "1243",
   "txhash": "FA10BF76AC2CEEC8B709D1ECE93698E8C82997D282C02930063DFB772FF8E452",
@@ -58,7 +58,7 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -75,7 +75,7 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -99,7 +99,7 @@ $ okexchaincli tx swap token --sell-amount [amount sellToken] --min-buy-amount [
 Example:
 
 ```shell
-okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.002okt
+okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.02okt
 {
   "height": "1483",
   "txhash": "5D56D443B51C8888EF5572763C261AAE42C2678796C51E1EAA6CCA5C286A711A",
@@ -136,7 +136,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -169,7 +169,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -198,7 +198,7 @@ $ okexchaincli tx swap add-liquidity --max-base-amount [amount token] --quote-am
 Example:
 
 ```shell
-okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.002okt
+okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.02okt
 
 {
   "height": "1281",
@@ -236,7 +236,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -269,7 +269,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -295,7 +295,7 @@ $ okexchaincli tx swap remove-liquidity --liquidity [amount] --min-base-amount [
 Example:
 
 ```shell
-okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.002okt
+okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.02okt
 {
   "height": "1620",
   "txhash": "B070469B65320A4C458A86B1FD5836D273C1B8B003DC59D04EDE8ED3D0709C5B",
@@ -332,7 +332,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -365,7 +365,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }

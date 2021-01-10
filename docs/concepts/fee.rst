@@ -45,7 +45,7 @@ e.g.
 
 .. code:: bash
 
-    okexchaincli tx send ... --fees=0.002okt
+    okexchaincli tx send ... --fees=0.02okt
 
 
 or

@@ -650,7 +650,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "fee",
-          "value": "10.00200000okt"
+          "value": "10.02000000okt"
         },
         {
           "key": "action",
@@ -679,7 +679,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -721,7 +721,7 @@ okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383q
         },
         {
           "key": "fee",
-          "value": "10.00200000okt"
+          "value": "10.02000000okt"
         },
         {
           "key": "action",
@@ -742,7 +742,7 @@ okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383q
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -881,7 +881,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "fee",
-          "value": "10.00200000okt"
+          "value": "10.02000000okt"
         },
         {
           "key": "action",
@@ -910,7 +910,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -952,7 +952,7 @@ okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpm
         },
         {
           "key": "fee",
-          "value": "10.00200000okt"
+          "value": "10.02000000okt"
         },
         {
           "key": "action",
@@ -973,7 +973,7 @@ okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpm
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -1179,7 +1179,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -1212,7 +1212,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
@@ -1302,7 +1302,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "fee",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         },
         {
           "key": "sender",
@@ -1335,7 +1335,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "amount",
-          "value": "0.00200000okt"
+          "value": "0.02000000okt"
         }
       ]
     }
