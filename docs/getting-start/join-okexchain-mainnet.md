@@ -72,7 +72,7 @@ Note we use the `latest` directory in the [mainnet repo](https://github.com/okex
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind start
+okexchaind start --chain-id okexchain-66
 ```
 
 ### Add Seed Nodes
@@ -132,7 +132,7 @@ Now it is time to upgrade the software:
 ```bash
 git clone https://github.com/okex/okexchain.git
 cd okexchain
-git fetch --all && git checkout master
+git fetch --all && git checkout vx.y.z
 make install
 ```
 
