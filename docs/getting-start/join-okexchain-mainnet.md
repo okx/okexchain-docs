@@ -44,7 +44,7 @@ You can edit this `moniker` later, in the `~/.okexchaind/config/config.toml` fil
 moniker = "<your_custom_moniker>"
 ```
 
-You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices:
+You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices("0.000000001okt" is recommended):
 
 ```
 # This is a TOML config file.
@@ -54,9 +54,9 @@ You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable 
 
 # The minimum gas prices a validator is willing to accept for processing a
 # transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (Our recommended quantity is  10^-7 okt).
+# specified in this config (Our recommended quantity is  10^-9 okt).
 
-minimum-gas-prices = ""
+minimum-gas-prices = "0.000000001okt"
 ```
 
 Your full node has been initialized! 
@@ -77,13 +77,13 @@ okexchaind start
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.okexchaind/config/config.toml`. The [mainnet repo](https://github.com/okex/mainnet) contains links to some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.okexchaind/config/config.toml`. The [mainnet repo's](https://github.com/okex/mainnet) README.md contains some seed nodes.
 
-You can add `seeds` in the `~/.okexchaind/config/config.toml` file:
+You can add those seeds nodes to the `seeds` filed in the `~/.okexchaind/config/config.toml` file:
 
 ```toml
 # Comma separated list of seed nodes to connect to
-seeds = "b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:36656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:36656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:36656"
+seeds = "e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@35.177.8.240:26656,c8f32b793871b56a11d94336d9ce6472f893524b@18.167.16.85:26656"
 ```
 
 For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
