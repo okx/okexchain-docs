@@ -19,7 +19,6 @@ In case you need to use or deploy okexchain as a container you could skip the `b
 * `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okexchaind:/root/.okexchaind okchain/node:$TAG okexchaind start`
 * ...
 * `docker run -it -v ~/.okexchaind:/root/.okexchaind okchain/node:$TAG okexchaincli version`
-```
 
 The same images can be used to build your own docker-compose stack.
 
