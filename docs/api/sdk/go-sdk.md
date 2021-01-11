@@ -176,6 +176,26 @@ type TransferUnit struct {
 }
 ```
 
+#### 1.3 Order utils function
+##### 1.3.1 Filter the order IDs from the new order's tx response
+
+```go
+func GetOrderIDsFromResponse(txResp *sdk.TxResponse) (orderIDs []string, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| txResp  | *sdk.TxResponse |the pointer of the new order's tx response|
+
+Printed results:
+
+```go
+// orderID slice
+[]string
+```
+
 ---
 
 ### 2 Auth module
@@ -1434,3 +1454,175 @@ type TxResponse struct {
     Timestamp string
 }
 ```
+
+---
+
+### 8 Order module
+
+All order functions are defined in the package `order` under path `okexchain-go-sdk/module/order`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Order().QueryDepthBook(productName)
+```
+
+#### 8.1 Query
+##### 8.1.1 Get the current depth book info of a specific product
+
+```go
+func (oc orderClient) QueryDepthBook(product string) (depthBook types.BookRes, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| product  | string |the name of target token pair|
+
+Printed results:
+
+```go
+// BookRes
+type BookRes struct {
+    Asks []BookResItem
+    Bids []BookResItem
+}
+
+// BookResItem - field of BookRes
+type BookResItem struct {
+    Price    string
+    Quantity string
+}
+```
+
+##### 8.1.2 Get the detail info of an order by its order ID
+
+```go
+func (oc orderClient) QueryOrderDetail(orderID string) (orderDetail types.OrderDetail, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| orderID  | string |target order ID|
+
+Printed results:
+
+```go
+// Order
+type Order struct {
+    TxHash            string
+    OrderID           string
+    Sender            sdk.AccAddress
+    Product           string
+    Side              string
+    Price             sdk.Dec
+    Quantity          sdk.Dec
+    Status            int64
+    FilledAvgPrice    sdk.Dec
+    RemainQuantity    sdk.Dec
+    RemainLocked      sdk.Dec
+    Timestamp         int64
+    OrderExpireBlocks int64
+    FeePerBlock       sdk.SysCoin
+    ExtraInfo         string
+}
+```
+
+#### 8.2 Transaction
+##### 8.2.1 Place orders with some detail info
+
+```go
+func (oc orderClient) NewOrders(fromInfo keys.Info, passWd, products, sides, prices, quantities, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| products  | string |target products in order|
+| sides  | string |the sides of each order in order. Side is the choice between "BUY" and "SELL"|
+| prices  | string |the prices in order|
+| quantities  | string |the quantities in order|
+
+for example:
+
+```go
+	_, _ = cli.Order().NewOrders(info, defaultPassWd, "usdk_okt,eth_okt,btc_okt", "SELL,BUY,SELL", "2,3,4", "1024.1024,50.001,50.001", memo, accAccountNumber, accSequenceNumber)
+```
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+Note:
+The order IDs will be returned in TxResponse's Log. It's recommended to use order utils function to filter the order IDs out at 1.3.1.
+
+##### 8.2.2 Cancel orders by orderIDs
+
+```go
+func (oc orderClient) CancelOrders(fromInfo keys.Info, passWd, orderIDs, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| orderIDs  | string |the set of order IDs to cancel the orders|
+
+for example:
+
+```go
+    _, _ = cli.Order().CancelOrders(info, defaultPassWd, "ID0000002032-1,ID0000002032-2", memo, accAccountNumber, accSequenceNumber)
+```
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
