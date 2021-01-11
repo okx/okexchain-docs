@@ -1866,3 +1866,237 @@ type Transaction struct {
     Timestamp int64
 }
 ```
+
+---
+
+### 10 Ammswap module
+
+All ammswap functions are defined in the package `ammswap` under path `okexchain-go-sdk/module/ammswap`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.AmmSwap().QuerySwapTokenPairs()
+```
+
+#### 10.1 Query
+##### 10.1.1 Get all the swap token pairs
+
+```go
+func (ac ammswapClient) QuerySwapTokenPairs() (exchanges []types.SwapTokenPair, err error)
+```
+
+Printed results:
+
+```go
+// SwapTokenPair slice
+type SwapTokenPair struct {
+    QuotePooledCoin sdk.SysCoin
+    BasePooledCoin  sdk.SysCoin
+    PoolTokenName   string
+}
+```
+
+##### 10.1.2 Get a specific swap token pair
+
+```go
+func (ac ammswapClient) QuerySwapTokenPair(token string) (exchange types.SwapTokenPair, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| token  | string |the name of target swap token pair|
+
+Printed results:
+
+```go
+// swap token pair info
+type SwapTokenPair struct {
+    QuotePooledCoin sdk.SysCoin
+    BasePooledCoin  sdk.SysCoin
+    PoolTokenName   string
+}
+```
+
+##### 10.1.3 Get how much token would get from a swap pool
+
+```go
+func (ac ammswapClient) QueryBuyAmount(tokenToSellStr, tokenDenomToBuy string) (amount sdk.Dec, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| tokenToSellStr  | string |the amount of a given token to sell|
+| tokenDenomToBuy  | string |target token name to buy|
+
+Printed results:
+
+```go
+// amount of target token to buy
+sdk.Dec
+```
+
+#### 10.2 Transaction
+##### 10.2.1 Create a token pair in swap module
+
+```go
+CreateExchange(fromInfo keys.Info, passWd, baseToken, quoteToken, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| baseToken  | string |the base token name required to create an AMM swap pair|
+| quoteToken  | string |the quote token name required to create an AMM swap pair|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 10.2.2 Add the number of liquidity of a token pair
+
+```go
+func (ac ammswapClient) AddLiquidity(fromInfo keys.Info, passWd, minLiquidity, maxBaseAmount, quoteAmount, deadlineDuration, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| minLiquidity  | string |minimum number of sender will mint if total pool token supply is greater than 0|
+| maxBaseAmount  | string |maximum number of base amount deposited. Deposits max amount if total pool token supply is 0|
+| quoteAmount  | string |the number of quote amount to add liquidity|
+| deadlineDuration  | duration after which this transaction can no longer be executed such as "300ms", "1.5h" or "2h45m". valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h"|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 10.2.3 Remove the number of liquidity of a token pair
+
+```go
+func (ac ammswapClient) RemoveLiquidity(fromInfo keys.Info, passWd, liquidity, minBaseAmount, minQuoteAmount, deadlineDuration, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| liquidity  | string | number of liquidity to burn|
+| minBaseAmount  | string |minimum number of base amount withdrawn|
+| minQuoteAmount  | string |minimum number of quote amount withdrawn|
+| deadlineDuration  | duration after which this transaction can no longer be executed such as "300ms", "1.5h" or "2h45m". valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h"|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 10.2.4 Swap the number of specific token with another type of token
+
+```go
+func (ac ammswapClient) TokenSwap(fromInfo keys.Info, passWd, soldTokenAmount, minBoughtTokenAmount, recipient, deadlineDuration, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| soldTokenAmount  | string | amount of token expected to sell|
+| minBoughtTokenAmount  | string |minimum amount of token expected to buy|
+| recipient  | string |account address in bech32 to receive the amount bought|
+| deadlineDuration  | duration after which this transaction can no longer be executed such as "300ms", "1.5h" or "2h45m". valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h"|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
