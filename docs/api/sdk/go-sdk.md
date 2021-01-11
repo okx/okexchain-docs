@@ -2100,3 +2100,360 @@ type TxResponse struct {
     Timestamp string
 }
 ```
+
+---
+
+### 11 Farm module
+
+All farm functions are defined in the package `farm` under path `okexchain-go-sdk/module/farm`. They can be invoked by the way like:
+
+```go
+import "github.com/okex/okexchain-go-sdk"
+
+config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okt", 200000, "")
+cli := gosdk.NewClient(config)
+_, _ = cli.Farm().QueryPools()
+```
+
+#### 11.1 Query
+##### 11.1.1 Get all farm pools info
+
+```go
+func (fc farmClient) QueryPools() (farmPools []types.FarmPool, err error) 
+```
+
+Printed results:
+
+```go
+// FarmPool slice
+type FarmPool struct {
+    Owner                   sdk.AccAddress
+    Name                    string
+    MinLockAmount           sdk.SysCoin
+    DepositAmount           sdk.SysCoin
+    TotalValueLocked        sdk.SysCoin
+    YieldedTokenInfos       YieldedTokenInfos
+    TotalAccumulatedRewards sdk.SysCoins
+}
+```
+
+##### 11.1.2 Get the farm pool info by its pool name
+
+```go
+func (fc farmClient) QueryPool(poolName string) (farmPool types.FarmPool, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| poolName  | string |pool name|
+
+Printed results:
+
+```go
+// pool info
+type FarmPool struct {
+    Owner                   sdk.AccAddress
+    Name                    string
+    MinLockAmount           sdk.SysCoin
+    DepositAmount           sdk.SysCoin
+    TotalValueLocked        sdk.SysCoin
+    YieldedTokenInfos       YieldedTokenInfos
+    TotalAccumulatedRewards sdk.SysCoins
+}
+```
+
+##### 11.1.3 Get the name of pools that an account has locked coins in
+
+```go
+func (fc farmClient) QueryAccount(accAddrStr string) (poolNames []string, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| accAddrStr  | string |target account address in bech32|
+
+Printed results:
+
+```go
+// pool names that the target account has locked coins in
+[]string
+```
+
+##### 11.1.4 Get all addresses of accounts that have locked coins in a pool
+
+```go
+func (fc farmClient) QueryAccountsLockedTo(poolName string) (accAddrs []sdk.AccAddress, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| poolName  | string |pool name|
+
+Printed results:
+
+```go
+// address accounts
+[]sdk.AccAddress
+```
+
+##### 11.1.5 Get the locked info of an account in a specific pool
+
+```go
+func (fc farmClient) QueryLockInfo(poolName, accAddrStr string) (lockInfo types.LockInfo, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| poolName  | string |pool name|
+| accAddrStr  | string |target account address in bech32|
+
+Printed results:
+
+```go
+// locked info
+type LockInfo struct {
+    Owner            sdk.AccAddress
+    PoolName         string
+    Amount           sdk.SysCoin
+    StartBlockHeight int64
+    ReferencePeriod  uint64
+}
+```
+
+#### 11.2 Transaction
+##### 11.2.1 Create a farm pool
+
+```go
+func (fc farmClient) CreatePool(fromInfo keys.Info, passWd, poolName, minLockAmountStr, yieldToken, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name|
+| minLockAmountStr  | string |minimum amount of token to lock in this pool|
+| yieldToken  | string |the symbol of token as yield|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 11.2.2 Destroy a farm pool
+
+```go
+func (fc farmClient) DestroyPool(fromInfo keys.Info, passWd, poolName, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name to destroy|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 11.2.3 Provide a number of yield tokens into a pool
+
+```go
+func (fc farmClient) Provide(fromInfo keys.Info, passWd, poolName, amountStr, yieldPerBlockStr string, startHeightToYield int64, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name|
+| amountStr  | string |amount of yield token to provide to the target farm pool|
+| yieldPerBlockStr  | string |amount of yield token to release per block|
+| startHeightToYield  | int64 |the height to start to release yield token|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 11.2.4 Lock a number of tokens for yield farming
+
+```go
+func (fc farmClient) Lock(fromInfo keys.Info, passWd, poolName, amountStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name|
+| amountStr  | string |amount of token to lock to the target farm pool|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 11.2.5 Unlock a number of tokens from the farm pool and claims the current yield
+
+```go
+func (fc farmClient) Unlock(fromInfo keys.Info, passWd, poolName, amountStr, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error) 
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name|
+| amountStr  | string |amount of token to unlock from the target farm pool|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
+
+##### 11.2.6 Claim yield farming rewards
+
+```go
+func (fc farmClient) Claim(fromInfo keys.Info, passWd, poolName, memo string, accNum, seqNum uint64) (resp sdk.TxResponse, err error)
+```
+
+Enter parameters:
+
+|  Name   | Type  |Mark|
+|  ----  | ----  |----|
+| fromInfo  | keys.Info |sender's key info|
+| passWd  | string |sender's password|
+| memo  | string |memo to note|
+| accNum  | uint64 |account number of sender's account on chain|
+| seqNum  | uint64 |sequence number of sender's account on chain|
+| poolName  | string |pool name|
+
+Printed results:
+
+```go
+// Transaction response containing relevant tx data and metadata
+type TxResponse struct {
+    Height    int64
+    TxHash    string
+    Codespace string
+    Code      uint32
+    Data      string
+    RawLog    string
+    Logs      ABCIMessageLogs
+    Info      string
+    GasWanted int64
+    GasUsed   int64
+    Tx        Tx
+    Timestamp string
+}
+```
