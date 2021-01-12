@@ -37,7 +37,7 @@ okexchaind init <your_custom_moniker>
 Monikers can contain only ASCII characters. Using Unicode characters will render your node unreachable.
 
 
-You can edit this `moniker` later, in the `~/.okexchaind/config/config.toml` file:
+Or you can also edit this `moniker` later, in the `~/.okexchaind/config/config.toml` file:
 
 ```toml
 # A custom human readable name for this node
@@ -72,7 +72,7 @@ Note we use the `latest` directory in the [mainnet repo](https://github.com/okex
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind start --chain-id okexchain-66
+okexchaind validate-genesis
 ```
 
 ### Add Seed Nodes
@@ -93,7 +93,7 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-okexchaind start
+okexchaind start --chain-id okexchain-66
 ```
 
 Check that everything is running smoothly:
