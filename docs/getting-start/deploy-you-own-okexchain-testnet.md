@@ -15,15 +15,10 @@ Supporting code can be found in the [networks directory](https://github.com/okex
 
 In case you need to use or deploy okexchain as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
-```bash
-docker run -it -v ~/.okexchaind:/root/.okexchaind -v ~/.okexchaincli:/root/.okexchaincli okexchain/node:$TAG okexchaind init
-
-docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okexchaind:/root/.okexchaind -v ~/.okexchaincli:/root/.okexchaincli okexchain/node:$TAG okexchaind start
-
-...
-
-docker run -it -v ~/.okexchaind:/root/.okexchaind -v ~/.okexchaincli:/root/.okexchaincli okexchain/node:$TAG okexchaincli version
-```
+* `docker run -it -v ~/.okexchaind:/root/.okexchaind okchain/node:$TAG okexchaind init mynode`
+* `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okexchaind:/root/.okexchaind okchain/node:$TAG okexchaind start`
+* ...
+* `docker run -it -v ~/.okexchaind:/root/.okexchaind okchain/node:$TAG okexchaincli version`
 
 The same images can be used to build your own docker-compose stack.
 
@@ -43,7 +38,7 @@ This guide helps you create a single validator node that runs a network locally 
 cd $HOME
 
 # Initialize the genesis.json file that will help you to bootstrap the network
-okexchaind init --chain-id=okexchaintestnet-1 okexchaintestnet-1
+okexchaind init <your_custom_moniker> --chain-id testchain-1
 
 # Create a key to hold your validator account
 okexchaincli keys add validator
@@ -60,7 +55,7 @@ okexchaind gentx --name validator
 okexchaind collect-gentxs
 
 # Now its safe to start `okexchaind`
-okexchaind start testnet --chain-id okexchaintestnet-1 --keyring-backend test
+okexchaind start --chain-id testchain-1
 ```
 
 This setup puts all the data for `okexchaind` in `~/.okexchaind`. You can examine the genesis file you created at `~/.okexchaind/config/genesis.json`. With this configuration `okexchaincli` is also ready to use and has an account with tokens (both staking and custom).
@@ -86,11 +81,8 @@ git clone https://github.com/okex/okexchain.git
 # Work from the SDK repo
 cd okexchain
 
-# Build the linux binary in ./build
-make build-linux
-
 # Build okexchain/node image
-make build-docker-okchainnode
+make build-docker-okexchainnode
 ```
 
 ### Run Your Testnet
@@ -101,21 +93,15 @@ To start a 4 node testnet run:
 make localnet-start
 ```
 
-This command creates a 4-node network using the okchaindnode image.
+This command creates a 4-node network using the okexchaindnode image.
 The ports for each node are found in this table:
 
 | Node ID     | P2P Port | RPC Port |
 | ----------- | -------- | -------- |
-| `okchainnode0` | `26656`  | `26657`  |
-| `okchainnode1` | `26659`  | `26660`  |
-| `okchainnode2` | `26661`  | `26662`  |
-| `okchainnode3` | `26663`  | `26664`  |
-
-To update the binary, just rebuild it and restart the nodes:
-
-```
-make build-linux localnet-start
-```
+| `okexchainnode0` | `26656`  | `26657`  |
+| `okexchainnode1` | `26659`  | `26660`  |
+| `okexchainnode2` | `26661`  | `26662`  |
+| `okexchainnode3` | `26663`  | `26664`  |
 
 ### Configuration
 
@@ -126,8 +112,6 @@ calling the `okexchaind testnet` command. This outputs a handful of files in the
 ```bash
 $ tree -L 3 build/
 build/
-├── okexchaincli
-├── okexchaind
 ├── gentxs
 │   ├── node0.json
 │   ├── node1.json
@@ -136,30 +120,29 @@ build/
 ├── node0
 │   ├── okexchaincli
 │   │   ├── key_seed.json
-│   │   └── keys
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 ├── node1
 │   ├── okexchaincli
-│   │   └── key_seed.json
+│   │   ├── key_seed.json
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 ├── node2
 │   ├── okexchaincli
-│   │   └── key_seed.json
+│   │   ├── key_seed.json
+│   │   └── keyring-test-okexchain
 │   └── okexchaind
-│       ├── okexchaind.log
 │       ├── config
 │       └── data
 └── node3
     ├── okexchaincli
-    │   └── key_seed.json
+    │   ├── key_seed.json
+    │   └── keyring-test-okexchain
     └── okexchaind
-        ├── okexchaind.log
         ├── config
         └── data
 ```
@@ -172,7 +155,7 @@ Logs are saved under each `./build/nodeN/okexchaind/okexchaind.log`. You can als
 directly via Docker, for example:
 
 ```
-docker logs -f okchaindnode0
+docker logs -f okexchaindnode0
 ```
 
 ### Keys & Accounts
