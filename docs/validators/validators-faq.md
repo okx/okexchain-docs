@@ -72,7 +72,7 @@ After a validator is created with a `create-validator` transaction, they can be 
 
 ### Is there a minimum amount of okts that must be delegated to become an active (bonded) validator?
 
-The minimum is `1 okt`.
+The minimum is `10000 okt`.
 
 ### How will delegators choose their validators?
 
