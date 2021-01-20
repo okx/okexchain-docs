@@ -1,4 +1,4 @@
-# General - Create Wallet
+# Create Wallet
 ### Key Management
 This article is a guide about key management strategy on client side of your Decentralised Application on OkExChain
 

@@ -1,4 +1,4 @@
-# Blockchain Details - RPC
+# OKExChain RPC
 
 Tokyo domain：
 
