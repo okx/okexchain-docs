@@ -136,14 +136,20 @@ Contents
    :caption: OKExChain Developers
 
    developers/general/create-wallet
-   
+   developers/general/smart-contract
+   developers/general/remix
+   developers/general/web3js
+   developers/general/truffle
    developers/deploy/remix
    developers/deploy/truffle
    developers/deploy/verify-contract
    developers/deploy/verify-proxy-contract
+   developers/tools/faucet
+   developers/tools/gas-price
    developers/OIP20Tokens/introduction
    developers/OIP20Tokens/issue-token
    developers/blockchainDetail/okexchain-fullnode
+   developers/blockchainDetail/rpc
 
 .. toctree::
    :maxdepth: 3
