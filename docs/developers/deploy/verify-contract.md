@@ -1,4 +1,5 @@
-#Verify Your Contract on BscScan
+# Verify Contract
+# Verify Your Contract on BscScan
 The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 
 Verified using Truffle
@@ -8,7 +9,7 @@ https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
 
 GitHub Project:
 https://github.com/huangsuyu/verify-example
-###Truffle
+### Truffle
 Truffle has an BscScan plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
 
 You need to deploy with Truffle to verify with the Truffle verify plugin.

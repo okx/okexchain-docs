@@ -132,7 +132,7 @@ Contents
    getting-start/install-faq
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
    :caption: OKExChain Developers
 
    developers/general/create-wallet

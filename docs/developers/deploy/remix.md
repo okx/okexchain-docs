@@ -1,8 +1,9 @@
-#Using Remix
+# Remix
+# Using Remix
 
 Deploys a OIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
 This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
-###Setting up [Remix IDE](https://remix.ethereum.org/)
+### Setting up [Remix IDE](https://remix.ethereum.org/)
 - Remix is an online IDE to develop smart contracts.
 - You need to choose Solidity Compiler and Deploy and Run Transactions.
 .. figure:: ./img/okexchain-image.jpg
@@ -11,7 +12,7 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Go to File Explorers, And Create a new file, Name it MegaCoin.sol
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
-###The smart contract
+### The smart contract
 - Create new contract OIP20Tokens.sol and copy contract code from the bep20 token template [here](https://docs.binance.org/smart-chain/developer/BEP20Token.template)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
@@ -20,7 +21,7 @@ The first line, `pragma solidity ^0.5.16` specifies that the source code is for 
 
 A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
 
-###Compile Smart Contract
+### Compile Smart Contract
 - Step1: Click button to switch to compile page
 - Step2: Select “OIP20Tokens” contract
 - Step3: Enable “Auto compile” and “optimization”

@@ -1,5 +1,6 @@
-#Using Truffle
-###Setting up the development environment
+# Truffle
+# Using Truffle
+### Setting up the development environment
 There are a few technical requirements before we start. Please install the following: Requirements:
 - Windows, Linux or Mac OS X
 - [Node.js v8.9.4 LTS or later](https://nodejs.org/en/)
@@ -8,7 +9,7 @@ There are a few technical requirements before we start. Please install the follo
 Recommendations for Windows
 
 If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.
-###Installing
+### Installing
 Once we have those installed, we only need one command to install Truffle:
 
 ```
@@ -16,7 +17,7 @@ npm install -g truffle
 ```
 To verify that Truffle is installed properly, type `truffle version` on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-###Create A Project
+### Create A Project
 The first step is to create a Truffle project. We'll use the *MegaCoin as an example, which creates a token that can be transferred between accounts:
 - Create a new directory for your Truffle project
 ```
@@ -33,10 +34,10 @@ Once this operation is completed, you'll now have a project structure with the f
 - test/: Directory for test files for testing your application and contracts
 - truffle-config.js: Truffle configuration file
 
-###Create Contract
+### Create Contract
 You can write your own smart contract or download the BEP20 token smart contract template.
 
-###Compile Contract
+### Compile Contract
 To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
 ```
 truffle compile
@@ -85,7 +86,7 @@ module.exports = {
 }
 ```
 Notice, it requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.
-###Deploying on OKEXChain Network
+### Deploying on OKEXChain Network
 Run this command in root of the project directory:
 ```
 $ truffle migrate --network testnet

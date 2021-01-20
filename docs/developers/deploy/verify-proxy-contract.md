@@ -1,7 +1,8 @@
-#How to Verify Proxy Contract
+# Verify Proxy Contract
+# How to Verify Proxy Contract
 Please learn how to deploy an upgradable OIP20 contract here
-###Flatten your contract
-####Install flattener
+### Flatten your contract
+#### Install flattener
 ```npm install truffle-flattener -g```
 
 Run the following command:
@@ -9,8 +10,8 @@ Run the following command:
 $ truffle-flattener BEP20TokenImplementation.sol > BEP20TokenImplementationFlattened.sol
 $ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.sol"
 ```
-###Compile and deploy your contract with Remix
-####Compile Implementation contract
+### Compile and deploy your contract with Remix
+#### Compile Implementation contract
 - Open Remix IDE:[https://remix.ethereum.org](https://remix.ethereum.org)
 - Select solidity language
 - Create new contract OIP20Token.sol and copy contract code from flattened OIP20TokenImplementationFlattened.sol
@@ -19,7 +20,7 @@ $ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.s
 - Select “OIP20TokenImplementation” contract
 - Enable “Auto compile” and “optimization”
 - Click “ABI” to copy the contract abi and save it.
-###Deploy the implementation contract
+### Deploy the implementation contract
 - Select “Injected Web3”
 - Select “OIP20TokenImplementation” contract
 - Click the “Deploy” button and Metamask will pop up
@@ -31,13 +32,13 @@ $ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.s
 ```0xef3ebcb800000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000f42400000000000000000000000000000000000000000000000000000000000000001000000000000000000000000fc41d5571120442d1bb82cea0884966e543cb78b000000000000000000000000000000000000000000000000000000000000000548656c6c6f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000548454c4c4f000000000000000000000000000000000000000000000000000000```
 - Confirm your transaction in MetaMask
 ![avatar](../../img/verify-proxy-contract-02.png)
-###Compile Proxy Contract
+### Compile Proxy Contract
 - Create new contract proxy.sol and copy contract code from flattened
 `OIP20UpgradeableProxyFlattened.sol`. Here is and [example]()
 - Compile the proxy contractClick on this button to switch to the compile page
 - Select “OIP20UpgradeableProxy” contract
 - Enable “Auto compile” and “optimization”Click “ABI” to copy the contract abi and save it.
-###Deploy the proxy contract
+### Deploy the proxy contract
 - Select “Injected Web3”Select “OIP20UpgradeableProxy.sol” contract
 - Fill in the parameter
 ![avatar](../../img/verify-proxy-contract-03.png)
@@ -45,7 +46,7 @@ Logic: The address of OIP20Implementation contract Admin: admin cannot be OIP20 
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up
 - Click the “confirm” button to sign and broadcast transaction to OKExChain.
-###Verify Proxy Contract on BscScan
+### Verify Proxy Contract on BscScan
 Note: The way to verify the BEP20TokenImplementation contract is the same as before.
 - Go to your contact page and click on “Verify and Publish”
 ![avatar](../../img/verify-proxy-contract-04.png)
@@ -60,7 +61,7 @@ Add all those 3 parameters as indicated. Then copy/paste the result.
 
 That’s it! You have verified your proxy contract.
 ![avatar](../../img/verify-proxy-contract-07.png)
-###Link these two contracts
+### Link these two contracts
 - Click on “More Options” and choose “is this a proxy”.
 ![avatar](../../img/verify-proxy-contract-08.png)
 - Verify your proxy address
