@@ -37,8 +37,8 @@ Or any of the following address ports:
 # mainnet
 http://okexchain-rpc1.okexcn.com:26657
 http://okexchain-rpc2.okexcn.com:26657
-http://okexchain-rpc1.okex.com:26657（需要科学上网）
-http://okexchain-rpc2.okex.com:26657（需要科学上网）
+http://okexchain-rpc1.okex.com:26657 (vpn required, if you are in mainland China)
+http://okexchain-rpc2.okex.com:26657 (vpn required, if you are in mainland China)
 ```
 
 
