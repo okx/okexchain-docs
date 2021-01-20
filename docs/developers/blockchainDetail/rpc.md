@@ -1,17 +1,17 @@
 # Blockchain Details - RPC
 
-东京 域名：
+Tokyo domain：
 
 okexchain-rpc2.okex.com
 
 okexchain-rpc2.okexcn.com
 
-香港 域名：
+Hong Kong domain：
 
 okexchain-rpc1.okex.com
 
 okexchain-rpc1.okexcn.com
 
-端口都是26657
+port is 26657
 
-`okex.com`结尾的域名需要翻墙才可以使用
+The domain name ending with `okex.com` needs a ladder to use
