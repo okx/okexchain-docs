@@ -134,12 +134,15 @@ Contents
 .. toctree::
    :maxdepth: 3
    :caption: OKExChain Developers
-   
-   developers/general
-   developers/deploy
-   developers/tools
-   developers/OIP20Tokens
-   developers/blockchainDetail
+
+   developers/general/create-wallet
+   developers/deploy/remix
+   developers/deploy/truffle
+   developers/deploy/verify-contract
+   developers/deploy/verify-proxy-contract
+   developers/OIP20Tokens/introduction
+   developers/OIP20Tokens/issue-token
+   developers/blockchainDetail/okexchain-fullnode
 
 
 .. toctree::
