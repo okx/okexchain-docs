@@ -1,39 +1,76 @@
-# Key Management
-This article is a guide about key management strategy on client side of your Decentralised Application on OkExChain
+#Verify Your Contract on BscScan
+The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 
-###Setup Web3
-`web3.js` is a javascript library that allows our client-side application to talk to the blockchain. We configure web3 to communicate via Metamask.
-`web3.js` doc is [here](https://web3js.readthedocs.io/en/v1.2.2/getting-started.html#adding-web3-js)
+Verified using Truffle
 
-###Connect to OkExChain network
-```javascript
-    // mainnet
-     const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
-    // testnet
-    const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+Example:
+https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
+
+GitHub Project:
+https://github.com/huangsuyu/verify-example
+###Truffle
+Truffle has an BscScan plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
+
+You need to deploy with Truffle to verify with the Truffle verify plugin.
+- Install the plugin
+
+```npm install -D truffle-plugin-verify```
+
+- Configure the plugin in `truffle-config.js`
 ```
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-###Set up account
-If the installation and instantiation of web3 was successful, the following should successfully return a random account:
-```javascript
-const account = web3.eth.accounts.create();
+// const infuraKey = "fj4jll3k.....";
+//
+const { mnemonic, BSCSCANAPIKEY} = require('./env.json');
+
+module.exports = {
+
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    bscscan: BSCSCANAPIKEY
+  },
+  networks: {
+
+    testnet: {
+        provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+        network_id: 97,
+        timeoutBlocks: 200,
+        confirmations: 5,
+        production: true    // Treats this network as if it was a public net. (default: false)
+    }
+  },
+
+  // Set default mocha options here, use special reporters etc.
+  mocha: {
+    timeout: 100000
+  },
+
+  // Configure your compilers
+  compilers: {
+    solc: {
+       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: false,
+         runs: 200
+       },
+       evmVersion: "byzantium"
+      }
+    },
+  },
+};
 ```
-
-###Recover account
-If you have backup the private key of your account, you can use it to restore your account.
-```javascript
-const account = web3.eth.accounts.privateKeyToAccount("$private-key")
+- Verify
 ```
-
-###Full Example
-```javascript
-const Web3 = require('web3');
-async function main() {
-
-    const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
-    const loader = setupLoader({ provider: web3 }).web3;
-
-    const account = web3.eth.accounts.create();
-    console.log(account);
-}
+truffle run verify OIP20Tokens@{contract-address} --network testnet
+```
+You should see the following output:
+```
+Verifying OIP20Tokens@0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
+Pass - Verified: https://testnet.bscscan.com/address/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf#contracts
+Successfully verified 1 contract(s).
 ```

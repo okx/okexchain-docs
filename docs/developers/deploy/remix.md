@@ -1,39 +1,51 @@
-# Key Management
-This article is a guide about key management strategy on client side of your Decentralised Application on OkExChain
+#Using Remix
 
-###Setup Web3
-`web3.js` is a javascript library that allows our client-side application to talk to the blockchain. We configure web3 to communicate via Metamask.
-`web3.js` doc is [here](https://web3js.readthedocs.io/en/v1.2.2/getting-started.html#adding-web3-js)
+Deploys a OIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
+This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
+###Setting up [Remix IDE](https://remix.ethereum.org/)
+- Remix is an online IDE to develop smart contracts.
+- You need to choose Solidity Compiler and Deploy and Run Transactions.
+.. figure:: ./img/okexchain-image.jpg
 
-###Connect to OkExChain network
-```javascript
-    // mainnet
-     const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
-    // testnet
-    const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
-```
+![avatar](../../img/remix-01.png)
+- Go to File Explorers, And Create a new file, Name it MegaCoin.sol
+- Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
-###Set up account
-If the installation and instantiation of web3 was successful, the following should successfully return a random account:
-```javascript
-const account = web3.eth.accounts.create();
-```
+###The smart contract
+- Create new contract OIP20Tokens.sol and copy contract code from the bep20 token template [here](https://docs.binance.org/smart-chain/developer/BEP20Token.template)
+- Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
+![avatar](../../img/remix-02.png)
 
-###Recover account
-If you have backup the private key of your account, you can use it to restore your account.
-```javascript
-const account = web3.eth.accounts.privateKeyToAccount("$private-key")
-```
+The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
-###Full Example
-```javascript
-const Web3 = require('web3');
-async function main() {
+A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
 
-    const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
-    const loader = setupLoader({ provider: web3 }).web3;
+###Compile Smart Contract
+- Step1: Click button to switch to compile page
+- Step2: Select “OIP20Tokens” contract
+- Step3: Enable “Auto compile” and “optimization”
+- Step4: Click “ABI” to copy the contract abi and save it.
+![avatar](../../img/remix-03.png)
 
-    const account = web3.eth.accounts.create();
-    console.log(account);
-}
-```
+Now, We have to deploy our smart contract on Binance Smart Chain Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](https://docs.binance.org/smart-chain/wallet/metamask.html).
+- Open Metamask and select Custom RPC from the networks dropdown
+- Go to setting page
+![avatar](../../img/remix-04.png)
+
+- Add a new network
+![avatar](../../img/remix-05.png)
+- Testnet * [RPC URLs](https://docs.binance.org/smart-chain/developer/rpc.html) * ChainID: 97 * Symbol: BNB * Block Explorer:
+https://www.oklink.com/okexchain-test
+- Mainnet * [RPC URLs](https://docs.binance.org/smart-chain/developer/rpc.html) * ChainID: okexchain-66 * Symbol: BNB * Block Explorer: 
+https://www.oklink.com/
+- Go ahead and click save
+- Copy your address from Metamask
+- Head over to [Faucet](https://www.okex.com/drawdex) and request test OKT
+- Now, let's Deploy the Smart Contract on okexchain Testnet
+- Select Injected Web3 in the Environment dropdown and your contract
+![avatar](../../img/remix-06.png)
+- Accept the Connection Request!
+![avatar](../../img/remix-07.png)
+- Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
+![avatar](../../img/remix-08.png)
+Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://testnet.bscscan.com/

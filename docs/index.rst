@@ -133,6 +133,16 @@ Contents
 
 .. toctree::
    :maxdepth: 3
+   :caption: OKExChain Developers
+   developers/general
+   developers/deploy
+   developers/tools
+   developers/OIP20Tokens
+   developers/blockchainDetail
+
+
+.. toctree::
+   :maxdepth: 3
    :caption: Swap
 
    swap/swap-overview
@@ -186,7 +196,6 @@ Contents
    concepts/periodic-auction
    concepts/upgrade-concept
    concepts/sentry-nodes
-
 
 .. toctree::
    :maxdepth: 3
