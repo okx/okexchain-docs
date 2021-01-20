@@ -23,14 +23,22 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okexchaincli config node <host>:<port>
 
-# example: okexchaincli config node tcp://35.176.62.211:26657
+# example: okexchaincli config node tcp://35.176.62.211:26657 (testnet)
+# example: okexchaincli config node http://okexchain-rpc1.okexcn.com:26657 (mainnet)
 ```
 
 Or any of the following address ports:
 ```
+# testnet
 35.176.62.211:26657
 18.132.46.47:26657
 15.164.104.138:26657
+
+# mainnet
+http://okexchain-rpc1.okexcn.com:26657 (HongKong)
+http://okexchain-rpc2.okexcn.com:26657 (Tokyo)
+http://okexchain-rpc1.okex.com:26657 (HongKong. vpn required, if you are in mainland China)
+http://okexchain-rpc2.okex.com:26657 (Tokyo. vpn required, if you are in mainland China)
 ```
 
 
@@ -47,7 +55,11 @@ okexchaincli config trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
+# testnet
 okexchaincli config chain-id okexchain-65
+
+# mainnet
+okexchaincli config chain-id okexchain-66
 ```
 
 Set the output format of okexchaincli request response
