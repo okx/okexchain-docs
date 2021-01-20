@@ -1,5 +1,5 @@
 # Create Wallet
-# Key Management
+### Key Management
 This article is a guide about key management strategy on client side of your Decentralised Application on OkExChain
 
 ### Setup Web3

@@ -1,5 +1,5 @@
 # Verify Proxy Contract
-# How to Verify Proxy Contract
+### How to Verify Proxy Contract
 Please learn how to deploy an upgradable OIP20 contract here
 ### Flatten your contract
 #### Install flattener

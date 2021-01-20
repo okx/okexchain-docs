@@ -1,5 +1,5 @@
 # Introduction
-# OIP20 Token
+### OIP20 Token
 A OIP20 token must implement the interface IOIP20 in IOIP20.sol. This is a template contract OIP20Token.template. Users just need to fill in _name, _symbol, _decimals and _totalSupply according to their own requirements:
 ```
   constructor() public {
