@@ -144,7 +144,6 @@ Contents
    developers/OIP20Tokens/issue-token
    developers/blockchainDetail/okexchain-fullnode
 
-
 .. toctree::
    :maxdepth: 3
    :caption: Swap
