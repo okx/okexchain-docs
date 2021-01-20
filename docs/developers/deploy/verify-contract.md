@@ -1,4 +1,4 @@
-# Verify Contract
+# Deploy - Verify Contract
 ### Verify Your Contract on BscScan
 The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 

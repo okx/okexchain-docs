@@ -136,7 +136,7 @@ Contents
    :caption: OKExChain Developers
 
    developers/general/create-wallet
-   `smart contract <https://solidity.readthedocs.io/en/v0.7.1/>`__
+   
    developers/deploy/remix
    developers/deploy/truffle
    developers/deploy/verify-contract

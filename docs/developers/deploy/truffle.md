@@ -1,4 +1,4 @@
-# Truffle
+# Deploy - Truffle
 ### Using Truffle
 ### Setting up the development environment
 There are a few technical requirements before we start. Please install the following: Requirements:
