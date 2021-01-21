@@ -6,11 +6,10 @@ Verified using Truffle
 
 <!--Example:
 https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
--->
 GitHub Project:
-https://github.com/huangsuyu/verify-example
+https://github.com/huangsuyu/verify-example-->
 ### Truffle
-Truffle has an BscScan plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
+Truffle has an OKLink plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
 
 You need to deploy with Truffle to verify with the Truffle verify plugin.
 - Install the plugin
@@ -23,7 +22,7 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 // const infuraKey = "fj4jll3k.....";
 //
-const { mnemonic, BSCSCANAPIKEY} = require('./env.json');
+const { mnemonic, OKLinkPIKEY} = require('./env.json');
 
 module.exports = {
 
@@ -31,12 +30,12 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    bscscan: BSCSCANAPIKEY
+    bscscan: OKLinkPIKEY
   },
   networks: {
 
     testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+        provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
         network_id: 97,
         timeoutBlocks: 200,
         confirmations: 5,
@@ -70,8 +69,3 @@ module.exports = {
 truffle run verify OIP20Tokens@{contract-address} --network testnet
 ```
 You should see the following output:
-```
-Verifying OIP20Tokens@0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
-<!--Pass - Verified: https://testnet.bscscan.com/address/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf#contracts-->
-Successfully verified 1 contract(s).
-```

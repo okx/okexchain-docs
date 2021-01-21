@@ -7,8 +7,8 @@ Please learn how to deploy an upgradable OIP20 contract <!--here-->
 
 Run the following command:
 ```
-$ truffle-flattener BEP20TokenImplementation.sol > BEP20TokenImplementationFlattened.sol
-$ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.sol"
+$ truffle-flattener OIP20TokenImplementation.sol > OIP20TokenImplementationFlattened.sol
+$ truffle-flattener OIP20UpgradeableProxy.sol > OIP20UpgradeableProxyFlattened.sol"
 ```
 ### Compile and deploy your contract with Remix
 #### Compile Implementation contract

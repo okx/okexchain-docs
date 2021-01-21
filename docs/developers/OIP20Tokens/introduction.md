@@ -18,8 +18,6 @@ Then users can use [Remix IDE](https://remix.ethereum.org/) and [Metamask](https
 Connect to OKEXChain's public RPC endpoint
 ```
 const Web3 = require('web3');
-<!--// mainnet
-const web3 = new Web3('https://bsc-dataseed1.binance.org:443');-->
 
 // testnet
 const web3 = new Web3('http://13.230.73.12:8545');
