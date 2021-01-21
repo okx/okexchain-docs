@@ -133,7 +133,7 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: OKExChain Developers
+   :caption: Developers
 
    developers/general/index
    developers/deploy/index
