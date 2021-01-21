@@ -1,6 +1,6 @@
 # Create Wallet
 ### Key Management
-This article is a guide about key management strategy on client side of your Decentralised Application on OkExChain
+This article is a guide about key management strategy on client side of your Decentralised Application on OKExChain
 
 ### Setup Web3
 `web3.js` is a javascript library that allows our client-side application to talk to the blockchain. We configure web3 to communicate via Metamask.
