@@ -1,4 +1,4 @@
-# Deploy - Remix
+# Remix
 ### Using Remix
 
 Deploys a OIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
