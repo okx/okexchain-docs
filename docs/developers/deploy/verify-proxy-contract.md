@@ -41,7 +41,7 @@ $ truffle-flattener OIP20UpgradeableProxy.sol > OIP20UpgradeableProxyFlattened.s
 ### Deploy the proxy contract
 - Select “Injected Web3”Select “OIP20UpgradeableProxy.sol” contract
 - Fill in the parameter
-![avatar](../../img/verify-proxy-contract-03.png)
+<!--![avatar](../../img/verify-proxy-contract-03.png)-->
 Logic: The address of OIP20Implementation contract Admin: admin cannot be OIP20 token owner
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up
