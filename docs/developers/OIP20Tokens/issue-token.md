@@ -6,7 +6,7 @@ Compile and Deploy OIP20 Contract
 ![avatar](../../img/issue-token-01.png)
 1.Select solidity language
 ![avatar](../../img/issue-token-02.png)
-1.Create new contract OIP20Token.sol and copy contract code from the oip20 token template here
+1.Create new contract OIP20Token.sol and copy contract code from the oip20 token template [here](https://github.com/okex/OIPs/blob/master/docs/final/OIP-20.md)
 
 2.Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/issue-token-03.png)

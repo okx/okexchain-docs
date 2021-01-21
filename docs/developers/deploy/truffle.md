@@ -131,5 +131,5 @@ Summary
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
 Congratulations! You have successfully deployed OIP20 Smart Contract. Now you can interact with the Smart Contract.
-You can check the deployment status here: https://okexbeta.bafang.com/ or https://okexbeta.bafang.com/
+You can check the deployment status here: [https://www.oklink.com/](https://www.oklink.com/) or [https://www.oklink.com/okexchain-test](https://www.oklink.com/okexchain-test)
 

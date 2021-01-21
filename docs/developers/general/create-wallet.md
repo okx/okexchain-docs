@@ -8,10 +8,8 @@ This article is a guide about key management strategy on client side of your Dec
 
 ### Connect to OkExChain network
 ```javascript
-    // mainnet
-     const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
     // testnet
-    const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+    const web3 = new Web3('http://13.230.73.12:8545');
 ```
 
 ### Set up account
@@ -31,7 +29,7 @@ cconst account = web3.eth.accounts.privateKeyToAccount("$private-key")
 const Web3 = require('web3');
 async function main() {
 
-    const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
+    const web3 = new Web3('http://13.230.73.12:8545');
     const loader = setupLoader({ provider: web3 }).web3;
 
     const account = web3.eth.accounts.create();
