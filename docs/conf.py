@@ -17,10 +17,6 @@ extensions = [
     'sphinx_markdown_tables',
 ]
 
-html_theme_options = {
-    'navigation_depth': 4,
-}
-
 # crate.theme sets html_favicon to favicon.png which causes a warning because
 # it should be a .ico and in addition there is no favicon.png in this project
 # so it can't find the file

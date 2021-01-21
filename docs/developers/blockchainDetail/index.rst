@@ -1,8 +1,8 @@
 .. _blockchainDetail:
 
-===============
+================
 BlockchainDetail
-===============
+================
 
 .. rubric:: Table of contents
 
@@ -10,8 +10,5 @@ BlockchainDetail
    :maxdepth: 2
    :titlesonly:
 
-   create-wallet
-   smart-contract
-   remix
-   web3js
-   truffle
+   okexchain-fullnode
+   rpc
