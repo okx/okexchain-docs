@@ -135,11 +135,11 @@ Contents
    :maxdepth: 3
    :caption: OKExChain Developers
 
-      developers/general/index
-      developers/deploy/index
-      developers/tools/index
-      developers/OIP20Tokens/index
-      developers/blockchainDetail/index
+   developers/general/index
+   developers/deploy/index
+   developers/tools/index
+   developers/OIP20Tokens/index
+   developers/blockchainDetail/index
 
 .. toctree::
    :maxdepth: 3
