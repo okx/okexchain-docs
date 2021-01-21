@@ -132,11 +132,11 @@ Contents
    getting-start/install-faq
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: OKExChain Developers
 
    .. toctree::
-      :maxdepth: 1
+      :maxdepth: 2
       :caption: general
          developers/general/create-wallet
          developers/general/smart-contract
@@ -145,7 +145,7 @@ Contents
          developers/general/truffle
 
    .. toctree::
-      :maxdepth: 1
+      :maxdepth: 2
       :caption: deploy
          developers/deploy/remix
          developers/deploy/truffle
@@ -153,19 +153,19 @@ Contents
          developers/deploy/verify-proxy-contract
 
    .. toctree::
-      :maxdepth: 1
+      :maxdepth: 2
       :caption: tools
          developers/tools/faucet
          developers/tools/gas-price
 
    .. toctree::
-      :maxdepth: 1
+      :maxdepth: 2
       :caption: OIP20Tokens
          developers/OIP20Tokens/introduction
          developers/OIP20Tokens/issue-token
 
    .. toctree::
-      :maxdepth: 1
+      :maxdepth: 2
       :caption: blockchainDetail
          developers/blockchainDetail/okexchain-fullnode
          developers/blockchainDetail/rpc
