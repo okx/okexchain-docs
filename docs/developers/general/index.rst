@@ -1,6 +1,5 @@
 .. toctree::
    :maxdepth: 2
-   :caption: general
    :titlesonly:
 
    create-wallet
