@@ -26,23 +26,16 @@ git clone https://github.com/okex/okexchain
 cd okexchain
 make geth
 ```
-or you can download the pre-build binaries from [release page](https://github.com/okex/okexchain/branches/stale) or follow the instructions below:
-```
-# Linux
-wget --no-check-certificate https://github.com/binance-chain/bsc/releases/download/v1.0.2/geth_linux
-# MacOS
-wget --no-check-certificate https://github.com/binance-chain/bsc/releases/download/v1.0.2/geth_mac
-```
+
 2.Download the config files
 Download `genesis.json` and `config.toml` by:
 ```
-## mainet
-wget --no-check-certificate  $(curl -s https://api.github.com/repos/binance-chain/bsc/releases/latest |grep browser_ |grep mainnet |cut -d\" -f4)
-unzip mainnet.zip
 
 ## testnet
-wget --no-check-certificate  $(curl -s https://api.github.com/repos/binance-chain/bsc/releases/latest |grep browser_ |grep testnet |cut -d\" -f4)
-unzip testnet.zip
+git clone git@github.com:okex/mainnet.git
+$ shasum -a 256 genesis.json
+1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  genesis.json
+okexchaind init <your_custom_moniker>
 ```
 3.Write genesis state locally
 ```

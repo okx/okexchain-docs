@@ -1,6 +1,6 @@
 # Deploy - Verify Proxy Contract
 ### How to Verify Proxy Contract
-Please learn how to deploy an upgradable OIP20 contract here
+Please learn how to deploy an upgradable OIP20 contract <!--here-->
 ### Flatten your contract
 #### Install flattener
 ```npm install truffle-flattener -g```
@@ -34,7 +34,7 @@ $ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.s
 ![avatar](../../img/verify-proxy-contract-02.png)
 ### Compile Proxy Contract
 - Create new contract proxy.sol and copy contract code from flattened
-`OIP20UpgradeableProxyFlattened.sol`. Here is and [example]()
+`OIP20UpgradeableProxyFlattened.sol`. <!--Here is and [example]()-->
 - Compile the proxy contractClick on this button to switch to the compile page
 - Select “OIP20UpgradeableProxy” contract
 - Enable “Auto compile” and “optimization”Click “ABI” to copy the contract abi and save it.
@@ -46,8 +46,8 @@ Logic: The address of OIP20Implementation contract Admin: admin cannot be OIP20 
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up
 - Click the “confirm” button to sign and broadcast transaction to OKExChain.
-### Verify Proxy Contract on BscScan
-Note: The way to verify the BEP20TokenImplementation contract is the same as before.
+### Verify Proxy Contract on OKLink
+Note: The way to verify the OIP20TokenImplementation contract is the same as before.
 - Go to your contact page and click on “Verify and Publish”
 ![avatar](../../img/verify-proxy-contract-04.png)
 -Select Single file

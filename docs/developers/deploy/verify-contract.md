@@ -1,12 +1,12 @@
 # Deploy - Verify Contract
-### Verify Your Contract on BscScan
+### Verify Your Contract on OKLink
 The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 
 Verified using Truffle
 
-Example:
+<!--Example:
 https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
-
+-->
 GitHub Project:
 https://github.com/huangsuyu/verify-example
 ### Truffle
@@ -72,6 +72,6 @@ truffle run verify OIP20Tokens@{contract-address} --network testnet
 You should see the following output:
 ```
 Verifying OIP20Tokens@0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
-Pass - Verified: https://testnet.bscscan.com/address/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf#contracts
+<!--Pass - Verified: https://testnet.bscscan.com/address/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf#contracts-->
 Successfully verified 1 contract(s).
 ```

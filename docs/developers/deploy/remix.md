@@ -6,14 +6,13 @@ This dapp implements a "Hello World" style application that echoes a message pas
 ### Setting up [Remix IDE](https://remix.ethereum.org/)
 - Remix is an online IDE to develop smart contracts.
 - You need to choose Solidity Compiler and Deploy and Run Transactions.
-.. figure:: ./img/okexchain-image.jpg
 
 ![avatar](../../img/remix-01.png)
 - Go to File Explorers, And Create a new file, Name it MegaCoin.sol
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
-- Create new contract OIP20Tokens.sol and copy contract code from the bep20 token template [here](https://docs.binance.org/smart-chain/developer/BEP20Token.template)
+- Create new contract OIP20Tokens.sol and copy contract code from the oip20 token template [here](https://docs.binance.org/smart-chain/developer/BEP20Token.template)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
@@ -28,16 +27,16 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
-Now, We have to deploy our smart contract on Binance Smart Chain Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](https://docs.binance.org/smart-chain/wallet/metamask.html).
+Now, We have to deploy our smart contract on OKExChain Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](https://docs.binance.org/smart-chain/wallet/metamask.html).
 - Open Metamask and select Custom RPC from the networks dropdown
 - Go to setting page
 ![avatar](../../img/remix-04.png)
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](https://docs.binance.org/smart-chain/developer/rpc.html) * ChainID: 97 * Symbol: BNB * Block Explorer:
+- Testnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * okexchain-65 * Symbol: OKT * Block Explorer:
 https://www.oklink.com/okexchain-test
-- Mainnet * [RPC URLs](https://docs.binance.org/smart-chain/developer/rpc.html) * ChainID: okexchain-66 * Symbol: BNB * Block Explorer: 
+- Mainnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: okexchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
@@ -49,4 +48,4 @@ https://www.oklink.com/
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://testnet.bscscan.com/
+Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okexchain-test
