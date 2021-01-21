@@ -1,4 +1,4 @@
-# OIP20 Tokens - Issue Token
+# Issue Token
 
 Compile and Deploy OIP20 Contract
 
