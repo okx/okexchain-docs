@@ -1,8 +1,12 @@
-# general
+.. _general:
+
+===============
+general
+===============
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :caption: general
 
    create-wallet
    smart-contract
