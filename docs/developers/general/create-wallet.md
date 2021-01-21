@@ -6,7 +6,7 @@ This article is a guide about key management strategy on client side of your Dec
 `web3.js` is a javascript library that allows our client-side application to talk to the blockchain. We configure web3 to communicate via Metamask.
 `web3.js` doc is [here](https://web3js.readthedocs.io/en/v1.2.2/getting-started.html#adding-web3-js)
 
-### Connect to OkExChain network
+### Connect to OKExChain network
 ```javascript
     // testnet
     const web3 = new Web3('http://13.230.73.12:8545');
