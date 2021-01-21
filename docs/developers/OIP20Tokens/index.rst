@@ -1,4 +1,8 @@
-# OIP20Tokens
+.. _OIP20Tokens:
+
+===============
+OIP20Tokens
+===============
 
 .. toctree::
    :maxdepth: 2

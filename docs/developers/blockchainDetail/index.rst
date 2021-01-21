@@ -1,4 +1,8 @@
-# blockchainDetail
+.. _blockchainDetail:
+
+===============
+blockchainDetail
+===============
 
 .. toctree::
    :maxdepth: 2

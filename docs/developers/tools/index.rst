@@ -1,4 +1,8 @@
-# tools
+.. _tools:
+
+===============
+tools
+===============
 
 .. toctree::
    :maxdepth: 2

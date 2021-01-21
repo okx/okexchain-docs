@@ -1,4 +1,8 @@
-# deploy
+.. _deploy:
+
+===============
+deploy
+===============
 
 .. toctree::
    :maxdepth: 2
