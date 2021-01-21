@@ -1,7 +1,7 @@
 .. _blockchainDetail:
 
 ================
-BlockchainDetail
+Blockchain Detail
 ================
 
 .. rubric:: Table of contents
