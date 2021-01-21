@@ -1,7 +1,7 @@
 .. _OIP20Tokens:
 
 ===============
-OIP20Tokens
+OIP20 Tokens
 ===============
 
 .. rubric:: Table of contents
