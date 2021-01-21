@@ -132,14 +132,43 @@ Contents
    getting-start/install-faq
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: OKExChain Developers
 
-   developers/general/index
-   developers/deploy/index
-   developers/tools/index
-   developers/OIP20Tokens/index
-   developers/blockchainDetail/index
+   .. toctree::
+      :maxdepth: 1
+      :caption: general
+         developers/general/create-wallet
+         developers/general/smart-contract
+         developers/general/remix
+         developers/general/web3js
+         developers/general/truffle
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: deploy
+         developers/deploy/remix
+         developers/deploy/truffle
+         developers/deploy/verify-contract
+         developers/deploy/verify-proxy-contract
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: tools
+         developers/tools/faucet
+         developers/tools/gas-price
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: OIP20Tokens
+         developers/OIP20Tokens/introduction
+         developers/OIP20Tokens/issue-token
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: blockchainDetail
+         developers/blockchainDetail/okexchain-fullnode
+         developers/blockchainDetail/rpc
 
 .. toctree::
    :maxdepth: 3
