@@ -1,5 +1,5 @@
-# OKExChain fullnode
-### How to Run A Fullnode on OKEXChain
+# OKExChain Fullnode
+### How to Run A Fullnode on OKExChain
 ### Fullnodes Functions
 - Stores the full blockchain history on disk and can answer the data request from the network.
 - Receives and validates the new blocks and transactions.
