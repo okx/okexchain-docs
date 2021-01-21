@@ -104,6 +104,18 @@ okexchaincli status
 
 See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OKExChain to use and details about the genesis file.
 
+
+## RPC
+
+Hong Kong domain：
+http://okexchain-rpc1.okex.com:26657 (vpn required, if you are in mainland China)
+http://okexchain-rpc1.okexcn.com:26657
+
+Tokyo domain：
+http://okexchain-rpc2.okex.com:26657 (vpn required, if you are in mainland China)
+http://okexchain-rpc2.okexcn.com:26657
+
+
 ## Upgrading Your Node
 
 These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest mainnet.
