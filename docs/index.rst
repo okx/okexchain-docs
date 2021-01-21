@@ -143,7 +143,6 @@ Contents
    developers/deploy/remix
    developers/deploy/truffle
    developers/deploy/verify-contract
-   developers/deploy/verify-proxy-contract
    developers/tools/faucet
    developers/OIP20Tokens/introduction
    developers/OIP20Tokens/issue-token
