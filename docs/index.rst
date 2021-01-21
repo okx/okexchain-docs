@@ -116,13 +116,13 @@ Contents
 ========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: OKExChain
 
    okexchain/overview
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Getting Start
 
    getting-start/install-okexchain
@@ -142,21 +142,21 @@ Contents
    developers/blockchainDetail/index
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Swap
 
    swap/swap-overview
    swap/swap-guide-cli
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Farm
 
    farm/farm-overview
    farm/farm-guide-cli
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Delegators
 
    delegators/delegators-overview
@@ -164,7 +164,7 @@ Contents
    delegators/delegators-faq
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Validators
 
    validators/validators-overview
@@ -172,14 +172,14 @@ Contents
    validators/validators-faq
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: DEX Traders
 
    dex-trades/dex-trades-overview
    dex-trades/dex-trades-guide-cli
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: DEX Operators
 
    dex-operators/dex-operators-overview
@@ -187,7 +187,7 @@ Contents
    dex-operators/dex-operators-faq
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Concepts
 
    concepts/general-concepts
@@ -198,7 +198,7 @@ Contents
    concepts/sentry-nodes
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Resources
 
    resources/genesis
@@ -207,21 +207,21 @@ Contents
    resources/snapshot
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: API
 
    api/http
    api/sdk
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Tools
 
    tools/monitor
    tools/command
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: References
 
    link

@@ -7,8 +7,8 @@ Please learn how to deploy an upgradable OIP20 contract <!--here-->
 
 Run the following command:
 ```
-$ truffle-flattener BEP20TokenImplementation.sol > BEP20TokenImplementationFlattened.sol
-$ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.sol"
+$ truffle-flattener OIP20TokenImplementation.sol > OIP20TokenImplementationFlattened.sol
+$ truffle-flattener OIP20UpgradeableProxy.sol > OIP20UpgradeableProxyFlattened.sol"
 ```
 ### Compile and deploy your contract with Remix
 #### Compile Implementation contract
@@ -41,7 +41,7 @@ $ truffle-flattener BEP20UpgradeableProxy.sol > BEP20UpgradeableProxyFlattened.s
 ### Deploy the proxy contract
 - Select “Injected Web3”Select “OIP20UpgradeableProxy.sol” contract
 - Fill in the parameter
-![avatar](../../img/verify-proxy-contract-03.png)
+<!--![avatar](../../img/verify-proxy-contract-03.png)-->
 Logic: The address of OIP20Implementation contract Admin: admin cannot be OIP20 token owner
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up

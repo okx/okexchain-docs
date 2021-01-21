@@ -12,7 +12,7 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
-- Create new contract OIP20Tokens.sol and copy contract code from the oip20 token template [here](https://docs.binance.org/smart-chain/developer/BEP20Token.template)
+- Create new contract OIP20Tokens.sol and copy contract code from the oip20 token template [here](https://github.com/okex/OIPs/blob/master/docs/final/OIP-20.md/)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
@@ -27,14 +27,14 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
-Now, We have to deploy our smart contract on OKExChain Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](https://docs.binance.org/smart-chain/wallet/metamask.html).
+Now, We have to deploy our smart contract on OKExChain Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
 - Open Metamask and select Custom RPC from the networks dropdown
 - Go to setting page
 ![avatar](../../img/remix-04.png)
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * okexchain-65 * Symbol: OKT * Block Explorer:
+- Testnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: okexchain-65 * Symbol: OKT * Block Explorer:
 https://www.oklink.com/okexchain-test
 - Mainnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: okexchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/

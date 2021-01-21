@@ -35,7 +35,7 @@ Once this operation is completed, you'll now have a project structure with the f
 - truffle-config.js: Truffle configuration file
 
 ### Create Contract
-You can write your own smart contract or download the BEP20 token smart contract template.
+You can write your own smart contract or download the OIP20 token smart contract template.
 
 ### Compile Contract
 To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
@@ -54,19 +54,12 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard BSC port (default: none)
+      port: 8545,            // Standard OKExChain port (default: none)
       network_id: "*",       // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+      provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
       network_id: 97,
-      confirmations: 10,
-      timeoutBlocks: 200,
-      skipDryRun: true
-    },
-    bsc: {
-      provider: () => new HDWalletProvider(mnemonic, `https://bsc-dataseed1.binance.org`),
-      network_id: 56,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
