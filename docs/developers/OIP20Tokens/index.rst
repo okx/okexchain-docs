@@ -4,6 +4,8 @@
 OIP20Tokens
 ===============
 
+.. rubric:: Table of contents
+
 .. toctree::
    :maxdepth: 2
    :titlesonly:

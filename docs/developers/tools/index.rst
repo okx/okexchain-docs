@@ -1,8 +1,10 @@
 .. _tools:
 
 ===============
-tools
+Tools
 ===============
+
+.. rubric:: Table of contents
 
 .. toctree::
    :maxdepth: 2

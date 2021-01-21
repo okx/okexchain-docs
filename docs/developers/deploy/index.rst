@@ -1,8 +1,10 @@
 .. _deploy:
 
 ===============
-deploy
+Deploy
 ===============
+
+.. rubric:: Table of contents
 
 .. toctree::
    :maxdepth: 2

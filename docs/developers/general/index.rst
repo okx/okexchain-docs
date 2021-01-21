@@ -1,8 +1,10 @@
 .. _general:
 
 ===============
-general
+General
 ===============
+
+.. rubric:: Table of contents
 
 .. toctree::
    :maxdepth: 2
