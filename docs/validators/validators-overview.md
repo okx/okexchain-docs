@@ -10,7 +10,7 @@ order: 1
 
 Validator candidates can bond their own OKTs and have OKTs ["delegated"](https://okexchain-docs.readthedocs.io/en/latest/delegators/delegators-guide-cli.html), or staked, to them by token holders. The OKExChain network will have 21 validators. The validators are determined by a ranking of those who  collected the highest number of staked OKTs— the top 21 validator candidates with the largest stakes will become OKExChain validators.
 
-Validators and their delegators will earn OKTs as block provisions and tokens as transaction fees through execution of the Tendermint consensus protocol. Initially, transaction fees will be paid in okts but in the future, any token in the OKExChain ecosystem will be valid as fee tender if it is whitelisted by governance. Note that validators can set commission on the fees their delegators receive as additional incentive.
+Validators will earn OKTs as block provisions and tokens as transaction fees through execution of the Tendermint consensus protocol and delegators should get rewards from their target validators in their own ways. Initially, transaction fees will be paid in okts but in the future, any token in the OKExChain ecosystem will be valid as fee tender if it is whitelisted by governance. Note that validators can set commission on the fees their delegators receive as additional incentive.
 
 ## Hardware
 
