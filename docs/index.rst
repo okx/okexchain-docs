@@ -138,7 +138,6 @@ Contents
    developers/quick-start
    developers/general/index
    developers/deploy/index
-   developers/tools/index
    developers/OIP20Tokens/index
    developers/blockchainDetail/index
 

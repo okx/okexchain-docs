@@ -52,6 +52,4 @@ Now, you are able to interact with the contract through Remix. For Storage.sol, 
 -------------------------------------------------------------
 -------------------------------------------------------------
 ## Claim test tokens
-We will send 1000 tokt to the following address in AM 11:00（UTC/GMT+08:00）everyday, you can transfer some tokens into your own address to test
-* Address:      `0x03975c070801D6110EBD8301a0F159f89FB7a4C0`
-* Private Key:  `BB1C835AB9770454318D8F19079AA1498EFE3B57654E8084134ADB7854969D93`
+Please refer to [Faucet](https://www.okex.com/drawdex)
