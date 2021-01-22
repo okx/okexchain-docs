@@ -15,7 +15,7 @@ The hardware must meet certain requirements to run a full node.
 ### Setings
 ##### Sync Mode
 - Fast Sync
-The default sync mode. Synchronizes a full node doing a fast synchronization by downloading the entire state database, requesting the headers first, and filling in block bodies and receipts afterward. Once the fast sync reaches the best block of the Binance Smart Chain network, it switches to full sync mode.
+The default sync mode. Synchronizes a full node doing a fast synchronization by downloading the entire state database, requesting the headers first, and filling in block bodies and receipts afterward. Once the fast sync reaches the best block of the OKExChain network, it switches to full sync mode.
 - Full Sync
 Synchronizes a full node starting at genesis, verifying all blocks and executing all transactions. This mode is a bit slower than the fast sync mode but comes with increased security.
 ### Steps to Run a Fullnode
