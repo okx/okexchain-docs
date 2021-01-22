@@ -12,5 +12,4 @@ Deploy
 
    remix
    truffle
-   verify-contract
    verify-proxy-contract
