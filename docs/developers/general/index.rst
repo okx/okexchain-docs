@@ -15,3 +15,4 @@ General
    remix
    web3js
    truffle
+   metamask
