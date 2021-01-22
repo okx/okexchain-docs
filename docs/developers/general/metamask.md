@@ -4,12 +4,14 @@ Connect your Metamask wallet with OKExChain on a testnet mode.
 Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 * Config your Metamask with following data   
 
-|	 Item |	    Data     |
-|	 ---|	  --------- |
-|	 NetWork Name |	  OKExChain |
-|	 RPC URL |	  http://13.230.73.12:8545 |
-| Chain ID | 2 |
-|	 Currency Symbol |	OKT |
+
+NetWork Name: OKExChain
+
+RPC URL: http://13.230.73.12:8545
+
+Chain ID: 2
+
+Currency Symbol:OKT
 
 
 ![avatar](../../img/metamask-01.jpg)
