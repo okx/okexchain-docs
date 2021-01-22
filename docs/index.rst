@@ -135,6 +135,7 @@ Contents
    :maxdepth: 3
    :caption: Developers
 
+   developers/quick-start
    developers/general/index
    developers/deploy/index
    developers/tools/index
