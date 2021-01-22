@@ -2,16 +2,15 @@
 
 Tokyo domain：
 
-okexchain-rpc2.okex.com
+http://okexchain-rpc2.okex.com:26657
 
-okexchain-rpc2.okexcn.com
+http://okexchain-rpc2.okexcn.com:26657
 
 Hong Kong domain：
 
-okexchain-rpc1.okex.com
+http://okexchain-rpc1.okex.com:26657
 
-okexchain-rpc1.okexcn.com
+http://okexchain-rpc1.okexcn.com:26657
 
-port is 26657
 
 The domain name ending with `okex.com` needs a ladder to use
