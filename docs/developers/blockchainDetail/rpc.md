@@ -1,4 +1,4 @@
-# OKExChain RPC
+# RPC
 
 Tokyo domain：
 
