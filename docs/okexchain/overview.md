@@ -15,7 +15,7 @@ OKExChain provides safe and efficient infrastructure for creating decentralized 
 In developing this open-source, trading-focused blockchain technology, OKEx has focused on providing lower operational costs for blockchain developers looking to build new decentralized-trading applications. This means lower fees for end-users of DApps based on OKExChain. We also designed OKExChain to level up user-experience standards for decentralized trading — OKExChain's base layer is optimized to provide the best trading performance and experience
 
 
-![okexchain multi-chain](./img/multi-chain.jpg)
+![okexchain multi-chain](../img/multi-chain.jpg)
 ## What is Blockchain middleware？
 Normally in blockchain industry, developers are categorized as follows： 
 
@@ -35,7 +35,7 @@ Based on that, OKExChain proposes the concept of "blockchain middleware" to redu
 
 OKExChain-OKExDEX, is the first project born from the OKExChain ecosystem and is a middleware that can freely issue DEX. With the design concept of “everyone can create DEX”, it provides various basic functions needed to operate a DEX. Compared with traditional DEX, OKExDEX adopts a full on-chain matching and an on-chain order book management to make matching information more transparent and safe; compared with Ethereum-based projects, the matching engine based on OKExChain’s call auction can achieve matching in seconds, which is similar to the operating experience offered by centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but to provide a platform to achieve the separation of technology and operations. Just as Ethereum makes digital asset issuance simple through smart contract technology, OKExChain lowers the barrier for operating digital asset trading pairs with OKExDEX.
 
-![OKExDEX multi-operator relation](./img/operators.jpg)
+![OKExDEX multi-operator relation](../img/operators.jpg)
 
 
 ## The OKT
@@ -49,7 +49,7 @@ It is required to stake at least 10,000 OKT in order to apply to become a valida
 OKT holders obtain voting rights by staking their tokens. One address can vote for up to 30 different validator candidates, and the number of votes for each validator candidate that the address has supported is equivalent to the amount of OKT the address has staked (1 OKT = 1 vote).
 
 
-Learn more about [being a delegator](./delegators/delegators-faq.html).
+Learn more about [being a delegator](../delegators/delegators-faq.html).
 
 
 
