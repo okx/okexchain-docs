@@ -132,7 +132,7 @@ Contents
    getting-start/install-faq
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Developers
 
    developers/quick-start

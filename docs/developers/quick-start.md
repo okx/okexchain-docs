@@ -1,7 +1,7 @@
 # Quick Start
-### Metamask
+## Metamask
 Connect your Metamask wallet with OKExChain on a testnet mode.
-### Adding a custom Network for OKExChain
+## Adding a custom Network for OKExChain
 Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 * Config your Metamask with following data   
 
