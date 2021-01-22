@@ -10,5 +10,4 @@ Blockchain Detail
    :maxdepth: 2
    :titlesonly:
 
-   okexchain-fullnode
    rpc

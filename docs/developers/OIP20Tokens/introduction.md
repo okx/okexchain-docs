@@ -30,8 +30,8 @@ Output:
 ```
 web3.eth.accounts.create();
 {
-  address: '0x926605D0729a968266f1BB299d8Df0471C4F5367',
-  privateKey: '0x6b4618539d95f205f33e916e89404b301dde545c0c4acc181fd0c0b42708bad3',
+  address: '0x03975c070801D6110EBD8301a0F159f89FB7a4C0',
+  privateKey: 'BB1C835AB9770454318D8F19079AA1498EFE3B57654E8084134ADB7854969D93',
   signTransaction: [Function: signTransaction],
   sign: [Function: sign],
   encrypt: [Function: encrypt]
@@ -39,7 +39,7 @@ web3.eth.accounts.create();
 ```
 Recover a wallet
 ```
-const account = web3.eth.accounts.privateKeyToAccount("0xe500f5754d761d74c3eb6c2566f4c568b81379bf5ce9c1ecd475d40efe23c577")
+const account = web3.eth.accounts.privateKeyToAccount("BB1C835AB9770454318D8F19079AA1498EFE3B57654E8084134ADB7854969D93")
 ```
 Check balance
 ```
@@ -66,8 +66,8 @@ Parameters
         from: holder,
         to: '0x0B75fbeB0BC7CC0e9F9880f78a245046eCBDBB0D',
         value: '1000000000000000000',
-        gas: 5000000,
-        gasPrice: 18e9,
+        gas: 4500000,
+        gasPrice: 17e8,
     }, function(err, transactionHash) {
       if (err) {
         console.log(err);
