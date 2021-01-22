@@ -109,7 +109,7 @@ See the [mainnet repo](https://github.com/okex/mainnet) for information on mainn
 
 Available Resources
 
-Mainnet (chain-id=okexchain=66)
+Mainnet (chain-id=okexchain-66)
 
 OKExChain RPC Endpoints:
 
