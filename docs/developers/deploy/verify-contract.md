@@ -4,10 +4,6 @@ The recommended way to verify a smart contract is using plugin. It is easier to 
 
 Verified using Truffle
 
-<!--Example:
-https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf
-GitHub Project:
-https://github.com/huangsuyu/verify-example-->
 ### Truffle
 Truffle has an OKLink plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
 
@@ -30,7 +26,7 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    bscscan: OKLinkPIKEY
+    OKLink: OKLinkPIKEY
   },
   networks: {
 

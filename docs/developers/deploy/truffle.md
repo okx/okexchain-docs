@@ -44,7 +44,7 @@ truffle compile
 ```
 Config Truffle for OKEXChain
 - Go to truffle-config.js
-- Update the truffle-config with bsc-network-crendentials.
+- Update the truffle-config with OKExChain-network-crendentials.
 ```
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const fs = require('fs');
