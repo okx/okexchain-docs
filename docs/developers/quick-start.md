@@ -18,13 +18,13 @@ Currency Symbol:OKT
 
 Use okexchaincli to view accounts:
 
-`okexchaincli keys show username`
+`okexchaincli keys show $keyname`
 
-Use okexchaincli to export the eth private key:
+Use okexchaincli to export the ethereum style private key:
 
-`okexchaincli keys unsafe-export-eth-key user1`
+`okexchaincli keys unsafe-export-eth-key $keyname`
 
-import eth private key into the metamask wallet:
+import private key into the metamask wallet:
 
 ![avatar](../img/metamask-01-2.png)
 
