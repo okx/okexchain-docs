@@ -14,9 +14,25 @@ Chain ID: 2
 
 Currency Symbol:OKT
 
-
 ![avatar](../img/metamask-01.jpg)
 
+Use okexchaincli to view accounts:
+
+`okexchaincli keys show username`
+
+Use okexchaincli to export the eth private key:
+
+`okexchaincli keys unsafe-export-eth-key user1`
+
+import eth private key into the metamask wallet:
+
+![avatar](../img/metamask-01-2.png)
+
+The relationship between okexchain address and 0x address:
+
+- The balance of the address starting with okexchain is equal to the balance of the address starting with 0x
+- The balance of the address starting with okexchain can only be queried through okexchaincli
+- The balance of the 0x address can be queried through the evm rpc interface, or through the okexchaincli
 
 -------------------------------------------------------------
 -------------------------------------------------------------
