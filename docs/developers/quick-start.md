@@ -8,7 +8,7 @@ Open the Metamask extension on your browser, you may have to log in to your Meta
 
 NetWork Name: OKExChain testnet
 
-[RPC URL](blockchainDetail/rpc.md)
+[RPC URL](blockchainDetail/rpc.md#testnet-chain-id-okexchain-65)
 
 Chain ID: 65
 
