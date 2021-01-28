@@ -1,4 +1,4 @@
-# Quick Start
+# Quick Start(testnet)
 ## Metamask
 Connect your Metamask wallet with OKExChain on a testnet mode.
 ## Adding a custom Network for OKExChain
@@ -10,7 +10,7 @@ NetWork Name: OKExChain
 
 RPC URL: http://13.230.73.12:8545
 
-Chain ID: 2
+Chain ID: 65
 
 Currency Symbol:OKT
 
