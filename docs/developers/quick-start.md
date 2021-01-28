@@ -8,7 +8,7 @@ Open the Metamask extension on your browser, you may have to log in to your Meta
 
 NetWork Name: OKExChain
 
-RPC URL: http://13.230.73.12:8545
+[RPC URL](developers/blockchainDetail/rpc.md)
 
 Chain ID: 65
 
