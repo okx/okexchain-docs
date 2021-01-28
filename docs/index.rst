@@ -50,6 +50,7 @@ lowers the barrier for operating digital asset trading pairs with OKExDEX.
    :alt: OKExDEX multi-operator relation
 
    OKExDEX multi-operator relation
+
 The OKT
 -------
 
@@ -60,10 +61,10 @@ through Proof-of-Stake. You can also vote with your OKT to influence the
 future of the OKExChain through on-chain governance proposals.
 
 Learn more about `being a
-delegator <../delegators/delegators-faq.html>`__.
+delegator <./delegators/delegators-faq.html>`__.
 
 OKExChain Explorer
------------------
+------------------
 
 The OKExChain block explorer allows you to search, view and analyze OKExChain
 data—like blocks, transactions, validators as well as other key information
@@ -71,23 +72,24 @@ data—like blocks, transactions, validators as well as other key information
 -  `OKlink <https://www.oklink.com>`__
 
 OKExChain CLI
------------
+-------------
 
 ``okexchaincli`` is a command-line interface that lets you interact with
 the OKExChain. ``okexchaincli`` is the only tool that supports 100% of the
 OKExChain features, including accounts, transfers, delegation, and
 governance. Learn more about ``okexchaincli`` with the delegator’s CLI
-guide <./delegators/delegators-guide-cli.html>`__.
+`guide <./delegators/delegators-guide-cli.html>`__.
 
 Running a full-node on the OKExChain Testnet
-------------------------------------------
+--------------------------------------------
 
 In order to run a full-node on the OKExChain testnet, you must first
-`install okexchaind<./getting-start/install-okexchain.html>`__. Then,
+`install okexchaind <./getting-start/install-okexchain.html>`__. Then,
 follow `the guide <./getting-start/install-okexchain.html>`__.
 
 If you would like to run a validator node, follow the validator setup
-guide <./validators/validators-guide-cli.html>`__.
+`guide <./validators/validators-guide-cli.html>`__.
+
 Join the Community
 ------------------
 
@@ -102,7 +104,7 @@ become part of the OKExChain community through one of the following channels.
 Version
 ---------
 
-The version of the program relating to this documentation is: 0.10
+The version of the program relating to this documentation is: 0.16.0
 
 
 

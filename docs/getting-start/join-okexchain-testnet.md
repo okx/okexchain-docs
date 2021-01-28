@@ -30,7 +30,7 @@ These instructions are for setting up a brand new full node from scratch.
 First, initialize the node and create the necessary config files:
 
 ```bash
-okexchaind init <your_custom_moniker> --chain-id okexchaintestnet-1
+okexchaind init <your_custom_moniker> --chain-id okexchain-65
 ```
 
 > _NOTE_:
@@ -72,7 +72,7 @@ Note we use the `latest` directory in the [testnets repo](https://github.com/oke
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind start --chain-id okexchaintestnet-1
+okexchaind start --chain-id okexchain-65
 ```
 
 ### Add Seed Nodes
@@ -93,7 +93,7 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-okexchaind start --chain-id okexchaintestnet-1
+okexchaind start --chain-id okexchain-65
 ```
 
 Check that everything is running smoothly:
