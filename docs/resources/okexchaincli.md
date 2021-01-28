@@ -23,16 +23,19 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okexchaincli config node <host>:<port>
 
-# example: okexchaincli config node tcp://35.176.62.211:26657 (testnet)
+# example: okexchaincli config node http://okexchaintest-rpc1.okexcn.com:26657 (testnet)
 # example: okexchaincli config node http://okexchain-rpc1.okexcn.com:26657 (mainnet)
 ```
 
 Or any of the following address ports:
 ```
 # testnet
-35.176.62.211:26657
-18.132.46.47:26657
-15.164.104.138:26657
+http://okexchaintest-rpc1.okexcn.com:26657 (Hong Kong)
+http://okexchaintest-rpc2.okexcn.com:26657 (Ohio)
+http://okexchaintest-rpc3.okexcn.com:26657 (London)
+http://okexchaintest-rpc1.okex.com:26657 (Hong Kong. vpn required, if you are in mainland China)
+http://okexchaintest-rpc2.okex.com:26657 (Ohio. vpn required, if you are in mainland China)
+http://okexchaintest-rpc3.okex.com:26657 (London. vpn required, if you are in mainland China)
 
 # mainnet
 http://okexchain-rpc1.okexcn.com:26657 (HongKong)
