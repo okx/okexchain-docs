@@ -1,11 +1,11 @@
 
 # OKExChain Snapshot
 
-Quick instructions on how to install the OKExChain testnet snapshots.
+Quick instructions on how to install the OKExChain snapshots.
 
+## mainnet
 Download URL: 
-  - [okexchain-v0.12.3-testnet1-20201023-height_1555881.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.12.3-testnet1-20201023-height_1555881.tar.gz)
-  - [okexchain-v0.12.2-testnet1-20201013-height_1136926.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.12.2-testnet1-20201013-height_1136926.tar.gz)
+  - [okexchain-v0.16.3-mainnet-20210127-height_275913.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.16.3-mainnet-20210127-height_275913.tar.gz)
 
 ## Unpack the snapshot file for cosmos
 ```shell
