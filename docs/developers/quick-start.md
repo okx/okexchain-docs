@@ -7,7 +7,7 @@ Open the Metamask extension on your browser, you may have to log in to your Meta
 Config your Metamask with following data   
 
 - NetWork Name: OKExChain Testnet
-- [RPC URL](blockchainDetail/rpc.md#testnet-chain-id-okexchain-65)
+- RPC URL: [Rest Address](blockchainDetail/rpc.html#rest-endpoint)
 - Chain ID: 65
 - Currency Symbol: OKT
 
