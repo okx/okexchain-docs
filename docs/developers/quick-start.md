@@ -1,12 +1,12 @@
 # Quick Start for Testnet
 ## Metamask
-Connect your Metamask wallet with OKExChain testnet.
-## Adding a custom Network for OKExChain testnet
+Connect your Metamask wallet with OKExChain Testnet.
+## Adding a custom network for OKExChain Testnet
 Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 * Config your Metamask with following data   
 
 
-NetWork Name: OKExChain testnet
+NetWork Name: OKExChain Testnet
 
 [RPC URL](blockchainDetail/rpc.md#testnet-chain-id-okexchain-65)
 
@@ -37,8 +37,8 @@ The relationship between okexchain address and 0x address:
 -------------------------------------------------------------
 -------------------------------------------------------------
 ## Remix
-Set up a Remix OKExChain testnet development environment.    
-Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKExChain test network through Remix and interact with it.   
+Set up a Remix OKExChain Testnet development environment.    
+Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKExChain Testnet through Remix and interact with it.   
 ### 1. Connect OKExChain account to Remix
 Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
