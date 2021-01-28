@@ -134,6 +134,16 @@ Contents
    getting-start/install-faq
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Developers
+
+   developers/quick-start
+   developers/general/index
+   developers/deploy/index
+   developers/OIP20Tokens/index
+   developers/blockchainDetail/index
+
+.. toctree::
    :maxdepth: 3
    :caption: Swap
 
@@ -188,7 +198,6 @@ Contents
    concepts/periodic-auction
    concepts/upgrade-concept
    concepts/sentry-nodes
-
 
 .. toctree::
    :maxdepth: 3
