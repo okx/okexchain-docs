@@ -105,8 +105,7 @@ okexchaincli status
 See the [testnet repo](https://github.com/okex/testnets) for information on testnets, including the correct version of the OKExChain to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-[RPC URL](../developers/blockchainDetail/rpc.html#rpc-endpoint)
-
+[RPC URL](../developers/blockchainDetail/aminorpc.html#testnet-chain-id-okexchain-65)
 
 ## Upgrading Your Node
 
