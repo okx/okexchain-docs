@@ -188,6 +188,7 @@ Contents
    concepts/periodic-auction
    concepts/upgrade-concept
    concepts/sentry-nodes
+   concepts/faq
 
 
 .. toctree::
