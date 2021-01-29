@@ -11,3 +11,4 @@ Blockchain Detail
    :titlesonly:
 
    rpc
+   aminorpc
