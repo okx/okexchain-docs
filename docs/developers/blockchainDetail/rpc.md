@@ -1,4 +1,8 @@
-# JSON-RPC Endpoint (used by okexchain-java-sdk, Metamask)
+# JSON-RPC Endpoint
+
+## Used by
+- okexchain-java-sdk
+- Metamask
 
 ## Mainnet (chain-id: okexchain-66)
 
