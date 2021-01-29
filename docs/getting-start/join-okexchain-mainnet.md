@@ -106,7 +106,7 @@ See the [mainnet repo](https://github.com/okex/mainnet) for information on mainn
 
 
 ## JSON-RPC Endpoint
-[RPC URL](../developers/blockchainDetail/rpc.html#mainnet-chain-id-okexchain-66)
+[RPC URL](../developers/blockchainDetail/aminorpc.html#mainnet-chain-id-okexchain-66)
 
 
 ## Upgrading Your Node
