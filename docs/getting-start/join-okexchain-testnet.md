@@ -105,25 +105,7 @@ okexchaincli status
 See the [testnet repo](https://github.com/okex/testnets) for information on testnets, including the correct version of the OKExChain to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-
-Available Resources
-
-testnet (chain-id=okexchain-65)
-
-OKExChain RPC Endpoints:
-
-Recommend (Hong Kong domain)
- - http://okexchaintest-rpc1.okex.com:26657 (vpn required, if you are in mainland China)
- - http://okexchaintest-rpc1.okexcn.com:26657
- 
-Backups (Ohio)
- - http://okexchaintest-rpc2.okex.com:26657 (vpn required, if you are in mainland China)
- - http://okexchaintest-rpc2.okexcn.com:26657
- 
-Backups (London)
- - http://okexchaintest-rpc3.okex.com:26657 (vpn required, if you are in mainland China)
- - http://okexchaintest-rpc3.okexcn.com:26657
-
+[RPC URL](../developers/blockchainDetail/aminorpc.html#testnet-chain-id-okexchain-65)
 
 ## Upgrading Your Node
 
