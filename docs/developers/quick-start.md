@@ -1,13 +1,10 @@
 # Quick Start for Testnet
 ## Metamask
-Connect your Metamask wallet with OKExChain Testnet.
-### 1. Adding a custom network for OKExChain Testnet
-Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 
-Config your Metamask with following data   
+### 1. Config Metamask for OKExChain Testnet
 
 - NetWork Name: OKExChain Testnet
-- [RPC URL](blockchainDetail/rpc.html#testnet-chain-id-okexchain-65)
+- http://okexchaintest-rpc1.okexcn.com:26659 [more rpc urls](blockchainDetail/rpc.html#testnet-chain-id-okexchain-65)
 - Chain ID: 65
 - Currency Symbol: OKT
 
