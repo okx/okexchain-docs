@@ -50,5 +50,5 @@ Now, you are able to interact with the contract through Remix. For Storage.sol, 
 ![avatar](../img/metamask-05.png)
 
 
-## OKExChain Testnet Browser
-https://www.oklink.com/okexchain-test
+## Blockchain Browser
+[OKExChain Testnet Browser](https://www.oklink.com/okexchain-test)
