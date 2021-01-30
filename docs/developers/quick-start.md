@@ -1,5 +1,6 @@
 # Quick Start for Testnet
 ## Metamask
+[What's the Metamask](https://metamask.io/index.html)
 
 ### 1. Config Metamask for OKExChain Testnet
 
