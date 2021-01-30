@@ -16,9 +16,12 @@ Config your Metamask with following data
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
 
-### 3. How to get test token
+### 3. Get testnet token
 [Faucet](https://www.okex.com/drawdex)
 
+___
+## Blockchain Browser
+[OKExChain Testnet Browser](https://www.oklink.com/okexchain-test)
 ___
 
 ## Remix
@@ -50,5 +53,4 @@ Now, you are able to interact with the contract through Remix. For Storage.sol, 
 ![avatar](../img/metamask-05.png)
 
 
-## Blockchain Browser
-[OKExChain Testnet Browser](https://www.oklink.com/okexchain-test)
+
