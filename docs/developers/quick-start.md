@@ -1,7 +1,7 @@
 # Quick Start for Testnet
 ## Metamask
 Connect your Metamask wallet with OKExChain Testnet.
-## Adding a custom network for OKExChain Testnet
+### 1. Adding a custom network for OKExChain Testnet
 Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 
 Config your Metamask with following data   
@@ -13,26 +13,17 @@ Config your Metamask with following data
 
 ![avatar](../img/metamask-01.jpg)
 
-Use okexchaincli to view accounts:
-
-`okexchaincli keys show $keyname`
-
-Use okexchaincli to export the ethereum style private key:
-
-`okexchaincli keys unsafe-export-eth-key $keyname`
-
-import private key into the metamask wallet:
-
+### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
 
-The relationship between okexchain address and 0x address:
+### 3. Get testnet token
+[Faucet](https://www.okex.com/drawdex)
 
-- The balance of the address starting with okexchain is equal to the balance of the address starting with 0x
-- The balance of the address starting with okexchain can only be queried through okexchaincli
-- The balance of the 0x address can be queried through the evm rpc interface, or through the okexchaincli
+___
+## Blockchain Browser
+[OKExChain Testnet Browser](https://www.oklink.com/okexchain-test)
+___
 
--------------------------------------------------------------
--------------------------------------------------------------
 ## Remix
 Set up a Remix OKExChain Testnet development environment.    
 Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKExChain Testnet through Remix and interact with it.   
@@ -62,7 +53,4 @@ Now, you are able to interact with the contract through Remix. For Storage.sol, 
 ![avatar](../img/metamask-05.png)
 
 
--------------------------------------------------------------
--------------------------------------------------------------
-## Claim test tokens
-Please refer to [Faucet](https://www.okex.com/drawdex)
+
