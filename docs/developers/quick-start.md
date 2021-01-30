@@ -4,7 +4,8 @@
 ### 1. Config Metamask for OKExChain Testnet
 
 - NetWork Name: OKExChain Testnet
-- RPC URL: http://okexchaintest-rpc1.okexcn.com:26659 [more rpc urls](blockchainDetail/rpc.html#testnet-chain-id-okexchain-65)
+- RPC URL: http://okexchaintest-rpc1.okexcn.com:26659 
+    - [More RPC URLs](blockchainDetail/rpc.html#testnet-chain-id-okexchain-65)
 - Chain ID: 65
 - Currency Symbol: OKT
 
