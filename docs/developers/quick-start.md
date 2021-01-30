@@ -1,7 +1,7 @@
 # Quick Start for Testnet
 ## Metamask
 Connect your Metamask wallet with OKExChain Testnet.
-## 1. Adding a custom network for OKExChain Testnet
+### 1. Adding a custom network for OKExChain Testnet
 Open the Metamask extension on your browser, you may have to log in to your Metamask account if you are not already. Then click the top right circle and go to Settings > Networks. Press the Add Network button and fill the form as shown below with your application ChainID.
 
 Config your Metamask with following data   
@@ -13,12 +13,11 @@ Config your Metamask with following data
 
 ![avatar](../img/metamask-01.jpg)
 
-## 2. Create a new account or import an existing account
-
+### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
 
-## 3. [Faucet](https://www.okex.com/drawdex)
-
+### 3. How to get test token
+[Faucet](https://www.okex.com/drawdex)
 
 ___
 
@@ -51,4 +50,5 @@ Now, you are able to interact with the contract through Remix. For Storage.sol, 
 ![avatar](../img/metamask-05.png)
 
 
-
+## OKExChain Testnet Browser
+https://www.oklink.com/okexchain-test
