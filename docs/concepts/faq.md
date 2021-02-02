@@ -1,4 +1,4 @@
-# FAQ
+# The relationship between okexchain and 0x address
 
 ## View address
 There are two address formats in okexchain, one is the address at the beginning of okexchain, such as: `okexchain13temqjlsgq93dygmtgfrvqfzzjq9d4tzug0pt5`;Another address starts with 0x, such as: `0x8aF3B04bF0400b16911b5A12360122148056d562`.Both are generated from the same mnemonic. After the mnemonic is imported into the metamask, the address starting with 0x can be recovered;Use okexchaincli to recover addresses starting with okexchain and 0x. You can view the address beginning with okexchain on the dex web page and mobile client.
