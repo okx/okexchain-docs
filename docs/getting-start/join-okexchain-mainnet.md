@@ -106,20 +106,7 @@ See the [mainnet repo](https://github.com/okex/mainnet) for information on mainn
 
 
 ## JSON-RPC Endpoint
-
-Available Resources
-
-Mainnet (chain-id=okexchain-66)
-
-OKExChain RPC Endpoints:
-
-Recommend (Hong Kong domain)
- - http://okexchain-rpc1.okex.com:26657 (vpn required, if you are in mainland China)
- - http://okexchain-rpc1.okexcn.com:26657
-
-Backups (Tokyo domain)
- - http://okexchain-rpc2.okex.com:26657 (vpn required, if you are in mainland China)
- - http://okexchain-rpc2.okexcn.com:26657
+[RPC URL](../developers/blockchainDetail/aminorpc.html#mainnet-chain-id-okexchain-66)
 
 
 ## Upgrading Your Node
