@@ -23,7 +23,7 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 ### Compile Smart Contract
 - Step1: Click button to switch to compile page
 - Step2: Select “OIP20Tokens” contract
-- Step3: Enable “Auto compile” and “optimization”
+- Step3: Check “Auto compile” and “Enable optimization” checkboxes
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
@@ -49,3 +49,11 @@ https://www.oklink.com/
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
 Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okexchain-test
+
+
+### Remix FAQ
+#### Check “Enable optimization” to compile large size contracts
+If contract creation initialization returns data with length of more than 24576 bytes, contract will be fail to created with "Contract code size over limit" error due to [EIP-170](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md).
+![avatar](../../img/remix-09.png)
+Check the "Enable optimization" checkbox when compiling to solve this error of some large size contracts.
+![avatar](../../img/remix-10.png)
