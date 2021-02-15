@@ -45,14 +45,14 @@ e.g.
 
 .. code:: bash
 
-    okexchaincli tx send ... --fees=0.002okt
+    okexchaincli tx send ... --fees=0.0002okt
 
 
 or
 
 .. code:: bash
 
-    okexchaincli tx send ... --gas-prices=0.00000001okt
+    okexchaincli tx send ... --gas-prices=0.000000001okt
 
 
 You need to use the ``--gas`` flag to specify the gas quantity you want to provide for this transaction, either use ``--gas number``
@@ -65,20 +65,15 @@ You need to use the `--gas` flag to specify the gas quantity you want to provide
 Other fees
 ----------
 
-In addition to the above fees, okexchain will also charge some additional fees as `Bu`siness fees` for below `Orders`.
+In addition to the above fees, okexchain will also charge some additional fees as `Business fees` for below `Orders`.
 
 
 +----------------+-------------------------------+------------------------------------------------+
 | Module         | Command                       |  Business Fee      (OKT)                       |
 +================+===============================+================================================+
-| Dex            | List                          | 20000                                          |
+| Dex            | List                          | 1000                                           |
 +----------------+-------------------------------+------------------------------------------------+
-| Token          | Issue                         | 2500                                           |
-+----------------+-------------------------------+------------------------------------------------+
-|                | Mint                          | 10                                             |
-+----------------+-------------------------------+------------------------------------------------+
-|                | Burn                          | 10                                             |
-+----------------+-------------------------------+------------------------------------------------+
+
 
 
 Fee Related FAQ
