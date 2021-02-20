@@ -59,7 +59,7 @@ module.exports = {
     },
     testnet: {
       provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
-      network_id: 97,
+      network_id: 65,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
