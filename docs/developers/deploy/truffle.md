@@ -58,7 +58,7 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
+      provider: () => new HDWalletProvider(mnemonic, `http://okexchaintest-rpc1.okexcn.com:26659`),
       network_id: 65,
       confirmations: 10,
       timeoutBlocks: 200,
