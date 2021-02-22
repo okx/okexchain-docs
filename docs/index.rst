@@ -138,6 +138,7 @@ Contents
    :caption: Developers
 
    developers/quick-start
+   developers/basics/index
    developers/general/index
    developers/deploy/index
    developers/OIP20Tokens/index
