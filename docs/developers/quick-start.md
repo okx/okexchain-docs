@@ -7,6 +7,7 @@
 
 - NetWork Name: OKExChain Testnet
 - RPC URL: 
+    - http://okexchaintest-rpc-hk.okexcn.com:26659
     - http://18.162.144.96:26659 
     - http://18.166.225.5:26659 
     - http://18.163.84.173:26659 
