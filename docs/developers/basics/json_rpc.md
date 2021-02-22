@@ -1,12 +1,12 @@
 
-# JSON-RPC Server
+# JSON-RPC Methods
 
-Check the JSON-RPC methods and namespaces supported on Ethermint. {synopsis}
+Check the JSON-RPC methods and namespaces supported on OKExChain. 
 
 ## Pre-requisite Readings
 
-- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) {prereq}
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}
+- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) 
+- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) 
 
 ## JSON-RPC Methods
 
@@ -890,6 +890,4 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_ecRecover","params":["0
 {"jsonrpc":"2.0","id":1,"result":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70"}
 ```
 
-## Next {hide}
 
-Learn about the Ethermint [Hard Spoon](./hard_spoon.md) functionality {hide}
