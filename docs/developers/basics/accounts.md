@@ -14,7 +14,6 @@ OKExChain defines its own custom `Account` type that uses Ethereum's ECDSA secp2
 satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
 The root HD path for OKExChain-based accounts is `m/44'/60'/0'/0`.
 
-+++ https://github.com/okex/okexchain/blob/v0.16.6/types/account.go#L31-L36
 
 ## Addresses and Public Keys
 
@@ -42,11 +41,11 @@ Cosmos `sdk.AccAddress`.
 - Address ([EIP55](https://eips.ethereum.org/EIPS/eip-55) Hex): `0xc0dd7ee1f112838470e7926609bb9ad1bebbfc4a`
 - Compressed Public Key (Bech32): `okexchainpub1pfqnmk6pqnwwuw0h9hj58t2hyzwvqc3truhhp5tl5hfucezcfy2rs8470nkyzju2vmk645fzmw2wveaqcqek767kwa0es9rmxe9nmmjq84cpny3fvj6tpg`
 
-You can query an account address using the Cosmos CLI or REST clients:
+You can query an account address using the OKExChain CLI or REST clients:
 
 ```bash
 # NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
-OKExChaincli q auth account $(OKExChaincli keys show <MYKEY> -a) -o text
+okexchain q auth account $(okexchain keys show <MYKEY> -a) -o text
 |
   address: okexchain1f8rqrfwut7ngkxwth0gt99h0lxnxsp09ngvzwl
   eth_address: 0x49c601A5DC5FA68b19CBbbd0b296eFF9a66805e5
@@ -65,7 +64,7 @@ curl -X GET "<NODE_IP>/auth/accounts/okexchain1f8rqrfwut7ngkxwth0gt99h0lxnxsp09n
 ```
 
 ::: tip
-The Cosmos SDK Keyring output (i.e `OKExChaincli keys`) only supports addresses and public keys in Bech32 format.
+The Cosmos SDK Keyring output (i.e `okexchain keys`) only supports addresses and public keys in Bech32 format.
 :::
 
 To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`okexchain_accounts`](./json_rpc.md#okexchain-accounts) endpoint:
