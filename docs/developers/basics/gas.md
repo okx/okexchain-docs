@@ -1,12 +1,12 @@
 
 # Gas and Fees
 
-Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos. {synopsis}
+Learn about the differences between `Gas` and `Fees` in Ethereum and OKExChain. 
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/master/basics/gas-fees.html) {prereq}
-- [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) {prereq}
+- [Cosmos SDK Gas](https://docs.cosmos.network/master/basics/gas-fees.html)
+- [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) 
 
 The concept of Gas represents the amount of computational effort required to execute specific operations on the state machine.
 
@@ -86,6 +86,3 @@ types other than the ones defined by the `evm` module. EVM module transactions c
 as gas is required inherently by Ethereum. This check is done by the evm transactions
 `ValidateBasic` function as well as on the custom `AnteHandler` defined by Ethermint.
 
-## Next {hide}
-
-Learn about the [Photon](./photon.md) token {hide}
