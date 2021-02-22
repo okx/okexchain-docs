@@ -1,7 +1,7 @@
-.. _blockchainDetail:
+.. _basics:
 
 ================
-Blockchain Detail
+Basics
 ================
 
 .. rubric:: Table of contents
@@ -10,6 +10,7 @@ Blockchain Detail
    :maxdepth: 2
    :titlesonly:
 
-   rpc
-   aminorpc
-   okexchain-fullnode
+   accounts
+   gas
+   transactions
+   json_rpc
