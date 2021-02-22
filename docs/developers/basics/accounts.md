@@ -45,7 +45,7 @@ You can query an account address using the OKExChain CLI or REST clients:
 
 ```bash
 # NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
-okexchain q auth account $(okexchain keys show <MYKEY> -a) -o text
+okexchaincli q auth account $(okexchain keys show <MYKEY> -a) -o text
 |
   address: okexchain1f8rqrfwut7ngkxwth0gt99h0lxnxsp09ngvzwl
   eth_address: 0x49c601A5DC5FA68b19CBbbd0b296eFF9a66805e5
