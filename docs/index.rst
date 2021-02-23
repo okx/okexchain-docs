@@ -139,7 +139,7 @@ Contents
 
    developers/quick-start
    developers/basics/index
-   developers/general/index
+   developers/tools/index
    developers/deploy/index
    developers/OIP20Tokens/index
    developers/blockchainDetail/index
