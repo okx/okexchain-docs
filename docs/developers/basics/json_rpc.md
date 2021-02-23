@@ -10,7 +10,7 @@ Check the JSON-RPC methods and namespaces supported on OKExChain.
 
 ## JSON-RPC Methods
 
-| Method                                                                            | Namespace | Implemented | Notes                     |
+| Method                                                                            | Namespace | Implemented by OKExChain | Notes        |
 |-----------------------------------------------------------------------------------|-----------|-------------|---------------------------|
 | [`web3_clientVersion`](#web3-clientversion)                                       | Web3      | ✔           |                           |
 | [`web3_sha3`](#web3-sha3)                                                         | Web3      | ✔           |                           |
