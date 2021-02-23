@@ -1,7 +1,7 @@
 .. _tools:
 
 ===============
-General
+Tools
 ===============
 
 .. rubric:: Table of contents
