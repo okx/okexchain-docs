@@ -23,7 +23,8 @@
 ![avatar](../img/metamask-01-2.png)
 
 ### 3. Get testnet token
-[Faucet](https://www.okex.com/drawdex)
+- [Faucet1](https://gitter.im/okexchain-testnet/faucet)
+- [Faucet2](https://www.okex.com/drawdex)
 
 ___
 ## Blockchain Browser
