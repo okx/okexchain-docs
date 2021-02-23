@@ -1,4 +1,4 @@
-.. _general:
+.. _tools:
 
 ===============
 General
@@ -15,3 +15,4 @@ General
    remix
    web3js
    truffle
+   hardhat
