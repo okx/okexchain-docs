@@ -65,7 +65,7 @@ You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable 
 
 # The minimum gas prices a validator is willing to accept for processing a
 # transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (Our recommended quantity is  10^-8 okt).
+# specified in this config (Our recommended quantity is  10^-9 okt).
 
 minimum-gas-prices = ""
 ```
