@@ -19,9 +19,9 @@ The root HD path for OKExChain-based accounts is `m/44'/60'/0'/0`.
 
 There are 3 main types of `Addresses`/`PubKeys` available by default on OKExChain:
 
-- Addresses and Keys for **accounts**, which identify users (e.g. the sender of a `message`). They are derived using the **`eth_secp256k1`** curve.
-- Addresses and Keys for **validator operators**, which identify the operators of validators. They are derived using the **`eth_secp256k1`** curve.
-- Addresses and Keys for **consensus nodes**, which identify the validator nodes participating in consensus. They are derived using the **`ed25519`** curve.
+- Addresses and Keys for **accounts**, which identify users (e.g. the sender of a `message`). They are derived using the [eth_secp256k1](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages) curve.
+- Addresses and Keys for **validator operators**, which identify the operators of validators. They are derived using the [eth_secp256k1](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages) curve.
+- Addresses and Keys for **consensus nodes**, which identify the validator nodes participating in consensus. They are derived using the [ed25519](https://cryptobook.nakov.com/digital-signatures/eddsa-and-ed25519) curve.
 
 |                    | Address bech32 Prefix | Pubkey bech32 Prefix | Curve           | Address byte length | Pubkey byte length |
 |--------------------|-----------------------|----------------------|-----------------|---------------------|--------------------|
