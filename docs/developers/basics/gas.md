@@ -56,22 +56,18 @@ The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fee
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 
-Because the gas calculated in OKExChain is done by the `IntrinsicGas` method from go-ethereum, a
+Because the EVM transaction gas calculated in OKExChain is done by the `IntrinsicGas` method from go-ethereum, a
 special `AnteHandler` that is customized for EVM transaction fee verification is required. This
 allows OKExChain to generate the expected gas costs for operations done in the network and scale the
 gas costs as it would in the Ethereum network.
 
 ## Gas Refunds
 
-In Ethereum, gas can be specified prior to execution and the remaining gas will be refunded back to
-the user if any gas is left over - should fail with out of gas if not enough gas was provided. In
-OKExChain, the concept of gas refunds does not exist and the fees paid is not refunded in part back
-to the user. The fees exacted on a transaction will be collected by the validator and no refunds are
-issued. Thus, it is extremely important to use the correct gas.
+In Ethereum, gas can be specified prior to execution and the remaining gas will be refunded back to the user if any gas is left over - should fail if not enough gas was provided. 
 
-To prevent overspending on fees, providing the `--gas-adjustment` flag for a cosmos transactions
-will determine the fees automatically. Also the `eth_estimateGas` rpc call can be used to manually
-get the correct gas costs for a transaction.
+In OKExChain, there are two types of transactions, EVM and Cosmos. The EVM type transaction will refund gas like Ethereum, but the Cosmos type transaction will not refund gas.
+
+If you are using a Cosmos type transaction, it is extremely important to use the correct gas. To prevent overspending on fees, providing the `--gas-adjustment` flag for a Cosmos transaction will determine the fees automatically. 
 
 ## 0 Fee Transactions
 
