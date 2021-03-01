@@ -12,3 +12,4 @@ OIP20 Tokens
 
    introduction
    issue-token
+   testnet-oip20
