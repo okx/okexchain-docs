@@ -30,18 +30,11 @@ okexchaincli config node <host>:<port>
 Or any of the following address ports:
 ```
 # testnet
-http://okexchaintest-rpc1.okexcn.com:26657 (Hong Kong)
-http://okexchaintest-rpc2.okexcn.com:26657 (Ohio)
-http://okexchaintest-rpc3.okexcn.com:26657 (London)
-http://okexchaintest-rpc1.okex.com:26657 (Hong Kong. vpn required, if you are in mainland China)
-http://okexchaintest-rpc2.okex.com:26657 (Ohio. vpn required, if you are in mainland China)
-http://okexchaintest-rpc3.okex.com:26657 (London. vpn required, if you are in mainland China)
+- http://okexchaintest.okex.com:26657 (proxy required, if you are in mainland China)
+- http://okexchaintest.okexcn.com:26657
 
 # mainnet
-http://okexchain-rpc1.okexcn.com:26657 (HongKong)
-http://okexchain-rpc2.okexcn.com:26657 (Tokyo)
-http://okexchain-rpc1.okex.com:26657 (HongKong. vpn required, if you are in mainland China)
-http://okexchain-rpc2.okex.com:26657 (Tokyo. vpn required, if you are in mainland China)
+Comming soon
 ```
 
 
