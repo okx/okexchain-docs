@@ -130,6 +130,7 @@ Contents
    getting-start/install-okexchain
    getting-start/deploy-you-own-okexchain-testnet
    getting-start/join-okexchain-testnet
+   getting-start/join-okexchain-testnet-with-docker
    getting-start/join-okexchain-mainnet
    getting-start/install-faq
 
