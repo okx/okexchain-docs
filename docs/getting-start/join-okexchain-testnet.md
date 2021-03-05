@@ -10,15 +10,6 @@ of OKExChain to use and details about the genesis file.
 
 **You need to [install okexchain](./install-okexchain.html) before you go further**
 
-ATTENTION:
-
-⚠️ Latest testnet: okexchain v0.16.6 ⚠️
-- Feb 19, 2021 16:19 UTC - okexchain-v0.16.6
-
-Build v0.16.6 okexchaind:
-
-`make GenesisHeight=914809 install`
-
 
 Details of deployment information: https://github.com/okex/testnets/blob/master/README.md
 ## Supported Platforms
