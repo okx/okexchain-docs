@@ -13,17 +13,9 @@ docker pull okexchain/fullnode-testnet:latest
 
 ### 2. Set the data directory
 
-If you have a data snapshot, you can use it directly. If not, you can download the testnet snapshot from [here](https://okexchain-docs.readthedocs.io/en/latest/resources/snapshot.html), or do as follows:
 
-- create a data directory
-```
-mkdir ${DATA_DIR}
-```
-- generate a json file in data directory
-```
-cd ${DATA_DIR}
-echo '{"height": "0","round": "0","step": 0}' > priv_validator_state.json
-```
+Download the testnet snapshot from [here](https://okexchain-docs.readthedocs.io/en/latest/resources/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
+
 
 
 ### 3. Run docker container
@@ -47,3 +39,6 @@ docker stop okexchain-testnet-fullnode
 ```
 docker start okexchain-testnet-fullnode
 ```
+
+### 5. RPC
+When docker gets to the latest block, local RPC can be used：`http://localhost:8545`
