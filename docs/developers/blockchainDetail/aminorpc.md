@@ -11,7 +11,8 @@ JavaScript Object Notation (JSON) is human readable, well structured and great f
 
 ## Mainnet (chain-id: okexchain-66)
 
-- Comming soon
+- http://okexchain.okexcn.com:26657
+
 
 ___
 
