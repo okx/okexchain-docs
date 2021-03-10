@@ -9,7 +9,7 @@ OKExChain is based on Tendermint and relies on a set of validators responsible f
 Token holders can delegate staking rights through the “delegation” command, and select the validators that they think are meaningful to the ecosystem. These token holders are called delegators.
 
 
-To have a look at a practical guide on how to become a delegator, please click [here](./delegator-guide-cli.html).
+To have a look at a practical guide on how to become a delegator, please click [here](./delegators-guide-cli.html).
 
 
 
