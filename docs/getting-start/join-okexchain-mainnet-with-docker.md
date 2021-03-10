@@ -8,10 +8,10 @@ order: 4
 ### 1. Download the docker image
 
 ```
+docker pull okexchain/fullnode-base:latest (to be executed only once when you get start.)
+
 docker pull okexchain/fullnode-mainnet:latest
 ```
-
-
 
 ### 2. Download the snapshot
 You can download the mainnet snapshot from [here](https://okexchain-docs.readthedocs.io/en/latest/resources/snapshot.html). For example:
@@ -28,13 +28,11 @@ tar -zxvf okexchain-v0.16.3-mainnet-20210127-height_275913.tar.gz -C ~/okexchain
 ```
 
 
-
 ### 3. Run docker container
 
 ```
 docker run -d --name okexchain-mainnet-fullnode -v ~/okexchain/mainnet/data:/root/.okexchaind/data/ -p 8545:8545 okexchain/fullnode-mainnet:latest
 ```
-
 
 
 ### 4. View the running log
@@ -44,6 +42,7 @@ docker logs --tail 100 -f okexchain-mainnet-fullnode
 ```
 
 
-
 >  You can stop the docker container with command: `docker stop okexchain-mainnet-fullnode`, and then restart the docker container with command: `docker start okexchain-mainnet-fullnode`. When the docker container gets to the latest block, local RPC can be used：`http://localhost:8545`
 
+>  If you start the node from height 0, you need run the command in path: ~/okexchain/mainnet/data   
+$ echo '{"height": "0","round": "0","step": 0}' > priv_validator_state.json
