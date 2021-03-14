@@ -13,3 +13,4 @@ For testnet only.
 |        DOTK        |    [0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f](https://www.oklink.com/okexchain-test/address/0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f)    |
 |        FILK        |    [0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93](https://www.oklink.com/okexchain-test/address/0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93)    |
 |        LTCK        |    [0xd616388f6533B6f1c31968a305FbEE1727F55850](https://www.oklink.com/okexchain-test/address/0xd616388f6533B6f1c31968a305FbEE1727F55850)    |
+|        WOKT        |    [0x70c1c53E991F31981d592C2d865383AC0d212225](https://www.oklink.com/okexchain-test/address/0x70c1c53E991F31981d592C2d865383AC0d212225)    |

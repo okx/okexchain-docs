@@ -7,8 +7,7 @@
 
 - NetWork Name: OKExChain Testnet
 - RPC URL: 
-    - https://exchaintest.okexcn.com  (works on both Chrome and Firefox)
-    - http://okexchaintest.okexcn.com:26659 (works on Chrome only)
+    - https://exchaintest.okexcn.com
 - Chain ID: 65
 - Currency Symbol: OKT
 - Block Explorer URL: https://www.oklink.com/okexchain-test/
