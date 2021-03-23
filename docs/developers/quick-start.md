@@ -18,7 +18,7 @@
 ![avatar](../img/metamask-01-2.png)
 
 ### 3. Get testnet token
-- [Faucet1](https://gitter.im/okexchain-testnet/faucet)
+- [Faucet1](https://discord.gg/B5nMs6qK5F)
 - [Faucet2](https://www.okex.com/drawdex)
 
 ___
