@@ -59,6 +59,10 @@ was cancelled successful.
 
 Fires a notification each time a new header is appended to the chain, including chain reorganizations.
 
+#### Parameters
+
+none
+
 #### Example
 
     >> {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
