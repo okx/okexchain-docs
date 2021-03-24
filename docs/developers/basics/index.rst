@@ -14,3 +14,4 @@ Basics
    gas
    transactions
    json_rpc
+   websocket
