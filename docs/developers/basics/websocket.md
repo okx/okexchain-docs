@@ -20,7 +20,7 @@ Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws)
 ws ws://localhost:8546/
 
 # subscribe to new Ethereum-formatted block Headers
-> {"id": 1, "method": "eth_subscribe", "params": ["newHeads", {}]}
+> {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 < {"jsonrpc":"2.0","result":"0x65eca2989ce064d141862c8b7138c1e","id":1}
 ```
 
