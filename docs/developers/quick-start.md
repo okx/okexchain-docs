@@ -18,8 +18,8 @@
 ![avatar](../img/metamask-01-2.png)
 
 ### 3. Get testnet token
-- [Faucet1](https://discord.gg/B5nMs6qK5F)
-- [Faucet2](https://www.okex.com/drawdex)
+- [Discord Faucet](https://discord.gg/B5nMs6qK5F)
+- [Slack Faucet](https://join.slack.com/t/okexchain/shared_invite/zt-nwyhpuc7-xut1stRFD7wV8MO5Uc5~Hw)
 
 ___
 ## Blockchain Browser
