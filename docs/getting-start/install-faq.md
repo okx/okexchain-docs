@@ -75,3 +75,23 @@ or local configuration
 $ okexchaincli config chain-id okexchain-65
 $ okexchaincli config trust-node true
 ```
+
+## 3. Make sure commitID is the latest version
+When you start your own node, to make sure that your commitID of okexchaind is consistent with the [official version](https://github.com/okex/okexchain/releases), check it by:
+```shell script
+$ okexchaind version --long
+# or
+$ docker exec docker_container_name okexchaind version --long
+
+```
+For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551fed.
+```shell script
+name: okexchain
+server_name: okexchaind
+client_name: okexchaincli
+version: v0.16.8.3
+commit: ee5068ccb54b464aeaff7eef69fb2e8611551fed
+```
+
+
+
