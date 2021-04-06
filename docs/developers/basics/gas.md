@@ -3,6 +3,23 @@
 
 Learn about the differences between `Gas` and `Fees` in Ethereum and OKExChain. 
 
+## Denominations
+OKExChain has a metric system of denominations used as units of okt. Each denomination has its own unique name (some bear the family name of seminal figures playing a role in evolution of computer science and cryptoeconomics). The smallest denomination aka *base unit* of okt is called Wei. Below is a list of the named denominations and
+their value in Wei. Following a common (although somewhat ambiguous) pattern, ether also designates a unit (of 1e18 or one quintillion Wei) of the currency.
+
+|   Unit        | Wei Value | Wei  |
+|--------------------|-----------------------|----------------------|
+|  **wei**           | 1 wei                              | 1             |
+|  **Kwei (babbage)**          | 1e3 wei                  | 1,000             |
+|  **Mwei (lovelace)**         | 1e6 wei                  | 1,000,000             |
+|  **Gwei (shannon)**          | 1e9 wei                  | 1,000,000,000             |
+|  **microether (szabo)**      | 1e12 wei                 | 1,000,000,000,000             |
+|  **milliether (finney)**     | 1e15 wei                 | 1,000,000,000,000,000             |
+|  **okt**                     | 1e18 wei                 | 1,000,000,000,000,000,000             |
+
+
+
+
 ## Pre-requisite Readings
 
 - [Cosmos SDK Gas](https://docs.cosmos.network/master/basics/gas-fees.html)
