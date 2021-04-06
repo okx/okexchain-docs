@@ -19,7 +19,7 @@
 
 ### 3. Get testnet token
 - [Discord Faucet](https://discord.gg/B5nMs6qK5F)
-- [Slack Faucet](https://join.slack.com/t/okexchain/shared_invite/zt-nwyhpuc7-xut1stRFD7wV8MO5Uc5~Hw)
+- [Slack Faucet](https://join.slack.com/t/okexchain/shared_invite/zt-obrz3qer-A749~LQ7bNp9Mpkoj8AS8g)
 
 ___
 ## Blockchain Browser
