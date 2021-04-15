@@ -5,9 +5,9 @@
 - Metamask
 
 ## Mainnet (chain-id: okexchain-66)
-- https://exchain.okexcn.com/
+- https://exchainrpc.okex.org
 
 ## Testnet (chain-id: okexchain-65):
-- https://exchaintest.okexcn.com/
+- https://exchaintestrpc.okex.org
 
 
