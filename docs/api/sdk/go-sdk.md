@@ -2685,7 +2685,7 @@ text proposal file template:
 {
   "title": "Community Pool Spend Proposal",
   "description": "community pool spend description",
-  "recipient": "okexchain1ntvyep3suq5z7789g7d5dejwzameu08m6gh7yl",
+  "recipient": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme",
   "amount": [
     {
       "denom": "okt",

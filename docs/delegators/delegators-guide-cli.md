@@ -103,7 +103,7 @@ The funds stored in an account are controlled by the private key. This private k
 **Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access it. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
 
 
-The address is a public string with a human-readable prefix (e.g. `okexchain1gt3rwlqelf5jqy4ke9vthuduh27y4kj03kfpum`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address.
+The address is a public string with a human-readable prefix (e.g. `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address.
 
 
 ### Creating an Account
@@ -223,13 +223,13 @@ okexchaincli query staking validators
 // query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
 okexchaincli query staking validator <validatorAddress>
 
-// query all information of delegations and all shares recently added by a delegator (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph)
+// query all information of delegations and all shares recently added by a delegator (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn)
 okexchaincli query staking delegator <delegatorAddress>
 
 // query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
 okexchaincli query staking shares-added-to <validatorAddress>
 
-// query the addresses of delegators by a specific proxy (e.g. okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph) 
+// query the addresses of delegators by a specific proxy (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) 
 okexchaincli query staking proxy <proxyAddress> 
 
 // query all proposals currently open for depositing
@@ -280,7 +280,7 @@ For testnet, the recommended `gas-prices` is `0.005tokt`.
 ```bash
 // Send a certain amount of tokens to an address
 
-// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph <amount>=1024okt 
+// Ex value for parameters (do not actually use these values in your tx!!): <to_address>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn <amount>=1024okt 
 // Ex value for flags: <gasPrice>=0.005okt
 
 okexchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
@@ -378,7 +378,7 @@ If you do not have a Hardware Wallet and want to interact with your private key 
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 
 okexchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```

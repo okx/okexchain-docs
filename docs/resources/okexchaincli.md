@@ -103,13 +103,14 @@ okexchaincli keys add wind
 {
   "name": "wind",
   "type": "local",
-  "address": "okchain1ltxwpg2f2frsnq3et3qp7sfz2u44qsaj5ytlcf",
-  "pubkey": "okchainpub1addwnpepqg8g82chdrf4ra4fn39e0lhzmds6qgs75emlzp2kqw5n69xt0fz3cewvx06",
-  "mnemonic": "alpha enroll regret dizzy bid reunion company divorce layer narrow ceiling state"
-  }
+  "address": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n",
+  "eth_address": "0xaAc8b41FA54f61898EA3E5e02fA7Fc9932ea0dC5",
+  "pubkey": "expub17weu6qepqw7pvnkjw9j2f6d556clz58wj09nha7qpftu0np4vj5q9mtgrx6qw9nvu7h",
+  "mnemonic": "right anxiety future wish fall carpet script old alert entire remain purse"
+}
   
 # Recover keys by mnemonic phrases
-okexchaincli keys add --recover admin   -y -m "keen border system oil inject hotel hood potato shed pumpkin legend actor"
+okexchaincli keys add --recover admin   -y -m "right anxiety future wish fall carpet script old alert entire remain purse"
 ```
 
 ### 2. Display all local key information:
@@ -128,19 +129,21 @@ okexchaincli keys list [flags]
   
   # Example output
   [
-    {
-      "name": "admin16",
-      "type": "local",
-      "address": "okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a",
-      "pubkey": "okchainpub1addwnpepq2nfj9lqmqrwjyrqnp574tll493svxdltwlnqq3vn5ptmf2ceraesgyfegg"
-    },
-    {
-      "name": "alice",
-      "type": "local",
-      "address": "okchain1vr9u0u829g68vcy6y362efm3tky4mhfxf28tth",
-      "pubkey": "okchainpub1addwnpepq2nkjj2tv9yyvfaevc45n3tszsl9l7t642rh5j2udvwn5uee26gqv7vwhun"
-    },
-  ]
+  {
+    "name": "alice",
+    "type": "local",
+    "address": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
+    "eth_address": "0x2CF4ea7dF75b513509d95946B43062E26bD88035",
+    "pubkey": "expub17weu6qepq22qqfh7kd003zdewtx2r8qnyqrysy6h5g8duhxq5exq26hsl7kf6w49q4z"
+  },
+  {
+    "name": "bob",
+    "type": "local",
+    "address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+    "eth_address": "0x0073F2E28ef8F117e53d858094086Defaf1837D5",
+    "pubkey": "expub17weu6qepqfw5kfxxdmtltjajx0ygfhnxfjzxmvygdjuxp89ddk4cy06wr4urc4hvhmm"
+  }
+ ]
 ```
 
 ### 3. Display the information on the key of a specific user:
@@ -163,8 +166,9 @@ okexchaincli keys show [name [name...]] [flags]
   {
     "name": "bob",
     "type": "local",
-    "address": "okchain10487f9wxss2g2ctvpewkmjk543vg65x9rzv09n",
-    "pubkey": 	  "okchainpub1addwnpepq2gaqy8nk0z0plexzusvs4g97wsvjtqftnpjkmw25lfh2hjz3wk0svf030h"
+    "address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+    "eth_address": "0x0073F2E28ef8F117e53d858094086Defaf1837D5",
+    "pubkey": "expub17weu6qepqfw5kfxxdmtltjajx0ygfhnxfjzxmvygdjuxp89ddk4cy06wr4urc4hvhmm"
   }
 ```
 
@@ -238,7 +242,7 @@ board zone elevator lesson welcome meadow love card obey cruise unlock double
 
   | Parameter |                         Mark                          |
   | :-------: | :----------------------------------------------------------: |
-  |  Address  | User address (eg. okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya) |
+  |  Address  | User address (eg. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) |
 
 #### Example:
 Query user information, including serial numbers, public keys and token balances
@@ -247,13 +251,13 @@ okexchaincli query account <address>
 ```
 #### Successful response:
 ```
-  okexchaincli query account okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya
+  okexchaincli query account ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
   
   # Example output
   {
     "type": "auth/Account",
     "value": {
-      "address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
+      "address": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
       "coins": [
         {
           "denom": "acoin",
@@ -324,7 +328,7 @@ okexchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 #### Example
 
 ```bash
-okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+okexchaincli tx send alice ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 ```
 #### Successful response:
 ```
@@ -497,7 +501,7 @@ Query token information
     "originalSymbol": "bcoin",
     "wholeName": "bcoin",
     "totalSupply": "200000",
-    "owner": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
+    "owner": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
     "mintable": true
   }
 ```
@@ -510,7 +514,7 @@ okexchaincli tx token multi-send [flags]
 #### Successful response:
 
 ```
-  okexchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+  okexchaincli tx token multi-send --from alice --transfers '[{"to":"ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   
   # Example output
   {
@@ -568,8 +572,8 @@ Display user addresses p1, p2, p3 and deposit 100.1 okt into them
 * Example:
 ```bash
 okexchaincli keys show -a p1p2p3
-okexchaincli tx send okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1okt --from=alice
-okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+okexchaincli tx send ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n 100.1okt --from=alice
+okexchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 
 ```
 #### 7.3. Multi-signature:
@@ -577,23 +581,23 @@ okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
-okexchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10okt \
+okexchaincli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
   --chain-id=okexchain-65 \
-  --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --from=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --generate-only > unsignedTx.json
 ```
 ##### p1, p2, p3 sign:
 ###### Example:
 ```bash
 okexchaincli tx sign \
-  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=alice \
   --output-document=p1signature.json \
   unsignedTx.json
 
  
 okexchaincli tx sign \
-  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+  --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=jack \
   --output-document=p2signature.json \
   unsignedTx.json 
@@ -613,7 +617,7 @@ Execute a signed `signedTx.json` offline and query the balance for confirmation.
 ```bash 
 okexchaincli tx broadcast signedTx.json
 
-okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+okexchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 ```
 ### 8. Transfer token ownership:
 
@@ -627,7 +631,7 @@ okexchaincli tx token transfer-ownership [flags]
 ##### Successful response:
 ```
 # from alice to jack
-okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt
+okexchaincli tx token transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
 
 # response
 {
@@ -650,7 +654,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "module",
@@ -666,7 +670,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "sender",
-          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -675,7 +679,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -683,7 +687,7 @@ okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -702,7 +706,7 @@ okexchaincli tx token confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
-okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol okt
+okchaincli tx token confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
 
 # response
 {
@@ -737,7 +741,7 @@ okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383q
         },
         {
           "key": "sender",
-          "value": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         }
       ]
     },
@@ -746,7 +750,7 @@ okchaincli tx token confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383q
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -858,7 +862,7 @@ okexchaincli tx dex transfer-ownership [flags]
 ##### Successful response:
 ```
 # from alice to jack
-okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okexchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
+okexchaincli tx dex transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m --product btc_okt
 
 # response
 {
@@ -881,7 +885,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "module",
@@ -897,7 +901,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "sender",
-          "value": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -906,7 +910,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -914,7 +918,7 @@ okexchaincli tx dex transfer-ownership --from okexchain1pck0wndww84wtppc0vz9mcuv
         },
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -933,7 +937,7 @@ okexchaincli tx dex confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
-okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --product btc_okt
+okchaincli tx dex confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --product btc_okt
 
 # response
 {
@@ -968,7 +972,7 @@ okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpm
         },
         {
           "key": "sender",
-          "value": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         }
       ]
     },
@@ -977,7 +981,7 @@ okchaincli tx dex confirm-ownership --from okchain1x045ccxnwpurav2d5e25k25383qpm
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -1017,7 +1021,7 @@ Flags:
 $ okexchaincli query dex deposits -h
 
 Example:
-    okexchaincli query dex deposits okchain1w7xcg4t90fxcpe95dzhykcvs9skzz2xsy60g3u -i 1
+    okexchaincli query dex deposits ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n -i 1
 
 Usage:
     okexchaincli query dex deposits [account-addr] [flags]
@@ -1167,11 +1171,11 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "module",
@@ -1191,7 +1195,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -1200,7 +1204,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
       "attributes": [
         {
           "key": "recipient",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "amount",
@@ -1208,7 +1212,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
         },
         {
           "key": "recipient",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "amount",
@@ -1216,7 +1220,7 @@ okexchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q
         },
         {
           "key": "recipient",
-          "value": "okchain17xpfvakm2amg962yls6f84z3kell8c5ljresa7"
+          "value": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n"
         },
         {
           "key": "amount",
@@ -1290,11 +1294,11 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "sender",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "module",
@@ -1314,7 +1318,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -1323,7 +1327,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
       "attributes": [
         {
           "key": "recipient",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "amount",
@@ -1331,7 +1335,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "recipient",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "amount",
@@ -1339,7 +1343,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "recipient",
-          "value": "okchain17xpfvakm2amg962yls6f84z3kell8c5ljresa7"
+          "value": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n"
         },
         {
           "key": "amount",
@@ -1392,7 +1396,7 @@ okexchaincli query order detail ID0000000525-1
 {
 	"txhash": "B32EC706A2B5ACCF4FC43D6530588C0C9E36E79AC572D3443653281500D46FDA",
 	"order_id": "ID0000000525-1",
-	"sender": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
+	"sender": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
 	"product": "xxb-08a_okt",
 	"side": "BUY",
 	"price": "1.00000000",
@@ -1576,7 +1580,7 @@ okexchaincli backend orders open $(okexchaincli keys show bob -a)
 		"data": [{
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"orderId": "ID0000000011-1",
-			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"sender": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": "11.10000000",
@@ -1634,7 +1638,7 @@ okexchaincli backend deals --address=$(okexchaincli keys show bob -a)
 			"timestamp": 1563890996,
 			"blockHeight": 127,
 			"orderId": "ID0000000105-1",
-			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"sender": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": 4,
@@ -1680,12 +1684,12 @@ okexchaincli backend fees $(okexchaincli keys show bob -a)
 	"detailMsg": "",
 	"data": {
 		"data": [{
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"fee": "0.00160000okt",
 			"feeType": "deal",
 			"timestamp": 1563890996
 		}, {
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"fee": "0.01250000okt",
 			"feeType": "transfer",
 			"timestamp": 1563890942
@@ -1784,7 +1788,7 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 		"data": [{
 			"txHash": "550101C97C83028F228542755F76A806D00D6635C64E5762EF6FD1667A900D81",
 			"type": 2,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
@@ -1793,7 +1797,7 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 		}, {
 			"txHash": "B287E99E1938FD2C4A6D31F6EBD928920572B4A9385FB4D1C630436985046112",
 			"type": 1,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"symbol": "okt",
 			"side": 3,
 			"quantity": "10000.00000000",
@@ -1802,7 +1806,7 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 		}, {
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"type": 2,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
 			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
@@ -2071,7 +2075,7 @@ Query the information of delegations and all votes recently made by a delegator
 $ okexchaincli query staking delegator -h
 
 Example:
-    okexchaincli query staking delegator okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+    okexchaincli query staking delegator ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
     
 Usage:
     okexchaincli query staking delegator [address] [flags]
@@ -2151,7 +2155,7 @@ Bind proxy relationship
 $ okexchaincli tx staking proxy bind -h
 
 Example:
-	  okexchaincli tx staking proxy bind okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph --from mykey
+	  okexchaincli tx staking proxy bind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
     okexchaincli tx staking proxy bind [flags]
@@ -2167,7 +2171,7 @@ Unbind proxy relationship
 $ okexchaincli tx staking proxy unbind -h
 
 Example:
-	  okexchaincli tx staking proxy unbind okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph --from mykey
+	  okexchaincli tx staking proxy unbind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
     okexchaincli tx staking proxy unbind [flags]
@@ -2183,7 +2187,7 @@ Query the addresses of delegators by a specific proxy
 $ okexchaincli query staking proxy -h
 
 Example:
-	  okexchaincli query staking proxy okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+	  okexchaincli query staking proxy ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 	  
 Usage:
     okexchaincli query staking proxy [address] [flags]
@@ -2679,8 +2683,8 @@ $ okexchaincli query gov proposals -h
 Query for a all proposals. You can filter the returns with the following flags.
 
 Example:
-  okexchaincli query gov proposals --depositor okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
-  okexchaincli query gov proposals --voter okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+  okexchaincli query gov proposals --depositor ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+  okexchaincli query gov proposals --voter ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
   okexchaincli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
 
 Usage:

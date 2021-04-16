@@ -25,9 +25,9 @@ There are 3 main types of `Addresses`/`PubKeys` available by default on OKExChai
 
 |                    | Address bech32 Prefix | Pubkey bech32 Prefix | Curve           | Address byte length | Pubkey byte length |
 |--------------------|-----------------------|----------------------|-----------------|---------------------|--------------------|
-| Accounts           | `okexchain`                 | `okexchainpub`             | `eth_secp256k1` | `20`                | `33` (compressed)  |
-| Validator Operator | `okexchainvaloper`          | `okexchainvaloperpub`      | `eth_secp256k1` | `20`                | `33` (compressed)  |
-| Consensus Nodes    | `okexchainvalcons`          | `okexchainvalconspub`      | `ed25519`       | `20`                | `32`               |
+| Accounts           | `ex`                 | `expub`             | `eth_secp256k1` | `20`                | `33` (compressed)  |
+| Validator Operator | `exvaloper`          | `exvaloperpub`      | `eth_secp256k1` | `20`                | `33` (compressed)  |
+| Consensus Nodes    | `exvalcons`          | `exvalconspub`      | `ed25519`       | `20`                | `32`               |
 
 ## Address formats for clients
 
@@ -37,9 +37,9 @@ The Bech32 format is the default format for Cosmos-SDK queries and transactions 
 clients. The hex format on the other hand, is the Ethereum `common.Address` representation of a
 Cosmos `sdk.AccAddress`.
 
-- Address (Bech32): `okexchain1crwhac03z2pcgu88jfnqnwu66xlthlz2rhljah`
-- Address ([EIP55](https://eips.ethereum.org/EIPS/eip-55) Hex): `0xc0dd7ee1f112838470e7926609bb9ad1bebbfc4a`
-- Compressed Public Key (Bech32): `okexchainpub1pfqnmk6pqnwwuw0h9hj58t2hyzwvqc3truhhp5tl5hfucezcfy2rs8470nkyzju2vmk645fzmw2wveaqcqek767kwa0es9rmxe9nmmjq84cpny3fvj6tpg`
+- Address (Bech32): `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`
+- Address ([EIP55](https://eips.ethereum.org/EIPS/eip-55) Hex): `0xBE2684Afc84daf3388E99FFB215FdD4116FE89EC`
+- Compressed Public Key (Bech32): `expub17weu6qepqgantzvj79rywafrxmye524tpa8kp6akjct3nw7wel623lsnfwynqyfe75k`
 
 You can query an account address using the OKExChain CLI or REST clients:
 
@@ -47,12 +47,12 @@ You can query an account address using the OKExChain CLI or REST clients:
 # NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
 okexchaincli q auth account $(okexchain keys show <MYKEY> -a) -o text
 |
-  address: okexchain1f8rqrfwut7ngkxwth0gt99h0lxnxsp09ngvzwl
-  eth_address: 0x49c601A5DC5FA68b19CBbbd0b296eFF9a66805e5
+  address: ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
+  eth_address: 0xBE2684Afc84daf3388E99FFB215FdD4116FE89EC
   coins:
   - denom: okt
     amount: "10000000"
-  public_key: okexchainpub1pfqnmkepqw45vpsn6dzvm7k22zrghx0nfewjdfacy7wyycv5evfk57kyhwr8cqj5r4x
+  public_key: expub17weu6qepqgantzvj79rywafrxmye524tpa8kp6akjct3nw7wel623lsnfwynqyfe75k
   account_number: 0
   sequence: 1
   code_hash: c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
@@ -60,7 +60,7 @@ okexchaincli q auth account $(okexchain keys show <MYKEY> -a) -o text
 
 ``` bash
 # GET /auth/accounts/{address}
-curl -X GET "<NODE_IP>/auth/accounts/okexchain1f8rqrfwut7ngkxwth0gt99h0lxnxsp09ngvzwl" -H "accept: application/json"
+curl -X GET "<NODE_IP>/auth/accounts/ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme" -H "accept: application/json"
 ```
 
 ::: tip
