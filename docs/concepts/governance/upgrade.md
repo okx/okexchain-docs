@@ -46,7 +46,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
     },
     {
       "key": "proposer",
-      "value": "okchain1wxzmqpff0g5trn45j33l3x0zakxu6fklj3mjv6"
+      "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
     },
     {
       "key": "proposal-id",
@@ -121,7 +121,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
     },
     {
       "key": "depositor",
-      "value": "okchain1wxzmqpff0g5trn45j33l3x0zakxu6fklj3mjv6"
+      "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
     },
     {
       "key": "proposal-id",
@@ -159,7 +159,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
     },
     {
       "key": "voter",
-      "value": "okchain1wxzmqpff0g5trn45j33l3x0zakxu6fklj3mjv6"
+      "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
     },
     {
       "key": "proposal-id",

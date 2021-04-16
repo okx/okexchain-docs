@@ -72,7 +72,7 @@ The application state defines the initial state of the state-machine.
 In this section, initial allocation of tokens is defined. It is possible to add accounts manually by directly editing the genesis file, but it is also possible to use the following command:
 
 ```bash
-// Example: okexchaind add-genesis-account okchain1qs8tnw2t8l6amtzvdemnnsq9dzk0ag0z37gh3h 10000000okt
+// Example: okexchaind add-genesis-account ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10000000okt
 
 okexchaind add-genesis-account <account-address> <amount><denom>
 ```
@@ -82,7 +82,7 @@ This command creates an item in the `accounts` list, under the `app_state` secti
 ```json
 "accounts": [
       {
-        "address": "okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph",
+        "address": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r",
         "coins": [
           {
             "denom": "okt",

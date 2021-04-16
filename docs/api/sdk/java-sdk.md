@@ -135,8 +135,8 @@ MsgSend msg = new MsgSend();
 
 msg.initMnemonic("puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer");
 
-// create msg that sends 6.00000000okt from account whose mnemonic is `puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer` to account `okexchain1v853tq96n9ghvyxlvqyxyj97589clccrufrkz9`
-Message messages = msg.produceSendMsg("okt", "6.00000000", "okexchain1v853tq96n9ghvyxlvqyxyj97589clccrufrkz9");
+// create msg that sends 6.00000000okt from account whose mnemonic is `puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer` to account `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`
+Message messages = msg.produceSendMsg("okt", "6.00000000", "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme");
 
 // submit msg to okexchain network; `0.01000000` is the fee, `200000` is the gas limit and `okexchain transfer!` is the memo of this msg.
 msg.submit(messages, "0.01000000", "200000", "okexchain transfer!");

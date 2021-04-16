@@ -69,10 +69,10 @@ okexchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --ga
 An OKExChain delegator can add shares to himself or other validator by following the command:
 
 ```bash
-okexchaincli tx staking add-shares okexchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from <delegatorKeyName>
+okexchaincli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e --from <delegatorKeyName>
 ```
 
-* In the following example, `okexchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okexchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okexchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okexchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx` are the validator’s addresses, and all OKT deposited will be converted into shares and added on the above-mentioned validators.
+* In the following example, `exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e` are the validator’s addresses, and all OKT deposited will be converted into shares and added on the above-mentioned validators.
 
 * The from flag specifies who signs the transaction.
 

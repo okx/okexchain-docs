@@ -160,7 +160,7 @@ $ okexchaincli query farm lock-info [pool-name] [address]
 ##### example:
 
 ```shell
-$ okexchaincli query farm lock-info pool-eth-xxb okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+$ okexchaincli query farm lock-info pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
@@ -174,7 +174,7 @@ $ okexchaincli query farm rewards [pool-name] [address]
 ##### example:
 
 ```shell
-$ okexchaincli query farm rewards pool-eth-xxb okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+$ okexchaincli query farm rewards pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
@@ -188,7 +188,7 @@ $ okexchaincli query farm account [address]
 ##### example:
 
 ```shell
-$ okexchaincli query farm account okexchain1hw4r48aww06ldrfeuq2v438ujnl6alsz0685a0
+$ okexchaincli query farm account ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
