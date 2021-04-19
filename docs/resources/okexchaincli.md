@@ -23,15 +23,14 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okexchaincli config node <host>:<port>
 
-# example: okexchaincli config node http://okexchaintest-rpc1.okexcn.com:26657 (testnet)
-# example: okexchaincli config node http://okexchain-rpc1.okexcn.com:26657 (mainnet)
+# example: okexchaincli config node https://exchaintesttmrpc.okex.org (testnet)
+# example: okexchaincli config node https://exchaintmrpc.okex.org (mainnet)
 ```
 
 Or any of the following address ports:
 ```
 # testnet
-- http://okexchaintest.okex.com:26657 (proxy required, if you are in mainland China)
-- http://okexchaintest.okexcn.com:26657
+- https://exchaintesttmrpc.okex.org
 
 # mainnet
 Comming soon
