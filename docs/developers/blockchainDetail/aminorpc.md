@@ -11,15 +11,14 @@ JavaScript Object Notation (JSON) is human readable, well structured and great f
 
 ## Mainnet (chain-id: okexchain-66)
 
-- http://okexchain.okexcn.com:26657
+- https://exchaintmrpc.okex.org
 
 
 ___
 
 ## Testnet (chain-id: okexchain-65):
 
- - http://okexchaintest.okex.com:26657 (proxy required, if you are in mainland China)
- - http://okexchaintest.okexcn.com:26657
+ - https://exchaintesttmrpc.okex.org
  
 
 
