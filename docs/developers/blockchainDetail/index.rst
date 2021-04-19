@@ -12,4 +12,5 @@ Blockchain Detail
 
    rpc
    aminorpc
+   websocket
    okexchain-fullnode
