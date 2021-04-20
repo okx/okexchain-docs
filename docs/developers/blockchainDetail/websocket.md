@@ -4,6 +4,6 @@
 - 
 
 ## Testnet (chain-id: okexchain-65):
-- 
+- wss://exchaintestws.okex.org:8443 
 
 
