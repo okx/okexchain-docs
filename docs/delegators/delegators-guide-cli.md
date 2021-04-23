@@ -28,13 +28,13 @@ Please exercise extreme caution!
 
 ## Table of Contents
 
-- [Installing `okexchaincli`](#installing-okexchaincli)
+- [Installing `exchaindcli`](#installing-exchaindcli)
 - [OKExChain Accounts](#okchian-accounts)
     + [Creating an Account](#creating-an-account)
 - [Accessing the OKExChain Network](#accessing-the-okchian-hub-network)
     + [Running Your Own Full-Node](#running-your-own-full-node)
     + [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
-- [Setting Up `okexchaincli`](#setting-up-okexchaincli)
+- [Setting Up `exchaindcli`](#setting-up-exchaindcli)
 - [Querying the State](#querying-the-state)
 - [Sending Transactions](#sending-transactions)
     + [A Note on Gas and Fees](#a-note-on-gas-and-fees)
@@ -42,19 +42,19 @@ Please exercise extreme caution!
     + [Participating in Governance](#participating-in-governance)
     + [Signing Transactions from an Offline Computer](#signing-transactions-from-an-offline-computer)
 
-## Installing `okexchaincli` 
+## Installing `exchaindcli` 
 
-`okexchaincli`: This is the command-line interface to interact with a okexchaind full-node.
+`exchaindcli`: This is the command-line interface to interact with a exchaind full-node.
 
 > _NOTE_:
-**Please check that you download the latest stable release of `okexchaincli` that is available**
+**Please check that you download the latest stable release of `exchaindcli` that is available**
 
 [**Download the binaries**]
 Not available yet.
 
 [**Install from source**](../getting-start/install-okexchain.html)
 
-`okexchaincli` is used from a terminal. To open the terminal, follow these steps:
+`exchaindcli` is used from a terminal. To open the terminal, follow these steps:
 - **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
 - **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
 - **Linux**: `Ctrl` + `Alt` + `T`
@@ -108,14 +108,14 @@ The address is a public string with a human-readable prefix (e.g. `ex1hcngft7gfk
 
 ### Creating an Account
 
-To create an account, you just need to have `okexchaincli` installed. Before creating it, you need to know where you intend to store and interact with your private keys. The best options are to store them in an offline dedicated computer or hardware wallet.Storing them on your regular online computer involves more risk, since anyone who infiltrates your computer through the internet could exfiltrate your private keys and steal your funds.
+To create an account, you just need to have `exchaindcli` installed. Before creating it, you need to know where you intend to store and interact with your private keys. The best options are to store them in an offline dedicated computer or hardware wallet.Storing them on your regular online computer involves more risk, since anyone who infiltrates your computer through the internet could exfiltrate your private keys and steal your funds.
 
 > _NOTE_: **It is more secure to perform this action on an offline computer**
 
 To generate an account, just use the following command:
 
 ```bash
-okexchaincli keys add <yourKeyName>
+exchaindcli keys add <yourKeyName>
 ```
 
 The command will generate a 12-words mnemonic and save the private and public keys for account `0` at the same time. Each time you want to send a transaction, you will need to unlock your system’s credentials store. If you lose access to your credentials storage, you can always recover the private key with the mnemonic.
@@ -138,7 +138,7 @@ rm ~/.bash_history
 You can generate more accounts from the same mnemonic using the following command:
 
 ```bash
-okexchaincli keys add <yourKeyName> --recover --account 1
+exchaindcli keys add <yourKeyName> --recover --account 1
 ```
 
 This command will prompt you to input a passphrase as well as your mnemonic. 
@@ -155,29 +155,29 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `okexchaind` [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/install-okexchain.html), and the guide to run a full-node [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/install-okexchain.html), and the guide to run a full-node [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
 If you do not want or cannot run your own node, you can connect to someone else’s full-node. You should pick an operator you trust, because a malicious operator could return incorrect query results or censor your transactions. However, they will never be able to steal your funds, as your private keys are stored locally on your computer or hardware wallet. Possible options of full-node operators include validators, wallet providers or exchanges.
 
-In order to connect to the full-node, you will need an address of the following form: `https://35.176.62.211:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-okexchaincli).
+In order to connect to the full-node, you will need an address of the following form: `https://35.176.62.211:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-exchaindcli).
 
-## Setting Up `okexchaincli`
+## Setting Up `exchaindcli`
 
 
-**Before setting up `okexchaincli`, make sure you have set up a way to [access the OKExChain network](#accessing-the-okchian-network)**  
+**Before setting up `exchaindcli`, make sure you have set up a way to [access the OKExChain network](#accessing-the-okchian-network)**  
 
 > _NOTE_:  
-**Please check that you are always using the latest stable release of `okexchaincli`**
+**Please check that you are always using the latest stable release of `exchaindcli`**
 
 
-`okexchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
+`exchaindcli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
 
-In order to set up `okexchaincli`, use the following command:
+In order to set up `exchaindcli`, use the following command:
 
 ```bash
-okexchaincli config <flag> <value>
+exchaindcli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag.
@@ -185,9 +185,9 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-okexchaincli config node <host>:<port
+exchaindcli config node <host>:<port
 
-// example: okexchaincli config node https://35.176.62.211:26657
+// example: exchaindcli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
@@ -195,7 +195,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Then, set the default value of the `--trust-node` flag:
 
 ```bash
-okexchaincli config trust-node false
+exchaindcli config trust-node false
 
 // Set to true if you run a light-client node, false otherwise
 ```
@@ -203,49 +203,49 @@ okexchaincli config trust-node false
 Finally, set the `chain-id` of the blockchain you want to interact with:
 
 ```bash
-okexchaincli config chain-id okexchain-65
+exchaindcli config chain-id exchain-65
 ```
 
 ## Querying the State
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `okexchaincli`](#setting-up-okexchaincli)**
+**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaindcli`](#setting-up-exchaindcli)**
 
 
-`okexchaincli` lets you query all relevant information from the blockchain, like account balances, amount of bonded tokens (OKT that are deposited to add shares on one or more validators), outstanding rewards, governance proposals and more. Next is a list of the most useful commands for delegators.
+`exchaindcli` lets you query all relevant information from the blockchain, like account balances, amount of bonded tokens (OKT that are deposited to add shares on one or more validators), outstanding rewards, governance proposals and more. Next is a list of the most useful commands for delegators.
 
 ```bash
 // query account balances and other account-related information
-okexchaincli query account <yourAddress>
+exchaindcli query account <yourAddress>
 
 // query the list of validators
-okexchaincli query staking validators
+exchaindcli query staking validators
 
 // query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
-okexchaincli query staking validator <validatorAddress>
+exchaindcli query staking validator <validatorAddress>
 
 // query all information of delegations and all shares recently added by a delegator (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn)
-okexchaincli query staking delegator <delegatorAddress>
+exchaindcli query staking delegator <delegatorAddress>
 
 // query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
-okexchaincli query staking shares-added-to <validatorAddress>
+exchaindcli query staking shares-added-to <validatorAddress>
 
 // query the addresses of delegators by a specific proxy (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) 
-okexchaincli query staking proxy <proxyAddress> 
+exchaindcli query staking proxy <proxyAddress> 
 
 // query all proposals currently open for depositing
-okexchaincli query gov proposals --status deposit_period
+exchaindcli query gov proposals --status deposit_period
 
 // query all proposals currently open for voting
-okexchaincli query gov proposals --status voting_period
+exchaindcli query gov proposals --status voting_period
 
 // query a proposal given its proposalID
-okexchaincli query gov proposal <proposalID>
+exchaindcli query gov proposal <proposalID>
 ```
 
 For more commands, just type:
 
 ```bash
-okexchaincli query
+exchaindcli query
 ```
 
 For each command, you can use the `-h` or `--help` flag to get more information.
@@ -273,7 +273,7 @@ For testnet, the recommended `gas-prices` is `0.005tokt`.
 
 ### Sending Tokens
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `okexchaincli`](#setting-up-okexchaincli) and [create an account](#creating-an-account)**
+**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaindcli`](#setting-up-exchaindcli) and [create an account](#creating-an-account)**
 
 
 
@@ -283,12 +283,12 @@ For testnet, the recommended `gas-prices` is `0.005tokt`.
 // Ex value for parameters (do not actually use these values in your tx!!): <to_address>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn <amount>=1024okt 
 // Ex value for flags: <gasPrice>=0.005okt
 
-okexchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ### Bonding okts and Withdrawing Rewards
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `okexchaincli`](#setting-up-okexchaincli) and [create an account](#creating-an-account).**
+**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaindcli`](#setting-up-exchaindcli) and [create an account](#creating-an-account).**
 
 **Before bonding okts, please read the [delegator faq](https://okexchain-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
 
@@ -298,33 +298,33 @@ okexchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKey
 // Deposit an amount of okt to delegator account. Deposited okt in delegator account is a prerequisite for adding shares
 // ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt
 
-okexchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
 
 // Add shares to one or more validators by all deposited okt
 // ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
 
-okexchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
 // Withdraw an amount of okt and the corresponding shares from all validators.
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
 // ex value for flags: <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
 
-okexchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 To confirm that your transaction went through, you can use the following queries:
 
 ```bash
 // your balance should change after you bond okts or withdraw rewards
-okexchaincli query account
+exchaindcli query account
 
 // you should have delegations after you bond okt
-okexchaincli query staking delegator <delegatorAddress>
+exchaindcli query staking delegator <delegatorAddress>
 
 // this returns your tx if it has been included
 // use the tx hash that was displayed when you created the tx
-okexchaincli query tx <txHash>
+exchaindcli query tx <txHash>
 
 ```
 
@@ -357,19 +357,19 @@ At the end of the voting period, the proposal is accepted if there are more than
 // <type>=text/parameter_change/software_upgrade
 // ex value for flag: <gasPrice>=0.005okt
 
-okexchaincli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=100okt --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
+exchaindcli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=100okt --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
 // Increase deposit of a proposal
-// Retrieve proposalID from $okexchaincli query gov proposals --status deposit_period
+// Retrieve proposalID from $exchaindcli query gov proposals --status deposit_period
 // ex value for parameter: <deposit>=100okt
 
-okexchaincli tx gov deposit <proposalID> <deposit> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
+exchaindcli tx gov deposit <proposalID> <deposit> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
 // Vote on a proposal
-// Retrieve proposalID from $okexchaincli query gov proposals --status voting_period 
+// Retrieve proposalID from $exchaindcli query gov proposals --status voting_period 
 // <option>=yes/no/no_with_veto/abstain
 
-okexchaincli tx gov vote <proposalID> <option> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
+exchaindcli tx gov vote <proposalID> <option> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 ```
 
 ### Signing Transactions From an Offline Computer
@@ -380,7 +380,7 @@ If you do not have a Hardware Wallet and want to interact with your private key 
 // Bond okts 
 // ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 
-okexchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
+exchaindcli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
@@ -388,7 +388,7 @@ In order to sign, you will also need the `chain-id`, `account-number` and `seque
 Get the chain-id from the genesis file (`okexchain`), and the two other fields using the account query:
 
 ```bash
-okexchaincli query account <yourAddress> --chain-id okexchain-65
+exchaindcli query account <yourAddress> --chain-id exchain-65
 ```
 
 Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, [create an account on the offline computer](#using-a-computer). For additional security, you can double check the parameters of your transaction before signing it using the following command:
@@ -400,11 +400,11 @@ cat unsignedTx.json
 Now, sign the transaction using the following command. You will need the `chain-id`, `sequence` and `account-number` obtained earlier:
 
 ```bash
-okexchaincli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id okexchain-65 --sequence <sequence> --account-number <account-number> > signedTx.json
+exchaindcli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id exchain-65 --sequence <sequence> --account-number <account-number> > signedTx.json
 ```
 
 Copy `signedTx.json` and transfer it back to the online computer. Finally, use the following command to broadcast the transaction:
 
 ```bash
-okexchaincli tx broadcast signedTx.json
+exchaindcli tx broadcast signedTx.json
 ```
