@@ -18,7 +18,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 ## Minimum System Requirements
 
-The hardware must meet certain requirements to run `okexchaind`.
+The hardware must meet certain requirements to run `exchaind`.
 
  * Desktop or laptop hardware running recent versions of Mac OS X, Windows, or Linux.
  * 500 GB of free disk space, accessible at a minimum read/write speed of 100 MB/s.
@@ -32,21 +32,21 @@ These instructions are for setting up a brand new full node from scratch.
 First, initialize the node and create the necessary config files:
 
 ```bash
-okexchaind init <your_custom_moniker> --chain-id okexchain-65
+exchaind init <your_custom_moniker> --chain-id exchain-65
 ```
 
 > _NOTE_:
 Monikers can contain only ASCII characters. Using Unicode characters will render your node unreachable.
 
 
-You can edit this `moniker` later, in the `~/.okexchaind/config/config.toml` file:
+You can edit this `moniker` later, in the `~/.exchaind/config/config.toml` file:
 
 ```toml
 # A custom human readable name for this node
 moniker = "<your_custom_moniker>"
 ```
 
-You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices:
+You can edit the `~/.exchaind/config/exchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices:
 
 ```
 # This is a TOML config file.
@@ -67,21 +67,21 @@ Your full node has been initialized!
 
 ### Copy the Genesis File
 
-Fetch the testnet's `genesis.json` file into `okexchaind`'s config directory.
+Fetch the testnet's `genesis.json` file into `exchaind`'s config directory.
 
 Note we use the `latest` directory in the [testnets repo](https://github.com/okex/testnets) which contains details for the testnet like the latest version and the genesis file. 
 
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind start --chain-id okexchain-65
+exchaind start --chain-id exchain-65
 ```
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.okexchaind/config/config.toml`. The [testnets repo](https://github.com/okex/testnets) contains links to some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okex/testnets) contains links to some seed nodes.
 
-You can add `seeds` in the `~/.okexchaind/config/config.toml` file:
+You can add `seeds` in the `~/.exchaind/config/config.toml` file:
 
 ```toml
 # Comma separated list of seed nodes to connect to
@@ -95,19 +95,19 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-okexchaind start --chain-id okexchain-65
+exchaind start --chain-id exchain-65
 ```
 
 Check that everything is running smoothly:
 
 ```bash
-okexchaincli status
+exchaindcli status
 ```
 
 See the [testnet repo](https://github.com/okex/testnets) for information on testnets, including the correct version of the OKExChain to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-[RPC URL](../developers/blockchainDetail/aminorpc.html#testnet-chain-id-okexchain-65)
+[RPC URL](../developers/blockchainDetail/aminorpc.html#testnet-chain-id-exchain-65)
 
 ## Upgrading Your Node
 
@@ -118,8 +118,8 @@ These instructions are for full nodes that have ran on previous versions of and 
 First, remove the outdated files and reset the data.
 
 ```bash
-rm $HOME/.okexchaind/config/addrbook.json $HOME/.okexchaind/config/genesis.json
-okexchaind unsafe-reset-all
+rm $HOME/.exchaind/config/addrbook.json $HOME/.exchaind/config/genesis.json
+exchaind unsafe-reset-all
 ```
 
 Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before,

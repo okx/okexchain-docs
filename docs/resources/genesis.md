@@ -9,10 +9,10 @@ This document explains how the genesis file of the OKExChain testnet is structur
 Note that you can generate a default genesis file for your own testnet by running the following command:
 
 ```bash
-okexchaind init <moniker> --chain-id <chain-id>
+exchaind init <moniker> --chain-id <chain-id>
 ```
 
-The genesis file is stored in `~/.okexchaind/config/genesis.toml`.
+The genesis file is stored in `~/.exchaind/config/genesis.toml`.
 
 ## What is a Genesis File
 
@@ -72,9 +72,9 @@ The application state defines the initial state of the state-machine.
 In this section, initial allocation of tokens is defined. It is possible to add accounts manually by directly editing the genesis file, but it is also possible to use the following command:
 
 ```bash
-// Example: okexchaind add-genesis-account ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10000000okt
+// Example: exchaind add-genesis-account ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10000000okt
 
-okexchaind add-genesis-account <account-address> <amount><denom>
+exchaind add-genesis-account <account-address> <amount><denom>
 ```
 
 This command creates an item in the `accounts` list, under the `app_state` section.
@@ -441,7 +441,7 @@ By default, the genesis file does not contain any `gentxs`. A `gentx` is a trans
 A `gentx` can be added manually to the genesis file, or via the following command:
 
 ```bash
-okexchaind collect-gentxs
+exchaind collect-gentxs
 ```
 
-This command will add all the `gentxs` stored in `~/.okexchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](../validators/validators-guide-cli.html#participate-in-genesis-as-a-validator).
+This command will add all the `gentxs` stored in `~/.exchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](../validators/validators-guide-cli.html#participate-in-genesis-as-a-validator).

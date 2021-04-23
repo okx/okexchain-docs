@@ -20,7 +20,7 @@ Download the testnet snapshot from [here](https://okexchain-docs.readthedocs.io/
 
 ### 3. Run docker container
 ```
-docker run -d --name okexchain-testnet-fullnode -v ${DATA_DIR}:/root/.okexchaind/data/ -p 8545:8545 okexchain/fullnode-testnet:latest
+docker run -d --name okexchain-testnet-fullnode -v ${DATA_DIR}:/root/.exchaind/data/ -p 8545:8545 okexchain/fullnode-testnet:latest
 ```
 `Notice: ${DATA_DIR} has to be an absolute path`
 

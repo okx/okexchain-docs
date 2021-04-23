@@ -16,7 +16,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 ## Minimum System Requirements
 
-The hardware must meet certain requirements to run `okexchaind`.
+The hardware must meet certain requirements to run `exchaind`.
 
  * Desktop or laptop hardware running recent versions of Mac OS X, Windows, or Linux.
  * 500 GB of free disk space, accessible at a minimum read/write speed of 100 MB/s.
@@ -30,21 +30,21 @@ These instructions are for setting up a brand new full node from scratch.
 First, initialize the node and create the necessary config files:
 
 ```bash
-okexchaind init <your_custom_moniker>
+exchaind init <your_custom_moniker>
 ```
 
 > _NOTE_:
 Monikers can contain only ASCII characters. Using Unicode characters will render your node unreachable.
 
 
-Or you can also edit this `moniker` later, in the `~/.okexchaind/config/config.toml` file:
+Or you can also edit this `moniker` later, in the `~/.exchaind/config/config.toml` file:
 
 ```toml
 # A custom human readable name for this node
 moniker = "<your_custom_moniker>"
 ```
 
-You can edit the `~/.okexchaind/config/okexchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices("0.000000001okt" is recommended):
+You can edit the `~/.exchaind/config/exchaind.toml` file in order to enable the anti spam mechanism and reject incoming transactions with less than the minimum gas prices("0.000000001okt" is recommended):
 
 ```
 # This is a TOML config file.
@@ -65,21 +65,21 @@ Your full node has been initialized!
 
 ### Copy the Genesis File
 
-Fetch the mainnet's `genesis.json` file into `okexchaind`'s config directory.
+Fetch the mainnet's `genesis.json` file into `exchaind`'s config directory.
 
 Note we use the `latest` directory in the [mainnet repo](https://github.com/okex/mainnet) which contains details for the mainnet like the latest version and the genesis file. 
 
 To verify the correctness of the configuration run:
 
 ```bash
-okexchaind validate-genesis
+exchaind validate-genesis
 ```
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.okexchaind/config/config.toml`. The [mainnet repo's](https://github.com/okex/mainnet) README.md contains some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [mainnet repo's](https://github.com/okex/mainnet) README.md contains some seed nodes.
 
-You can add those seeds nodes to the `seeds` filed in the `~/.okexchaind/config/config.toml` file:
+You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/config.toml` file:
 
 ```toml
 # Comma separated list of seed nodes to connect to
@@ -93,13 +93,13 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-okexchaind start --chain-id okexchain-66
+exchaind start --chain-id okexchain-66
 ```
 
 Check that everything is running smoothly:
 
 ```bash
-okexchaincli status
+exchaindcli status
 ```
 
 See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OKExChain to use and details about the genesis file.
@@ -118,8 +118,8 @@ These instructions are for full nodes that have ran on previous versions of and 
 First, remove the outdated files and reset the data.
 
 ```bash
-rm $HOME/.okexchaind/config/addrbook.json $HOME/.okexchaind/config/genesis.json
-okexchaind unsafe-reset-all
+rm $HOME/.exchaind/config/addrbook.json $HOME/.exchaind/config/genesis.json
+exchaind unsafe-reset-all
 ```
 
 Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before,

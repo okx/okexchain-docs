@@ -7,7 +7,7 @@
 The project team can use this command to create a farm pool for users to participate in the farming of their project. 
 
 ```shell
-$ okexchaincli tx farm create-pool [pool-name] [min-lock-amount] [yield-token]
+$ exchaindcli tx farm create-pool [pool-name] [min-lock-amount] [yield-token]
 ```
 
 - pool-name： the name of the farm pool, which is used to identify the pool.
@@ -17,7 +17,7 @@ $ okexchaincli tx farm create-pool [pool-name] [min-lock-amount] [yield-token]
 #### example：
 
 ```shell
-$ okexchaincli tx farm create-pool pool-eth-xxb 10eth xxb --from mykey
+$ exchaindcli tx farm create-pool pool-eth-xxb 10eth xxb --from mykey
 ```
 
 
@@ -29,7 +29,7 @@ After the project team creates the farm pool, it needs to provide the reward tok
 > After the rewards of the farm pool are distributed, the project team can also use this command to continue adding rewards to extend the farming.
 
 ```shell
-$ okexchaincli tx farm provide [pool-name] [amount] [yield-per-block] [start-height-to-yield]
+$ exchaindcli tx farm provide [pool-name] [amount] [yield-per-block] [start-height-to-yield]
 ```
 
 - pool-name: the name of the farm pool.
@@ -40,7 +40,7 @@ $ okexchaincli tx farm provide [pool-name] [amount] [yield-per-block] [start-hei
 #### example
 
 ```shell
-$ okexchaincli tx farm provide pool-eth-xxb 1000xxb 5 10000 --from mykey
+$ exchaindcli tx farm provide pool-eth-xxb 1000xxb 5 10000 --from mykey
 ```
 
 
@@ -50,7 +50,7 @@ $ okexchaincli tx farm provide pool-eth-xxb 1000xxb 5 10000 --from mykey
 The farmer can lock the farm token into the farm pool and start farming through this command. 
 
 ```shell
-$ okexchaincli tx farm lock [pool-name] [amount]
+$ exchaindcli tx farm lock [pool-name] [amount]
 ```
 
 - pool-name：the name of the farm pool.
@@ -59,7 +59,7 @@ $ okexchaincli tx farm lock [pool-name] [amount]
 #### example
 
 ```shell
-$ okexchaincli tx farm lock pool-eth-xxb 5eth --from mykey
+$ exchaindcli tx farm lock pool-eth-xxb 5eth --from mykey
 ```
 
 
@@ -69,7 +69,7 @@ $ okexchaincli tx farm lock pool-eth-xxb 5eth --from mykey
 The farmer can unlock the farm tokens locked in the farm pool through this command, and receive all rewards. 
 
 ```shell
-$ okexchaincli tx farm unlock [pool-name] [amount]
+$ exchaindcli tx farm unlock [pool-name] [amount]
 ```
 
 - pool-name：the name of the farm pool.
@@ -78,7 +78,7 @@ $ okexchaincli tx farm unlock [pool-name] [amount]
 #### example
 
 ```shell
-$ okexchaincli tx farm lock pool-eth-xxb 1eth --from mykey
+$ exchaindcli tx farm lock pool-eth-xxb 1eth --from mykey
 ```
 
 
@@ -88,7 +88,7 @@ $ okexchaincli tx farm lock pool-eth-xxb 1eth --from mykey
 Farmers can use this command to claim farming rewards without unlocking the farming token.
 
 ```shell
-$ okexchaincli tx farm claim [pool-name]
+$ exchaindcli tx farm claim [pool-name]
 ```
 
 - pool-name：the name of the farm pool.
@@ -96,7 +96,7 @@ $ okexchaincli tx farm claim [pool-name]
 #### example
 
 ```shell
-$ okexchaincli tx farm claim pool-eth-xxb --from mykey
+$ exchaindcli tx farm claim pool-eth-xxb --from mykey
 ```
 
 
@@ -106,7 +106,7 @@ $ okexchaincli tx farm claim pool-eth-xxb --from mykey
 The project team can destroy the farming pool created by itself through this command, provided that the reward token has been collected and the locked farming token has been unlocked. 
 
 ```shell
-$ okexchaincli tx farm destroy-pool [pool-name]
+$ exchaindcli tx farm destroy-pool [pool-name]
 ```
 
 - pool-name：the name of the farm pool.
@@ -114,7 +114,7 @@ $ okexchaincli tx farm destroy-pool [pool-name]
 #### example
 
 ```shell
-$ okexchaincli tx farm destroy-pool pool-eth-xxb --from mykey
+$ exchaindcli tx farm destroy-pool pool-eth-xxb --from mykey
 ```
 
 
@@ -124,13 +124,13 @@ $ okexchaincli tx farm destroy-pool pool-eth-xxb --from mykey
 #### 1. query the information of the specified farming pool
 
 ```shell
-$ okexchaincli query farm pool [pool-name]
+$ exchaindcli query farm pool [pool-name]
 ```
 
 ##### example:
 
 ```shell
-$ okexchaincli query farm pool pool-eth-xxb
+$ exchaindcli query farm pool pool-eth-xxb
 ```
 
 
@@ -138,7 +138,7 @@ $ okexchaincli query farm pool pool-eth-xxb
 #### 2. query the information of all farming pools
 
 ```shell
-$ okexchaincli query farm pools
+$ exchaindcli query farm pools
 ```
 
 
@@ -146,7 +146,7 @@ $ okexchaincli query farm pools
 #### 3. query the number of farming pools
 
 ```shell
-$ okexchaincli query farm pool-num
+$ exchaindcli query farm pool-num
 ```
 
 
@@ -154,13 +154,13 @@ $ okexchaincli query farm pool-num
 #### 4. query the lock info of an account on a pool
 
 ```shell
-$ okexchaincli query farm lock-info [pool-name] [address]
+$ exchaindcli query farm lock-info [pool-name] [address]
 ```
 
 ##### example:
 
 ```shell
-$ okexchaincli query farm lock-info pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
+$ exchaindcli query farm lock-info pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
@@ -168,13 +168,13 @@ $ okexchaincli query farm lock-info pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0
 #### 5. query the current rewards of an account
 
 ```shell
-$ okexchaincli query farm rewards [pool-name] [address]
+$ exchaindcli query farm rewards [pool-name] [address]
 ```
 
 ##### example:
 
 ```shell
-$ okexchaincli query farm rewards pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
+$ exchaindcli query farm rewards pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
@@ -182,13 +182,13 @@ $ okexchaincli query farm rewards pool-eth-xxb ex1hcngft7gfkhn8z8fnlajzh7agyt0az
 #### 6. query the name of pools that an account has locked coins in
 
 ```shell
-$ okexchaincli query farm account [address]
+$ exchaindcli query farm account [address]
 ```
 
 ##### example:
 
 ```shell
-$ okexchaincli query farm account ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
+$ exchaindcli query farm account ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 ```
 
 
@@ -196,13 +196,13 @@ $ okexchaincli query farm account ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
 #### 7. query the addresses of accounts locked in a pool
 
 ```shell
-$ okexchaincli query farm accounts-locked-to [pool-name]
+$ exchaindcli query farm accounts-locked-to [pool-name]
 ```
 
 ##### example:
 
 ```shell
-$ okexchaincli query farm accounts-locked-to pool-eth-xxb
+$ exchaindcli query farm accounts-locked-to pool-eth-xxb
 ```
 
 
@@ -210,6 +210,6 @@ $ okexchaincli query farm accounts-locked-to pool-eth-xxb
 #### 8. query the whitelist of pools to farm okt
 
 ```shell
-$ okexchaincli query farm whitelist
+$ exchaindcli query farm whitelist
 ```
 

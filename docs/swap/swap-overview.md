@@ -6,7 +6,7 @@ order: 1
 
 ## Introduction
 
-A token pair can be created by anyone using the `okexchaincli tx swap create-pair`.
+A token pair can be created by anyone using the `exchaindcli tx swap create-pair`.
 
 SWAP is a decentralized exchange protocol built on OKExChain. It is an automated liquidity protocol without any order book or any centralized party required to make trades. SWAP allows users to trade without intermediaries, with a high degree of decentralization.
 

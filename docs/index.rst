@@ -74,17 +74,17 @@ data—like blocks, transactions, validators as well as other key information
 OKExChain CLI
 -------------
 
-``okexchaincli`` is a command-line interface that lets you interact with
-the OKExChain. ``okexchaincli`` is the only tool that supports 100% of the
+``exchaindcli`` is a command-line interface that lets you interact with
+the OKExChain. ``exchaindcli`` is the only tool that supports 100% of the
 OKExChain features, including accounts, transfers, delegation, and
-governance. Learn more about ``okexchaincli`` with the delegator’s CLI
+governance. Learn more about ``exchaindcli`` with the delegator’s CLI
 `guide <./delegators/delegators-guide-cli.html>`__.
 
 Running a full-node on the OKExChain Testnet
 --------------------------------------------
 
 In order to run a full-node on the OKExChain testnet, you must first
-`install okexchaind <./getting-start/install-okexchain.html>`__. Then,
+`install exchaind <./getting-start/install-okexchain.html>`__. Then,
 follow `the guide <./getting-start/install-okexchain.html>`__.
 
 If you would like to run a validator node, follow the validator setup
@@ -207,7 +207,7 @@ Contents
    :caption: Resources
 
    resources/genesis
-   resources/okexchaincli
+   resources/exchaindcli
    resources/service-providers
    resources/snapshot
 

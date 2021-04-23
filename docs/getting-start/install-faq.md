@@ -38,7 +38,7 @@
 ```
 
 ### For docker-compose
-* if you started up okexchaind with docker-compose, edit your `compose.yml` and add
+* if you started up exchaind with docker-compose, edit your `compose.yml` and add
 ```
     ulimits:
         nproc: 65535
@@ -54,41 +54,41 @@
 ```
 
 ## 2. Configure `trust-node` and `chain-id`
-When using `okexchaincli` to query block/tx or send tx, the following errors may occur:
+When using `exchaindcli` to query block/tx or send tx, the following errors may occur:
 ```shell script
-$ okexchaincli query block 6547302
+$ exchaindcli query block 6547302
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x4cecdea]
 ```
 
 ```shell script
-$ okexchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt
+$ exchaindcli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt
 ERROR: chain ID required but not specified
 ```
 You should use the flag
 ```shell script
-$ okexchaincli query block 6547302 --trust-node
-$ okexchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id okexchain-65
+$ exchaindcli query block 6547302 --trust-node
+$ exchaindcli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id exchain-65
 ```
 or local configuration
 ```shell script
-$ okexchaincli config chain-id okexchain-65
-$ okexchaincli config trust-node true
+$ exchaindcli config chain-id exchain-65
+$ exchaindcli config trust-node true
 ```
 
 ## 3. Make sure commitID is the latest version
-When you start your own node, to make sure that your commitID of okexchaind is consistent with the [official version](https://github.com/okex/okexchain/releases), check it by:
+When you start your own node, to make sure that your commitID of exchaind is consistent with the [official version](https://github.com/okex/okexchain/releases), check it by:
 ```shell script
-$ okexchaind version --long
+$ exchaind version --long
 # or
-$ docker exec docker_container_name okexchaind version --long
+$ docker exec docker_container_name exchaind version --long
 
 ```
 For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551fed.
 ```shell script
 name: okexchain
-server_name: okexchaind
-client_name: okexchaincli
+server_name: exchaind
+client_name: exchaindcli
 version: v0.16.8.3
 commit: ee5068ccb54b464aeaff7eef69fb2e8611551fed
 ```

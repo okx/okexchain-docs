@@ -28,7 +28,7 @@ currentProvider.send({
 })
 ```
 
-## Testnet (chain-id: okexchain-65):
+## Testnet (chain-id: exchain-65):
 - https://exchaintestrpc.okex.org
 
 

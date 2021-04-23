@@ -5,7 +5,7 @@ Quick instructions on how to install the OKExChain snapshots.
 
 ## testnet
 Download URL: 
-  - [okexchain-v0.17.1-testnet-20210412-height_2012156.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/data_170.tar.gz)
+  - [okexchain-v0.18.0-testnet-20210423-height_2270911.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/data_180.tar.gz)
 
 ## mainnet
 Download URL: 
@@ -13,8 +13,8 @@ Download URL:
 
 ## Unpack the snapshot file for cosmos
 ```shell
-mv ~/.okexchaind/data ~/.okexchaind/data-bak
-# rm -rf ~/.okexchaind/data
-cd ~/.okexchaind 
+mv ~/.exchaind/data ~/.exchaind/data-bak
+# rm -rf ~/.exchaind/data
+cd ~/.exchaind 
 tar -zxvf okexchain-$version-$date-$height_xxx.tar.gz
 ```

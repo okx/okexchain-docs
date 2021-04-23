@@ -10,7 +10,7 @@ You can start a connection with the Ethereum websocket using the `--wsport` flag
 the REST server (default `8546`):
 
 ```bash
-okexchaind start --rest.laddr "tcp://localhost:8545" --wsport 8546 --chain-id <chain_id>
+exchaind start --rest.laddr "tcp://localhost:8545" --wsport 8546 --chain-id <chain_id>
 ```
 
 Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws), or something else websocket clients

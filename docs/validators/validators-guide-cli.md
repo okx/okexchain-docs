@@ -31,9 +31,9 @@ Staking cli command contains the 5 following commands for PoS operations.
 Upgrade a node to a validator and set the description on a validator.
 
 ```bash
-  okexchaincli tx staking create-validator --pubkey=$(okexchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
+  exchaindcli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
 ```
-> _NOTE_: If you set home flag when executing `okexchaind start`, `okexchaind tendermint show-validator` the inputs after home flag should be the same as `okexcahind start`.
+> _NOTE_: If you set home flag when executing `exchaind start`, `exchaind tendermint show-validator` the inputs after home flag should be the same as `okexcahind start`.
 
 * **Pubkey** represents the tendermint public key of the current node
 * **Moniker** indicates the alias of the validator
@@ -48,7 +48,7 @@ Upgrade a node to a validator and set the description on a validator.
 The operator can update the description of the validator and adjust the commission rate.
 
 ```bash
-okexchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from jack
+exchaindcli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from jack
 ```
 
 * **moniker** indicates the alias of the validator to be updated
@@ -61,7 +61,7 @@ okexchaincli tx staking edit-validator --moniker=“my new nickname” --identit
 ### Deposit
 Users first need to deposit a certain amount of OKTs to make the staking account become a delegator one.
 ```bash
-okexchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ### Add shares
@@ -69,7 +69,7 @@ okexchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --ga
 An OKExChain delegator can add shares to himself or other validator by following the command:
 
 ```bash
-okexchaincli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e --from <delegatorKeyName>
+exchaindcli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e --from <delegatorKeyName>
 ```
 
 * In the following example, `exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e` are the validator’s addresses, and all OKT deposited will be converted into shares and added on the above-mentioned validators.
@@ -89,7 +89,7 @@ When an OKExChain user withdraws the deposited tokens , the share added to the v
 Withdraw an amount of OKT and the corresponding shares from all validators.
 
 ```bash
-okexchaincli tx staking withdraw 10okt --from rose
+exchaindcli tx staking withdraw 10okt --from rose
 ```
 
 * In the example, 10 is the number of deposited OKTs to be withdrawn.
@@ -101,5 +101,5 @@ okexchaincli tx staking withdraw 10okt --from rose
 Validators will be rewarded for  performing well. The owner can withdraw the rewards by using the command below:
 
 ```
-okexchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaindcli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
