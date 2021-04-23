@@ -62,6 +62,6 @@ module.exports = {
 ```
 - Verify
 ```
-truffle run verify OIP20Tokens@{contract-address} --network testnet
+truffle run verify KIP20Tokens@{contract-address} --network testnet
 ```
 You should see the following output:

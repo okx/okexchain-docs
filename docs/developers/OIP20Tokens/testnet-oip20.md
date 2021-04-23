@@ -1,4 +1,4 @@
-# Testnet OIP20
+# Testnet KIP20
 
 For testnet only.
 
