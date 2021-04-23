@@ -1205,7 +1205,7 @@ Enter parameters:
 | accNum  | uint64 |account number of sender's account on chain|
 | seqNum  | uint64 |sequence number of sender's account on chain|
 | handleFeeAddrStr  | string |account address in bech32 to receive fees of tokenpair's matched order|
-| website  | string |a valid http link to describe DEXOperator which ends with "operator.json" defined in OIP-{xxx}，and its length should be less than 1024|
+| website  | string |a valid http link to describe DEXOperator which ends with "operator.json" defined in KIP-{xxx}，and its length should be less than 1024|
 
 Printed results:
 
@@ -1243,7 +1243,7 @@ Enter parameters:
 | accNum  | uint64 |account number of sender's account on chain|
 | seqNum  | uint64 |sequence number of sender's account on chain|
 | handleFeeAddrStr  | string |new account address in bech32 to receive fees of tokenpair's matched order to change|
-| website  | string |a new valid http link to describe DEXOperator which ends with "operator.json" defined in OIP-{xxx} to change|
+| website  | string |a new valid http link to describe DEXOperator which ends with "operator.json" defined in KIP-{xxx} to change|
 
 Printed results:
 
