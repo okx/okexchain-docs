@@ -9,7 +9,7 @@ Download URL:
 
 ## mainnet
 Download URL: 
-  - [okexchain-v0.16.3-mainnet-20210428-height_2322600.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.16.8-mainnet-20210428-height-2322600.tar.gz)
+  - [okexchain-v0.18.1-mainnet-20210428-height_2322600.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.16.8-mainnet-20210428-height-2322600.tar.gz)
 
 ## Unpack the snapshot file for cosmos
 ```shell
