@@ -143,7 +143,7 @@ Contents
    developers/basics/index
    developers/tools/index
    developers/deploy/index
-   developers/OIP20Tokens/index
+   developers/KIP20Tokens/index
    developers/blockchainDetail/index
 
 .. toctree::

@@ -1,6 +1,6 @@
 # Introduction
-### OIP20 Token
-A OIP20 token must implement the interface IOIP20 in IOIP20.sol. This is a template contract OIP20Token.template. Users just need to fill in _name, _symbol, _decimals and _totalSupply according to their own requirements:
+### KIP20 Token
+A KIP20 token must implement the interface IKIP20 in IKIP20.sol. This is a template contract KIP20Token.template. Users just need to fill in _name, _symbol, _decimals and _totalSupply according to their own requirements:
 ```
   constructor() public {
     _name = {{TOKEN_NAME}};
@@ -12,7 +12,7 @@ A OIP20 token must implement the interface IOIP20 in IOIP20.sol. This is a templ
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 ```
-Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the OIP20 contract to OKEXChain.
+Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the KIP20 contract to OKEXChain.
 ### Interact with Contract with [Web3](https://www.npmjs.com/package/web3) and NodeJS.
 
 Connect to OKEXChain's public RPC endpoint
