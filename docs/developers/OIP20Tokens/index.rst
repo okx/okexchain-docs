@@ -1,7 +1,7 @@
-.. _OIP20Tokens:
+.. _KIP20Tokens:
 
 ===============
-OIP20 Tokens
+KIP20 Tokens
 ===============
 
 .. rubric:: Table of contents
@@ -12,4 +12,4 @@ OIP20 Tokens
 
    introduction
    issue-token
-   testnet-oip20
+   testnet-KIP20

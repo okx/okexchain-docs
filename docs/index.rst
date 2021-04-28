@@ -138,11 +138,12 @@ Contents
    :maxdepth: 1
    :caption: Developers
 
-   developers/quick-start
+   developers/quick-start-for-mainnet
+   developers/quick-start-for-testnet
    developers/basics/index
    developers/tools/index
    developers/deploy/index
-   developers/OIP20Tokens/index
+   developers/KIP20Tokens/index
    developers/blockchainDetail/index
 
 .. toctree::

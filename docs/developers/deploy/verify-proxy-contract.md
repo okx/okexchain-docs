@@ -1,28 +1,28 @@
 # Verify Proxy Contract
 ### How to Verify Proxy Contract
-Please learn how to deploy an upgradable OIP20 contract <!--here-->
+Please learn how to deploy an upgradable KIP20 contract <!--here-->
 ### Flatten your contract
 #### Install flattener
 ```npm install truffle-flattener -g```
 
 Run the following command:
 ```
-$ truffle-flattener OIP20TokenImplementation.sol > OIP20TokenImplementationFlattened.sol
-$ truffle-flattener OIP20UpgradeableProxy.sol > OIP20UpgradeableProxyFlattened.sol"
+$ truffle-flattener KIP20TokenImplementation.sol > KIP20TokenImplementationFlattened.sol
+$ truffle-flattener KIP20UpgradeableProxy.sol > KIP20UpgradeableProxyFlattened.sol"
 ```
 ### Compile and deploy your contract with Remix
 #### Compile Implementation contract
 - Open Remix IDE:[https://remix.ethereum.org](https://remix.ethereum.org)
 - Select solidity language
-- Create new contract OIP20Token.sol and copy contract code from flattened OIP20TokenImplementationFlattened.sol
+- Create new contract KIP20Token.sol and copy contract code from flattened KIP20TokenImplementationFlattened.sol
 - Compile the implementation contract
 - Click on this button to switch to the compile page
-- Select “OIP20TokenImplementation” contract
+- Select “KIP20TokenImplementation” contract
 - Enable “Auto compile” and “optimization”
 - Click “ABI” to copy the contract abi and save it.
 ### Deploy the implementation contract
 - Select “Injected Web3”
-- Select “OIP20TokenImplementation” contract
+- Select “KIP20TokenImplementation” contract
 - Click the “Deploy” button and Metamask will pop up
 - Click the “confirm” button to sign and broadcast the transaction to OKEXChain.
 - Then, you need to initialize the token: fill in all the parameters and click on “transact”
@@ -34,20 +34,20 @@ $ truffle-flattener OIP20UpgradeableProxy.sol > OIP20UpgradeableProxyFlattened.s
 ![avatar](../../img/verify-proxy-contract-02.png)
 ### Compile Proxy Contract
 - Create new contract proxy.sol and copy contract code from flattened
-`OIP20UpgradeableProxyFlattened.sol`. <!--Here is and [example]()-->
+`KIP20UpgradeableProxyFlattened.sol`. <!--Here is and [example]()-->
 - Compile the proxy contractClick on this button to switch to the compile page
-- Select “OIP20UpgradeableProxy” contract
+- Select “KIP20UpgradeableProxy” contract
 - Enable “Auto compile” and “optimization”Click “ABI” to copy the contract abi and save it.
 ### Deploy the proxy contract
-- Select “Injected Web3”Select “OIP20UpgradeableProxy.sol” contract
+- Select “Injected Web3”Select “KIP20UpgradeableProxy.sol” contract
 - Fill in the parameter
 <!--![avatar](../../img/verify-proxy-contract-03.png)-->
-Logic: The address of OIP20Implementation contract Admin: admin cannot be OIP20 token owner
+Logic: The address of KIP20Implementation contract Admin: admin cannot be KIP20 token owner
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up
 - Click the “confirm” button to sign and broadcast transaction to OKExChain.
 ### Verify Proxy Contract on OKLink
-Note: The way to verify the OIP20TokenImplementation contract is the same as before.
+Note: The way to verify the KIP20TokenImplementation contract is the same as before.
 - Go to your contact page and click on “Verify and Publish”
 ![avatar](../../img/verify-proxy-contract-04.png)
 -Select Single file
@@ -55,7 +55,7 @@ Note: The way to verify the OIP20TokenImplementation contract is the same as bef
 - Copy your contract code below and check “Optimization” if it’s enabled
 - Contractor Data: Please use this site for getting the correct constructor data: https://abi.hashex.org/#
 
-First, you need to copy ABI json of “OIP20UpgradeableProxy.sol” contractThen, click on “Parse”
+First, you need to copy ABI json of “KIP20UpgradeableProxy.sol” contractThen, click on “Parse”
 ![avatar](../../img/verify-proxy-contract-06.png)
 Add all those 3 parameters as indicated. Then copy/paste the result.
 
