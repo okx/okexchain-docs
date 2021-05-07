@@ -139,7 +139,7 @@ Contents
    :caption: Developers
 
    developers/quick-start-for-mainnet
-   developers/quick-start-for-testnet
+   developers/quick-start
    developers/basics/index
    developers/tools/index
    developers/deploy/index
