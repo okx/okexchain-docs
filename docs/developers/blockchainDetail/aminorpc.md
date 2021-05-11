@@ -7,9 +7,9 @@ JavaScript Object Notation (JSON) is human readable, well structured and great f
 
 ## Used by
 - exchaindcli
-- okexchain-go-sdk
+- exchain-go-sdk
 
-## Mainnet (chain-id: okexchain-66)
+## Mainnet (chain-id: exchain-66)
 
 - https://exchaintmrpc.okex.org
 

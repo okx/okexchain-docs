@@ -93,7 +93,7 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-exchaind start --chain-id okexchain-66
+exchaind start --chain-id exchain-66
 ```
 
 Check that everything is running smoothly:
@@ -106,7 +106,7 @@ See the [mainnet repo](https://github.com/okex/mainnet) for information on mainn
 
 
 ## JSON-RPC Endpoint
-[RPC URL](../developers/blockchainDetail/aminorpc.html#mainnet-chain-id-okexchain-66)
+[RPC URL](../developers/blockchainDetail/aminorpc.html#mainnet-chain-id-exchain-66)
 
 
 ## Upgrading Your Node

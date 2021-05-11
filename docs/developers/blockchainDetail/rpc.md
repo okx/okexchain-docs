@@ -1,10 +1,10 @@
 # JSON-RPC Endpoint
 
 ## Used by
-- okexchain-java-sdk
+- exchain-java-sdk
 - Metamask
 
-## Mainnet (chain-id: okexchain-66)
+## Mainnet (chain-id: exchain-66)
 - https://exchainrpc.okex.org
 
 ### How to configure MetaMask with OKExChain(Mainnet) in one step
