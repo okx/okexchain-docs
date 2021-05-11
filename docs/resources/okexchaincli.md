@@ -54,7 +54,7 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 exchaindcli config chain-id exchain-65
 
 # mainnet
-exchaindcli config chain-id okexchain-66
+exchaindcli config chain-id exchain-66
 ```
 
 Set the output format of exchaindcli request response
@@ -546,11 +546,11 @@ Multi-signature transfer consists of multiple steps:
 #### 7.1. Creat accounts p1, p2, p3：
 Example:
 ```bash
-exchaindcli keys add --pubkey=okchainpub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
+exchaindcli keys add --pubkey=expub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
 
-exchaindcli keys add --pubkey=okchainpub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
+exchaindcli keys add --pubkey=expub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
 
-exchaindcli keys add --pubkey=okchainpub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
+exchaindcli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
 #### 7.2. Generate multi-signature public keys:
@@ -705,7 +705,7 @@ exchaindcli tx token confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
-okchaincli tx token confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
+exchaincli tx token confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
 
 # response
 {
@@ -936,7 +936,7 @@ exchaindcli tx dex confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
-okchaincli tx dex confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --product btc_okt
+exchaincli tx dex confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --product btc_okt
 
 # response
 {
@@ -2036,7 +2036,7 @@ $ exchaindcli tx staking vote -h
 
  
 Example:
-    exchaindcli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
+    exchaindcli tx staking vote exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,exvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,exvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
 
 Usage:
     exchaindcli tx staking vote [validator-addr1, validator-addr2, validator-addr3, ... validator-addrN] [flags]
@@ -2090,7 +2090,7 @@ Query the information of all votes recently made to a validator
 $ exchaindcli query staking votes-to -h
 
 Example:
-	  exchaindcli query staking votes-to okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
+	  exchaindcli query staking votes-to exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
 	  
 Usage:
     exchaindcli query staking votes-to [validator-addr] [flags]
@@ -2205,7 +2205,7 @@ Withdraw rewards coming from fees to the validator account
 $ exchaindcli tx distr withdraw-rewards -h
 
 Example：
-    exchaindcli tx distr withdraw-rewards okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
+    exchaindcli tx distr withdraw-rewards exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
 
 Usage: 
     exchaindcli tx distr withdraw-rewards [validator-address] [flags]
@@ -2263,7 +2263,7 @@ Query validator commission rewards from delegators to that validator.
 $ exchaindcli query distr commission -h
 
 Example：
-    exchaindcli query distr commission okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
+    exchaindcli query distr commission exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
     
 Usage: 
     exchaindcli query distr commission [validator] [flags]
@@ -2613,7 +2613,7 @@ Where proposal.json contains:
 {
   "title": "Community Pool Spend",
   "description": "Pay me some okt!",
-  "recipient": "okchain5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
+  "recipient": "ex5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
   "amount": [
     {
       "denom": "okt",
@@ -2779,7 +2779,7 @@ exchaindcli query slashing signing-info -h
 Use a validators' consensus public key to find the signing-info for that validator:
 
 Example:
-    exchaindcli query slashing signing-info okchainvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
+    exchaindcli query slashing signing-info exvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
 
 Usage:
     exchaindcli query slashing signing-info [validator-conspub] [flags]

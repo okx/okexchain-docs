@@ -1,6 +1,6 @@
 # Websocket Endpoint
 
-## Mainnet (chain-id: okexchain-66)
+## Mainnet (chain-id: exchain-66)
 - 
 
 ## Testnet (chain-id: exchain-65):
