@@ -72,7 +72,7 @@ The best way to minimize the risk of theft or loss of OKT is to have a strong st
 ## Software Vulnerabilities
 To protect yourself and ensure you’re using the safest , you need use the latest version of softwares available, and to update them as soon as you can when new versions are released. This is important for your laptops, mobile devices, cryptocurrency wallets, and anything else that may be linked to your crypto-assets.
 
-*To protect your OKT, you should only download software directly from official sources, and make sure that you’re always using the latest and most secure version of `exchaindcli` when you’re performing any recovery involving your 12 words*. The latest versions of `Tendermint`, the `OKExChain-SDK`, and `exchaindcli` will always be available from our official Github repositories.
+*To protect your OKT, you should only download software directly from official sources, and make sure that you’re always using the latest and most secure version of `exchaincli` when you’re performing any recovery involving your 12 words*. The latest versions of `Tendermint`, the `OKExChain-SDK`, and `exchaincli` will always be available from our official Github repositories.
 
 **No one from OKExChain, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to download a software attachment after sending out a security advisory or making a patch available.**
 

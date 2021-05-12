@@ -101,7 +101,7 @@ exchaind start --chain-id exchain-65
 Check that everything is running smoothly:
 
 ```bash
-exchaindcli status
+exchaincli status
 ```
 
 See the [testnet repo](https://github.com/okex/testnets) for information on testnets, including the correct version of the OKExChain to use and details about the genesis file.

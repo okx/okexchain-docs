@@ -6,14 +6,14 @@ order: 1
 
 ## OKExChain CLI
 
-`exchaindcli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-okexchain.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-okexchain.html).
 
-## Setting up exchaindcli
+## Setting up exchaincli
 
-The main command used to set up `exchaindcli` is the following:
+The main command used to set up `exchaincli` is the following:
 
 ```bash
-exchaindcli config <flag> <value>
+exchaincli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag.
@@ -21,10 +21,10 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-exchaindcli config node <host>:<port>
+exchaincli config node <host>:<port>
 
-# example: exchaindcli config node https://exchaintesttmrpc.okex.org (testnet)
-# example: exchaindcli config node https://exchaintmrpc.okex.org (mainnet)
+# example: exchaincli config node https://exchaintesttmrpc.okex.org (testnet)
+# example: exchaincli config node https://exchaintmrpc.okex.org (mainnet)
 ```
 
 Or any of the following address ports:
@@ -42,7 +42,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Then, let us set the default value of the `--trust-node` flag:
 
 ```bash
-exchaindcli config trust-node true
+exchaincli config trust-node true
 
 # Set to true if you trust the full-node you are connecting to, false otherwise
 ```
@@ -51,19 +51,19 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
 # testnet
-exchaindcli config chain-id exchain-65
+exchaincli config chain-id exchain-65
 
 # mainnet
-exchaindcli config chain-id exchain-66
+exchaincli config chain-id exchain-66
 ```
 
-Set the output format of exchaindcli request response
+Set the output format of exchaincli request response
 ```bash
-exchaindcli config output json    
-exchaindcli config indent true
+exchaincli config output json    
+exchaincli config indent true
 ```
 
-## exchaindcli user manual
+## exchaincli user manual
 
 * [Keys](#keys)  
 * [Account](#account)  
@@ -92,11 +92,11 @@ exchaindcli config indent true
 #### Example:
 The system will randomly gerenate information including mnemonic phrases, public keys and addresses 
 ```bash
-exchaindcli keys add <name> [flags]
+exchaincli keys add <name> [flags]
 ```
 #### Successful response:
 ```
-exchaindcli keys add wind
+exchaincli keys add wind
   
 # Example output
 {
@@ -109,7 +109,7 @@ exchaindcli keys add wind
 }
   
 # Recover keys by mnemonic phrases
-exchaindcli keys add --recover admin   -y -m "right anxiety future wish fall carpet script old alert entire remain purse"
+exchaincli keys add --recover admin   -y -m "right anxiety future wish fall carpet script old alert entire remain purse"
 ```
 
 ### 2. Display all local key information:
@@ -120,11 +120,11 @@ exchaindcli keys add --recover admin   -y -m "right anxiety future wish fall car
 #### Example:
 Display all local key information
 ```bash
-exchaindcli keys list [flags]
+exchaincli keys list [flags]
 ```
 #### Successful response:
 ```
-  exchaindcli keys list
+  exchaincli keys list
   
   # Example output
   [
@@ -155,11 +155,11 @@ exchaindcli keys list [flags]
 #### Example:
 Display the information on the key of a specific user
 ```bash
-exchaindcli keys show [name [name...]] [flags]
+exchaincli keys show [name [name...]] [flags]
 ```
 #### Successful response:
 ```
-  exchaindcli keys show bob
+  exchaincli keys show bob
   
   # Example output
   {
@@ -181,11 +181,11 @@ exchaindcli keys show [name [name...]] [flags]
 #### Example:
 Delete the information on the key of a specific user
 ```bash
-exchaindcli keys delete <name> [flags]
+exchaincli keys delete <name> [flags]
 ```
 #### Successful response:
 ```
-  exchaindcli keys delete bob
+  exchaincli keys delete bob
   
   #Example output
   DANGER - enter password to permanently delete key:
@@ -202,11 +202,11 @@ exchaindcli keys delete <name> [flags]
 #### Example:
 Update the information on the key of a specific user:
 ```bash
-exchaindcli keys update <name> [flags]
+exchaincli keys update <name> [flags]
 ```
 #### Successful response:
 ```
-  exchaindcli keys update bob
+  exchaincli keys update bob
   
   # Example output
   Enter the current passphrase:
@@ -223,11 +223,11 @@ exchaindcli keys update <name> [flags]
 #### Example:
 Generate a bip39 mnemonic phrase
 ```bash
-exchaindcli keys mnemonic [flags]
+exchaincli keys mnemonic [flags]
 ```
 #### Successful response:
 ```
-exchaindcli keys mnemonic
+exchaincli keys mnemonic
 
 # Example output
 board zone elevator lesson welcome meadow love card obey cruise unlock double
@@ -246,11 +246,11 @@ board zone elevator lesson welcome meadow love card obey cruise unlock double
 #### Example:
 Query user information, including serial numbers, public keys and token balances
 ```bash
-exchaindcli query account <address>
+exchaincli query account <address>
 ```
 #### Successful response:
 ```
-  exchaindcli query account ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
+  exchaincli query account ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
   
   # Example output
   {
@@ -304,14 +304,14 @@ Token attributes
 Dex supports the token issuance function. Commands are as follows:
 
 ```bash
-exchaindcli tx token [command]
+exchaincli tx token [command]
 ```
 
 Secondary sub-commands mainly include the following 7 functions
 ### 1. Transfer
 
 ```bash
-exchaindcli tx send [from_key_or_address] [to_address] [amount] [flags]
+exchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 ```
 
 #### Parameter description
@@ -327,7 +327,7 @@ exchaindcli tx send [from_key_or_address] [to_address] [amount] [flags]
 #### Example
 
 ```bash
-exchaindcli tx send alice ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx send alice ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 ```
 #### Successful response:
 ```
@@ -370,11 +370,11 @@ exchaindcli tx send alice ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 2okt --from 
 #### Example:
 Issue a new token
 ```bash
-exchaindcli tx token issue [flags]
+exchaincli tx token issue [flags]
 ```
 #### Successful response:
 ```
-exchaindcli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block --mintable  
+exchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block --mintable  
 # example  
 {
   "height": "340949",
@@ -415,11 +415,11 @@ exchaindcli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --de
 #### Example:
 A certain amount of supply of tokens issued is increased and only tokens with mintable parameters upon issuance can be issued
 ```bash
-exchaindcli tx token mint [flags]
+exchaincli tx token mint [flags]
 ```
 #### Successful response:
 ```
-exchaindcli tx token mint --amount 10000000 --symbol okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx token mint --amount 10000000 --symbol okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 # Example output
 {
   "height": "341001",
@@ -456,11 +456,11 @@ exchaindcli tx token mint --amount 10000000 --symbol okt --from alice --gas-pric
 #### Example:
 A certain amount of tokens issued are burnt
 ```bash
-exchaindcli tx token burn [flags]
+exchaincli tx token burn [flags]
 ```
 #### Successful response:
 ```
-exchaindcli tx token burn --from alice --symbol okt --amount 100.0 --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx token burn --from alice --symbol okt --amount 100.0 --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   # Example output
 {
   "height": "341036",
@@ -489,7 +489,7 @@ exchaindcli tx token burn --from alice --symbol okt --amount 100.0 --gas-prices 
 #### Example:
 Query token information
 ```bash
-  exchaindcli query token info <symbol>
+  exchaincli query token info <symbol>
 ```
 #### Successful response:
 ```
@@ -508,12 +508,12 @@ Query token information
 #### Example:
 Transfer multiple tokens to users at the same time and specify the transfer files through --transfers-file. When --transfers-file is specified, --transfers is ignored
 ```bash
-exchaindcli tx token multi-send [flags]
+exchaincli tx token multi-send [flags]
 ```
 #### Successful response:
 
 ```
-  exchaindcli tx token multi-send --from alice --transfers '[{"to":"ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
+  exchaincli tx token multi-send --from alice --transfers '[{"to":"ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   
   # Example output
   {
@@ -546,11 +546,11 @@ Multi-signature transfer consists of multiple steps:
 #### 7.1. Creat accounts p1, p2, p3：
 Example:
 ```bash
-exchaindcli keys add --pubkey=expub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
+exchaincli keys add --pubkey=expub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
 
-exchaindcli keys add --pubkey=expub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
+exchaincli keys add --pubkey=expub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
 
-exchaindcli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
+exchaincli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
 #### 7.2. Generate multi-signature public keys:
@@ -559,7 +559,7 @@ exchaindcli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77
 
 * Set the signature threshold as 2 in the example:
 ```bash  
-exchaindcli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
+exchaincli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
 ```
 
 `--multisig-threshold` is the threshold for the number of private keys involved in multi-signature transactions.
@@ -570,9 +570,9 @@ exchaindcli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
 Display user addresses p1, p2, p3 and deposit 100.1 okt into them
 * Example:
 ```bash
-exchaindcli keys show -a p1p2p3
-exchaindcli tx send ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n 100.1okt --from=alice
-exchaindcli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+exchaincli keys show -a p1p2p3
+exchaincli tx send ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n 100.1okt --from=alice
+exchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 
 ```
 #### 7.3. Multi-signature:
@@ -580,7 +580,7 @@ exchaindcli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
-exchaindcli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
+exchaincli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
   --chain-id=exchain-65 \
   --from=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --generate-only > unsignedTx.json
@@ -588,14 +588,14 @@ exchaindcli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
 ##### p1, p2, p3 sign:
 ###### Example:
 ```bash
-exchaindcli tx sign \
+exchaincli tx sign \
   --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=alice \
   --output-document=p1signature.json \
   unsignedTx.json
 
  
-exchaindcli tx sign \
+exchaincli tx sign \
   --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=jack \
   --output-document=p2signature.json \
@@ -605,7 +605,7 @@ exchaindcli tx sign \
 Create an aggregate signature `signedTx.json` since the default threshold is set to 2 so that a transaction with p1p2 can be executed.
 ###### Example:
 ```bash 
-exchaindcli tx multisign \
+exchaincli tx multisign \
   unsignedTx.json \
   p1p2p3 \
   p1signature.json p2signature.json > signedTx.json
@@ -614,9 +614,9 @@ exchaindcli tx multisign \
 Execute a signed `signedTx.json` offline and query the balance for confirmation.
 ##### Example:
 ```bash 
-exchaindcli tx broadcast signedTx.json
+exchaincli tx broadcast signedTx.json
 
-exchaindcli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+exchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 ```
 ### 8. Transfer token ownership:
 
@@ -625,12 +625,12 @@ We support the function where token ownership can be transferred to another pers
 #### original owner(from) executes transfer-ownership command：
 ##### Example:
 ```bash
-exchaindcli tx token transfer-ownership [flags]
+exchaincli tx token transfer-ownership [flags]
 ```
 ##### Successful response:
 ```
 # from alice to jack
-exchaindcli tx token transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
+exchaincli tx token transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
 
 # response
 {
@@ -701,7 +701,7 @@ exchaindcli tx token transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3q
 #### new owner(to) executes confirm-ownership command：
 ##### Example:
 ```bash
-exchaindcli tx token confirm-ownership [flags]
+exchaincli tx token confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
@@ -769,10 +769,10 @@ The transfer of token ownership is successful only after the new owner(to) confi
 Decentralized exchange management subcommands
 
 ```bash
-$ exchaindcli tx dex  -h
+$ exchaincli tx dex  -h
 
 Usage:
-  exchaindcli tx dex [command]
+  exchaincli tx dex [command]
 
 Available Commands:
   list               list a trading pair
@@ -794,13 +794,13 @@ Secondary subcommand including features as below
 ### List a token pair
 
 ```shell
-$ exchaindcli tx dex list -h
+$ exchaincli tx dex list -h
 
 Example:
-    exchaindcli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    exchaindcli tx dex list [flags]
+    exchaincli tx dex list [flags]
   
 Flags:
       --base-asset string       base-asset should be issued before listed to opendex (default "btc")
@@ -816,13 +816,13 @@ Flags:
 ### Deposit an amount of okt on a token pair
 
 ```shell
-$ exchaindcli tx dex deposit -h
+$ exchaincli tx dex deposit -h
 
 Example:
-    exchaindcli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    exchaindcli tx dex deposit [product] [amount] [flags]
+    exchaincli tx dex deposit [product] [amount] [flags]
 
 Flags:
       --from string             Name or address of private key with which to sign
@@ -835,13 +835,13 @@ Flags:
 ### Withdraw an amount of okt from a token pairs
 
 ```shell
-$ exchaindcli tx dex  withdraw -h
+$ exchaincli tx dex  withdraw -h
 
 Example:
-    exchaindcli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    exchaindcli tx dex withdraw [product] [amount] [flags]
+    exchaincli tx dex withdraw [product] [amount] [flags]
 
 Flags:
 
@@ -856,12 +856,12 @@ We support the function where token pair ownership can be transferred to another
 #### original owner(from) executes transfer-ownership command：
 ##### Example:
 ```bash
-exchaindcli tx dex transfer-ownership [flags]
+exchaincli tx dex transfer-ownership [flags]
 ```
 ##### Successful response:
 ```
 # from alice to jack
-exchaindcli tx dex transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m --product btc_okt
+exchaincli tx dex transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m --product btc_okt
 
 # response
 {
@@ -932,7 +932,7 @@ exchaindcli tx dex transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4
 #### new owner(to) executes confirm-ownership command：
 ##### Example:
 ```bash
-exchaindcli tx dex confirm-ownership [flags]
+exchaincli tx dex confirm-ownership [flags]
 ```
 ##### Successful response:
 ```
@@ -998,13 +998,13 @@ The transfer of token pair ownership is successful only after the new owner(to) 
 ### Query the listed token pairs
 
 ```shell
-$ exchaindcli query dex products -h
+$ exchaincli query dex products -h
 
 Example:
-    exchaindcli query dex products -p 1 -i 1
+    exchaincli query dex products -p 1 -i 1
 
 Usage:
-    exchaindcli query dex products [flags]
+    exchaincli query dex products [flags]
 
 Flags:
 -h, --help                 help for products
@@ -1017,13 +1017,13 @@ Flags:
 ### Query token pairs deposits of account
 
 ```shell
-$ exchaindcli query dex deposits -h
+$ exchaincli query dex deposits -h
 
 Example:
-    exchaindcli query dex deposits ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n -i 1
+    exchaincli query dex deposits ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n -i 1
 
 Usage:
-    exchaindcli query dex deposits [account-addr] [flags]
+    exchaincli query dex deposits [account-addr] [flags]
 
 Flags:
 -h, --help                 help for deposits
@@ -1034,13 +1034,13 @@ Flags:
 ### Query the match order of token pairs
 
 ```shell
-$ exchaindcli query dex match-order -h
+$ exchaincli query dex match-order -h
 
 Example:
-    exchaindcli query dex match-order -i 1 --node ${url}
+    exchaincli query dex match-order -i 1 --node ${url}
 
 Usage:
-    exchaindcli query dex match-order [flags]
+    exchaincli query dex match-order [flags]
 
 Flags:
 -h, --help                 help for match-order
@@ -1053,13 +1053,13 @@ Flags:
 Query all the parameters for the governance process
 
 ```shell
-$ exchaindcli query dex  params -h
+$ exchaincli query dex  params -h
 
 Example:
-    exchaindcli query dex  params --node ${url}
+    exchaincli query dex  params --node ${url}
 
 Usage:
-    exchaindcli query dex params [flags]
+    exchaincli query dex params [flags]
 
 ```
 
@@ -1068,13 +1068,13 @@ Usage:
 Query all products’ names involved in a DEX delisting
 
 ```shell
-$ exchaindcli query dex  products-delisting -h
+$ exchaincli query dex  products-delisting -h
 
 Example:
-    exchaindcli query dex  products-delisting --node ${url}
+    exchaincli query dex  products-delisting --node ${url}
 
 Usage:
-    exchaindcli query dex products-delisting [flags]
+    exchaincli query dex products-delisting [flags]
 ```
 
 
@@ -1105,7 +1105,7 @@ Order attributes
 Dex supports order placing and cancellation functions. Commands are as follows:
 
 ```bash
-exchaindcli tx order
+exchaincli tx order
 ```
 
 Secondary sub-commands mainly include the following 2 functions
@@ -1115,7 +1115,7 @@ Secondary sub-commands mainly include the following 2 functions
 Place one or multiple orders.
 ```bash
 # place orders
-exchaindcli tx order new [flags]
+exchaincli tx order new [flags]
 ```
 ```
 Flags:
@@ -1139,7 +1139,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1148,7 +1148,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
+exchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 # example return
 {
   "height": "373",
@@ -1237,7 +1237,7 @@ exchaindcli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q 
 ##### Example:
 Cancel one or multiple orders.
 ```bash
-exchaindcli tx order cancel [order-id] [flags]
+exchaincli tx order cancel [order-id] [flags]
 ```
 ```
 Flags:
@@ -1261,7 +1261,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1270,7 +1270,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
+exchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 
 # example return
 {
@@ -1361,7 +1361,7 @@ exchaindcli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-p
 Dex supports various functions including order query, depthbook and users' order books. Commands are as follows:
 
 ```bash
-exchaindcli query order
+exchaincli query order
 ```
 
 Secondary sub-commands mainly include the following functions
@@ -1369,7 +1369,7 @@ Secondary sub-commands mainly include the following functions
 ##### Example:
 Query the information of a order.
 ```bash
-exchaindcli query order detail [orderId]
+exchaincli query order detail [orderId]
 ```
 ```
 Flags:
@@ -1382,7 +1382,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1390,7 +1390,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli query order detail ID0000000525-1
+exchaincli query order detail ID0000000525-1
 # example return
 {
 	"txhash": "B32EC706A2B5ACCF4FC43D6530588C0C9E36E79AC572D3443653281500D46FDA",
@@ -1417,7 +1417,7 @@ exchaindcli query order detail ID0000000525-1
 Query the information of the depthbook.
 ##### Example:
 ```bash
-exchaindcli query order depthbook [product]
+exchaincli query order depthbook [product]
 ```
 ```
 Flags:
@@ -1431,7 +1431,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1439,7 +1439,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli query order depthbook mycoin_okt
+exchaincli query order depthbook mycoin_okt
 # example return
 {
 	"asks": null,
@@ -1453,7 +1453,7 @@ exchaindcli query order depthbook mycoin_okt
 Query the state of depthbook.
 ##### Example:
 ```bash
-exchaindcli query order store
+exchaincli query order store
 ```
 ```
 Flags:
@@ -1468,7 +1468,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1476,7 +1476,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli query order store
+exchaincli query order store
 
 # example return
 {
@@ -1493,7 +1493,7 @@ exchaindcli query order store
 Query all parameters during governance
 ##### Example:
 ```bash
-exchaindcli query order params
+exchaincli query order params
 ```
 ```
 Flags:
@@ -1506,7 +1506,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1514,7 +1514,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-exchaindcli query order params
+exchaincli query order params
 
 # example return
 {
@@ -1535,7 +1535,7 @@ exchaindcli query order params
 The module supports various functions on unfilled orders, filled order history, transaction lists, fee details, matching results, candlestick data and ticker data query. The command lines are as follows:
 
 ```bash
-exchaindcli backend
+exchaincli backend
 ```
 
 Secondary sub-commands have the following functions
@@ -1543,7 +1543,7 @@ Secondary sub-commands have the following functions
 ### 1. Users' order books:
 #### Example:
 ```bash
-exchaindcli backend orders [open/closed] [addr] [flags]
+exchaincli backend orders [open/closed] [addr] [flags]
 
 
 Flags:
@@ -1560,7 +1560,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1569,7 +1569,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend orders open $(exchaindcli keys show bob -a)
+exchaincli backend orders open $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1601,7 +1601,7 @@ exchaindcli backend orders open $(exchaindcli keys show bob -a)
 ### 2. Transaction lists:
 #### Example:
 ```bash
-exchaindcli backend deals [flags]
+exchaincli backend deals [flags]
 
 Flags:
       --address string   filter deals by address
@@ -1617,7 +1617,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1626,7 +1626,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend deals --address=$(exchaindcli keys show bob -a)
+exchaincli backend deals --address=$(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1655,7 +1655,7 @@ exchaindcli backend deals --address=$(exchaindcli keys show bob -a)
 ### 3. User fee details:
 #### Example:
 ```bash
-exchaindcli backend fees [addr] [flags]
+exchaincli backend fees [addr] [flags]
 
 Flags:
   -h, --help          help for fees
@@ -1666,7 +1666,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1675,7 +1675,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend fees $(exchaindcli keys show bob -a)
+exchaincli backend fees $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1705,7 +1705,7 @@ exchaindcli backend fees $(exchaindcli keys show bob -a)
 ### 4. Obtain lists of matching results:
 #### Example:
 ```bash
-exchaindcli backend matches [flags]
+exchaincli backend matches [flags]
 
 Flags:
       --end int          filter deals by < end timestamp
@@ -1719,7 +1719,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1729,7 +1729,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend matches
+exchaincli backend matches
 # example return
 {
 	"code": 0,
@@ -1754,7 +1754,7 @@ exchaindcli backend matches
 ### 5. Obtain lists of past transactions containing user addresses:
 #### Example:
 ```bash
-exchaindcli backend txs [addr] [flags]
+exchaincli backend txs [addr] [flags]
 
 Flags:
       --end int       filter txs by end timestamp
@@ -1768,7 +1768,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1777,7 +1777,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend txs $(exchaindcli keys show bob -a)
+exchaincli backend txs $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1823,7 +1823,7 @@ exchaindcli backend txs $(exchaindcli keys show bob -a)
 ### 6. Obtain tx hash of a block at a specific height:
 #### Example:
 ```bash
-exchaindcli backend block_tx_hashes [height] [flags]
+exchaincli backend block_tx_hashes [height] [flags]
 
 Flags:
   -h, --help          help for block-tx-hashes
@@ -1832,7 +1832,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1841,7 +1841,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend block-tx-hashes 105
+exchaincli backend block-tx-hashes 105
 # example return
 ["550101C97C83028F228542755F76A806D00D6635C64E5762EF6FD1667A900D81"]
 
@@ -1850,7 +1850,7 @@ exchaindcli backend block-tx-hashes 105
 ### 7. Query candlestick data:
 #### Example:
 ```bash
-exchaindcli backend klines [flags]
+exchaincli backend klines [flags]
 
 Flags:
   -g, --granularity int   [60/180/300/900/1800/3600/7200/14400/21600/43200/86400/604800], second in unit (default 60)
@@ -1862,7 +1862,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1871,7 +1871,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend klines -p mycoin_okt 
+exchaincli backend klines -p mycoin_okt 
 
 # example return
 {
@@ -1894,7 +1894,7 @@ exchaindcli backend klines -p mycoin_okt
 ### 8. Query market data:
 #### Example:
 ```bash
-exchaindcli backend tickers [flags]
+exchaincli backend tickers [flags]
 
 Flags:
   -c, --count int        ticker count (default 10)
@@ -1906,7 +1906,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.exchaindcli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1915,7 +1915,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-exchaindcli backend tickers -p mycoin_okt
+exchaincli backend tickers -p mycoin_okt
 
 # example return
 {
@@ -1951,13 +1951,13 @@ exchaindcli backend tickers -p mycoin_okt
 Create a new validator with own keys
 
 ```shell
-$ exchaindcli tx staking create-validator -h
+$ exchaincli tx staking create-validator -h
 
 Example:
-    exchaindcli tx staking create-validator --moniker $MONIKER --pubkey $PUBKEY --from mykey
+    exchaincli tx staking create-validator --moniker $MONIKER --pubkey $PUBKEY --from mykey
     
 Usage:
-    exchaindcli tx staking create-validator [flags]
+    exchaincli tx staking create-validator [flags]
 
 Flags:
     -- moniker  	The validator's name
@@ -1975,13 +1975,13 @@ Flags:
 * Destroy a validator and withdraw the self-delegation
 
 ```shell
-$ exchaindcli tx staking destroy-validator -h
+$ exchaincli tx staking destroy-validator -h
   
 Example:
-    exchaindcli tx staking destroy-validator --from mykey
+    exchaincli tx staking destroy-validator --from mykey
     
 Usage:
-    exchaindcli tx staking destroy-validator [flags]
+    exchaincli tx staking destroy-validator [flags]
 
 ```
 
@@ -1991,13 +1991,13 @@ Usage:
 Edit the detail info of a validator
 
 ```shell
-$ exchaindcli tx staking edit-validator -h
+$ exchaincli tx staking edit-validator -h
 
 Example:
-    exchaindcli tx staking edit-validator --moniker "my new name" --identity "http://mynewwebsite/pic/newlogo.jpg" --website "http://mynewwebsites" --details "my new slogans" --from mykey
+    exchaincli tx staking edit-validator --moniker "my new name" --identity "http://mynewwebsite/pic/newlogo.jpg" --website "http://mynewwebsites" --details "my new slogans" --from mykey
 	
 Usage:
-    exchaindcli tx staking edit-validator [flags]
+    exchaincli tx staking edit-validator [flags]
 
 Flags:
 	  -- moniker		The validator's name (default "[do-not-modify]")
@@ -2014,13 +2014,13 @@ Flags:
 Delegate an amount of okt
 
 ```shell
-$ exchaindcli tx staking delegate -h
+$ exchaincli tx staking delegate -h
 
 Example:
-	  exchaindcli tx staking delegate 1024.1024okt --from mykey
+	  exchaincli tx staking delegate 1024.1024okt --from mykey
 	  
 Usage:
-    exchaindcli tx staking delegate [amount] [flags]
+    exchaincli tx staking delegate [amount] [flags]
     
 
 ```
@@ -2032,14 +2032,14 @@ Vote on one or more validator(s) by delegate okt
 Vote on one or more validator(s)
 
 ```shell
-$ exchaindcli tx staking vote -h
+$ exchaincli tx staking vote -h
 
  
 Example:
-    exchaindcli tx staking vote exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,exvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,exvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
+    exchaincli tx staking vote exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,exvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,exvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
 
 Usage:
-    exchaindcli tx staking vote [validator-addr1, validator-addr2, validator-addr3, ... validator-addrN] [flags]
+    exchaincli tx staking vote [validator-addr1, validator-addr2, validator-addr3, ... validator-addrN] [flags]
 ```
 
 #### Unbond
@@ -2055,13 +2055,13 @@ When a delegator withdraws its deposit token, the according shares will be deduc
 Unbond shares and withdraw the same amount of votes
 
 ```shell
-$ exchaindcli tx staking unbond -h
+$ exchaincli tx staking unbond -h
 
 Example:
-    exchaindcli tx staking unbond 1024.1024okt --from mykey
+    exchaincli tx staking unbond 1024.1024okt --from mykey
 
 Usage:
-    exchaindcli tx staking unbond [amount] [flags]
+    exchaincli tx staking unbond [amount] [flags]
 
 ```
 
@@ -2071,13 +2071,13 @@ Usage:
 Query the information of delegations and all votes recently made by a delegator
 
 ```shell
-$ exchaindcli query staking delegator -h
+$ exchaincli query staking delegator -h
 
 Example:
-    exchaindcli query staking delegator ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
+    exchaincli query staking delegator ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
     
 Usage:
-    exchaindcli query staking delegator [address] [flags]
+    exchaincli query staking delegator [address] [flags]
 	
 ```
 
@@ -2087,13 +2087,13 @@ Usage:
 Query the information of all votes recently made to a validator
 
 ```shell
-$ exchaindcli query staking votes-to -h
+$ exchaincli query staking votes-to -h
 
 Example:
-	  exchaindcli query staking votes-to exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
+	  exchaincli query staking votes-to exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
 	  
 Usage:
-    exchaindcli query staking votes-to [validator-addr] [flags]
+    exchaincli query staking votes-to [validator-addr] [flags]
 
 ```
 
@@ -2101,7 +2101,7 @@ Usage:
 
 ```
 Usage:
-    exchaindcli query staking [command] [flags]
+    exchaincli query staking [command] [flags]
 
 Available Commands:
     validator                  Query a validator
@@ -2119,13 +2119,13 @@ Used for register as a proxy
 Become a proxy by registration
 
 ```shell
-$ exchaindcli tx staking proxy reg -h
+$ exchaincli tx staking proxy reg -h
 
 Example:
-	  exchaindcli tx staking proxy reg --from mykey
+	  exchaincli tx staking proxy reg --from mykey
 	  
 Usage:
-	  exchaindcli tx staking proxy reg [flags]
+	  exchaincli tx staking proxy reg [flags]
 
 ```
 
@@ -2135,13 +2135,13 @@ Usage:
 Unregister the proxy identity
 
 ```shell
-$ exchaindcli tx staking proxy unreg -h
+$ exchaincli tx staking proxy unreg -h
 
 Example:
-	  exchaindcli tx staking proxy unreg --from mykey
+	  exchaincli tx staking proxy unreg --from mykey
 	  
 Usage:
-    exchaindcli tx staking proxy unreg [flags]
+    exchaincli tx staking proxy unreg [flags]
 
 ```
 
@@ -2151,13 +2151,13 @@ Usage:
 Bind proxy relationship
 
 ```shell
-$ exchaindcli tx staking proxy bind -h
+$ exchaincli tx staking proxy bind -h
 
 Example:
-	  exchaindcli tx staking proxy bind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
+	  exchaincli tx staking proxy bind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
-    exchaindcli tx staking proxy bind [flags]
+    exchaincli tx staking proxy bind [flags]
 
 ```
 
@@ -2167,13 +2167,13 @@ Usage:
 Unbind proxy relationship
 
 ```shell
-$ exchaindcli tx staking proxy unbind -h
+$ exchaincli tx staking proxy unbind -h
 
 Example:
-	  exchaindcli tx staking proxy unbind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
+	  exchaincli tx staking proxy unbind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
-    exchaindcli tx staking proxy unbind [flags]
+    exchaincli tx staking proxy unbind [flags]
 
 ```
 
@@ -2183,13 +2183,13 @@ Usage:
 Query the addresses of delegators by a specific proxy
 
 ```shell
-$ exchaindcli query staking proxy -h
+$ exchaincli query staking proxy -h
 
 Example:
-	  exchaindcli query staking proxy ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
+	  exchaincli query staking proxy ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 	  
 Usage:
-    exchaindcli query staking proxy [address] [flags]
+    exchaincli query staking proxy [address] [flags]
 
 
 ```
@@ -2202,13 +2202,13 @@ Usage:
 Withdraw rewards coming from fees to the validator account
 
 ```shell
-$ exchaindcli tx distr withdraw-rewards -h
+$ exchaincli tx distr withdraw-rewards -h
 
 Example：
-    exchaindcli tx distr withdraw-rewards exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
+    exchaincli tx distr withdraw-rewards exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
 
 Usage: 
-    exchaindcli tx distr withdraw-rewards [validator-address] [flags]
+    exchaincli tx distr withdraw-rewards [validator-address] [flags]
 
 
 Flags：
@@ -2225,13 +2225,13 @@ Execution parameters for distribution module
 Query distribution parameters
 
 ```shell
-$ exchaindcli query distr params -h
+$ exchaincli query distr params -h
 
 Example：
-    exchaindcli query distr params --node ${url}
+    exchaincli query distr params --node ${url}
     
 Usage: 
-    exchaindcli query distr params [flags]
+    exchaincli query distr params [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2243,13 +2243,13 @@ Flags：
 Query all coins in the community pool which is under Governance control.
 
 ```shell
-$ exchaindcli query distr community-pool -h
+$ exchaincli query distr community-pool -h
 
 Example：
-    exchaindcli query distr community-pool --node ${url}
+    exchaincli query distr community-pool --node ${url}
     
 Usage: 
-    exchaindcli query distr community-pool [flags]
+    exchaincli query distr community-pool [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2260,13 +2260,13 @@ Flags：
 Query validator commission rewards from delegators to that validator.
 
 ```shell
-$ exchaindcli query distr commission -h
+$ exchaincli query distr commission -h
 
 Example：
-    exchaindcli query distr commission exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
+    exchaincli query distr commission exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
     
 Usage: 
-    exchaindcli query distr commission [validator] [flags]
+    exchaincli query distr commission [validator] [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2280,13 +2280,13 @@ Flags：
 Submit a DEX delisting proposal along with an initial deposit.
 
 ```shell
-$ exchaindcli tx gov submit-proposal delist-proposal -h
+$ exchaincli tx gov submit-proposal delist-proposal -h
 
 Submit a dex delist proposal along with an initial deposit.
 The proposal details must be supplied via a JSON file.
 
 Example:
-  exchaindcli tx gov submit-proposal delist-proposal <path/to/proposal.json> --from=<key_or_address>
+  exchaincli tx gov submit-proposal delist-proposal <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 
@@ -2304,7 +2304,7 @@ Where proposal.json contains:
 }
 
 Usage:
-  exchaindcli tx gov submit-proposal delist-proposal [proposal-file] [flags]
+  exchaincli tx gov submit-proposal delist-proposal [proposal-file] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
@@ -2328,7 +2328,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2340,12 +2340,12 @@ Global Flags:
 Submit a proposal along with an initial deposit.
 
 ```shell
-$ exchaindcli tx gov  submit-proposal -h
+$ exchaincli tx gov  submit-proposal -h
 Submit a proposal along with an initial deposit.
 Proposal title, description, type and deposit can be given directly or through a proposal JSON file.
 
 Example:
-  exchaindcli tx gov submit-proposal --proposal="path/to/proposal.json" --from mykey
+  exchaincli tx gov submit-proposal --proposal="path/to/proposal.json" --from mykey
 
 Where proposal.json contains:
 
@@ -2358,12 +2358,12 @@ Where proposal.json contains:
 
 Which is equivalent to:
 
-  exchaindcli tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" \
+  exchaincli tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" \
 	--deposit="10okt" --from mykey
 
 Usage:
-  exchaindcli tx gov submit-proposal [flags]
-  exchaindcli tx gov submit-proposal [command]
+  exchaincli tx gov submit-proposal [flags]
+  exchaincli tx gov submit-proposal [command]
 
 Available Commands:
   upgrade              submit a app upgrade proposal
@@ -2398,12 +2398,12 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 
-Use "exchaindcli tx gov submit-proposal [command] --help" for more information about a command.
+Use "exchaincli tx gov submit-proposal [command] --help" for more information about a command.
 ```
 ##### Parameter description：
 
@@ -2414,8 +2414,8 @@ Use "exchaindcli tx gov submit-proposal [command] --help" for more information a
 | --type              | type of the proposal initiated (for text proposals only) |
 | --deposit           | initial deposit specified when the proposal is initiated  |
 | --from              | account name specified for sending a transaction |
-| --home              | account name and the directory where exchaindcli is configured
-if it is ~/.exchaindcli can ignore the parameters |
+| --home              | account name and the directory where exchaincli is configured
+if it is ~/.exchaincli can ignore the parameters |
 | -b/--broadcast-mode | specific transaction broadcast modes（async、sync、block）|
 
 ### Change parameter proposal
@@ -2424,7 +2424,7 @@ if it is ~/.exchaindcli can ignore the parameters |
 Submit a parameter modification proposal along with an initial deposit.
 
 ```shell
-$ exchaindcli tx gov  submit-proposal param-change -h
+$ exchaincli tx gov  submit-proposal param-change -h
 
 Submit a parameter modification proposal along with an initial deposit.
 The proposal details must be supplied via a JSON file. For values that contains
@@ -2439,7 +2439,7 @@ Proper vetting of a parameter change proposal should prevent this from happening
 regardless.
 
 Example:
-  exchaindcli tx gov submit-proposal param-change <path/to/proposal.json> --from=<key_or_address>
+  exchaincli tx gov submit-proposal param-change <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 
@@ -2463,7 +2463,7 @@ Where proposal.json contains:
 }
 
 Usage:
-  exchaindcli tx gov submit-proposal param-change [proposal-file] [flags]
+  exchaincli tx gov submit-proposal param-change [proposal-file] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
@@ -2487,7 +2487,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2504,8 +2504,8 @@ Global Flags:
 modify the MinDeposit parameters in the module to be governed to 1000okt. |
 | --height            | block height when the specific parameter change proposal becomes effective (parameters to be modified changed to specific values),the specific height must meet: higher than the current block height and lower than or equal to the sum of the current block height and MaxBlockHeightPeriod |
 | --from              | account name specified for sending a transaction  |
-| --home              | account name and the directory where exchaindcli is configured
-if it is ~/.exchaindcli can ignore the parameters |
+| --home              | account name and the directory where exchaincli is configured
+if it is ~/.exchaincli can ignore the parameters |
 | -b/--broadcast-mode | specific transaction broadcast modes（async、sync、block） |
 
 ### Submit deposit
@@ -2514,16 +2514,16 @@ if it is ~/.exchaindcli can ignore the parameters |
 Submit a deposit for an active proposal.
 
 ```shell
-$ exchaindcli tx gov deposit -h
+$ exchaincli tx gov deposit -h
 
 Submit a deposit for an active proposal. You can
 find the proposal-id by running "<appcli> query gov proposals".
 
 Example:
-  exchaindcli tx gov deposit 1 10okt --from mykey
+  exchaincli tx gov deposit 1 10okt --from mykey
 
 Usage:
-  exchaindcli tx gov deposit [proposal-id] [deposit] [flags]
+  exchaincli tx gov deposit [proposal-id] [deposit] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
@@ -2547,7 +2547,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2559,17 +2559,17 @@ Global Flags:
 Submit a vote for an active proposal. 
 
 ```shell
-$ exchaindcli tx gov vote -h
+$ exchaincli tx gov vote -h
 
 Submit a vote for an active proposal. You can
 find the proposal-id by running "<appcli> query gov proposals".
 
 
 Example:
-  exchaindcli tx gov vote 1 yes --from mykey
+  exchaincli tx gov vote 1 yes --from mykey
 
 Usage:
-  exchaindcli tx gov vote [proposal-id] [option] [flags]
+  exchaincli tx gov vote [proposal-id] [option] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
@@ -2593,7 +2593,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2604,10 +2604,10 @@ Global Flags:
 Send a proposal  for rewards withdrawal from the community pool.
 
 ```shell
-$ exchaindcli tx gov submit-proposal community-pool-spend -h
+$ exchaincli tx gov submit-proposal community-pool-spend -h
 
 Example:
-	exchaindcli tx gov submit-proposal community-pool-spend <path/to/proposal.json> --from=<key_or_address>
+	exchaincli tx gov submit-proposal community-pool-spend <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 {
@@ -2629,7 +2629,7 @@ Where proposal.json contains:
 }
 
 Usage: 
-    exchaindcli tx gov submit-proposal community-pool-spend [proposal-file] [flags]
+    exchaincli tx gov submit-proposal community-pool-spend [proposal-file] [flags]
 
 Flags：
 	--from ${name} Name or address of private key with which to sign 
@@ -2643,16 +2643,16 @@ Flags：
 Query details for a proposal
 
 ```shell
-$ exchaindcli query gov proposal -h
+$ exchaincli query gov proposal -h
 
 Query details for a proposal. You can find the
 proposal-id by running "<appcli> query gov proposals".
 
 Example:
-  exchaindcli query gov proposal 1
+  exchaincli query gov proposal 1
 
 Usage:
-  exchaindcli query gov proposal [proposal-id] [flags]
+  exchaincli query gov proposal [proposal-id] [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2665,7 +2665,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2677,17 +2677,17 @@ Global Flags:
 Query for all proposals.
 
 ```shell
-$ exchaindcli query gov proposals -h
+$ exchaincli query gov proposals -h
 
 Query for a all proposals. You can filter the returns with the following flags.
 
 Example:
-  exchaindcli query gov proposals --depositor ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
-  exchaindcli query gov proposals --voter ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
-  exchaindcli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
+  exchaincli query gov proposals --depositor ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+  exchaincli query gov proposals --voter ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+  exchaincli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
 
 Usage:
-  exchaindcli query gov proposals [flags]
+  exchaincli query gov proposals [flags]
 
 Flags:
       --depositor string   (optional) filter by proposals deposited on by depositor
@@ -2704,7 +2704,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2719,15 +2719,15 @@ Query parameters of params:
 Query all the parameters for the governance process.
 
 ```shell
-exchaindcli query params params -h
+exchaincli query params params -h
 
 Query the all the parameters for the governance process.
 
 Example:
-  exchaindcli query params params
+  exchaincli query params params
 
 Usage:
-  exchaindcli query params params [flags]
+  exchaincli query params params [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2740,7 +2740,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.exchaindcli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2760,29 +2760,29 @@ Global Flags:
 
 ### Change target validator state from jailed to unjail
 ```sh
-exchaindcli tx slashing unjail -h
+exchaincli tx slashing unjail -h
 unjail a jailed validator:
 
 Example:
-    exchaindcli tx slashing unjail --from mykey
+    exchaincli tx slashing unjail --from mykey
 
 Usage:
-    exchaindcli tx slashing unjail [flags]
+    exchaincli tx slashing unjail [flags]
 Flags:
     --from string             Name or address of private key with which to sign
 ```
 
 ### Query jail state of target validator 
 ```sh
-exchaindcli query slashing signing-info -h
+exchaincli query slashing signing-info -h
 
 Use a validators' consensus public key to find the signing-info for that validator:
 
 Example:
-    exchaindcli query slashing signing-info exvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
+    exchaincli query slashing signing-info exvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
 
 Usage:
-    exchaindcli query slashing signing-info [validator-conspub] [flags]
+    exchaincli query slashing signing-info [validator-conspub] [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2795,15 +2795,15 @@ Flags:
 
 ###  Query params from slashing module
 ```sh
-exchaindcli query slashing params -h
+exchaincli query slashing params -h
 
 Query genesis parameters for the slashing module:
 
 Example:
-    exchaindcli query slashing params
+    exchaincli query slashing params
 
 Usage:
-    exchaindcli query slashing params [flags]
+    exchaincli query slashing params [flags]
   
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2821,15 +2821,15 @@ Flags:
 Set the exchaind log level  
 
 ```shell
-$ exchaindcli debug set-loglevel -h
+$ exchaincli debug set-loglevel -h
 
 Example：
-  $ exchaindcli debug set-loglevel "main:info,state:info"
+  $ exchaincli debug set-loglevel "main:info,state:info"
 
-  $ exchaindcli debug set-loglevel "upgrade:error"
+  $ exchaincli debug set-loglevel "upgrade:error"
 
 Usage:
-  exchaindcli debug set-loglevel [flags]
+  exchaincli debug set-loglevel [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2841,7 +2841,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/yourname/.exchaindcli")
+      --home string       directory for config and data (default "/Users/yourname/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2852,11 +2852,11 @@ Global Flags:
 Dump the data of kv-stores by a module name  
 
 ```shell
-$ exchaindcli debug dump -h
+$ exchaincli debug dump -h
 Dump the data of kv-stores by a module name
 
 Usage:
-  exchaindcli debug dump [module] [flags]
+  exchaincli debug dump [module] [flags]
 
 Flags:
      --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2868,7 +2868,7 @@ Flags:
   Global Flags:
      --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-     --home string       directory for config and data (default "/Users/yourname/.exchaindcli")
+     --home string       directory for config and data (default "/Users/yourname/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
      --passwd string     Pass word of sender (default "12345678")
      --trace             print out full stack trace on errors

@@ -99,7 +99,7 @@ exchaind start --chain-id exchain-66
 Check that everything is running smoothly:
 
 ```bash
-exchaindcli status
+exchaincli status
 ```
 
 See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OKExChain to use and details about the genesis file.
