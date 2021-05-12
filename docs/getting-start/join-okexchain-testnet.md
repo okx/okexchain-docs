@@ -135,8 +135,8 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/okex/okexchain.git
-cd okexchain
+git clone https://github.com/okex/exchain.git
+cd exchain
 git fetch --all && git checkout master
 make install
 ```
@@ -144,7 +144,7 @@ make install
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
-See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which testnet, and the [OKExChain release page](https://github.com/okex/okexchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which testnet, and the [OKExChain release page](https://github.com/okex/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 
