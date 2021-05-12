@@ -21,7 +21,7 @@ There are 4 commands for DEX operators, providing complete support for equity ci
 Any user can issue their own Token and will be charged a portion of the OKT as a fee in addition to the system fee charged by GAS. Please refer to [Fee Model](../concepts/fee.html) for specific rates.
 
 ```shell
-exchaindcli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
+exchaincli tx token issue --from alice --symbol bcoin --total-supply 200000 --whole-name 'bcoin' --desc 'blockchain coin' -b block --mintable  
 
 ```
 
@@ -38,7 +38,7 @@ exchaindcli tx token issue --from alice --symbol bcoin --total-supply 200000 --w
 Only a DEX operator can list a token pair. In a DEX, any pair of tokens can form one and only one Tokenpair.
 
 ```shell
-exchaindcli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
+exchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey -b block -y
 
 ```
 
@@ -54,7 +54,7 @@ In order to make fair and open use of the matching resources of the blockchain, 
 
 
 ```shell
-exchaindcli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey -b block -y
+exchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey -b block -y
 ```
 
 
@@ -65,5 +65,5 @@ In contrast with the deposit operation, DEX operators can also withdraw their de
 
 
 ```shell
-exchaindcli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
+exchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey -b block -y
 ```

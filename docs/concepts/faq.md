@@ -1,10 +1,10 @@
 # Two format address
 
 ## The relationship between ex and 0x address
-There are two address formats in ex, one is the address at the prefix of ex, such as: `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`;Another address starts with 0x, such as: `0x8aF3B04bF0400b16911b5A12360122148056d562`.The addresses prefix with 0x and ex are from the same mnemonic, the balance under their address is the same, the same number of okt for the owner under the two addresses. After the mnemonic is imported into the metamask, the address starting with 0x can be recovered;Use exchaindcli to view addresses starting with 0x and ex. You can view the address prefix with ex on the dex web page and mobile client.
+There are two address formats in ex, one is the address at the prefix of ex, such as: `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`;Another address starts with 0x, such as: `0x8aF3B04bF0400b16911b5A12360122148056d562`.The addresses prefix with 0x and ex are from the same mnemonic, the balance under their address is the same, the same number of okt for the owner under the two addresses. After the mnemonic is imported into the metamask, the address starting with 0x can be recovered;Use exchaincli to view addresses starting with 0x and ex. You can view the address prefix with ex on the dex web page and mobile client.
 
 ## How to use
-The address starting with ex can be used directly on the mobile client, web page or exchaindcli for operations such as transfer, deposit, and voting.Addresses starting with 0x can only be used for transfer operations on metamasks at present.
+The address starting with ex can be used directly on the mobile client, web page or exchaincli for operations such as transfer, deposit, and voting.Addresses starting with 0x can only be used for transfer operations on metamasks at present.
 
 `Note`: Using addresses prefix with ex can only transfer funds to addresses prefix with ex, and cannot be cross-transferred.
 

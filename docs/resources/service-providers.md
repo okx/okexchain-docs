@@ -28,16 +28,16 @@ Then, you can start [running a full-node(testnet)](../getting-start/join-okexcha
 
 ### Command-Line interface
 
-## Setting Up `exchaindcli`
+## Setting Up `exchaincli`
 
-**Please check that you are always using the latest stable release of `exchaindcli`.**
+**Please check that you are always using the latest stable release of `exchaincli`.**
 
-`exchaindcli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
 
-In order to set up `exchaindcli`, use the following command:
+In order to set up `exchaincli`, use the following command:
 
 ```bash
-exchaindcli config <flag> <value>
+exchaincli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag.
@@ -45,9 +45,9 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-exchaindcli config node <host>:<port
+exchaincli config node <host>:<port
 
-// example: exchaindcli config node https://35.176.62.211:26657
+// example: exchaincli config node https://35.176.62.211:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
@@ -55,7 +55,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Then, let us set the default value of the `--trust-node` flag:
 
 ```bash
-exchaindcli config trust-node false
+exchaincli config trust-node false
 
 // Set to true if you run a light-client node, false otherwise
 ```
@@ -63,7 +63,7 @@ exchaindcli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-exchaindcli config chain-id exchain-65
+exchaincli config chain-id exchain-65
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.
@@ -73,7 +73,7 @@ Next you will find a few useful CLI commands to interact with the Full-Node.
 To generate a new key (default secp256k1 elliptic curve):
 
 ```bash
-exchaindcli keys add <your_key_name>
+exchaincli keys add <your_key_name>
 ```
 
 You will be asked to create a password (at least 8 characters) for this key-pair. This will return the information listed below:
@@ -87,7 +87,7 @@ You will be asked to create a password (at least 8 characters) for this key-pair
 You can see all your available keys by typing:
 
 ```bash
-exchaindcli keys list
+exchaincli keys list
 ```
 
 #### Checking your balance
@@ -95,7 +95,7 @@ exchaindcli keys list
 After receiving tokens to your address, you can view your account’s balance by typing:
 
 ```bash
-exchaindcli query account <YOUR_ADDRESS>
+exchaincli query account <YOUR_ADDRESS>
 ```
 
 *Note: When you query an account balance with zero tokens, you will get this error: No account with address <YOUR_ADDRESS> was found in the state. This is expected! We’re working on improving our error messages.
@@ -105,7 +105,7 @@ exchaindcli query account <YOUR_ADDRESS>
 Here is the command to send coins via the CLI:
 
 ```bash
-exchaindcli tx send <from_key_or_address> <to_address> <amount> \
+exchaincli tx send <from_key_or_address> <to_address> <amount> \
     --chain-id=<name_of_testnet_chain> 
 ```
 
@@ -123,7 +123,7 @@ Flags:
 If you need to do something else, the best command you can run is:
 
 ```bash
-exchaindcli 
+exchaincli 
 ```
 
 It will display all the available commands. For each command, you can use the `--help` flag to get further information.
@@ -135,7 +135,7 @@ The Rest Server acts as an intermediary between the front-end and the full-node.
 To start the Rest server: 
 
 ```bash
-exchaindcli rest-server --node=<full_node_address:full_node_port>
+exchaincli rest-server --node=<full_node_address:full_node_port>
 ```
 
 Flags:
@@ -160,7 +160,7 @@ To give more flexibility to developers, the OKExChain community has included the
 
 OKExChain SDK transaction signing is a fairly simple process.
 
-Every OKExChain transaction has a canonical JSON representation. The `exchaindcli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
+Every OKExChain transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
 
 Things to know when signing messages:
 

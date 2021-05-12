@@ -54,26 +54,26 @@
 ```
 
 ## 2. Configure `trust-node` and `chain-id`
-When using `exchaindcli` to query block/tx or send tx, the following errors may occur:
+When using `exchaincli` to query block/tx or send tx, the following errors may occur:
 ```shell script
-$ exchaindcli query block 6547302
+$ exchaincli query block 6547302
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x4cecdea]
 ```
 
 ```shell script
-$ exchaindcli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt
+$ exchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt
 ERROR: chain ID required but not specified
 ```
 You should use the flag
 ```shell script
-$ exchaindcli query block 6547302 --trust-node
-$ exchaindcli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id exchain-65
+$ exchaincli query block 6547302 --trust-node
+$ exchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id exchain-65
 ```
 or local configuration
 ```shell script
-$ exchaindcli config chain-id exchain-65
-$ exchaindcli config trust-node true
+$ exchaincli config chain-id exchain-65
+$ exchaincli config trust-node true
 ```
 
 ## 3. Make sure commitID is the latest version
@@ -88,7 +88,7 @@ For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551f
 ```shell script
 name: okexchain
 server_name: exchaind
-client_name: exchaindcli
+client_name: exchaincli
 version: v0.16.8.3
 commit: ee5068ccb54b464aeaff7eef69fb2e8611551fed
 ```

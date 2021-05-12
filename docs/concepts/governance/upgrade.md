@@ -24,7 +24,7 @@ proposal parameters:
 ### 1. Submit an app upgrade proposal
 Before the app upgrade, you need to submit an `upgrade proposal` first, assuming that the current version of the app running on the network is  `0` and you want to upgrade it to version `1`
 ```sh
-$ exchaindcli tx gov submit-app-upgrade-proposal --title="app upgrade" --description="app upgrade, version 1" --deposit="50okt" --version=1 --software="http://newappdownloadingurl" --switchHeight="1000" --threshold="0.8" --type="AppUpgrade" --from jack -b block
+$ exchaincli tx gov submit-app-upgrade-proposal --title="app upgrade" --description="app upgrade, version 1" --deposit="50okt" --version=1 --software="http://newappdownloadingurl" --switchHeight="1000" --threshold="0.8" --type="AppUpgrade" --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -57,7 +57,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
 ```
 OKExChain will generate a proposal-id to uniquely label the successfully submitted proposal. The proposal_id of the proposal in this example is 1. Query proposal information:
 ```sh
-$ exchaindcli query gov proposal 1
+$ exchaincli query gov proposal 1
 {
   "type": "gov/AppUpgradeProposal",
   "value": {
@@ -100,7 +100,7 @@ ERROR: {"codespace":"gov","code":1,"message":"Unknown proposal with id 1"}
 which means that the proposal faces a timeout after entering the DepositPeriod state (the timeouts during the DepositPeriod and VotingPeriod are 24h and 72h respectively) and fails to meet the deposit conditions, and the proposal will be deleted on-chain, so that the above error is obtained.
 ### 2. Deposit an app upgrade proposal
 ```sh
-$ exchaindcli tx gov deposit 1 50okt --from jack -b block
+$ exchaincli tx gov deposit 1 50okt --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -138,7 +138,7 @@ When the query is made through the above commands again after deposit, the propo
 
 ### 3. Vote on an app upgrade proposal
 ```sh
-$ exchaindcli tx gov vote 1 yes --from jack -b block
+$ exchaincli tx gov vote 1 yes --from jack -b block
 
 confirm transaction before signing and broadcasting [Y/n]: y
 {
@@ -178,7 +178,7 @@ Query the proposal at the end of the VotingPeriod. The proposal status is Passed
 Once the app upgrade proposal is approved, the administrator of each node can obtain version `1` and restart the background program of `okexchain` via the download address specified by `--software="http://newappdownloadingurl"` in the proposal.
 #### Query the current app version
 ```sh
-$ exchaindcli query upgrade version
+$ exchaincli query upgrade version
 {
   "version": "1"
 }
@@ -187,7 +187,7 @@ $ exchaindcli query upgrade version
 When the block reaches the block height `--switchHeight="1000"` specified by the proposal, if most nodes on the network have updated the app to version `1`, the network will automatically and smoothly switch to the new version. Otherwise, maintain the original version.
 #### Test if the new version is activated
 ```sh
-$ exchaindcli query upgrade failed-version
+$ exchaincli query upgrade failed-version
 {
   "version": "0"
 }

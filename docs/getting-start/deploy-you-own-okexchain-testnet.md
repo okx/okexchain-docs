@@ -18,7 +18,7 @@ In case you need to use or deploy okexchain as a container you could skip the `b
 * `docker run -it -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind init mynode`
 * `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind start`
 * ...
-* `docker run -it -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaindcli version`
+* `docker run -it -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaincli version`
 
 The same images can be used to build your own docker-compose stack.
 
@@ -41,12 +41,12 @@ cd $HOME
 exchaind init <your_custom_moniker> --chain-id testchain-1
 
 # Create a key to hold your validator account
-exchaindcli keys add validator
+exchaincli keys add validator
 
 # Add that key into the genesis.app_state.accounts array in the genesis file
 # NOTE: this command lets you set the number of coins. Make sure this account has some coins
 # with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-exchaind add-genesis-account $(exchaindcli keys show validator -a) 1000000000tokt
+exchaind add-genesis-account $(exchaincli keys show validator -a) 1000000000tokt
 
 # Generate the transaction that creates your validator
 exchaind gentx --name validator
@@ -58,7 +58,7 @@ exchaind collect-gentxs
 exchaind start --chain-id testchain-1
 ```
 
-This setup puts all the data for `exchaind` in `~/.exchaind`. You can examine the genesis file you created at `~/.exchaind/config/genesis.json`. With this configuration `exchaindcli` is also ready to use and has an account with tokens (both staking and custom).
+This setup puts all the data for `exchaind` in `~/.exchaind`. You can examine the genesis file you created at `~/.exchaind/config/genesis.json`. With this configuration `exchaincli` is also ready to use and has an account with tokens (both staking and custom).
 
 ## Multi-node, Local, Automated Testnet
 
@@ -118,28 +118,28 @@ build/
 │   ├── node2.json
 │   └── node3.json
 ├── node0
-│   ├── exchaindcli
+│   ├── exchaincli
 │   │   ├── key_seed.json
 │   │   └── keyring-test-okexchain
 │   └── exchaind
 │       ├── config
 │       └── data
 ├── node1
-│   ├── exchaindcli
+│   ├── exchaincli
 │   │   ├── key_seed.json
 │   │   └── keyring-test-okexchain
 │   └── exchaind
 │       ├── config
 │       └── data
 ├── node2
-│   ├── exchaindcli
+│   ├── exchaincli
 │   │   ├── key_seed.json
 │   │   └── keyring-test-okexchain
 │   └── exchaind
 │       ├── config
 │       └── data
 └── node3
-    ├── exchaindcli
+    ├── exchaincli
     │   ├── key_seed.json
     │   └── keyring-test-okexchain
     └── exchaind
@@ -160,17 +160,17 @@ docker logs -f exchaindnode0
 
 ### Keys & Accounts
 
-To interact with `exchaindcli` and start querying state or creating txs, you use the
-`exchaindcli` directory of any given node as your `home`, for example:
+To interact with `exchaincli` and start querying state or creating txs, you use the
+`exchaincli` directory of any given node as your `home`, for example:
 
 ```shell
-exchaindcli keys list --home ./build/node0/exchaindcli
+exchaincli keys list --home ./build/node0/exchaincli
 ```
 
 Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
-> _NOTE_: Each node's seed is located at `./build/nodeN/exchaindcli/key_seed.json` and can be restored to the CLI using the `exchaindcli keys add --restore` command
+> _NOTE_: Each node's seed is located at `./build/nodeN/exchaincli/key_seed.json` and can be restored to the CLI using the `exchaincli keys add --restore` command
 
 ### Special Binaries
 
