@@ -9,7 +9,7 @@ parent:
 This folder contains tutorials related to the `okexchain` application.
 
 - [Introduction to the `okexchain` application](what-is-okexchain.md)
-- [Installing `okexchaind`](./install-okexchain.md)
+- [Installing `exchaind`](./install-okexchain.md)
 - [Running a full-node for the OKExChain Mainnet](./join-okexchain-mainnet.md)
 - [Running a full-node for a `okexchain` testnet](./join-okexchain-testnet.md)
 - [Upgrading a Node from a previous version](./upgrade-node.md)

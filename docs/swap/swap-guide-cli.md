@@ -9,20 +9,20 @@ order: 2
 
 ### Create token pair
 
-The `create-pair` function is used to create a token pair for tokens that do not yet have one. 
+The `create-pair` function is used to create new token pairs.
 
-All token pair are created against OKT, so you only need to specify one token.
+You could create swap pair with any 2 tokens.
 
 ```bash
-$ okexchaincli tx swap create-pair --token [token]
+$ exchaincli tx swap create-pair --token [token]
 ```
 
-- --token: the token name you want to create token pair against OKT.
+- --token: the token name you want to create  against OKT.
 
 Example:
 
 ```shell
-okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.002okt
 {
   "height": "1243",
   "txhash": "FA10BF76AC2CEEC8B709D1ECE93698E8C82997D282C02930063DFB772FF8E452",
@@ -62,7 +62,7 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
         },
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         }
       ]
     },
@@ -71,7 +71,7 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -87,19 +87,19 @@ okexchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fe
 
 ### Swap token
 
-User can trade between any of the two tokens, each of which have a trading pair against okt. The swap of these two tokens is via the intermediary token okt, ie. swap token A for okt, and then swap okt for token B.
+Users can trade between any tokens having a trading pair against OKT. The swap between two tokens takes place via the intermediary token OKT, ie. SWAP token A for OKT, and  SWAP OKT for token B.
 
 ```bash
-$ okexchaincli tx swap token --sell-amount [amount sellToken] --min-buy-amount [amount wantToken]
+$ exchaincli tx swap token --sell-amount [amount sellToken] --min-buy-amount [amount wantToken]
 ```
 
-- --sell-amount：token amount and  token name you want to sell.
+- --sell-amount：token amount and token name you want to sell.
 - --min-buy-amount: the minimum token amount and token name you expect.(If the actual amount of the desired token you could swap, according to the real-time exchange rate, is less than what you expected, then all the transactions happened before would be reverted. In other words, the order you placed will be processed only when the predefined condition you set is satisfied.)
 
 Example:
 
 ```shell
-okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.002okt
 {
   "height": "1483",
   "txhash": "5D56D443B51C8888EF5572763C261AAE42C2678796C51E1EAA6CCA5C286A711A",
@@ -120,11 +120,11 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
       "attributes": [
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "sender",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "module",
@@ -140,7 +140,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
         },
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         }
       ]
     },
@@ -149,7 +149,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "amount",
@@ -157,7 +157,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
         },
         {
           "key": "recipient",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "amount",
@@ -165,7 +165,7 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
         },
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -181,24 +181,24 @@ okexchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --fro
 
 ### Add liquidity
 
-Anyone who wants can join a liquidity pool by calling the addLiquidity function.
+Anyone who can join a liquidity pool by calling the addLiquidity function.
 
 Adding liquidity requires depositing an equivalent value of token and OKT.
 
 The first liquidity provider to join a pool sets the initial exchange rate by depositing what they believe to be an equivalent value of token and OKT. If this ratio is off, arbitrage traders will bring the prices to equilibrium at the expense of the initial liquidity provider.
 
-All future liquidity providers deposit token and OKT using the exchange rate at the moment of their deposit. If the exchange rate is bad there is a profitable arbitrage opportunity that will correct the price.
+All future liquidity providers deposit token and OKT using the exchange rate at the moment of their deposit. If the exchange rate is not attractive there is a profitable arbitrage opportunity that will correct the price.
 ```bash
-$ okexchaincli tx swap add-liquidity --max-base-amount [amount token] --quote-amount [amount okt] --min-liquidity [amount]
+$ exchaincli tx swap add-liquidity --max-base-amount [amount token] --quote-amount [amount okt] --min-liquidity [amount]
 ```
-- --max-base-amount: the maximum amount of the base token user is willing to add in the pool. (Given the desired quote token to be added constant, if the amount of the coresponding base token is more than predetermined max-base-amount, then the transaction is reverted.)
-- --quote-amount: the amount of the quote token to be added in the pool, namely okt in our case. 
-- --min-liquidity: the amount of liqudity the user expect to have after depositing the tokens.
+- --max-base-amount: the maximum amount of the base token user is willing to add in the pool. (Given the desired quote token to be added , if the amount of the corresponding base token is more than the predetermined max-base-amount, then the transaction is reverted.)
+- --quote-amount: the token quote to be added in the pool, namely OKT in our case.
+- --min-liquidity: the amount of liquidity the user expects to have after depositing the tokens.
 
 Example:
 
 ```shell
-okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.002okt
 
 {
   "height": "1281",
@@ -220,11 +220,11 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
       "attributes": [
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "sender",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "module",
@@ -240,7 +240,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
         },
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         }
       ]
     },
@@ -249,7 +249,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "amount",
@@ -257,7 +257,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
         },
         {
           "key": "recipient",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "amount",
@@ -265,7 +265,7 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
         },
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -284,18 +284,18 @@ okexchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount
 ### Remove liquidity
 Liquidity providers use the removeLiquidity function to withdraw their portion of the reserves.
 
-Liquidity is withdrawn at the same ratio as the reserves at the time of withdrawal. If the exchange rate is bad there is a profitable arbitrage opportunity that will correct the price.
+Liquidity is withdrawn at the same ratio as the reserves at the time of withdrawal. If the exchange rate is not attractive, a profitable arbitrage opportunity will correct the price.
 ```bash
-$ okexchaincli tx swap remove-liquidity --liquidity [amount] --min-base-amount [amount token] --min-quote-amount [amount okt]
+$ exchaincli tx swap remove-liquidity --liquidity [amount] --min-base-amount [amount token] --min-quote-amount [amount okt]
 ```
-- --liquidity:  the amount of the token (liquidity providing certificate) user want to burn. 
+- --liquidity: the amount tokens (liquidity providing certificate) users want to burn.
 - --min-base-amount: the minimum redeemable amount of base token.
-- --min-quote-amount: the minimum redeemable of the quote token.  
+- --min-quote-amount: the minimum redeemable of the quote token.
 
 Example:
 
 ```shell
-okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.002okt
+exchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.002okt
 {
   "height": "1620",
   "txhash": "B070469B65320A4C458A86B1FD5836D273C1B8B003DC59D04EDE8ED3D0709C5B",
@@ -316,11 +316,11 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
       "attributes": [
         {
           "key": "sender",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "module",
@@ -336,7 +336,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
         },
         {
           "key": "sender",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         }
       ]
     },
@@ -345,7 +345,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
       "attributes": [
         {
           "key": "recipient",
-          "value": "okexchain10q0rk5qnyag7wfvvt7rtphlw589m7frsku8qc9"
+          "value": "ex1c5g4v00np7fjjnexkhh5yk0hc6mamf402nxk8d"
         },
         {
           "key": "amount",
@@ -353,7 +353,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
         },
         {
           "key": "recipient",
-          "value": "okexchain1p6mshmwh5kz0g62pe6hghrjc696cyp7l0nf0st"
+          "value": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r"
         },
         {
           "key": "amount",
@@ -361,7 +361,7 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
         },
         {
           "key": "recipient",
-          "value": "okexchain17xpfvakm2amg962yls6f84z3kell8c5llm79px"
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
         },
         {
           "key": "amount",
@@ -381,12 +381,12 @@ okexchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335
 
 1. Query pool info by token name
 ```bash
-$ okexchaincli query swap pool [token]
+$ exchaincli query swap pool [token]
 ```
 Example：
 
 ```shell
-$ okexchaincli query swap pool eth-355
+$ exchaincli query swap pool eth-355
 {
   "quote_pooled_coin":{"denom":"okt","amount":"10100.00000000"},
   "base_pooled_coin" :{"denom":"eth-355","amount":"9901.28419657"},
@@ -399,13 +399,13 @@ $ okexchaincli query swap pool eth-355
 2. Query the parameters of the AMM swap system
 
 ```bash
-$ okexchaincli query swap params
+$ exchaincli query swap params
 ```
 
 Example：
 
 ```shell
-$ okexchaincli query swap params
+$ exchaincli query swap params
 {
   "fee_rate": "0.00300000"
 }
@@ -416,12 +416,12 @@ $ okexchaincli query swap params
 3. Query infomation of all pools
 
 ```bash
-$ okexchaincli query swap pools
+$ exchaincli query swap pools
 ```
 Example：
 
 ```shell
-$ okexchaincli query swap pools
+$ exchaincli query swap pools
 [
   {
     "quote_pooled_coin":{"denom":"okt","amount":"10100.00000000"},
@@ -436,13 +436,13 @@ $ okexchaincli query swap pools
 4. Query redeemable assets by specifying pool and pool token amount
 
 ```bash
-$ okexchaincli query swap redeemable-assets [token] [amount]
+$ exchaincli query swap redeemable-assets [token] [amount]
 ```
 
 Example：
 
 ```json
-$ okexchaincli query swap redeemable-assets eth-355 0.5
+$ exchaincli query swap redeemable-assets eth-355 0.5
 [
   {"denom":"eth-355","amount":"4950.64209828"},
   {"denom":"okt",   "amount":"5050.00000000"}
@@ -454,13 +454,13 @@ $ okexchaincli query swap redeemable-assets eth-355 0.5
 5. Query how many token returned by the given amount of token to sell
 
 ```bash
-$ okexchaincli query swap amount [amount sellToken] [wantToken]
+$ exchaincli query swap amount [amount sellToken] [wantToken]
 ```
 
 Example：
 
 ```shell
-okexchaincli query swap amount 100eth-355 okt
+exchaincli query swap amount 100eth-355 okt
 "100.68709041"
 ```
 

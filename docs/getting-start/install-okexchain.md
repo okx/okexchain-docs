@@ -4,7 +4,7 @@ order: 2
 
 # Install OKExChain
 
-This guide will explain how to install the `okexchaind` and `okexchaincli` entrypoints
+This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
 testnet as either a [Full Node](./join-okexchain-mainnet.html) or a
 [Validator](../validators/validators-guide-cli.html).
@@ -48,7 +48,7 @@ $env:GO111MODULE="on"
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
 ```
-# github.com/okex/okexchain/cmd/okexchaind
+# github.com/okex/okexchain/cmd/exchaind
 flag provided but not defined: -L
 usage: link [options] main.o
 ...
@@ -63,19 +63,19 @@ LDFLAGS="" make install
 
 > _NOTE_: If you still have issues at this step, please check that you have the latest stable version of GO installed.
 
-That will install the `okexchaind` and `okexchaincli` binaries. Verify that everything is OK:
+That will install the `exchaind` and `exchaincli` binaries. Verify that everything is OK:
 
 ```bash
-$ okexchaind version --long
-$ okexchaincli version --long
+$ exchaind version --long
+$ exchaincli version --long
 ```
 
-`okexchaincli` for instance should output something similar to:
+`exchaincli` for instance should output something similar to:
 
 ```shell
 name: okexchain
-server_name: okexchaind
-client_name: okexchaincli
+server_name: exchaind
+client_name: exchaincli
 version: v0.10.0
 commit: 20a720f38c6c60540a739351e485779a098ee413
 build_tags: netgo

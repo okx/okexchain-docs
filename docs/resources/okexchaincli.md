@@ -6,14 +6,14 @@ order: 1
 
 ## OKExChain CLI
 
-`okexchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-okexchain.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-okexchain.html).
 
-## Setting up okexchaincli
+## Setting up exchaincli
 
-The main command used to set up `okexchaincli` is the following:
+The main command used to set up `exchaincli` is the following:
 
 ```bash
-okexchaincli config <flag> <value>
+exchaincli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag.
@@ -21,16 +21,19 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-okexchaincli config node <host>:<port>
+exchaincli config node <host>:<port>
 
-# example: okexchaincli config node tcp://35.176.62.211:26657
+# example: exchaincli config node https://exchaintesttmrpc.okex.org (testnet)
+# example: exchaincli config node https://exchaintmrpc.okex.org (mainnet)
 ```
 
 Or any of the following address ports:
 ```
-35.176.62.211:26657
-18.132.46.47:26657
-15.164.104.138:26657
+# testnet
+- https://exchaintesttmrpc.okex.org
+
+# mainnet
+Comming soon
 ```
 
 
@@ -39,7 +42,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Then, let us set the default value of the `--trust-node` flag:
 
 ```bash
-okexchaincli config trust-node true
+exchaincli config trust-node true
 
 # Set to true if you trust the full-node you are connecting to, false otherwise
 ```
@@ -47,16 +50,20 @@ okexchaincli config trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-okexchaincli config chain-id okexchain-testnet1
+# testnet
+exchaincli config chain-id exchain-65
+
+# mainnet
+exchaincli config chain-id exchain-66
 ```
 
-Set the output format of okexchaincli request response
+Set the output format of exchaincli request response
 ```bash
-okexchaincli config output json    
-okexchaincli config indent true
+exchaincli config output json    
+exchaincli config indent true
 ```
 
-## okexchaincli user manual
+## exchaincli user manual
 
 * [Keys](#keys)  
 * [Account](#account)  
@@ -85,23 +92,24 @@ okexchaincli config indent true
 #### Example:
 The system will randomly gerenate information including mnemonic phrases, public keys and addresses 
 ```bash
-okexchaincli keys add <name> [flags]
+exchaincli keys add <name> [flags]
 ```
 #### Successful response:
 ```
-okexchaincli keys add wind
+exchaincli keys add wind
   
 # Example output
 {
   "name": "wind",
   "type": "local",
-  "address": "okchain1ltxwpg2f2frsnq3et3qp7sfz2u44qsaj5ytlcf",
-  "pubkey": "okchainpub1addwnpepqg8g82chdrf4ra4fn39e0lhzmds6qgs75emlzp2kqw5n69xt0fz3cewvx06",
-  "mnemonic": "alpha enroll regret dizzy bid reunion company divorce layer narrow ceiling state"
-  }
+  "address": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n",
+  "eth_address": "0xaAc8b41FA54f61898EA3E5e02fA7Fc9932ea0dC5",
+  "pubkey": "expub17weu6qepqw7pvnkjw9j2f6d556clz58wj09nha7qpftu0np4vj5q9mtgrx6qw9nvu7h",
+  "mnemonic": "right anxiety future wish fall carpet script old alert entire remain purse"
+}
   
 # Recover keys by mnemonic phrases
-okexchaincli keys add --recover admin   -y -m "keen border system oil inject hotel hood potato shed pumpkin legend actor"
+exchaincli keys add --recover admin   -y -m "right anxiety future wish fall carpet script old alert entire remain purse"
 ```
 
 ### 2. Display all local key information:
@@ -112,27 +120,29 @@ okexchaincli keys add --recover admin   -y -m "keen border system oil inject hot
 #### Example:
 Display all local key information
 ```bash
-okexchaincli keys list [flags]
+exchaincli keys list [flags]
 ```
 #### Successful response:
 ```
-  okexchaincli keys list
+  exchaincli keys list
   
   # Example output
   [
-    {
-      "name": "admin16",
-      "type": "local",
-      "address": "okchain1v853tq96n9ghvyxlvqyxyj97589clccr33yr7a",
-      "pubkey": "okchainpub1addwnpepq2nfj9lqmqrwjyrqnp574tll493svxdltwlnqq3vn5ptmf2ceraesgyfegg"
-    },
-    {
-      "name": "alice",
-      "type": "local",
-      "address": "okchain1vr9u0u829g68vcy6y362efm3tky4mhfxf28tth",
-      "pubkey": "okchainpub1addwnpepq2nkjj2tv9yyvfaevc45n3tszsl9l7t642rh5j2udvwn5uee26gqv7vwhun"
-    },
-  ]
+  {
+    "name": "alice",
+    "type": "local",
+    "address": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
+    "eth_address": "0x2CF4ea7dF75b513509d95946B43062E26bD88035",
+    "pubkey": "expub17weu6qepq22qqfh7kd003zdewtx2r8qnyqrysy6h5g8duhxq5exq26hsl7kf6w49q4z"
+  },
+  {
+    "name": "bob",
+    "type": "local",
+    "address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+    "eth_address": "0x0073F2E28ef8F117e53d858094086Defaf1837D5",
+    "pubkey": "expub17weu6qepqfw5kfxxdmtltjajx0ygfhnxfjzxmvygdjuxp89ddk4cy06wr4urc4hvhmm"
+  }
+ ]
 ```
 
 ### 3. Display the information on the key of a specific user:
@@ -145,18 +155,19 @@ okexchaincli keys list [flags]
 #### Example:
 Display the information on the key of a specific user
 ```bash
-okexchaincli keys show [name [name...]] [flags]
+exchaincli keys show [name [name...]] [flags]
 ```
 #### Successful response:
 ```
-  okexchaincli keys show bob
+  exchaincli keys show bob
   
   # Example output
   {
     "name": "bob",
     "type": "local",
-    "address": "okchain10487f9wxss2g2ctvpewkmjk543vg65x9rzv09n",
-    "pubkey": 	  "okchainpub1addwnpepq2gaqy8nk0z0plexzusvs4g97wsvjtqftnpjkmw25lfh2hjz3wk0svf030h"
+    "address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+    "eth_address": "0x0073F2E28ef8F117e53d858094086Defaf1837D5",
+    "pubkey": "expub17weu6qepqfw5kfxxdmtltjajx0ygfhnxfjzxmvygdjuxp89ddk4cy06wr4urc4hvhmm"
   }
 ```
 
@@ -170,11 +181,11 @@ okexchaincli keys show [name [name...]] [flags]
 #### Example:
 Delete the information on the key of a specific user
 ```bash
-okexchaincli keys delete <name> [flags]
+exchaincli keys delete <name> [flags]
 ```
 #### Successful response:
 ```
-  okexchaincli keys delete bob
+  exchaincli keys delete bob
   
   #Example output
   DANGER - enter password to permanently delete key:
@@ -191,11 +202,11 @@ okexchaincli keys delete <name> [flags]
 #### Example:
 Update the information on the key of a specific user:
 ```bash
-okexchaincli keys update <name> [flags]
+exchaincli keys update <name> [flags]
 ```
 #### Successful response:
 ```
-  okexchaincli keys update bob
+  exchaincli keys update bob
   
   # Example output
   Enter the current passphrase:
@@ -212,11 +223,11 @@ okexchaincli keys update <name> [flags]
 #### Example:
 Generate a bip39 mnemonic phrase
 ```bash
-okexchaincli keys mnemonic [flags]
+exchaincli keys mnemonic [flags]
 ```
 #### Successful response:
 ```
-okexchaincli keys mnemonic
+exchaincli keys mnemonic
 
 # Example output
 board zone elevator lesson welcome meadow love card obey cruise unlock double
@@ -230,22 +241,22 @@ board zone elevator lesson welcome meadow love card obey cruise unlock double
 
   | Parameter |                         Mark                          |
   | :-------: | :----------------------------------------------------------: |
-  |  Address  | User address (eg. okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya) |
+  |  Address  | User address (eg. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) |
 
 #### Example:
 Query user information, including serial numbers, public keys and token balances
 ```bash
-okexchaincli query account <address>
+exchaincli query account <address>
 ```
 #### Successful response:
 ```
-  okexchaincli query account okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya
+  exchaincli query account ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
   
   # Example output
   {
     "type": "auth/Account",
     "value": {
-      "address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
+      "address": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
       "coins": [
         {
           "denom": "acoin",
@@ -260,7 +271,7 @@ okexchaincli query account <address>
           "amount": "200000.00000000"
         },
         {
-          "denom": "tokt",
+          "denom": "okt",
           "amount": "9920000.00000000"
         },
       ],
@@ -293,14 +304,14 @@ Token attributes
 Dex supports the token issuance function. Commands are as follows:
 
 ```bash
-okexchaincli tx token [command]
+exchaincli tx token [command]
 ```
 
 Secondary sub-commands mainly include the following 7 functions
 ### 1. Transfer
 
 ```bash
-okexchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
+exchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 ```
 
 #### Parameter description
@@ -309,14 +320,14 @@ okexchaincli tx send [from_key_or_address] [to_address] [amount] [flags]
 |      Name      |      Type       |            Description             |
 | -------------- | --------------- | ---------------------------------- |
 |     amount     |     string      |    recipient address  |
-| amount |     string      | transfer amount, covering various cryptocurrencies separated by commas, eg. 1tokt, 2bcoin |
+| amount |     string      | transfer amount, covering various cryptocurrencies separated by commas, eg. 1okt, 2bcoin |
 |      from      |     string      |     token owner     |
 
 
 #### Example
 
 ```bash
-okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx send alice ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 2okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 ```
 #### Successful response:
 ```
@@ -334,7 +345,7 @@ okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt 
   "tags": [
     {
       "key": "fee",
-      "value": "0.00020000 tokt"
+      "value": "0.00020000 okt"
     },
     {
       "key": "action",
@@ -359,11 +370,11 @@ okexchaincli tx send alice okchain1jrhfgvmun4wd5qekxg2ma4xr405pn4dpwtx2qf 2tokt 
 #### Example:
 Issue a new token
 ```bash
-okexchaincli tx token issue [flags]
+exchaincli tx token issue [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block --mintable  
+exchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --desc 'blockchain coin' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block --mintable  
 # example  
 {
   "height": "340949",
@@ -379,7 +390,7 @@ okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --d
   "tags": [
     {
       "key": "fee",
-      "value": "20000.00000000 tokt"
+      "value": "20000.00000000 okt"
     },
     {
       "key": "action",
@@ -404,11 +415,11 @@ okexchaincli tx token issue --from alice --symbol bcoin -n 200000 -w 'bcoin' --d
 #### Example:
 A certain amount of supply of tokens issued is increased and only tokens with mintable parameters upon issuance can be issued
 ```bash
-okexchaincli tx token mint [flags]
+exchaincli tx token mint [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx token mint --amount 10000000 --symbol okt --from alice --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
 # Example output
 {
   "height": "341001",
@@ -424,7 +435,7 @@ okexchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-pr
   "tags": [
      {
        "key": "fee",
-       "value": "2000.00000000 tokt"
+       "value": "2000.00000000 okt"
      },
      {
        "key": "action",
@@ -445,11 +456,11 @@ okexchaincli tx token mint --amount 10000000 --symbol tokt --from alice --gas-pr
 #### Example:
 A certain amount of tokens issued are burnt
 ```bash
-okexchaincli tx token burn [flags]
+exchaincli tx token burn [flags]
 ```
 #### Successful response:
 ```
-okexchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+exchaincli tx token burn --from alice --symbol okt --amount 100.0 --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   # Example output
 {
   "height": "341036",
@@ -465,7 +476,7 @@ okexchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-price
   "tags": [
     {
       "key": "fee",
-      "value": "10.00000000 tokt"
+      "value": "10.00000000 okt"
     },
     {
       "key": "action",
@@ -478,7 +489,7 @@ okexchaincli tx token burn --from alice --symbol tokt --amount 100.0 --gas-price
 #### Example:
 Query token information
 ```bash
-  okexchaincli query token info <symbol>
+  exchaincli query token info <symbol>
 ```
 #### Successful response:
 ```
@@ -489,7 +500,7 @@ Query token information
     "originalSymbol": "bcoin",
     "wholeName": "bcoin",
     "totalSupply": "200000",
-    "owner": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
+    "owner": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
     "mintable": true
   }
 ```
@@ -497,12 +508,12 @@ Query token information
 #### Example:
 Transfer multiple tokens to users at the same time and specify the transfer files through --transfers-file. When --transfers-file is specified, --transfers is ignored
 ```bash
-okexchaincli tx token multi-send [flags]
+exchaincli tx token multi-send [flags]
 ```
 #### Successful response:
 
 ```
-  okexchaincli tx token multi-send --from alice --transfers '[{"to":"okchain106205vgqv4fnn0yqcq7y7j936pv4kznv99yw85","amount":"1tokt,2btc-254"}]' --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block
+  exchaincli tx token multi-send --from alice --transfers '[{"to":"ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r","amount":"1okt,2btc-254"}]' --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block
   
   # Example output
   {
@@ -519,7 +530,7 @@ okexchaincli tx token multi-send [flags]
     "tags": [
       {
         "key": "fee",
-        "value": "0.02000000 tokt"
+        "value": "0.02000000 okt"
       },
       {
         "key": "action",
@@ -535,11 +546,11 @@ Multi-signature transfer consists of multiple steps:
 #### 7.1. Creat accounts p1, p2, p3：
 Example:
 ```bash
-okexchaincli keys add --pubkey=okchainpub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
+exchaincli keys add --pubkey=expub1addwnpepqtg367t3j6myh4ces0luq3f6g87ptzwszpl9g5r28tgavypkdmm2w5l4zuq p1
 
-okexchaincli keys add --pubkey=okchainpub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
+exchaincli keys add --pubkey=expub1addwnpepqg334a4my6ufrs7r0ajsd6lxac9arsvtqljf0fzrgr27xvf3n5uugpsxna8 p2
 
-okexchaincli keys add --pubkey=okchainpub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
+exchaincli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77ju59eqc88sxscfjkgx7tyfc p3
 ```
 
 #### 7.2. Generate multi-signature public keys:
@@ -548,7 +559,7 @@ okexchaincli keys add --pubkey=okchainpub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhd
 
 * Set the signature threshold as 2 in the example:
 ```bash  
-okexchaincli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
+exchaincli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
 ```
 
 `--multisig-threshold` is the threshold for the number of private keys involved in multi-signature transactions.
@@ -556,12 +567,12 @@ okexchaincli keys add --multisig-threshold=2 --multisig=p1,p2,p3 p1p2p3
 `--multisig` tag must contain the names of sub-public keys to be aggregated into a single public key, which will be generated in a local database and stored as `new_key_name`. All names provided via `--multisig` must have already existed in the local database.
 
 * Display user addresses and deposit into them:
-Display user addresses p1, p2, p3 and deposit 100.1 TOKT into them
+Display user addresses p1, p2, p3 and deposit 100.1 okt into them
 * Example:
 ```bash
-okexchaincli keys show -a p1p2p3
-okexchaincli tx send okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl 100.1tokt --from=alice
-okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+exchaincli keys show -a p1p2p3
+exchaincli tx send ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n 100.1okt --from=alice
+exchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 
 ```
 #### 7.3. Multi-signature:
@@ -569,23 +580,23 @@ okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
 Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
-okexchaincli tx send okchain1xd07r5a3e2mf4srqck3hvzww24c65hpt604ge5 10tokt \
-  --chain-id=okexchain-testnet1 \
-  --from=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+exchaincli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
+  --chain-id=exchain-65 \
+  --from=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --generate-only > unsignedTx.json
 ```
 ##### p1, p2, p3 sign:
 ###### Example:
 ```bash
-okexchaincli tx sign \
-  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+exchaincli tx sign \
+  --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=alice \
   --output-document=p1signature.json \
   unsignedTx.json
 
  
-okexchaincli tx sign \
-  --multisig=okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl \
+exchaincli tx sign \
+  --multisig=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --from=jack \
   --output-document=p2signature.json \
   unsignedTx.json 
@@ -594,7 +605,7 @@ okexchaincli tx sign \
 Create an aggregate signature `signedTx.json` since the default threshold is set to 2 so that a transaction with p1p2 can be executed.
 ###### Example:
 ```bash 
-okexchaincli tx multisign \
+exchaincli tx multisign \
   unsignedTx.json \
   p1p2p3 \
   p1signature.json p2signature.json > signedTx.json
@@ -603,159 +614,154 @@ okexchaincli tx multisign \
 Execute a signed `signedTx.json` offline and query the balance for confirmation.
 ##### Example:
 ```bash 
-okexchaincli tx broadcast signedTx.json
+exchaincli tx broadcast signedTx.json
 
-okexchaincli query account okchain1553hrs03kl2tlq47d9f6j477xdjp362l2cfetl
+exchaincli query account ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
 ```
 ### 8. Transfer token ownership:
 
-We support the function where token ownership can be transferred to another person. In order to ensure the security of token ownership transfer, multi signatures are required to validate the transfer. The process consists of the following 4 steps:
+We support the function where token ownership can be transferred to another person. In order to ensure the security of token ownership transfer, new owner need to confirm the transfer. The process consists of the following 2 steps:
 
-#### original owner(from) generates an unsigned tx：
+#### original owner(from) executes transfer-ownership command：
 ##### Example:
 ```bash
-okexchaincli tx token transfer-ownership [flags]
+exchaincli tx token transfer-ownership [flags]
 ```
 ##### Successful response:
 ```
 # from alice to jack
-okexchaincli tx token transfer-ownership --from okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp --to okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0 --symbol tokt > unsignedTx.json
+exchaincli tx token transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
 
-# unsignedTx.json
+# response
 {
-	"type": "auth/StdTx",
-	"value": {
-		"msg": [{
-			"type": "token/TransferOwnership",
-			"value": {
-				"from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-				"to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-				"symbol": "tokt",
-				"to_signature": {
-					"pub_key": null,
-					"signature": null
-				}
-			}
-		}],
-		"signatures": null,
-		"memo": ""
-	}
-}
-```
-
-#### owner(to) signs to validate the transfer：
-##### Example:
-```bash
-okexchaincli tx token multisigns unsignedTx.json
-```
-##### Successful response:
-```
-okexchaincli tx token multisigns unsignedTx.json --from jack > signedTx1.json -y
-
-# signedTx1.json
-{
-	"type": "auth/StdTx",
-	"value": {
-		"msg": [{
-			"type": "token/Chown",
-			"value": {
-				"from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-				"to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-				"symbol": "tokt",
-				"to_signature": {
-					"pub_key": {
-						"type": "tendermint/PubKeySecp256k1",
-						"value": "A6zP2A10dBxpR6oNKD8Q+j285lJ63PEecFyK19mcYodh"
-					},
-					"signature": "lfL+i1YRtddruRpd2PloI7Ss1CYTyu5bBz4AmBm9eVYEvmghUqNrkERm12fetiGh1ux1R/WiXijeomjFQHNkrQ=="
-				}
-			}
-		}],
-		"signatures": null,
-		"memo": ""
-	}
-}
-```
-
-#### original owner(from) signs：
-##### Example:
-```bash
-okexchaincli tx sign [flags]
-```
-##### Successful response:
-```
-okexchaincli tx sign --from alice signedTx1.json > signedTx.json -y
-
-# signedTx.json
-{
-  "type": "auth/StdTx",
-  "value": {
-    "msg": [
-      {
-        "type": "token/Chown",
-        "value": {
-          "from_address": "okchain1pck0wndww84wtppc0vz9mcuvv7j5lcg00yf3gp",
-          "to_address": "okchain1x045ccxnwpurav2d5e25k25383qpmsr73293w0",
-          "symbol": "tokt",
-          "to_signature": {
-            "pub_key": {
-              "type": "tendermint/PubKeySecp256k1",
-              "value": "A6zP2A10dBxpR6oNKD8Q+j285lJ63PEecFyK19mcYodh"
-            },
-            "signature": "lfL+i1YRtddruRpd2PloI7Ss1CYTyu5bBz4AmBm9eVYEvmghUqNrkERm12fetiGh1ux1R/WiXijeomjFQHNkrQ=="
-          }
-        }
-      }
-    ],
-    "signatures": [
-      {
-        "pub_key": {
-          "type": "tendermint/PubKeySecp256k1",
-          "value": "A/EpsisD1SuP2aMjErP/RmCiPgFbMQcd2ADUM4dCmYvk"
-        },
-        "signature": "5G3e8VjKulShcgbp3gL4Wfk3QhFVRyQ/YgVdCsokJTplAT58P5jfkkn0Qjwuv3kKNIOYC8k1n4jhauqM0WCZWQ=="
-      }
-    ],
-    "memo": ""
-  }
-}
-```
-
-#### tx upon multi-signature broadcast：
-##### Example:
-```bash
-okexchaincli tx broadcast signedTx.json
-```
-##### Successful response:
-```
-okexchaincli tx broadcast signedTx.json -b block -y
-
-# Example
-{
-  "height": "136",
-  "txhash": "C59A61BE30A15D57702C32C2C2DBBEA740B372135E89831205C51B2880CBA0B9",
-  "raw_log": "[{\"msg_index\":\"0\",\"success\":true,\"log\":\"\"}]",
+  "height": "82",
+  "txhash": "64B15998B1CAEE893565FEC13698B0F1C55491C9E58E0AECB06543639CFBD8ED",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
   "logs": [
     {
-      "msg_index": "0",
+      "msg_index": 0,
       "success": true,
-      "log": ""
+      "log": "",
+      "events": null
     }
   ],
-  "tags": [
+  "gas_wanted": "200000",
+  "gas_used": "68438",
+  "events": [
     {
-      "key": "fee",
-      "value": "10.00000000 tokt"
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
+        },
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "transfer"
+        },
+        {
+          "key": "sender",
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
+        }
+      ]
     },
     {
-      "key": "action",
-      "value": "transfer"
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "10.00000000okt"
+        },
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
     }
   ]
 }
 ```
 
-The transfer of token ownership is successful only after the original owner(from) and the owner(to) sign upon and after the transfer.
+#### new owner(to) executes confirm-ownership command：
+##### Example:
+```bash
+exchaincli tx token confirm-ownership [flags]
+```
+##### Successful response:
+```
+exchaincli tx token confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --symbol okt
+
+# response
+{
+  "height": "137",
+  "txhash": "3801632ED2010CB478EAD1346D8F53C72BBF6716577A57100A5969DC5D809DEB",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
+    }
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "43091",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "confirm"
+        },
+        {
+          "key": "sender",
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
+}
+```
+
+The transfer of token ownership is successful only after the new owner(to) confirmed the transfer. If new owner(to) does not confirm the transfer, the transaction will automatically expire after a period of time(default 24h).
 
 
 ## Dex
@@ -763,17 +769,19 @@ The transfer of token ownership is successful only after the original owner(from
 Decentralized exchange management subcommands
 
 ```bash
-$ okexchaincli tx dex  -h
+$ exchaincli tx dex  -h
 
 Usage:
-  okexchaincli tx dex [command]
+  exchaincli tx dex [command]
 
 Available Commands:
   list               list a trading pair
   deposit            deposit an amount of token on a product
   withdraw           withdraw an amount of token from a product
   transfer-ownership change the owner of the product
-  multisign          append signature to the unsigned tx file of transfer-ownership
+  confirm-ownership  confirm the transfer-ownership of the product
+  register-operator  register a dex operator
+  edit-operator      edit a dex operator
 
 Flags:
   -h, --help   help for dex
@@ -786,13 +794,13 @@ Secondary subcommand including features as below
 ### List a token pair
 
 ```shell
-$ okexchaincli tx dex list -h
+$ exchaincli tx dex list -h
 
 Example:
-    okexchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    okexchaincli tx dex list [flags]
+    exchaincli tx dex list [flags]
   
 Flags:
       --base-asset string       base-asset should be issued before listed to opendex (default "btc")
@@ -800,21 +808,21 @@ Flags:
       --from string             Name or address of private key with which to sign
   -h, --help                    help for list
       --init-price string       init-price should be valid price (default "0.01")
-      --quote-asset string      quote-asset should be issued before listed to opendex (default "tokt")
+      --quote-asset string      quote-asset should be issued before listed to opendex (default "okt")
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 ```
 
-### Deposit an amount of tokt on a token pair
+### Deposit an amount of okt on a token pair
 
 ```shell
-$ okexchaincli tx dex deposit -h
+$ exchaincli tx dex deposit -h
 
 Example:
-    okexchaincli tx dex deposit tusdk-9a2_tbtc-965 100tokt --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex deposit tusdk-9a2_tbtc-965 100okt --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    okexchaincli tx dex deposit [product] [amount] [flags]
+    exchaincli tx dex deposit [product] [amount] [flags]
 
 Flags:
       --from string             Name or address of private key with which to sign
@@ -824,16 +832,16 @@ Flags:
 ```
 
 
-### Withdraw an amount of tokt from a token pairs
+### Withdraw an amount of okt from a token pairs
 
 ```shell
-$ okexchaincli tx dex  withdraw -h
+$ exchaincli tx dex  withdraw -h
 
 Example:
-    okexchaincli tx dex withdraw tusdk-9a2_tbtc-965 50tokt --from mykey --from mykey --gas-prices 0.00000001tokt --gas auto --gas-adjustment 1.5 -b block -y
+    exchaincli tx dex withdraw tusdk-9a2_tbtc-965 50okt --from mykey --from mykey --gas-prices 0.00000001okt --gas auto --gas-adjustment 1.5 -b block -y
 
 Usage:
-    okexchaincli tx dex withdraw [product] [amount] [flags]
+    exchaincli tx dex withdraw [product] [amount] [flags]
 
 Flags:
 
@@ -843,192 +851,160 @@ Flags:
 ```
 
 ### transfer the ownership of token pair
+We support the function where token pair ownership can be transferred to another DEX operator. In order to ensure the security of ownership transfer, new owner need to confirm the transfer. The process consists of the following 2 steps:
 
-We support to transfer ownership of the token pairs to others. It needs multi-sign for the security of transfer transaction. The procedure can be divided into 4 steps:
-
-#### Step 1: Previous owner(from) generate unsigned tx：
-
-Create transfer transaction by  previous owner
-
-```shell
-$ okexchaincli tx dex transfer-ownership -h
-
-Example:
-    okexchaincli tx dex transfer-ownership --from mykey --to okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy --product eox-22d_tokt > unsignedTx.json
-
-Usage:
-    okexchaincli tx dex transfer-ownership [flags]
-
-Flags:
-  -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for transfer-ownership
-  -p, --product string          product to be transfered
-      --to string               the user to be transfered
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-
+#### original owner(from) executes transfer-ownership command：
+##### Example:
+```bash
+exchaincli tx dex transfer-ownership [flags]
 ```
-
-##### unsignedTx.json
+##### Successful response:
 ```
+# from alice to jack
+exchaincli tx dex transfer-ownership --from ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --to ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m --product btc_okt
+
+# response
 {
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_tokt",
-                    "to_signature":{
-                        "pub_key":null,
-                        "signature":null
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
+  "height": "82",
+  "txhash": "64B15998B1CAEE893565FEC13698B0F1C55491C9E58E0AECB06543639CFBD8ED",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
     }
-}
-```
-
-#### Step 2:Target owner(to) sigh
-
-Sign transaction file of transfer-ownership by target owner
-
-```
-$ okexchaincli tx dex multisign -h
-
-Example:
-    okexchaincli tx dex multisign --from okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy unsignedTx.json > signedTx1.json -y
-
-Usage:
-    okexchaincli tx dex multisign [flags]
-  
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for multisign
-  -y, --yes                     Skip tx broadcasting prompt confirmation
-```
-
-##### signedTx1.json
-```
-{
-    "type":"cosmos-sdk/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"dex/MsgTransferOwnership",
-                "value":{
-                    "from_address":"okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-                    "to_address":"okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-                    "product":"eox-22d_tokt",
-                    "to_signature":{
-                        "pub_key":{
-                            "type":"tendermint/PubKeySecp256k1",
-                            "value":"AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-                        },
-                        "signature":"mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-                    }
-                }
-            }
-        ],
-        "signatures":null,
-        "memo":""
-    }
-}
-```
-
-#### Step 3:Previous owner(from) sign
-
-Sign transaction file of multisign by previous owner
-```shell
-$ okexchaincli tx sign  -h
-
-Example:
-    okexchaincli tx sign --from alice signedTx1.json > signedTx.json -y
-
-Usage:
-    okexchaincli tx sign [file] [flags]
-
-Flags:
-      --from string              Name or address of private key with which to sign
-      --multisig string          Address of the multisig account on behalf of which the transaction shall be signed
-  -y, --yes                      Skip tx broadcasting prompt confirmation
-
-```
-
-##### signedTx.json
-
-```json
-{
-  "type": "cosmos-sdk/StdTx",
-  "value": {
-    "msg": [
-      {
-        "type": "dex/MsgTransferOwnership",
-        "value": {
-          "from_address": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-          "to_address": "okchain1eh7953xgu526hfjnyfpkdxrn78746gusg29pmy",
-          "product": "eox-22d_tokt",
-          "to_signature": {
-            "pub_key": {
-              "type": "tendermint/PubKeySecp256k1",
-              "value": "AwsiTrrGe4G0gDJj8u8T5s5ik65WmwgR+qdeepx9R4qg"
-            },
-            "signature": "mgf3IxbttnNjel2ZCAxoqIKPX2oqU8YcZxW6fcgGD5o+kDEqBP+LewHtdZf9UIUA1/GVSkzjtG1JjiClDGvstQ=="
-          }
-        }
-      }
-    ],
-    "signatures": [
-      {
-        "pub_key": {
-          "type": "tendermint/PubKeySecp256k1",
-          "value": "AgYaL1tZ7ekqvweQhKojG8sDHUfN23qJWviAsTDIWvYU"
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "68438",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
-        "signature": "82HJ0dHE1la3/fph1IDcl6Uarxi1lKOAIQ51Q6Z0YgBnilXPgGzy+9er+RQFnTZa2SG8cyTK6LWr8LyiGMTQWQ=="
-      }
-    ],
-    "memo": ""
-  }
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "transfer"
+        },
+        {
+          "key": "sender",
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "10.00000000okt"
+        },
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-#### Step 4:Broadcast transactions after multi-signed
-
-Broadcast transactions created 
-
+#### new owner(to) executes confirm-ownership command：
+##### Example:
+```bash
+exchaincli tx dex confirm-ownership [flags]
 ```
-$ okexchaincli tx broadcast -h
+##### Successful response:
+```
+exchaincli tx dex confirm-ownership --from ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme --product btc_okt
 
-Example:
-    okexchaincli tx broadcast signedTx.json --from alice -b block -y
-
-Usage:
-    okexchaincli tx broadcast [file_path] [flags]
-
-
-Flags:
-      --from string             Name or address of private key with which to sign
-  -h, --help                    help for broadcast
-  -y, --yes                     Skip tx broadcasting prompt confirmation
+# response
+{
+  "height": "137",
+  "txhash": "3801632ED2010CB478EAD1346D8F53C72BBF6716577A57100A5969DC5D809DEB",
+  "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":null}]",
+  "logs": [
+    {
+      "msg_index": 0,
+      "success": true,
+      "log": "",
+      "events": null
+    }
+  ],
+  "gas_wanted": "200000",
+  "gas_used": "43091",
+  "events": [
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "token"
+        },
+        {
+          "key": "fee",
+          "value": "10.00200000okt"
+        },
+        {
+          "key": "action",
+          "value": "confirm"
+        },
+        {
+          "key": "sender",
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "ex1qj5c07sm6jetjz8f509qtrxgh4psxkv3ddyq7u"
+        },
+        {
+          "key": "amount",
+          "value": "0.00200000okt"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-The original owner (from) and the transferred owner (to) must sign together to successfully transfer the ownership of the token.
+The transfer of token pair ownership is successful only after the new owner(to) confirmed the transfer. If new owner(to) does not confirm the transfer, the transaction will automatically expire after a period of time(default 24h).
+
 
 ### Query the listed token pairs
 
 ```shell
-$ okexchaincli query dex products -h
+$ exchaincli query dex products -h
 
 Example:
-    okexchaincli query dex products -p 1 -i 1
+    exchaincli query dex products -p 1 -i 1
 
 Usage:
-    okexchaincli query dex products [flags]
+    exchaincli query dex products [flags]
 
 Flags:
 -h, --help                 help for products
@@ -1041,13 +1017,13 @@ Flags:
 ### Query token pairs deposits of account
 
 ```shell
-$ okexchaincli query dex deposits -h
+$ exchaincli query dex deposits -h
 
 Example:
-    okexchaincli query dex deposits okchain1w7xcg4t90fxcpe95dzhykcvs9skzz2xsy60g3u -i 1
+    exchaincli query dex deposits ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n -i 1
 
 Usage:
-    okexchaincli query dex deposits [account-addr] [flags]
+    exchaincli query dex deposits [account-addr] [flags]
 
 Flags:
 -h, --help                 help for deposits
@@ -1058,13 +1034,13 @@ Flags:
 ### Query the match order of token pairs
 
 ```shell
-$ okexchaincli query dex match-order -h
+$ exchaincli query dex match-order -h
 
 Example:
-    okexchaincli query dex match-order -i 1 --node ${url}
+    exchaincli query dex match-order -i 1 --node ${url}
 
 Usage:
-    okexchaincli query dex match-order [flags]
+    exchaincli query dex match-order [flags]
 
 Flags:
 -h, --help                 help for match-order
@@ -1074,31 +1050,31 @@ Flags:
 
 ### Query relevant parameters from DEX
 
-Query the all the parameters for the governance process
+Query all the parameters for the governance process
 
 ```shell
-$ okexchaincli query dex  params -h
+$ exchaincli query dex  params -h
 
 Example:
-    okexchaincli query dex  params --node ${url}
+    exchaincli query dex  params --node ${url}
 
 Usage:
-    okexchaincli query dex params [flags]
+    exchaincli query dex params [flags]
 
 ```
 
 ### Query all the delisting token pairs
 
-Query all the products' names involved in dex delisting
+Query all products’ names involved in a DEX delisting
 
 ```shell
-$ okexchaincli query dex  products-delisting -h
+$ exchaincli query dex  products-delisting -h
 
 Example:
-    okexchaincli query dex  products-delisting --node ${url}
+    exchaincli query dex  products-delisting --node ${url}
 
 Usage:
-    okexchaincli query dex products-delisting [flags]
+    exchaincli query dex products-delisting [flags]
 ```
 
 
@@ -1129,7 +1105,7 @@ Order attributes
 Dex supports order placing and cancellation functions. Commands are as follows:
 
 ```bash
-okexchaincli tx order
+exchaincli tx order
 ```
 
 Secondary sub-commands mainly include the following 2 functions
@@ -1139,7 +1115,7 @@ Secondary sub-commands mainly include the following 2 functions
 Place one or multiple orders.
 ```bash
 # place orders
-okexchaincli tx order new [flags]
+exchaincli tx order new [flags]
 ```
 ```
 Flags:
@@ -1153,7 +1129,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
   -p, --price string            The price of the order
-      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_tokt".
+      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
@@ -1163,7 +1139,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1172,7 +1148,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001tokt" --gas "200000" -y -b block
+exchaincli tx order new --product xxb-08a_okt,xxb-08a_okt -s BUY,BUY -p 1,1 -q 1,1 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 # example return
 {
   "height": "373",
@@ -1194,11 +1170,11 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "module",
@@ -1214,11 +1190,11 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
         },
         {
           "key": "fee",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -1227,27 +1203,27 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
       "attributes": [
         {
           "key": "recipient",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
-          "value": "okchain17xpfvakm2amg962yls6f84z3kell8c5ljresa7"
+          "value": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n"
         },
         {
           "key": "amount",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         }
       ]
     }
@@ -1261,7 +1237,7 @@ okexchaincli tx order new --product xxb-08a_tokt,xxb-08a_tokt -s BUY,BUY -p 1,1 
 ##### Example:
 Cancel one or multiple orders.
 ```bash
-okexchaincli tx order cancel [order-id] [flags]
+exchaincli tx order cancel [order-id] [flags]
 ```
 ```
 Flags:
@@ -1275,7 +1251,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
   -p, --price string            The price of the order
-      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_tokt".
+      --product string          Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
@@ -1285,7 +1261,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1294,7 +1270,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001tokt" --gas "200000" -y -b block
+exchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-prices="0.00000001okt" --gas "200000" -y -b block
 
 # example return
 {
@@ -1317,11 +1293,11 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
       "attributes": [
         {
           "key": "sender",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "sender",
-          "value": "okchain183rfa8tvtp6ax7jr7dfaf7ywv870sykx3uvcxn"
+          "value": "ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme"
         },
         {
           "key": "module",
@@ -1329,7 +1305,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "orders",
-          "value": "[{\"code\":0,\"msg\":\"0.00000000tokt\",\"orderid\":\"ID0000000373-1\"},{\"code\":0,\"msg\":\"0.00000000tokt\",\"orderid\":\"ID0000000373-2\"}]"
+          "value": "[{\"code\":0,\"msg\":\"0.00000000okt\",\"orderid\":\"ID0000000373-1\"},{\"code\":0,\"msg\":\"0.00000000okt\",\"orderid\":\"ID0000000373-2\"}]"
         },
         {
           "key": "action",
@@ -1337,11 +1313,11 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
         },
         {
           "key": "fee",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         },
         {
           "key": "sender",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         }
       ]
     },
@@ -1350,27 +1326,27 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
       "attributes": [
         {
           "key": "recipient",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
-          "value": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya"
+          "value": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn"
         },
         {
           "key": "amount",
-          "value": "1.00000000tokt"
+          "value": "1.00000000okt"
         },
         {
           "key": "recipient",
-          "value": "okchain17xpfvakm2amg962yls6f84z3kell8c5ljresa7"
+          "value": "ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n"
         },
         {
           "key": "amount",
-          "value": "0.00200000tokt"
+          "value": "0.00200000okt"
         }
       ]
     }
@@ -1385,7 +1361,7 @@ okexchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-
 Dex supports various functions including order query, depthbook and users' order books. Commands are as follows:
 
 ```bash
-okexchaincli query order
+exchaincli query order
 ```
 
 Secondary sub-commands mainly include the following functions
@@ -1393,7 +1369,7 @@ Secondary sub-commands mainly include the following functions
 ##### Example:
 Query the information of a order.
 ```bash
-okexchaincli query order detail [orderId]
+exchaincli query order detail [orderId]
 ```
 ```
 Flags:
@@ -1406,7 +1382,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1414,13 +1390,13 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli query order detail ID0000000525-1
+exchaincli query order detail ID0000000525-1
 # example return
 {
 	"txhash": "B32EC706A2B5ACCF4FC43D6530588C0C9E36E79AC572D3443653281500D46FDA",
 	"order_id": "ID0000000525-1",
-	"sender": "okchain10q0rk5qnyag7wfvvt7rtphlw589m7frsmyq4ya",
-	"product": "xxb-08a_tokt",
+	"sender": "ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn",
+	"product": "xxb-08a_okt",
 	"side": "BUY",
 	"price": "1.00000000",
 	"quantity": "1.00000000",
@@ -1431,17 +1407,17 @@ okexchaincli query order detail ID0000000525-1
 	"timestamp": "1589539376",
 	"order_expire_blocks": "259200",
 	"fee_per_block": {
-		"denom": "tokt",
+		"denom": "okt",
 		"amount": "0.00000000"
 	},
-	"extra_info": "{\"newFee\":\"0.00000000tokt\"}"
+	"extra_info": "{\"newFee\":\"0.00000000okt\"}"
 }
 ```
 #### 2.2 Order depthbook:
 Query the information of the depthbook.
 ##### Example:
 ```bash
-okexchaincli query order depthbook [product]
+exchaincli query order depthbook [product]
 ```
 ```
 Flags:
@@ -1455,7 +1431,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1463,7 +1439,7 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli query order depthbook mycoin_tokt
+exchaincli query order depthbook mycoin_okt
 # example return
 {
 	"asks": null,
@@ -1477,7 +1453,7 @@ okexchaincli query order depthbook mycoin_tokt
 Query the state of depthbook.
 ##### Example:
 ```bash
-okexchaincli query order store
+exchaincli query order store
 ```
 ```
 Flags:
@@ -1492,7 +1468,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1500,16 +1476,16 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli query order store
+exchaincli query order store
 
 # example return
 {
 	"StoreOrderNum": "2",
 	"DepthBookNum": {
-		"xxb-08a_tokt": "1"
+		"xxb-08a_okt": "1"
 	},
 	"BookOrderIDsNum": {
-		"xxb-08a_tokt:1.00000000:BUY": "2"
+		"xxb-08a_okt:1.00000000:BUY": "2"
 	}
 }
 ```
@@ -1517,7 +1493,7 @@ okexchaincli query order store
 Query all parameters during governance
 ##### Example:
 ```bash
-okexchaincli query order params
+exchaincli query order params
 ```
 ```
 Flags:
@@ -1530,7 +1506,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1538,14 +1514,14 @@ Global Flags:
 ##### Successful response:
 ```
 # example
-okexchaincli query order params
+exchaincli query order params
 
 # example return
 {
   "order_expire_blocks": "259200",
   "max_deals_per_block": "1000",
   "fee_per_block": {
-    "denom": "tokt",
+    "denom": "okt",
     "amount": "0.00000000"
   },
   "trade_fee_rate": "0.00100000"
@@ -1559,7 +1535,7 @@ okexchaincli query order params
 The module supports various functions on unfilled orders, filled order history, transaction lists, fee details, matching results, candlestick data and ticker data query. The command lines are as follows:
 
 ```bash
-okexchaincli backend
+exchaincli backend
 ```
 
 Secondary sub-commands have the following functions
@@ -1567,7 +1543,7 @@ Secondary sub-commands have the following functions
 ### 1. Users' order books:
 #### Example:
 ```bash
-okexchaincli backend orders [open/closed] [addr] [flags]
+exchaincli backend orders [open/closed] [addr] [flags]
 
 
 Flags:
@@ -1584,7 +1560,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1593,7 +1569,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend orders open $(okexchaincli keys show bob -a)
+exchaincli backend orders open $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1603,8 +1579,8 @@ okexchaincli backend orders open $(okexchaincli keys show bob -a)
 		"data": [{
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"orderId": "ID0000000011-1",
-			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"product": "mycoin_tokt",
+			"sender": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": "11.10000000",
 			"quantity": "1.00000000",
@@ -1625,7 +1601,7 @@ okexchaincli backend orders open $(okexchaincli keys show bob -a)
 ### 2. Transaction lists:
 #### Example:
 ```bash
-okexchaincli backend deals [flags]
+exchaincli backend deals [flags]
 
 Flags:
       --address string   filter deals by address
@@ -1641,7 +1617,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1650,7 +1626,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend deals --address=$(okexchaincli keys show bob -a)
+exchaincli backend deals --address=$(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1661,12 +1637,12 @@ okexchaincli backend deals --address=$(okexchaincli keys show bob -a)
 			"timestamp": 1563890996,
 			"blockHeight": 127,
 			"orderId": "ID0000000105-1",
-			"sender": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"product": "mycoin_tokt",
+			"sender": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"product": "mycoin_okt",
 			"side": "SELL",
 			"price": 4,
 			"volume": 1,
-			"fee": "0.00160000tokt"
+			"fee": "0.00160000okt"
 		}],
 		"paramPage": {
 			"page": 1,
@@ -1679,7 +1655,7 @@ okexchaincli backend deals --address=$(okexchaincli keys show bob -a)
 ### 3. User fee details:
 #### Example:
 ```bash
-okexchaincli backend fees [addr] [flags]
+exchaincli backend fees [addr] [flags]
 
 Flags:
   -h, --help          help for fees
@@ -1690,7 +1666,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1699,7 +1675,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend fees $(okexchaincli keys show bob -a)
+exchaincli backend fees $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1707,13 +1683,13 @@ okexchaincli backend fees $(okexchaincli keys show bob -a)
 	"detailMsg": "",
 	"data": {
 		"data": [{
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"fee": "0.00160000tokt",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"fee": "0.00160000okt",
 			"feeType": "deal",
 			"timestamp": 1563890996
 		}, {
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"fee": "0.01250000tokt",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"fee": "0.01250000okt",
 			"feeType": "transfer",
 			"timestamp": 1563890942
 		}],
@@ -1729,7 +1705,7 @@ okexchaincli backend fees $(okexchaincli keys show bob -a)
 ### 4. Obtain lists of matching results:
 #### Example:
 ```bash
-okexchaincli backend matches [flags]
+exchaincli backend matches [flags]
 
 Flags:
       --end int          filter deals by < end timestamp
@@ -1743,7 +1719,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1753,7 +1729,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend matches
+exchaincli backend matches
 # example return
 {
 	"code": 0,
@@ -1763,7 +1739,7 @@ okexchaincli backend matches
 		"data": [{
 			"timestamp": 1563890996,
 			"blockHeight": 127,
-			"product": "mycoin_tokt",
+			"product": "mycoin_okt",
 			"price": 4,
 			"volume": 1
 		}],
@@ -1778,7 +1754,7 @@ okexchaincli backend matches
 ### 5. Obtain lists of past transactions containing user addresses:
 #### Example:
 ```bash
-okexchaincli backend txs [addr] [flags]
+exchaincli backend txs [addr] [flags]
 
 Flags:
       --end int       filter txs by end timestamp
@@ -1792,7 +1768,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1801,7 +1777,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend txs $(okexchaincli keys show bob -a)
+exchaincli backend txs $(exchaincli keys show bob -a)
 # example return
 {
 	"code": 0,
@@ -1811,29 +1787,29 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 		"data": [{
 			"txHash": "550101C97C83028F228542755F76A806D00D6635C64E5762EF6FD1667A900D81",
 			"type": 2,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "mycoin_tokt",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
-			"fee": "0.00000000tokt",
+			"fee": "0.00000000okt",
 			"timestamp": 1563890974
 		}, {
 			"txHash": "B287E99E1938FD2C4A6D31F6EBD928920572B4A9385FB4D1C630436985046112",
 			"type": 1,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "tokt",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"symbol": "okt",
 			"side": 3,
 			"quantity": "10000.00000000",
-			"fee": "0.01250000tokt",
+			"fee": "0.01250000okt",
 			"timestamp": 1563890942
 		}, {
 			"txHash": "7E71C87B9687D21CA0E4FE2044D28019949B5FFFB5CE9464A247CC95F463DC69",
 			"type": 2,
-			"address": "okchain15uj03h8c2dluhfr9d9ele68v36cl3whjhgq2ch",
-			"symbol": "mycoin_tokt",
+			"address": "ex1qpel9c5wlrc30efaskqfgzrda7h3sd74ngnx6m",
+			"symbol": "mycoin_okt",
 			"side": 2,
 			"quantity": "1.00000000",
-			"fee": "0.00000000tokt",
+			"fee": "0.00000000okt",
 			"timestamp": 1563890879
 		}],
 		"paramPage": {
@@ -1847,7 +1823,7 @@ okexchaincli backend txs $(okexchaincli keys show bob -a)
 ### 6. Obtain tx hash of a block at a specific height:
 #### Example:
 ```bash
-okexchaincli backend block_tx_hashes [height] [flags]
+exchaincli backend block_tx_hashes [height] [flags]
 
 Flags:
   -h, --help          help for block-tx-hashes
@@ -1856,7 +1832,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1865,7 +1841,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend block-tx-hashes 105
+exchaincli backend block-tx-hashes 105
 # example return
 ["550101C97C83028F228542755F76A806D00D6635C64E5762EF6FD1667A900D81"]
 
@@ -1874,19 +1850,19 @@ okexchaincli backend block-tx-hashes 105
 ### 7. Query candlestick data:
 #### Example:
 ```bash
-okexchaincli backend klines [flags]
+exchaincli backend klines [flags]
 
 Flags:
   -g, --granularity int   [60/180/300/900/1800/3600/7200/14400/21600/43200/86400/604800], second in unit (default 60)
   -h, --help              help for klines
       --node string       <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-  -p, --product string    product of coin pairs (default "tokt_xxx")
+  -p, --product string    product of coin pairs (default "okt_xxx")
   -s, --size int          at most 1000 (default 1)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1895,7 +1871,7 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend klines -p mycoin_tokt 
+exchaincli backend klines -p mycoin_okt 
 
 # example return
 {
@@ -1918,19 +1894,19 @@ okexchaincli backend klines -p mycoin_tokt
 ### 8. Query market data:
 #### Example:
 ```bash
-okexchaincli backend tickers [flags]
+exchaincli backend tickers [flags]
 
 Flags:
   -c, --count int        ticker count (default 10)
   -h, --help             help for tickers
       --node string      <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-  -p, --product string   product of coin pairs (default "mycoin_tokt")
+  -p, --product string   product of coin pairs (default "mycoin_okt")
   -s, --sort             true or false (default true)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|bcoin) (default "hex")
-      --home string       directory for config and data (default "/Users/dwil/.okexchaincli")
+      --home string       directory for config and data (default "/Users/dwil/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -1939,15 +1915,15 @@ Global Flags:
 #### Successful response:
 ```
 # example
-okexchaincli backend tickers -p mycoin_tokt
+exchaincli backend tickers -p mycoin_okt
 
 # example return
 {
   "code": 0,
   "data": [
     {
-      "symbol": "mycoin_tokt",
-      "product": "mycoin_tokt",
+      "symbol": "mycoin_okt",
+      "product": "mycoin_okt",
       "timestamp": 1563893602,
       "open": 4,
       "close": 11,
@@ -1975,13 +1951,13 @@ okexchaincli backend tickers -p mycoin_tokt
 Create a new validator with own keys
 
 ```shell
-$ okexchaincli tx staking create-validator -h
+$ exchaincli tx staking create-validator -h
 
 Example:
-    okexchaincli tx staking create-validator --moniker $MONIKER --pubkey $PUBKEY --from mykey
+    exchaincli tx staking create-validator --moniker $MONIKER --pubkey $PUBKEY --from mykey
     
 Usage:
-    okexchaincli tx staking create-validator [flags]
+    exchaincli tx staking create-validator [flags]
 
 Flags:
     -- moniker  	The validator's name
@@ -1990,25 +1966,22 @@ Flags:
 
 #### Destroy validator
 
-Unbonding of MSD causes the validator to enter unbonding from the bonded state while jailed, and the operation will not affect the voting of other delegators on this validator.
+* The unbonding of min-self-delegation causes the validator to move from bonded status to unbonding status while being jailed, and this operation will not affect the staking rights distribution of other delegators on this validator.
 
-After the operation is performed, the delegator can still withdraw the vote (unbond or change the vote) from the validator. Once the number of votes and MSD of the validator are both 0, the validator will be completely removed from the validator set.
+* After the operation is performed, the delegator can still withdraw its deposited tokens directly or unbind the staking rights from the proxy delegator or redelegate to other validators. Once the number of shares(staking  rights) and min-self-delegation of the validator are both 0, the validator will be completely removed from the validator set.
 
+* The  min-self-delegationSD in unbonding status has a freeze period of 14 days (the same as the normal unbounding time parameter)
 
-The Unbonded MSD has a freeze period of 14 days (the same as the normal unboundingtime parameter)
-
-
-
-Destroy a validator and withdraw the self-delegation
+* Destroy a validator and withdraw the self-delegation
 
 ```shell
-$ okexchaincli tx staking destroy-validator -h
+$ exchaincli tx staking destroy-validator -h
   
 Example:
-    okexchaincli tx staking destroy-validator --from mykey
+    exchaincli tx staking destroy-validator --from mykey
     
 Usage:
-    okexchaincli tx staking destroy-validator [flags]
+    exchaincli tx staking destroy-validator [flags]
 
 ```
 
@@ -2018,13 +1991,13 @@ Usage:
 Edit the detail info of a validator
 
 ```shell
-$ okexchaincli tx staking edit-validator -h
+$ exchaincli tx staking edit-validator -h
 
 Example:
-    okexchaincli tx staking edit-validator --moniker "my new name" --identity "http://mynewwebsite/pic/newlogo.jpg" --website "http://mynewwebsites" --details "my new slogans" --from mykey
+    exchaincli tx staking edit-validator --moniker "my new name" --identity "http://mynewwebsite/pic/newlogo.jpg" --website "http://mynewwebsites" --details "my new slogans" --from mykey
 	
 Usage:
-    okexchaincli tx staking edit-validator [flags]
+    exchaincli tx staking edit-validator [flags]
 
 Flags:
 	  -- moniker		The validator's name (default "[do-not-modify]")
@@ -2038,58 +2011,57 @@ Flags:
 #### Delegate
 
 
-Delegate an amount of tokt
+Delegate an amount of okt
 
 ```shell
-$ okexchaincli tx staking delegate -h
+$ exchaincli tx staking delegate -h
 
 Example:
-	  okexchaincli tx staking delegate 1024.1024tokt --from mykey
+	  exchaincli tx staking delegate 1024.1024okt --from mykey
 	  
 Usage:
-    okexchaincli tx staking delegate [amount] [flags]
+    exchaincli tx staking delegate [amount] [flags]
     
 
 ```
 
 #### Vote 
 
-Vote on one or more validator(s) by delegate tokt
+Vote on one or more validator(s) by delegate okt
 
 Vote on one or more validator(s)
 
 ```shell
-$ okexchaincli tx staking vote -h
+$ exchaincli tx staking vote -h
 
  
 Example:
-    okexchaincli tx staking vote okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
+    exchaincli tx staking vote exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,exvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,exvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from mykey
 
 Usage:
-    okexchaincli tx staking vote [validator-addr1, validator-addr2, validator-addr3, ... validator-addrN] [flags]
+    exchaincli tx staking vote [validator-addr1, validator-addr2, validator-addr3, ... validator-addrN] [flags]
 ```
 
 #### Unbond
 
-Unbond the deposit token while canceling all the votes, it takes 14 days for unbonding the tokens.
+When a delegator withdraws its deposit token, the according shares will be deducted from the validator that the delegator delegated to. It will take 14 days for the unbonding process of the tokens to take place.
 
-  
-   - allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawan from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
-   - if the user status is "voted", after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re voting
-   - if the user status is "voted", execute the command and withdraw all the votes, essentially execute the unbond behavior
-   - if the user's status is "not voted", after the command is executed, the votes will not be affected. After 14 days, it will be converted into token and returned to the user's account
-   - users are allowed to perform the "unbond" operation for many times, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the process of unbond
-   
+* Allow the user to exchange votes into tokens multiple times, and the number of votes allowed to be withdrawn from deposit can be 0.001 \ ~ n (total number of votes owned by the user)
+* If the user status is “voted”, after the command is executed, the number of votes that have been voted will be automatically updated and deducted. Essentially, the new votes will be used for re-voting
+* If the user status is “voted”, executing the command and withdrawing all the votes will essentially execute the unbond behavior.
+* If the user’s status is “not voted”, after the command is executed, the votes will not be affected. After 14 days, it will be converted into tokens and returned to the user’s account.
+* Users are allowed to perform the “unbond” operation as many times as they wish, but it only takes effect for the last time, and the last unbond operation automatically accumulates the transaction amount in the unbonding process.
+
 Unbond shares and withdraw the same amount of votes
 
 ```shell
-$ okexchaincli tx staking unbond -h
+$ exchaincli tx staking unbond -h
 
 Example:
-    okexchaincli tx staking unbond 1024.1024tokt --from mykey
+    exchaincli tx staking unbond 1024.1024okt --from mykey
 
 Usage:
-    okexchaincli tx staking unbond [amount] [flags]
+    exchaincli tx staking unbond [amount] [flags]
 
 ```
 
@@ -2099,13 +2071,13 @@ Usage:
 Query the information of delegations and all votes recently made by a delegator
 
 ```shell
-$ okexchaincli query staking delegator -h
+$ exchaincli query staking delegator -h
 
 Example:
-    okexchaincli query staking delegator okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+    exchaincli query staking delegator ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
     
 Usage:
-    okexchaincli query staking delegator [address] [flags]
+    exchaincli query staking delegator [address] [flags]
 	
 ```
 
@@ -2115,13 +2087,13 @@ Usage:
 Query the information of all votes recently made to a validator
 
 ```shell
-$ okexchaincli query staking votes-to -h
+$ exchaincli query staking votes-to -h
 
 Example:
-	  okexchaincli query staking votes-to okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
+	  exchaincli query staking votes-to exvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5
 	  
 Usage:
-    okexchaincli query staking votes-to [validator-addr] [flags]
+    exchaincli query staking votes-to [validator-addr] [flags]
 
 ```
 
@@ -2129,7 +2101,7 @@ Usage:
 
 ```
 Usage:
-    okexchaincli query staking [command] [flags]
+    exchaincli query staking [command] [flags]
 
 Available Commands:
     validator                  Query a validator
@@ -2147,13 +2119,13 @@ Used for register as a proxy
 Become a proxy by registration
 
 ```shell
-$ okexchaincli tx staking proxy reg -h
+$ exchaincli tx staking proxy reg -h
 
 Example:
-	  okexchaincli tx staking proxy reg --from mykey
+	  exchaincli tx staking proxy reg --from mykey
 	  
 Usage:
-	  okexchaincli tx staking proxy reg [flags]
+	  exchaincli tx staking proxy reg [flags]
 
 ```
 
@@ -2163,13 +2135,13 @@ Usage:
 Unregister the proxy identity
 
 ```shell
-$ okexchaincli tx staking proxy unreg -h
+$ exchaincli tx staking proxy unreg -h
 
 Example:
-	  okexchaincli tx staking proxy unreg --from mykey
+	  exchaincli tx staking proxy unreg --from mykey
 	  
 Usage:
-    okexchaincli tx staking proxy unreg [flags]
+    exchaincli tx staking proxy unreg [flags]
 
 ```
 
@@ -2179,13 +2151,13 @@ Usage:
 Bind proxy relationship
 
 ```shell
-$ okexchaincli tx staking proxy bind -h
+$ exchaincli tx staking proxy bind -h
 
 Example:
-	  okexchaincli tx staking proxy bind okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph --from mykey
+	  exchaincli tx staking proxy bind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
-    okexchaincli tx staking proxy bind [flags]
+    exchaincli tx staking proxy bind [flags]
 
 ```
 
@@ -2195,13 +2167,13 @@ Usage:
 Unbind proxy relationship
 
 ```shell
-$ okexchaincli tx staking proxy unbind -h
+$ exchaincli tx staking proxy unbind -h
 
 Example:
-	  okexchaincli tx staking proxy unbind okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph --from mykey
+	  exchaincli tx staking proxy unbind ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn --from mykey
 	  
 Usage:
-    okexchaincli tx staking proxy unbind [flags]
+    exchaincli tx staking proxy unbind [flags]
 
 ```
 
@@ -2211,13 +2183,13 @@ Usage:
 Query the addresses of delegators by a specific proxy
 
 ```shell
-$ okexchaincli query staking proxy -h
+$ exchaincli query staking proxy -h
 
 Example:
-	  okexchaincli query staking proxy okchain1hw4r48aww06ldrfeuq2v438ujnl6alszzzqpph
+	  exchaincli query staking proxy ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 	  
 Usage:
-    okexchaincli query staking proxy [address] [flags]
+    exchaincli query staking proxy [address] [flags]
 
 
 ```
@@ -2230,13 +2202,13 @@ Usage:
 Withdraw rewards coming from fees to the validator account
 
 ```shell
-$ okexchaincli tx distr withdraw-rewards -h
+$ exchaincli tx distr withdraw-rewards -h
 
 Example：
-    okexchaincli tx distr withdraw-rewards okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
+    exchaincli tx distr withdraw-rewards exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --from ${name} --node ${url}
 
 Usage: 
-    okexchaincli tx distr withdraw-rewards [validator-address] [flags]
+    exchaincli tx distr withdraw-rewards [validator-address] [flags]
 
 
 Flags：
@@ -2253,13 +2225,13 @@ Execution parameters for distribution module
 Query distribution parameters
 
 ```shell
-$ okexchaincli query distr params -h
+$ exchaincli query distr params -h
 
 Example：
-    okexchaincli query distr params --node ${url}
+    exchaincli query distr params --node ${url}
     
 Usage: 
-    okexchaincli query distr params [flags]
+    exchaincli query distr params [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2271,13 +2243,13 @@ Flags：
 Query all coins in the community pool which is under Governance control.
 
 ```shell
-$ okexchaincli query distr community-pool -h
+$ exchaincli query distr community-pool -h
 
 Example：
-    okexchaincli query distr community-pool --node ${url}
+    exchaincli query distr community-pool --node ${url}
     
 Usage: 
-    okexchaincli query distr community-pool [flags]
+    exchaincli query distr community-pool [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2288,13 +2260,13 @@ Flags：
 Query validator commission rewards from delegators to that validator.
 
 ```shell
-$ okexchaincli query distr commission -h
+$ exchaincli query distr commission -h
 
 Example：
-    okexchaincli query distr commission okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
+    exchaincli query distr commission exvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx --node ${url}
     
 Usage: 
-    okexchaincli query distr commission [validator] [flags]
+    exchaincli query distr commission [validator] [flags]
 
 Flags：
 	--node ${url}  validator address
@@ -2303,46 +2275,46 @@ Flags：
 
 ## Governance
 
-### Dex delist proposal
+### DEX delisting proposal
 
-Submit a dex delist proposal along with an initial deposit.
+Submit a DEX delisting proposal along with an initial deposit.
 
 ```shell
-$ okexchaincli tx gov submit-proposal delist-proposal -h
+$ exchaincli tx gov submit-proposal delist-proposal -h
 
 Submit a dex delist proposal along with an initial deposit.
 The proposal details must be supplied via a JSON file.
 
 Example:
-  okexchaincli tx gov submit-proposal delist-proposal <path/to/proposal.json> --from=<key_or_address>
+  exchaincli tx gov submit-proposal delist-proposal <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 
 {
- "title": "delist xxx/tokt",
+ "title": "delist xxx/okt",
  "description": "delist asset from dex",
  "base_asset": "xxx",
- "quote_asset": "tokt",
+ "quote_asset": "okt",
  "deposit": [
    {
-     "denom": "tokt",
+     "denom": "okt",
      "amount": "100"
    }
  ]
 }
 
 Usage:
-  okexchaincli tx gov submit-proposal delist-proposal [proposal-file] [flags]
+  exchaincli tx gov submit-proposal delist-proposal [proposal-file] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for delist-proposal
       --indent                  Add indent to JSON response
@@ -2356,7 +2328,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2368,12 +2340,12 @@ Global Flags:
 Submit a proposal along with an initial deposit.
 
 ```shell
-$ okexchaincli tx gov  submit-proposal -h
+$ exchaincli tx gov  submit-proposal -h
 Submit a proposal along with an initial deposit.
 Proposal title, description, type and deposit can be given directly or through a proposal JSON file.
 
 Example:
-  okexchaincli tx gov submit-proposal --proposal="path/to/proposal.json" --from mykey
+  exchaincli tx gov submit-proposal --proposal="path/to/proposal.json" --from mykey
 
 Where proposal.json contains:
 
@@ -2381,17 +2353,17 @@ Where proposal.json contains:
   "title": "Test Proposal",
   "description": "My awesome proposal",
   "type": "Text",
-  "deposit": "10tokt"
+  "deposit": "10okt"
 }
 
 Which is equivalent to:
 
-  okexchaincli tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" \
-	--deposit="10tokt" --from mykey
+  exchaincli tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" \
+	--deposit="10okt" --from mykey
 
 Usage:
-  okexchaincli tx gov submit-proposal [flags]
-  okexchaincli tx gov submit-proposal [command]
+  exchaincli tx gov submit-proposal [flags]
+  exchaincli tx gov submit-proposal [command]
 
 Available Commands:
   upgrade              submit a app upgrade proposal
@@ -2405,11 +2377,11 @@ Flags:
       --deposit string          deposit of proposal
       --description string      description of proposal
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for submit-proposal
       --indent                  Add indent to JSON response
@@ -2426,12 +2398,12 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
 
-Use "okexchaincli tx gov submit-proposal [command] --help" for more information about a command.
+Use "exchaincli tx gov submit-proposal [command] --help" for more information about a command.
 ```
 ##### Parameter description：
 
@@ -2442,8 +2414,8 @@ Use "okexchaincli tx gov submit-proposal [command] --help" for more information 
 | --type              | type of the proposal initiated (for text proposals only) |
 | --deposit           | initial deposit specified when the proposal is initiated  |
 | --from              | account name specified for sending a transaction |
-| --home              | account name and the directory where okexchaincli is configured
-if it is ~/.okexchaincli can ignore the parameters |
+| --home              | account name and the directory where exchaincli is configured
+if it is ~/.exchaincli can ignore the parameters |
 | -b/--broadcast-mode | specific transaction broadcast modes（async、sync、block）|
 
 ### Change parameter proposal
@@ -2452,7 +2424,7 @@ if it is ~/.okexchaincli can ignore the parameters |
 Submit a parameter modification proposal along with an initial deposit.
 
 ```shell
-$ okexchaincli tx gov  submit-proposal param-change -h
+$ exchaincli tx gov  submit-proposal param-change -h
 
 Submit a parameter modification proposal along with an initial deposit.
 The proposal details must be supplied via a JSON file. For values that contains
@@ -2467,7 +2439,7 @@ Proper vetting of a parameter change proposal should prevent this from happening
 regardless.
 
 Example:
-  okexchaincli tx gov submit-proposal param-change <path/to/proposal.json> --from=<key_or_address>
+  exchaincli tx gov submit-proposal param-change <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 
@@ -2491,17 +2463,17 @@ Where proposal.json contains:
 }
 
 Usage:
-  okexchaincli tx gov submit-proposal param-change [proposal-file] [flags]
+  exchaincli tx gov submit-proposal param-change [proposal-file] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1 tokt
+      --fees string             Fees to pay along with transaction; eg: 1 okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for param-change
       --indent                  Add indent to JSON response
@@ -2515,7 +2487,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2528,12 +2500,12 @@ Global Flags:
 | --title             | title of the proposal  |
 | --type              | type of the proposal initiated (for parameterchange proposals only) |
 | --deposit           | initial deposit specified when the proposal is initiated |
-| --param             | specific parameters and values to be modified (gov/MinDeposit=1000tokt
-modify the MinDeposit parameters in the module to be governed to 1000tokt. |
+| --param             | specific parameters and values to be modified (gov/MinDeposit=1000okt
+modify the MinDeposit parameters in the module to be governed to 1000okt. |
 | --height            | block height when the specific parameter change proposal becomes effective (parameters to be modified changed to specific values),the specific height must meet: higher than the current block height and lower than or equal to the sum of the current block height and MaxBlockHeightPeriod |
 | --from              | account name specified for sending a transaction  |
-| --home              | account name and the directory where okexchaincli is configured
-if it is ~/.okexchaincli can ignore the parameters |
+| --home              | account name and the directory where exchaincli is configured
+if it is ~/.exchaincli can ignore the parameters |
 | -b/--broadcast-mode | specific transaction broadcast modes（async、sync、block） |
 
 ### Submit deposit
@@ -2542,26 +2514,26 @@ if it is ~/.okexchaincli can ignore the parameters |
 Submit a deposit for an active proposal.
 
 ```shell
-$ okexchaincli tx gov deposit -h
+$ exchaincli tx gov deposit -h
 
 Submit a deposit for an active proposal. You can
 find the proposal-id by running "<appcli> query gov proposals".
 
 Example:
-  okexchaincli tx gov deposit 1 10tokt --from mykey
+  exchaincli tx gov deposit 1 10okt --from mykey
 
 Usage:
-  okexchaincli tx gov deposit [proposal-id] [deposit] [flags]
+  exchaincli tx gov deposit [proposal-id] [deposit] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for deposit
       --indent                  Add indent to JSON response
@@ -2575,7 +2547,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2587,27 +2559,27 @@ Global Flags:
 Submit a vote for an active proposal. 
 
 ```shell
-$ okexchaincli tx gov vote -h
+$ exchaincli tx gov vote -h
 
 Submit a vote for an active proposal. You can
 find the proposal-id by running "<appcli> query gov proposals".
 
 
 Example:
-  okexchaincli tx gov vote 1 yes --from mykey
+  exchaincli tx gov vote 1 yes --from mykey
 
 Usage:
-  okexchaincli tx gov vote [proposal-id] [option] [flags]
+  exchaincli tx gov vote [proposal-id] [option] [flags]
 
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
-      --fees string             Fees to pay along with transaction; eg: 1tokt
+      --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
       --gas-adjustment float    adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
-      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1tokt)
+      --gas-prices string       Gas prices to determine the transaction fee (e.g. 1okt)
       --generate-only           Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible and the node operates offline)
   -h, --help                    help for vote
       --indent                  Add indent to JSON response
@@ -2621,7 +2593,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2629,35 +2601,35 @@ Global Flags:
 
 ### withdraw rewards
 
-Send a proposal used for withdraw rewards from community pool
+Send a proposal  for rewards withdrawal from the community pool.
 
 ```shell
-$ okexchaincli tx gov submit-proposal community-pool-spend -h
+$ exchaincli tx gov submit-proposal community-pool-spend -h
 
 Example:
-	okexchaincli tx gov submit-proposal community-pool-spend <path/to/proposal.json> --from=<key_or_address>
+	exchaincli tx gov submit-proposal community-pool-spend <path/to/proposal.json> --from=<key_or_address>
 
 Where proposal.json contains:
 {
   "title": "Community Pool Spend",
-  "description": "Pay me some tokt!",
-  "recipient": "okchain5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
+  "description": "Pay me some okt!",
+  "recipient": "ex5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
   "amount": [
     {
-      "denom": "tokt",
+      "denom": "okt",
       "amount": "10000"
     }
   ],
   "deposit": [
     {
-      "denom": "tokt",
+      "denom": "okt",
       "amount": "10000"
     }
   ]
 }
 
 Usage: 
-    okexchaincli tx gov submit-proposal community-pool-spend [proposal-file] [flags]
+    exchaincli tx gov submit-proposal community-pool-spend [proposal-file] [flags]
 
 Flags：
 	--from ${name} Name or address of private key with which to sign 
@@ -2671,16 +2643,16 @@ Flags：
 Query details for a proposal
 
 ```shell
-$ okexchaincli query gov proposal -h
+$ exchaincli query gov proposal -h
 
 Query details for a proposal. You can find the
 proposal-id by running "<appcli> query gov proposals".
 
 Example:
-  okexchaincli query gov proposal 1
+  exchaincli query gov proposal 1
 
 Usage:
-  okexchaincli query gov proposal [proposal-id] [flags]
+  exchaincli query gov proposal [proposal-id] [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2693,7 +2665,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2702,20 +2674,20 @@ Global Flags:
 #### Query all proposals
 
 
-Query for a all proposals. 
+Query for all proposals.
 
 ```shell
-$ okexchaincli query gov proposals -h
+$ exchaincli query gov proposals -h
 
 Query for a all proposals. You can filter the returns with the following flags.
 
 Example:
-  okexchaincli query gov proposals --depositor okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
-  okexchaincli query gov proposals --voter okchain1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
-  okexchaincli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
+  exchaincli query gov proposals --depositor ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+  exchaincli query gov proposals --voter ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n
+  exchaincli query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
 
 Usage:
-  okexchaincli query gov proposals [flags]
+  exchaincli query gov proposals [flags]
 
 Flags:
       --depositor string   (optional) filter by proposals deposited on by depositor
@@ -2732,7 +2704,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2744,18 +2716,18 @@ Query parameters of params:
 
 #### Query governance parameters
 
-Query the all the parameters for the governance process.
+Query all the parameters for the governance process.
 
 ```shell
-okexchaincli query params params -h
+exchaincli query params params -h
 
 Query the all the parameters for the governance process.
 
 Example:
-  okexchaincli query params params
+  exchaincli query params params
 
 Usage:
-  okexchaincli query params params [flags]
+  exchaincli query params params [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2768,7 +2740,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/admin/.okexchaincli")
+      --home string       directory for config and data (default "/Users/admin/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2788,29 +2760,29 @@ Global Flags:
 
 ### Change target validator state from jailed to unjail
 ```sh
-okexchaincli tx slashing unjail -h
+exchaincli tx slashing unjail -h
 unjail a jailed validator:
 
 Example:
-    okexchaincli tx slashing unjail --from mykey
+    exchaincli tx slashing unjail --from mykey
 
 Usage:
-    okexchaincli tx slashing unjail [flags]
+    exchaincli tx slashing unjail [flags]
 Flags:
     --from string             Name or address of private key with which to sign
 ```
 
 ### Query jail state of target validator 
 ```sh
-okexchaincli query slashing signing-info -h
+exchaincli query slashing signing-info -h
 
 Use a validators' consensus public key to find the signing-info for that validator:
 
 Example:
-    okexchaincli query slashing signing-info okchainvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
+    exchaincli query slashing signing-info exvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
 
 Usage:
-    okexchaincli query slashing signing-info [validator-conspub] [flags]
+    exchaincli query slashing signing-info [validator-conspub] [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2823,15 +2795,15 @@ Flags:
 
 ###  Query params from slashing module
 ```sh
-okexchaincli query slashing params -h
+exchaincli query slashing params -h
 
 Query genesis parameters for the slashing module:
 
 Example:
-    okexchaincli query slashing params
+    exchaincli query slashing params
 
 Usage:
-    okexchaincli query slashing params [flags]
+    exchaincli query slashing params [flags]
   
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2846,18 +2818,18 @@ Flags:
 ## Debug
 ### set-loglevel
 
-Set the okexchaind log level  
+Set the exchaind log level  
 
 ```shell
-$ okexchaincli debug set-loglevel -h
+$ exchaincli debug set-loglevel -h
 
 Example：
-  $ okexchaincli debug set-loglevel "main:info,state:info"
+  $ exchaincli debug set-loglevel "main:info,state:info"
 
-  $ okexchaincli debug set-loglevel "upgrade:error"
+  $ exchaincli debug set-loglevel "upgrade:error"
 
 Usage:
-  okexchaincli debug set-loglevel [flags]
+  exchaincli debug set-loglevel [flags]
 
 Flags:
       --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2869,7 +2841,7 @@ Flags:
 Global Flags:
       --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      --home string       directory for config and data (default "/Users/yourname/.okexchaincli")
+      --home string       directory for config and data (default "/Users/yourname/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
       --passwd string     Pass word of sender (default "12345678")
       --trace             print out full stack trace on errors
@@ -2880,11 +2852,11 @@ Global Flags:
 Dump the data of kv-stores by a module name  
 
 ```shell
-$ okexchaincli debug dump -h
+$ exchaincli debug dump -h
 Dump the data of kv-stores by a module name
 
 Usage:
-  okexchaincli debug dump [module] [flags]
+  exchaincli debug dump [module] [flags]
 
 Flags:
      --height int    Use a specific height to query state at (this can error if the node is pruning state)
@@ -2896,7 +2868,7 @@ Flags:
   Global Flags:
      --chain-id string   Chain ID of tendermint node
   -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-     --home string       directory for config and data (default "/Users/yourname/.okexchaincli")
+     --home string       directory for config and data (default "/Users/yourname/.exchaincli")
   -o, --output string     Output format (text|json) (default "text")
      --passwd string     Pass word of sender (default "12345678")
      --trace             print out full stack trace on errors

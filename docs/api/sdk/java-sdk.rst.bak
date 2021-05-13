@@ -25,7 +25,7 @@ Results returned:
     {
         "type": "auth/Account",
         "value": {
-            "address": "okchain1g7c3nvac7mjgn2m9mqllgat8wwd3aptdqket5k",
+            "address": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r",
             "coins": [{
                 "denom": "okt",
                 "amount": "10000.00000000"

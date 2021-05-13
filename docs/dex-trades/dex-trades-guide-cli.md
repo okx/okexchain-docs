@@ -1,7 +1,7 @@
 # DEX Traders Guide (CLI)
 
 
-DEX Traders can perform pending orders and cancel orders through okexchaincli, or through the UI provided by OKExChain ecological partners.
+DEX Traders can perform pending orders and cancel orders through exchaincli, or through the UI provided by OKExChain ecosystem partners.
 
 
 ### Order depthbook
@@ -10,7 +10,7 @@ Query tokenpair's order depthbook.
 
 ```bash
 # example
-okexchaincli query order depthbook mycoin_okt
+exchaincli query order depthbook mycoin_okt
 # example return
 # example return
 {
@@ -45,13 +45,13 @@ Create a new limit order.
 
 ```bash
 # example
-okexchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
+exchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
 # example return
 {
   "txhash": "57A390CBBE43548F112956DF6CA7146E14A02720F2895908B3A057136CE0324D"
 }
 ```
-  
+
 * product ：Trading pair in full name of the tokens: ${baseAssetSymbol}_${quoteAssetSymbol}, for example "mycoin_okt".
 * side ：BUY or SELL (default "SELL")
 * price ：The price of the order
@@ -59,19 +59,19 @@ okexchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 
 
 
 
-  
+
 ### Order details
 
 Query order details.
 
 ```bash
 # example
-okexchaincli query order detail ID0000000007-0000
+exchaincli query order detail ID0000000007-0000
 # example return
 {
  "txHash": "CF8CEC36B97F089DEA243655A70D1CB2AE906D712D71210BCDEBC47F184DB6C2",
  "orderId": "ID0000000007-0000",
- "sender": "okchain1cwvqt96wj222k2hue4pxcy5nxch6maaklknn7p",
+ "sender": "ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r",
  "product": "mycoin_okt",
  "side": "BUY",
  "price": "10.000000000000000000",
@@ -82,8 +82,8 @@ okexchaincli query order detail ID0000000007-0000
  "timestamp": "1554273977"
 }
 ```
-  
+
 ## More
 
-For a practical guide on how to trade on okexchain , click [okexchaincli](../resources/okexchaincli.html).
+For more details on how to use OKExChain client, click [exchaincli](../resources/okexchaincli.html).
 
