@@ -15,6 +15,7 @@ extensions = [
     'crate.sphinx.csv',
     'sphinx_sitemap',
     'sphinx_markdown_tables',
+    'recommonmark',
 ]
 
 # crate.theme sets html_favicon to favicon.png which causes a warning because
