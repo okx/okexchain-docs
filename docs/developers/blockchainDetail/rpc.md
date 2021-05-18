@@ -1,11 +1,14 @@
-# JSON-RPC Endpoint
+# Endpoint
 
 ## Used by
 - exchain-java-sdk
 - Metamask
 
-## Mainnet (chain-id: exchain-66)
+## Mainnet JSON-RPC Endpoint (chain-id: exchain-66)
 - https://exchainrpc.okex.org
+
+## Mainnet Websocket Endpoint
+- wss://exchainws.okex.org:8443
 
 ### How to configure MetaMask with OKExChain(Mainnet) in one step
 
@@ -28,9 +31,11 @@ currentProvider.send({
 })
 ```
 
-## Testnet (chain-id: exchain-65):
+## Testnet JSON-RPC Endpoint (chain-id: exchain-65):
 - https://exchaintestrpc.okex.org
 
+## Testnet Websocket Endpoint
+- wss://exchaintestws.okex.org:8443
 
 ### How to configure MetaMask with OKExChain(Testnet) in one step
 
