@@ -14,6 +14,15 @@ For Mainnet only.
 |        FILK        |    [0x3f8969be2fc0770dcc174968e4b4ff146e0acdaf](https://www.oklink.com/okexchain-test/address/0x3f8969be2fc0770dcc174968e4b4ff146e0acdaf)    |  18  |
 |        LTCK        |    [0xfa520efc34c81bfc1e3dd48b7fe9ff326049f986](https://www.oklink.com/okexchain-test/address/0xfa520efc34c81bfc1e3dd48b7fe9ff326049f986)    |  18  |
 |        WOKT        |    [0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15](https://www.oklink.com/okexchain-test/address/0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15)    |  18  |
+|        LINKK        |    [0x9b99c3ce751aa292320033f93a1376902d4ba58b](https://www.oklink.com/okexchain-test/address/0x9b99c3ce751aa292320033f93a1376902d4ba58b)    |  18  |
+|        SUSHIK       |    [0x2218e0d5e0173769f5b4939a3ae423f7e5e4eab7](https://www.oklink.com/okexchain-test/address/0x2218e0d5e0173769f5b4939a3ae423f7e5e4eab7)    |  18  |
+|        UNIK        |    [0x59d226bb0a4d74274d4354ebb6a0e1a1aa5175b6](https://www.oklink.com/okexchain-test/address/0x59d226bb0a4d74274d4354ebb6a0e1a1aa5175b6)    |  18  |
+|        ZKSK        |    [0xcd08d321f6bc10a10f094e4b2e6c9b8bf9906401](https://www.oklink.com/okexchain-test/address/0xcd08d321f6bc10a10f094e4b2e6c9b8bf9906401)    |  18  |
+|        AUCTIONK     |    [0x77df6ebec3316792d4ea5bc0f8286c27905aa8e8](https://www.oklink.com/okexchain-test/address/0x77df6ebec3316792d4ea5bc0f8286c27905aa8e8)    |  18  |
+|        SFGK        |    [0x3212606f74cc59656e1ec6f587fca61ba3b85eb0](https://www.oklink.com/okexchain-test/address/0x3212606f74cc59656e1ec6f587fca61ba3b85eb0)    |  18  |
+|        DAIK     |    [0x21cde7e32a6caf4742d00d44b07279e7596d26b9](https://www.oklink.com/okexchain-test/address/0x21cde7e32a6caf4742d00d44b07279e7596d26b9)    |  18  |
+|        KINEK        |    [0xc05760d75e7f5ad428a906674ce7c7c82d003d01](https://www.oklink.com/okexchain-test/address/0xc05760d75e7f5ad428a906674ce7c7c82d003d01)    |  18  |
+
 
 
 # Testnet KIP20
