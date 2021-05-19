@@ -74,10 +74,10 @@ data—like blocks, transactions, validators as well as other key information
 OKExChain CLI
 -------------
 
-``exchaindcli`` is a command-line interface that lets you interact with
-the OKExChain. ``exchaindcli`` is the only tool that supports 100% of the
+``exchaincli`` is a command-line interface that lets you interact with
+the OKExChain. ``exchaincli`` is the only tool that supports 100% of the
 OKExChain features, including accounts, transfers, delegation, and
-governance. Learn more about ``exchaindcli`` with the delegator’s CLI
+governance. Learn more about ``exchaincli`` with the delegator’s CLI
 `guide <./delegators/delegators-guide-cli.html>`__.
 
 Running a full-node on the OKExChain Testnet
@@ -139,7 +139,7 @@ Contents
    :caption: Developers
 
    developers/quick-start-for-mainnet
-   developers/quick-start-for-testnet
+   developers/quick-start
    developers/basics/index
    developers/tools/index
    developers/deploy/index
@@ -208,7 +208,7 @@ Contents
    :caption: Resources
 
    resources/genesis
-   resources/exchaindcli
+   resources/okexchaincli
    resources/service-providers
    resources/snapshot
 

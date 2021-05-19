@@ -36,7 +36,7 @@ Now, We have to deploy our smart contract on OKExChain Network. For that, we hav
 ![avatar](../../img/remix-05.png)
 - Testnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
 https://www.oklink.com/okexchain-test
-- Mainnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: okexchain-66 * Symbol: OKT * Block Explorer: 
+- Mainnet * [RPC URLs](https://okexchain-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask

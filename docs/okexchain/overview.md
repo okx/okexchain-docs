@@ -62,13 +62,13 @@ The OKExChain block explorer allows you to search, view and analyze OKExChain da
 
 ## OKExChain CLI
 
-`exchaindcli` is a command-line interface that lets you interact with the OKExChain. `exchaindcli` is the only tool that supports 100% of the OKExChain features, including accounts, transfers, delegation, and governance. Learn more about exchaindcli with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
+`exchaincli` is a command-line interface that lets you interact with the OKExChain. `exchaincli` is the only tool that supports 100% of the OKExChain features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
 
 ## Running a full-node on the OKExChain Testnet
 
-In order to run a full-node on the OKExChain testnet, you must first [install `exchaind`](./getting-start/install-okexchain.html). Then, follow [the guide](./getting-start/install-okexchain.html).
+In order to run a full-node on the OKExChain testnet, you must first [install `exchaind`](../getting-start/install-okexchain.html). Then, follow [the guide](../getting-start/install-okexchain.html).
 
-If you would like to run a validator node, follow the [validator setup guide](./validators/validators-guide-cli.html).
+If you would like to run a validator node, follow the [validator setup guide](../validators/validators-guide-cli.html).
 
 ## Join the Community
 

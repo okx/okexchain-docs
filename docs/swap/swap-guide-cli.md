@@ -14,7 +14,7 @@ The `create-pair` function is used to create new token pairs.
 You could create swap pair with any 2 tokens.
 
 ```bash
-$ exchaindcli tx swap create-pair --token [token]
+$ exchaincli tx swap create-pair --token [token]
 ```
 
 - --token: the token name you want to create  against OKT.
@@ -22,7 +22,7 @@ $ exchaindcli tx swap create-pair --token [token]
 Example:
 
 ```shell
-exchaindcli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap create-pair --token eth-335 --from captain -y -b block --fees 0.002okt
 {
   "height": "1243",
   "txhash": "FA10BF76AC2CEEC8B709D1ECE93698E8C82997D282C02930063DFB772FF8E452",
@@ -90,7 +90,7 @@ exchaindcli tx swap create-pair --token eth-335 --from captain -y -b block --fee
 Users can trade between any tokens having a trading pair against OKT. The swap between two tokens takes place via the intermediary token OKT, ie. SWAP token A for OKT, and  SWAP OKT for token B.
 
 ```bash
-$ exchaindcli tx swap token --sell-amount [amount sellToken] --min-buy-amount [amount wantToken]
+$ exchaincli tx swap token --sell-amount [amount sellToken] --min-buy-amount [amount wantToken]
 ```
 
 - --sell-amount：token amount and token name you want to sell.
@@ -99,7 +99,7 @@ $ exchaindcli tx swap token --sell-amount [amount sellToken] --min-buy-amount [a
 Example:
 
 ```shell
-exchaindcli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap token --sell-amount 100okt --min-buy-amount 80eth-335 --from captain -y -b block --fees 0.002okt
 {
   "height": "1483",
   "txhash": "5D56D443B51C8888EF5572763C261AAE42C2678796C51E1EAA6CCA5C286A711A",
@@ -189,7 +189,7 @@ The first liquidity provider to join a pool sets the initial exchange rate by de
 
 All future liquidity providers deposit token and OKT using the exchange rate at the moment of their deposit. If the exchange rate is not attractive there is a profitable arbitrage opportunity that will correct the price.
 ```bash
-$ exchaindcli tx swap add-liquidity --max-base-amount [amount token] --quote-amount [amount okt] --min-liquidity [amount]
+$ exchaincli tx swap add-liquidity --max-base-amount [amount token] --quote-amount [amount okt] --min-liquidity [amount]
 ```
 - --max-base-amount: the maximum amount of the base token user is willing to add in the pool. (Given the desired quote token to be added , if the amount of the corresponding base token is more than the predetermined max-base-amount, then the transaction is reverted.)
 - --quote-amount: the token quote to be added in the pool, namely OKT in our case.
@@ -198,7 +198,7 @@ $ exchaindcli tx swap add-liquidity --max-base-amount [amount token] --quote-amo
 Example:
 
 ```shell
-exchaindcli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.002okt
+exchaincli tx swap add-liquidity --max-base-amount 10000eth-335 --quote-amount 10000okt --min-liquidity 0.001 --from captain -y -b block --fees 0.002okt
 
 {
   "height": "1281",
@@ -286,7 +286,7 @@ Liquidity providers use the removeLiquidity function to withdraw their portion o
 
 Liquidity is withdrawn at the same ratio as the reserves at the time of withdrawal. If the exchange rate is not attractive, a profitable arbitrage opportunity will correct the price.
 ```bash
-$ exchaindcli tx swap remove-liquidity --liquidity [amount] --min-base-amount [amount token] --min-quote-amount [amount okt]
+$ exchaincli tx swap remove-liquidity --liquidity [amount] --min-base-amount [amount token] --min-quote-amount [amount okt]
 ```
 - --liquidity: the amount tokens (liquidity providing certificate) users want to burn.
 - --min-base-amount: the minimum redeemable amount of base token.
@@ -295,7 +295,7 @@ $ exchaindcli tx swap remove-liquidity --liquidity [amount] --min-base-amount [a
 Example:
 
 ```shell
-exchaindcli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.002okt
+exchaincli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 --min-quote-amount 1okt --from captain -y -b block --fees 0.002okt
 {
   "height": "1620",
   "txhash": "B070469B65320A4C458A86B1FD5836D273C1B8B003DC59D04EDE8ED3D0709C5B",
@@ -381,12 +381,12 @@ exchaindcli tx swap remove-liquidity --liquidity 0.5 --min-base-amount 1eth-335 
 
 1. Query pool info by token name
 ```bash
-$ exchaindcli query swap pool [token]
+$ exchaincli query swap pool [token]
 ```
 Example：
 
 ```shell
-$ exchaindcli query swap pool eth-355
+$ exchaincli query swap pool eth-355
 {
   "quote_pooled_coin":{"denom":"okt","amount":"10100.00000000"},
   "base_pooled_coin" :{"denom":"eth-355","amount":"9901.28419657"},
@@ -399,13 +399,13 @@ $ exchaindcli query swap pool eth-355
 2. Query the parameters of the AMM swap system
 
 ```bash
-$ exchaindcli query swap params
+$ exchaincli query swap params
 ```
 
 Example：
 
 ```shell
-$ exchaindcli query swap params
+$ exchaincli query swap params
 {
   "fee_rate": "0.00300000"
 }
@@ -416,12 +416,12 @@ $ exchaindcli query swap params
 3. Query infomation of all pools
 
 ```bash
-$ exchaindcli query swap pools
+$ exchaincli query swap pools
 ```
 Example：
 
 ```shell
-$ exchaindcli query swap pools
+$ exchaincli query swap pools
 [
   {
     "quote_pooled_coin":{"denom":"okt","amount":"10100.00000000"},
@@ -436,13 +436,13 @@ $ exchaindcli query swap pools
 4. Query redeemable assets by specifying pool and pool token amount
 
 ```bash
-$ exchaindcli query swap redeemable-assets [token] [amount]
+$ exchaincli query swap redeemable-assets [token] [amount]
 ```
 
 Example：
 
 ```json
-$ exchaindcli query swap redeemable-assets eth-355 0.5
+$ exchaincli query swap redeemable-assets eth-355 0.5
 [
   {"denom":"eth-355","amount":"4950.64209828"},
   {"denom":"okt",   "amount":"5050.00000000"}
@@ -454,13 +454,13 @@ $ exchaindcli query swap redeemable-assets eth-355 0.5
 5. Query how many token returned by the given amount of token to sell
 
 ```bash
-$ exchaindcli query swap amount [amount sellToken] [wantToken]
+$ exchaincli query swap amount [amount sellToken] [wantToken]
 ```
 
 Example：
 
 ```shell
-exchaindcli query swap amount 100eth-355 okt
+exchaincli query swap amount 100eth-355 okt
 "100.68709041"
 ```
 

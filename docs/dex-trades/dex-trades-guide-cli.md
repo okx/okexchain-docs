@@ -1,7 +1,7 @@
 # DEX Traders Guide (CLI)
 
 
-DEX Traders can perform pending orders and cancel orders through exchaindcli, or through the UI provided by OKExChain ecosystem partners.
+DEX Traders can perform pending orders and cancel orders through exchaincli, or through the UI provided by OKExChain ecosystem partners.
 
 
 ### Order depthbook
@@ -10,7 +10,7 @@ Query tokenpair's order depthbook.
 
 ```bash
 # example
-exchaindcli query order depthbook mycoin_okt
+exchaincli query order depthbook mycoin_okt
 # example return
 # example return
 {
@@ -45,7 +45,7 @@ Create a new limit order.
 
 ```bash
 # example
-exchaindcli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
+exchaincli tx order new --product xxb-08a_okt --side BUY --price 1 --quantity 1 --from alice
 # example return
 {
   "txhash": "57A390CBBE43548F112956DF6CA7146E14A02720F2895908B3A057136CE0324D"
@@ -66,7 +66,7 @@ Query order details.
 
 ```bash
 # example
-exchaindcli query order detail ID0000000007-0000
+exchaincli query order detail ID0000000007-0000
 # example return
 {
  "txHash": "CF8CEC36B97F089DEA243655A70D1CB2AE906D712D71210BCDEBC47F184DB6C2",
@@ -85,5 +85,5 @@ exchaindcli query order detail ID0000000007-0000
 
 ## More
 
-For more details on how to use OKExChain client, click [exchaindcli](../resources/exchaindcli.html).
+For more details on how to use OKExChain client, click [exchaincli](../resources/okexchaincli.html).
 

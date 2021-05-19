@@ -6,10 +6,10 @@ JavaScript Object Notation (JSON) is human readable, well structured and great f
 [More details](https://github.com/tendermint/go-amino)
 
 ## Used by
-- exchaindcli
-- okexchain-go-sdk
+- exchaincli
+- exchain-go-sdk
 
-## Mainnet (chain-id: okexchain-66)
+## Mainnet (chain-id: exchain-66)
 
 - https://exchaintmrpc.okex.org
 
