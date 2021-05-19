@@ -1,4 +1,5 @@
-# Mainnet KIP20
+# KIP20
+## Mainnet KIP20
 
 For Mainnet only.
 
@@ -25,7 +26,7 @@ For Mainnet only.
 
 
 
-# Testnet KIP20
+## Testnet KIP20
 
 For testnet only.
 
