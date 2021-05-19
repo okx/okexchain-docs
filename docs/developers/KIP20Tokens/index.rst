@@ -12,4 +12,4 @@ KIP20 Tokens
 
    introduction
    issue-token
-   testnet-kip20
+   kip20
