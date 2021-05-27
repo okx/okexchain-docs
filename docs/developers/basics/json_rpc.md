@@ -224,7 +224,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 ### eth_gasPrice
 
-Returns the current gas price in aphotons.
+Returns the current gas price in OKT.
 
 ```json
 // Request
