@@ -1,3 +1,3 @@
 # HTTP
 
-For more information, Please refer to [OKExChain HTTP](https://documenter.getpostman.com/view/13902793/TVsxAm58)
+For more information, Please refer to [OKExChain HTTP](https://exchainrpc.okex.org/docs/zh/)
