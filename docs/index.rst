@@ -98,7 +98,7 @@ become part of the OKExChain community through one of the following channels.
 
 -  `OKExChain Validator
    Chat <https://t.me/joinchat/HuUCNktBLftzEY1fZPStkw>`__
--  `OKExChain Developer Chat <https://t.me/okchaintech>`__
+-  `OKExChain Developer Chat <https://discord.gg/3A3U6JTkXA>`__
 
 
 Version
