@@ -44,7 +44,7 @@ Check the JSON-RPC methods and namespaces supported on OKExChain.
 | [`eth_uninstallFilter`](#eth-uninstallfilter)                                     | Eth       | ✔           |                           |
 | [`eth_getFilterChanges`](#eth-getfilterchanges)                                   | Eth       | ✔           |                           |
 | [`eth_getLogs`](#eth-getlogs)                                                     | Eth       | ✔           |                           |
-| `eth_getTransactionbyBlockNumberAndIndex`                                         | Eth       |             |                           |
+| [`eth_getTransactionbyBlockNumberAndIndex`](#eth-gettransactionbyblocknumberandindex)                                         | Eth       | ✔            |                           |
 | `eth_getWork`                                                                     | Eth       |             |                           |
 | `eth_submitWork`                                                                  | Eth       |             |                           |
 | `eth_submitHashrate`                                                              | Eth       |             |                           |
