@@ -32,7 +32,7 @@ module.exports = {
 
     testnet: {
         provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
-        network_id: 97,
+        network_id: 66,
         timeoutBlocks: 200,
         confirmations: 5,
         production: true    // Treats this network as if it was a public net. (default: false)
