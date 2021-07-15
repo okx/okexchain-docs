@@ -5,7 +5,7 @@ Quick instructions on how to install the OKExChain snapshots.
 
 ## testnet
 Download URL: 
-  - [okexchain-v0.18.4-testnet-20210517-height_2854687.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18.4-testnet-20210517-height_2854687.tar.gz)
+  - [okexchain-v0.18.7-testnet-20210715-height_4322747.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18.7-testnet-20210715-height_4322747.tar.gz)
   - [okexchain-v0.18.0-testnet-20210423-height_2270911.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/data_180.tar.gz)
 
 ## mainnet
