@@ -23,6 +23,12 @@ For Mainnet only.
 |        SFGK        |    [0x3212606f74cc59656e1ec6f587fca61ba3b85eb0](https://www.oklink.com/okexchain/address/0x3212606f74cc59656e1ec6f587fca61ba3b85eb0)    |  18  |
 |        DAIK     |    [0x21cde7e32a6caf4742d00d44b07279e7596d26b9](https://www.oklink.com/okexchain/address/0x21cde7e32a6caf4742d00d44b07279e7596d26b9)    |  18  |
 |        KINEK        |    [0xc05760d75e7f5ad428a906674ce7c7c82d003d01](https://www.oklink.com/okexchain/address/0xc05760d75e7f5ad428a906674ce7c7c82d003d01)    |  18  |
+|        XRPK        |    [0xa715f624eb32c6c960b0e044b10cde585d5f5984](https://www.oklink.com/okexchain/address/0xa715f624eb32c6c960b0e044b10cde585d5f5984)    |  18  |
+|        TRXK        |    [0x00505505a7576d6734704fabb16f41924e3e384b](https://www.oklink.com/okexchain/address/0x00505505a7576d6734704fabb16f41924e3e384b)    |  18  |
+|        BCHK        |    [0x18d103b7066aeedb6005b78a462ef9027329b1ea](https://www.oklink.com/okexchain/address/0x18d103b7066aeedb6005b78a462ef9027329b1ea)    |  18  |
+|        ETCK        |    [0x99970778e2715bbc9cf8fb83d10dcbc2d2d551a3](https://www.oklink.com/okexchain/address/0x99970778e2715bbc9cf8fb83d10dcbc2d2d551a3)    |  18  |
+|        SHIBK        |    [0xaa27badaa3c9ec9081b8f6c9cdd2bf375f143780](https://www.oklink.com/okexchain/address/0xaa27badaa3c9ec9081b8f6c9cdd2bf375f143780)    |  18  |
+|        WBTCK        |    [0x506f731f7656e2fb34b587b912808f2a7ab640bd](https://www.oklink.com/okexchain/address/0x506f731f7656e2fb34b587b912808f2a7ab640bd)    |  18  |
 
 
 
