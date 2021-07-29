@@ -10,6 +10,7 @@ Download URL:
 
 ## mainnet
 Download URL: 
+  - [okexchain-v0.18.9-mainnet-20210729-height_4534291.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18.9-mainnet-20210729-height_4534291.tar.gz)
   - [okexchain-v0.18.4-mainnet-20210510-height_2676566.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18.4-mainnet-20210510-height_2676566.tar.gz)
   - [okexchain-v0.16.3-mainnet-height_0-2322600.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.16.8-mainnet-20210428-height-2322600.tar.gz), need exchain version is [v0.16.3](https://github.com/okex/exchain/releases/tag/v0.16.3)
 
