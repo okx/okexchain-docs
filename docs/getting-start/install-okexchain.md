@@ -35,9 +35,9 @@ provide this control panel through the "Advanced System Settings" option inside 
 Next, let's install the latest version of OKExChain. Make sure you `git checkout` the [latest released version](https://github.com/okex/okexchain/releases).
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/okex/okexchain
+git clone -b <latest-release-tag> https://github.com/okex/exchain
 export GO111MODULE=on
-cd okexchain && make install
+cd exchain && make install
 ```
 Under Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
 ```shell script
@@ -76,7 +76,7 @@ $ exchaincli version --long
 name: okexchain
 server_name: exchaind
 client_name: exchaincli
-version: v0.10.0
+version: v0.18.10
 commit: 20a720f38c6c60540a739351e485779a098ee413
 build_tags: netgo
 go: go version go1.14.2 darwin/amd64
