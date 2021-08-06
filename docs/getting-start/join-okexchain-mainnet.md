@@ -135,8 +135,8 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/okex/okexchain.git
-cd okexchain
+git clone https://github.com/okex/exchain.git
+cd exchain
 git fetch --all && git checkout vx.y.z
 make install
 ```

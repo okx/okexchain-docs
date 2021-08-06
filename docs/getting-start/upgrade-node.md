@@ -11,7 +11,7 @@ This document describes the upgrade procedure of a `exchaind` full-node to a new
 First, stop your instance of `exchaind`. Next, upgrade the software:
 
 ```bash
-cd okexchain
+cd exchain
 git fetch --all && git checkout <new_version>
 make install
 ```
