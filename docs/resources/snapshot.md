@@ -11,6 +11,7 @@ Download URL:
 
 ## mainnet
 Download URL: 
+  - [okexchain-v0.18.10-mainnet-20210806-height_4697978.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18-mainnet-20210806-height_4697978.tar.gz)
   - [okexchain-v0.18.10-mainnet-20210804-height_4639037.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18-mainnet-20210804-height_4639037.tar.gz), this is archive node version
   - [okexchain-v0.18.9-mainnet-20210729-height_4534291.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18-mainnet-20210729-height_4534291.tar.gz)
   - [okexchain-v0.18.4-mainnet-20210510-height_2676566.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18.4-mainnet-20210510-height_2676566.tar.gz)
