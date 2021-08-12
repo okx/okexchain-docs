@@ -48,3 +48,6 @@ For testnet only.
 |        FILK        |    [0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93](https://www.oklink.com/okexchain-test/address/0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93)    |  10  |
 |        LTCK        |    [0xd616388f6533B6f1c31968a305FbEE1727F55850](https://www.oklink.com/okexchain-test/address/0xd616388f6533B6f1c31968a305FbEE1727F55850)    |  10  |
 |        WOKT        |    [0x70c1c53E991F31981d592C2d865383AC0d212225](https://www.oklink.com/okexchain-test/address/0x70c1c53E991F31981d592C2d865383AC0d212225)    |  18  |
+|        DOGEK       |    [0x24639bE8F95f0A37457188F32668b3eE211325f0](https://www.oklink.com/okexchain-test/address/0x24639bE8F95f0A37457188F32668b3eE211325f0)    |  10  |
+|        UNIK        |    [0x71D685EA395b336142D2Eec0234B63F47D98eC8b](https://www.oklink.com/okexchain-test/address/0x71D685EA395b336142D2Eec0234B63F47D98eC8b)    |  10  |
+|        SUSHIK      |    [0x998B66fb675c1D267f80Ae08d6618Bc8b97C4715](https://www.oklink.com/okexchain-test/address/0x998B66fb675c1D267f80Ae08d6618Bc8b97C4715)    |  10  |
