@@ -148,20 +148,6 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: Swap
-
-   swap/swap-overview
-   swap/swap-guide-cli
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Farm
-
-   farm/farm-overview
-   farm/farm-guide-cli
-
-.. toctree::
-   :maxdepth: 3
    :caption: Delegators
 
    delegators/delegators-overview
@@ -176,20 +162,6 @@ Contents
    validators/validators-guide-cli
    validators/validators-faq
 
-.. toctree::
-   :maxdepth: 3
-   :caption: DEX Traders
-
-   dex-trades/dex-trades-overview
-   dex-trades/dex-trades-guide-cli
-
-.. toctree::
-   :maxdepth: 3
-   :caption: DEX Operators
-
-   dex-operators/dex-operators-overview
-   dex-operators/dex-operators-guide-cli
-   dex-operators/dex-operators-faq
 
 .. toctree::
    :maxdepth: 3
