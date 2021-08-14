@@ -9,11 +9,6 @@ OKExChain is a set of open-source blockchain projects developed by OKEx, aiming 
 
 ![okexchain multi-chain](./img/multi-chain.jpg)
 
-## What is OKExDEX？
-
-OKExChain-OKExDEX, is the first project born from the OKExChain ecosystem and is a middleware that can freely issue DEX. With the design concept of “everyone can create DEX”, it provides various basic functions needed to operate a DEX. Compared with traditional DEX, OKExDEX adopts a full on-chain matching and an on-chain order book management to make matching information more transparent and safe; compared with Ethereum-based projects, the matching engine based on OKExChain’s call auction can achieve matching in seconds, which is similar to the operating experience offered by centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but to provide a platform to achieve the separation of technology and operations. Just as Ethereum makes digital asset issuance simple through smart contract technology, OKExChain lowers the barrier for operating digital asset trading pairs with OKExDEX.
-
-![OKExDEX multi-operator relation](./img/operators.jpg)
 
 ## The OKT
 
