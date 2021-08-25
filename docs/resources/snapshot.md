@@ -5,7 +5,7 @@ Quick instructions on how to install the OKExChain snapshots.
 
 According to the snapshot size, it is divided into S0, S1, S2 and S3:
 
- - S0. s0 size is the smallest, including only the last block and the state of that height.
+ - S0. size of s0 is the smallest, including only the last block and the state of that height.
  - S1. --pruning everything: larger than S0 size
  - S2. --pruning default: larger than S1 size
  - S3. --pruning nothing: maximum size
