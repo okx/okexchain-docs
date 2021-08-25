@@ -5,10 +5,10 @@ Quick instructions on how to install the OKExChain snapshots.
 
 According to the snapshot size, it is divided into S0, S1, S2 and S3:
 
- - S0. Exchaind pruning -- home size is the smallest, including only the status of the last block and the height.
- - S1. -- pruning everything: larger than S0 size
- - S2. -- pruning default: larger than S1 size
- - S3. -- pruning nothing: maximum size
+ - S0. Exchaind pruning size is the smallest, including only the last block and the state of that height.
+ - S1. --pruning everything: larger than S0 size
+ - S2. --pruning default: larger than S1 size
+ - S3. --pruning nothing: maximum size
 
 Meaning of [pruning parameter](https://forum.okt.club/d/58-pruning)
 
