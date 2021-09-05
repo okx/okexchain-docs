@@ -128,28 +128,6 @@ exchaincli
 
 It will display all the available commands. For each command, you can use the `--help` flag to get further information.
 
-## Setting up the Rest Server
-
-The Rest Server acts as an intermediary between the front-end and the full-node. You don’t need to run the Rest Server on the same machine as the full-node.
-
-To start the Rest server: 
-
-```bash
-exchaincli rest-server --node=<full_node_address:full_node_port>
-```
-
-Flags:
-* `--trust-node`: A boolean. If `true`, light-client verification is disabled. If `false`, it is disabled. For service providers, this should be set to `true`. By default, it is set to `true`.
-* `--node`: This is where you indicate the address and the port of your full-node. The format is `<full_node_address:full_node_port>`. If the full-node is on the same machine, the address should be `tcp://localhost:26657`.
-* `--laddr`: This flag allows you to specify the address and port for the Rest Server (default `26659`). You will mostly use this flag only to specify the port, in which case just input “localhost” for the address. The format is <rest_server_address:port>.
-
-
-### Listening for incoming transaction
-
-The recommended way to listen for incoming transaction is to periodically query the blockchain through the following endpoint of the LCD:
-
-[`/okexchain/v1/accounts/{address}`](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#f5bc92c9-4e8c-40f5-b3fe-d9635c418402)
-
 ## Rest API
 
 The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest).

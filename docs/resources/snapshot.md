@@ -45,7 +45,7 @@ Download URL:
 
 #### 3. Archive Node SnapShot
   - [mainnet-s3(582G)-20210828-height_5167085.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/mainnet-s3-20210828-5167085.tar.gz)
-  - [mainnet-archive(223G)-20210804-height_4639037.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18-mainnet-20210804-height_4639037.tar.gz)
+  - [mainnet-s3(223G)-20210804-height_4639037.tar.gz](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/okexchain-v0.18-mainnet-20210804-height_4639037.tar.gz)
 
 For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
 
