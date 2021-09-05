@@ -17,6 +17,8 @@
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
 
+### 3. Config ETHEREUM WEBSOCKET for OKExChain Mainnet
+please refer to [detail config](./basics/websocket.md)
 
 ___
 ## Blockchain Browser
