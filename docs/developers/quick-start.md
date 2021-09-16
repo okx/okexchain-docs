@@ -12,7 +12,7 @@
 - Currency Symbol: OKT
 - Block Explorer URL: https://www.oklink.com/okexchain-test/
 
-![avatar](../img/metamask-01.jpg)
+![avatar](../img/metamask-01-en.png)
 
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
