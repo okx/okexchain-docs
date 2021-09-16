@@ -14,7 +14,7 @@ Meaning of [pruning parameter](https://forum.okt.club/d/58-pruning)
 
 
 ## testnet
-Download URL: https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html
+Download URL: [https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html)
 
 <!--
 #### 1. Mini SnapShot
@@ -31,7 +31,7 @@ For the differences between snapshots, please refer to：[this](https://forum.ok
 
 
 ## mainnet
-Download URL: https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html
+Download URL: [https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html](https://ok-public-hk.oss-cn-hongkong.aliyuncs.com/cdn/okexchain/snapshot/index.html)
 
 <!--
 #### 1. Mini SnapShot
