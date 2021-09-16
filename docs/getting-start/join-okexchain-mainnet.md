@@ -83,7 +83,7 @@ You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/co
 
 ```toml
 # Comma separated list of seed nodes to connect to
-seeds = "e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@35.177.8.240:26656,c8f32b793871b56a11d94336d9ce6472f893524b@18.167.16.85:26656"
+seeds = "e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@175.41.191.69:26656,c8f32b793871b56a11d94336d9ce6472f893524b@35.74.8.189:26656"
 ```
 
 For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
