@@ -10,7 +10,7 @@ Check the JSON-RPC methods and namespaces supported on OKExChain.
 
 ## JSON-RPC Methods
 
-| Method                                                                            | Namespace | Implemented by OKExChain | Notes        |
+| Method                                                                            | Namespace | If supported by OKExChain | Notes        |
 |-----------------------------------------------------------------------------------|-----------|-------------|---------------------------|
 | [`web3_clientVersion`](#web3-clientversion)                                       | Web3      | supported           |                           |
 | [`web3_sha3`](#web3-sha3)                                                         | Web3      | supported           |                           |
@@ -53,13 +53,13 @@ Check the JSON-RPC methods and namespaces supported on OKExChain.
 | `eth_compileSolidity`                                                             | Eth       | not supported            |                           |
 | `eth_compileSerpent`                                                              | Eth       | not supported            |                           |
 | `eth_signTransaction`                                                             | Eth       | not supported            |                           |
-| `eth_mining`                                                                      | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_coinbase`                                                                    | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_hashrate`                                                                    | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_getUncleCountByBlockHash`                                                    | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_getUncleCountByBlockNumber`                                                  | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_getUncleByBlockHashAndIndex`                                                 | Eth       | N/A         | Not relevant to Ethermint |
-| `eth_getUncleByBlockNumberAndIndex`                                               | Eth       | N/A         | Not relevant to Ethermint |
+| `eth_mining`                                                                      | Eth       | not supported         |                           |
+| `eth_coinbase`                                                                    | Eth       | not supported         |                           |
+| `eth_hashrate`                                                                    | Eth       | not supported         |                           |
+| `eth_getUncleCountByBlockHash`                                                    | Eth       | not supported         |                           |
+| `eth_getUncleCountByBlockNumber`                                                  | Eth       | not supported         |                           |
+| `eth_getUncleByBlockHashAndIndex`                                                 | Eth       | not supported         |                           |
+| `eth_getUncleByBlockNumberAndIndex`                                               | Eth       | not supported         |                           |
 | [`eth_subscribe`](#eth-subscribe)                                                 | Websocket | supported           |                           |
 | [`eth_unsubscribe`](#eth-unsubscribe)                                             | Websocket | supported           |                           |
 | [`personal_importRawKey`](#personal-importrawkey)                                 | Personal  | supported           |                           |
