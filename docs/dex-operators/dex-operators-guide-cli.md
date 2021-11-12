@@ -1,6 +1,6 @@
 # DEX Operators Guide (CLI)
 
-In OKExChain-OKExDEX，any user can issue their own Token and Tokenpairs.
+In OEC-OKExDEX，any user can issue their own Token and Tokenpairs.
 
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first.
 
@@ -50,7 +50,7 @@ exchaincli tx dex list --base-asset tusdk-9a2 --quote-asset tbtc-965 --from myke
 
 ### Deposit an amount of okt on a tokenpair
 
-In order to make fair and open use of the matching resources of the blockchain, OKExChain allocates the system resources in the way of competitive ranking. Deposit OKT to a token pair can make the orders of this token pair matched earlier.
+In order to make fair and open use of the matching resources of the blockchain, OEC allocates the system resources in the way of competitive ranking. Deposit OKT to a token pair can make the orders of this token pair matched earlier.
 
 
 ```shell

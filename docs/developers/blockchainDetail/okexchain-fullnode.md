@@ -1,5 +1,5 @@
 # Fullnode
-### How to Run A Fullnode on OKExChain
+### How to Run A Fullnode on OEC
 ### Fullnodes Functions
 - Stores the full blockchain history on disk and can answer the data request from the network.
 - Receives and validates the new blocks and transactions.
@@ -13,4 +13,4 @@ The hardware must meet certain requirements to run a full node.
 - 4 cores of CPU and 8 gigabytes of memory (RAM).
 - A broadband Internet connection with upload/download speeds of at least 1 megabyte per second
 ### Settings
-For more information, Please refer to [setting up a new node](https://okexchain-docs.readthedocs.io/en/add-evm-doc/getting-start/join-okexchain-testnet.html#setting-up-a-new-node)
+For more information, Please refer to [setting up a new node](https://okexchain-docs.readthedocs.io/en/add-evm-doc/getting-start/join-oec-testnet.html#setting-up-a-new-node)

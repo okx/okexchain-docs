@@ -1,7 +1,7 @@
 # Governance App Upgrade
 
 Description:
-Compared with the traditional hard fork, app upgrade is a smoother and more fault-tolerant system upgrade method. The app here refers to the OKExChain software running on the tendermint consensus layer. When the app version update is completed and the new validation node’s “voting power” is lower than a certain threshold, the new app can continue to run based on the logic of its old version in the same situation where the entire block network remains in the old version, which will not result in network fork; when the new validation node’s “voting power” reaches the threshold, the logic of its new version will swap at a specified height, and the entire block network will run using such logic.
+Compared with the traditional hard fork, app upgrade is a smoother and more fault-tolerant system upgrade method. The app here refers to the OEC software running on the tendermint consensus layer. When the app version update is completed and the new validation node’s “voting power” is lower than a certain threshold, the new app can continue to run based on the logic of its old version in the same situation where the entire block network remains in the old version, which will not result in network fork; when the new validation node’s “voting power” reaches the threshold, the logic of its new version will swap at a specified height, and the entire block network will run using such logic.
 
 ## Reference
 proposal parameters:
@@ -55,7 +55,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
   ]
 }
 ```
-OKExChain will generate a proposal-id to uniquely label the successfully submitted proposal. The proposal_id of the proposal in this example is 1. Query proposal information:
+OEC will generate a proposal-id to uniquely label the successfully submitted proposal. The proposal_id of the proposal in this example is 1. Query proposal information:
 ```sh
 $ exchaincli query gov proposal 1
 {
@@ -175,7 +175,7 @@ confirm transaction before signing and broadcasting [Y/n]: y
 Query the proposal at the end of the VotingPeriod. The proposal status is Passed. That means the proposal is approved.
 
 ### 4. Run the new app version
-Once the app upgrade proposal is approved, the administrator of each node can obtain version `1` and restart the background program of `okexchain` via the download address specified by `--software="http://newappdownloadingurl"` in the proposal.
+Once the app upgrade proposal is approved, the administrator of each node can obtain version `1` and restart the background program of `OEC` via the download address specified by `--software="http://newappdownloadingurl"` in the proposal.
 #### Query the current app version
 ```sh
 $ exchaincli query upgrade version

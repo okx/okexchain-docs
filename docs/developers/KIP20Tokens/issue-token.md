@@ -20,7 +20,7 @@ c. Step3: Enable “Auto compile” and    “optimization”
 
 d. Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/issue-token-04.png)
-Depoy the contract to OKEXChain
+Depoy the contract to OEC
 
 a. Step1: Click button to switch to compile button.
 
@@ -31,5 +31,5 @@ c. Step3: Select “KIP20Token”
 d. Step4: Client “Deploy” button and Metamask will pop up
 ![avatar](../../img/issue-token-05.png)
 
-e. Client “confirm” button to sign and broadcast transaction to OKEXChain.
+e. Client “confirm” button to sign and broadcast transaction to OEC.
 ![avatar](../../img/issue-token-06.png)

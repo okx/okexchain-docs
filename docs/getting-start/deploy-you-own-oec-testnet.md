@@ -2,18 +2,18 @@
 order: 6
 -->
 
-# Deploy Your Own OKExChain Testnet
+# Deploy Your Own OEC Testnet
 
-This document describes 2 ways to setup a network of `okexchain` nodes, each serving a different usecase:
+This document describes 2 ways to setup a network of `oec` nodes, each serving a different usecase:
 
 1. Single-node, local, manual testnet
 2. Multi-node, local, automated testnet
 
-Supporting code can be found in the [networks directory](https://github.com/okex/okexchain/tree/master/networks) and additionally the `local` sub-directories.
+Supporting code can be found in the [networks directory](https://github.com/okex/exchain/tree/dev/networks) and additionally the `local` sub-directories.
 
 ## Available Docker images
 
-In case you need to use or deploy okexchain as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
+In case you need to use or deploy oec as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
 * `docker run -it -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind init mynode`
 * `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind start`
@@ -28,7 +28,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install okexchain](./install-okexchain.html)
+- [Install oec](./install-oec.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create Genesis File and Start the Network
@@ -62,11 +62,11 @@ This setup puts all the data for `exchaind` in `~/.exchaind`. You can examine th
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/okex/okexchain/tree/master/networks/local):
+From the [networks/local directory](https://github.com/okex/exchain/tree/dev/networks/local):
 
 ### Requirements
 
-- [Install okexchain](./install-okexchain.html)
+- [Install oec](./install-oec.html)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 
@@ -75,11 +75,11 @@ From the [networks/local directory](https://github.com/okex/okexchain/tree/maste
 Build the `exchaind` binary (linux) and the `okexchain/node` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated rebuilding the image, so you only need to build the image once.
 
 ```bash
-# Clone the okexchain repo
-git clone https://github.com/okex/okexchain.git
+# Clone the exchain repo
+git clone https://github.com/okex/exchain.git
 
 # Work from the SDK repo
-cd okexchain
+cd exchain
 
 # Build okexchain/node image
 make build-docker-okexchainnode

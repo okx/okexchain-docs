@@ -4,7 +4,7 @@
 
 ## Introduction
 
-OKExChain is based on Tendermint and relies on a set of validators responsible for submitting blocks. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
+OEC is based on Tendermint and relies on a set of validators responsible for submitting blocks. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
 
 Token holders can delegate staking rights through the “delegation” command, and select the validators that they think are meaningful to the ecosystem. These token holders are called delegators.
 
@@ -16,9 +16,9 @@ To have a look at a practical guide on how to become a delegator, please click [
 
 ## Staking Mechanics
 
-In OKExChain, any user who has staked OKT tokens can add staking rights to target validators. Each user is allowed to add staking rights for up to 30 validator candidates using the full weight of their stake. For example, if a user has staked  OKT, he has staking rights to share to up to 30 validators. The top 21 validators are determined by the total number of OKT staking rights gathered . Additional validators, ranked by their total number of OKT staked, are also compensated by the network to serve as validator candidates.
+In OEC, any user who has staked OKT tokens can add staking rights to target validators. Each user is allowed to add staking rights for up to 30 validator candidates using the full weight of their stake. For example, if a user has staked  OKT, he has staking rights to share to up to 30 validators. The top 21 validators are determined by the total number of OKT staking rights gathered . Additional validators, ranked by their total number of OKT staked, are also compensated by the network to serve as validator candidates.
 
-OKExChain is implementing a delegative governance. Users have the option to add staking rights directly to the validators, but they can also delegate their staking  rights to other accounts in order to allow others to participate in the POS protocol on their behalf. The delegated account, called a proxy, has no control over the original user’s account — the user can proxy his staking rights trustlessly without handing over any keys. The proxy has the power to use the delegated staking power towards certain validators, but the user can revoke this staking power from the proxy at any point of time.
+OEC is implementing a delegative governance. Users have the option to add staking rights directly to the validators, but they can also delegate their staking  rights to other accounts in order to allow others to participate in the POS protocol on their behalf. The delegated account, called a proxy, has no control over the original user’s account — the user can proxy his staking rights trustlessly without handing over any keys. The proxy has the power to use the delegated staking power towards certain validators, but the user can revoke this staking power from the proxy at any point of time.
 
 
 In the proxy staking mechanism, there are two roles:
@@ -54,7 +54,7 @@ shares = delegated_tokens * 2^weight
 The best staking management strategy consists in increasing the level of staking rights   once a week to ensure that the staking powers held are always up to date.
 
 ## Punishment
-OKExChain has an automatic penalty mechanism on-chain, that is currently implemented for two types of behavior:
+OEC has an automatic penalty mechanism on-chain, that is currently implemented for two types of behavior:
 * When the block node is used as a validator, the block is not signed.
    - In the current testnet, when a total of 9500 block signatures are accumulated, an automatic penalty will be executed.
    - Penalty: Jail validator 600s. 
@@ -72,9 +72,9 @@ The best way to minimize the risk of theft or loss of OKT is to have a strong st
 ## Software Vulnerabilities
 To protect yourself and ensure you’re using the safest , you need use the latest version of softwares available, and to update them as soon as you can when new versions are released. This is important for your laptops, mobile devices, cryptocurrency wallets, and anything else that may be linked to your crypto-assets.
 
-*To protect your OKT, you should only download software directly from official sources, and make sure that you’re always using the latest and most secure version of `exchaincli` when you’re performing any recovery involving your 12 words*. The latest versions of `Tendermint`, the `OKExChain-SDK`, and `exchaincli` will always be available from our official Github repositories.
+*To protect your OKT, you should only download software directly from official sources, and make sure that you’re always using the latest and most secure version of `exchaincli` when you’re performing any recovery involving your 12 words*. The latest versions of `Tendermint`, the `OEC-SDK`, and `exchaincli` will always be available from our official Github repositories.
 
-**No one from OKExChain, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to download a software attachment after sending out a security advisory or making a patch available.**
+**No one from OEC, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to download a software attachment after sending out a security advisory or making a patch available.**
 
 
 ## Verifying Transactions
@@ -83,7 +83,7 @@ Be extra cautious when receiving advice that comes from people you do not know i
 **When sending transactions or doing anything that may spend tokens, you should always verify those transactions before hitting send**. While address strings are long, it is important to visually compare them in blocks of 4 characters at a time to ensure that you are sending them to the right address.
 
 ## Account Security
-One of the most important things you can do to protect your cryptocurrency and to reduce  risk is to highly protect all of your sensitive online accounts. Attackers will try to gain foothold wherever they can, and will use that foothold to pivot from one place to another. Unprotected accounts like email, social media, your Github account, the OKExChain Forum and anything in between could give an attacker  opportunities to access and steal your data.
+One of the most important things you can do to protect your cryptocurrency and to reduce  risk is to highly protect all of your sensitive online accounts. Attackers will try to gain foothold wherever they can, and will use that foothold to pivot from one place to another. Unprotected accounts like email, social media, your Github account, the OEC Forum and anything in between could give an attacker  opportunities to access and steal your data.
 
 For people who hold cryptocurrency, there are two specific account security actions that can be taken to reduce specific risks that come with being part of the blockchain world.
 

@@ -3,14 +3,14 @@
 - [What's the Metamask](https://metamask.io/index.html)
 - [Guide for Metamask](https://docs.metamask.io/guide/)
 
-### 1. Config Metamask for OKExChain Testnet
+### 1. Config Metamask for OEC Testnet
 
-- NetWork Name: OKExChain Testnet
+- NetWork Name: OEC Testnet
 - RPC URL: 
     - https://exchaintestrpc.okex.org
 - Chain ID: 65
 - Currency Symbol: OKT
-- Block Explorer URL: https://www.oklink.com/okexchain-test/
+- Block Explorer URL: https://www.oklink.com/oec-test/
 
 ![avatar](../img/metamask-01-en.png)
 
@@ -23,13 +23,13 @@
 
 ___
 ## Blockchain Browser
-[OKExChain Testnet Browser](https://www.oklink.com/okexchain-test)
+[OEC Testnet Browser](https://www.oklink.com/oec-test)
 ___
 
 ## Remix
-Set up a Remix OKExChain Testnet development environment.    
-Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKExChain Testnet through Remix and interact with it.   
-### 1. Connect OKExChain account to Remix
+Set up a Remix OEC Testnet development environment.    
+Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OEC Testnet through Remix and interact with it.   
+### 1. Connect OEC account to Remix
 Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
 

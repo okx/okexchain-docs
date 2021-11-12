@@ -2,11 +2,11 @@
 order: 1
 -->
 
-# OKExChain Client
+# OEC Client
 
-## OKExChain CLI
+## OEC CLI
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-okexchain.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OEC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-oec.html).
 
 ## Setting up exchaincli
 

@@ -1,10 +1,10 @@
 
 # Gas and Fees
 
-Learn about the differences between `Gas` and `Fees` in Ethereum and OKExChain. 
+Learn about the differences between `Gas` and `Fees` in Ethereum and OEC. 
 
 ## Denominations
-OKExChain has a metric system of denominations used as units of okt. Each denomination has its own unique name (some bear the family name of seminal figures playing a role in evolution of computer science and cryptoeconomics). The smallest denomination aka *base unit* of okt is called Wei. Below is a list of the named denominations and
+OEC has a metric system of denominations used as units of okt. Each denomination has its own unique name (some bear the family name of seminal figures playing a role in evolution of computer science and cryptoeconomics). The smallest denomination aka *base unit* of okt is called Wei. Below is a list of the named denominations and
 their value in Wei. Following a common (although somewhat ambiguous) pattern, ether also designates a unit (of 1e18 or one quintillion Wei) of the currency.
 
 |   Unit        | Wei Value | Wei  |
@@ -57,7 +57,7 @@ More information regarding gas in Cosmos SDK can be found [here](https://docs.co
 
 ## Matching EVM Gas consumption
 
-OKExChain is an EVM-compatible chain that supports Ethereum Web3 tooling. For this reason, gas
+OEC is an EVM-compatible chain that supports Ethereum Web3 tooling. For this reason, gas
 consumption must be equitable in order to accurately calculate the state transition hashes and exact
 the behaviour that would be seen on the main Ethereum network (main net).
 
@@ -65,7 +65,7 @@ In Cosmos, there are types of operations that are not triggered by transactions 
 
 ### `BeginBlock` and `EndBlock`
 
-These operations are defined by the Tendermint Core's Application Blockchain Interface (ABCI) and are defined by each Cosmos SDK module. As their name suggest, they are executed at the beginning and at the end of each block processing respectively (i.e pre and post transaction execution). Since these operations are not reflected on Ethereum, to match the the gas consumption we reset the main `GasMeter` to 0 on OKExChain's EVM module.
+These operations are defined by the Tendermint Core's Application Blockchain Interface (ABCI) and are defined by each Cosmos SDK module. As their name suggest, they are executed at the beginning and at the end of each block processing respectively (i.e pre and post transaction execution). Since these operations are not reflected on Ethereum, to match the the gas consumption we reset the main `GasMeter` to 0 on OEC's EVM module.
 
 ### `AnteHandler`
 
@@ -73,16 +73,16 @@ The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fee
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 
-Because the EVM transaction gas calculated in OKExChain is done by the `IntrinsicGas` method from go-ethereum, a
+Because the EVM transaction gas calculated in OEC is done by the `IntrinsicGas` method from go-ethereum, a
 special `AnteHandler` that is customized for EVM transaction fee verification is required. This
-allows OKExChain to generate the expected gas costs for operations done in the network and scale the
+allows OEC to generate the expected gas costs for operations done in the network and scale the
 gas costs as it would in the Ethereum network.
 
 ## Gas Refunds
 
 In Ethereum, gas can be specified prior to execution and the remaining gas will be refunded back to the user if any gas is left over - should fail if not enough gas was provided. 
 
-In OKExChain, there are two types of transactions, EVM and Cosmos. The EVM type transaction will refund gas like Ethereum, but the Cosmos type transaction will not refund gas.
+In OEC, there are two types of transactions, EVM and Cosmos. The EVM type transaction will refund gas like Ethereum, but the Cosmos type transaction will not refund gas.
 
 If you are using a Cosmos type transaction, it is extremely important to use the correct gas. To prevent overspending on fees, providing the `--gas-adjustment` flag for a Cosmos transaction will determine the fees automatically. 
 
@@ -94,12 +94,12 @@ by the validators of the network, and each validator can specify a different val
 This potentially allows end users to submit 0 fee transactions if there is at least one single
 validator that is willing to include transactions with `0` gas price in their blocks proposed.
 
-For this same reason, in OKExChain it is possible to send transactions with `0` fees for transaction
+For this same reason, in OEC it is possible to send transactions with `0` fees for transaction
 types other than the ones defined by the `evm` module. EVM module transactions cannot have `0` fees
 as gas is required inherently by Ethereum. This check is done by the evm transactions
-`ValidateBasic` function as well as on the custom `AnteHandler` defined by OKExChain.
+`ValidateBasic` function as well as on the custom `AnteHandler` defined by OEC.
 
 
 ## Next
 
-Learn about how [json rpc method](./json_rpc.md) is used on OKExChain 
+Learn about how [json rpc method](./json_rpc.md) is used on OEC 

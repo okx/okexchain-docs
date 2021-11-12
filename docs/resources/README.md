@@ -6,8 +6,8 @@ parent:
 
 # Resources
 
-This folder contains resources on the `okexchain` software.
+This folder contains resources on the `oec` software.
 
-- [`exchaincli` documentation](./okexchaincli.md)
-- [`okexchain` genesis file](./genesis.md)
+- [`exchaincli` documentation](./exchaincli.md)
+- [`oec` genesis file](./genesis.md)
 - [Service Providers Documentation](./service-providers.md)

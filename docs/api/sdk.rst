@@ -1,7 +1,7 @@
 SDK
 ===
 
-The client SDK to connect to OKExChain.
+The client SDK to connect to OEC.
 
 -  `Go SDK <sdk/go-sdk.html>`__
 -  `Java SDK <sdk/java-sdk.html>`__

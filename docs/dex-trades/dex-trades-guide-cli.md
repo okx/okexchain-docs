@@ -1,7 +1,7 @@
 # DEX Traders Guide (CLI)
 
 
-DEX Traders can perform pending orders and cancel orders through exchaincli, or through the UI provided by OKExChain ecosystem partners.
+DEX Traders can perform pending orders and cancel orders through exchaincli, or through the UI provided by OEC ecosystem partners.
 
 
 ### Order depthbook
@@ -85,5 +85,5 @@ exchaincli query order detail ID0000000007-0000
 
 ## More
 
-For more details on how to use OKExChain client, click [exchaincli](../resources/okexchaincli.html).
+For more details on how to use OEC client, click [exchaincli](../resources/exchaincli.html).
 

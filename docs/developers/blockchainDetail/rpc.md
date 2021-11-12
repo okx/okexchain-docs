@@ -10,7 +10,7 @@
 ## Mainnet Websocket Endpoint
 - wss://exchainws.okex.org:8443
 
-### How to configure MetaMask with OKExChain(Mainnet) in one step
+### How to configure MetaMask with OEC(Mainnet) in one step
 
 ```javascript
 currentProvider.send({
@@ -18,14 +18,14 @@ currentProvider.send({
     "params": [
         {
             "chainId": "0x42",
-            "chainName": "OKExChain Main",
+            "chainName": "OEC Main",
             "rpcUrls": ["https://exchainrpc.okex.org/"],
             "nativeCurrency": {
                 "name": "OKT",
                 "symbol": "OKT",
                 "decimals": 18
             },
-            "blockExplorerUrls": ["https://www.oklink.com/okexchain"]
+            "blockExplorerUrls": ["https://www.oklink.com/oec"]
         }
     ]
 })
@@ -37,7 +37,7 @@ currentProvider.send({
 ## Testnet Websocket Endpoint
 - wss://exchaintestws.okex.org:8443
 
-### How to configure MetaMask with OKExChain(Testnet) in one step
+### How to configure MetaMask with OEC(Testnet) in one step
 
 ```javascript
 currentProvider.send({
@@ -45,14 +45,14 @@ currentProvider.send({
   "params": [
     {
       "chainId": "0x41",
-      "chainName": "OKExChain Testnet",
+      "chainName": "OEC Testnet",
       "rpcUrls": ["https://exchaintestrpc.okex.org"],
       "nativeCurrency": {
         "name": "OKT",
         "symbol": "OKT",
         "decimals": 18
       },
-      "blockExplorerUrls": ["https://www.oklink.com/okexchain-test"]
+      "blockExplorerUrls": ["https://www.oklink.com/oec-test"]
     }
   ]
 })

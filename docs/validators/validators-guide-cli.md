@@ -11,8 +11,8 @@ Through staking, you can freely create validators, update validators, delegate p
 
 ## Rotation mechanism
 
-OKExChain will re-elect block generation nodes from each set at each fixed block height interval which is called cycle. The block generation set is fixed and the identities of block generation nodes in the set remain unchanged during the same cycle. At the penultimate block height interval during the same cycle, staking will rotate the block generation node sets for the next cycle. The top 21 nodes with the highest number of okt will become the block generation nodes in the next cycle, and the nodes which are not the top 21 ones with the highest number of okt in the set will be forced to quit. The number of okt should only be an integer, and the decimal part is not considered when the comparison of the numbers of nodes supported by the sets is made during rotation.
-OKExChain will re-elect block generation nodes at each fixed block height interval, called cycle. The block producer will be changed every 252 blocks (a cycle), and the next producer is elected on the 251th block of a cycle. This change takes effect in the 1st block of the next cycle. The top 21 nodes with the highest number of OKT will become the block generation nodes in the next cycle, and the nodes which are not within the top 21 ones with the highest number of OKT in the set will be forced to quit. The number of OKT should only be an integer, and the decimal part is not considered when the comparison of the numbers of nodes supported by the sets is made during each rotation.
+OEC will re-elect block generation nodes from each set at each fixed block height interval which is called cycle. The block generation set is fixed and the identities of block generation nodes in the set remain unchanged during the same cycle. At the penultimate block height interval during the same cycle, staking will rotate the block generation node sets for the next cycle. The top 21 nodes with the highest number of okt will become the block generation nodes in the next cycle, and the nodes which are not the top 21 ones with the highest number of okt in the set will be forced to quit. The number of okt should only be an integer, and the decimal part is not considered when the comparison of the numbers of nodes supported by the sets is made during rotation.
+OEC will re-elect block generation nodes at each fixed block height interval, called cycle. The block producer will be changed every 252 blocks (a cycle), and the next producer is elected on the 251th block of a cycle. This change takes effect in the 1st block of the next cycle. The top 21 nodes with the highest number of OKT will become the block generation nodes in the next cycle, and the nodes which are not within the top 21 ones with the highest number of OKT in the set will be forced to quit. The number of OKT should only be an integer, and the decimal part is not considered when the comparison of the numbers of nodes supported by the sets is made during each rotation.
 
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get TOKT, you can get it [here](https://www.okex.com/drawdex).
 
@@ -66,7 +66,7 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas 
 
 ### Add shares
 
-An OKExChain delegator can add shares to himself or other validator by following the command:
+An OEC delegator can add shares to himself or other validator by following the command:
 
 ```bash
 exchaincli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e --from <delegatorKeyName>
@@ -78,7 +78,7 @@ exchaincli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6
 
 ### Withdraw
 
-When an OKExChain user withdraws the deposited tokens , the share added to the validators will be removed.This token withdrawal process  takes 14 days.
+When an OEC user withdraws the deposited tokens , the share added to the validators will be removed.This token withdrawal process  takes 14 days.
 
 * The number of tokens allowed to be withdrawn must be greater or equal to be 0.0001 ~ n (total number of tokens deposited by the user).
 * If a user has added staking rights on some validators, after executing the command, the number of staking rights will be automatically updated. Essentially, this action  could be considered as a `re-vote` behavior.

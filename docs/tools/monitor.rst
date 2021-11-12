@@ -14,9 +14,9 @@ Tendermint also supports the use of prometheus metrics. This function is
 enabled by setting ``prometheus=true`` in ``config/config.toml``.
 Through setting ``prometheus_listen_addr``, the default supervision
 address ``:26660`` is changed. The default status is set as enable on
-okexchain’s testnet.
+oec’s testnet.
 
-Metrics available on okexchain
+Metrics available on oec
 ----------------------------
 
 +-------------------------------------------------------+-------------+------------------+----------------------------------------------------------------------------+
@@ -143,7 +143,7 @@ Enable ``prometheus`` and ``grafana`` in the same directory
 
 After enabling the above, you can see the information on prometheus via
 `http://localhost:9090 <http://localhost:9090/>`__. You can configure a
-dashboard (template id: 7044) suitable for okexchain via
+dashboard (template id: 7044) suitable for oec via
 `http://localhost:3000 <http://localhost:3000/>`__\ (the default account
 name and password are both admin) and adjust it by customizing the names
 of metrics.
