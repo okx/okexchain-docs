@@ -45,7 +45,7 @@ You can query an account address using the OEC CLI or REST clients:
 
 ```bash
 # NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
-exchaincli q auth account $(oec keys show <MYKEY> -a) -o text
+exchaincli q auth account $(exchaincli keys show <MYKEY> -a) -o text
 |
   address: ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
   eth_address: 0xBE2684Afc84daf3388E99FFB215FdD4116FE89EC
@@ -64,7 +64,7 @@ curl -X GET "<NODE_IP>/auth/accounts/ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme" 
 ```
 
 ::: tip
-The Cosmos SDK Keyring output (i.e `oec keys`) only supports addresses and public keys in Bech32 format.
+The Cosmos SDK Keyring output (i.e `exchaincli keys`) only supports addresses and public keys in Bech32 format.
 :::
 
 To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`oec_accounts`](./json_rpc.md#eth_accounts) endpoint:
