@@ -155,7 +155,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/install-oec.html and the guide to run a full-node [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](https://oec-docs.readthedocs.io/en/latest/getting-start/install-oec.html and the guide to run a full-node [here](https://oec-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -290,7 +290,7 @@ exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-**Before bonding okts, please read the [delegator faq](https://okexchain-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
+**Before bonding okts, please read the [delegator faq](https://oec-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
 
 
 ```bash
