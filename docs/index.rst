@@ -5,17 +5,17 @@
    contain the root `toctree` directive.
 
 
-.. figure:: ./img/okexchain-image.jpg
-   :alt: Welcome to the OKExChain
+.. figure:: ./img/oec-image.jpg
+   :alt: Welcome to the OEC
 
-   Welcome to the OKExChain
+   Welcome to the OEC
 Introduction
 ============
 
-What is OKExChain？
+What is OEC？
 -----------------
 
-OKExChain is a set of open-source blockchain projects developed by OKEx,
+OEC is a set of open-source blockchain projects developed by OKEx,
 aiming to promote the development of large-scale commercial applications
 based on blockchain technology. It gives each participating node the
 same rights, allowing users to launch a variety of decentralized applications
@@ -27,45 +27,45 @@ interconnectivity of blockchain can be realized simply and efficiently,
 so that we can co-construct the ecosystem and the value-added system.
 
 .. figure:: ./img/multi-chain.jpg
-   :alt: okexchain multi-chain
+   :alt: oec multi-chain
 
-   okexchain multi-chain
+   oec multi-chain
 
 The OKT
 -------
 
 Do you have OKT tokens? With OKT, you have the unique ability to contribute
-to the security and governance of the OKExChain. Delegate your OKT to one
-or more of the 100 validators on the OKExChain blockchain to earn more OKT
+to the security and governance of the OEC. Delegate your OKT to one
+or more of the 100 validators on the OEC blockchain to earn more OKT
 through Proof-of-Stake. You can also vote with your OKT to influence the
-future of the OKExChain through on-chain governance proposals.
+future of the OEC through on-chain governance proposals.
 
 Learn more about `being a
 delegator <./delegators/delegators-faq.html>`__.
 
-OKExChain Explorer
+OEC Explorer
 ------------------
 
-The OKExChain block explorer allows you to search, view and analyze OKExChain
+The OEC block explorer allows you to search, view and analyze OEC
 data—like blocks, transactions, validators as well as other key information
 
 -  `OKlink <https://www.oklink.com>`__
 
-OKExChain CLI
+OEC CLI
 -------------
 
 ``exchaincli`` is a command-line interface that lets you interact with
-the OKExChain. ``exchaincli`` is the only tool that supports 100% of the
-OKExChain features, including accounts, transfers, delegation, and
+the OEC. ``exchaincli`` is the only tool that supports 100% of the
+OEC features, including accounts, transfers, delegation, and
 governance. Learn more about ``exchaincli`` with the delegator’s CLI
 `guide <./delegators/delegators-guide-cli.html>`__.
 
-Running a full-node on the OKExChain Testnet
+Running a full-node on the OEC Testnet
 --------------------------------------------
 
-In order to run a full-node on the OKExChain testnet, you must first
-`install exchaind <./getting-start/install-okexchain.html>`__. Then,
-follow `the guide <./getting-start/install-okexchain.html>`__.
+In order to run a full-node on the OEC testnet, you must first
+`install exchaind <./getting-start/install-oec.html>`__. Then,
+follow `the guide <./getting-start/install-oec.html>`__.
 
 If you would like to run a validator node, follow the validator setup
 `guide <./validators/validators-guide-cli.html>`__.
@@ -74,11 +74,11 @@ Join the Community
 ------------------
 
 Have questions, comments, or ideas? Feel free to participate and to
-become part of the OKExChain community through one of the following channels.
+become part of the OEC community through one of the following channels.
 
--  `OKExChain Validator
+-  `OEC Validator
    Chat <https://t.me/joinchat/HuUCNktBLftzEY1fZPStkw>`__
--  `OKExChain Developer Chat <https://discord.gg/3A3U6JTkXA>`__
+-  `OEC Developer Chat <https://discord.gg/3A3U6JTkXA>`__
 
 
 Version
@@ -99,19 +99,19 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: OKExChain
+   :caption: OEC
 
-   okexchain/overview
+   oec/overview
 
 .. toctree::
    :maxdepth: 3
    :caption: Getting Start
 
-   getting-start/install-okexchain
-   getting-start/deploy-you-own-okexchain-testnet
-   getting-start/join-okexchain-testnet
-   getting-start/join-okexchain-testnet-with-docker
-   getting-start/join-okexchain-mainnet
+   getting-start/install-oec
+   getting-start/deploy-you-own-oec-testnet
+   getting-start/join-oec-testnet
+   getting-start/join-oec-testnet-with-docker
+   getting-start/join-oec-mainnet
    getting-start/install-faq
 
 .. toctree::
@@ -160,7 +160,7 @@ Contents
    :caption: Resources
 
    resources/genesis
-   resources/okexchaincli
+   resources/exchaincli
    resources/service-providers
    resources/snapshot
 

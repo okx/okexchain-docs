@@ -19,7 +19,7 @@ make install
 > _NOTE_:
 If you have issues at this step, please check that you have the latest stable version of GO installed.
 
-See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OKExChain release page](https://github.com/okex/okexchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OEC release page](https://github.com/okex/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 

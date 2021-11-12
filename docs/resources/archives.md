@@ -2,24 +2,24 @@
 order: 7
 -->
 
-# OKExChain Archives
+# OEC Archives
 
-With each breaking upgrade of the OKExChain, the network is restarted at height 0. During this process, an export of the last state of the previous network is made to produce the genesis state of the new one.
+With each breaking upgrade of the OEC, the network is restarted at height 0. During this process, an export of the last state of the previous network is made to produce the genesis state of the new one.
 
 As a result, the blocks of the previous networks are not downloaded by new clients (as they sync from the new genesis state), and may be deleted by existing full-nodes.
 
-In an effort to maintain transparency, the interchain hosts archives of the previous versions of the OKExChain network. These archives can be found [here](https://archive.interchain.io/).
+In an effort to maintain transparency, the interchain hosts archives of the previous versions of the OEC network. These archives can be found [here](https://archive.interchain.io/).
 
 If you would like to search explorers for previous hub data, these are some links where you can find the information:
 
 ### Big Dipper
 
-- [OKExChain 1](https://cosmoshub-1.bigdipper.live/)
-- [OKExChain 2](https://cosmoshub-2.bigdipper.live/)
+- [OEC 1](https://cosmoshub-1.bigdipper.live/)
+- [OEC 2](https://cosmoshub-2.bigdipper.live/)
 
 ### Hubble
 
-- [OKExChain 1](https://hubble.figment.network/cosmos/chains/cosmoshub-1)
-- [OKExChain 2](https://hubble.figment.network/cosmos/chains/cosmoshub-2)
+- [OEC 1](https://hubble.figment.network/cosmos/chains/cosmoshub-1)
+- [OEC 2](https://hubble.figment.network/cosmos/chains/cosmoshub-2)
 
 If you want to makes archives available to the community, feel free to open a PR to this file and add them.

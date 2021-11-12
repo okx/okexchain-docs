@@ -4,7 +4,7 @@ order: 1
 
 # Delegator Guide (CLI)
 
-This document contains all the necessary information for delegators to interact with OKExChain through the Command-Line Interface (CLI).
+This document contains all the necessary information for delegators to interact with OEC through the Command-Line Interface (CLI).
 
 > _NOTE_:
 Please assure that you follow the steps described hereinafter 
@@ -12,7 +12,7 @@ carefully, as negligence in this process could lead to an indefinite
 loss of your OKTs. Therefore, please read  the following instructions carefully 
 and entirely prior to proceeding and reach out to us in case you need support.
 
-Please also note that you are about to interact with OKExChain, a 
+Please also note that you are about to interact with OEC, a 
 blockchain technology containing highly experimental software. While the 
 blockchain has been developed in accordance with state of the art methods and audited 
 with utmost care, we can nevertheless expect to have issues, updates and bugs. 
@@ -29,9 +29,9 @@ Please exercise extreme caution!
 ## Table of Contents
 
 - [Installing `exchaincli`](#installing-exchaincli)
-- [OKExChain Accounts](#okchian-accounts)
+- [OEC Accounts](#okchian-accounts)
     + [Creating an Account](#creating-an-account)
-- [Accessing the OKExChain Network](#accessing-the-okchian-hub-network)
+- [Accessing the OEC Network](#accessing-the-oec-network)
     + [Running Your Own Full-Node](#running-your-own-full-node)
     + [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
 - [Setting Up `exchaincli`](#setting-up-exchaincli)
@@ -52,7 +52,7 @@ Please exercise extreme caution!
 [**Download the binaries**]
 Not available yet.
 
-[**Install from source**](../getting-start/install-okexchain.html)
+[**Install from source**](../getting-start/install-oec.html)
 
 `exchaincli` is used from a terminal. To open the terminal, follow these steps:
 - **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
@@ -60,9 +60,9 @@ Not available yet.
 - **Linux**: `Ctrl` + `Alt` + `T`
 
 
-## OKExChain Accounts
+## OEC Accounts
 
-At the core of every OKExChain account, there is a seed, which takes the form of a 12-words mnemonic. From this mnemonic, it is possible to create any number of OKExChain accounts, i.e. pairs of private key/public key. This is called an HD wallet (see [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) for more information on the HD wallet specification).
+At the core of every OEC account, there is a seed, which takes the form of a 12-words mnemonic. From this mnemonic, it is possible to create any number of OEC accounts, i.e. pairs of private key/public key. This is called an HD wallet (see [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) for more information on the HD wallet specification).
 
 ```
      Account 0                         Account 1                         Account 2
@@ -144,18 +144,18 @@ exchaincli keys add <yourKeyName> --recover --account 1
 This command will prompt you to input a passphrase as well as your mnemonic. 
 
 
-## Accessing the OKExChain Network
+## Accessing the OEC Network
 
 In order to query the state and send transactions, you need a way to access the network. To do so, you can either run your own full-node, or connect to someone else’s.
 
-> _NOTE_: Do not share your mnemonic (12 words) with anyone. The only person who should ever need to know it is you. This is especially important if you are ever approached via email or direct message by someone requesting that you share your mnemonic for any kind of blockchain services or support. No one from OKExChain, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to share any kind of account credentials or your mnemonic.
+> _NOTE_: Do not share your mnemonic (12 words) with anyone. The only person who should ever need to know it is you. This is especially important if you are ever approached via email or direct message by someone requesting that you share your mnemonic for any kind of blockchain services or support. No one from OEC, the Tendermint team or the Interchain Foundation will ever send an email that asks for you to share any kind of account credentials or your mnemonic.
 
 
 ### Running Your Own Full-Node
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/install-okexchain.html), and the guide to run a full-node [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/install-oec.html and the guide to run a full-node [here](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -166,13 +166,13 @@ In order to connect to the full-node, you will need an address of the following 
 ## Setting Up `exchaincli`
 
 
-**Before setting up `exchaincli`, make sure you have set up a way to [access the OKExChain network](#accessing-the-okchian-network)**  
+**Before setting up `exchaincli`, make sure you have set up a way to [access the OEC network](#accessing-the-oec-network)**  
 
 > _NOTE_:  
 **Please check that you are always using the latest stable release of `exchaincli`**
 
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKExChain network, whether you run it yourself or not. Let us set it up properly.
+`exchaincli` is the tool that enables you to interact with the node that runs on the OEC network, whether you run it yourself or not. Let us set it up properly.
 
 In order to set up `exchaincli`, use the following command:
 
@@ -252,11 +252,11 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
 
-On OKExChain testnet, the accepted denom is tOKT, If you need to get tOKT, you can get it [here](https://www.okex.com/drawdex).
+On OEC testnet, the accepted denom is tOKT, If you need to get tOKT, you can get it [here](https://www.okex.com/drawdex).
 
 ### A Note on Gas and Fees
 
-Transactions on the OKExChain network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
+Transactions on the OEC network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
 ```
 fees = ceil(gas * gasPrices)
@@ -334,7 +334,7 @@ Double check with a block explorer if you interact with the network through a tr
 
 #### Primer on Governance
 
-The OKExChain has a built-in governance system that lets bonded OKT holders vote on proposals. There are three types of proposal:
+The OEC has a built-in governance system that lets bonded OKT holders vote on proposals. There are three types of proposal:
 
 - `Text Proposals`: These are the most basic types of proposals. They can be used to get the opinion of the network on a given topic.
 - `Parameter Proposals`: These are used to update the value of an existing parameter.
@@ -385,7 +385,7 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas 
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
 
-Get the chain-id from the genesis file (`okexchain`), and the two other fields using the account query:
+Get the chain-id from the genesis file (`oec`), and the two other fields using the account query:
 
 ```bash
 exchaincli query account <yourAddress> --chain-id exchain-65

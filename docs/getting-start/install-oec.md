@@ -2,11 +2,11 @@
 order: 2
 -->
 
-# Install OKExChain
+# Install OEC
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-testnet as either a [Full Node](./join-okexchain-mainnet.html) or a
+testnet as either a [Full Node](./join-oec-mainnet.html) or a
 [Validator](../validators/validators-guide-cli.html).
 
 ## Install Go
@@ -27,12 +27,12 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-> _NOTE_: **Go 1.12+** is required for the OKExChain.
+> _NOTE_: **Go 1.12+** is required for the OEC.
 
 
 ## Install the binaries
 
-Next, let's install the latest version of OKExChain. Make sure you `git checkout` the [latest released version](https://github.com/okex/okexchain/releases).
+Next, let's install the latest version of OEC. Make sure you `git checkout` the [latest released version](https://github.com/okex/exchain/releases).
 
 ```bash
 git clone -b <latest-release-tag> https://github.com/okex/exchain
@@ -48,7 +48,7 @@ $env:GO111MODULE="on"
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
 ```
-# github.com/okex/okexchain/cmd/exchaind
+# github.com/okex/exchain/cmd/exchaind
 flag provided but not defined: -L
 usage: link [options] main.o
 ...
@@ -108,4 +108,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the mainnet](./join-okexchain-mainnet.html), [the public testnet](./join-okexchain-testnet.html) or [create you own testnet](./deploy-you-own-okexchain-testnet.html)
+Now you can [join the mainnet](./join-oec-mainnet.html), [the public testnet](./join-oec-testnet.html) or [create you own testnet](./deploy-you-own-oec-testnet.html)

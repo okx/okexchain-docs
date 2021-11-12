@@ -1,7 +1,7 @@
 
-# OKExChain Snapshot
+# OEC Snapshot
 
-Quick instructions on how to install the OKExChain snapshots.
+Quick instructions on how to install the OEC snapshots.
 
 According to the snapshot size, it is divided into S0, S1, S2 and S3:
 

@@ -1,7 +1,7 @@
 
 # JSON-RPC Methods
 
-Check the JSON-RPC methods and namespaces supported on OKExChain. 
+Check the JSON-RPC methods and namespaces supported on OEC. 
 
 ## Pre-requisite Readings
 
@@ -10,7 +10,7 @@ Check the JSON-RPC methods and namespaces supported on OKExChain.
 
 ## JSON-RPC Methods
 
-| Method                                                                            | Namespace | If supported by OKExChain | Notes        |
+| Method                                                                            | Namespace | If supported by OEC | Notes        |
 |-----------------------------------------------------------------------------------|-----------|-------------|---------------------------|
 | [`web3_clientVersion`](#web3-clientversion)                                       | Web3      | supported           |                           |
 | [`web3_sha3`](#web3-sha3)                                                         | Web3      | supported           |                           |
