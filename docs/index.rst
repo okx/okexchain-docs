@@ -27,9 +27,9 @@ interconnectivity of blockchain can be realized simply and efficiently,
 so that we can co-construct the ecosystem and the value-added system.
 
 .. figure:: ./img/multi-chain.jpg
-   :alt: oec multi-chain
+   :alt: OEC multichain framework
 
-   oec multi-chain
+   OEC multichain framework
 
 The OKT
 -------
