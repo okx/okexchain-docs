@@ -15,7 +15,7 @@ OEC provides safe and efficient infrastructure for creating decentralized applic
 In developing this open-source, trading-focused blockchain technology, OKEx has focused on providing lower operational costs for blockchain developers looking to build new decentralized-trading applications. This means lower fees for end-users of DApps based on OEC. We also designed OEC to level up user-experience standards for decentralized trading — OEC's base layer is optimized to provide the best trading performance and experience
 
 
-![oec multi-chain](../img/multi-chain.jpg)
+![OEC multichain framework](../img/multi-chain.jpg)
 ## What is Blockchain middleware？
 Normally in blockchain industry, developers are categorized as follows： 
 

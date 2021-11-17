@@ -7,7 +7,7 @@
 
 OEC is a set of open-source blockchain projects developed by OKEx, aiming to promote the development of large-scale commercial applications based on blockchain technology. It gives each participating node the same rights, allowing users to launch a variety of decentralized applications smoothly, issue their digital assets, create their own digital asset trading pairs, and trade freely. The utilisation of cross-chain technology principles is essential to allow those features to be used by anyone. Through the cross-chain module, the value interconnectivity and user interconnectivity, interconnectivity of blockchain can be realized simply and efficiently, so that we can co-construct the ecosystem and the value-added system.
 
-![oec multi-chain](./img/multi-chain.jpg)
+![OEC multichain framework](./img/multi-chain.jpg)
 
 
 ## The OKT
