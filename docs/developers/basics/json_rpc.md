@@ -22,6 +22,7 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | [`eth_gasPrice`](#eth-gasprice)                                                   | Eth       | supported           |                           |
 | [`eth_accounts`](#eth-accounts)                                                   | Eth       | supported           |                           |
 | [`eth_blockNumber`](#eth-blocknumber)                                             | Eth       | supported           |                           |
+| [`eth_chainId`](#eth_chainId)                                                     | Eth       | supported           |                           |
 | [`eth_getBalance`](#eth-getbalance)                                               | Eth       | supported           |                           |
 | [`eth_getStorageAt`](#eth-getstorageat)                                           | Eth       | supported           |                           |
 | [`eth_getTransactionCount`](#eth-gettransactioncount)                             | Eth       | supported           |                           |
@@ -44,6 +45,8 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | [`eth_uninstallFilter`](#eth-uninstallfilter)                                     | Eth       | supported           |                           |
 | [`eth_getFilterChanges`](#eth-getfilterchanges)                                   | Eth       | supported           |                           |
 | [`eth_getLogs`](#eth-getlogs)                                                     | Eth       | supported           |                           |
+| [`eth_getfilterlogs`](#eth_getfilterlogs)                                         | Eth       | supported           |                           |
+| [`eth_getTransactionLogs`](#eth_getTransactionLogs)                               | Eth       | supported           |                           |
 | [`eth_getTransactionbyBlockNumberAndIndex`](#eth-gettransactionbyblocknumberandindex) | Eth   | supported            |                           |
 | `eth_getWork`                                                                     | Eth       | not supported            |                           |
 | `eth_submitWork`                                                                  | Eth       | not supported            |                           |
@@ -141,9 +144,9 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | `miner_start`                                                                     | Miner     | not supported            |                           |
 | `miner_stop`                                                                      | Miner     | not supported            |                           |
 | `miner_setEtherbase`                                                              | Miner     | not supported            |                           |
-| `txpool_content`                                                                  | TXPool    | not supported            |                           |
-| `txpool_inspect`                                                                  | TXPool    | not supported            |                           |
-| `txpool_status`                                                                   | TXPool    | not supported            |                           |
+| [`txpool_content`](#txpool_content)                                               | TXPool    | supported            |                           |
+| [`txpool_inspect`](#txpool_inspect)                                               | TXPool    | supported            |                           |
+| [`txpool_status`](#txpool_status)                                                 | TXPool    | supported            |                           |
 
 
 :::tip
@@ -258,6 +261,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 {"jsonrpc":"2.0","id":1,"result":"0x66"}
 ```
 
+### eth_chainId
+
+Returns the chain's identifier in hex format.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":"0x63"}
+```
+
 ### eth_getBalance
 
 Returns the account balance for a given account address and Block Number.
@@ -362,6 +377,39 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0x7bf7b1
 
 // Result
 {"jsonrpc":"2.0","id":1,"result":"0xef616c92f3cfc9e92dc270d6acff9cea213cecc7020a76ee4395af09bdceb4837a1ebdb5735e11e7d3adb6104e0c3ac55180b4ddf5e54d022cc5e8837f6a4f971b"}
+```
+
+### eth_getfilterlogs
+
+Returns an array of all logs matching filter with given id.
+
+#### Parameters
+
+- The filter id
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getfilterlogs","params":["0x127e9eca4f7751fb4e5cb5291ad8b455"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":"0xef616c92f3cfc9e92dc270d6acff9cea213cecc7020a76ee4395af09bdceb4837a1ebdb5735e11e7d3adb6104e0c3ac55180b4ddf5e54d022cc5e8837f6a4f971b"}
+```
+
+### eth_getTransactionLogs
+
+Returns the logs with given a transaction hash
+
+#### Parameters
+
+- Hash of a transaction
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionLogs","params":["0x4a9e7c5ec484c1cb854d2831ff51f66f2771e8143362aa75c84f0c6544048fba"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc": "2.0","id":2233,"result":[{"address": "0x9ea0eff7153cebbdd18c2ca3bad818e29e556ba7","topics":["0x7ac369dbd14fa5ea3f473ed67cc9d598964a77501540ba6751eb0b3decf5870d"],"data": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f4ffabb197396c7f48c9cd47ec462b54ed9ce84c","blockNumber": "0x25b","transactionHash": "0x4a9e7c5ec484c1cb854d2831ff51f66f2771e8143362aa75c84f0c6544048fba",
+"transactionIndex": "0x0","blockHash": "0x77abadf9e4ad688212a70260244987f6623b54b56ea737a2cfbc7e7a6344eddc","logIndex": "0x0","removed": false}]}
 ```
 
 ### eth_sign
@@ -904,4 +952,39 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_ecRecover","params":["0
 {"jsonrpc":"2.0","id":1,"result":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70"}
 ```
 
+### txpool_content
 
+Returns a list of the exact details of all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_content","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":{"queued":{"0xbbE4733d85bc2b90682147779DA49caB38C0aA1F":{"3":{"blockHash":null,"blockNumber":null,"from":"0xbbe4733d85bc2b90682147779da49cab38c0aa1f","gas":"0x16405","gasPrice":"0x5f5e100","hash":"0xd3ee8e29bf3c5b12d1cfa18787405455b327066dbcddd6c286fda193c5644cba","input":"0x","nonce":"0x3","to":"0x96897899078973b00d49d7d0442287deff413f49","transactionIndex":null,"value":"0x6aaf7c8516d0c0000","v":"0xe9","r":"0x3779f640567c14cfd9b5390a4f1848fa23cce38f893a9b556c2c6f9e7ea074d5","s":"0x7e8bf8b9ba4a6cf4864fd6aeddb03ad0de8cdcc1b9a4351fa4ce0ba9fb49cf02"}}}}}
+```
+
+### txpool_inspect
+
+Returns a list on text format to summarize all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only. This is a method specifically tailored to developers to quickly see the transactions in the pool and find any potential issues.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_inspect","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":{"queued":{"0xbbE4733d85bc2b90682147779DA49caB38C0aA1F":{"5":"0x96897899078973b00D49d7d0442287DefF413F49: 0x56bc75e2d63100000 wei + 0x16405 gas × 0x5f5e100 wei"}}}}
+```
+
+### txpool_status
+
+Returns the number of transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_status","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":{"pending":"0x1","queued":"0x2"}}
+
+```
