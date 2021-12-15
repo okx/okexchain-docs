@@ -22,6 +22,7 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | [`eth_gasPrice`](#eth-gasprice)                                                   | Eth       | supported           |                           |
 | [`eth_accounts`](#eth-accounts)                                                   | Eth       | supported           |                           |
 | [`eth_blockNumber`](#eth-blocknumber)                                             | Eth       | supported           |                           |
+| [`eth_chainId`](#eth_chainId)                                                     | Eth       | supported           |                           |
 | [`eth_getBalance`](#eth-getbalance)                                               | Eth       | supported           |                           |
 | [`eth_getStorageAt`](#eth-getstorageat)                                           | Eth       | supported           |                           |
 | [`eth_getTransactionCount`](#eth-gettransactioncount)                             | Eth       | supported           |                           |
@@ -44,6 +45,8 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | [`eth_uninstallFilter`](#eth-uninstallfilter)                                     | Eth       | supported           |                           |
 | [`eth_getFilterChanges`](#eth-getfilterchanges)                                   | Eth       | supported           |                           |
 | [`eth_getLogs`](#eth-getlogs)                                                     | Eth       | supported           |                           |
+| [`eth_getFilterLogs`](#eth_getFilterLogs)                                         | Eth       | supported           |                           |
+| [`eth_getTransactionLogs`](#eth_getTransactionLogs)                               | Eth       | supported           |                           |
 | [`eth_getTransactionbyBlockNumberAndIndex`](#eth-gettransactionbyblocknumberandindex) | Eth   | supported            |                           |
 | `eth_getWork`                                                                     | Eth       | not supported            |                           |
 | `eth_submitWork`                                                                  | Eth       | not supported            |                           |
@@ -141,9 +144,9 @@ Check the JSON-RPC methods and namespaces supported on OEC.
 | `miner_start`                                                                     | Miner     | not supported            |                           |
 | `miner_stop`                                                                      | Miner     | not supported            |                           |
 | `miner_setEtherbase`                                                              | Miner     | not supported            |                           |
-| `txpool_content`                                                                  | TXPool    | not supported            |                           |
-| `txpool_inspect`                                                                  | TXPool    | not supported            |                           |
-| `txpool_status`                                                                   | TXPool    | not supported            |                           |
+| [`txpool_content`](#txpool_content)                                               | TXPool    | supported            |                           |
+| [`txpool_inspect`](#txpool_inspect)                                               | TXPool    | supported            |                           |
+| [`txpool_status`](#txpool_status)                                                 | TXPool    | supported            |                           |
 
 
 :::tip
@@ -258,6 +261,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 {"jsonrpc":"2.0","id":1,"result":"0x66"}
 ```
 
+### eth_chainId
+
+Returns the chain's identifier in hex format.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":"0x63"}
+```
+
 ### eth_getBalance
 
 Returns the account balance for a given account address and Block Number.
@@ -362,6 +377,39 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0x7bf7b1
 
 // Result
 {"jsonrpc":"2.0","id":1,"result":"0xef616c92f3cfc9e92dc270d6acff9cea213cecc7020a76ee4395af09bdceb4837a1ebdb5735e11e7d3adb6104e0c3ac55180b4ddf5e54d022cc5e8837f6a4f971b"}
+```
+
+### eth_getFilterLogs
+
+Returns an array of all logs matching filter with given id.
+
+#### Parameters
+
+- The filter id
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0xfe704947a3cd3ca12541458a4321c869"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc": "2.0","id": 1,"result": [{"address": "0xb5a5f22694352c15b00323844ad545abb2b11028","blockHash": "0x99e8663c7b6d8bba3c7627a17d774238eae3e793dee30008debb2699666657de","blockNumber": "0x5d12ab","data": "0x0000000000000000000000000000000000000000000000a247d7a2955b61d000","logIndex": "0x0","removed": false,"topics": ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef", "0x000000000000000000000000bdc0afe57b8e9468aa95396da2ab2063e595f37e", "0x0000000000000000000000007503e090dc2b64a88f034fb45e247cbd82b8741e"],"transactionHash": "0xa74c2432c9cf7dbb875a385a2411fd8f13ca9ec12216864b1a1ead3c99de99cd","transactionIndex": "0x3"}]}
+```
+
+### eth_getTransactionLogs
+
+Returns the logs with given a transaction hash
+
+#### Parameters
+
+- Hash of a transaction
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionLogs","params":["0x4a9e7c5ec484c1cb854d2831ff51f66f2771e8143362aa75c84f0c6544048fba"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc": "2.0","id":2233,"result":[{"address": "0x9ea0eff7153cebbdd18c2ca3bad818e29e556ba7","topics":["0x7ac369dbd14fa5ea3f473ed67cc9d598964a77501540ba6751eb0b3decf5870d"],"data": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f4ffabb197396c7f48c9cd47ec462b54ed9ce84c","blockNumber": "0x25b","transactionHash": "0x4a9e7c5ec484c1cb854d2831ff51f66f2771e8143362aa75c84f0c6544048fba",
+"transactionIndex": "0x0","blockHash": "0x77abadf9e4ad688212a70260244987f6623b54b56ea737a2cfbc7e7a6344eddc","logIndex": "0x0","removed": false}]}
 ```
 
 ### eth_sign
@@ -647,23 +695,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 {"jsonrpc":"2.0","id":1,"result":["0xc6f08d183a81e149896fc5317c872f9092068e88e956ca1864e9bd4c81c09b44","0x3ca6dfb5be15549d721d1b3d10c1bec50ed6217c9ac7b61df361fac9692a27e5","0x776fffac134171acb1ebf2e59856625501ad5ccc5c4c8fe0359e0d4dff8919f2","0x84123103704dbd738c089276ab2b04b5936330b24f6e78453c4ba8bf4848aaf9","0xffddbe5bd8e8aa41e44002daa9ea89ade9e6980a0d83f51d104cf16498827eca","0x53430e49963e8ae32605d8f22dec2e757a691e6436d593854ca4d9383eeab86a","0x975948058c9351a91fbec332ca00dda39d1a919f5f16b996a4c7e30c38ba423b","0x619e37e32024c8efef7f7220e6caff4ee1d682ea78b2ac91e0a6b30850dc0677","0x31a5d985a40d08303ac68000ce008df512bcd1a911c497415c97f0624b4a271a","0x91dcf1fce4503a8dbb3e6fb61073f25cd31d69c766ecba639fefde4436e59d07","0x606d9e0143cfdb410a6812c590a8135b5c6b5c59eec26d760d5cd930aa47257d","0xd3c00b859b29b20ba654415eef648ef58251389c73a138580db87675b0d5465f","0x954391f0eb50888be90489898016ebb54f750f612f3adec2a00854955d5e52d8","0x698905f06aff921a9e9fcef39b8b0d107747c3e6204d2ea79cf4c12debf8d253","0x9fcafec5721938a06eb8e2951ede4b6ef8fae54a8c8f85f3166ec9782a0032b5","0xaec6d3364e47a5716ba69e4705f3c705d017f81298859589591183bfea87be7a","0x91bf2ee13319b6eaca96ed89c126437b66c4df1b13560c6a9bb18556ee3b7e1f","0x4f426dc1fc0ea8149052033065b237892d2d34927b2d558ab50c5a7fb98d6e79","0xdd809fb07e5aab638fef5311371b4e2b27c9c9a6183fde0cdd2b7724f6d2a89b","0x7e12fc92ab953e233a304959a2a8474d96195e71efd9388fdceb1326a577811a","0x30618ef6b490c3cc9979c47163459db37c1a1e0aa5793c56accd417f9d89973b","0x614609f06ee24bae7408e45895b1a25e6b19a8159aeea7a95c9d1339d9ba286f","0x115ddc6d533620040791d241f01f1c5ae3d9d1a8f64b15af5e9793e4d9096e22","0xb7458c9323beeca2cd54f32a6af5671f3cd5a7a251aed9d82bdd6ebe5f56305b","0x573dd48a5ba7bf4cc3d49597cd7419f75ecc9897258f1ebadebd670446d0d358","0xcb6670918439f9698413b53f3b5336d82ca4be152fdefaacf45e052fff6262fc","0xf3fe2a8945abafd269ab97bfdc80b3dbff2202ffdce59a227f952874b966b230","0x989980707007533cc0840a079f77f261a2e818abae1a1ffd3af02f3fff1d35fd","0x886b6ae365fec996be8a9a2c31cf4cda97ff8352908be2c83f17abd66ef1591e","0xfd90df68706ef95a62b317de93d6899a9bd6c80416e42d007f5c30fcdedfce24","0x7af8491fbb0373886d9032bb74e0ef52ed9e100f260b79bd15f46126b38cbede","0x91d1e2cd55533cf7dd5de86c9aa73295e811b1279be193d429bbd6ba83810e16","0x6b65b3128c2104005a04923288fe2aa33a2477a4962bef70532f94cab582f2a7"]}
 ```
 
-<!-- 
-### eth_getFilterLogs
-
-Polling method for a filter, which returns an array of logs which occurred since last poll.
-
-#### Parameters
-
-- The filter id
-
-```json
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x127e9eca4f7751fb4e5cb5291ad8b455"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
-
-// Result
-{"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"filter 0x35b64c227ce30e84fc5c7bd347be380e doesn't have a LogsSubscription type: got 5"}} 
-``` -->
-
 ### eth_getLogs
 
 Returns an array of all logs matching a given filter object.
@@ -904,4 +935,39 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_ecRecover","params":["0
 {"jsonrpc":"2.0","id":1,"result":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70"}
 ```
 
+### txpool_content
 
+Returns a list of the exact details of all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_content","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70"}
+```
+
+### txpool_inspect
+
+Returns a list on text format to summarize all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only. This is a method specifically tailored to developers to quickly see the transactions in the pool and find any potential issues.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_inspect","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":{"queued":{"0xbbE4733d85bc2b90682147779DA49caB38C0aA1F":{"5":"0x96897899078973b00D49d7d0442287DefF413F49: 0x56bc75e2d63100000 wei + 0x16405 gas × 0x5f5e100 wei"}}}}
+```
+
+### txpool_status
+
+Returns the number of transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future execution only.
+
+```json
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_status","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":{"pending":"0x1","queued":"0x2"}}
+
+```
