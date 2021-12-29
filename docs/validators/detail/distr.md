@@ -22,7 +22,7 @@
 
 ## 3. Distribution period & Dividend strategy
 
-25% of the Reward goes to active validators and 75% goes to standby validators calculated from a percentage of the votes received.
+25% of the Reward goes to active validators and 75% goes to all  validators(include active validators and candidate validators) calculated from a percentage of the votes received.
 
 Reward allocation calculation is performed once for each block, and the reward will be deposited into the `ValidatorAccumulatedCommission`.
 
