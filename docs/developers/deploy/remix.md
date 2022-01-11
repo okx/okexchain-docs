@@ -40,7 +40,7 @@ https://www.oklink.com/oec-test
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
-- Head over to [Faucet](https://www.okex.com/drawdex) and request test OKT
+- Head over to [Faucet](https://discord.gg/B5nMs6qK5F) and request test OKT
 - Now, let's Deploy the Smart Contract on OEC Testnet
 - Select Injected Web3 in the Environment dropdown and your contract
 ![avatar](../../img/remix-06.png)
