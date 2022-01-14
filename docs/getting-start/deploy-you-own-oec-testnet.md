@@ -82,7 +82,7 @@ git clone https://github.com/okex/exchain.git
 cd exchain
 
 # Build okexchain/node image
-make build-docker-okexchainnode
+make build-docker-exchainnode
 ```
 
 ### Run Your Testnet
