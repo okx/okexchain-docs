@@ -10,7 +10,7 @@
 ## Mainnet Websocket Endpoint
 - wss://exchainws.okex.org:8443
 
-### How to configure MetaMask with OEC(Mainnet) in one step
+### How to configure MetaMask with OKC(Mainnet) in one step
 
 ```javascript
 currentProvider.send({
@@ -37,7 +37,7 @@ currentProvider.send({
 ## Testnet Websocket Endpoint
 - wss://exchaintestws.okex.org:8443
 
-### How to configure MetaMask with OEC(Testnet) in one step
+### How to configure MetaMask with OKC(Testnet) in one step
 
 ```javascript
 currentProvider.send({

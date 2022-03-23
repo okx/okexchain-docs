@@ -6,8 +6,8 @@ parent:
 
 # Resources
 
-This folder contains resources on the `oec` software.
+This folder contains resources on the `okc` software.
 
 - [`exchaincli` documentation](./exchaincli.md)
-- [`oec` genesis file](./genesis.md)
+- [`okc` genesis file](./genesis.md)
 - [Service Providers Documentation](./service-providers.md)

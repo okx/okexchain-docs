@@ -2,11 +2,11 @@
 order: 1
 -->
 
-# OEC Client
+# OKC Client
 
-## OEC CLI
+## OKC CLI
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OEC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-oec.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-start/install-oec.html).
 
 ## Setting up exchaincli
 

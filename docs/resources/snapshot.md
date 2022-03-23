@@ -1,7 +1,7 @@
 
-# OEC Snapshot
+# OKC Snapshot
 
-Quick instructions on how to install the OEC snapshots.
+Quick instructions on how to install the OKC snapshots.
 
 According to the snapshot size, it is divided into S0, S1, S2 and S3:
 

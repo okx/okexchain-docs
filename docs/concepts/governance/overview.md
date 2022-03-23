@@ -1,8 +1,8 @@
 # Proposal Module
 ## Introduction
 
-OEC adopts the concept of on-chain governance.
-OEC uses the `Proposal` approach to achieve on-chain governance. We believe that this can better reflect the decentralized concept of our system. Okt holders can participate in the governance process of OEC by initiating proposals, depositing proposals and voting on proposals (which involves okt).
+OKC adopts the concept of on-chain governance.
+OKC uses the `Proposal` approach to achieve on-chain governance. We believe that this can better reflect the decentralized concept of our system. Okt holders can participate in the governance process of OKC by initiating proposals, depositing proposals and voting on proposals (which involves okt).
 
 ## Operation
 

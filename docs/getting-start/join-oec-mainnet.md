@@ -6,9 +6,9 @@ order: 4
 
 See the [mainnet repo](https://github.com/okex/mainnet) for
 information on the latest mainnet, including the correct version
-of OEC to use and details about the genesis file.
+of OKC to use and details about the genesis file.
 
-**You need to [install oec](./install-oec.html) before you go further**
+**You need to [install okc](./install-oec.html) before you go further**
 
 ## Supported Platforms
 
@@ -102,7 +102,7 @@ Check that everything is running smoothly:
 exchaincli status
 ```
 
-See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OEC to use and details about the genesis file.
+See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OKC to use and details about the genesis file.
 
 
 ## JSON-RPC Endpoint
@@ -144,10 +144,10 @@ make install
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
-See the [mainnet repo](https://github.com/okex/mainnet) for details on which version is needed for which mainnet, and the [OEC release page](https://github.com/okex/exchain/releases) for details on each release.
+See the [mainnet repo](https://github.com/okex/mainnet) for details on which version is needed for which mainnet, and the [OKC release page](https://github.com/okex/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 
 ### Upgrade to Validator Node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a OEC Validator. The top 100 validators have the ability to propose new blocks to the OEC. Continue onto [the Validator Setup](../validators/validators-guide-cli.md).
+You now have an active full node. What's the next step? You can upgrade your full node to become a OKC Validator. The top 100 validators have the ability to propose new blocks to the OKC. Continue onto [the Validator Setup](../validators/validators-guide-cli.md).

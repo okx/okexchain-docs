@@ -1,5 +1,5 @@
 # Fullnode
-### How to Run A Fullnode on OEC
+### How to Run A Fullnode on OKC
 ### Fullnodes Functions
 - Stores the full blockchain history on disk and can answer the data request from the network.
 - Receives and validates the new blocks and transactions.

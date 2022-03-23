@@ -17,12 +17,12 @@ Voting is the primary way for token holders to participate in the on-chain gover
 
 On the other hand, there is the community ecosystem aspect. Validators need to work together in case of there are any problems or topics that need to be debated.. They need to be able to work together, cooperate and remain highly transparent at all times.
 
-You will have the ability to choose if you want to become a delegator on the OEC ecosystem. the future of the network may depend on your  votes and those who will manage it.
+You will have the ability to choose if you want to become a delegator on the OKC ecosystem. the future of the network may depend on your  votes and those who will manage it.
 
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/oec-test) or other OEC block explorers.
+In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/oec-test) or other OKC block explorers.
 
 - **Validator’s moniker**: Name of the validator candidate.
 - **Validator’s description**: Description provided by the validator operator.

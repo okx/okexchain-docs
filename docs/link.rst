@@ -5,7 +5,7 @@ References
 Mainnet
 -------
 
-`OEC Source Code <https://github.com/okex/exchain>`__
+`OKC Source Code <https://github.com/okex/exchain>`__
 
 
 Testnet

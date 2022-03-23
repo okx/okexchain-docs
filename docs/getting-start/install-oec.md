@@ -2,7 +2,7 @@
 order: 2
 -->
 
-# Install OEC
+# Install OKC
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
@@ -27,12 +27,12 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-> _NOTE_: **Go 1.12+** is required for the OEC.
+> _NOTE_: **Go 1.12+** is required for the OKC.
 
 
 ## Install the binaries
 
-Next, let's install the latest version of OEC. Make sure you `git checkout` the [latest released version](https://github.com/okex/exchain/releases).
+Next, let's install the latest version of OKC. Make sure you `git checkout` the [latest released version](https://github.com/okex/exchain/releases).
 
 ```bash
 git clone -b <latest-release-tag> https://github.com/okex/exchain

@@ -4,13 +4,13 @@ parent:
   order: 3
 -->
 
-# OEC Tutorials
+# OKC Tutorials
 
-This folder contains tutorials related to the `oec` application.
+This folder contains tutorials related to the `okc` application.
 
-- [Introduction to the `oec` application](../oec/overview.md)
+- [Introduction to the `okc` application](../oec/overview.md)
 - [Installing `exchaind`](./install-oec.md)
-- [Running a full-node for the OEC Mainnet](./join-oec-mainnet.md)
-- [Running a full-node for a OEC testnet](./join-oec-testnet.md)
+- [Running a full-node for the OKC Mainnet](./join-oec-mainnet.md)
+- [Running a full-node for a OKC testnet](./join-oec-testnet.md)
 - [Upgrading a Node from a previous version](./upgrade-node.md)
-- [Deploying a `oec` testnet](./deploy-you-own-oec-testnet.md)
+- [Deploying a `okc` testnet](./deploy-you-own-oec-testnet.md)

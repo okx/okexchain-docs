@@ -3,7 +3,7 @@
 
 ## Routing
 
-OEC needs to parse and handle transactions routed for both the EVM and for the Cosmos hub. We
+OKC needs to parse and handle transactions routed for both the EVM and for the Cosmos hub. We
 attempt to achieve this by mimicking [Geth's](https://github.com/ethereum/go-ethereum) `Transaction`
 structure and treat it as a unique Cosmos SDK message type. An Ethereum transaction is a single
 [`sdk.Msg`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#Msg) contained in an
@@ -11,14 +11,14 @@ structure and treat it as a unique Cosmos SDK message type. An Ethereum transact
 transaction information is contained in this message. This includes the signature, gas, payload,
 etc.
 
-Being that OEC implements the Tendermint ABCI application interface, as transactions are
+Being that OKC implements the Tendermint ABCI application interface, as transactions are
 consumed, they are passed through a series of handlers. Once such handler, the `AnteHandler`, is
 responsible for performing preliminary message execution business logic such as fee payment,
 signature verification, etc. This is particular to Cosmos SDK routed transactions. Ethereum routed
 transactions will bypass this as the EVM handles the same business logic.
 
 Ethereum routed transactions coming from a Web3 source are expected to be [RLP](./../core/encoding.md#rlp) encoded, however all
-internal interaction between OEC and Tendermint will utilize one of the supported encoding
+internal interaction between OKC and Tendermint will utilize one of the supported encoding
 formats: [Protobuf](./../core/encoding.md#protocol-buffers) and [Amino](./../core/encoding.md#amino).
 
 ## Transaction formats
@@ -30,13 +30,13 @@ formats: [Protobuf](./../core/encoding.md#protocol-buffers) and [Amino](./../cor
 
 ## Signatures
 
-OEC supports [EIP-155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)
+OKC supports [EIP-155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)
 signatures. A `Transaction` is expected to have a single signature for Ethereum routed transactions.
-However, just as in Cosmos, OEC will support multiple signers for non-Ethereum transactions.
+However, just as in Cosmos, OKC will support multiple signers for non-Ethereum transactions.
 Signatures over the `Transaction` type are identical to Ethereum and the signatures will not be
 duplicated in the embedding
 [`auth.StdTx`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx).
 
 ## Next 
 
-Learn about how [gas](./gas.md) is used on OEC 
+Learn about how [gas](./gas.md) is used on OKC 

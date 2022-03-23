@@ -4,9 +4,9 @@ order: 5
 
 # Service Providers
 
-We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OEC blockchain. More specifically, this document will be focused around the interactions with tokens.
+We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKC blockchain. More specifically, this document will be focused around the interactions with tokens.
 
-This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OEC blockchain end-users.
+This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OKC blockchain end-users.
 
 ## High-level description of the architecture
 
@@ -20,7 +20,7 @@ There are three main pieces to consider:
 
 ### Installation and configuration
 
-We will describe the steps to run and interact with a full-node within the OEC network. For other SDK-based blockchain, the process should be similar.
+We will describe the steps to run and interact with a full-node within the OKC network. For other SDK-based blockchain, the process should be similar.
 
 First, you need to [install the software](../getting-start/install-oec.html).
 
@@ -32,7 +32,7 @@ Then, you can start [running a full-node(testnet)](../getting-start/join-oec-tes
 
 **Please check that you are always using the latest stable release of `exchaincli`.**
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OEC network, whether you run it yourself or not. Let us set it up properly.
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKC network, whether you run it yourself or not. Let us set it up properly.
 
 In order to set up `exchaincli`, use the following command:
 
@@ -132,13 +132,13 @@ It will display all the available commands. For each command, you can use the `-
 
 The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest).
 
-To give more flexibility to developers, the OEC community has included the ability to generate unsigned transactions, [sign](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) and [broadcast](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
+To give more flexibility to developers, the OKC community has included the ability to generate unsigned transactions, [sign](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) and [broadcast](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
 
-## OEC SDK Transaction Signing
+## OKC SDK Transaction Signing
 
-OEC SDK transaction signing is a fairly simple process.
+OKC SDK transaction signing is a fairly simple process.
 
-Every OEC transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
+Every OKC transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
 
 Things to know when signing messages:
 
