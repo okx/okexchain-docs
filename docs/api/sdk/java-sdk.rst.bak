@@ -78,7 +78,7 @@ Results returned:
 .. code:: java
 
     public class AccountInfo extends AddressInfo {
-        private String accountNumber;//Account ID on OKXChain
+        private String accountNumber;//Account ID on OKC
         private String sequenceNumber;//Corresponding serial number sent by the account next time
     }
 
