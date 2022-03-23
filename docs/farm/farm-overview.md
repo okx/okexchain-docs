@@ -2,7 +2,7 @@
 
 ## introduction
 
-As an essential part of `DeFi`, `yield farming` has now been integrated into the `Farm module` of `OEC`.
+As an essential part of `DeFi`, `yield farming` has now been integrated into the `Farm module` of `OKC`.
 
 Through the `Farm module`, the project team can quickly create a `yield farming pool` by specifying the following parameters:
 
@@ -25,5 +25,5 @@ Farmers can unlock their own lockup tokens at any time. Each time, they can unlo
 
 When all the reward tokens in the farm pool have been distributed, the project team can continue to provide the reward token to the farm pool to extend the farming time, or destroy the farm pool after all the rewards and farm tokens are retrieved.
 
-If the farm token in the farm pool has created a token pair with `USDK` in the `Swap module`, then the farm pool can calculate market value with `usdk` (market value refers to the usdk value of the farm tokens locked in the farm pool). The farm pool that can calculate the market value can apply to join the `OKT mining white list`  in the `Gov module` . Farmers of a farm pool in the `OKT mining white list` can get not only token rewards in the pool, but also `OKT ` rewards. `OKT` is the native token of `OEC`. `OEC` generates `OKT` rewards in each block, 50% of which is used for validators' rewards, and 50% is allocated to all farm pools in the white list. How many `OKT` rewards can be obtained for each farm pool in each block depends on the proportion of the market value of the farm pool in all farm pools.
+If the farm token in the farm pool has created a token pair with `USDK` in the `Swap module`, then the farm pool can calculate market value with `usdk` (market value refers to the usdk value of the farm tokens locked in the farm pool). The farm pool that can calculate the market value can apply to join the `OKT mining white list`  in the `Gov module` . Farmers of a farm pool in the `OKT mining white list` can get not only token rewards in the pool, but also `OKT ` rewards. `OKT` is the native token of `OKC`. `OKC` generates `OKT` rewards in each block, 50% of which is used for validators' rewards, and 50% is allocated to all farm pools in the white list. How many `OKT` rewards can be obtained for each farm pool in each block depends on the proportion of the market value of the farm pool in all farm pools.
 

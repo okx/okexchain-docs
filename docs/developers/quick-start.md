@@ -3,9 +3,9 @@
 - [What's the Metamask](https://metamask.io/index.html)
 - [Guide for Metamask](https://docs.metamask.io/guide/)
 
-### 1. Config Metamask for OEC Testnet
+### 1. Config Metamask for OKC Testnet
 
-- NetWork Name: OEC Testnet
+- NetWork Name: OKC Testnet
 - RPC URL: 
     - https://exchaintestrpc.okex.org
 - Chain ID: 65
@@ -23,13 +23,13 @@
 
 ___
 ## Blockchain Browser
-[OEC Testnet Browser](https://www.oklink.com/oec-test)
+[OKC Testnet Browser](https://www.oklink.com/oec-test)
 ___
 
 ## Remix
-Set up a Remix OEC Testnet development environment.    
-Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OEC Testnet through Remix and interact with it.   
-### 1. Connect OEC account to Remix
+Set up a Remix OKC Testnet development environment.    
+Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKC Testnet through Remix and interact with it.   
+### 1. Connect OKC account to Remix
 Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
 

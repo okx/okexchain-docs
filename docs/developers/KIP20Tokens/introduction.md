@@ -12,10 +12,10 @@ A KIP20 token must implement the interface IKIP20 in IKIP20.sol. This is a templ
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 ```
-Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the KIP20 contract to OEC.
+Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the KIP20 contract to OKC.
 ### Interact with Contract with [Web3](https://www.npmjs.com/package/web3) and NodeJS.
 
-Connect to OEC's public RPC endpoint
+Connect to OKC's public RPC endpoint
 ```
 const Web3 = require('web3');
 

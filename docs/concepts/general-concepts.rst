@@ -7,7 +7,7 @@
 Basic concepts
 ==============
 
-Types of OEC nodes
+Types of OKC nodes
 ----------------------
 
 Full node
@@ -20,7 +20,7 @@ Validator
 
 The role of a validator is to exercise block generation rights and enjoy on-chain governance rights. In a voting session, 21 nodes that have obtained the highest numbers of votes from okt voters are elected as validator in the next cycle.
 
-Types of OEC users
+Types of OKC users
 ----------------------
 
 Normal user
@@ -31,7 +31,7 @@ A normal user is an OKT holder.
 Delegator
 ~~~~~~~~~
 
-OEC relies on a group of proposers to maintain network security. The role of a validation node is to run a full node and participate in consensus through broadcast voting (including ciphertext signed by the sender’s private key). Validation nodes are able to keep track of on-chain data, place new blocks on the blockchain and earn yields to incentivize their operation. Validation nodes can only be elected after successfully connecting to the OEC network.
+OKC relies on a group of proposers to maintain network security. The role of a validation node is to run a full node and participate in consensus through broadcast voting (including ciphertext signed by the sender’s private key). Validation nodes are able to keep track of on-chain data, place new blocks on the blockchain and earn yields to incentivize their operation. Validation nodes can only be elected after successfully connecting to the OKC network.
 
 Proposer
 ~~~~~~~~

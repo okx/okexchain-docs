@@ -112,7 +112,7 @@ Example 8: Market pressure principle. There is no obvious buying or selling pres
 
 ## Matchmaking priority mechanism
 
-Within the OEC network, there will be much more orders with different products flooding into one block since OKT holders have the ability to list their own token pair on the DEX.
+Within the OKC network, there will be much more orders with different products flooding into one block since OKT holders have the ability to list their own token pair on the DEX.
 
 The CPU resource of the node can’t afford the full matching for in-block orders during a block time.
 

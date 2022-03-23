@@ -3,9 +3,9 @@
 - [What's the Metamask](https://metamask.io/index.html)
 - [Guide for Metamask](https://docs.metamask.io/guide/)
 
-### 1. Config Metamask for OEC Mainnet
+### 1. Config Metamask for OKC Mainnet
 
-- NetWork Name: OEC Mainnet
+- NetWork Name: OKC Mainnet
 - RPC URL: 
     - https://exchainrpc.okex.org
 - Chain ID: 66
@@ -17,18 +17,18 @@
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
 
-### 3. Config ETHEREUM WEBSOCKET for OEC Mainnet
+### 3. Config ETHEREUM WEBSOCKET for OKC Mainnet
 please refer to [detail config](./basics/websocket.md)
 
 ___
 ## Blockchain Browser
-[OEC Mainnet Browser](https://www.oklink.com/oec)
+[OKC Mainnet Browser](https://www.oklink.com/oec)
 ___
 
 ## Remix
-Set up a Remix OEC Mainnet development environment.    
-Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OEC Mainnet through Remix and interact with it.   
-### 1. Connect OEC account to Remix
+Set up a Remix OKC Mainnet development environment.    
+Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKC Mainnet through Remix and interact with it.   
+### 1. Connect OKC account to Remix
 Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
 

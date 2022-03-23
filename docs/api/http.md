@@ -1,3 +1,3 @@
 # HTTP
 
-For more information, Please refer to [OEC HTTP](https://exchainrpc.okex.org/docs/en/)
+For more information, Please refer to [OKC HTTP](https://exchainrpc.okex.org/docs/en/)

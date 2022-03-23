@@ -42,9 +42,9 @@ To compile a Truffle project, change to the root of the directory where the proj
 ```
 truffle compile
 ```
-Config Truffle for OEC
+Config Truffle for OKC
 - Go to truffle-config.js
-- Update the truffle-config with OEC-network-crendentials.
+- Update the truffle-config with OKC-network-crendentials.
 ```
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const fs = require('fs');
@@ -54,7 +54,7 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard OEC port (default: none)
+      port: 8545,            // Standard OKC port (default: none)
       network_id: "*",       // Any network (default: none)
     },
     testnet: {
@@ -79,12 +79,12 @@ module.exports = {
 }
 ```
 Notice, it requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.
-### Deploying on OEC Network
+### Deploying on OKC Network
 Run this command in root of the project directory:
 ```
 $ truffle migrate --network testnet
 ```
-Contract will be deployed on OEC Chapel Testnet, it look like this:
+Contract will be deployed on OKC Chapel Testnet, it look like this:
 ```
 1_initial_migration.js
 ======================

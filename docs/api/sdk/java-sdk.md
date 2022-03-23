@@ -112,7 +112,7 @@ parameter `mnemonic` could be mnemonic or hex string pivate key.
 
 ## 3. package msg
 
-Package msg defines the message types according to module in OKExChain, and the example is the main function in class Msgxxx not end with "value" or in sample package. Take transfer coins as example as follows or you can also refer to the main fuction in class MsgSend in package `import com.okexchain.msg.common.Token`.
+Package msg defines the message types according to module in OKC, and the example is the main function in class Msgxxx not end with "value" or in sample package. Take transfer coins as example as follows or you can also refer to the main fuction in class MsgSend in package `import com.okexchain.msg.common.Token`.
 
 ##### 1. environment setting
 

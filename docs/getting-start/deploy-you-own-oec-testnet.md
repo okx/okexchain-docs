@@ -2,9 +2,9 @@
 order: 6
 -->
 
-# Deploy Your Own OEC Testnet
+# Deploy Your Own OKC Testnet
 
-This document describes 2 ways to setup a network of `oec` nodes, each serving a different usecase:
+This document describes 2 ways to setup a network of `okc` nodes, each serving a different usecase:
 
 1. Single-node, local, manual testnet
 2. Multi-node, local, automated testnet
@@ -13,7 +13,7 @@ Supporting code can be found in the [networks directory](https://github.com/okex
 
 ## Available Docker images
 
-In case you need to use or deploy oec as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
+In case you need to use or deploy okc as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
 * `docker run -it -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind init mynode`
 * `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.exchaind:/root/.exchaind okexchain/node:$TAG exchaind start`
@@ -28,7 +28,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install oec](./install-oec.html)
+- [Install okc](./install-oec.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create Genesis File and Start the Network
@@ -66,7 +66,7 @@ From the [networks/local directory](https://github.com/okex/exchain/tree/dev/net
 
 ### Requirements
 
-- [Install oec](./install-oec.html)
+- [Install okc](./install-oec.html)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 

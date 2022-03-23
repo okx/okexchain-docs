@@ -3,7 +3,7 @@ order: 4
 -->
 
 # Join the Public Testnet With Docker
-## Run OEC testnet fullnode with docker
+## Run OKC testnet fullnode with docker
 
 ### 1. Download the docker image
 

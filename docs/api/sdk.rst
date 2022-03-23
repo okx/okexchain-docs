@@ -1,7 +1,7 @@
 SDK
 ===
 
-The client SDK to connect to OEC.
+The client SDK to connect to OKC.
 
 -  `Go SDK <sdk/go-sdk.html>`__
 -  `Java SDK <sdk/java-sdk.html>`__
