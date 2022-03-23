@@ -15,7 +15,7 @@ Introduction
 What is OKC？
 -----------------
 
-OKC is a set of open-source blockchain projects developed by OKEx,
+OKC is a set of open-source blockchain projects developed by OKX,
 aiming to promote the development of large-scale commercial applications
 based on blockchain technology. It gives each participating node the
 same rights, allowing users to launch a variety of decentralized applications
