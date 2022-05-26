@@ -488,10 +488,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 ### eth_call
 
 Executes a new message call immediately without creating a transaction on the block chain.
+The eth_call method can be used to query internal contract state, to execute validations coded into a contract or even to test what the effect of a transaction would be without running it live.
+The method takes 3 parameters: 
+- an unsigned transaction object to execute in read-only mode; 
+- the block number to execute the call against;
+- an optional state override-set to allow executing the call against a modified chain state
 
 #### Parameters
 
-- Object containing:
+- Transaction call object
+  The transaction call object is mandatory and contains all the necessary parameters to execute a read-only EVM contract method  
 
     from: DATA, 20 Bytes - (optional) The address the transaction is sent from.
 
@@ -507,12 +513,36 @@ Executes a new message call immediately without creating a transaction on the bl
 
 - Block number
 
+- State override set (optional)
+    The state override set is an optional address-to-state mapping, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing:
+    balance: Quantity, - Fake balance to set for the account before executing the call.
+    nonce: Quantity, - Fake nonce to set for the account before executing the call.
+    code: Binary, - Fake EVM bytecode to inject into the account before executing the call.
+    state: Object, - Fake key-value mapping to override all slots in the account storage before executing the call.
+    stateDiff: Object, - Fake key-value mapping to override individual slots in the account storage before executing the call.
+
+The goal of the state override set is manyfold:
+    It can be used by DApps to reduce the amount of contract code needed to be deployed on chain. Code that simply returns internal state or does pre-defined validations can be kept off chain and fed to the node on-demand.
+    It can be used for smart contract analysis by extending the code deployed on chain with custom methods and invoking them. This avoids having to download and reconstruct the entire state in a sandbox to run custom code against.
+    It can be used to debug smart contracts in an already deployed large suite of contracts by selectively overriding some code or state and seeing how execution changes. Specialized tooling will probably be necessary.
+
+#### Example
+- eth_call
 ```json
 // Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{"from":"0x3b7252d007059ffc82d16d022da3cbf9992d2f70", "to":"0xddd64b4712f7c8f1ace3c145c950339eddaf221d", "gas":"0x5208", "gasPrice":"0x55ae82600", "value":"0x16345785d8a0000", "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, "0x0"],"id":1}'  -H "Content-Type: application/json" http://localhost:8545
 
 // Result
 {"jsonrpc":"2.0","id":1,"result":"0x"}
+```
+
+- eth_call with override set
+```json
+// Request
+curl -X POST --data '{"jsonrpc": "2.0","method": "eth_call","params": [{"from" : "0xbbE4733d85bc2b90682147779DA49caB38C0aA1F","to": "0x45dD91b0289E60D89Cec94dF0Aac3a2f539c514b","data" : "0xf8b2cb4f000000000000000000000000bbe4733d85bc2b90682147779da49cab38c0aa1f","gas":"0x520800", "gasPrice":"0x55ae82600"},"latest",{"0x45dD91b0289E60D89Cec94dF0Aac3a2f539c514b": {"balance" : "0x3e8000","code":"0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632e64cec1146100515780634cd8de131461006f5780636057361d1461009f578063f8b2cb4f146100bb575b600080fd5b6100596100eb565b604051610066919061025a565b60405180910390f35b61008960048036038101906100849190610196565b6100f4565b6040516100969190610238565b60405180910390f35b6100b960048036038101906100b491906101c3565b610130565b005b6100d560048036038101906100d09190610196565b61014b565b6040516100e2919061025a565b60405180910390f35b60008054905090565b60608173ffffffffffffffffffffffffffffffffffffffff16803b806020016040519081016040528181526000908060200190933c9050919050565b806000808282546101419190610291565b9250508190555050565b60008173ffffffffffffffffffffffffffffffffffffffff16319050919050565b60008135905061017b8161039b565b92915050565b600081359050610190816103b2565b92915050565b6000602082840312156101ac576101ab610385565b5b60006101ba8482850161016c565b91505092915050565b6000602082840312156101d9576101d8610385565b5b60006101e784828501610181565b91505092915050565b60006101fb82610275565b6102058185610280565b9350610215818560208601610323565b61021e8161038a565b840191505092915050565b61023281610319565b82525050565b6000602082019050818103600083015261025281846101f0565b905092915050565b600060208201905061026f6000830184610229565b92915050565b600081519050919050565b600082825260208201905092915050565b600061029c82610319565b91506102a783610319565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff038211156102dc576102db610356565b5b828201905092915050565b60006102f2826102f9565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b60005b83811015610341578082015181840152602081019050610326565b83811115610350576000848401525b50505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600080fd5b6000601f19601f8301169050919050565b6103a4816102e7565b81146103af57600080fd5b50565b6103bb81610319565b81146103c657600080fd5b5056fea26469706673582212202f99901e5c26c9c389fef67564f7c7b71316025fe9346120d3b01d4b7066034364736f6c63430008070033","state": {"0x0000000000000000000000000000000000000000000000000000000000000000":"0x0000000000000000000000000000000000000000000000000000000000000007"}},"0xbbE4733d85bc2b90682147779DA49caB38C0aA1F" :{"balance": "0x3e8000"}}],"id": 1}'  -H "Content-Type: application/json" http://localhost:8545
+
+// Result
+{"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000003e8000"}
 ```
 
 ### eth_estimateGas
