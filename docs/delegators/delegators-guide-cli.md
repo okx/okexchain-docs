@@ -155,7 +155,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](https://oec-docs.readthedocs.io/en/latest/getting-start/install-oec.html and the guide to run a full-node [here](https://oec-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](https://okc-docs.readthedocs.io/en/latest/getting-start/install-oec.html and the guide to run a full-node [here](https://okc-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -290,7 +290,7 @@ exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-**Before bonding okts, please read the [delegator faq](https://oec-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
+**Before bonding okts, please read the [delegator faq](https://okc-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
 
 
 ```bash
@@ -385,7 +385,7 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas 
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
 
-Get the chain-id from the genesis file (`oec`), and the two other fields using the account query:
+Get the chain-id from the genesis file (`okc`), and the two other fields using the account query:
 
 ```bash
 exchaincli query account <yourAddress> --chain-id exchain-65

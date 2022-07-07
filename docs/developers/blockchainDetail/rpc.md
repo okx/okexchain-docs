@@ -18,14 +18,14 @@ currentProvider.send({
     "params": [
         {
             "chainId": "0x42",
-            "chainName": "OEC Main",
+            "chainName": "OKC Main",
             "rpcUrls": ["https://exchainrpc.okex.org/"],
             "nativeCurrency": {
                 "name": "OKT",
                 "symbol": "OKT",
                 "decimals": 18
             },
-            "blockExplorerUrls": ["https://www.oklink.com/oec"]
+            "blockExplorerUrls": ["https://www.oklink.com/okc"]
         }
     ]
 })
@@ -45,14 +45,14 @@ currentProvider.send({
   "params": [
     {
       "chainId": "0x41",
-      "chainName": "OEC Testnet",
+      "chainName": "OKC Testnet",
       "rpcUrls": ["https://exchaintestrpc.okex.org"],
       "nativeCurrency": {
         "name": "OKT",
         "symbol": "OKT",
         "decimals": 18
       },
-      "blockExplorerUrls": ["https://www.oklink.com/oec-test"]
+      "blockExplorerUrls": ["https://www.oklink.com/okc-test"]
     }
   ]
 })

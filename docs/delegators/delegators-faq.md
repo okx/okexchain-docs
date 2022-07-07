@@ -22,7 +22,7 @@ You will have the ability to choose if you want to become a delegator on the OKC
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/oec-test) or other OKC block explorers.
+In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/okc-test) or other OKC block explorers.
 
 - **Validator’s moniker**: Name of the validator candidate.
 - **Validator’s description**: Description provided by the validator operator.

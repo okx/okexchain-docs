@@ -111,14 +111,14 @@ Create ``monitor.yml``
           - ./prometheus_config.yml:/etc/prometheus/prometheus.yml
         ports:
           - "9090:9090"
-          
+
       grafana:
         image: grafana/grafana
         container_name: grafana
         hostname: grafana
         user: "root"
         ports:
-          - '3000:3000'      
+          - '3000:3000'
 
 Create ``prometheus_config.yml`` in the same directory
 
@@ -143,7 +143,7 @@ Enable ``prometheus`` and ``grafana`` in the same directory
 
 After enabling the above, you can see the information on prometheus via
 `http://localhost:9090 <http://localhost:9090/>`__. You can configure a
-dashboard (template id: 7044) suitable for oec via
+dashboard (template id: 7044) suitable for okc via
 `http://localhost:3000 <http://localhost:3000/>`__\ (the default account
 name and password are both admin) and adjust it by customizing the names
 of metrics.

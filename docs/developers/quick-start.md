@@ -10,9 +10,9 @@
     - https://exchaintestrpc.okex.org
 - Chain ID: 65
 - Currency Symbol: OKT
-- Block Explorer URL: https://www.oklink.com/oec-test/
+- Block Explorer URL: https://www.oklink.com/okc-test/
 
-![avatar](../img/metamask-01-en.png)
+![avatar](../img/metamask-01-en.jpeg)
 
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
@@ -23,7 +23,7 @@
 
 ___
 ## Blockchain Browser
-[OKC Testnet Browser](https://www.oklink.com/oec-test)
+[OKC Testnet Browser](https://www.oklink.com/okc-test)
 ___
 
 ## Remix

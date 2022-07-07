@@ -10,9 +10,9 @@
     - https://exchainrpc.okex.org
 - Chain ID: 66
 - Currency Symbol: OKT
-- Block Explorer URL: https://www.oklink.com/oec/
+- Block Explorer URL: https://www.oklink.com/okc/
 
-![avatar](../img/metamask-01.for-mainnet-en.png)
+![avatar](../img/metamask-01.for-mainnet-en.jpeg)
 
 ### 2. Create a new account or import an existing account
 ![avatar](../img/metamask-01-2.png)
@@ -22,7 +22,7 @@ please refer to [detail config](./basics/websocket.md)
 
 ___
 ## Blockchain Browser
-[OKC Mainnet Browser](https://www.oklink.com/oec)
+[OKC Mainnet Browser](https://www.oklink.com/okc)
 ___
 
 ## Remix
