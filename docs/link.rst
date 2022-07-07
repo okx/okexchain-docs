@@ -15,7 +15,7 @@ Testnet
 
 `Testnet okt <https://www.okex.com/activities/pro/drawdex>`__
 
-`Testnet explorer <https://www.oklink.com/oec-test>`__
+`Testnet explorer <https://www.oklink.com/okc-test>`__
 
 
 Cosmos

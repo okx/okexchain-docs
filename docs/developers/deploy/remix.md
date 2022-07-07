@@ -34,9 +34,9 @@ Now, We have to deploy our smart contract on OKC Network. For that, we have to c
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](https://oec-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
-https://www.oklink.com/oec-test
-- Mainnet * [RPC URLs](https://oec-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
+- Testnet * [RPC URLs](https://okc-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
+https://www.oklink.com/okc-test
+- Mainnet * [RPC URLs](https://okc-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
@@ -48,7 +48,7 @@ https://www.oklink.com/
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/oec-test
+Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okc-test
 
 
 ### Remix FAQ
