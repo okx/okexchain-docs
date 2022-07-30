@@ -5,7 +5,7 @@
    contain the root `toctree` directive.
 
 
-.. figure:: ./img/okc-image.png
+.. figure:: ./img/okc2022poster.png
    :alt: Welcome to the OKC
 
    Welcome to the OKC
@@ -26,7 +26,7 @@ cross-chain module, the value interconnectivity and user interconnectivity,
 interconnectivity of blockchain can be realized simply and efficiently,
 so that we can co-construct the ecosystem and the value-added system.
 
-.. figure:: ./img/multi-chain.jpg
+.. figure:: ./img/okc2022ibc.png
    :alt: OKC multichain framework
 
    OKC multichain framework
