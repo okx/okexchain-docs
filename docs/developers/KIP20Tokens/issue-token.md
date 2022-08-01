@@ -6,7 +6,7 @@ Compile and Deploy KIP20 Contract
 ![avatar](../../img/issue-token-01.png)
 1.Select solidity language
 ![avatar](../../img/issue-token-02.png)
-1.Create new contract KIP20Token.sol and copy contract code from the KIP20 token template [here](https://github.com/okex/KIPs/blob/master/docs/final/KIP-20.md)
+1.Create new contract KIP20Token.sol and copy contract code from the KIP20 token template [here](https://github.com/okex/KIPs/blob/master/docs/final)
 
 2.Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/issue-token-03.png)
