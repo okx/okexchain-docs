@@ -1,6 +1,6 @@
 # packages for RTD to pick up (not used for local dev)
 # crate-docs-theme>=0.7
-okchain1-docs-theme>=0.1.40
+okchain1-docs-theme>=0.1.41
 sphinx-csv-filter
 Pygments==2.3.1
 Jinja2<3.1
