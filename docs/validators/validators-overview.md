@@ -29,4 +29,4 @@ Set up a dedicated validator website and signal your intention to become a valid
 
 Discuss the finer details of being a validator on our community chat and forum:
 
-* [Validator Chat](https://t.me/OKExChainValidator)
+* [Validator Chat](https://discord.gg/VM4PRxYjtS)
