@@ -1,4 +1,4 @@
-# Delegators Overview
+# Staking Overview
 
 
 
@@ -52,6 +52,14 @@ weight = (now_timestamp - start_timestamp) / (seconds_per_day * 7) / weeks_per_y
 shares = delegated_tokens * 2^weight
 ```
 The best staking management strategy consists in increasing the level of staking rights   once a week to ensure that the staking powers held are always up to date.
+
+
+
+## Staking rewards
+Users can deposit OKT and add shares for validators. When validators receive rewards, they will be automatically distributed to these users as rewards according to their voting weights according to a preset ratio, and users can freely withdraw rewards
+
+To have a look at a reward distribution mechanism and rules, please click [here](../validators/detail/distr.md) 
+
 
 ## Punishment
 OKC has an automatic penalty mechanism on-chain, that is currently implemented for two types of behavior:

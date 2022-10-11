@@ -22,6 +22,7 @@ Staking cli command contains the 5 following commands for PoS operations.
 
 * create-validator：create a validator
 * edit-validator：update a validator
+* edit-validator-commission-rate: edit the validator commission‘ rate
 * deposit：deposit  tokens
 * add shares：add shares that are calculated by deposited token
 * withdraw：withdraw the deposited token
@@ -45,7 +46,7 @@ Upgrade a node to a validator and set the description on a validator.
 
 ### Update a validator
 
-The operator can update the description of the validator and adjust the commission rate.
+The operator can update the description of the validator.
 
 ```bash
 exchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from jack
@@ -56,6 +57,19 @@ exchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 * **website** indicates the website address of the validator to be updated
 * **details** indicate the detailed description of the validator to be updated
 * **from** specifies the operator’s account, which is jack here
+
+
+
+### Update an existing validator commission rate
+
+The operator can adjust the commission rate of the validator.
+
+
+```bash
+exchaincli tx staking edit-validator-commission-rate 0.5 --from jack --gas auto --gas-prices 0.0000000001okt --gas-adjustment 1.3 -y  
+```
+
+* **commission-rate**  adjust validator's commission range rate, range [0,1]
 
 
 ### Deposit
@@ -98,8 +112,34 @@ exchaincli tx staking withdraw 10okt --from rose
 
 ### Reward
 
+Validators are rewarded, allocation according to the commission to self, and the remaining part is automatically allocated to these users as rewards according to the voting weight
+
+To have a look at a reward distribution mechanism and rules, please click [here](../validators/detail/distr.md) 
+
+
+
+Query available rewards by a specified validator address.
+
+```shell
+exchaincli query distr commission <validatorAddress>
+```
+
+* **validatorAddress:**  queried validator address, ex:exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x
+
+
+
+Query distribution outstanding (un-withdrawn) rewards for a validator and all their delegations.
+
+```bash
+exchaincli query distr outstanding-rewards <validatorAddress>
+```
+
+* **validatorAddress:**  queried validator address, ex:exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x
+
+
+
 Validators will be rewarded for  performing well. The owner can withdraw the rewards by using the command below:
 
 ```
-exchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx distr withdraw-rewards <validator-addr> --commission --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```

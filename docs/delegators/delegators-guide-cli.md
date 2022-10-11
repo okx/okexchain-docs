@@ -220,17 +220,21 @@ exchaincli query account <yourAddress>
 // query the list of validators
 exchaincli query staking validators
 
-// query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
+// query the information of a validator given their address (e.g. exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv)
 exchaincli query staking validator <validatorAddress>
 
 // query all information of delegations and all shares recently added by a delegator (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn)
 exchaincli query staking delegator <delegatorAddress>
 
-// query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
+// query the information of all shares recently added to a validator (e.g. exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv) 
 exchaincli query staking shares-added-to <validatorAddress>
 
 // query the addresses of delegators by a specific proxy (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) 
 exchaincli query staking proxy <proxyAddress> 
+
+// Query all rewards earned by a delegator, optionally restrict to rewards from a single validator (e.g. exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv) 
+exchaincli query distr rewards [validatorAddress]
+
 
 // query all proposals currently open for depositing
 exchaincli query gov proposals --status deposit_period
@@ -302,9 +306,17 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas 
 
 
 // Add shares to one or more validators by all deposited okt
-// ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
+// ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,exvaloper1fymxn4gazxzjdfvwvr0ccnrnjpwmj0r9vw3t2y,exvaloper1tkwxgcpvptua0q0h5tn0at58ufnjdue7xp9jh4,exvaloper1ja9xngm4zh0t442mse73ll30p7dczd49s88n2x, <gasPrice>=0.005okt
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+
+// Withdraw rewards from a given validator address.
+// ex value for flags: <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+
+exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+
+// Withdraw all delegations rewards for a delegator.
+exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
 // Withdraw an amount of okt and the corresponding shares from all validators.
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
@@ -326,6 +338,14 @@ exchaincli query staking delegator <delegatorAddress>
 // use the tx hash that was displayed when you created the tx
 exchaincli query tx <txHash>
 
+```
+
+Query rewards
+
+```bash
+// Query all rewards earned by a delegator, optionally restrict to rewards from a single validator.
+// ex value for flags: <delegatorAddr>=ex1ja9xngm4zh0t442mse73ll30p7dczd49xqdhwu, [validatorAddr]=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 ```
 
 Double check with a block explorer if you interact with the network through a trusted full-node.
