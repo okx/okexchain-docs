@@ -11,7 +11,7 @@ Token holders can delegate staking rights through the “delegation” command, 
 
 To have a look at a practical guide on how to become a delegator, please click [here](./delegators-guide-cli.html).
 
-
+Staking is a unique action under the PoS (Proof of Stake) consensus mechanism. In PoS consensus, validators are responsible for packaging transaction information, maintaining network operations, and participating in community governance. As a reward, users can obtain additional tokens issued by the system.
 
 
 ## Staking Mechanics

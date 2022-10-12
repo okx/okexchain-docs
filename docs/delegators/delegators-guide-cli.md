@@ -310,20 +310,31 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas 
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
-// Withdraw rewards from a given validator address.
-// ex value for flags: <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
-
-exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-// Withdraw all delegations rewards for a delegator.
-exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
 // Withdraw an amount of okt and the corresponding shares from all validators.
 // You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
 // ex value for flags: <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
 
 exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
+
+
+
+To query  and withdraw after add shares, you can use the following cli:
+
+```
+// Query all rewards earned by a delegator, optionally restrict to rewards from a single validator.
+// ex value for flags: <delegatorAddr>=ex1ja9xngm4zh0t442mse73ll30p7dczd49xqdhwu, [validatorAddr]=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+exchaincli query distr rewards <delegatorAddr> [validatorAddr]
+
+// Withdraw rewards from a given validator address.
+// ex value for flags: <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+
+// Withdraw all delegations rewards for a delegator.
+exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+
 
 To confirm that your transaction went through, you can use the following queries:
 
@@ -340,13 +351,7 @@ exchaincli query tx <txHash>
 
 ```
 
-Query rewards
 
-```bash
-// Query all rewards earned by a delegator, optionally restrict to rewards from a single validator.
-// ex value for flags: <delegatorAddr>=ex1ja9xngm4zh0t442mse73ll30p7dczd49xqdhwu, [validatorAddr]=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
-exchaincli query distr rewards <delegatorAddr> [validatorAddr]
-```
 
 Double check with a block explorer if you interact with the network through a trusted full-node.
 
