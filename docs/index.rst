@@ -132,6 +132,7 @@ Contents
 
    delegators/delegators-overview
    delegators/delegators-guide-cli
+   delegators/delegators-staking-cli
    delegators/delegators-faq
 
 .. toctree::
