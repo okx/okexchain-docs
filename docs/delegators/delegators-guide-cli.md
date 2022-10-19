@@ -290,45 +290,9 @@ exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-**Before bonding okts, please read the [delegator faq](https://okc-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
+Use command-line interface (CLI) commands to earn staking rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.md).
 
 
-```bash
-
-// Deposit an amount of okt to delegator account. Deposited okt in delegator account is a prerequisite for adding shares
-// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt
-
-exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-
-// Add shares to one or more validators by all deposited okt
-// ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
-
-exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-// Withdraw an amount of okt and the corresponding shares from all validators.
-// You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
-// ex value for flags: <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
-
-exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-```
-
-To confirm that your transaction went through, you can use the following queries:
-
-```bash
-// your balance should change after you bond okts or withdraw rewards
-exchaincli query account
-
-// you should have delegations after you bond okt
-exchaincli query staking delegator <delegatorAddress>
-
-// this returns your tx if it has been included
-// use the tx hash that was displayed when you created the tx
-exchaincli query tx <txHash>
-
-```
-
-Double check with a block explorer if you interact with the network through a trusted full-node.
 
 ## Participating in Governance
 

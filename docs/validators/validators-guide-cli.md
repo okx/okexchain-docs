@@ -22,6 +22,7 @@ Staking cli command contains the 5 following commands for PoS operations.
 
 * create-validator：create a validator
 * edit-validator：update a validator
+* edit-validator-commission-rate：update a validator commission rate
 * deposit：deposit  tokens
 * add shares：add shares that are calculated by deposited token
 * withdraw：withdraw the deposited token
@@ -57,8 +58,18 @@ exchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 * **details** indicate the detailed description of the validator to be updated
 * **from** specifies the operator’s account, which is jack here
 
+### Update validator commission rate
+
+Update an existing validator,e.g., <commission-rate>=0.2
+
+```bash
+exchaincli tx staking edit-validator-commission-rate <commission-rate> [flags]
+```
+
+- **commission-rate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
 
 ### Deposit
+
 Users first need to deposit a certain amount of OKTs to make the staking account become a delegator one.
 ```bash
 exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
@@ -101,5 +112,5 @@ exchaincli tx staking withdraw 10okt --from rose
 Validators will be rewarded for  performing well. The owner can withdraw the rewards by using the command below:
 
 ```
-exchaincli tx distr withdraw-rewards <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx distr withdraw-rewards --commission <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
