@@ -251,7 +251,7 @@ exchaincli query distr community-pool
 // Change the default withdrawal address.
 // e.g., <withdraw-addr>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e,<gasPrice>=0.005okt
 
-exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ## Query reward withdrawal address
