@@ -116,7 +116,7 @@ exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 
 ```Shell
 // Withdraw rewards from a given validator address.
-// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.005okt
 
 exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -125,6 +125,7 @@ exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> -
 
 ```Shell
 // Withdraw all delegations rewards for a delegator.
+// e.g., <gasPrice>=0.005okt
 
 exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -140,9 +141,9 @@ Note: On every command, users can write ` -h or --help` to get more help info.
 ```Shell
 // Update an existing validator commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. 
 //Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio.
-// e.g., <commission-rate>=0.2
+// e.g., <commission-rate>=0.2,<gasPrice>=0.005okt
 
-exchaincli tx staking edit-validator-commission-rate <commission-rate> [flags]
+exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ## Query validator commission rate
@@ -167,9 +168,9 @@ exchaincli query distr commission <validatorAddress>
 
 ```Shell
 // Withdraw validator's commission reward with --commission parameter. This will automatically distribute to its own account (or reward withdraw account).
-// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.005okt
 
-exchaincli tx distr withdraw-rewards <validatorAddr> --commission [flags]
+exchaincli tx distr withdraw-rewards <validatorAddr> --commission --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 # General operating commands
@@ -248,9 +249,9 @@ exchaincli query distr community-pool
 
 ```Shell
 // Change the default withdrawal address.
-// e.g., <withdraw-addr>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e
+// e.g., <withdraw-addr>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e,<gasPrice>=0.005okt
 
-exchaincli tx distr set-withdraw-addr <withdraw-addr>
+exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 ## Query reward withdrawal address
