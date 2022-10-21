@@ -47,13 +47,13 @@ exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-ad
 exchaincli query staking delegator <delegatorAddress>
 ```
 
-# Common command operations of ordinary users
+## Common command operations of ordinary users
 
 Ordinary users can reference the following commands below to conduct staking and voting, hence obtaining dividend rewards.
 
 Note: On every command, users can write ` -h or --help` to get more help info.
 
-## Staking OKT
+### Staking OKT
 
 ```Shell
 // Deposit an amount of OKT to the delegator account.
@@ -68,7 +68,7 @@ exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas 
 exchaincli query staking delegator <delegatorAddress>
 ```
 
-## Voting
+### Voting
 
 ```Shell
 // Add shares to one or more validators with all deposited OKT.
@@ -84,7 +84,7 @@ exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-ad
 exchaincli query staking delegator <delegatorAddress>
 ```
 
-## Withdraw OKT
+### Withdraw OKT
 
 ```Shell
 // Withdraw an amount of OKT and the corresponding shares from all validators.
@@ -94,7 +94,7 @@ exchaincli query staking delegator <delegatorAddress>
 exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## Query staking info
+### Query staking info
 
 ```Shell
 // Query all information of delegations and all shares recently added by a delegator.
@@ -103,7 +103,7 @@ exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --ga
 exchaincli query staking delegator <delegatorAddress>
 ```
 
-## Query staking dividend rewards
+### Query staking dividend rewards
 
 ```Shell
 // Query all rewards earned by a delegator, optionally restrict to rewards from a single validator.
@@ -112,7 +112,7 @@ exchaincli query staking delegator <delegatorAddress>
 exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 ```
 
-## Withdraw a single validator's staking reward
+### Withdraw a single validator's staking reward
 
 ```Shell
 // Withdraw rewards from a given validator address.
@@ -121,7 +121,7 @@ exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## Withdraw all validator staking rewards
+### Withdraw all validator staking rewards
 
 ```Shell
 // Withdraw all delegations rewards for a delegator.
@@ -130,13 +130,13 @@ exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> -
 exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-# Common command operations of validators
+## Common command operations of validators
 
 Validators can reference the following commands below to set up a commission rate, withdraw a commission reward, etc.
 
 Note: On every command, users can write ` -h or --help` to get more help info.
 
-## Setting up a validator commission rate
+### Setting up a validator commission rate
 
 ```Shell
 // Update an existing validator commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. 
@@ -146,7 +146,7 @@ Note: On every command, users can write ` -h or --help` to get more help info.
 exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## Query validator commission rate
+### Query validator commission rate
 
 ```Shell
 // Query the information of a validator with the given address. 
@@ -155,7 +155,7 @@ exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <d
 exchaincli query staking validator <validatorAddress>
 ```
 
-## Query validator commission reward
+### Query validator commission reward
 
 ```Shell
 // Query available rewards of a validator address.
@@ -164,7 +164,7 @@ exchaincli query staking validator <validatorAddress>
 exchaincli query distr commission <validatorAddress>
 ```
 
-## Withdraw validator commission reward
+### Withdraw validator commission reward
 
 ```Shell
 // Withdraw commission reward of validator with commission parameter. This will automatically distribute to its own account (or reward withdraw account).
@@ -173,13 +173,13 @@ exchaincli query distr commission <validatorAddress>
 exchaincli tx distr withdraw-rewards <validatorAddr> --commission --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-# General operating commands
+## General operating commands
 
 `exchaincli` command can query all the following info from the blockchain: account balance, number of bound tokens (OKT staked and voted for one or more validators), not yet withdrawn commissions, dividend rewards, etc.
 
 Note: On every command, users can write ` -h or --help` to get more help info.
 
-## Query account info
+### Query account info
 
 ```Shell
 // Your balance will change after staking OKTs or withdrawing rewards.
@@ -187,7 +187,7 @@ Note: On every command, users can write ` -h or --help` to get more help info.
 exchaincli query account <yourAddress>
 ```
 
-## Query transaction execution results
+### Query transaction execution results
 
 ```Shell
 // This returns the execution result of a Tx
@@ -195,7 +195,7 @@ exchaincli query account <yourAddress>
 exchaincli query tx <txHash>
 ```
 
-## Query all validator lists
+### Query all validator lists
 
 ```Shell
 // Query the list of all validators.
@@ -203,7 +203,7 @@ exchaincli query tx <txHash>
 exchaincli query staking validators
 ```
 
-## Query all validator details
+### Query all validator details
 
 ```Shell
 // Query the details of a validator with a given address.
@@ -212,7 +212,7 @@ exchaincli query staking validators
 exchaincli query staking validator <validatorAddress>
 ```
 
-## Query all validator voting details
+### Query all validator voting details
 
 ```Shell
 // Query the information of all shares recently added to a validator.
@@ -221,7 +221,7 @@ exchaincli query staking validator <validatorAddress>
 exchaincli query staking shares-added-to <validatorAddress>
 ```
 
-## Query staking module parameters
+### Query staking module parameters
 
 ```Shell
 // Query the parameters of the staking module.
@@ -229,7 +229,7 @@ exchaincli query staking shares-added-to <validatorAddress>
 exchaincli query staking params 
 ```
 
-## Query reward module parameters
+### Query reward module parameters
 
 ```Shell
 // Query the parameters of the distrbution module.
@@ -237,7 +237,7 @@ exchaincli query staking params
 exchaincli query distr params
 ```
 
-## Query community pool balance
+### Query community pool balance
 
 ```Shell
 // Query the balance of the community pool.
@@ -245,7 +245,7 @@ exchaincli query distr params
 exchaincli query distr community-pool
 ```
 
-## Set reward withdrawal address
+### Set reward withdrawal address
 
 ```Shell
 // Change the default withdrawal address.
@@ -254,7 +254,7 @@ exchaincli query distr community-pool
 exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## Query reward withdrawal address
+### Query reward withdrawal address
 
 ```Shell
 // Query the reward withdrawal address of a delegator.

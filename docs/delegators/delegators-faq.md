@@ -21,6 +21,10 @@ On the other hand, there is the community ecosystem aspect. Validators need to w
 
 You will have the ability to choose if you want to become a delegator on the OKC ecosystem. the future of the network may depend on your  votes and those who will manage it.
 
+## Incentives
+
+For more information on incentives, see [Staking Rewards Algorithm](../validators/detail/distr.html).
+
 
 ## Choosing a validator
 

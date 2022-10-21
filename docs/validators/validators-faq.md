@@ -125,7 +125,7 @@ The validator that is selected to propose the next block is called **proposer**.
 
 ## Incentives
 
-For more information on incentives, see [Reward distribution](../validators/detail/distr.html).
+For more information on incentives, see [Staking Rewards Algorithm](../validators/detail/distr.html).
 
 
 
