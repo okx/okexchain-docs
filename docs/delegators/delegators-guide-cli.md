@@ -138,7 +138,7 @@ rm ~/.bash_history
 You can generate more accounts from the same mnemonic using the following command:
 
 ```bash
-exchaincli keys add <yourKeyName> --recover --account 1
+exchaincli keys add <yourKeyName> --recover --account 1 --mnemonic <mnemonicStrs>
 ```
 
 This command will prompt you to input a passphrase as well as your mnemonic. 
