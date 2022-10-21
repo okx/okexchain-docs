@@ -1,12 +1,12 @@
-Detailed explanation of OKCs staking rewards algorithm
+# OKC staking rewards algorithm
 
-# Background
+## Background
 
 OKC allows users to stake OKT and vote for one or more validators, thus allowing users to receive dividend rewards on the chain. This paper explains the principles and specific guidelines of dividend rewards obtained from staking OKT.
 
 
 
-# Example of an on-chain staking reward
+## Example of an on-chain staking reward
 
 OKC allows anyone that stakes a minimum of atleast 10,000 OKT the ability to operate a full node to become a registered validator. After every epoch cycle (252 blocks), OKC will calculate the weight of every validator and the Top 21 weighted nodes will become the next epoch cycle’s block producers that participate in consensus, while the others become alternative nodes. Under Tendermint’s consensus algorithm, these 21 nodes will vote to produce the new block. Every validator that participates in the maintenance of the OKC network receives a corresponding block reward.
 
@@ -49,9 +49,9 @@ Using the following website's data as an example, imagine a user holds 1000 OKT 
 
 
 
-# Rules of on-chain staking rewards
+## Rules of on-chain staking rewards
 
-## Role definition
+### Role definition
 
 | Name      | Definition                                                   | Election Condition                                           | Quantity           |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
@@ -63,7 +63,7 @@ Using the following website's data as an example, imagine a user holds 1000 OKT 
 
 
 
-## Source of staking rewards
+### Source of staking rewards
 
 OKCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 41.69M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.5 OKT reward, and the reward is halved every 3 years.
 
@@ -115,13 +115,13 @@ Below is a specific explanation of the distribution rules for block rewarding:
 
 ![1](../../img/reward-1.png)
 
-## Exchange and multiple voting
+### Exchange and multiple voting
 
 After staking OKT (minimum of 0.0001 OKT per stake), users can opt to exchange their voting rights for the validator node. It’s worth mentioning that OKC uses a multi-voting system, where users can vote for up to 30 validator nodes after completing their stakes (each node can only be voted for once). Furthermore, when users want to stake OKT again, they will not need to go through the voting process again, but will vote for their previous validator node by default.
 
 ![](../../img/reward-2.png)
 
-## Staking rewards calculator
+### Staking rewards calculator
 
 **Glossary**
 
@@ -171,7 +171,7 @@ Below is delegator A's process of staking, voting, revoking stake and explanatio
 
   
 
-## Withdrawing rewards
+### Withdrawing rewards
 
 Users who have accumulated a certain amount of earnings can claim their earnings into their wallets in two ways: active withdrawal and passive withdrawal.
 
@@ -193,7 +193,7 @@ Truncation precision can be adjusted through community proposal governance. The 
   exchaincli query distr params
 ```
 
-## Unstaking OKT and locking cycles
+### Unstaking OKT and locking cycles
 
 Users can initate an OKT retrieval (unstake) application through the command line. Unstaking requires a 14 day token locking period. During this time, locked OKT will not receive staking rewards, and users cannot conduct any other actions. If users apply for OKT retrieval multiple times during the 14 day lock period, all applications will be converged into one, and the lockdown period countdown will reset starting from the most recent application.
 
