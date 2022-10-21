@@ -38,7 +38,7 @@ Please exercise extreme caution!
 - [Querying the State](#querying-the-state)
 - [Sending Transactions](#sending-transactions)
     + [A Note on Gas and Fees](#a-note-on-gas-and-fees)
-    + [Bonding okts and Withdrawing Rewards](#bonding-okts-and-withdrawing-rewards)
+    + [Staking okts and Earn Rewards](#staking-okts-and-earn-rewards)
     + [Participating in Governance](#participating-in-governance)
     + [Signing Transactions from an Offline Computer](#signing-transactions-from-an-offline-computer)
 
@@ -273,7 +273,7 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 
 ### Sending Tokens
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
+**Before you can send the txs, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
 
 
 
@@ -286,13 +286,13 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## Earn staking rewards
+### Staking okts and Earn Rewards
 
-**Before you can  earn staking rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
+**Before you can staking okt and earn rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-Use command-line interface (CLI) commands to earn staking rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.html).
+Use command-line interface (CLI) commands to staking okts and earn rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.html).
 
-## Participating in Governance
+### Participating in Governance
 
 #### Primer on Governance
 
@@ -310,7 +310,7 @@ At the end of the voting period, the proposal is accepted if there are more than
 
 #### In Practice
 
-**Before you can bond OKTs and withdraw rewards, you need to [bond OKTs](#bonding-okts-and-withdrawing-rewards).**
+**Before you can send the txs, you need to [Staking OKTs](#staking-okts-and-earn-rewards).**
 
 
 
