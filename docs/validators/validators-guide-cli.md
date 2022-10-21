@@ -30,8 +30,6 @@ Staking cli command contains the following commonly commands.
 
 Upgrade a node to a validator and set the description on a validator.
 
-> <gasPrice>=0.00000001okt
-
 ```bash
   exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -43,6 +41,7 @@ Upgrade a node to a validator and set the description on a validator.
 * **Website** indicates the validator’s website address
 * **Details** indicate the validator’s detailed description
 * **From** specifies the operator’s account
+* **gasPrice** 0.00000001okt
 
 
 ### Update a validator
@@ -58,13 +57,16 @@ exchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 * **website** indicates the website address of the validator to be updated
 * **details** indicate the detailed description of the validator to be updated
 * **from** specifies the operator’s account
+* **gasPrice** 0.00000001okt
 
 ### Update validator commission rate
 
-Update an existing validator,e.g., <commission-rate>=0.2
+Update an existing validator commission rate.
 
 ```bash
-exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx staking edit-validator-commission-rate <commissionRate> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-- **commission-rate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
+- **commissionRate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
+- **from** specifies the operator’s account
+- **gasPrice** 0.00000001okt
