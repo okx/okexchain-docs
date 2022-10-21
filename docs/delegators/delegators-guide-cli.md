@@ -273,7 +273,7 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 
 ### Sending Tokens
 
-**Before you can send the txs, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
+**Before you can send tokens, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
 
 
 
@@ -310,7 +310,7 @@ At the end of the voting period, the proposal is accepted if there are more than
 
 #### In Practice
 
-**Before you can send the txs, you need to [Staking OKTs](#staking-okts-and-earn-rewards).**
+**Before you can voting gov proposal , you need to [Staking OKTs](#staking-okts-and-earn-rewards).**
 
 
 
