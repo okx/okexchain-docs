@@ -167,7 +167,7 @@ exchaincli query distr commission <validatorAddress>
 ## Withdraw validator commission reward
 
 ```Shell
-// Withdraw validator's commission reward with --commission parameter. This will automatically distribute to its own account (or reward withdraw account).
+// Withdraw commission reward of validator with commission parameter. This will automatically distribute to its own account (or reward withdraw account).
 // e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.005okt
 
 exchaincli tx distr withdraw-rewards <validatorAddr> --commission --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
