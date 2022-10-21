@@ -30,6 +30,8 @@ Staking cli command contains the following commonly commands.
 
 Upgrade a node to a validator and set the description on a validator.
 
+> <gasPrice>=0.00000001okt
+
 ```bash
   exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
