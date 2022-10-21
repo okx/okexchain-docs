@@ -290,7 +290,7 @@ exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can  earn staking rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-Use command-line interface (CLI) commands to earn staking rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.md).
+Use command-line interface (CLI) commands to earn staking rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.html).
 
 ## Participating in Governance
 
