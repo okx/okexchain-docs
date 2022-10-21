@@ -342,7 +342,7 @@ If you do not have a Hardware Wallet and want to interact with your private key 
 // Bond okts 
 // ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
 
-exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
+exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas 3000000 --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
