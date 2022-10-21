@@ -18,21 +18,20 @@ OKC will re-elect block generation nodes at each fixed block height interval, ca
 
 
 ## cli command
-Staking cli command contains the 6 following commands for PoS operations.
+Validator cli command contains the 3 following commonly commands.
 
 * create-validator：create a validator
 * edit-validator：update a validator
 * edit-validator-commission-rate：update a validator commission rate
-* deposit：deposit  tokens
-* add shares：add shares that are calculated by deposited token
-* withdraw：withdraw the deposited token
+
+> _NOTE_: For more cli, it is recommended that you read [delegators-staking-cli](../delegators/delegators-staking-cli.html). 
 
 ### Create a validator
 
 Upgrade a node to a validator and set the description on a validator.
 
 ```bash
-  exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from jack
+  exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 > _NOTE_: If you set home flag when executing `exchaind start`, `exchaind tendermint show-validator` the inputs after home flag should be the same as `okexcahind start`.
 
@@ -41,7 +40,7 @@ Upgrade a node to a validator and set the description on a validator.
 * **Identity** specifies the address of the validator’s profile picture
 * **Website** indicates the validator’s website address
 * **Details** indicate the validator’s detailed description
-* **From** specifies the operator’s account, which is jack here
+* **From** specifies the operator’s account
 
 
 ### Update a validator
@@ -49,68 +48,21 @@ Upgrade a node to a validator and set the description on a validator.
 The operator can update the description of the validator and adjust the commission rate.
 
 ```bash
-exchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from jack
+exchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 * **moniker** indicates the alias of the validator to be updated
 * **identity** specifies the address of the profile picture of the validator to be updated
 * **website** indicates the website address of the validator to be updated
 * **details** indicate the detailed description of the validator to be updated
-* **from** specifies the operator’s account, which is jack here
+* **from** specifies the operator’s account
 
 ### Update validator commission rate
 
 Update an existing validator,e.g., <commission-rate>=0.2
 
 ```bash
-exchaincli tx staking edit-validator-commission-rate <commission-rate> [flags]
+exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 - **commission-rate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
-
-### Deposit
-
-Users first need to deposit a certain amount of OKTs to make the staking account become a delegator one.
-```bash
-exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-```
-
-### Add shares
-
-An OKC delegator can add shares to himself or other validator by following the command:
-
-```bash
-exchaincli tx staking add-shares exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e --from <delegatorKeyName>
-```
-
-* In the following example, `exvaloper1qj5c07sm6jetjz8f509qtrxgh4psxkv3m2wy6x,exvaloper1hcngft7gfkhn8z8fnlajzh7agyt0az0vv9pllr,exvaloper1c5g4v00np7fjjnexkhh5yk0hc6mamf40u5vjrh,exvaloper1fh9tpkqka29n0mj307cu5cvp5ts0p4dl8uug6e` are the validator’s addresses, and all OKT deposited will be converted into shares and added on the above-mentioned validators.
-
-* The from flag specifies who signs the transaction.
-
-### Withdraw
-
-When an OKC user withdraws the deposited tokens , the share added to the validators will be removed.This token withdrawal process  takes 14 days.
-
-* The number of tokens allowed to be withdrawn must be greater or equal to be 0.0001 ~ n (total number of tokens deposited by the user).
-* If a user has added staking rights on some validators, after executing the command, the number of staking rights will be automatically updated. Essentially, this action  could be considered as a `re-vote` behavior.
-* If the user has already added shares, after executing the command to withdraw all the tokens, it could be considered as an `unbond` behavior.
-* If the user hasn’t added shares, the new tokens will not be transformed into shares after executing the command.
-* Users are allowed to withdraw deposited tokens multiple times. Every time tokens are withdrawn, the tokens will be locked for 14 days before being sent back to the user’s account. If users withdraw tokens again (after the last withdrawal) within 14 days, the tokens withdrawn last time will be locked for another 14 days, and will be sent back to the user’s account with the second batch of token withdrawn.
-
-Withdraw an amount of OKT and the corresponding shares from all validators.
-
-```bash
-exchaincli tx staking withdraw 10okt --from rose
-```
-
-* In the example, 10 is the number of deposited OKTs to be withdrawn.
-
-* Here, “from” indicates the user account to be withdrawn, which is “rose” in this example.
-
-### Reward
-
-Validators will be rewarded for  performing well. The owner can withdraw the rewards by using the command below:
-
-```
-exchaincli tx distr withdraw-rewards --commission <validator-addr> --from <validatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-```
