@@ -18,7 +18,7 @@ OKC will re-elect block generation nodes at each fixed block height interval, ca
 
 
 ## cli command
-Validator cli command contains the 3 following commonly commands.
+Staking cli command contains the 3 following commonly commands.
 
 * create-validator：create a validator
 * edit-validator：update a validator
