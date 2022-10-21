@@ -38,7 +38,7 @@ Please exercise extreme caution!
 - [Querying the State](#querying-the-state)
 - [Sending Transactions](#sending-transactions)
     + [A Note on Gas and Fees](#a-note-on-gas-and-fees)
-    + [Bonding okts and Withdrawing Rewards](#bonding-okts-and-withdrawing-rewards)
+    + [Staking okts and Earn Rewards](#staking-okts-and-earn-rewards)
     + [Participating in Governance](#participating-in-governance)
     + [Signing Transactions from an Offline Computer](#signing-transactions-from-an-offline-computer)
 
@@ -138,7 +138,7 @@ rm ~/.bash_history
 You can generate more accounts from the same mnemonic using the following command:
 
 ```bash
-exchaincli keys add <yourKeyName> --recover --account 1
+exchaincli keys add <yourKeyName> --recover --account 1 --mnemonic <mnemonicStrs>
 ```
 
 This command will prompt you to input a passphrase as well as your mnemonic. 
@@ -273,7 +273,7 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 
 ### Sending Tokens
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
+**Before you can send tokens, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account)**
 
 
 
@@ -281,56 +281,18 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 // Send a certain amount of tokens to an address
 
 // Ex value for parameters (do not actually use these values in your tx!!): <to_address>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn <amount>=1024okt 
-// Ex value for flags: <gasPrice>=0.005okt
+// Ex value for flags: <gasPrice>=0.00000001okt
 
 exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-### Bonding okts and Withdrawing Rewards
+### Staking okts and Earn Rewards
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
+**Before you can staking okt and earn rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-**Before bonding okts, please read the [delegator faq](https://okc-docs.readthedocs.io/en/latest/delegators/delegators-faq.html) to understand the risk and responsibilities involved with delegating.**
+Use command-line interface (CLI) commands to staking okts and earn rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.html).
 
-
-```bash
-
-// Deposit an amount of okt to delegator account. Deposited okt in delegator account is a prerequisite for adding shares
-// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt
-
-exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-
-// Add shares to one or more validators by all deposited okt
-// ex value for flags: <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5,okchainvaloper1svzxp4ts5le2s4zugx34ajt6shz2hg42a3gl7g,okchainvaloper10q0rk5qnyag7wfvvt7rtphlw589m7frs863s3m,okchainvaloper1g7znsf24w4jc3xfca88pq9kmlyjdare6mph5rx, <gasPrice>=0.005okt
-
-exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-
-// Withdraw an amount of okt and the corresponding shares from all validators.
-// You will have to wait 3 weeks before your okts are fully unbonded and transferrable 
-// ex value for flags: <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
-
-exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
-```
-
-To confirm that your transaction went through, you can use the following queries:
-
-```bash
-// your balance should change after you bond okts or withdraw rewards
-exchaincli query account
-
-// you should have delegations after you bond okt
-exchaincli query staking delegator <delegatorAddress>
-
-// this returns your tx if it has been included
-// use the tx hash that was displayed when you created the tx
-exchaincli query tx <txHash>
-
-```
-
-Double check with a block explorer if you interact with the network through a trusted full-node.
-
-## Participating in Governance
+### Participating in Governance
 
 #### Primer on Governance
 
@@ -348,14 +310,14 @@ At the end of the voting period, the proposal is accepted if there are more than
 
 #### In Practice
 
-**Before you can bond OKTs and withdraw rewards, you need to [bond OKTs](#bonding-okts-and-withdrawing-rewards).**
+**Before you can voting gov proposal , you need to [Staking OKTs](#staking-okts-and-earn-rewards).**
 
 
 
 ```bash
 // Submit a Proposal
 // <type>=text/parameter_change/software_upgrade
-// ex value for flag: <gasPrice>=0.005okt
+// ex value for flag: <gasPrice>=0.00000001okt
 
 exchaincli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=100okt --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
@@ -378,9 +340,9 @@ If you do not have a Hardware Wallet and want to interact with your private key 
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn
+// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.00000001okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn,<gasValue>=3000000 (suggest value)
 
-exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
+exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas <gasValue> --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
