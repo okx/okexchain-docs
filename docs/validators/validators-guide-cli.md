@@ -31,7 +31,7 @@ Staking cli command contains the following commonly commands.
 Upgrade a node to a validator and set the description on a validator.
 
 ```bash
-  exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <userKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+  exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 > _NOTE_: If you set home flag when executing `exchaind start`, `exchaind tendermint show-validator` the inputs after home flag should be the same as `okexcahind start`.
 
@@ -48,7 +48,7 @@ Upgrade a node to a validator and set the description on a validator.
 The operator can update the description of the validator and adjust the commission rate.
 
 ```bash
-exchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from <userKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx staking edit-validator --moniker=“my new nickname” --identity="logo|||http://mynewwebsite/pic/newlogo.jpg" --website="http://mynewwebsite" --details="my new slogan"  --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 * **moniker** indicates the alias of the validator to be updated
@@ -62,7 +62,7 @@ exchaincli tx staking edit-validator --moniker=“my new nickname” --identity=
 Update an existing validator,e.g., <commission-rate>=0.2
 
 ```bash
-exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <userKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
 - **commission-rate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
