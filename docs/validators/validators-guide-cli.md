@@ -18,7 +18,7 @@ OKC will re-elect block generation nodes at each fixed block height interval, ca
 
 
 ## cli command
-Staking cli command contains the 5 following commands for PoS operations.
+Staking cli command contains the 6 following commands for PoS operations.
 
 * create-validator：create a validator
 * edit-validator：update a validator
