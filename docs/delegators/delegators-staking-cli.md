@@ -21,7 +21,7 @@ OKC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the comma
 ```Shell
 // Deposit an amount of OKT to the delegator account.
 // Deposited OKT in the delegator account is a prerequisite for adding shares. If add-shares was set before, this deposit will reuse the existing add-shares settings with the validators, respectively, and trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
-// e.g., <amountToDeposit>=1024okt, <gasPrice>=0.005okt
+// e.g., <amountToDeposit>=1024okt, <gasPrice>=0.00000001okt
 
 exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -37,7 +37,7 @@ exchaincli query staking delegator <delegatorAddress>
 // Add shares to one or more validators with all deposited OKT.
 // Note: If shares are added multiple times, only the last setting will be used. If add-shares was set before, this operation will trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
 // e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k,exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw
-// <gasPrice>=0.005okt
+// <gasPrice>=0.00000001okt
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -58,7 +58,7 @@ Note: On every command, users can write ` -h or --help` to get more help info.
 ```Shell
 // Deposit an amount of OKT to the delegator account.
 // Deposited OKT in the delegator account is a prerequisite for adding shares. If add-shares was set before, this deposit will reuse the existing add-shares settings with the validators, respectively, and trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
-// e.g., <amountToDeposit>=1024okt, <gasPrice>=0.005okt
+// e.g., <amountToDeposit>=1024okt, <gasPrice>=0.00000001okt
 
 exchaincli tx staking deposit <amountToDeposit> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -74,7 +74,7 @@ exchaincli query staking delegator <delegatorAddress>
 // Add shares to one or more validators with all deposited OKT.
 // Note: If shares are added multiple times, only the last setting will be used. If add-shares was set before, this operation will trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
 // e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k,exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw
-// <gasPrice>=0.005okt
+// <gasPrice>=0.00000001okt
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -89,7 +89,7 @@ exchaincli query staking delegator <delegatorAddress>
 ```Shell
 // Withdraw an amount of OKT and the corresponding shares from all validators.
 // You will have to wait 14 days before your OKTs are fully unlocked and transferrable. This will also trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account)
-// e.g., <amountToWithdraw>=1024okt, <gasPrice>=0.005okt
+// e.g., <amountToWithdraw>=1024okt, <gasPrice>=0.00000001okt
 
 exchaincli tx staking withdraw <amountToWithdraw> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -116,7 +116,7 @@ exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 
 ```Shell
 // Withdraw rewards from a given validator address.
-// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.005okt
+// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.00000001okt
 
 exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -125,7 +125,7 @@ exchaincli tx distr withdraw-rewards <validatorAddr> --from <delegatorKeyName> -
 
 ```Shell
 // Withdraw all delegations rewards for a delegator.
-// e.g., <gasPrice>=0.005okt
+// e.g., <gasPrice>=0.00000001okt
 
 exchaincli tx distr withdraw-all-rewards --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -141,7 +141,7 @@ Note: On every command, users can write ` -h or --help` to get more help info.
 ```Shell
 // Update an existing validator commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. 
 //Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio.
-// e.g., <commission-rate>=0.2,<gasPrice>=0.005okt
+// e.g., <commission-rate>=0.2,<gasPrice>=0.00000001okt
 
 exchaincli tx staking edit-validator-commission-rate <commission-rate> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -168,7 +168,7 @@ exchaincli query distr commission <validatorAddress>
 
 ```Shell
 // Withdraw commission reward of validator with commission parameter. This will automatically distribute to its own account (or reward withdraw account).
-// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.005okt
+// e.g., <validatorAddr>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv,<gasPrice>=0.00000001okt
 
 exchaincli tx distr withdraw-rewards <validatorAddr> --commission --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -249,7 +249,7 @@ exchaincli query distr community-pool
 
 ```Shell
 // Change the default withdrawal address.
-// e.g., <withdraw-addr>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e,<gasPrice>=0.005okt
+// e.g., <withdraw-addr>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e,<gasPrice>=0.00000001okt
 
 exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```

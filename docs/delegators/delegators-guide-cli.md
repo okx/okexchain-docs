@@ -281,7 +281,7 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 // Send a certain amount of tokens to an address
 
 // Ex value for parameters (do not actually use these values in your tx!!): <to_address>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn <amount>=1024okt 
-// Ex value for flags: <gasPrice>=0.005okt
+// Ex value for flags: <gasPrice>=0.00000001okt
 
 exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
@@ -317,7 +317,7 @@ At the end of the voting period, the proposal is accepted if there are more than
 ```bash
 // Submit a Proposal
 // <type>=text/parameter_change/software_upgrade
-// ex value for flag: <gasPrice>=0.005okt
+// ex value for flag: <gasPrice>=0.00000001okt
 
 exchaincli tx gov submit-proposal --title "Test Proposal" --description "My awesome proposal" --type <type> --deposit=100okt --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice> --from <delegatorKeyName>
 
@@ -340,7 +340,7 @@ If you do not have a Hardware Wallet and want to interact with your private key 
 
 ```bash
 // Bond okts 
-// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.005okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn,<gasValue>=3000000 (suggest value)
+// ex value for flags: <amountToDeposit>=1024okt, <gasPrice>=0.00000001okt, <delegatorAddress>=ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn,<gasValue>=3000000 (suggest value)
 
 exchaincli tx staking deposit <amountToDeposit> --from <delegatorAddress> --gas <gasValue> --gas-adjustment 1.5 --gas-prices <gasPrice> --generate-only > unsignedTX.json
 ```
