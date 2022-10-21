@@ -286,13 +286,11 @@ For testnet, the recommended `gas-prices` is `0.005okt`.
 exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-### Bonding okts and Withdrawing Rewards
+## Earn staking rewards
 
-**Before you can bond OKTs and withdraw rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
+**Before you can  earn staking rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
 Use command-line interface (CLI) commands to earn staking rewards as a validator or delegator, you can get it [here](./delegators-guide-cli.md).
-
-
 
 ## Participating in Governance
 
