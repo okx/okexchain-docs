@@ -36,7 +36,8 @@ exchaincli query staking delegator <delegatorAddress>
 ```Shell
 // Add shares to one or more validators with all deposited OKT.
 // Note: If shares are added multiple times, only the last setting will be used. If add-shares was set before, this operation will trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
-// e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=<exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k, exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw>,<gasPrice>=0.005okt
+// e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k,exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw
+// <gasPrice>=0.005okt
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
@@ -72,7 +73,8 @@ exchaincli query staking delegator <delegatorAddress>
 ```Shell
 // Add shares to one or more validators with all deposited OKT.
 // Note: If shares are added multiple times, only the last setting will be used. If add-shares was set before, this operation will trigger a passive reward, which will automatically distribute the rewards to its own account (or reward withdrawal account).
-// e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=<exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k, exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw>,<gasPrice>=0.005okt
+// e.g., <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN>=exvaloper1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sle8094k,exvaloper1qrugh3kdhfz2a4cjx7ahuk6pkc7yy3pryv2jvw
+// <gasPrice>=0.005okt
 
 exchaincli tx staking add-shares <validator-addr1, validator-addr2, validator-addr3, ... validator-addrN> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 
