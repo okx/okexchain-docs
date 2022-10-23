@@ -1,8 +1,10 @@
-# OKC CLI staking manual
+# Staking Rewards Manual(CLI)
 
 This guide explains how to use command-line interface (CLI) commands to earn staking rewards as a validator or delegator.
 
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get OKT, you can get it [here](https://discord.gg/B5nMs6qK5F).
+>
+> For more information on incentives, see [Staking Rewards Algorithm](../validators/detail/distr.html).
 
 ## What is staking?
 
