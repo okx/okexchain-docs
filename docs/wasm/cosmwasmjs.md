@@ -11,22 +11,22 @@ This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and 
 
 **Note: If you want a more detailed explanation of CosmWasmJS and wasm smart contract interactions, please refer to [CosmWasmJS](https://cosmwasm.github.io/CosmWasmJS/)**
 
-# Preconditions
+## Preconditions
 Need to install [Node](https://nodejs.org/en/download/) while using CosmoWasmJS
-# Choice of network
+## Choice of network
 You can choose between mainnet, testnet or local testnet.
-## Mainnet
+### Mainnet
 There is no need to build nodes on the main network, and the development of OKCWasm contracts can directly access the RPC node services provided by OKC. If you need to build your own testnet node, please refer to [mainnet node set up](https://okc-docs.readthedocs.io/en/latest/getting-start/join-oec-mainnet.html).
 
 Below is the URL of the mainnet RPC node
 > const rpcEndpoint = "https://exchaintmrpc.okex.org"
-## Testnet
+### Testnet
 
 There is no need to build nodes on testnet, and the development of OKCWasm contracts can directly access the RPC node services provided by OKC. If you need to build your own testnet node, please refer to [testnet node set up](https://okc-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
 
 Below is the URL of the testnet RPC node
 > const rpcEndpoint = "https://exchaintesttmrpc.okex.org"
-## Local testnet
+### Local testnet
 Download the OKC source code and set up the OKC local testnet through the script we provide
 
 ```shell
@@ -39,9 +39,9 @@ Below is the URL of the testnet RPC node
 
 > const rpcEndpoint = "https://localhost:26657"
 
-# Install Node.js
+## Install Node.js
 https://nodejs.org/en/download/
-# Create project
+## Create project
 **Note: everything in this subsection uses local testnet**
 
 Create project directory
@@ -61,7 +61,7 @@ Create a code file
 touch client.mjs
 ```
 
-# Compile JS code
+## Compile JS code
 **Note: everything in this subsection uses local testnet**
 
 Copy the following codes into `client.mjs`
@@ -105,7 +105,7 @@ const accs = await wallet.getAccounts();
 main();
 ```
 
-# Run code
+## Run code
 **Note: everything in this subsection uses local testnet**
 
 Next, run code
@@ -113,7 +113,7 @@ Next, run code
 node client.mjs
 ```
 
-# Contract interaction interface
+## Contract interaction interface
 The above only shows how to connect OKC nodes through CosmWasmJS, the actions for querying account balances and all wasm contract code operations. If you want to conduct other smart contract actions, you can refer to the interfaces in the table below for uploading contract codes, deploying contracts and interacting with contracts.
 
 **Notes**
@@ -155,5 +155,5 @@ The above only shows how to connect OKC nodes through CosmWasmJS, the actions fo
 | 30 | signAndBroadcast | Sign and broadcast transaction| Y |SigningCosmWasmClient  |  |
 | 31 | sign | Sign  transaction| Y |SigningCosmWasmClient  |  |
 
-# Example
+## Example
 We provide a Webpack [demo](https://github.com/okex/comswasmjs-client) example. You can follow this example to interact with OKC through your browser and Keplr wallet using CosmWasmJS and Webpack.
