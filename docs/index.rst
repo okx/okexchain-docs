@@ -152,6 +152,15 @@ Contents
 
 .. toctree::
    :maxdepth: 3
+   :caption: Wasm
+
+   wasm/overview
+   wasm/instruction-manual
+   wasm/vmbridge
+   wasm/cosmwasmjs
+
+.. toctree::
+   :maxdepth: 3
    :caption: Concepts
 
    concepts/general-concepts
