@@ -1,25 +1,26 @@
 #VMBridge
 VMBridge provides OKC with a channel for exchanging EVM's ERC20 tokens and WASM's CW20 tokens. You can circulate your tokens in EVM and WASM by compiling a contract pair. Below is a schematic design diagram of VMBridge:
 ![](../img/vmbridge-architecture.png)
-## EVM contracts follow 2 kinds of protocols:
+
+EVM contracts follow 2 kinds of protocols:  
 1. When the contract converts ERC20 to CW20, it must throw out SendToWasmEvent (WASM contract address, mintCW20 method, method input parameter), mintCW20 used for calling wasm contracts from EVM contracts.
 2. When the contract accepts CW20 to exchange to ERC20, the contract must implement the mintERC20 method. Used for receiving calls from wasm contracts.
 
-## Wasm contracts follow 2 kinds of protocols:
+Wasm contracts follow 2 kinds of protocols:  
 1. When the contract converts CW20 to ERC20, it must throw out SubCustomEVMMsg (ERC contract address, mintERC20 method, method input parameter), mintERC20 method is used for calling EVM contract from wasm contract.
 2. When the contract accepts ERC20 to exchange to CW20, the contract must implement the mintCW20 method. Used for receiving calls from EVM contracts.
 
-# Example of application
+## Example of application
 **We provide an [example](https://github.com/okex/VMTokenBridge) contract of how to use VMBridge**
 ![](../img/vmbridge-example.png)
-## Example 1
+### Example 1
 ERC20 and CW20 contracts follow VMBridge rules (suitable for newly issued token projects). When the user exchanges ERC20 for CW20 tokens, the call for the method of exchanging CW20 tokens in the ERC20 contract is initiated. The ERC20 side burns the corresponding token and calls the CW20 contract, and the CW20 side mints the corresponding token. The same applies vice versa.
-## Example 2
+### Example 2
 For the existing ERC20 contracts on the chain, if you do not want to upgrade the ERC20 contracts, you can choose the method in example 2. To implement an exchange contract, when the user needs to exchange ERC20 for CW20, approve the corresponding tokens to the exchange contract. Then, when the user calls the exchange contract to exchange with the CW20 token method, the user's ERC20 token is transferred into the lock account by means of transferfrom, and the CW20 contract is called, causing the CW20 side contract to mint out the corresponding token. The same applies vice versa.
 
-# Detailed explanation of development rules
+## Detailed explanation of development rules
 To make your contract initiate CW20 exchange for ERC20, you must develop an EVM ERC20 contract and a wasm CW20 contract; each contract must obey the following rules.
-## EVM contract rules
+### EVM contract rules
 Rid of the following actions in order to exchange ERC20 for CW20 tokens. (equivalent to calling the mintCW20 method of the CW20 contract, wasmAddr is the wasm contract address, recipient is the cw20 token receiving address, and amount is the number of cw20 tokens)
 ```solidity
 event __OKCSendToWasm(string wasmAddr, string recipient, uint256 amount);
@@ -41,7 +42,7 @@ function mintERC20(string calldata caller, address recipient,uint256 amount) pub
   }
 ```
 
-## Wasm contract rules
+### Wasm contract rules
 The execution of the wasm contract is to throw out the Msg type to exchange CW20 for ERC20 (equivalent to calling the mintERC20 method of ERC20)
 
 - Wasm contract must initiate SendToEvmMsg, and make this Msg to CosmosMsg::Custom subclass
