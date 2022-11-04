@@ -8,7 +8,7 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
 [Rust](https://www.rust-lang.org/) is currently the most used programming language for CosmWasm, in the future, it is possible to have different programming languages like [AssemblyScript](https://www.assemblyscript.org/).
 
 - [Architecture](#Architecture) explains much of the high-level design and architecture of CosmWasm. It is crucial to understand the mental model and capabilities of the system before designing products using it. However, if you prefer to learn by coding then you can skip this section and visit as you need it.
-- [Smart Contract](#Smart Contract) introduces what wasm contract is and how to develop wasm contract.
+- [Wasm Smart Contract](#Wasm Smart Contract) introduces what wasm contract is and how to develop wasm contract.
 
 ## Architecture
 
