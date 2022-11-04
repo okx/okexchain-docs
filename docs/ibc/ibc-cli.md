@@ -1,4 +1,4 @@
-# OKC IBC how-to guide
+# OKC IBC Cli guide
 
 ## Background
 

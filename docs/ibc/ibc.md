@@ -117,6 +117,7 @@ There are 4 different message categories in the connection layer, and each categ
 
     &nbsp;&nbsp;&nbsp;&nbsp;     The proof of IBC uses the ICS23 library, which is also the hash proof implemented by the Merkle tree. The calculation method is to start from the leaf node and calculate the root hash layer by layer, so that even a change in a portion of leaf nodes will affect the hash calculations of the overall data, thus avoiding the malicious tampering of data.
 
+
 - Security verification of light nodes
 
   &nbsp;&nbsp;&nbsp;&nbsp; The two chains connected through the IBC protocol will maintain the light node information of the peer chain on their respective chains, with the security of the light node being equivalent to the security of the IBC protocol.
@@ -130,9 +131,9 @@ There are 4 different message categories in the connection layer, and each categ
 
     - Trusted nodes>= 1/3
   
-      &nbsp;&nbsp;&nbsp;&nbsp;  In IBC, another core concept is TrustValidators, which are trusted nodes. After obtaining 2/3 consensus, 1/3 of the validator nodes must be TrustValidators before the light nodes data can be updated.
+      &nbsp;&nbsp;&nbsp; In IBC, another core concept is TrustValidators, which are trusted nodes. After obtaining 2/3 consensus, 1/3 of the validator nodes must be TrustValidators before the light nodes data can be updated.
 
-    - > Note: theoretically speaking, 1/3 is considered insecure, because when the original 1/3 nodes go offline, the peer chain does not update the header information of the host chain in time, so if the original 1/3 nodes re-send the header information, the peer chain can still pass the verification.
+      > Note: theoretically speaking, 1/3 is considered insecure, because when the original 1/3 nodes go offline, the peer chain does not update the header information of the host chain in time, so if the original 1/3 nodes re-send the header information, the peer chain can still pass the verification.
 
 ### **Basic example**
 
