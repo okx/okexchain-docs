@@ -145,7 +145,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: ibc
+   :caption: IBC
 
    validators/ibc
    validators/ibc-cli
