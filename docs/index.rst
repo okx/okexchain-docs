@@ -143,6 +143,12 @@ Contents
    validators/validators-guide-cli
    validators/validators-faq
 
+.. toctree::
+   :maxdepth: 2
+   :caption: ibc
+
+   validators/ibc
+   validators/ibc-cli
 
 .. toctree::
    :maxdepth: 3
