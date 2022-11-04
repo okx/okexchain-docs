@@ -1,5 +1,6 @@
 # CosmWasmJS
-This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and interacting with smart contracts. CosmWasmJS is an SDK that facilitates contract development for DApp developers. Combined with CosmJS, you can easily and conveniently develop OKCWasm smart contracts (CosmWasmJS+CosmJS is equivalent to ETH's web3.js).
+This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and interacting with smart contracts. CosmWasmJS is an SDK that facilitates contract development for DApp developers. Combined with CosmJS, you can easily and conveniently develop OKCWasm smart contracts.
+> CosmWasmJS + CosmJS is equivalent to ETH's web3.js.
 
 | Project | Description | 
 | :-----| :----| 
@@ -63,7 +64,7 @@ touch client.mjs
 ## Compile JS code
 **Note: everything in this subsection uses local testnet**
 
-Input the following codes into client.mjs
+Copy the following codes into `client.mjs`
 ```javascript
 import { SigningCosmWasmClient, Secp256k1HdWallet, coin, parseCoins } from "cosmwasm";
 import { stringToPath } from "@cosmjs/crypto";
