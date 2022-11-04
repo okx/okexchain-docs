@@ -1,4 +1,4 @@
-# CosmWasmJS English translation
+# CosmWasmJS
 This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and interacting with smart contracts. CosmWasmJS is an SDK that facilitates contract development for DApp developers. Combined with CosmJS, you can easily and conveniently develop OKCWasm smart contracts (CosmWasmJS+CosmJS is equivalent to ETH's web3.js).
 
 | Project | Description | 
