@@ -1,4 +1,4 @@
-#VMBridge
+# VMBridge
 VMBridge provides OKC with a channel for exchanging EVM's ERC20 tokens and WASM's CW20 tokens. You can circulate your tokens in EVM and WASM by compiling a contract pair. Below is a schematic design diagram of VMBridge:
 ![](../img/vmbridge-architecture.png)
 
