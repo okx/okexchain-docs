@@ -635,5 +635,5 @@ exchaincli query wasm pinned
   exchaincli query wasm libwasmvm-version
 ```
 
-# FAQ
+## FAQ
 If there were any issues regarding any of the actions mentioned above that you were not able to solve, you can contact our technical support (technical support hyperlink here).
