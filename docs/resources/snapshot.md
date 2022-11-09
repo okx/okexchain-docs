@@ -1,4 +1,3 @@
-
 # OKC Snapshot
 
 Quick instructions on how to install the OKC snapshots.

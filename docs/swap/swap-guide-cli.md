@@ -1,9 +1,4 @@
-
 # Swap Guide (CLI)
-<!--
-order: 2
--->
-
 
 ## cli command
 

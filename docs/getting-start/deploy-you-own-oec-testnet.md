@@ -1,7 +1,3 @@
-<!--
-order: 6
--->
-
 # Deploy Your Own OKC Testnet
 
 This document describes 2 ways to setup a network of `okc` nodes, each serving a different usecase:

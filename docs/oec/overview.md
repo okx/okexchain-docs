@@ -1,7 +1,3 @@
-<!--
-order: 1
--->
-
 ![Welcome to the OKC](../img/okc2022poster.png)
 
 # Introduction

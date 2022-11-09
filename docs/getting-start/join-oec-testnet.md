@@ -1,7 +1,3 @@
-<!--
-order: 4
--->
-
 # Join the Public Testnet 
 
 See the [testnet repo](https://github.com/okex/testnets) for

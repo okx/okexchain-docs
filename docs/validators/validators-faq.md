@@ -1,7 +1,3 @@
-<!--
-order: 3
--->
-
 # Validator FAQ
 
 This content is not yet presented under its final version. Mechanisms and values are susceptible to change.

@@ -1,7 +1,3 @@
-<!--
-order: 4
--->
-
 # Join the Public Mainnet 
 
 See the [mainnet repo](https://github.com/okex/mainnet) for

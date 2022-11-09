@@ -1,7 +1,3 @@
-<!--
-order: 2
--->
-
 # Genesis File
 
 This document explains how the genesis file of the OKC testnet is structured. It also explains how you can build a genesis file for your own `okc` testnet.

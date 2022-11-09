@@ -1,7 +1,3 @@
-<!--
-order: 5
--->
-
 # Service Providers
 
 We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKC blockchain. More specifically, this document will be focused around the interactions with tokens.

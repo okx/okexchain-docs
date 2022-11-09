@@ -1,7 +1,3 @@
-<!--
-order: 1
--->
-
 # Delegator Guide (CLI)
 
 This document contains all the necessary information for delegators to interact with OKC through the Command-Line Interface (CLI).

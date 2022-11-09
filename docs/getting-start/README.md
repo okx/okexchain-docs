@@ -1,9 +1,3 @@
-<!--
-order: false
-parent:
-  order: 3
--->
-
 # OKC Tutorials
 
 This folder contains tutorials related to the `okc` application.

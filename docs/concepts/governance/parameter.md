@@ -1,4 +1,3 @@
-
 # Governance Parameter Proposal
 ![text](../../img/gov-parameter.png)
 

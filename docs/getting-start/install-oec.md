@@ -1,7 +1,3 @@
-<!--
-order: 2
--->
-
 # Install OKC
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints

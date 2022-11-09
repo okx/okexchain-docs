@@ -1,7 +1,3 @@
-<!--
-order: 1
--->
-
 # Validators Overview
 
 ## Introduction

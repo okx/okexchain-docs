@@ -1,7 +1,3 @@
-<!--
-order: 5
--->
-
 # Upgrade Your Node
 
 This document describes the upgrade procedure of a `exchaind` full-node to a new version.

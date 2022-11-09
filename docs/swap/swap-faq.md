@@ -1,7 +1,3 @@
-<!--
-order: 3
--->
-
 # Swap FAQ
 
 This is work in progress. Mechanisms and values are susceptible to change.

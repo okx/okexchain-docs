@@ -1,7 +1,3 @@
-<!--
-order: 4
--->
-
 # Join the Public Testnet With Docker
 ## Run OKC testnet fullnode with docker
 
