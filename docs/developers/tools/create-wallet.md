@@ -9,7 +9,7 @@ This article is a guide about key management strategy on client side of your Dec
 ## Connect to OKC network
 ```javascript
     // testnet
-    const web3 = new Web3('http://13.230.73.12:8545');
+    const web3 = new Web3('https://exchaintestrpc.okex.org');
 ```
 
 ## Set up account
@@ -28,8 +28,8 @@ cconst account = web3.eth.accounts.privateKeyToAccount("$private-key")
 ```javascript
 const Web3 = require('web3');
 async function main() {
-
-    const web3 = new Web3('http://13.230.73.12:8545');
+    //testnet
+    const web3 = new Web3('https://exchaintestrpc.okex.org');
     const loader = setupLoader({ provider: web3 }).web3;
 
     const account = web3.eth.accounts.create();

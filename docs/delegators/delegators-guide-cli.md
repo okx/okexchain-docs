@@ -157,7 +157,7 @@ You will find the tutorial on how to install `exchaind` [here](https://okc-docs.
 
 If you do not want or cannot run your own node, you can connect to someone else’s full-node. You should pick an operator you trust, because a malicious operator could return incorrect query results or censor your transactions. However, they will never be able to steal your funds, as your private keys are stored locally on your computer or hardware wallet. Possible options of full-node operators include validators, wallet providers or exchanges.
 
-In order to connect to the full-node, you will need an address of the following form: `https://35.176.62.211:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-exchaincli).
+In order to connect to the full-node, you will need an address of the following form: `https://exchaintmrpc.okex.org` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-exchaincli).
 
 ## Setting Up `exchaincli`
 
@@ -185,6 +185,7 @@ exchaincli config node <host>:<port
 
 // example: exchaincli config node https://35.176.62.211:26657
 ```
+The ip address is for reference only, please use `https://exchaintmrpc.okex.org` for actual access
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
 
