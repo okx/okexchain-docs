@@ -47,8 +47,9 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 exchaincli config node <host>:<port
 
-// example: exchaincli config node https://35.176.62.211:26657
+// example: exchaincli config node https://35.176.62.211:26657 
 ```
+The ip address is for reference only, please use `https://exchaintmrpc.okex.org` for actual access
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
 
