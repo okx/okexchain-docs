@@ -31,7 +31,7 @@ module.exports = {
   networks: {
 
     testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `http://13.230.73.12:8545`),
+        provider: () => new HDWalletProvider(mnemonic, `https://exchaintestrpc.okex.org`),
         network_id: 66,
         timeoutBlocks: 200,
         confirmations: 5,
