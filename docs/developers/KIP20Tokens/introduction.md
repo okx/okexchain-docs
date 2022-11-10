@@ -20,7 +20,7 @@ Connect to OKC's public RPC endpoint
 const Web3 = require('web3');
 
 // testnet
-const web3 = new Web3('http://13.230.73.12:8545');
+const web3 = new Web3('https://exchaintestrpc.okex.org');
 ```
 Create a wallet
 ```
