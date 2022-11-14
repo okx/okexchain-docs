@@ -156,6 +156,7 @@ string
 ```
 
 ### 1.2 Token utils function
+
 #### 1.2.1 Parse the whole multi-send info string into TransferUnit
 
 ```go
@@ -179,6 +180,7 @@ type TransferUnit struct {
 ```
 
 ### 1.3 Order utils function
+
 #### 1.3.1 Filter the order IDs from the new order's tx response
 
 ```go
@@ -213,6 +215,7 @@ _, _ = cli.Auth().QueryAccount(accAddrStr)
 ```
 
 ### 2.1 Query
+
 #### 2.1.1 Get the account info
 
 ```go
@@ -266,6 +269,7 @@ _, _ = cli.Token().Issue(info, defaultPassWd, "usdk", "usdk", "1000000000", "sta
 ```
 
 ### 3.1 Query
+
 #### 3.1.1 Get token info with a specific symbol, or the owner address
 
 ```go
@@ -297,6 +301,7 @@ type TokenResp struct {
 ```
 
 ### 3.2 Transaction
+
 #### 3.2.1 Transfer coins to other receiver
 
 ```go
@@ -543,6 +548,7 @@ _, _ = cli.Staking().Deposit(info, defaultPassWd, depositAmount, memo, accountNu
 ```
 
 ### 4.1 Query
+
 #### 4.1.1 Get all the validators info
 
 ```go
@@ -629,6 +635,7 @@ type DelegatorResponse struct {
 ```
 
 ### 4.2 Transaction
+
 #### 4.2.1 Create a new validator
 
 ```go
@@ -1017,6 +1024,7 @@ _, _ = cli.Distribution().WithdrawRewards(info, defaultPassWd, valAddrStr, memo,
 ```
 
 ### 5.1 Transaction
+
 #### 5.1.1 Change the withdraw address of validator to receive rewards
 
 ```go
@@ -1106,6 +1114,7 @@ _, _ = cli.Slashing().Unjail(info, defaultPassWd, memo, accountNumber, sequence)
 ```
 
 ### 6.1 Transaction
+
 #### 6.1.1 Unjail the own validator which was jailed by slashing
 
 ```go
@@ -1157,6 +1166,7 @@ _, _ = cli.Dex().RegisterDexOperator(info, defaultPassWd, "", website, memo, acc
 ```
 
 ### 7.1 Query
+
 #### 7.1.1 Get token pair info
 
 ```go
@@ -1191,6 +1201,7 @@ type TokenPair struct {
 ```
 
 ### 7.2 Transaction
+
 #### 7.2.1 Register a dex operator
 
 ```go
@@ -1472,6 +1483,7 @@ _, _ = cli.Order().QueryDepthBook(productName)
 ```
 
 ### 8.1 Query
+
 #### 8.1.1 Get the current depth book info of a specific product
 
 ```go
@@ -1536,6 +1548,7 @@ type Order struct {
 ```
 
 ### 8.2 Transaction
+
 #### 8.2.1 Place orders with some detail info
 
 ```go
@@ -1643,6 +1656,7 @@ _, _ = cli.Backend().QueryCandles("usdk_okt", 60, 10)
 ```
 
 ### 9.1 Query
+
 #### 9.1.1 Get the candles data of a specific product
 
 ```go
@@ -1884,6 +1898,7 @@ _, _ = cli.AmmSwap().QuerySwapTokenPairs()
 ```
 
 ### 10.1 Query
+
 #### 10.1.1 Get all the swap token pairs
 
 ```go
@@ -1945,6 +1960,7 @@ sdk.Dec
 ```
 
 ### 10.2 Transaction
+
 #### 10.2.1 Create a token pair in swap module
 
 ```go
@@ -2118,6 +2134,7 @@ _, _ = cli.Farm().QueryPools()
 ```
 
 ### 11.1 Query
+
 #### 11.1.1 Get all farm pools info
 
 ```go
@@ -2231,6 +2248,7 @@ type LockInfo struct {
 ```
 
 ### 11.2 Transaction
+
 #### 11.2.1 Create a farm pool
 
 ```go
@@ -2473,6 +2491,7 @@ _, _ = cli.Governance().SubmitTextProposal(info, defaultPassWd, "text_proposal.j
 ```
 
 ### 12.1 Query
+
 #### 12.1.1 Get all proposals
 
 ```go
@@ -2506,6 +2525,7 @@ type Proposal struct {
 ```
 
 ### 12.2 Transaction
+
 #### 12.2.1 Submit the text proposal
 
 ```go
@@ -2867,6 +2887,7 @@ _, _ = cli.Tendermint().QueryBlock(1024)
 ```
 
 ### 13.1 Query
+
 #### 13.1.1 Get the block info of a specific height
 
 ```go
