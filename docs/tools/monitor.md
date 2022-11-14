@@ -10,98 +10,43 @@ testnet.
 
 ## Metrics available on okc
 
-  ---------------------------------------------------------------------------------------------------------
-  Name                                              Type        Tags       Description
-  ------------------------------------------------- ----------- ---------- --------------------------------
-  tendermint_consensus_height                       Gauge       √          consensus block height
-
-  tendermint_consensus_validators                   Gauge       √          number of validators
-
-  tendermint_consensus_validators_power             Gauge       √          total voting power of validators
-
-  tendermint_consensus_missing_validators           Gauge       √          number of missing validators
-
-  tendermint_consensus_missing_validators_power     Gauge       √          total voting power of missing
-                                                                           validators
-
-  tendermint_consensus_byzantine_validators         Gauge       √          number of byzantine validators
-
-  tendermint_consensus_byzantine_validators_power   Gauge       √          total voting power of byzantine
-                                                                           validators
-
-  tendermint_consensus_block_interval_seconds       Histogram   √          block interval
-
-  tendermint_consensus_rounds                       Gauge       √          consensus round
-
-  tendermint_consensus_num_txs                      Gauge       √          number of transactions in the
-                                                                           block
-
-  tendermint_consensus_block_parts                  Counter     peer_id    number of block parts
-
-  tendermint_consensus_latest_block_height          Gauge       √          latest block height after
-                                                                           consensus
-
-  tendermint_consensus_fast_syncing                 Gauge       √          0 (not fast syncing) , 1
-                                                                           (syncing)
-
-  tendermint_consensus_total_txs                    Gauge       √          total number of transactions in
-                                                                           the block
-
-  tendermint_consensus_block_size_bytes             Gauge       √          block size
-
-  tendermint_consensus_new_round_processing_time    Gauge       √          processing time for consensus
-                                                                           initialization
-
-  tendermint_consensus_propose_processing_time      Gauge       √          consensus proposal processing
-                                                                           time
-
-  tendermint_consensus_prevote_processing_time      Gauge       √          consensus prevote processing
-                                                                           time
-
-  tendermint_consensus_precommit_processing_time    Gauge       √          consensus precommit processing
-                                                                           time
-
-  tendermint_consensus_commit_processing_time       Gauge       √          consensus commit processing time
-
-  tendermint_p2p_peers                              Gauge       √          number of connected peers
-
-  tendermint_p2p_peer_receive_bytes_total           Counter     peer_id,   total bytes received from the
-                                                                chID       specific peer
-
-  tendermint_p2p_peer_send_bytes_total              Counter     peer_id,   total bytes sent to a peer node
-                                                                chID       
-
-  tendermint_p2p_peer_pending_send_bytes            Gauge       peer_id    number of bytes pending to be
-                                                                           sent
-
-  tendermint_p2p_num_txs                            Gauge       peer_id    number of transactions broadcast
-                                                                           from a peer node
-
-  tendermint_mempool_size                           Gauge       √          number of uncommitted
-                                                                           transactions
-
-  tendermint_mempool_tx_size_bytes                  Histogram   √          increased transaction size in
-                                                                           the memory pool
-
-  tendermint_mempool_failed_txs                     Counter     √          number of transactions that fail
-                                                                           to pass verification in the
-                                                                           memory pool
-
-  tendermint_mempool_recheck_times                  Counter     √          number of rechecked transactions
-                                                                           executed in the memory pool
-
-  tendermint_state_block_processing_time            Histogram   √          block processing time
-
-  x_order_canceled                                  Gauge       √          order canceled
-
-  x_order_expired                                   Gauge       √          order expired
-
-  x_order_fullfilled                                Gauge       √          order filled
-
-  x_order_partial_filled                            Gauge       √          order partially filled
-
-  x_order_pending                                   Gauge       √          order pending
-  ---------------------------------------------------------------------------------------------------------
+| Name                                                  | Type        | Tags             | Description                                                                |
+| -------------------------------------------------------|-------------|------------------|----------------------------------------------------------------------------| 
+| tendermint\_consensus\_height                         | Gauge       | √                | consensus block height                                                     |
+| tendermint\_consensus\_validators                     | Gauge       | √                | number of validators                                                       |
+| tendermint\_consensus\_validators\_power              | Gauge       | √                | total voting power of validators                                           |
+| tendermint\_consensus\_missing\_validators            | Gauge       | √                | number of missing validators                                               |
+| tendermint\_consensus\_missing\_validators\_power     | Gauge       | √                | total voting power of missing validators                                   |
+| tendermint\_consensus\_byzantine\_validators          | Gauge       | √                | number of byzantine validators                                             |
+| tendermint\_consensus\_byzantine\_validators\_power   | Gauge       | √                | total voting power of byzantine validators                                 |
+| tendermint\_consensus\_block\_interval\_seconds       | Histogram   | √                | block interval                                                             |
+| tendermint\_consensus\_rounds                         | Gauge       | √                | consensus round                                                            |
+| tendermint\_consensus\_num\_txs                       | Gauge       | √                | number of transactions in the block                                        |
+| tendermint\_consensus\_block\_parts                   | Counter     | peer\_id         | number of block parts                                                      |
+| tendermint\_consensus\_latest\_block\_height          | Gauge       | √                | latest block height after consensus                                        |
+| tendermint\_consensus\_fast\_syncing                  | Gauge       | √                | 0 (not fast syncing) , 1 (syncing)                                         |
+| tendermint\_consensus\_total\_txs                     | Gauge       | √                | total number of transactions in the block                                  |
+| tendermint\_consensus\_block\_size\_bytes             | Gauge       | √                | block size                                                                 |
+| tendermint\_consensus\_new\_round\_processing\_time   | Gauge       | √                | processing time for consensus initialization                               |
+| tendermint\_consensus\_propose\_processing\_time      | Gauge       | √                | consensus proposal processing time                                         |
+| tendermint\_consensus\_prevote\_processing\_time      | Gauge       | √                | consensus prevote processing time                                          |
+| tendermint\_consensus\_precommit\_processing\_time    | Gauge       | √                | consensus precommit processing time                                        |
+| tendermint\_consensus\_commit\_processing\_time       | Gauge       | √                | consensus commit processing time                                           |
+| tendermint\_p2p\_peers                                | Gauge       | √                | number of connected peers                                                  |
+| tendermint\_p2p\_peer\_receive\_bytes\_total          | Counter     | peer\_id, chID   | total bytes received from the specific peer                                |
+| tendermint\_p2p\_peer\_send\_bytes\_total             | Counter     | peer\_id, chID   | total bytes sent to a peer node                                            |
+| tendermint\_p2p\_peer\_pending\_send\_bytes           | Gauge       | peer\_id         | number of bytes pending to be sent                                         |
+| tendermint\_p2p\_num\_txs                             | Gauge       | peer\_id         | number of transactions broadcast from a peer node                          |
+| tendermint\_mempool\_size                             | Gauge       | √                | number of uncommitted transactions                                         |
+| tendermint\_mempool\_tx\_size\_bytes                  | Histogram   | √                | increased transaction size in the memory pool                              |
+| tendermint\_mempool\_failed\_txs                      | Counter     | √                | number of transactions that fail to pass verification in the memory pool   |
+| tendermint\_mempool\_recheck\_times                   | Counter     | √                | number of rechecked transactions executed in the memory pool               |
+| tendermint\_state\_block\_processing\_time            | Histogram   | √                | block processing time                                                      |
+| x\_order\_canceled                                    | Gauge       | √                | order canceled                                                             |
+| x\_order\_expired                                     | Gauge       | √                | order expired                                                              |
+| x\_order\_fullfilled                                  | Gauge       | √                | order filled                                                               |
+| x\_order\_partial\_filled                             | Gauge       | √                | order partially filled                                                     |
+| x\_order\_pending                                     | Gauge       | √                | order pending                                                              |
 
 ## Supervision tool
 
