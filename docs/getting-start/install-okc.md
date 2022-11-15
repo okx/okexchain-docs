@@ -23,7 +23,7 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-> _NOTE_: **Go 1.12+** is required for the OKC.
+> _NOTE_: **Go 1.17+** is required for the OKC.
 
 
 ## Install the binaries
@@ -33,7 +33,11 @@ Next, let's install the latest version of OKC. Make sure you `git checkout` the 
 ```bash
 git clone -b <latest-release-tag> https://github.com/okex/exchain
 export GO111MODULE=on
-cd exchain && make install
+cd exchain 
+# mainnet, use make mainnet
+make mainnet
+# testnet, use make testnet
+make testnet
 ```
 Under Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
 ```shell script
@@ -69,15 +73,13 @@ $ exchaincli version --long
 `exchaincli` for instance should output something similar to:
 
 ```shell
-name: okexchain
+name: exchain
 server_name: exchaind
 client_name: exchaincli
-version: v0.18.10
-commit: 20a720f38c6c60540a739351e485779a098ee413
+version: v1.6.5
+commit: 4f496351ab3bdc4ce014706711f31589021dd0de
 build_tags: netgo
-go: go version go1.14.2 darwin/amd64
-cosmos_sdk: v0.37.9
-tendermint: v0.32.10
+go: go version go1.19.2 darwin/amd64
 ```
 
 ### Build Tags
