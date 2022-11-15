@@ -93,7 +93,7 @@ For more information on seeds and peers, you can [read this](https://docs.tender
 Start the full node with this command:
 
 ```bash
-exchaind start --chain-id exchain-66
+exchaind start --chain-id exchain-66 --db_backend=rocksdb
 ```
 
 Check that everything is running smoothly:
@@ -138,7 +138,7 @@ Now it is time to upgrade the software:
 git clone https://github.com/okex/exchain.git
 cd exchain
 git fetch --all && git checkout vx.y.z
-make install
+make mainnet
 ```
 
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
