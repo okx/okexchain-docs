@@ -4,7 +4,7 @@ See the [testnet repo](https://github.com/okex/testnets) for
 information on the latest testnet, including the correct version
 of OKC to use and details about the genesis file.
 
-**You need to [install okc](./install-oec.html) before you go further**
+**You need to [install okc](./install-okc.html) before you go further**
 
 
 Details of deployment information: https://github.com/okex/testnets/blob/master/README.md

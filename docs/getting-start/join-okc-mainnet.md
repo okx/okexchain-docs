@@ -4,7 +4,7 @@ See the [mainnet repo](https://github.com/okex/mainnet) for
 information on the latest mainnet, including the correct version
 of OKC to use and details about the genesis file.
 
-**You need to [install okc](./install-oec.html) before you go further**
+**You need to [install okc](./install-okc.html) before you go further**
 
 ## Supported Platforms
 

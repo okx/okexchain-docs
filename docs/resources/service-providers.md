@@ -18,9 +18,9 @@ There are three main pieces to consider:
 
 We will describe the steps to run and interact with a full-node within the OKC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](../getting-start/install-oec.html).
+First, you need to [install the software](../getting-start/install-okc.html).
 
-Then, you can start [running a full-node(testnet)](../getting-start/join-oec-testnet.html).
+Then, you can start [running a full-node(testnet)](../getting-start/join-okc-testnet.html).
 
 ### Command-Line interface
 

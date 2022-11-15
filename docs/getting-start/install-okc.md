@@ -2,7 +2,7 @@
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-testnet as either a [Full Node](./join-oec-mainnet.html) or a
+testnet as either a [Full Node](./join-okc-mainnet.html) or a
 [Validator](../validators/validators-guide-cli.html).
 
 ## Install Go
@@ -104,4 +104,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the mainnet](./join-oec-mainnet.html), [the public testnet](./join-oec-testnet.html) or [create you own testnet](./deploy-you-own-oec-testnet.html)
+Now you can [join the mainnet](./join-okc-mainnet.html), [the public testnet](./join-okc-testnet.html) or [create you own testnet](./deploy-you-own-okc-testnet.html)

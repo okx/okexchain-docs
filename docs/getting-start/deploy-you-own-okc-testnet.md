@@ -24,7 +24,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install okc](./install-oec.html)
+- [Install okc](./install-okc.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create Genesis File and Start the Network
@@ -62,7 +62,7 @@ From the [networks/local directory](https://github.com/okex/exchain/tree/dev/net
 
 ### Requirements
 
-- [Install okc](./install-oec.html)
+- [Install okc](./install-okc.html)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 

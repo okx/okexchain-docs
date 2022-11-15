@@ -56,7 +56,7 @@ The OKC block explorer allows you to search, view and analyze OKC data—like bl
 
 ## Running a full-node on the OKC Testnet
 
-In order to run a full-node on the OKC testnet, you must first [install `exchaind`](../getting-start/install-oec.html). Then, follow [the guide](../getting-start/install-oec.html).
+In order to run a full-node on the OKC testnet, you must first [install `exchaind`](../getting-start/install-okc.html). Then, follow [the guide](../getting-start/install-okc.html).
 
 If you would like to run a validator node, follow the [validator setup guide](../validators/validators-guide-cli.html).
 
