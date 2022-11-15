@@ -37,7 +37,7 @@ Next, let's install the latest version of OKC. Make sure you `git checkout` the 
 ```bash
 git clone -b <latest-release-tag> https://github.com/okex/exchain
 export GO111MODULE=on
-cd exchain && make install
+cd exchain && make mainnet
 ```
 Under Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
 ```shell script
@@ -58,7 +58,7 @@ make: *** [install] Error 2
 Unset this environment variable and try again.
 
 ```
-LDFLAGS="" make install
+LDFLAGS="" make mainnet
 ```
 
 > _NOTE_: If you still have issues at this step, please check that you have the latest stable version of GO installed.
@@ -103,7 +103,7 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 - Make appropriate changes
 - Add `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` to `go.mod`
-- Run `make install` or `make build`
+- Run `make mainnet` or `make build`
 - Test changes
 
 ## Next
