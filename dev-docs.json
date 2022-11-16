@@ -10,7 +10,6 @@
         {
             "title":"Getting Start",
             "children":[
-                "dev-docs/getting-start/",
                 "dev-docs/getting-start/deploy-you-own-okc-testnet",
                 "dev-docs/getting-start/install-faq",
                 "dev-docs/getting-start/install-okc",
@@ -23,9 +22,9 @@
         {
             "title":"Developers",
             "children":[
-                "dev-docs/developers/FAQ",
                 "dev-docs/developers/quick-start",
                 "dev-docs/developers/quick-start-for-mainnet",
+                "dev-docs/developers/FAQ",
                 {
                     "title":"KIP20 Tokens",
                     "children":[
@@ -78,16 +77,15 @@
         {
             "title":"Delegators",
             "children":[
-                "dev-docs/delegators/delegators-faq",
                 "dev-docs/delegators/delegators-guide-cli",
                 "dev-docs/delegators/delegators-overview",
-                "dev-docs/delegators/delegators-staking-cli"
+                "dev-docs/delegators/delegators-staking-cli",
+                "dev-docs/delegators/delegators-faq"
             ]
         },
         {
             "title":"Validators",
             "children":[
-                "dev-docs/validators/validators-faq",
                 "dev-docs/validators/validators-guide-cli",
                 "dev-docs/validators/validators-overview",
                 {
@@ -95,7 +93,8 @@
                     "children":[
                         "dev-docs/validators/detail/distr"
                     ]
-                }
+                },
+                "dev-docs/validators/validators-faq"
             ]
         },
         {
@@ -117,7 +116,6 @@
         {
             "title":"Resources",
             "children":[
-                "dev-docs/resources/",
                 "dev-docs/resources/archives",
                 "dev-docs/resources/exchaincli",
                 "dev-docs/resources/genesis",
@@ -128,7 +126,7 @@
         {
             "title":"Concepts",
             "children":[
-                "dev-docs/concepts/faq",
+                
                 "dev-docs/concepts/general-concepts",
                 "dev-docs/concepts/gov",
                 "dev-docs/concepts/periodic-auction",
@@ -141,7 +139,8 @@
                         "dev-docs/concepts/governance/text",
                         "dev-docs/concepts/governance/upgrade"
                     ]
-                }
+                },
+                "dev-docs/concepts/faq"
             ]
         },
         {

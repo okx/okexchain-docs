@@ -1,6 +1,5 @@
-![Welcome to the OKC](../img/okc2022poster.png)
-
 # Introduction
+![Welcome to the OKC](../img/okc2022poster.png)
 
 ## What is OKC？
 
