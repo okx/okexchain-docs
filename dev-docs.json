@@ -10,53 +10,27 @@
         {
             "title":"Getting Start",
             "children":[
-                "dev-docs/getting-start/deploy-you-own-okc-testnet",
-                "dev-docs/getting-start/install-faq",
                 "dev-docs/getting-start/install-okc",
-                "dev-docs/getting-start/join-okc-mainnet",
+                "dev-docs/getting-start/deploy-you-own-okc-testnet",
                 "dev-docs/getting-start/join-okc-testnet",
                 "dev-docs/getting-start/join-okc-testnet-with-docker",
-                "dev-docs/getting-start/upgrade-node"
+                "dev-docs/getting-start/join-okc-mainnet",
+                "dev-docs/getting-start/upgrade-node",
+                "dev-docs/getting-start/install-faq"
             ]
         },
         {
             "title":"Developers",
             "children":[
-                "dev-docs/developers/quick-start",
                 "dev-docs/developers/quick-start-for-mainnet",
-                {
-                    "title":"KIP20 Tokens",
-                    "children":[
-                        "dev-docs/developers/KIP20Tokens/introduction",
-                        "dev-docs/developers/KIP20Tokens/issue-token",
-                        "dev-docs/developers/KIP20Tokens/kip20"
-                    ]
-                },
+                "dev-docs/developers/quick-start",
                 {
                     "title":"Basics",
                     "children":[
                         "dev-docs/developers/basics/accounts",
                         "dev-docs/developers/basics/gas",
-                        "dev-docs/developers/basics/json_rpc",
                         "dev-docs/developers/basics/transactions",
                         "dev-docs/developers/basics/websocket"
-                    ]
-                },
-                {
-                    "title":"Blockchain Detail",
-                    "children":[
-                        "dev-docs/developers/blockchainDetail/aminorpc",
-                        "dev-docs/developers/blockchainDetail/okexchain-fullnode",
-                        "dev-docs/developers/blockchainDetail/endpoint"
-                    ]
-                },
-                {
-                    "title":"Deploy",
-                    "children":[
-                        "dev-docs/developers/deploy/remix",
-                        "dev-docs/developers/deploy/truffle",
-                        "dev-docs/developers/deploy/verify-contract",
-                        "dev-docs/developers/deploy/verify-proxy-contract"
                     ]
                 },
                 {
@@ -70,14 +44,39 @@
                         "dev-docs/developers/tools/web3js"
                     ]
                 },
+                {
+                    "title":"Deploy",
+                    "children":[
+                        "dev-docs/developers/deploy/remix",
+                        "dev-docs/developers/deploy/truffle",
+                        "dev-docs/developers/deploy/verify-contract",
+                        "dev-docs/developers/deploy/verify-proxy-contract"
+                    ]
+                },
+                {
+                    "title":"KIP20 Tokens",
+                    "children":[
+                        "dev-docs/developers/KIP20Tokens/introduction",
+                        "dev-docs/developers/KIP20Tokens/issue-token",
+                        "dev-docs/developers/KIP20Tokens/kip20"
+                    ]
+                },
+                {
+                    "title":"Blockchain Detail",
+                    "children":[
+                        "dev-docs/developers/blockchainDetail/aminorpc",
+                        "dev-docs/developers/blockchainDetail/okexchain-fullnode",
+                        "dev-docs/developers/blockchainDetail/endpoint"
+                    ]
+                },
                 "dev-docs/developers/FAQ"
             ]
         },
         {
             "title":"Delegators",
             "children":[
-                "dev-docs/delegators/delegators-guide-cli",
                 "dev-docs/delegators/delegators-overview",
+                "dev-docs/delegators/delegators-guide-cli",
                 "dev-docs/delegators/delegators-staking-cli",
                 "dev-docs/delegators/delegators-faq"
             ]
@@ -85,8 +84,8 @@
         {
             "title":"Validators",
             "children":[
-                "dev-docs/validators/validators-guide-cli",
                 "dev-docs/validators/validators-overview",
+                "dev-docs/validators/validators-guide-cli",
                 {
                     "title":"Detail",
                     "children":[
@@ -106,20 +105,20 @@
         {
             "title":"Wasm",
             "children":[
-                "dev-docs/wasm/cosmwasmjs",
-                "dev-docs/wasm/instruction-manual",
                 "dev-docs/wasm/overview",
-                "dev-docs/wasm/vmbridge"
+                "dev-docs/wasm/instruction-manual",
+                "dev-docs/wasm/vmbridge",
+                "dev-docs/wasm/cosmwasmjs"
             ]
         },
         {
             "title":"Resources",
             "children":[
+                "dev-docs/resources/snapshot",
                 "dev-docs/resources/archives",
                 "dev-docs/resources/exchaincli",
-                "dev-docs/resources/genesis",
                 "dev-docs/resources/service-providers",
-                "dev-docs/resources/snapshot"
+                "dev-docs/resources/genesis"
             ]
         },
         {
@@ -149,7 +148,7 @@
             ]
         },
         {
-            "title":"API REFERENCE",
+            "title":"API",
             "children":[
                 {
                     "title":"SDK",
@@ -159,7 +158,13 @@
                     ]
                 },
                 "dev-docs/api/http",
-                "dev-docs/developers/basics/json_rpc"
+                "dev-docs/api/json_rpc"
+            ]
+        },
+        {
+            "title":"References",
+            "children":[
+                "dev-docs/references/link"
             ]
         }
     ]
