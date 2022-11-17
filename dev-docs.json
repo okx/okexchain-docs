@@ -47,7 +47,7 @@
                     "children":[
                         "dev-docs/developers/blockchainDetail/aminorpc",
                         "dev-docs/developers/blockchainDetail/okexchain-fullnode",
-                        "dev-docs/developers/blockchainDetail/rpc"
+                        "dev-docs/developers/blockchainDetail/endpoint"
                     ]
                 },
                 {
@@ -73,7 +73,6 @@
                 "dev-docs/developers/FAQ"
             ]
         },
-        
         {
             "title":"Delegators",
             "children":[
@@ -152,14 +151,15 @@
         {
             "title":"API REFERENCE",
             "children":[
-                "dev-docs/api/http",
                 {
-                    "title":"Sdk",
+                    "title":"SDK",
                     "children":[
                         "dev-docs/api/sdk/go-sdk",
                         "dev-docs/api/sdk/java-sdk"
                     ]
-                }
+                },
+                "dev-docs/api/http",
+                "dev-docs/developers/basics/json_rpc"
             ]
         }
     ]
