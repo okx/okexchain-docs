@@ -39,7 +39,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;The client layer is IBC protocol's initial state and lowest layer, responsible for storing its peer network's metadata. The connection creating process of the client layer is as shown in the chart below:
 
-![client](../img/ibc-client.jpg)
+![client](../img/ibc-create-client.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;In the client layer, IBC contains 4 different message types, as shown in the chart below:
 
