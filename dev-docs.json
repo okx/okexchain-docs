@@ -112,33 +112,21 @@
             ]
         },
         {
-            "title":"Resources",
+            "title":"Concepts",
             "children":[
-                "dev-docs/resources/snapshot",
-                "dev-docs/resources/archives",
-                "dev-docs/resources/exchaincli",
-                "dev-docs/resources/service-providers",
-                "dev-docs/resources/genesis"
+                "dev-docs/concepts/general-concepts",
+                "dev-docs/concepts/gov",
+                "dev-docs/concepts/sentry-nodes",
+                "dev-docs/concepts/two-format-address"
             ]
         },
         {
-            "title":"Concepts",
+            "title":"Resources",
             "children":[
-                
-                "dev-docs/concepts/general-concepts",
-                "dev-docs/concepts/gov",
-                "dev-docs/concepts/periodic-auction",
-                "dev-docs/concepts/sentry-nodes",
-                {
-                    "title":"Governance",
-                    "children":[
-                        "dev-docs/concepts/governance/overview",
-                        "dev-docs/concepts/governance/parameter",
-                        "dev-docs/concepts/governance/text",
-                        "dev-docs/concepts/governance/upgrade"
-                    ]
-                },
-                "dev-docs/concepts/faq"
+                "dev-docs/resources/genesis",
+                "dev-docs/resources/exchaincli",
+                "dev-docs/resources/service-providers",
+                "dev-docs/resources/snapshot"
             ]
         },
         {
