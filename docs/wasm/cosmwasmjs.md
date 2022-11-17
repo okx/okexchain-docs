@@ -4,10 +4,8 @@ This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and 
 
 | Project | Description | 
 | :-----| :----| 
-| ComWasmJs | A JS SDK for smart contract interactions provided by CosmWasm. ComWasmJs is developed based on ComJs.
-| 
-| ComJs | The JS SDK that Cosmos SDK provides to interact with nodes.
-| 
+| ComWasmJs | A JS SDK for smart contract interactions provided by CosmWasm. ComWasmJs is developed based on ComJs. | 
+| ComJs | The JS SDK that Cosmos SDK provides to interact with nodes. | 
 
 **Note: If you want a more detailed explanation of CosmWasmJS and wasm smart contract interactions, please refer to [CosmWasmJS](https://cosmwasm.github.io/CosmWasmJS/)**
 

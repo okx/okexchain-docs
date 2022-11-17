@@ -1,5 +1,7 @@
 # FAQ for developers
-## 1.how to solve the error of mismatch transaction hash when using `ethers.js`.
+
+## how to solve the error of mismatch transaction hash when using `ethers.js`.
+
 ### Solution
 * install the package of `exchain-etherjs`(which was released by team of ExChain ) via npm 
 ```shell script

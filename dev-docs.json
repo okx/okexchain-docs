@@ -24,7 +24,6 @@
             "children":[
                 "dev-docs/developers/quick-start",
                 "dev-docs/developers/quick-start-for-mainnet",
-                "dev-docs/developers/FAQ",
                 {
                     "title":"KIP20 Tokens",
                     "children":[
@@ -70,7 +69,8 @@
                         "dev-docs/developers/tools/truffle",
                         "dev-docs/developers/tools/web3js"
                     ]
-                }
+                },
+                "dev-docs/developers/FAQ"
             ]
         },
         
