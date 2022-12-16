@@ -39,11 +39,11 @@ For testnet only.
 |       Symbol       |    Contract Address   |    Decimals   |
 |--------------------|-----------------------|-----------------------|
 |        OKB         |    [0xDa9d14072Ef2262c64240Da3A93fea2279253611](https://www.oklink.com/okc-test/address/0xDa9d14072Ef2262c64240Da3A93fea2279253611)    |  10  |
-|        USDT        |    [0xe579156f9dEcc4134B5E3A30a24Ac46BB8B01281](https://www.oklink.com/okc-test/address/0xe579156f9dEcc4134B5E3A30a24Ac46BB8B01281)    |  10  |
+|        USDT        |    [0xDD5A98C55594dc942fd870D3B7F835680D1Bd5FB](https://www.oklink.com/okc-test/address/0xDD5A98C55594dc942fd870D3B7F835680D1Bd5FB)    |  6  |
 |        USDK        |    [0x533367b864D9b9AA59D0DCB6554DF0C89feEF1fF](https://www.oklink.com/okc-test/address/0x533367b864D9b9AA59D0DCB6554DF0C89feEF1fF)    |  10  |
-|        USDC        |    [0x3e33590013B24bf21D4cCca3a965eA10e570D5B2](https://www.oklink.com/okc-test/address/0x3e33590013B24bf21D4cCca3a965eA10e570D5B2)    |  10  |
-|        BTCK        |    [0x09973e7e3914EB5BA69C7c025F30ab9446e3e4e0](https://www.oklink.com/okc-test/address/0x09973e7e3914EB5BA69C7c025F30ab9446e3e4e0)    |  10  |
-|        ETHK        |    [0xDF950cEcF33E64176ada5dD733E170a56d11478E](https://www.oklink.com/okc-test/address/0xDF950cEcF33E64176ada5dD733E170a56d11478E)    |  10  |
+|        USDC        |    [0xb23AE8b65073CDB2643D82B7F790FF352245deD3](https://www.oklink.com/okc-test/address/0xb23AE8b65073CDB2643D82B7F790FF352245deD3)    |  6  |
+|        BTCK        |    [0xEDa012ED1A7e1b3F5060a12f8c3f9B295D2Bc12F](https://www.oklink.com/okc-test/address/0xEDa012ED1A7e1b3F5060a12f8c3f9B295D2Bc12F)    |  8  |
+|        ETHK        |    [0x347eA4EE14BDF98e546CFe01D801316cD6fbB5Fe](https://www.oklink.com/okc-test/address/0x347eA4EE14BDF98e546CFe01D801316cD6fbB5Fe)    |  18  |
 |        DOTK        |    [0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f](https://www.oklink.com/okc-test/address/0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f)    |  10  |
 |        FILK        |    [0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93](https://www.oklink.com/okc-test/address/0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93)    |  10  |
 |        LTCK        |    [0xd616388f6533B6f1c31968a305FbEE1727F55850](https://www.oklink.com/okc-test/address/0xd616388f6533B6f1c31968a305FbEE1727F55850)    |  10  |
