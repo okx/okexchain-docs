@@ -2,7 +2,7 @@
 # crate-docs-theme>=0.7
 okchain1-docs-theme>=0.1.43
 sphinx-csv-filter
-Pygments==2.3.1
+Pygments==2.7.4
 Jinja2<3.1
 
 alabaster==0.7.12
