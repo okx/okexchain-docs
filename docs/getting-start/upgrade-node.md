@@ -15,7 +15,7 @@ make install
 > _NOTE_:
 If you have issues at this step, please check that you have the latest stable version of GO installed.
 
-See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which public testnet, and the [OKC release page](https://github.com/okex/exchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okx/testnets) for details on which version is needed for which public testnet, and the [OKC release page](https://github.com/okx/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 
@@ -27,7 +27,7 @@ To upgrade the genesis file, you can either fetch it from a trusted source or ex
 
 ### Fetching from a Trusted Source
 
-If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/okex/testnets). Otherwise, fetch it from your trusted source.
+If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/okx/testnets). Otherwise, fetch it from your trusted source.
 
 Save the new genesis as `new_genesis.json`. Then replace the old `genesis.json` with `new_genesis.json`
 

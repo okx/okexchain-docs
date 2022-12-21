@@ -9,7 +9,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;IBC is a cross-chain operation, which means that if you want to test locally, you need to have cli binaries of other chains (such as gaia) and a relayer.
 
 - [Example of relayer in Go version](https://github.com/cosmos/relayer)
-- [OKC binary](https://github.com/okex/exchain/releases/tag/v1.6.4) (suggest using the newest version, size of version needs to be bigger than v1.6.1)
+- [OKC binary](https://github.com/okx/exchain/releases/tag/v1.6.4) (suggest using the newest version, size of version needs to be bigger than v1.6.1)
 - [Gaia binary](https://github.com/cosmos/gaia)
 
 ## How to transfer tokens across chains for ordinary users

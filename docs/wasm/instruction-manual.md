@@ -60,7 +60,7 @@ exchaincli config node https://exchaintesttmrpc.okex.org
 Download the OKC source code and set up the OKC local testnet through the script we provide.
 
 ```Bash
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 cd exchain/dev
 sh start.sh
 ```

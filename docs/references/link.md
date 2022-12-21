@@ -2,7 +2,7 @@
 
 ## Mainnet
 
-[OKC Source Code](https://github.com/okex/exchain)
+[OKC Source Code](https://github.com/okx/exchain)
 
 ## Testnet
 

@@ -12,7 +12,7 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
-- Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okex/KIPs/blob/master/docs/final/KIP-20.md/)
+- Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okx/KIPs/blob/master/docs/final/KIP-20.md/)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 

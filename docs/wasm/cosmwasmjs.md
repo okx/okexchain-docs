@@ -28,7 +28,7 @@ Below is the URL of the testnet RPC node
 Download the OKC source code and set up the OKC local testnet through the script we provide
 
 ```shell
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 cd exchain/dev
 sh ./wasm-test.sh 
 ```
@@ -154,4 +154,4 @@ The above only shows how to connect OKC nodes through CosmWasmJS, the actions fo
 | 31 | sign | Sign  transaction| Y |SigningCosmWasmClient  |  |
 
 ## Example
-We provide a Webpack [demo](https://github.com/okex/comswasmjs-client) example. You can follow this example to interact with OKC through your browser and Keplr wallet using CosmWasmJS and Webpack.
+We provide a Webpack [demo](https://github.com/okx/comswasmjs-client) example. You can follow this example to interact with OKC through your browser and Keplr wallet using CosmWasmJS and Webpack.

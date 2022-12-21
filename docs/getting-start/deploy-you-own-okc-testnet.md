@@ -5,7 +5,7 @@ This document describes 2 ways to setup a network of `okc` nodes, each serving a
 1. Single-node, local, manual testnet
 2. Multi-node, local, automated testnet
 
-Supporting code can be found in the [networks directory](https://github.com/okex/exchain/tree/dev/networks) and additionally the `local` sub-directories.
+Supporting code can be found in the [networks directory](https://github.com/okx/exchain/tree/dev/networks) and additionally the `local` sub-directories.
 
 ## Available Docker images
 
@@ -58,7 +58,7 @@ This setup puts all the data for `exchaind` in `~/.exchaind`. You can examine th
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/okex/exchain/tree/dev/networks/local):
+From the [networks/local directory](https://github.com/okx/exchain/tree/dev/networks/local):
 
 ### Requirements
 
@@ -72,7 +72,7 @@ Build the `exchaind` binary (linux) and the `okexchain/node` docker image requir
 
 ```bash
 # Clone the exchain repo
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 
 # Work from the SDK repo
 cd exchain

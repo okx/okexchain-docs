@@ -1,6 +1,6 @@
 # Java SDK
 
-github: https://github.com/okex/exchain-java-sdk
+github: https://github.com/okx/exchain-java-sdk
 
 ## 1. package utils
 

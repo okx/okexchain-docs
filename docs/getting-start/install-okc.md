@@ -28,10 +28,10 @@ provide this control panel through the "Advanced System Settings" option inside 
 
 ## Install the binaries
 
-Next, let's install the latest version of OKC. Make sure you `git checkout` the [latest released version](https://github.com/okex/exchain/releases).
+Next, let's install the latest version of OKC. Make sure you `git checkout` the [latest released version](https://github.com/okx/exchain/releases).
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/okex/exchain
+git clone -b <latest-release-tag> https://github.com/okx/exchain
 export GO111MODULE=on
 cd exchain 
 # mainnet, use make mainnet
@@ -48,7 +48,7 @@ $env:GO111MODULE="on"
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
 ```
-# github.com/okex/exchain/cmd/exchaind
+# github.com/okx/exchain/cmd/exchaind
 flag provided but not defined: -L
 usage: link [options] main.o
 ...

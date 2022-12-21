@@ -1,6 +1,6 @@
 # Join the Public Mainnet 
 
-See the [mainnet repo](https://github.com/okex/mainnet) for
+See the [mainnet repo](https://github.com/okx/mainnet) for
 information on the latest mainnet, including the correct version
 of OKC to use and details about the genesis file.
 
@@ -63,7 +63,7 @@ Your full node has been initialized!
 
 Fetch the mainnet's `genesis.json` file into `exchaind`'s config directory.
 
-Note we use the `latest` directory in the [mainnet repo](https://github.com/okex/mainnet) which contains details for the mainnet like the latest version and the genesis file. 
+Note we use the `latest` directory in the [mainnet repo](https://github.com/okx/mainnet) which contains details for the mainnet like the latest version and the genesis file. 
 
 To verify the correctness of the configuration run:
 
@@ -73,7 +73,7 @@ exchaind validate-genesis
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [mainnet repo's](https://github.com/okex/mainnet) README.md contains some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [mainnet repo's](https://github.com/okx/mainnet) README.md contains some seed nodes.
 
 You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/config.toml` file:
 
@@ -98,7 +98,7 @@ Check that everything is running smoothly:
 exchaincli status
 ```
 
-See the [mainnet repo](https://github.com/okex/mainnet) for information on mainnet, including the correct version of the OKC to use and details about the genesis file.
+See the [mainnet repo](https://github.com/okx/mainnet) for information on mainnet, including the correct version of the OKC to use and details about the genesis file.
 
 
 ## JSON-RPC Endpoint
@@ -131,7 +131,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 cd exchain
 git fetch --all && git checkout vx.y.z
 make install
@@ -140,7 +140,7 @@ make install
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
-See the [mainnet repo](https://github.com/okex/mainnet) for details on which version is needed for which mainnet, and the [OKC release page](https://github.com/okex/exchain/releases) for details on each release.
+See the [mainnet repo](https://github.com/okx/mainnet) for details on which version is needed for which mainnet, and the [OKC release page](https://github.com/okx/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 

@@ -1,13 +1,13 @@
 # Join the Public Testnet 
 
-See the [testnet repo](https://github.com/okex/testnets) for
+See the [testnet repo](https://github.com/okx/testnets) for
 information on the latest testnet, including the correct version
 of OKC to use and details about the genesis file.
 
 **You need to [install okc](./install-okc.html) before you go further**
 
 
-Details of deployment information: https://github.com/okex/testnets/blob/master/README.md
+Details of deployment information: https://github.com/okx/testnets/blob/master/README.md
 ## Supported Platforms
 
 We support running a full node on `Mac OS X`, `Windows` and `Linux`.
@@ -65,7 +65,7 @@ Your full node has been initialized!
 
 Fetch the testnet's `genesis.json` file into `exchaind`'s config directory.
 
-Note we use the `latest` directory in the [testnets repo](https://github.com/okex/testnets) which contains details for the testnet like the latest version and the genesis file. 
+Note we use the `latest` directory in the [testnets repo](https://github.com/okx/testnets) which contains details for the testnet like the latest version and the genesis file. 
 
 To verify the correctness of the configuration run:
 
@@ -75,7 +75,7 @@ exchaind start --chain-id exchain-65
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okex/testnets) contains links to some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okx/testnets) contains links to some seed nodes.
 
 You can add `seeds` in the `~/.exchaind/config/config.toml` file:
 
@@ -100,7 +100,7 @@ Check that everything is running smoothly:
 exchaincli status
 ```
 
-See the [testnet repo](https://github.com/okex/testnets) for information on testnets, including the correct version of the OKC to use and details about the genesis file.
+See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKC to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
 [RPC URL](../developers/blockchainDetail/aminorpc.html#testnet-chain-id-exchain-65)
@@ -131,7 +131,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 cd exchain
 git fetch --all && git checkout master
 make install
@@ -140,7 +140,7 @@ make install
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
-See the [testnet repo](https://github.com/okex/testnets) for details on which version is needed for which testnet, and the [OKC release page](https://github.com/okex/exchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okx/testnets) for details on which version is needed for which testnet, and the [OKC release page](https://github.com/okx/exchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 

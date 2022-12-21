@@ -11,7 +11,7 @@ Wasm contracts follow 2 kinds of protocols:
 2. When the contract accepts ERC20 to exchange to CW20, the contract must implement the mintCW20 method. Used for receiving calls from EVM contracts.
 
 ## Example of application
-**We provide an [example](https://github.com/okex/VMTokenBridge) contract of how to use VMBridge**
+**We provide an [example](https://github.com/okx/VMTokenBridge) contract of how to use VMBridge**
 ![](../img/vmbridge-example.png)
 ### Example 1
 ERC20 and CW20 contracts follow VMBridge rules (suitable for newly issued token projects). When the user exchanges ERC20 for CW20 tokens, the call for the method of exchanging CW20 tokens in the ERC20 contract is initiated. The ERC20 side burns the corresponding token and calls the CW20 contract, and the CW20 side mints the corresponding token. The same applies vice versa.
