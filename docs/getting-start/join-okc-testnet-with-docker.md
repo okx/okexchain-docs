@@ -10,7 +10,7 @@ docker pull okexchain/fullnode-testnet:latest
 ### 2. Set the data directory
 
 
-Download the testnet snapshot from [here](https://okexchain-docs.readthedocs.io/en/latest/resources/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
+Download the testnet snapshot from [here](https://www.okx.com/cn/okc/docs/dev/docs/resources/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
 
 
 

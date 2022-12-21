@@ -27,7 +27,8 @@ The `genesis_time` is defined at the top of the genesis file. It is a UTC timest
 The `chain_id` is a unique identifier for your chain. It helps differentiate between different chains using the same version of the software.
 
 ```json
-"chain_id": "okexchain",
+"chain_id": "exchain-66", // OKC mainnet
+"chain_id": "exchain-65", // OKC testnet
 ```
 
 ## Consensus Parameters
