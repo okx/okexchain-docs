@@ -1,7 +1,3 @@
-<!--
-order: 7
--->
-
 # OKC Archives
 
 With each breaking upgrade of the OKC, the network is restarted at height 0. During this process, an export of the last state of the previous network is made to produce the genesis state of the new one.

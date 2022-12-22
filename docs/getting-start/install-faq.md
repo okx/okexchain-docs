@@ -77,7 +77,7 @@ $ exchaincli config trust-node true
 ```
 
 ## 3. Make sure commitID is the latest version
-When you start your own node, to make sure that your commitID of exchaind is consistent with the [official version](https://github.com/okex/exchain/releases), check it by:
+When you start your own node, to make sure that your commitID of exchaind is consistent with the [official version](https://github.com/okx/exchain/releases), check it by:
 ```shell script
 $ exchaind version --long
 # or
@@ -86,11 +86,13 @@ $ docker exec docker_container_name exchaind version --long
 ```
 For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551fed.
 ```shell script
-name: okexchain
+name: exchain
 server_name: exchaind
 client_name: exchaincli
-version: v0.16.8.3
-commit: ee5068ccb54b464aeaff7eef69fb2e8611551fed
+version: v1.6.5
+commit: 4f496351ab3bdc4ce014706711f31589021dd0de
+build_tags: netgo
+go: go version go1.19.2 darwin/amd64
 ```
 
 

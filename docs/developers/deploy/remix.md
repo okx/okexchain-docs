@@ -12,7 +12,7 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
-- Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okex/KIPs/blob/master/docs/final/KIP-20.md/)
+- Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okx/KIPs/blob/master/docs/final/KIP-20.md/)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
@@ -34,9 +34,9 @@ Now, We have to deploy our smart contract on OKC Network. For that, we have to c
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](https://okc-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
+- Testnet * [RPC URLs](https://www.okx.com/cn/okc/docs/dev/docs/developers/blockchainDetail/aminorpc.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
 https://www.oklink.com/okc-test
-- Mainnet * [RPC URLs](https://okc-docs.readthedocs.io/en/add-evm-doc/developers/blockchainDetail/rpc.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
+- Mainnet * [RPC URLs](https://www.okx.com/cn/okc/docs/dev/docs/developers/blockchainDetail/aminorpc.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask

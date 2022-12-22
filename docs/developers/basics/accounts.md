@@ -67,7 +67,7 @@ curl -X GET "<NODE_IP>/auth/accounts/ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme" 
 The Cosmos SDK Keyring output (i.e `exchaincli keys`) only supports addresses and public keys in Bech32 format.
 :::
 
-To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`oec_accounts`](./json_rpc.md#eth_accounts) endpoint:
+To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`okc_accounts`](./json_rpc.md#eth_accounts) endpoint:
 
 ```bash
 # query against a local node

@@ -1,9 +1,4 @@
-
 # Validator Guide (CLI)
-<!--
-order: 2
--->
-
 
 Staking is an important basic module supporting PoS (Proof of Stake) consensus mechanism. It determines the number of block producer sets in each election period according to the total amount of delegated proof of stake accepted by validators, and dynamically determines the block order according to the voting power. Meanwhile, it also provides necessary support for delegation relationships and information query of validators to distribution and governance modules.
 

@@ -1,9 +1,3 @@
-<!--
-order: false
-parent:
-  order: 5
--->
-
 # Resources
 
 This folder contains resources on the `okc` software.

@@ -11,7 +11,7 @@ Wasm smart contracts are smart contracts that operated on wasm virtual machine. 
 ### Install essential tools
    In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKC chain.
 #### Install OKC
-   Make sure you have the OKC application installed, [installation instructions](https://okc-docs.readthedocs.io/en/latest/getting-start/install-oec.html).
+   Make sure you have the OKC application installed, [installation instructions](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/install-okc.html).
 #### Install Rust
    Install Rust environment (Linux or MacOS), [installation instructions](https://rustup.rs/).
    After installing Rust, you need to confirm your machine has wasm32 target
@@ -34,7 +34,7 @@ apt install jq curl
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
 #### Mainnet
-Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](https://okc-docs.readthedocs.io/en/latest/getting-start/join-oec-mainnet.html).
+Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/join-okc-mainnet.html).
 
 Configure your exchaincli
 ```Bash
@@ -45,7 +45,7 @@ exchaincli config trust-node true
 exchaincli config node https://exchaintmrpc.okex.org
 ```
 #### Testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](https://okc-docs.readthedocs.io/en/latest/getting-start/join-oec-testnet.html).
+Testnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/join-okc-testnet.html).
 
 Configure your exchaincli
 ```Bash 
@@ -60,7 +60,7 @@ exchaincli config node https://exchaintesttmrpc.okex.org
 Download the OKC source code and set up the OKC local testnet through the script we provide.
 
 ```Bash
-git clone https://github.com/okex/exchain.git
+git clone https://github.com/okx/exchain.git
 cd exchain/dev
 sh start.sh
 ```

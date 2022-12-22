@@ -1,7 +1,3 @@
-<!--
-order: 5
--->
-
 # Service Providers
 
 We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKC blockchain. More specifically, this document will be focused around the interactions with tokens.
@@ -22,9 +18,9 @@ There are three main pieces to consider:
 
 We will describe the steps to run and interact with a full-node within the OKC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](../getting-start/install-oec.html).
+First, you need to [install the software](../getting-start/install-okc.html).
 
-Then, you can start [running a full-node(testnet)](../getting-start/join-oec-testnet.html).
+Then, you can start [running a full-node(testnet)](../getting-start/join-okc-testnet.html).
 
 ### Command-Line interface
 
@@ -49,6 +45,7 @@ exchaincli config node <host>:<port
 
 // example: exchaincli config node https://35.176.62.211:26657
 ```
+The ip address is for reference only, please use `https://exchaintmrpc.okex.org` for actual access
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
 
@@ -130,9 +127,9 @@ It will display all the available commands. For each command, you can use the `-
 
 ## Rest API
 
-The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest).
+The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://exchainrpc.okex.org/docs/en/#overview).
 
-To give more flexibility to developers, the OKC community has included the ability to generate unsigned transactions, [sign](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) and [broadcast](https://documenter.getpostman.com/view/1112175/SzS5u6bE?version=latest#03709c4f-d620-4fef-a36a-f9cb97e909b8) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
+To give more flexibility to developers, the OKC community has included the ability to generate unsigned transactions, [sign](https://exchainrpc.okex.org/docs/en/#overview) and [broadcast](https://exchainrpc.okex.org/docs/en/#overview) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
 
 ## OKC SDK Transaction Signing
 
