@@ -99,8 +99,7 @@
         {
             "title":"Gas Back",
             "children":[
-                "dev-docs/gas-back/how-to-get-gas-back-on-okc",
-                "dev-docs/gas-back/ibc-cli"
+                "dev-docs/gas-back/how-to-get-gas-back-on-okc"
             ]
         },
         {
