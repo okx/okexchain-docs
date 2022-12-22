@@ -13,4 +13,4 @@ The hardware must meet certain requirements to run a full node.
 - 4 cores of CPU and 8 gigabytes of memory (RAM).
 - A broadband Internet connection with upload/download speeds of at least 1 megabyte per second
 ### Settings
-For more information, Please refer to [setting up a new node](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/join-okc-testnet.html#starting-a-new-node)
+For more information, Please refer to [setting up a new node](../../getting-start/join-okc-testnet.html#starting-a-new-node)

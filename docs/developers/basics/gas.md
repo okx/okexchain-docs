@@ -21,7 +21,7 @@ their value in Wei. Following a common (although somewhat ambiguous) pattern, et
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/master/basics/gas-fees.html)
+- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) 
 
 The concept of Gas represents the amount of computational effort required to execute specific operations on the state machine.
