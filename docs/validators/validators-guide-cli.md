@@ -12,7 +12,7 @@ OKC will re-elect block generation nodes at each fixed block height interval, ca
 > _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](../delegators/delegators-guide-cli.html) first. If you need to get OKT, you can get it [here](https://discord.gg/B5nMs6qK5F).
 
 
-## cli command
+## CLI command
 Staking cli command contains the following commonly commands.
 
 * create-validator：create a validator
@@ -26,7 +26,7 @@ Staking cli command contains the following commonly commands.
 Upgrade a node to a validator and set the description on a validator.
 
 ```bash
-  exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+exchaincli tx staking create-validator --pubkey=$(exchaind tendermint show-validator) --moniker="my nickname" --identity="logo|||http://mywebsite/pic/logo.jpg" --website="http://mywebsite" --details="my slogan" --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 > _NOTE_: If you set home flag when executing `exchaind start`, `exchaind tendermint show-validator` the inputs after home flag should be the same as `okexcahind start`.
 
@@ -65,3 +65,13 @@ exchaincli tx staking edit-validator-commission-rate <commissionRate> --from <yo
 - **commissionRate** commission rate, ranging [0,1]. It can only be edited by the validator once every 24 hours. Default value is 1 (100%), i.e., no distribution rewards to users. If the value is set at 0.2 (20%), 80% will be allocated to users according to the voting ratio. 
 - **from** specifies the operator’s account
 - **gasPrice** 0.00000001okt
+
+### Destroy validator
+
+Deregister the validator from the okc and unbond the min self delegation.
+
+```bash
+exchaincli tx staking destroy-validator --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+> Node:You will have to wait 14 days before your OKTs are fully unlocked and transferrable.
