@@ -1,6 +1,21 @@
 # JSON-RPC Methods
 
-Check the JSON-RPC methods and namespaces supported on OKC. 
+JSON-RPC methods and namespaces supported on OKC. 
+
+mainnet:https://exchainrpc.okex.org/
+
+testnet:https://exchaintestrpc.okex.org/
+
+```shell
+# mainnet
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchainrpc.okex.org/
+
+
+# testnet
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchaintestrpc.okex.org/
+```
+
+
 
 ## Pre-requisite Readings
 

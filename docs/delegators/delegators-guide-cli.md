@@ -151,7 +151,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/install-okc.html) and the guide to run a full-node [here](https://www.okx.com/cn/okc/docs/dev/docs/getting-start/join-okc-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](../getting-start/install-okc.html) and the guide to run a full-node [here](../getting-start/join-okc-testnet.html).
 
 ### Connecting to a Remote Full-Node
 

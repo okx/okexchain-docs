@@ -78,6 +78,7 @@
                 "dev-docs/delegators/delegators-overview",
                 "dev-docs/delegators/delegators-guide-cli",
                 "dev-docs/delegators/delegators-staking-cli",
+                "dev-docs/delegators/sending-stakingtx-using-evmtx",
                 "dev-docs/delegators/delegators-faq"
             ]
         },
@@ -93,6 +94,12 @@
                     ]
                 },
                 "dev-docs/validators/validators-faq"
+            ]
+        },
+        {
+            "title":"Gas Back",
+            "children":[
+                "dev-docs/gas-back/how-to-get-gas-back-on-okc"
             ]
         },
         {
@@ -142,7 +149,8 @@
                     "title":"SDK",
                     "children":[
                         "dev-docs/api/sdk/go-sdk",
-                        "dev-docs/api/sdk/java-sdk"
+                        "dev-docs/api/sdk/java-sdk",
+                        "dev-docs/api/sdk/js-sdk"
                     ]
                 },
                 "dev-docs/api/http",

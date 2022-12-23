@@ -51,7 +51,7 @@ The OKC block explorer allows you to search, view and analyze OKC data—like bl
 
 ## OKC CLI
 
-`exchaincli` is a command-line interface that lets you interact with the OKC. `exchaincli` is the only tool that supports 100% of the OKC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
+`exchaincli` is a command-line interface that lets you interact with the OKC. `exchaincli` is the only tool that supports 100% of the OKC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](../delegators/delegators-guide-cli.html).
 
 ## Running a full-node on the OKC Testnet
 
