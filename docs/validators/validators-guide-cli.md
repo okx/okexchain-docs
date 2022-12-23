@@ -18,6 +18,7 @@ Staking cli command contains the following commonly commands.
 * create-validator：create a validator
 * edit-validator：update a validator
 * edit-validator-commission-rate：update a validator commission rate
+* destroy-validator: destroy validator
 
 > _NOTE_: For more cli, it is recommended that you read [delegators-staking-cli](../delegators/delegators-staking-cli.html). 
 
