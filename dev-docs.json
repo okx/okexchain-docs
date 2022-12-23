@@ -149,7 +149,8 @@
                     "title":"SDK",
                     "children":[
                         "dev-docs/api/sdk/go-sdk",
-                        "dev-docs/api/sdk/java-sdk"
+                        "dev-docs/api/sdk/java-sdk",
+                        "dev-docs/api/sdk/js-sdk"
                     ]
                 },
                 "dev-docs/api/http",
