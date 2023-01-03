@@ -76,3 +76,29 @@ exchaincli tx staking destroy-validator --from <yourKeyName> --gas auto --gas-ad
 ```
 
 > Node:You will have to wait 14 days before your OKTs are fully unlocked and transferrable.
+
+
+
+### More...
+
+For more cli, it is recommended that you read [delegators-staking-cli](../delegators/delegators-staking-cli.html).It contains the following commands:
+
+* deposit
+* add shares
+* withdraw
+* set withdraw addr
+* withdraw rewards
+* proxy reg
+* proxy unreg
+* proxy bind
+* proxy unbind
+* query staking delegator 
+* query staking shares added
+* query staking validator
+* query distr commission
+* query distr rewards
+* query distr params
+* query distr community-pool
+* query distr withdraw address
+* ...
+

@@ -138,6 +138,13 @@ Validators can reference the following commands below to set up a commission rat
 
 Note: On every command, users can write ` -h or --help` to get more help info.
 
+To manage the validator, you can read  [validators-guide-cli](../validators/validators-guide-cli.html), it contains the following commands:
+
+* create-validator：create a validator
+* edit-validator：update a validator
+* edit-validator-commission-rate：update a validator commission rate
+* destroy-validator: destroy validator
+
 ### Setting up a validator commission rate
 
 ```Shell
@@ -165,6 +172,17 @@ exchaincli query staking validator <validatorAddress>
 
 exchaincli query distr commission <validatorAddress>
 ```
+
+### Query validator outstanding reward
+
+```Shell
+// Query distribution outstanding (un-withdrawn) rewards for a validator and all their delegations.
+// e.g., <validatorAddress>=exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv
+
+exchaincli query distr outstanding-rewards <validatorAddress>
+```
+
+
 
 ### Withdraw validator commission reward
 
@@ -263,3 +281,68 @@ exchaincli tx distr set-withdraw-addr <withdraw-addr> --from <yourKeyName> --gas
 
 exchaincli query distr withdraw-addr <delegator>
 ```
+
+
+
+### Become a proxy by registration
+
+```shell
+// Become a proxy by registration
+// e.g., <gasPrice>=0.00000001okt
+
+exchaincli tx staking proxy reg --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+
+
+### Unregister the proxy identity.
+
+```shell
+// Unregister the proxy identity.
+// e.g., <gasPrice>=0.00000001okt
+
+exchaincli tx staking proxy unreg --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+
+
+### Bind proxy relationship
+
+```shell
+// Bind proxy relationship
+// e.g., <targetAddress>=ex153z8qwxkqa5p2samfn8z50kr9pt8j6afs0am6e, <gasPrice>=0.00000001okt
+
+exchaincli tx staking proxy bind <targetAddress> --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+
+
+### Unbind proxy relationship.
+
+```shell
+// Unbind proxy relationship
+// e.g., <gasPrice>=0.00000001okt
+
+exchaincli tx staking proxy unbind --from <yourKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
+```
+
+
+
+### Query the delegator addresses by a proxy
+
+```Shell
+// Query the addresses of delegators by a specific proxy
+
+exchaincli query staking proxy <delegator>
+```
+
+
+
+### Query staking pool
+
+```shell
+// Query values for amounts stored in the staking pool.
+
+exchaincli query staking pool
+```
+
