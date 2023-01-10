@@ -163,7 +163,8 @@
                     "dev/wasm/overview",
                     "dev/wasm/instruction-manual",
                     "dev/wasm/vmbridge",
-                    "dev/wasm/cosmwasmjs"
+                    "dev/wasm/cosmwasmjs",
+		    "dev/wasm/wasmknife"
                 ]
             },
             {
