@@ -1,10 +1,4 @@
----
-title: 'Quick Start'
-pageClass: 'spec-main-title'
----
-<Banner :copywriting="{mainTitle: 'OKX', subTitle: 'Chain Docs', content: 'Fast, Compatible, Reliable'}" />
-
-# Quick start
+# Meta Mask
 
 ## Install the Wallet application
 
