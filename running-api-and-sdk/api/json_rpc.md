@@ -1,4 +1,4 @@
-# JSON-RPC Methods
+# JSON-RPC API
 
 JSON-RPC methods and namespaces supported on OKC. 
 

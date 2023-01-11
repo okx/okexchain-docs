@@ -1,4 +1,4 @@
-# JS SDK
+# JavaScript SDK
 
 github: https://github.com/okx/exchain-javascript-sdk
 

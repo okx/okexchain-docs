@@ -1,4 +1,4 @@
-# Remix
+# Deploy with Remix
 ### Using Remix
 
 Deploys a KIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!

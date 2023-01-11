@@ -1,4 +1,4 @@
-# HTTP Methods
+# Rest API
 
 Rest api methords for okc.
 
