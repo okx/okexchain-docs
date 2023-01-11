@@ -3,7 +3,7 @@
 ## Proposal process
 
 The overall process of a proposal is shown below:
-![](../img/OKCProposal.png)   
+![](../../img/OKCProposal.png)   
 Details:  
 1. The proposer should pledge OKT when initiating a proposal to prevent malicious initiation of a proposal.
 2. The voting participants are bond OKT holders, except for the following two
@@ -25,7 +25,7 @@ OKC offers 4 types of proposals for different purposes:
 Except for text proposals, there are four proposal stages, including initiation, deposit_period, vote_period and execution. Execution is not a text proposal’s stage.
 
 ## Proposal voting statistics
-![](../img/gov-tally.png) 
+![](../../img/gov-tally.png) 
 Meanings of variables:   
 * 1. totalBonded： the sum of bonded OKT that can be used to vote on the entire network.
 * 2. totalVotingPower： the sum of bonded OKT that participate in voting.

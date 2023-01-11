@@ -1,6 +1,6 @@
 # VMBridge
 VMBridge provides OKC with a channel for exchanging EVM's ERC20 tokens and WASM's CW20 tokens. You can circulate your tokens in EVM and WASM by compiling a contract pair. Below is a schematic design diagram of VMBridge:
-![](../img/vmbridge-architecture.png)
+![](../../img/vmbridge-architecture.png)
 
 EVM contracts follow 2 kinds of protocols:  
 1. When the contract converts ERC20 to CW20, it must throw out SendToWasmEvent (WASM contract address, mintCW20 method, method input parameter), mintCW20 used for calling wasm contracts from EVM contracts.
@@ -12,7 +12,7 @@ Wasm contracts follow 2 kinds of protocols:
 
 ## Example of application
 **We provide an [example](https://github.com/okx/VMTokenBridge) contract of how to use VMBridge**
-![](../img/vmbridge-example.png)
+![](../../img/vmbridge-example.png)
 ### Example 1
 ERC20 and CW20 contracts follow VMBridge rules (suitable for newly issued token projects). When the user exchanges ERC20 for CW20 tokens, the call for the method of exchanging CW20 tokens in the ERC20 contract is initiated. The ERC20 side burns the corresponding token and calls the CW20 contract, and the CW20 side mints the corresponding token. The same applies vice versa.
 ### Example 2

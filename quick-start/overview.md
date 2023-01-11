@@ -1,5 +1,5 @@
 # Introduction
-![Welcome to the OKC](../img/okc2022poster.png)
+![Welcome to the OKC](../../img/okc2022poster.png)
 
 ## What is OKC？
 
@@ -10,7 +10,7 @@ OKC provides safe and efficient infrastructure for creating decentralized applic
 In developing this open-source, trading-focused blockchain technology, OKX has focused on providing lower operational costs for blockchain developers looking to build new decentralized-trading applications. This means lower fees for end-users of DApps based on OKC. We also designed OKC to level up user-experience standards for decentralized trading — OKC's base layer is optimized to provide the best trading performance and experience
 
 
-![OKC multichain framework](../img/okc2022ibc.png)
+![OKC multichain framework](../../img/okc2022ibc.png)
 ## What is Blockchain middleware？
 Normally in blockchain industry, developers are categorized as follows： 
 

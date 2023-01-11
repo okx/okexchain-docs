@@ -17,7 +17,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;IBC is a combination of the notary scheme and side chain mechanisms, with a framework based on the multi-chain and multi-layer development of the relay chain. IBC's protocol is similar to that of TCP's, applying the layering design, as shown in the chart below:
 
-![protocol](../img/ibc-protocol.png)
+![protocol](../../img/ibc-protocol.png)
 
 - Client: Every chain has a corresponding client who is responsible for recording the info of the peer chain.
 
@@ -33,13 +33,13 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;As the chart below shows, IBC's connecting mechanism is similar to TCP's three-way handshake, but one major difference between the two is that while the TCP/IP handshake is a direct end-to-end data interaction between two directly connected parties, IBC's connecting mechanism is done through a third party component called the relayer. The relayer conducts additional relay control and is different than TCP/IP in that IBC's connection/channel layer (chart above) needs to go through an additional connection creating process.
 
-![handshake](../img/ibc-handshake.jpg)
+![handshake](../../img/ibc-handshake.jpg)
 
 #### **Client layer protocol**
 
 &nbsp;&nbsp;&nbsp;&nbsp;The client layer is IBC protocol's initial state and lowest layer, responsible for storing its peer network's metadata. The connection creating process of the client layer is as shown in the chart below:
 
-![client](../img/ibc-create-client.png)
+![client](../../img/ibc-create-client.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;In the client layer, IBC contains 4 different message types, as shown in the chart below:
 
@@ -66,7 +66,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Connection is the upper layer protocol of client and IBC protocol's transitional state. Connection layers connection creating process is similar to that of client's, both containing certain timed out sends which are reliant on relayer. Connection layer's connection structure is as shown in the chart below:
 
-![connection](../img/ibc-connection.jpg)
+![connection](../../img/ibc-connection.jpg)
 
 There are 4 different message categories in the connection layer, and each category's logic is described in the chart below:
 
@@ -81,7 +81,7 @@ There are 4 different message categories in the connection layer, and each categ
 
 &nbsp;&nbsp;&nbsp;&nbsp;Channel layer is an application layer protocol, and all business developments can be found in this dimension. Taking place after the connection is created and reliant on relayer, a chart of channel layer protocol's connection structure is as shown below:
 
-![channel](../img/ibc-channel.jpg)
+![channel](../../img/ibc-channel.jpg)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Below are 4 kinds of message categories in the channel layer and their corresponding logic's:
 
@@ -107,7 +107,7 @@ There are 4 different message categories in the connection layer, and each categ
 
      &nbsp;&nbsp;&nbsp;&nbsp; There is a validity period field in the metadata of the client, which ensures that both clients are active and valid at the time. When the transaction is not active, in order to guarantee the client won't expire, there often will be regular updating intervals set up in the backend and program, as shown in the chart below:
 
-     ![security01](../img/ibc-security-01.jpg)
+     ![security01](../../img/ibc-security-01.jpg)
 
   &nbsp;&nbsp;&nbsp;&nbsp; For each business request received by IBC, it must ensure that its lower layer client is valid, and only when it is in the active state will it receive transactions for business logic processing.
 
@@ -139,7 +139,7 @@ There are 4 different message categories in the connection layer, and each categ
 
 Users on the Cosmos chain making asset transfers to the OKC chain:
 
-![example01](../img/ibc-example-01.jpg)
+![example01](../../img/ibc-example-01.jpg)
 
 1. User A initiates an IBC transfer directed at the Cosmos chain. After Cosmos receives the transaction, it locks the corresponding balance in the A account, and generates a certificate, which is stored locally.
 

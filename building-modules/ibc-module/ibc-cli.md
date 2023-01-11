@@ -30,7 +30,7 @@ The process of a token transfer is broken down into 6 steps, along with screensh
 
 1. Wait for relayer to relay data (approx. 1-2 mins)
 
-![img](../img/ibc-cli-01.png)
+![img](../../img/ibc-cli-01.png)
 
 ### OKC also provides transfers in the form of manually sending commands through the command line
 
