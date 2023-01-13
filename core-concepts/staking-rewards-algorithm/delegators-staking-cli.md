@@ -1,4 +1,4 @@
-# Staking Rewards Manual(CLI)
+# Staking Rewards Manual (CLI)
 
 This guide explains how to use command-line interface (CLI) commands to earn staking rewards as a validator or delegator.
 

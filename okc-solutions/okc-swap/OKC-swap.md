@@ -1,3 +1,5 @@
-# OKC swap
+# OKC Swap
 
-* [OKC swap](https://www.okx.com/okc/swap/trade)
+Official link to OKC Swap: https://www.okx.com/okc/swap
+
+Tutorial coming soon!

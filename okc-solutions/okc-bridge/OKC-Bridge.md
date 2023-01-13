@@ -1,3 +1,5 @@
-# OKC bridge
+# OKC Bridge
 
-* [OKC bridge](https://www.okx.com/okc/bridge)
+Official link to OKC Bridge: https://www.okx.com/okc/bridge
+
+Tutorial coming soon!

@@ -1,4 +1,4 @@
-# OKC IBC Cli guide
+# OKC IBC CLI Guide
 
 ## Background
 

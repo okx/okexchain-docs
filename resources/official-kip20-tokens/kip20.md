@@ -1,4 +1,4 @@
-# KIP20
+# Official KIP20 Tokens
 ## Mainnet KIP20
 
 For Mainnet only.

@@ -1,4 +1,4 @@
-# OKC staking rewards algorithm
+# OKC Staking Rewards Algorithm
 
 ## Background
 

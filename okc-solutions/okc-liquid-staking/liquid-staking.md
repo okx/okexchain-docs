@@ -1,4 +1,4 @@
-# Tutorial on Liquid Staking OKT
+# Tutorial On Liquid Staking OKT
 
 **OKC's Liquid Staking protocol of OKT is now live!**
 

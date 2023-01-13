@@ -1,4 +1,4 @@
-# Meta Mask
+# MetaMask
 
 ## Install the Wallet application
 
@@ -52,10 +52,10 @@ If the user is using Metamask wallet, they should: Click on Ethereum's main site
 
 
 > - **Network name**: OKC (can also customize)
-> - **New RPC URL88**: [OKC RPC](https://exchainrpc.okex.org) 
+> - **New RPC URL88**: https://exchainrpc.okex.org
 > - **Chain ID**: 66
 > - **Symbol**: OKT
-> - **Blockchain browser URL**: [OKC browser](https://www.oklink.com/okc)
+> - **Blockchain browser URL**: https://www.oklink.com/en/okc
 
 
 

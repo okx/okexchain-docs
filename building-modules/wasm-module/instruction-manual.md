@@ -1,4 +1,4 @@
-# OKC wasm instruction manual
+# OKC Wasm Instruction Manual
 This manual will mainly discuss how to use CLI commands on OKC for all actions regarding wasm smart contracts.
 ## What is wasm smart contract?
 Wasm smart contracts are smart contracts that operated on wasm virtual machine. More advanced than EVM, wasm virtual machine possesses the following advantages:

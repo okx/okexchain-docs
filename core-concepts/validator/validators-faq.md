@@ -8,7 +8,7 @@ This content is not yet presented under its final version. Mechanisms and values
 
 The [OKC](../okc/overview.html) is based on [Tendermint](https://docs.tendermint.com/), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
-### What is 'staking'?
+### What's staking?
 
 The OKC blockchain utilises a public Proof-Of-Stake (PoS)  mechanism. The weight of each validator is determined by the amount of  tokens staked (OKT) and bonded as collateral. These OKTs can be self-delegated directly by the validator or delegated to them by other OKT holders.
 

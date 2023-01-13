@@ -1,4 +1,4 @@
-# Validators Overview
+# Validator Overview
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Ethereum Websocket
+# Websocket API
 
 Since OKC uses Tendermint Core as it's consensus Engine and it's built with the Cosmos
 SDK framework, it inherits the event format from them. However, in order to support the native Web3

@@ -1,4 +1,4 @@
-# Delegators Overview
+# Delegator Overview
 
 
 
@@ -42,7 +42,7 @@ In the proxy staking mechanism, there are two roles:
 * When registering as a proxy delegator, you can no longer delegate your rights to others (not multiple proxies).
 * When the proxy delegator is deregistered, the staking rights  represented by the  proxy delegator are immediately cleared, and the staking power weight of the staked node is also reduced in real time.
 
-## Staking weight
+## Staking Weight
 
 The weight of the number of staking rights reduces on a weekly basis (0:00 UTC time every Saturday). The ballot weights will be calculated using the following formula:
 ```

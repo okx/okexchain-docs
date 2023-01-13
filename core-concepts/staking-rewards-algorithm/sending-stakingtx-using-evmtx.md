@@ -1,4 +1,4 @@
-# Guide for sending staking Tx using EVM Tx
+# Receive Staking Rewards Guide
 
 ## 1. Introduction
 This guide explains how users can receive gas fee rewards through executing an EVM transaction, whereby users can stake OKT and obtain voting rights to vote for their corresponding validator nodes.
