@@ -1,4 +1,4 @@
-# How to get Gas Back on OKC
+# Get Gas Back on OKC
 
 ## 1. Introduction
 The Gas Back feature allows contract deployers on OKC to proportionally distribute their contract's handling fees to other users. After the user deploys a contract on OKC and registers the contract, they can proceed to receive a handling fee distribution rate (Gas Back rate) according to the system, which will act as a handling fee for any user that calls this contract. Users can directly register this contract by sending an EVM transaction. 

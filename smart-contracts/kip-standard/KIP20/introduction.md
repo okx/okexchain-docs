@@ -13,7 +13,7 @@ A KIP20 token must implement the interface IKIP20 in IKIP20.sol. This is a templ
   }
 ```
 Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the KIP20 contract to OKC.
-## Interact with Contract with [Web3](https://www.npmjs.com/package/web3) and NodeJS.
+## Contract Interaction with Web3 and NodeJS
 
 Connect to OKC's public RPC endpoint
 ```

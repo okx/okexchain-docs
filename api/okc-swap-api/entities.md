@@ -1,2 +1,2 @@
 # Entities
-Tutorial coming soon!
+Coming soon!
