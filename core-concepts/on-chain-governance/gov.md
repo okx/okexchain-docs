@@ -1,4 +1,4 @@
-# On-chain governance
+# On-chain Governance
 
 ## Proposal process
 

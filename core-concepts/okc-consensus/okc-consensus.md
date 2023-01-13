@@ -1,31 +1,31 @@
-#Consensus Architecture
+# Consensus Architecture
 
 Learn how OKC consensus architecture leverages the Cosmos SDK Proof-of-Stake functionality, EVM compatibility and fast-finality from Tendermint Core BFT consensus.
 
-##Cosmos SDK
+## Cosmos SDK
 OKC enables the full composability and modularity of the [Cosmos SDK](http://docs.cosmos.network/ "Cosmos SDK").
 
-##Tendermint
+## Tendermint
 More formally, Tendermint Core performs Byzantine Fault Tolerant (BFT) State Machine Replication (SMR) for arbitrary deterministic, finite state machines.
 Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language. 
 ![](./img/abci1.png)
 Unlike other blockchain and consensus solutions, which come pre-packaged with built-in state machines (like a fancy key-value store, or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in whatever programming language and development environment is right for them.
-##Byzantine-Fault-Tolerance (BFT)
+## Byzantine-Fault-Tolerance (BFT)
 BFT can only tolerate up to a 1/3 of failures, those failures can include arbitrary behaviour, including hacking and malicious attacks. Tendermint never forks in the presence of asynchrony if less than 1/3 of  processes are faulty. This property is what makes Tendermint a BFT-based PoS protocol, in which it strictly prefers safety over  liveness. Tendermint blockchain will halt momentarily until a supermajority, i.e. more than 2/3, of the validator set comes to consensus.
 Unlike Nakamoto consensus where it’s subject to 51% attack (meaning that 51% of the actors acting maliciously could attack and alter the blockchain), Tendermint is more resistant as it is subject to a 66% attack.
 
 >💡If you want to understand in more detail how this concept works, check this link: [Delegated Byzantine Fault Tolerance (dBFT) - CryptoGraphics](https://cryptographics.info/cryptographics/blockchain/consensus-mechanisms/delegated-byzantine-fault-tolerance-dbft/ "Delegated Byzantine Fault Tolerance (dBFT) - CryptoGraphics") 
 
-###Consensus
+### Consensus
 The 3 main stakeholders that play the major roles in OKC consensus are:
 1. [Validator](https://www.okx.com/okc/docs/dev/docs/validators/validators-overview.html#introduction "Validator"): All nodes participating in consensus verification. 
 2. Proposer: The block producer node selected in the Validator.
 3. [Delegator](https://www.okx.com/okc/docs/dev/docs/delegators/delegators-overview.html "Delegator"): OKT holders who delegate votes on nodes based on their reputation, stability, security and infrastructure.
 
-####Delegators: Determining Validators by Delegating Voting Power
+#### Delegators: Determining Validators by Delegating Voting Power
 Prior to defining the next block via BFT consensus, Delegators come in to determine the effective validators (the top 21 validators) to propose the next block, based on their reputation, stability, security and infrastructure. The amount of the native chain token owned and delegated to a validator represents its voting power, giving them the opportunity to be a new block proposer more often. Decentralization here is “measured” by the voting power distribution amongst the validators and not the number of validators.
 
-####BFT Consensus - Propose and Commiting New Block
+#### BFT Consensus - Propose and Commiting New Block
 Tendermint rotates through the validator set, i.e. block proposers, in a weighted round-robin fashion. The more stake, i.e. voting power, that a validator has delegated to them, the more weight that they have, and the proportionally more times they will be elected as leaders. To illustrate, if one validator has the same amount of voting power as another validator, they will both be elected by protocol an equal number of times.
 
 Consensus process goes through these 5 steps: NewHeigh -> Propose -> Pre-vote -> Pre-commit -> Commit
@@ -45,7 +45,7 @@ Once a validator precommits a block, it is locked on that block. Then,
 
 This consensus ensures that all nodes maintain the same blockchain, i.e. the same list of blocks containing the past transactions and that all nodes could propose a block through Proposer rotation.
 
-###Application Blockchain Interface (ABCI)
+### Application Blockchain Interface (ABCI)
 The [ABCI](https://github.com/tendermint/abci "ABCI") is the server-client architectural API that defines communication between Tendermint Core and the hosted application. The Core serves as the client and sends requests using socket connections; the application can send one of three response messages:
 
 1. **DeliverTx** - The message is accompanied by each transaction. An application needs to validate it and then update the state. 
@@ -56,7 +56,7 @@ Developers can write their blockchain in any language using the endpoints define
 
 OKC is such an example of an ABCI application replacing Ethereum (PoW) via Tendermint consensus engine. Another example of a cryptocurrency application built on Tendermint is the Cosmos network. Tendermint is able to decompose the blockchain design by offering a very simple API (ie. the ABCI) between the application process and consensus process.
 
-###EVM module
+### EVM module
 OKC enables EVM compatibility by implementing various components that together support all the EVM state transitions while ensuring the same developer experience as Ethereum:
 - Ethereum transaction format as a Cosmos SDK 'Tx' and 'Msg' interface
 - 'secp256k1' curve for the Cosmos Keyring
