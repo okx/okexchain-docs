@@ -1,1 +1,2 @@
-# Tutorial coming soon!
+# Queries
+Tutorial coming soon!
