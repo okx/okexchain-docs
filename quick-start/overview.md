@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to OKX Chain (OKC)
 ![Welcome to the OKC](../img/okc2022poster.png)
 
 ## What is OKC？
