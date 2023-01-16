@@ -14,8 +14,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](./nodes/node-requirement/node-requirement.md)
-
+For node requirement details, please visit [Node Requirement](./nodes/node-requirement/node-requirement.html)
 ## Setting Up a New Node
 
 These instructions are for setting up a brand new full node from scratch.
