@@ -22,5 +22,7 @@ Using the ordinary cloud disk of Alibaba Cloud will cause the node to lag behind
 
 ## Solutions
 Alibaba Cloud offers 4 types of Cloud Disks: Standard SSDs, Ultra disks, ESSDs, ESSD AutoPL disks. 
+
 Recommendation: Usd Standard SSD for both Alibaba Cloud and AWS machines.
-Reference: https://www.alibabacloud.com/help/en/elastic-compute-service/latest/block-storage-overview-disks
+
+Reference: [Alibaba Cloud Disks Categories](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/block-storage-overview-disks)

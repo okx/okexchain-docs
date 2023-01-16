@@ -17,8 +17,8 @@ Details:
 
 ## Proposal types
 OKC offers 4 types of proposals for different purposes:
-1. [Text Proposal](./governance/text.html)： to obtain network views of a topic.
-2. [Parameter Proposal](./governance/parameter.html)： to change system parameters.
+1. [Text Proposal](/okc/docs/dev/core-concepts/on-chain-governance/text.html)： to obtain network views of a topic.
+2. [Parameter Proposal](/okc/docs/dev/core-concepts/on-chain-governance/parameter.html)： to change system parameters.
 3. [Delist Proposal](./governance/delist.html): to delist a token pair from DEX.
 4. Software Upgrade Proposal： to support the entire network upgrade.
 

@@ -38,7 +38,7 @@ It is required to stake at least 10,000 OKT in order to apply to become a valida
 OKT holders obtain voting rights by staking their tokens. One address can vote for up to 30 different validator candidates, and the number of votes for each validator candidate that the address has supported is equivalent to the amount of OKT the address has staked (1 OKT = 1 vote).
 
 
-Learn more about [being a delegator](../delegators/delegators-faq.html).
+Learn more about [being a delegator](/okc/docs/dev/core-concepts/delegator/delegators-faq.html).
 
 
 
@@ -51,13 +51,13 @@ The OKC block explorer allows you to search, view and analyze OKC data—like bl
 
 ## OKC CLI
 
-`exchaincli` is a command-line interface that lets you interact with the OKC. `exchaincli` is the only tool that supports 100% of the OKC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](../delegators/delegators-guide-cli.html).
+`exchaincli` is a command-line interface that lets you interact with the OKC. `exchaincli` is the only tool that supports 100% of the OKC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](/okc/docs/dev/core-concepts/delegator/delegators-guide-cli.html).
 
 ## Running a full-node on the OKC Testnet
 
-In order to run a full-node on the OKC testnet, you must first [install `exchaind`](../getting-start/install-okc.html). Then, follow [the guide](../getting-start/install-okc.html).
+In order to run a full-node on the OKC testnet, you must first [install `exchaind`](/okc/docs/dev/quick-start/install-okc.html). Then, follow [the guide](/okc/docs/dev/quick-start/install-okc.html).
 
-If you would like to run a validator node, follow the [validator setup guide](../validators/validators-guide-cli.html).
+If you would like to run a validator node, follow the [validator setup guide](/okc/docs/dev/core-concepts/validator/validators-guide-cli.html).
 
 ## Join the Community
 
