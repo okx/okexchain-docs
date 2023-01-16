@@ -16,10 +16,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `exchaind`.
 
- * Desktop or laptop hardware running recent versions of Mac OS X, Windows, or Linux.
- * 500 GB of free disk space, accessible at a minimum read/write speed of 100 MB/s.
- * 4 cores of CPU and 8 gigabytes of memory (RAM).
- * A broadband Internet connection with upload/download speeds of at least 1 megabyte per second
+For node requirement details, please visit [Node Requirement](./nodes/node-requirement/node-requirement.md)
 
 ## Setting Up a New Node
 
