@@ -6,7 +6,7 @@ This content is not yet presented under its final version. Mechanisms and values
 
 ### What is a validator?
 
-The [OKC](/okc/docs/dev/quick-start/overview.html) is based on [Tendermint](https://docs.tendermint.com/), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The [OKC](/dev/quick-start/overview.html) is based on [Tendermint](https://docs.tendermint.com/), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What's staking?
 
@@ -44,7 +44,7 @@ Out of all validator candidates that signaled themselves, the 21 with the highes
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](/okc/docs/dev/quick-start/join-okc-testnet.html) and [here](https://github.com/okx/testnets).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](/dev/quick-start/join-okc-testnet.html) and [here](https://github.com/okx/testnets).
 
 ### What are the different types of keys?
 
@@ -121,7 +121,7 @@ The validator that is selected to propose the next block is called **proposer**.
 
 ## Incentives
 
-For more information on incentives, see [Staking Rewards Algorithm](/okc/docs/dev/core-concepts/staking-rewards-algorithm/distr.html).
+For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr.html).
 
 
 

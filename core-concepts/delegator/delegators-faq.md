@@ -19,7 +19,7 @@ You will have the ability to choose if you want to become a delegator on the OKC
 
 ## Incentives
 
-For more information on incentives, see [Staking Rewards Algorithm](/okc/docs/dev/core-concepts/staking-rewards-algorithm/distr.html).
+For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr.html).
 
 
 ## Choosing a validator

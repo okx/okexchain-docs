@@ -48,7 +48,7 @@ Please exercise extreme caution!
 [**Download the binaries**]
 Not available yet.
 
-[**Install from source**](/okc/docs/dev/quick-start/install-okc.html)
+[**Install from source**](/dev/quick-start/install-okc.html)
 
 `exchaincli` is used from a terminal. To open the terminal, follow these steps:
 - **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
@@ -151,7 +151,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](/okc/docs/dev/quick-start/install-okc.html) and the guide to run a full-node [here](/okc/docs/dev/quick-start/join-okc-testnet.html).
+You will find the tutorial on how to install `exchaind` [here](/dev/quick-start/install-okc.html) and the guide to run a full-node [here](/dev/quick-start/join-okc-testnet.html).
 
 ### Connecting to a Remote Full-Node
 
@@ -287,7 +287,7 @@ exchaincli tx send <from_key_or_address> <to_address> <amount> --from <yourKeyNa
 
 **Before you can staking okt and earn rewards, you need to [set up `exchaincli`](#setting-up-exchaincli) and [create an account](#creating-an-account).**
 
-Use command-line interface (CLI) commands to staking okts and earn rewards as a validator or delegator, you can get it [here](/okc/docs/dev/core-concepts/delegator/delegators-guide-cli.html).
+Use command-line interface (CLI) commands to staking okts and earn rewards as a validator or delegator, you can get it [here](/dev/core-concepts/delegator/delegators-guide-cli.html).
 
 ### Participating in Governance
 

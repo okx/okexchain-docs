@@ -2,8 +2,8 @@
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-testnet as either a [Full Node](/okc/docs/dev/quick-start/join-okc-mainnet.html) or a
-[Validator](/okc/docs/dev/core-concepts/validator/validators-guide-cli.html).
+testnet as either a [Full Node](/dev/quick-start/join-okc-mainnet.html) or a
+[Validator](/dev/core-concepts/validator/validators-guide-cli.html).
 
 ## Install Go
 
@@ -106,4 +106,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the mainnet](/okc/docs/dev/quick-start/join-okc-mainnet.html), [the public testnet](/okc/docs/dev/quick-start/join-okc-testnet.html) or [create you own testnet](/okc/docs/dev/quick-start/deploy-you-own-okc-testnet.html)
+Now you can [join the mainnet](/dev/quick-start/join-okc-mainnet.html), [the public testnet](/dev/quick-start/join-okc-testnet.html) or [create you own testnet](/dev/quick-start/deploy-you-own-okc-testnet.html)

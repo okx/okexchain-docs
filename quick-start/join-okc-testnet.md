@@ -4,7 +4,7 @@ See the [testnet repo](https://github.com/okx/testnets) for
 information on the latest testnet, including the correct version
 of OKC to use and details about the genesis file.
 
-**You need to [install okc](/okc/docs/dev/quick-start/install-okc.html) before you go further**
+**You need to [install okc](/dev/quick-start/install-okc.html) before you go further**
 
 
 Details of deployment information: https://github.com/okx/testnets/blob/master/README.md
@@ -16,7 +16,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](/okc/docs/dev/nodes/node-requirement/node-requirement.html)
+For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
 
 ## Setting Up a New Node
 
@@ -100,7 +100,7 @@ exchaincli status
 See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKC to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-[RPC URL](/okc/docs/dev/api/okc-api/grpc-api.html)
+[RPC URL](/dev/api/okc-api/grpc-api.html)
 
 ## Upgrading Your Node
 
@@ -157,7 +157,7 @@ docker pull okexchain/fullnode-testnet:latest
 ### 2. Set the data directory
 
 
-Download the testnet snapshot from [here](/okc/docs/dev/resources/okc-snapshot/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
+Download the testnet snapshot from [here](/dev/resources/okc-snapshot/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
 
 
 

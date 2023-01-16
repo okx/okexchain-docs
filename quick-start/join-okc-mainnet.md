@@ -4,7 +4,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for
 information on the latest mainnet, including the correct version
 of OKC to use and details about the genesis file.
 
-**You need to [install okc](/okc/docs/dev/quick-start/install-okc.html) before you go further**
+**You need to [install okc](/dev/quick-start/install-okc.html) before you go further**
 
 ## Supported Platforms
 
@@ -14,7 +14,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](/okc/docs/dev/nodes/node-requirement/node-requirement.html)
+For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
 ## Setting Up a New Node
 
 These instructions are for setting up a brand new full node from scratch.
@@ -98,7 +98,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for information on mainne
 
 
 ## JSON-RPC Endpoint
-[RPC URL](/okc/docs/dev/api/grpc)
+[RPC URL](/dev/api/grpc)
 
 
 ## Upgrading Your Node

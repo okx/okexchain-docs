@@ -368,4 +368,4 @@ A `gentx` can be added manually to the genesis file, or via the following comman
 exchaind collect-gentxs
 ```
 
-This command will add all the `gentxs` stored in `~/.exchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](/okc/docs/dev/core-concepts/validator/validators-guide-cli.html).
+This command will add all the `gentxs` stored in `~/.exchaind/config/gentx` to the genesis file. In order to create a genesis transaction, click [here](/dev/core-concepts/validator/validators-guide-cli.html).

@@ -101,4 +101,4 @@ as gas is required inherently by Ethereum. This check is done by the evm transac
 
 ## Next
 
-Learn about how [json rpc method](/okc/docs/dev/api/okc-api/grpc-api.html) is used on OKC 
+Learn about how [json rpc method](/dev/api/okc-api/grpc-api.html) is used on OKC 
