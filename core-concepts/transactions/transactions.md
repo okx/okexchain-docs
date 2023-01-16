@@ -35,7 +35,3 @@ However, just as in Cosmos, OKC will support multiple signers for non-Ethereum t
 Signatures over the `Transaction` type are identical to Ethereum and the signatures will not be
 duplicated in the embedding
 [`auth.StdTx`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx).
-
-## Next 
-
-Learn about how [gas](./gas.md) is used on OKC 

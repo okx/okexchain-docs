@@ -74,10 +74,6 @@ To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`okc_accounts
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:26664
 ```
 
-## Next 
-
-Learn about OKC [transactions](./transactions.md) 
-
 # Two format address
 
 ## The relationship between ex and 0x address

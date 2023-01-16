@@ -97,8 +97,3 @@ For this same reason, in OKC it is possible to send transactions with `0` fees f
 types other than the ones defined by the `evm` module. EVM module transactions cannot have `0` fees
 as gas is required inherently by Ethereum. This check is done by the evm transactions
 `ValidateBasic` function as well as on the custom `AnteHandler` defined by OKC.
-
-
-## Next
-
-Learn about how [json rpc method](/dev/api/okc-api/grpc-api.html) is used on OKC 

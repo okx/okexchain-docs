@@ -98,7 +98,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for information on mainne
 
 
 ## JSON-RPC Endpoint
-[RPC URL](/dev/api/grpc)
+[RPC URL](/dev/api/okc-api/grpc-api.html)
 
 
 ## Upgrading Your Node
@@ -142,4 +142,4 @@ Your full node has been cleanly upgraded!
 
 ### Upgrade to Validator Node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a OKC Validator. The top 100 validators have the ability to propose new blocks to the OKC. Continue onto [the Validator Setup](../validators/validators-guide-cli.md).
+You now have an active full node. What's the next step? You can upgrade your full node to become a OKC Validator. The top 100 validators have the ability to propose new blocks to the OKC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.md).

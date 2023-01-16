@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[OKC](../README.md) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
+[OKC](/dev/quick-start/overview.html) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
 
 Validator candidates can bond their own OKTs and have OKTs ["delegated"](/dev/core-concepts/delegator/delegators-guide-cli.html), or staked, to them by token holders. The OKC network will have 21 validators. The validators are determined by a ranking of those who  collected the highest number of staked OKTs— the top 21 validator candidates with the largest stakes will become OKC validators.
 

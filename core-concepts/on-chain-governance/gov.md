@@ -63,4 +63,4 @@ voting parameters of all proposals:
 &emsp;&emsp;weight threshold for the proportion of NoWithVeto votes to all votes (`Veto`)：0.334  
 &emsp;&emsp;weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends (`YesInVotePeriod`)：0.667
 
-Refer to [Proposal parameter](./governance/parameter.html#id1) for details.
+Refer to [Proposal parameter](/dev/core-concepts/on-chain-governance/parameter.html) for details.
