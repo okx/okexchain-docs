@@ -32,7 +32,7 @@ Next, let's install the latest version of OKC. Make sure you `git checkout` the 
 
 ```bash
 # mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases/latest
-# testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases, and use lastest pre-release version
+# testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases, and use latest pre-release version
 git clone -b <latest-release-tag> https://github.com/okx/exchain
 export GO111MODULE=on
 cd exchain 
