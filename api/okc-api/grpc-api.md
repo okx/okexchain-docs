@@ -1,4 +1,4 @@
-# GRPC API
+# JSON-RPC API
 
 # JSON-AMINO-RPC Endpoint (Encoded by Amino)
 
