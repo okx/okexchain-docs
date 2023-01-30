@@ -207,7 +207,7 @@ function lastResponseTime(address source) external view returns (uint256);
 
 
 
-## 2.Feeds Available & Refresh Frequency
+## 2.Available Feeds & Refresh Frequency
 
 We collect data from trusted data source (OKX、Coinbase、Kraken、Coingecko、CoinMarketCap、CryptoCompare and so on) and publish it to our on-chain oracle smart contracts through a robust pipeline.
 
