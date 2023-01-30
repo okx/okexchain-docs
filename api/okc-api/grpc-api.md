@@ -1,51 +1,40 @@
 # JSON-RPC API
 
-# JSON-AMINO-RPC Endpoint (Encoded by Amino)
-
-## Amino vs JSON
-JavaScript Object Notation (JSON) is human readable, well structured and great for interoperability with Javascript, but it is inefficient. Protobuf3, BER, RLP all exist because we need a more compact and efficient binary encoding standard. Amino provides efficient binary encoding for complex objects (e.g. embedded objects) that integrate naturally with your favorite modern programming language. Additionally, Amino has a fully compatible JSON encoding. 
-
-[More details](https://github.com/tendermint/go-amino)
-
-## Used by
-- exchaincli
-- exchain-go-sdk
-
-## Mainnet (chain-id: exchain-66)
-
-- https://exchaintmrpc.okex.org
-
-
-___
-
-## Testnet (chain-id: exchain-65):
-
- - https://exchaintesttmrpc.okex.org
- 
-
-# JSON-RPC API
-
 JSON-RPC methods and namespaces supported on OKC. 
 
-mainnet:https://exchainrpc.okex.org/
+## Mainnet (chain-id: 0x42, 66 in decimal)
 
-testnet:https://exchaintestrpc.okex.org/
+https://exchainrpc.okex.org/
 
-```shell
-# mainnet
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchainrpc.okex.org/
+## Testnet (chain-id: 0x41, 65 in decimal)
 
-
-# testnet
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchaintestrpc.okex.org/
-```
-
-
+https://exchaintestrpc.okex.org/
 
 ## Pre-requisite Readings
 
 - [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) 
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) 
+
+## Start HTTP JSON-RPC
+
+You can start the HTTP JSON-RPC with curl.
+
+```shell
+## mainnet
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchainrpc.okex.org/
+
+## testnet
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchaintestrpc.okex.org/
+```
+
+Moreover, you can start the HTTP JSON-RPC with [geth](https://geth.ethereum.org/downloads).
+
+```shell
+## mainnet
+geth attach https://exchainrpc.okex.org/
+
+## testnet
+geth attach https://exchaintestrpc.okex.org/
+```
 
 ## JSON-RPC Methods
 
@@ -483,19 +472,19 @@ Sends transaction from given account to a given account.
 
  - Object containing: 
 
-    from: DATA, 20 Bytes - The address the transaction is send from.
+    `from`: DATA, 20 Bytes - The address the transaction is send from.
 
-    to: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
+    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
 
-    gas: QUANTITY - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
+    `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
 
-    gasPrice: QUANTITY - (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas
+    `gasPrice`: QUANTITY - (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas
 
-    value: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
-    data: DATA - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI
+    `data`: DATA - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI
 
-    nonce: QUANTITY - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
+    `nonce`: QUANTITY - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 
 
 ```json
@@ -538,27 +527,27 @@ The method takes 3 parameters:
 - Transaction call object
   The transaction call object is mandatory and contains all the necessary parameters to execute a read-only EVM contract method  
 
-    from: DATA, 20 Bytes - (optional) The address the transaction is sent from.
+    `from`: DATA, 20 Bytes - (optional) The address the transaction is sent from.
 
-    to: DATA, 20 Bytes - The address the transaction is directed to.
+    `to`: DATA, 20 Bytes - The address the transaction is directed to.
 
-    gas: QUANTITY - gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
+    `gas`: QUANTITY - gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
 
-    gasPrice: QUANTITY - gasPrice used for each paid gas
+    `gasPrice`: QUANTITY - gasPrice used for each paid gas
 
-    value: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
-    data: DATA - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
+    `data`: DATA - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
 
 - Block number
 
 - State override set (optional)
     The state override set is an optional address-to-state mapping, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing:
-    balance: Quantity, - Fake balance to set for the account before executing the call.
-    nonce: Quantity, - Fake nonce to set for the account before executing the call.
-    code: Binary, - Fake EVM bytecode to inject into the account before executing the call.
-    state: Object, - Fake key-value mapping to override all slots in the account storage before executing the call.
-    stateDiff: Object, - Fake key-value mapping to override individual slots in the account storage before executing the call.
+    `balance`: Quantity, - Fake balance to set for the account before executing the call.
+    `nonce`: Quantity, - Fake nonce to set for the account before executing the call.
+    `code`: Binary, - Fake EVM bytecode to inject into the account before executing the call.
+    `state`: Object, - Fake key-value mapping to override all slots in the account storage before executing the call.
+    `stateDiff`: Object, - Fake key-value mapping to override individual slots in the account storage before executing the call.
 
 The goal of the state override set is manyfold:
     It can be used by DApps to reduce the amount of contract code needed to be deployed on chain. Code that simply returns internal state or does pre-defined validations can be kept off chain and fed to the node on-demand.
@@ -592,11 +581,11 @@ Returns an estimate value of the gas required to send the transaction.
 
 - Object containing: 
 
-    from: DATA, 20 Bytes - The address the transaction is send from.
+    `from`: DATA, 20 Bytes - The address the transaction is send from.
 
-    to: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
+    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
 
-    value: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
 ```json
 // Request
@@ -710,7 +699,7 @@ curl -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method
 ### eth_newBlockFilter
 
 Creates a filter in the node, to notify when a new block arrives.
- 
+
 
 ```json
 // Request
@@ -772,15 +761,15 @@ Returns an array of all logs matching a given filter object.
 
 - Object containing:
 
-    fromBlock: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
+    `fromBlock`: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
 
-    toBlock: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
+    `toBlock`: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
 
-    address: DATA|Array, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
+    `address`: DATA|Array, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 
-    topics: Array of DATA, - (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with “or” options.
+    `topics`: Array of DATA, - (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with “or” options.
     
-    blockhash: (optional, future) With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
+    `blockhash`: (optional, future) With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
 
 ```json
 // Request
@@ -949,11 +938,11 @@ The account is not unlocked globally in the node and cannot be used in other RPC
 
  - Object containing:
 
-    from: DATA, 20 Bytes - The address the transaction is send from.
+    `from`: DATA, 20 Bytes - The address the transaction is send from.
 
-    to: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
+    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
 
-    value: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
 - Passphrase
 
