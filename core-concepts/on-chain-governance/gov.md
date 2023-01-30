@@ -19,8 +19,7 @@ Details:
 OKC offers 4 types of proposals for different purposes:
 1. [Text Proposal](/dev/core-concepts/on-chain-governance/text.html)： to obtain network views of a topic.
 2. [Parameter Proposal](/dev/core-concepts/on-chain-governance/parameter.html)： to change system parameters.
-3. [Delist Proposal](./governance/delist.html): to delist a token pair from DEX.
-4. Software Upgrade Proposal： to support the entire network upgrade.
+3. Software Upgrade Proposal： to support the entire network upgrade.
 
 Except for text proposals, there are four proposal stages, including initiation, deposit_period, vote_period and execution. Execution is not a text proposal’s stage.
 

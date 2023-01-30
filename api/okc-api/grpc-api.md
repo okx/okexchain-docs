@@ -806,7 +806,6 @@ curl -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method
 
 ## WebSocket Methods
 
-Read about websockets in [events](./../quickstart/events.md) {hide}
 
 ### eth_subscribe
 

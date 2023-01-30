@@ -4,7 +4,7 @@ Entities define the schema of the subgraph, and represent the data that can be q
 ## OKCswap Factory
 The OKCswap Factory entity is responsible for storing aggregate information across all OKCswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more. There is only one OKCswap Factory entity in the subgraph.  
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:-----|:---|
 |id|ID|factory address|
 |pairCount|BigDecimal|all time USD volume across all pairs (USD is derived)|
 |totalVolumeUSD|BigDecimal|all time USD volume across all pairs (USD is derived)|
@@ -14,7 +14,7 @@ The OKCswap Factory entity is responsible for storing aggregate information acro
 ## Token
 Stores aggregated information for a specific token across all pairs that token is included in.  
 | Field Name  | Value Type  |  Description  |
-|-|:-:|:-:|
+|-|:-----|:---|
 |id|ID|token address|
 |symbol|String|token symbol|
 |name|String|token name|
@@ -29,7 +29,7 @@ Stores aggregated information for a specific token across all pairs that token i
 ## Pair  
 Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|pair contract address|
 |factory|OKCswapFactory|reference to OKCswap factory entity|
 |token0|Token|reference to token0 as stored in pair contract|
@@ -52,14 +52,14 @@ Information about a pair. Includes references to each token within the pair, vol
 ## User  
 A user entity is created for any address that provides liquidity to a pool on OKCswap. This entity can be used to track open positions for users. LiquidyPosition entities can be referenced to get specific data about each position.  
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|user address|
 |liquidityPositions|[LiquidityPosition]|array of all liquidity positions user has open|
 |usdSwapped|BigDecimal|total USD value swapped|
 ## Transaction  
 Transaction entities are created for each OKX chain transaction that contains an interaction within OKCswap contracts. This subgraph tracks Mint, Burn, and Swap events on the OKCswap core contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.  
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|OKX chain transaction hash|
 |blockNumber|BigInt|block transaction was mined in|
 |timestamp|BigInt|timestamp for transaction|
@@ -69,7 +69,7 @@ Transaction entities are created for each OKX chain transaction that contains an
 ## Mint
 Mint entities are created for every emitted Mint event on the OKCswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.  
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|Transaction hash plus index in the transaction mint array|  
 |transaction|Transaction|reference to the transaction Mint was included in|  
 |timestamp|BigInt|timestamp of Mint, used to sort recent liquidity provisions|  
@@ -86,7 +86,7 @@ Mint entities are created for every emitted Mint event on the OKCswap core contr
 ## Burn 
 Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs. 
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|Transaction hash plus index in the transaction burn array| 
 |transaction|Transaction|reference to the transaction Burn was included in| 
 |timestamp|BigInt|timestamp of Burn, used to sort recent liquidity removals| 
@@ -103,7 +103,7 @@ Burn entities are created for every emitted Burn event on the Uniswap core contr
 ## Swap
  Swap entities are created for each token swap within a pair. The Swap entity can be used to get things like swap size (in tokens and USD), sender, recipient and more.   
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|transaction hash plus index in Transaction swap array|
 |transaction|Transaction|eference to transaction swap was included in|
 |timestamp|BigInt|timestamp of swap, used for sorted lookups|
@@ -119,7 +119,7 @@ Burn entities are created for every emitted Burn event on the Uniswap core contr
 ## Bundle
 The Bundle is used as a global store of USDT. In OKCswap, 1USDT is always equal to $1,thus we use USDT as our common base token to derive  USD values of other Tokens.  
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|constant 1|
 |usdPrice|BigDecimal|always equal to 1|
 # Historical Entities
@@ -127,7 +127,7 @@ The subgraph tracks information grouped in daily buckets, using timestamps provi
 ## OKCswapDayData
 Tracks data across all pairs aggregated into a daily bucket.
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|unix timestamp for start of day / 86400 giving a unique day index|
 |date|Int|unix timestamp for start of day|
 |dailyVolumeUSD|BigDecimal|total volume across all pairs on this day, stored as a derived amount of USD|
@@ -139,7 +139,7 @@ Tracks data across all pairs aggregated into a daily bucket.
 ## PairDayData 
 Tracks pair data across each day.
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|pair contract address and day id (day start timestamp in unix / 86400) concatenated with a dash|
 |date|Int|unix timestamp for start of day|
 |pairAddress|Bytes|address for pair contract|
@@ -156,7 +156,7 @@ Tracks pair data across each day.
 ## TokenDayData 
 Tracks token data aggregated across all pairs that include token.
 | Field Name  | Value Type  |  Description  |
-|:-:|:-:|:-:|
+|:---|:---|:---|
 |id|ID|token address and day id (day start timestamp in unix / 86400) concatenated with a dash|
 |date|Int|unix timestamp for start of day|
 |token|Token|reference to token entity|

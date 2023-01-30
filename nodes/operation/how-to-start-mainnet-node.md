@@ -47,7 +47,7 @@ With docker, it is strongly recommended to stop the container completely before 
 - Stop exchaind from the command line
 
 
-    # Both commands can be used, just choose one of the two
+    #Both commands can be used, just choose one of the two
     kill -2 ${pid}
     kill -15 ${pid}
     
