@@ -20,7 +20,7 @@ https://exchaintestrpc.okex.org/
 
 ## Start HTTP JSON-RPC
 
-You can start the HTTP JSON-RPC with curl.
+We recommend you start the HTTP JSON-RPC with curl.
 
 ```shell
 ## mainnet
@@ -30,7 +30,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchaintestrpc.okex.org/
 ```
 
-Moreover, you can start the HTTP JSON-RPC with [geth](https://geth.ethereum.org/downloads).
+Moreover, you also can start the HTTP JSON-RPC with geth. For getting geth you can [download](https://geth.ethereum.org/downloads) or building with [source ](https://github.com/ethereum/go-ethereum) self.
 
 ```shell
 ## mainnet
