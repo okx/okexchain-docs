@@ -10,6 +10,10 @@ https://exchainrpc.okex.org/
 
 https://exchaintestrpc.okex.org/
 
+## 3rd Party Provider
+
+- 
+
 ## Pre-requisite Readings
 
 - [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) 
