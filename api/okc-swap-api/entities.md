@@ -6,7 +6,7 @@ The OKCswap Factory entity is responsible for storing aggregate information acro
 | Field Name  | Value Type  |  Description  |
 |:---|:-----|:---|
 |id|ID|factory address|
-|pairCount|BigDecimal|all time USD volume across all pairs (USD is derived)|
+|pairCount|BigDecimal&nbsp;|all time USD volume across all pairs (USD is derived)|
 |totalVolumeUSD|BigDecimal|all time USD volume across all pairs (USD is derived)|
 |totalLiquidityUSD|BigDecimal|total liquidity across all pairs stored as a derived USD amount|
 |txCount|BigInt|all time amount of transactions across all pairs|
@@ -14,12 +14,12 @@ The OKCswap Factory entity is responsible for storing aggregate information acro
 ## Token
 Stores aggregated information for a specific token across all pairs that token is included in.  
 | Field Name  | Value Type  |  Description  |
-|-|:-----|:---|
+|:---|:-----|:---|
 |id|ID|token address|
 |symbol|String|token symbol|
 |name|String|token name|
 |decimals|BigInt|token decimals|
-|tradeVolume|BigDecimal|amount of token traded all time across all pairs|
+|tradeVolume|BigDecimal&nbsp;|amount of token traded all time across all pairs|
 |tradeVolumeUSD|BigDecimal|amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold)|
 |untrackedVolumeUSD|BigDecimal|amount of token in USD traded all time across pairs (no minimum liquidity threshold)|
 |txCount|BigInt|amount of transactions all time in pairs including token|
@@ -145,7 +145,7 @@ Tracks pair data across each day.
 |pairAddress|Bytes|address for pair contract|
 |token0|Token|reference to token0|
 |token1|Token|reference to token1|
-|reserve0|BigDecimal|reserve of token0 (updated during each transaction on pair)|
+|reserve0|BigDecimal&nbsp;|reserve of token0 (updated during each transaction on pair)|
 |reserve01|BigDecimal|reserve of token1 (updated during each transaction on pair)|
 |totalSupply|BigDecimal|total supply of liquidity token distributed to LPs|
 |reserveUSD|BigDecimal|reserve of token0 plus token1 stored as a derived USD amount|
@@ -160,7 +160,7 @@ Tracks token data aggregated across all pairs that include token.
 |id|ID|token address and day id (day start timestamp in unix / 86400) concatenated with a dash|
 |date|Int|unix timestamp for start of day|
 |token|Token|reference to token entity|
-|dailyVolumeToken|BigDecimal|amount of token swapped across all pairs throughout day|
+|dailyVolumeToken|BigDecimal&nbsp;|amount of token swapped across all pairs throughout day|
 |dailyVolumeUSD|BigDecimal|amount of token swapped across all pairs throughout day stored as a derived amount of USD|
 |dailyTxns|BigInt|amount of transactions with this token across all pairs|
 |totalLiquidityToken|BigDecimal|token amount of token deposited across all pairs|
