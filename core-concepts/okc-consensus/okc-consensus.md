@@ -61,4 +61,4 @@ OKC enables EVM compatibility by implementing various components that together s
 - Ethereum transaction format as a Cosmos SDK 'Tx' and 'Msg' interface
 - 'secp256k1' curve for the Cosmos Keyring
 - 'StateDB' interface for state updates and queries
-- [JSON-RPC](/dev/api/okc-api/grpc-api.html "JSON-RPC") client for interacting with the EVM
+- [JSON-RPC](/dev/api/okc-api/json-rpc-api.html "JSON-RPC") client for interacting with the EVM
