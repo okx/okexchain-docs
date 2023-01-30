@@ -14,7 +14,7 @@ To get the latest status of the currently synchronized blocks, you can query wit
   }
 }
 ```
-###Time-travel queries
+### Time-travel queries
 To get a snapshot of past state, use The Graph's block query feature and query at a previous block.
 ```
 {
@@ -25,8 +25,8 @@ To get a snapshot of past state, use The Graph's block query feature and query a
     totalSupply
   }
 ```
-##Pair Data
-###Pair Overview
+## Pair Data
+### Pair Overview
 Fetch a snapshot of the current state of the pair with common values. This example fetches the USDT/WOKT pair.
 ```
 {

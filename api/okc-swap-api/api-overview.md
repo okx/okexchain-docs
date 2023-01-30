@@ -6,5 +6,5 @@ This section explains the OKCswap Subgraph and how to interact with it. The OKCs
 
 ## Usage
 The subgraph provides a snapshot of the current state of OKCswap and also tracks historical data. It is currently used to power [OKCswap.info](https://www.okx.com/okc/swap/info). **It is not intended to be used as a data source for structuring transactions (contracts should be referenced directly for the most reliable live data).**
-##Making Queries
+## Making Queries
 To learn more about querying a subgraph refer to [The Graph's documentation](https://thegraph.com/docs/en/about/).
