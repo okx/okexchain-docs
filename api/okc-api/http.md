@@ -136,8 +136,8 @@ https://exchainrpc.okex.org/okexchain/v1/auth/accounts/ex1xkl5agjzqnjnptyat2dng2
 | sequence       | String   | Nonce of account                        |
 | code_hash      | String   | Hash of contract code                   |
 | coins          | Array    | Coins                                   |
-| > denom        | String   |                                         |
-| > amount       | String   |                                         |
+| > denom        | String   | denom of coin                           |
+| > amount       | String   | amount of coin                          |
 
 ## Blocks
 
@@ -350,52 +350,52 @@ None
 
 #### Response Parameters
 
-| **Parameter**           | **Type** | **Description** |
-| :---------------------- | :------- | :-------------- |
-| block_id                | Object   |                 |
-| > parts                 | Object   |                 |
-| >> total                | String   |                 |
-| >> hash                 | String   |                 |
-| > hash                  | String   |                 |
-| block                   | Object   |                 |
-| > data                  | Object   |                 |
-| >> txs                  | String   |                 |
-| > evidence              | Object   |                 |
-| >> evidence             | String   |                 |
-| > last_commit           | Object   |                 |
-| >> round                | String   |                 |
-| >> block_id             | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> signatures           | Array    |                 |
-| >>> signature           | String   |                 |
-| >>> validator_address   | String   |                 |
-| >>> block_id_flag       | String   |                 |
-| >>> timestamp           | String   |                 |
-| >> height               | String   |                 |
-| > header                | Object   |                 |
-| >> validators_hash      | String   |                 |
-| >> chain_id             | String   |                 |
-| >> consensus_hash       | String   |                 |
-| >> proposer_address     | String   |                 |
-| >> next_validators_hash | String   |                 |
-| >> version              | Object   |                 |
-| >>> app                 | String   |                 |
-| >>> block               | String   |                 |
-| >> data_hash            | String   |                 |
-| >> last_results_hash    | String   |                 |
-| >> last_block_id        | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> evidence_hash        | String   |                 |
-| >> app_hash             | String   |                 |
-| >> time                 | String   |                 |
-| >> height               | String   |                 |
-| >> last_commit_hash     | String   |                 |
+| **Parameter**           | **Type** | **Description**                        |
+| :---------------------- | :------- | :------------------------------------- |
+| block_id                | Object   | Block id.                              |
+| > parts                 | Object   | Parts of block.                        |
+| >> total                | String   | Total parts.                           |
+| >> hash                 | String   | Part hash.                             |
+| > hash                  | String   | Block hash.                            |
+| block                   | Object   | Block info.                            |
+| > data                  | Object   | Data of block.                         |
+| >> txs                  | String   | Txs of block.                          |
+| > evidence              | Object   | Evidence of block.                     |
+| >> evidence             | String   | Evidence of block.                     |
+| > last_commit           | Object   | Last commit of consensus.              |
+| >> round                | String   | Round of consensus.                    |
+| >> block_id             | Object   | Block id.                              |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> signatures           | Array    | Block signatures.                      |
+| >>> signature           | String   | Block signature.                       |
+| >>> validator_address   | String   | Validator address of signature.        |
+| >>> block_id_flag       | String   | Block id flag.                         |
+| >>> timestamp           | String   | Timestamp of signature.                |
+| >> height               | String   | Block heigth.                          |
+| > header                | Object   | Block header.                          |
+| >> validators_hash      | String   | All validators hash.                   |
+| >> chain_id             | String   | Chain id.                              |
+| >> consensus_hash       | String   | Consensus info hash.                   |
+| >> proposer_address     | String   | The proposer address of block.         |
+| >> next_validators_hash | String   | All validators hash of next consensus. |
+| >> version              | Object   | Blockchain version.                    |
+| >>> app                 | String   | App version of Blockchain.             |
+| >>> block               | String   | Block version of Blockchain.           |
+| >> data_hash            | String   | Hash of block data.                    |
+| >> last_results_hash    | String   | Hash of deliver last all txs result.   |
+| >> last_block_id        | Object   | Last block id.                         |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> evidence_hash        | String   | Evidence hash.                         |
+| >> app_hash             | String   | App hash.                              |
+| >> time                 | String   | Timestamp of generate block.           |
+| >> height               | String   | Block height.                          |
+| >> last_commit_hash     | String   | Last commit hash.                      |
 
 ### Get block info
 
@@ -476,48 +476,52 @@ None
 
 #### Response Parameters
 
-| **Parameter**           | **Type** | **Description** |
-| :---------------------- | :------- | :-------------- |
-| block_id                | Object   |                 |
-| > parts                 | Object   |                 |
-| >> total                | String   |                 |
-| >> hash                 | String   |                 |
-| > hash                  | String   |                 |
-| block                   | Object   |                 |
-| > data                  | Object   |                 |
-| >> txs                  | String   |                 |
-| > evidence              | Object   |                 |
-| >> evidence             | String   |                 |
-| > last_commit           | Object   |                 |
-| >> round                | String   |                 |
-| >> block_id             | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> signatures           | String   |                 |
-| >> height               | String   |                 |
-| > header                | Object   |                 |
-| >> validators_hash      | String   |                 |
-| >> chain_id             | String   |                 |
-| >> consensus_hash       | String   |                 |
-| >> proposer_address     | String   |                 |
-| >> next_validators_hash | String   |                 |
-| >> version              | Object   |                 |
-| >>> app                 | String   |                 |
-| >>> block               | String   |                 |
-| >> data_hash            | String   |                 |
-| >> last_results_hash    | String   |                 |
-| >> last_block_id        | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> evidence_hash        | String   |                 |
-| >> app_hash             | String   |                 |
-| >> time                 | String   |                 |
-| >> height               | String   |                 |
-| >> last_commit_hash     | String   |                 |
+| **Parameter**           | **Type** | **Description**                        |
+| :---------------------- | :------- | :------------------------------------- |
+| block_id                | Object   | Block id.                              |
+| > parts                 | Object   | Parts of block.                        |
+| >> total                | String   | Total parts.                           |
+| >> hash                 | String   | Part hash.                             |
+| > hash                  | String   | Block hash.                            |
+| block                   | Object   | Block info.                            |
+| > data                  | Object   | Data of block.                         |
+| >> txs                  | String   | Txs of block.                          |
+| > evidence              | Object   | Evidence of block.                     |
+| >> evidence             | String   | Evidence of block.                     |
+| > last_commit           | Object   | Last commit of consensus.              |
+| >> round                | String   | Round of consensus.                    |
+| >> block_id             | Object   | Block id.                              |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> signatures           | Array    | Block signatures.                      |
+| >>> signature           | String   | Block signature.                       |
+| >>> validator_address   | String   | Validator address of signature.        |
+| >>> block_id_flag       | String   | Block id flag.                         |
+| >>> timestamp           | String   | Timestamp of signature.                |
+| >> height               | String   | Block heigth.                          |
+| > header                | Object   | Block header.                          |
+| >> validators_hash      | String   | All validators hash.                   |
+| >> chain_id             | String   | Chain id.                              |
+| >> consensus_hash       | String   | Consensus info hash.                   |
+| >> proposer_address     | String   | The proposer address of block.         |
+| >> next_validators_hash | String   | All validators hash of next consensus. |
+| >> version              | Object   | Blockchain version.                    |
+| >>> app                 | String   | App version of Blockchain.             |
+| >>> block               | String   | Block version of Blockchain.           |
+| >> data_hash            | String   | Hash of block data.                    |
+| >> last_results_hash    | String   | Hash of deliver last all txs result.   |
+| >> last_block_id        | Object   | Last block id.                         |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> evidence_hash        | String   | Evidence hash.                         |
+| >> app_hash             | String   | App hash.                              |
+| >> time                 | String   | Timestamp of generate block.           |
+| >> height               | String   | Block height.                          |
+| >> last_commit_hash     | String   | Last commit hash.                      |
 
 ### Get Tx Info
 
@@ -560,22 +564,22 @@ None
 
 #### Response Parameters
 
-| **Parameter**    | **Type** | **Description** |
-| :--------------- | :------- | :-------------- |
-| gasPrice         | String   |                 |
-| hash             | String   |                 |
-| value            | String   |                 |
-| to               | String   |                 |
-| from             | String   |                 |
-| gas              | String   |                 |
-| blockNumber      | String   |                 |
-| v                | String   |                 |
-| s                | String   |                 |
-| r                | String   |                 |
-| input            | String   |                 |
-| nonce            | String   |                 |
-| transactionIndex | String   |                 |
-| blockHash        | String   |                 |
+| **Parameter**    | **Type** | **Description**         |
+| :--------------- | :------- | :---------------------- |
+| gasPrice         | String   | Gas price of tx.        |
+| hash             | String   | Tx hash.                |
+| value            | String   | Transfer amount value.  |
+| to               | String   | Receiver of tx.         |
+| from             | String   | Sender of tx.           |
+| gas              | String   | Pricing value.          |
+| blockNumber      | String   | Block number of the tx. |
+| v                | String   | V of tx signature.      |
+| s                | String   | S of tx signature.      |
+| r                | String   | R of tx signature.      |
+| input            | String   | Input data of tx.       |
+| nonce            | String   | Nonce value.            |
+| transactionIndex | String   | Tx index in block.      |
+| blockHash        | String   | Block hash.             |
 
 ### Get latest validatorsets
 
@@ -711,14 +715,14 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| block_height        | String   |                 |
-| validators          | Array    |                 |
-| > address           | String   |                 |
-| > proposer_priority | String   |                 |
-| > pub_key           | String   |                 |
-| > voting_power      | String   |                 |
+| **Parameter**       | **Type** | **Description**                 |
+| :------------------ | :------- | :------------------------------ |
+| block_height        | String   | Block height.                   |
+| validators          | Array    | Validators.                     |
+| > address           | String   | Address of validator.           |
+| > proposer_priority | String   | Proposer priority of validator. |
+| > pub_key           | String   | Pub key of validator.           |
+| > voting_power      | String   | Voting power of validator.      |
 
 ### Get validatorsets
 
@@ -876,14 +880,14 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| block_height        | String   |                 |
-| validators          | Array    |                 |
-| > address           | String   |                 |
-| > proposer_priority | String   |                 |
-| > pub_key           | String   |                 |
-| > voting_power      | String   |                 |
+| **Parameter**       | **Type** | **Description**                 |
+| :------------------ | :------- | :------------------------------ |
+| block_height        | String   | Block height.                   |
+| validators          | Array    | Validators.                     |
+| > address           | String   | Address of validator.           |
+| > proposer_priority | String   | Proposer priority of validator. |
+| > pub_key           | String   | Pub key of validator.           |
+| > voting_power      | String   | Voting power of validator.      |
 
 ### Get node Info
 
@@ -941,33 +945,33 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| application_version | Object   |                 |
-| > server_name       | String   |                 |
-| > name              | String   |                 |
-| > commit            | String   |                 |
-| > go                | String   |                 |
-| > cosmos_sdk        | String   |                 |
-| > build_deps        | Array    |                 |
-| > tendermint        | String   |                 |
-| > client_name       | String   |                 |
-| > version           | String   |                 |
-| > build_tags        | String   |                 |
-| node_info           | Object   |                 |
-| > protocol_version  | Object   |                 |
-| >> app              | String   |                 |
-| >> block            | String   |                 |
-| >> p2p              | String   |                 |
-| > other             | Object   |                 |
-| >> tx_index         | String   |                 |
-| >> rpc_address      | String   |                 |
-| > channels          | String   |                 |
-| > listen_addr       | String   |                 |
-| > id                | String   |                 |
-| > moniker           | String   |                 |
-| > version           | String   |                 |
-| > network           | String   |                 |
+| **Parameter**       | **Type** | **Description**      |
+| :------------------ | :------- | :------------------- |
+| application_version | Object   | Application version. |
+| > server_name       | String   | Server name.         |
+| > name              | String   | App name.            |
+| > commit            | String   | Commit hash of git.  |
+| > go                | String   | Golang version.      |
+| > cosmos_sdk        | String   | Cosmos sdk.          |
+| > build_deps        | Array    | Build deps of go.    |
+| > tendermint        | String   | Tendermint version.  |
+| > client_name       | String   | Client name of cli.  |
+| > version           | String   | App version.         |
+| > build_tags        | String   | Build tags of go.    |
+| node_info           | Object   | Node info.           |
+| > protocol_version  | Object   | Protocol version.    |
+| >> app              | String   | App version.         |
+| >> block            | String   | Block version.       |
+| >> p2p              | String   | P2P version.         |
+| > other             | Object   |                      |
+| >> tx_index         | String   | Tx index.            |
+| >> rpc_address      | String   | RPC address.         |
+| > channels          | String   | IBC channels.        |
+| > listen_addr       | String   | Listen addr of node. |
+| > id                | String   | ID of node.          |
+| > moniker           | String   | Moniker of node.     |
+| > version           | String   | Version of node.     |
+| > network           | String   | Network id of chain. |
 
 ### Check node syncing
 
