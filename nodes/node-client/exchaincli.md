@@ -24,12 +24,12 @@ exchaincli config node <host>:<port>
 ```
 
 Or any of the following address ports:
-```
+```bash
 # testnet
-- https://exchaintesttmrpc.okex.org
+https://exchaintesttmrpc.okex.org
 
 # mainnet
-Comming soon
+https://exchaintmrpc.okex.org
 ```
 
 

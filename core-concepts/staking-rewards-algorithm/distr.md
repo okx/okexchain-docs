@@ -115,6 +115,51 @@ Below is a specific explanation of the distribution rules for block rewarding:
 
 ![1](../../img/reward-1.png)
 
+
+
+### Voting weight decay mechanism
+
+In order to encourage users to actively participate in voting, OKC using a voting weight decay mechanism. If users do not participate in voting within a week, their voting weight will start to decay, and the voting weight will be doubled every 52 weeks (1 year). After re-voting (or staking, withdraw okt, withdraw rewards), the vote weight will be refreshed.
+
+> Note: Refreshing the weight of votes will trigger automatic reward, and the portion less than 0.0001 OKT will be distributed to the community pool. Refer to [Withdrawing rewards](#withdrawing-rewards)
+
+Taking 1000OKT voting as an example, the weight changes as follows:
+
+| **time**                 | **Weight after re-voting** |
+| ------------------------ | -------------------------- |
+| current (2023.2.7)       | 9457824384                 |
+| after 1 week (2023.2.14) | 9584738842                 |
+| after 1 month (2023.3.7) | 9975792318                 |
+| After 1 year (2024.2.7)  | 18915648769                |
+| After 2 years (2025.2.7) | 37831297539                |
+
+The specific algorithm is as follows:
+
+```Go
+const (
+   // UTC Time: 2000/1/1 00:00:00
+   blockTimestampEpoch = int64(946684800)
+   secondsPerWeek      = int64(60 * 60 * 24 * 7)
+   weeksPerYear        = float64(52)
+)
+
+func calculateWeight(nowTime int64, tokens sdk.Dec) (shares types.Shares, sdkErr error) {
+   nowWeek := (nowTime - blockTimestampEpoch) / secondsPerWeek
+   rate := float64(nowWeek) / weeksPerYear
+   weight := math.Pow(float64(2), rate)
+
+   precision := fmt.Sprintf("%d", sdk.Precision)
+
+   weightByDec, sdkErr := sdk.NewDecFromStr(fmt.Sprintf("%."+precision+"f", weight))
+   if sdkErr == nil {
+      shares = tokens.Mul(weightByDec)
+   }
+   return
+}
+```
+
+
+
 ### Exchange and multiple voting
 
 After staking OKT (minimum of 0.0001 OKT per stake), users can opt to exchange their voting rights for the validator node. It’s worth mentioning that OKC uses a multi-voting system, where users can vote for up to 30 validator nodes after completing their stakes (each node can only be voted for once). Furthermore, when users want to stake OKT again, they will not need to go through the voting process again, but will vote for their previous validator node by default.
@@ -181,11 +226,11 @@ Users who have accumulated a certain amount of earnings can claim their earnings
 
 Put briefly, active withdrawal is when the user actively conducts the withdrawal transaction themselves, while passive withdrawal conversely means that the user conducts an action not related to withdrawing, for example staking or voting, that triggers a change to the validator and triggers an automatic withdrawal.
 
-However, due to a truncation precision issue with claiming rewards-if the reward amount contains decimals-the user will receive the amount up to the tenth decimal place (0.1), while everything from the hundredths place (0.01..) and on will be distributed to the community pool. For example, if the user has 1.55 OKT from V_1 node, 0.39 OKT from V_2 node and 24.305 OKT from V_3 node, the amount claimed and distributed to the community pool would look like this:
+However, due to a truncation precision issue with claiming rewards-if the reward amount contains decimals-the user will receive the amount up to the  4 place (0.0001), while everything from the 5 place (0.00001..) and on will be distributed to the community pool. For example, if the user has 1.55211 OKT from V_1 node, 0.39211 OKT from V_2 node and 24.30345 OKT from V_3 node, the amount claimed and distributed to the community pool would look like this:
 
-- Amount claimed by user: 1.5 + 0.3 + 24.3 = 26.1 OKT
+- Amount claimed by user: 1.5521 + 0.3921 + 24.3034 = 26.2476 OKT
 
-- Amount distributed to pool: 0.05 + 0.09 + 0.005 = 0.145 OKT
+- Amount distributed to pool: 0.00001 + 0.00001 + 0.00005 = 0.00007 OKT
 
 Truncation precision can be adjusted through community proposal governance. The current truncation precision setting can be viewed on the command line. 
 

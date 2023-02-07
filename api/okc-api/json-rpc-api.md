@@ -476,19 +476,15 @@ Sends transaction from given account to a given account.
 
  - Object containing: 
 
-    `from`: DATA, 20 Bytes - The address the transaction is send from.
-
-    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
-
-    `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
-
-    `gasPrice`: QUANTITY - (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas
-
-    `value`: QUANTITY - value sent with this transaction
-
-    `data`: DATA - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI
-
-    `nonce`: QUANTITY - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
+    | **Parameter** | **Type** | **Description**                                              |
+    | ------------- | -------- | ------------------------------------------------------------ |
+    | from          | DATA     | 20 Bytes, The address the transaction is send from           |
+    | to            | DATA     | 20 Bytes, (optional when creating new contract) The address the transaction is directed to |
+    | gas           | QUANTITY | (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas. |
+    | gasPrice      | QUANTITY | (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas |
+    | value         | QUANTITY | value sent with this transaction                             |
+    | data          | DATA     | The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI |
+    | nonce         | QUANTITY | (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce. |
 
 
 ```json
@@ -531,27 +527,27 @@ The method takes 3 parameters:
 - Transaction call object
   The transaction call object is mandatory and contains all the necessary parameters to execute a read-only EVM contract method  
 
-    `from`: DATA, 20 Bytes - (optional) The address the transaction is sent from.
-
-    `to`: DATA, 20 Bytes - The address the transaction is directed to.
-
-    `gas`: QUANTITY - gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
-
-    `gasPrice`: QUANTITY - gasPrice used for each paid gas
-
-    `value`: QUANTITY - value sent with this transaction
-
-    `data`: DATA - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
-
+  | **Parameter** | **Type** | **Description**                                              |
+  | ------------- | -------- | ------------------------------------------------------------ |
+  | from          | DATA     | 20 Bytes - (optional) The address the transaction is sent from. |
+  | to            | DATA     | 20 Bytes - The address the transaction is directed to.       |
+  | gas           | QUANTITY | gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions. |
+  | gasPrice      | QUANTITY | gasPrice used for each paid gas                              |
+  | value         | QUANTITY | value sent with this transaction                             |
+  | data          | DATA     | (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation |
+  
 - Block number
 
 - State override set (optional)
     The state override set is an optional address-to-state mapping, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing:
-    `balance`: Quantity, - Fake balance to set for the account before executing the call.
-    `nonce`: Quantity, - Fake nonce to set for the account before executing the call.
-    `code`: Binary, - Fake EVM bytecode to inject into the account before executing the call.
-    `state`: Object, - Fake key-value mapping to override all slots in the account storage before executing the call.
-    `stateDiff`: Object, - Fake key-value mapping to override individual slots in the account storage before executing the call.
+    
+    | **Parameter** | **Type** | **Description**                                              |
+    | ------------- | -------- | ------------------------------------------------------------ |
+    | balance       | Quantity | Fake balance to set for the account before executing the call. |
+    | nonce         | Quantity | Fake nonce to set for the account before executing the call. |
+    | code          | Binary   | Fake EVM bytecode to inject into the account before executing the call. |
+    | state         | Object   | Fake key-value mapping to override all slots in the account storage before executing the call. |
+    | stateDiff     | Object   | Fake key-value mapping to override individual slots in the account storage before executing the call. |
 
 The goal of the state override set is manyfold:
     It can be used by DApps to reduce the amount of contract code needed to be deployed on chain. Code that simply returns internal state or does pre-defined validations can be kept off chain and fed to the node on-demand.
@@ -585,11 +581,11 @@ Returns an estimate value of the gas required to send the transaction.
 
 - Object containing: 
 
-    `from`: DATA, 20 Bytes - The address the transaction is send from.
-
-    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
-
-    `value`: QUANTITY - value sent with this transaction
+    | **Parameter** | **Type** | **Description**                                              |
+    | ------------- | -------- | ------------------------------------------------------------ |
+    | from          | DATA     | 20 Bytes - The address the transaction is send from.         |
+    | to            | DATA     | 20 Bytes - (optional when creating new contract) The address the transaction is directed to. |
+    | value         | QUANTITY | value sent with this transaction                             |
 
 ```json
 // Request
@@ -765,15 +761,13 @@ Returns an array of all logs matching a given filter object.
 
 - Object containing:
 
-    `fromBlock`: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
-
-    `toBlock`: QUANTITY|TAG - (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
-
-    `address`: DATA|Array, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
-
-    `topics`: Array of DATA, - (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with “or” options.
-    
-    `blockhash`: (optional, future) With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
+    | **Parameter** | **Type**      | **Description**                                              |
+    | ------------- | ------------- | ------------------------------------------------------------ |
+    | fromBlock     | QUANTITY\|TAG | (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions. |
+    | toBlock       | QUANTITY\|TAG | (optional, default: "latest") Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions. |
+    | address       | DATA\|Array   | 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate. |
+    | topics        | Array of DATA | (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with “or” options. |
+    | blockhash     | DATA          | (optional, future) With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed. |
 
 ```json
 // Request
@@ -942,11 +936,11 @@ The account is not unlocked globally in the node and cannot be used in other RPC
 
  - Object containing:
 
-    `from`: DATA, 20 Bytes - The address the transaction is send from.
-
-    `to`: DATA, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
-
-    `value`: QUANTITY - value sent with this transaction
+    | **Parameter** | **Type** | **Description**                                              |
+    | ------------- | -------- | ------------------------------------------------------------ |
+    | from          | DATA     | 20 Bytes - The address the transaction is send from.         |
+    | to            | DATA     | 20 Bytes - (optional when creating new contract) The address the transaction is directed to. |
+    | value         | QUANTITY | value sent with this transaction                             |
 
 - Passphrase
 
