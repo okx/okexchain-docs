@@ -525,6 +525,7 @@ The method takes 3 parameters:
 #### Parameters
 
 - Transaction call object
+
   The transaction call object is mandatory and contains all the necessary parameters to execute a read-only EVM contract method  
 
   | **Parameter** | **Type** | **Description**                                              |
@@ -538,7 +539,10 @@ The method takes 3 parameters:
   
 - Block number
 
-- State override set (optional)
+    integer block number, or the string "latest", "earliest" or "pending"
+    
+- State override set (optional).
+
     The state override set is an optional address-to-state mapping, where each entry specifies some state to be ephemerally overridden prior to executing the call. Each address maps to an object containing:
     
     | **Parameter** | **Type** | **Description**                                              |
@@ -549,7 +553,7 @@ The method takes 3 parameters:
     | state         | Object   | Fake key-value mapping to override all slots in the account storage before executing the call. |
     | stateDiff     | Object   | Fake key-value mapping to override individual slots in the account storage before executing the call. |
 
-The goal of the state override set is manyfold:
+    The goal of the state override set is manyfold:
     It can be used by DApps to reduce the amount of contract code needed to be deployed on chain. Code that simply returns internal state or does pre-defined validations can be kept off chain and fed to the node on-demand.
     It can be used for smart contract analysis by extending the code deployed on chain with custom methods and invoking them. This avoids having to download and reconstruct the entire state in a sandbox to run custom code against.
     It can be used to debug smart contracts in an already deployed large suite of contracts by selectively overriding some code or state and seeing how execution changes. Specialized tooling will probably be necessary.
