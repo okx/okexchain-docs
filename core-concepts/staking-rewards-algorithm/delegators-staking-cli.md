@@ -15,8 +15,9 @@ OKC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the comma
 ## How to stake for ordinary users
 
 1. Stake OKT, obtain voting rights
-
 1. Choose validator(s) to vote for, and if the chosen validator has set up a share ratio, the user will receive a dividend reward on the chain.
+
+> Note: If you do not participate in voting within a week, the voting weight will start to decay, and the voting weight will decay twice every 52 weeks (1 year). After re-voting (or staking, withdraw okt, withdraw rewards), the vote weight will be refreshed. Refer to [Voting Weight Decay Mechanism](/dev/core-concepts/staking-rewards-algorithm/distr.html#withdrawing-rewards).
 
 ### Staking
 

@@ -136,8 +136,8 @@ https://exchainrpc.okex.org/okexchain/v1/auth/accounts/ex1xkl5agjzqnjnptyat2dng2
 | sequence       | String   | Nonce of account                        |
 | code_hash      | String   | Hash of contract code                   |
 | coins          | Array    | Coins                                   |
-| > denom        | String   |                                         |
-| > amount       | String   |                                         |
+| > denom        | String   | denom of coin                           |
+| > amount       | String   | amount of coin                          |
 
 ## Blocks
 
@@ -350,52 +350,52 @@ None
 
 #### Response Parameters
 
-| **Parameter**           | **Type** | **Description** |
-| :---------------------- | :------- | :-------------- |
-| block_id                | Object   |                 |
-| > parts                 | Object   |                 |
-| >> total                | String   |                 |
-| >> hash                 | String   |                 |
-| > hash                  | String   |                 |
-| block                   | Object   |                 |
-| > data                  | Object   |                 |
-| >> txs                  | String   |                 |
-| > evidence              | Object   |                 |
-| >> evidence             | String   |                 |
-| > last_commit           | Object   |                 |
-| >> round                | String   |                 |
-| >> block_id             | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> signatures           | Array    |                 |
-| >>> signature           | String   |                 |
-| >>> validator_address   | String   |                 |
-| >>> block_id_flag       | String   |                 |
-| >>> timestamp           | String   |                 |
-| >> height               | String   |                 |
-| > header                | Object   |                 |
-| >> validators_hash      | String   |                 |
-| >> chain_id             | String   |                 |
-| >> consensus_hash       | String   |                 |
-| >> proposer_address     | String   |                 |
-| >> next_validators_hash | String   |                 |
-| >> version              | Object   |                 |
-| >>> app                 | String   |                 |
-| >>> block               | String   |                 |
-| >> data_hash            | String   |                 |
-| >> last_results_hash    | String   |                 |
-| >> last_block_id        | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> evidence_hash        | String   |                 |
-| >> app_hash             | String   |                 |
-| >> time                 | String   |                 |
-| >> height               | String   |                 |
-| >> last_commit_hash     | String   |                 |
+| **Parameter**           | **Type** | **Description**                        |
+| :---------------------- | :------- | :------------------------------------- |
+| block_id                | Object   | Block id.                              |
+| > parts                 | Object   | Parts of block.                        |
+| >> total                | String   | Total parts.                           |
+| >> hash                 | String   | Part hash.                             |
+| > hash                  | String   | Block hash.                            |
+| block                   | Object   | Block info.                            |
+| > data                  | Object   | Data of block.                         |
+| >> txs                  | String   | Txs of block.                          |
+| > evidence              | Object   | Evidence of block.                     |
+| >> evidence             | String   | Evidence of block.                     |
+| > last_commit           | Object   | Last commit of consensus.              |
+| >> round                | String   | Round of consensus.                    |
+| >> block_id             | Object   | Block id.                              |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> signatures           | Array    | Block signatures.                      |
+| >>> signature           | String   | Block signature.                       |
+| >>> validator_address   | String   | Validator address of signature.        |
+| >>> block_id_flag       | String   | Block id flag.                         |
+| >>> timestamp           | String   | Timestamp of signature.                |
+| >> height               | String   | Block heigth.                          |
+| > header                | Object   | Block header.                          |
+| >> validators_hash      | String   | All validators hash.                   |
+| >> chain_id             | String   | Chain id.                              |
+| >> consensus_hash       | String   | Consensus info hash.                   |
+| >> proposer_address     | String   | The proposer address of block.         |
+| >> next_validators_hash | String   | All validators hash of next consensus. |
+| >> version              | Object   | Blockchain version.                    |
+| >>> app                 | String   | App version of Blockchain.             |
+| >>> block               | String   | Block version of Blockchain.           |
+| >> data_hash            | String   | Hash of block data.                    |
+| >> last_results_hash    | String   | Hash of deliver last all txs result.   |
+| >> last_block_id        | Object   | Last block id.                         |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> evidence_hash        | String   | Evidence hash.                         |
+| >> app_hash             | String   | App hash.                              |
+| >> time                 | String   | Timestamp of generate block.           |
+| >> height               | String   | Block height.                          |
+| >> last_commit_hash     | String   | Last commit hash.                      |
 
 ### Get block info
 
@@ -476,48 +476,52 @@ None
 
 #### Response Parameters
 
-| **Parameter**           | **Type** | **Description** |
-| :---------------------- | :------- | :-------------- |
-| block_id                | Object   |                 |
-| > parts                 | Object   |                 |
-| >> total                | String   |                 |
-| >> hash                 | String   |                 |
-| > hash                  | String   |                 |
-| block                   | Object   |                 |
-| > data                  | Object   |                 |
-| >> txs                  | String   |                 |
-| > evidence              | Object   |                 |
-| >> evidence             | String   |                 |
-| > last_commit           | Object   |                 |
-| >> round                | String   |                 |
-| >> block_id             | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> signatures           | String   |                 |
-| >> height               | String   |                 |
-| > header                | Object   |                 |
-| >> validators_hash      | String   |                 |
-| >> chain_id             | String   |                 |
-| >> consensus_hash       | String   |                 |
-| >> proposer_address     | String   |                 |
-| >> next_validators_hash | String   |                 |
-| >> version              | Object   |                 |
-| >>> app                 | String   |                 |
-| >>> block               | String   |                 |
-| >> data_hash            | String   |                 |
-| >> last_results_hash    | String   |                 |
-| >> last_block_id        | Object   |                 |
-| >>> parts               | Object   |                 |
-| >>>> total              | String   |                 |
-| >>>> hash               | String   |                 |
-| >>> hash                | String   |                 |
-| >> evidence_hash        | String   |                 |
-| >> app_hash             | String   |                 |
-| >> time                 | String   |                 |
-| >> height               | String   |                 |
-| >> last_commit_hash     | String   |                 |
+| **Parameter**           | **Type** | **Description**                        |
+| :---------------------- | :------- | :------------------------------------- |
+| block_id                | Object   | Block id.                              |
+| > parts                 | Object   | Parts of block.                        |
+| >> total                | String   | Total parts.                           |
+| >> hash                 | String   | Part hash.                             |
+| > hash                  | String   | Block hash.                            |
+| block                   | Object   | Block info.                            |
+| > data                  | Object   | Data of block.                         |
+| >> txs                  | String   | Txs of block.                          |
+| > evidence              | Object   | Evidence of block.                     |
+| >> evidence             | String   | Evidence of block.                     |
+| > last_commit           | Object   | Last commit of consensus.              |
+| >> round                | String   | Round of consensus.                    |
+| >> block_id             | Object   | Block id.                              |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> signatures           | Array    | Block signatures.                      |
+| >>> signature           | String   | Block signature.                       |
+| >>> validator_address   | String   | Validator address of signature.        |
+| >>> block_id_flag       | String   | Block id flag.                         |
+| >>> timestamp           | String   | Timestamp of signature.                |
+| >> height               | String   | Block heigth.                          |
+| > header                | Object   | Block header.                          |
+| >> validators_hash      | String   | All validators hash.                   |
+| >> chain_id             | String   | Chain id.                              |
+| >> consensus_hash       | String   | Consensus info hash.                   |
+| >> proposer_address     | String   | The proposer address of block.         |
+| >> next_validators_hash | String   | All validators hash of next consensus. |
+| >> version              | Object   | Blockchain version.                    |
+| >>> app                 | String   | App version of Blockchain.             |
+| >>> block               | String   | Block version of Blockchain.           |
+| >> data_hash            | String   | Hash of block data.                    |
+| >> last_results_hash    | String   | Hash of deliver last all txs result.   |
+| >> last_block_id        | Object   | Last block id.                         |
+| >>> parts               | Object   | Parts of block.                        |
+| >>>> total              | String   | Total parts.                           |
+| >>>> hash               | String   | Part hash.                             |
+| >>> hash                | String   | Block hash.                            |
+| >> evidence_hash        | String   | Evidence hash.                         |
+| >> app_hash             | String   | App hash.                              |
+| >> time                 | String   | Timestamp of generate block.           |
+| >> height               | String   | Block height.                          |
+| >> last_commit_hash     | String   | Last commit hash.                      |
 
 ### Get Tx Info
 
@@ -560,22 +564,22 @@ None
 
 #### Response Parameters
 
-| **Parameter**    | **Type** | **Description** |
-| :--------------- | :------- | :-------------- |
-| gasPrice         | String   |                 |
-| hash             | String   |                 |
-| value            | String   |                 |
-| to               | String   |                 |
-| from             | String   |                 |
-| gas              | String   |                 |
-| blockNumber      | String   |                 |
-| v                | String   |                 |
-| s                | String   |                 |
-| r                | String   |                 |
-| input            | String   |                 |
-| nonce            | String   |                 |
-| transactionIndex | String   |                 |
-| blockHash        | String   |                 |
+| **Parameter**    | **Type** | **Description**         |
+| :--------------- | :------- | :---------------------- |
+| gasPrice         | String   | Gas price of tx.        |
+| hash             | String   | Tx hash.                |
+| value            | String   | Transfer amount value.  |
+| to               | String   | Receiver of tx.         |
+| from             | String   | Sender of tx.           |
+| gas              | String   | Pricing value.          |
+| blockNumber      | String   | Block number of the tx. |
+| v                | String   | V of tx signature.      |
+| s                | String   | S of tx signature.      |
+| r                | String   | R of tx signature.      |
+| input            | String   | Input data of tx.       |
+| nonce            | String   | Nonce value.            |
+| transactionIndex | String   | Tx index in block.      |
+| blockHash        | String   | Block hash.             |
 
 ### Get latest validatorsets
 
@@ -711,14 +715,14 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| block_height        | String   |                 |
-| validators          | Array    |                 |
-| > address           | String   |                 |
-| > proposer_priority | String   |                 |
-| > pub_key           | String   |                 |
-| > voting_power      | String   |                 |
+| **Parameter**       | **Type** | **Description**                 |
+| :------------------ | :------- | :------------------------------ |
+| block_height        | String   | Block height.                   |
+| validators          | Array    | Validators.                     |
+| > address           | String   | Address of validator.           |
+| > proposer_priority | String   | Proposer priority of validator. |
+| > pub_key           | String   | Pub key of validator.           |
+| > voting_power      | String   | Voting power of validator.      |
 
 ### Get validatorsets
 
@@ -876,14 +880,14 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| block_height        | String   |                 |
-| validators          | Array    |                 |
-| > address           | String   |                 |
-| > proposer_priority | String   |                 |
-| > pub_key           | String   |                 |
-| > voting_power      | String   |                 |
+| **Parameter**       | **Type** | **Description**                 |
+| :------------------ | :------- | :------------------------------ |
+| block_height        | String   | Block height.                   |
+| validators          | Array    | Validators.                     |
+| > address           | String   | Address of validator.           |
+| > proposer_priority | String   | Proposer priority of validator. |
+| > pub_key           | String   | Pub key of validator.           |
+| > voting_power      | String   | Voting power of validator.      |
 
 ### Get node Info
 
@@ -941,33 +945,33 @@ None
 
 #### Response Parameters
 
-| **Parameter**       | **Type** | **Description** |
-| :------------------ | :------- | :-------------- |
-| application_version | Object   |                 |
-| > server_name       | String   |                 |
-| > name              | String   |                 |
-| > commit            | String   |                 |
-| > go                | String   |                 |
-| > cosmos_sdk        | String   |                 |
-| > build_deps        | Array    |                 |
-| > tendermint        | String   |                 |
-| > client_name       | String   |                 |
-| > version           | String   |                 |
-| > build_tags        | String   |                 |
-| node_info           | Object   |                 |
-| > protocol_version  | Object   |                 |
-| >> app              | String   |                 |
-| >> block            | String   |                 |
-| >> p2p              | String   |                 |
-| > other             | Object   |                 |
-| >> tx_index         | String   |                 |
-| >> rpc_address      | String   |                 |
-| > channels          | String   |                 |
-| > listen_addr       | String   |                 |
-| > id                | String   |                 |
-| > moniker           | String   |                 |
-| > version           | String   |                 |
-| > network           | String   |                 |
+| **Parameter**       | **Type** | **Description**      |
+| :------------------ | :------- | :------------------- |
+| application_version | Object   | Application version. |
+| > server_name       | String   | Server name.         |
+| > name              | String   | App name.            |
+| > commit            | String   | Commit hash of git.  |
+| > go                | String   | Golang version.      |
+| > cosmos_sdk        | String   | Cosmos sdk.          |
+| > build_deps        | Array    | Build deps of go.    |
+| > tendermint        | String   | Tendermint version.  |
+| > client_name       | String   | Client name of cli.  |
+| > version           | String   | App version.         |
+| > build_tags        | String   | Build tags of go.    |
+| node_info           | Object   | Node info.           |
+| > protocol_version  | Object   | Protocol version.    |
+| >> app              | String   | App version.         |
+| >> block            | String   | Block version.       |
+| >> p2p              | String   | P2P version.         |
+| > other             | Object   |                      |
+| >> tx_index         | String   | Tx index.            |
+| >> rpc_address      | String   | RPC address.         |
+| > channels          | String   | IBC channels.        |
+| > listen_addr       | String   | Listen addr of node. |
+| > id                | String   | ID of node.          |
+| > moniker           | String   | Moniker of node.     |
+| > version           | String   | Version of node.     |
+| > network           | String   | Network id of chain. |
 
 ### Check node syncing
 
@@ -997,9 +1001,9 @@ None
 
 #### Response Parameters
 
-| **Parameter** | **Type** | **Description** |
-| :------------ | :------- | :-------------- |
-| syncing       | Object   |                 |
+| **Parameter** | **Type** | **Description**                 |
+| :------------ | :------- | :------------------------------ |
+| syncing       | Bool     | Is node syncing, true or false. |
 
 ## Staking
 
@@ -1195,15 +1199,15 @@ None
 | status                                      | Int      | 0,Unbonded;1,Unbonding;2Bonded                     |
 | tokens                                      | String   | Tokens                                             |
 | delegator_shares                            | String   | Shares for the delegators who voting the validator |
-| description                                 | Obj      |                                                    |
+| description                                 | Obj      | Description object                                 |
 | description.moniker                         | String   | Moniker                                            |
 | description.identity                        | String   | Identity                                           |
 | description.website                         | String   | Website                                            |
 | description.details                         | String   | Details                                            |
 | unbonding_height                            | String   | Unbonding height                                   |
 | unbonding_time                              | String   | Unbonding time                                     |
-| commission                                  |          |                                                    |
-| commission.commission_rates                 |          |                                                    |
+| commission                                  |          | commission object                                  |
+| commission.commission_rates                 |          | Commission rate object.                            |
 | commission.commission_rates.rate            | String   | Commission rate of validator                       |
 | commission.commission_rates.max_rate        | String   | Max commission rate                                |
 | commission.commission_rates.max_change_rate | String   | Max change rate                                    |
@@ -1334,9 +1338,9 @@ None
 
 #### Response Parameters
 
-| **Parameter** | **Type** | **Description** |
-| :------------ | :------- | :-------------- |
-| address       | String   |                 |
+| **Parameter** | **Type** | **Description**           |
+| :------------ | :------- | :------------------------ |
+| address       | String   | Validator account address |
 
 ### Get relationship of proxy delegator
 
@@ -1905,10 +1909,10 @@ None
 
 #### Response Parameters
 
-| **Parameter** | **Type** | **Description** |
-| :------------ | :------- | :-------------- |
-| denom         | String   |                 |
-| amount        | String   |                 |
+| **Parameter** | **Type** | **Description**                 |
+| :------------ | :------- | :------------------------------ |
+| denom         | String   | okt                             |
+| amount        | String   | Amount of validator outstanding |
 
 ### Get withdraw address
 
@@ -2038,15 +2042,15 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code?page=1&count_total=true&rever
 
 | **Parameter**                               | **Type**     | **Description**             |
 | :------------------------------------------ | :----------- | :-------------------------- |
-| code_infos                                  | Array Object | the array code info         |
-| code_info.id                                | Int64        | code id                     |
-| code_info.creator                           | String       | the creator of code         |
-| code_info.data_hash                         | String       | the hash of code            |
-| code_info.instantiate_permission            | Object       | the permission of code      |
-| code_info.instantiate_permission.permission | String       | permission type             |
-| pagination                                  | Object       | page response	parameters |
-| pagination.next_key                         | String       | the next page start key     |
-| pagination.total                            | String       | it's a number format        |
+| code_infos                                  | Array Object | The array code info         |
+| code_info.id                                | Int64        | Code id                     |
+| code_info.creator                           | String       | The creator of code         |
+| code_info.data_hash                         | String       | The hash of code            |
+| code_info.instantiate_permission            | Object       | The permission of code      |
+| code_info.instantiate_permission.permission | String       | Permission type             |
+| pagination                                  | Object       | Page response	parameters |
+| pagination.next_key                         | String       | The next page start key     |
+| pagination.total                            | String       | It's a number format        |
 
 ### Get contract code
 
@@ -2064,9 +2068,9 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/1
 
 #### Request Parameters
 
-| **Parameter** | **Type** | **Required** | **Description** |
-| :------------ | :------- | :----------- | :-------------- |
-| codeID        | String   | Yes          |                 |
+| **Parameter** | **Type** | **Required** | **Description**               |
+| :------------ | :------- | :----------- | :---------------------------- |
+| codeID        | String   | Yes          | Code ID of wasm contract code |
 
 > Example Response
 
@@ -2086,12 +2090,12 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/1
 
 | **Parameter**                     | **Type** | **Description**        |
 | :-------------------------------- | :------- | :--------------------- |
-| id                                | Int64    | code id                |
-| creator                           | String   | the creator of code    |
-| data_hash                         | String   | the hash of code       |
-| instantiate_permission            | Object   | the permission of code |
-| instantiate_permission.permission | String   | permission type        |
-| data                              | String   | code data              |
+| id                                | Int64    | Code id                |
+| creator                           | String   | The creator of code    |
+| data_hash                         | String   | The hash of code       |
+| instantiate_permission            | Object   | The permission of code |
+| instantiate_permission.permission | String   | Permission type        |
+| data                              | String   | Code data              |
 
 ### Query contract information
 
@@ -2109,9 +2113,9 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex14hj2tavq8fpesdwxxcu44r
 
 #### Request Parameters
 
-| **Parameter** | **Type** | **Required** | **Description** |
-| :------------ | :------- | :----------- | :-------------- |
-| contractAddr  | String   | Yes          |                 |
+| **Parameter** | **Type** | **Required** | **Description**  |
+| :------------ | :------- | :----------- | :--------------- |
+| contractAddr  | String   | Yes          | Contract address |
 
 > Example Response
 
@@ -2128,10 +2132,10 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex14hj2tavq8fpesdwxxcu44r
 
 | **Parameter** | **Type** | **Description**          |
 | :------------ | :------- | :----------------------- |
-| address       | String   | contract address         |
-| code_id       | int64    | code id                  |
-| creator       | String   | the creator of  contract |
-| label         | String   | contract label           |
+| address       | String   | Contract address         |
+| code_id       | int64    | Code id                  |
+| creator       | String   | The creator of  contract |
+| label         | String   | Contract label           |
 
 ### Query all corresponding contracts of specified codeid
 
@@ -2151,8 +2155,8 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/3/contracts?page=1&count_tota
 
 | **Parameter**                                           | **Type** | **Required** | **Description**                                              |
 | :------------------------------------------------------ | :------- | :----------- | :----------------------------------------------------------- |
-| codeID                                                  | String   | Yes          |                                                              |
-| page                                                    | Uint64   | No           |                                                              |
+| codeID                                                  | String   | Yes          | Code id of wasm contract                                     |
+| page                                                    | Uint64   | No           | Page                                                         |
 | page_key                                                | String   | No           | `page_key` is a value returned in `PageResponse.next_key` to begin querying the next page most efficiently. Only one of `offset` or `page_key` should be set. |
 | offset                                                  | Uint64   | No           | `offset` is a numeric offset that can be used when `page_key` is unavailable. It is less efficient than using key. Only one of `offset` or `page_key` should be set. |
 | limit                                                   | Uint64   | No           | `limit` is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app. |
@@ -2177,10 +2181,10 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/3/contracts?page=1&count_tota
 
 | **Parameter**       | **Type** | **Description**             |
 | :------------------ | :------- | :-------------------------- |
-| contracts           | Array    | contract Address Array      |
-| pagination          | Object   | page response	parameters |
-| pagination.next_key | String   | the next page start key     |
-| pagination.total    | String   | it's a number format        |
+| contracts           | Array    | Contract Address Array      |
+| pagination          | Object   | Page response	parameters |
+| pagination.next_key | String   | The next page start key     |
+| pagination.total    | String   | It's a number format        |
 
 ###  Query contract history information
 
@@ -2200,8 +2204,8 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1ufs3tlq4umljk0qfe8k5ya
 
 | **Parameter**                                           | **Type** | **Required** | **Description**                                              |
 | :------------------------------------------------------ | :------- | :----------- | :----------------------------------------------------------- |
-| contractAddr                                            | String   | Yes          |                                                              |
-| page                                                    | Uint64   | No           |                                                              |
+| contractAddr                                            | String   | Yes          | contract address                                             |
+| page                                                    | Uint64   | No           | page                                                         |
 | page_key                                                | String   | No           | `page_key` is a value returned in `PageResponse.next_key` to begin querying the next page most efficiently. Only one of `offset` or `page_key` should be set. |
 | offset                                                  | Uint64   | No           | `offset` is a numeric offset that can be used when `page_key` is unavailable. It is less efficient than using key. Only one of `offset` or `page_key` should be set. |
 | limit                                                   | Uint64   | No           | `limit` is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app. |
@@ -2240,19 +2244,18 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1ufs3tlq4umljk0qfe8k5ya
 
 | **Parameter**                       | **Type**     | **Description**              |
 | :---------------------------------- | :----------- | :--------------------------- |
-| entries                             | Array Object | the history info of contract |
-| entry.operation                     | Int64        | contract operate type        |
-| entry.code_id                       | String       | code id                      |
-| entry.msg                           | Object       |                              |
-| entry.msg.decimals                  | Int64        |                              |
-| entry.msg.initial_balances          | Array Object |                              |
-| entries.msg.initial_balance.address | String       |                              |
-| entries.msg.initial_balance.address | String       |                              |
-| entries.msg.name                    | String       | contract name                |
-| entries.msg.symbol                  | String       | contract symbol              |
-| pagination                          | Object       | page response	parameters  |
-| pagination.next_key                 | String       | the next page start key      |
-| pagination.total                    | String       | it's a number format         |
+| entries                             | Array Object | The history info of contract |
+| entry.operation                     | Int64        | Contract operate type        |
+| entry.code_id                       | String       | Code id                      |
+| entry.msg                           | Object       | Msg                          |
+| entry.msg.decimals                  | Int64        | Decimal                      |
+| entry.msg.initial_balances          | Array Object | Initial balances             |
+| entries.msg.initial_balance.address | String       | Initial balance address      |
+| entries.msg.name                    | String       | Contract name                |
+| entries.msg.symbol                  | String       | Contract symbol              |
+| pagination                          | Object       | Page response parameters     |
+| pagination.next_key                 | String       | The next page start key      |
+| pagination.total                    | String       | It's a number format         |
 
 ### Query contract data through key
 
@@ -2272,8 +2275,8 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1qg5ega6dykkxc307y25pec
 
 | **Parameter** | **Type** | **Required** | **Description**                   |
 | :------------ | :------- | :----------- | :-------------------------------- |
-| contractAddr  | String   | Yes          | contract address required         |
-| key           | String   | Yes          | queried key value required        |
+| contractAddr  | String   | Yes          | Contract address required         |
+| key           | String   | Yes          | Queried key value required        |
 | encoding      | string   | Yes          | Must use hex because `key` is hex |
 
 > Example Response
@@ -2307,8 +2310,8 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1qg5ega6dykkxc307y25pec
 
 | **Parameter** | **Type** | **Required** | **Description**                   |
 | :------------ | :------- | :----------- | :-------------------------------- |
-| contractAddr  | String   | Yes          | contract address required         |
-| query         | String   | Yes          | request data required base64 code |
+| contractAddr  | String   | Yes          | Contract address required         |
+| query         | String   | Yes          | Request data required base64 code |
 | encoding      | string   | Yes          | Must use base64                   |
 
 > Example Response
@@ -2344,7 +2347,7 @@ coderID
 
 | **Parameter** | **Type** | **Required** | **Description**                                              |
 | :------------ | :------- | :----------- | :----------------------------------------------------------- |
-| contractAddr  | String   | Yes          |                                                              |
+| contractAddr  | String   | Yes          | Contract address                                             |
 | page          | Uint64   | No           |                                                              |
 | page_key      | String   | No           | `page_key` is a value returned in `PageResponse.next_key` to begin querying the next page most efficiently. Only one of `offset` or `page_key` should be set. |
 | offset        | Uint64   | No           | `offset` is a numeric offset that can be used when `page_key` is unavailable. It is less efficient than using key. Only one of `offset` or `page_key` should be set. |
@@ -2379,12 +2382,12 @@ coderID
 
 | **Parameter**       | **Type**     | **Description**            |
 | :------------------ | :----------- | :------------------------- |
-| models              | Array Object |                            |
-| model.key           | String       | data key which is hex code |
-| model.value         | String       | data value which is base64 |
-| pagination          | Object       | page response parameters   |
-| pagination.next_key | String       | the next page start key    |
-| pagination.total    | String       | it's a number format       |
+| models              | Array Object | Model object               |
+| model.key           | String       | Data key which is hex code |
+| model.value         | String       | Data value which is base64 |
+| pagination          | Object       | Page response parameters   |
+| pagination.next_key | String       | The next page start key    |
+| pagination.total    | String       | It's a number format       |
 
 ## Gov
 
@@ -2425,8 +2428,8 @@ None
 | **Parameter**      | **Type** | **Description**                 |
 | :----------------- | :------- | :------------------------------ |
 | min_deposit        | Array    | Min deposit, okt                |
-| > amount           | String   |                                 |
-| > denom            | String   |                                 |
+| > amount           | String   | amount of deposit               |
+| > denom            | String   | denom of deposit                |
 | max_deposit_period | String   | Max deposit period for proposal |
 
 > Request Example
@@ -2544,35 +2547,35 @@ None
 
 #### Response Parameters
 
-| **Parameter**              | **Type** | **Description** |
-| :------------------------- | :------- | :-------------- |
-| content                    | Object   |                 |
-| > type                     | String   |                 |
-| > value                    | Object   |                 |
-| >> ParameterChangeProposal | Object   |                 |
-| >>> changes                | Array    |                 |
-| >>>> subspace              | String   |                 |
-| >>>> value                 | String   |                 |
-| >>>> key                   | String   |                 |
-| >>> description            | String   |                 |
-| >>> title                  | String   |                 |
-| >> height                  | String   |                 |
-| voting_start_time          | String   |                 |
-| id                         | String   |                 |
-| deposit_end_time           | String   |                 |
-| submit_time                | String   |                 |
-| total_deposit              | Array    |                 |
-| > amount                   | String   |                 |
-| > denom                    | String   |                 |
-| final_tally_result         | Object   |                 |
-| > total_voted_power        | String   |                 |
-| > no                       | String   |                 |
-| > no_with_veto             | String   |                 |
-| > total_power              | String   |                 |
-| > yes                      | String   |                 |
-| > abstain                  | String   |                 |
-| proposal_status            | String   |                 |
-| voting_end_time            | String   |                 |
+| **Parameter**              | **Type** | **Description**                                              |
+| :------------------------- | :------- | :----------------------------------------------------------- |
+| content                    | Object   | Content of proposal                                          |
+| > type                     | String   | Type of proposal                                             |
+| > value                    | Object   | Value object of proposal                                     |
+| >> ParameterChangeProposal | Object   | Parameter change proposal object                             |
+| >>> changes                | Array    | Changes array                                                |
+| >>>> subspace              | String   | Subspace name of change                                      |
+| >>>> value                 | String   | Value of change                                              |
+| >>>> key                   | String   | key of change                                                |
+| >>> description            | String   | proposal description                                         |
+| >>> title                  | String   | Proposal title                                               |
+| >> height                  | String   | Effective block height of the proposal                       |
+| voting_start_time          | String   | Voting start time of proposal                                |
+| id                         | String   | Proposal id                                                  |
+| deposit_end_time           | String   | Deposit end time of proposal                                 |
+| submit_time                | String   | Submit time of proposal                                      |
+| total_deposit              | Array    | Total deposit of proposal                                    |
+| > amount                   | String   | Amount of deposit                                            |
+| > denom                    | String   | Denom of deposit                                             |
+| final_tally_result         | Object   | Final tally result of proposal                               |
+| > total_voted_power        | String   | Total voted power                                            |
+| > no                       | String   | Voted no                                                     |
+| > no_with_veto             | String   | Voted with veto                                              |
+| > total_power              | String   | Total power                                                  |
+| > yes                      | String   | Voted yes                                                    |
+| > abstain                  | String   | Voted abstain                                                |
+| proposal_status            | String   | Proposal status.DepositPeriod,VotingPeriod,Passed,Rejected,Failed |
+| voting_end_time            | String   | Voting end time of proposal                                  |
 
 ### Get proposer by proposalId
 
