@@ -51,7 +51,7 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
 
 ### What can you do with **stOKT**?
 ---
- - <1> Earn OKT staking rewards at ~40% APR
+ - <1> Earn OKT staking rewards
 
  - <2> Earn swap fees by providing liquidity to [OKC Swap](/okc/swap/trade) (eg. OKT-**stOKT** pool)
 
@@ -65,8 +65,7 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
 
  - <1> On Liquid Staking Protocol, stake OKT to receive **stOKT** in your wallet. Your staked OKT will be delegated to validators for staking rewards that will be automatically accumulated and compounded in the staking pool.
  - <2> On OKC Swap, provide liquidity to **stOKT** pools such as OKT-**stOKT**, and receive swap fees and an LP token that represents your liquidity pool share in deployed pools.
- - <3> On OKX Yield, stake your LP tokens or **stOKT** to earn rewards in USDT or OKT.
- - <4> When you want to withdraw your staking rewards and its initial staked OKTs, you may return to the Liquid Staking Protocol to unstake and claim your OKT.
+ - <3> When you want to withdraw your staking rewards and its initial staked OKTs, you may return to the Liquid Staking Protocol to unstake and claim your OKT.
 
 
 ## How to liquid stake OKT
@@ -74,8 +73,6 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
  - <2> Connect your wallet and make sure you switch to the OKC network.
  - <3> Enter the amount of OKT tokens you want to stake, click the `Stake` button, and confirm the transaction in the wallet.
  - <4> The OKC Liquid Staking protocol will send you the corresponding amount of **stOKT** based on the latest exchange ratio between OKT and **stOKT**.
-
-![](./img/1.png)
 
 
 ## How to unstake
@@ -87,13 +84,9 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
 
 
 
-![](./img/2.png)
-
-
 ## How to claim OKT
  - <1> After the waiting period, head to the OKC Liquid Staking protocol page: [Here](/okc/liquid-staking/claim)
  - <2> Connect your wallet and make sure you switch to the OKC network.
  - <3> You could see `Total claimable funds` and `Pending amount` OKT amounts in the `Claim` tab.
  - <4> Click the `Claim All` button, and confirm the transaction in the wallet. 
  - <5> The OKC Liquid Staking protocol will burn the NFT receipt, and you will receive the corresponding amount of OKT tokens.
-![](./img/3.png)

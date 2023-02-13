@@ -1,217 +1,317 @@
-[
+/*
+ * @Author: xiaojun.liu
+ * @Date: 2022-11-11 16:32:30
+ * @LastEditTime: 2023-02-13 17:35:11
+ * @Description:
+ */
+
+module.exports = [
     {
-        "title": "About OKC",
-        "children": [
+        title: 'Quick Start',
+        children: [
             {
-                "title": "How To Use",
+                title: 'INTRODUCTION',
                 collapsable: false,
-                "children": ['about-okc/quick-start']
+                children: [
+                    'dev/quick-start/overview',
+                    'dev/quick-start/install-okc',
+                    'dev/quick-start/deploy-you-own-okc-testnet',
+                    'dev/quick-start/join-okc-testnet',
+                    'dev/quick-start/join-okc-mainnet',
+                ],
+            },
+            {
+                title: 'WALLET',
+                collapsable: false,
+                children: [
+                    'dev/quick-start/wallet/metamask/quick-start',
+                    'dev/quick-start/wallet/OKX-wallet',
+                ],
+            },
+        ],
+    },
+    {
+        title: 'Core Concepts',
+        children: [
+            {
+                title: 'BASIC CONCEPTS',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/basic-concepts/general-concepts'
+                ]
+            },
+            {
+                title: 'GOVERNANCE',
+                collapsable: false,
+                children: [
+                    // 'dev/core-concepts/on-chain-governance/overview',
+                    'dev/core-concepts/on-chain-governance/gov',
+                    // 'dev/core-concepts/on-chain-governance/parameter',
+                    // 'dev/core-concepts/on-chain-governance/text',
+                    // 'dev/core-concepts/on-chain-governance/upgrade'
+                ],
+            },
+            {
+                title: 'GAS & FEES',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/gas-and-fees/gas'
+                ]
+            },
+            {
+                title: 'TRANSACTIONS',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/transactions/transactions'
+                ],
+            },
+            {
+                title: 'ACCOUNTS',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/accounts/accounts'
+                ],
+            },
+            {
+                title: 'OKC CONSENSUS',
+                collapsable: false,
+                children:[
+                    'dev/core-concepts/okc-consensus/okc-consensus'
+                ]
+            },
+            {
+                title: 'STAKING REWARDS ALGORITHM',
+                collapsable: false,
+                children:[
+                    'dev/core-concepts/staking-rewards-algorithm/distr',
+                    'dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli',
+                    'dev/core-concepts/staking-rewards-algorithm/sending-stakingtx-using-evmtx',
+                ]
+            },
+            {
+                title: 'VALIDATOR',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/validator/validators-overview',
+                    'dev/core-concepts/validator/validators-guide-cli',
+                    'dev/core-concepts/validator/validators-faq',
+
+                ]
+            },
+            {
+                title: 'DELEGATOR',
+                collapsable: false,
+                children: [
+                    'dev/core-concepts/delegator/delegators-overview',
+                    'dev/core-concepts/delegator/delegators-guide-cli',
+                    'dev/core-concepts/delegator/delegators-faq',
+                ]
             }
         ]
     },
     {
-        "title": "Official Dapps",
-        "children": [
+        title: 'Nodes',
+        children: [
             {
-                "title": "Liquid Staking",
+                title: 'TECHNICAL REQUIREMENT',
                 collapsable: false,
-                "children": ['official-dapps/liquid-staking']
+                children:[
+                    'dev/nodes/node-requirement/node-requirement',
+                    'dev/nodes/node-requirement/upgrade-node',
+                    'dev/nodes/node-requirement/install-faq',
+                ]
+            },
+            {
+                title: 'OPERATION',
+                collapsable: false,
+                children:[
+                    'dev/nodes/operation/how-to-start-mainnet-node',
+                    'dev/nodes/operation/how-to-join-the-public-testnet'
+                ]
+            },
+            {
+                title: 'NODE CLIENT',
+                collapsable: false,
+                children:[
+                    'dev/nodes/node-client/exchaincli',
+                    'dev/nodes/node-client/service-providers',
+                    'dev/nodes/node-client/monitor',
+
+                ]
+            },
+        ]
+    },
+    {
+        title: 'Building Modules',
+        children: [
+            {
+                title: 'IBC MODULE',
+                collapsable: false,
+                children:[
+                    'dev/building-modules/ibc-module/ibc',
+                    'dev/building-modules/ibc-module/ibc-cli'
+                ]
+            },
+            {
+                title: 'WASM MODULE',
+                collapsable: false,
+                children:[
+                    'dev/building-modules/wasm-module/overview',
+                    'dev/building-modules/wasm-module/instruction-manual',
+                    'dev/building-modules/wasm-module/vmbridge',
+                    'dev/building-modules/wasm-module/cosmwasmjs',
+                    'dev/building-modules/wasm-module/wasmknife'
+                ]
+            },
+            {
+                title: 'GAS BACK MODULE',
+                collapsable: false,
+                children:[
+                    'dev/building-modules/gas-back-module/developer-dividend-project',
+                    'dev/building-modules/gas-back-module/developer-dividend-project-operation-guide'
+                ]
             }
         ]
     },
     {
-        "title": "Developer Tools",
-        "children": [
+        title: 'API',
+        children: [
             {
-                "title": "Gas Back",
+                title: 'OKC API',
                 collapsable: false,
-                "children": [
-                    "developer-tools/gas-back/developer-dividend-project",
-                    "developer-tools/gas-back/developer-dividend-project-operation-guide"
+                children:[
+                    'dev/api/okc-api/http',
+                    'dev/api/okc-api/json-rpc-api',
+                    'dev/api/okc-api/websocket'
                 ]
             },
             {
-                "title": "Oracle",
+                title: 'OKC SWAP API',
                 collapsable: false,
-                "children": [
-                    "developer-tools/oracle/oracle"
+                children:[
+                    'dev/api/okc-swap-api/api-overview',
+                    'dev/api/okc-swap-api/entities',
+                    'dev/api/okc-swap-api/queries'
                 ]
             },
             {
-                "title": "EVM",
+                title: 'OKC ORACLE API',
                 collapsable: false,
-                "children": [
-                    "developer-tools/evm/evm-integration-guide"
+                children:[
+                    'dev/api/okc-oracle-api/oracle'
                 ]
             }
         ]
     },
     {
-        "title": "Dev Docs",
-        "children": [
+        title: 'SDK',
+        children: [
             {
-                "title": "OKC",
-                "children": [
-                    "dev/okc/overview"
+                title: 'SDK MODULES',
+                collapsable: false,
+                children:[
+                    'dev/sdk/go-sdk',
+                    'dev/sdk/java-sdk',
+                    'dev/sdk/js-sdk'
+                ]
+            }
+        ]
+
+    },
+    {
+        title: 'Smart Contract',
+        children: [
+            {
+                title: 'DEPLOYMENT',
+                collapsable: false,
+                children:[
+                    'dev/smart-contracts/deployment/remix',
+                    'dev/smart-contracts/deployment/truffle'
                 ]
             },
             {
-                "title": "Getting Start",
-                "children": [
-                    "dev/getting-start/install-okc",
-                    "dev/getting-start/deploy-you-own-okc-testnet",
-                    "dev/getting-start/join-okc-testnet",
-                    "dev/getting-start/join-okc-testnet-with-docker",
-                    "dev/getting-start/join-okc-mainnet",
-                    "dev/getting-start/upgrade-node",
-                    "dev/getting-start/install-faq"
+                title: 'CONTRACT VERIFICATION',
+                collapsable: false,
+                children:[
+                    'dev/smart-contracts/verify-contract/verify-contract',
+                    'dev/smart-contracts/verify-proxy-contract/verify-proxy-contract'
                 ]
             },
             {
-                "title": "Developers",
-                "children": [
-                    "dev/developers/quick-start-for-mainnet",
-                    "dev/developers/quick-start",
-                    {
-                        "title": "Basics",
-                        "children": [
-                            "dev/developers/basics/accounts",
-                            "dev/developers/basics/gas",
-                            "dev/developers/basics/transactions",
-                            "dev/developers/basics/websocket"
-                        ]
-                    },
-                    {
-                        "title": "Tools",
-                        "children": [
-                            "dev/developers/tools/create-wallet",
-                            "dev/developers/tools/hardhat",
-                            "dev/developers/tools/remix",
-                            "dev/developers/tools/smart-contract",
-                            "dev/developers/tools/truffle",
-                            "dev/developers/tools/web3js"
-                        ]
-                    },
-                    {
-                        "title": "Deploy",
-                        "children": [
-                            "dev/developers/deploy/remix",
-                            "dev/developers/deploy/truffle",
-                            "dev/developers/deploy/verify-contract",
-                            "dev/developers/deploy/verify-proxy-contract"
-                        ]
-                    },
-                    {
-                        "title": "KIP20 Tokens",
-                        "children": [
-                            "dev/developers/KIP20Tokens/introduction",
-                            "dev/developers/KIP20Tokens/issue-token",
-                            "dev/developers/KIP20Tokens/kip20"
-                        ]
-                    },
-                    {
-                        "title": "Blockchain Detail",
-                        "children": [
-                            "dev/developers/blockchainDetail/aminorpc",
-                            "dev/developers/blockchainDetail/okexchain-fullnode",
-                            "dev/developers/blockchainDetail/endpoint"
-                        ]
-                    },
-                    "dev/developers/FAQ"
+                title: 'KIP STANDARD',
+                collapsable: false,
+                children:[
+                    'dev/smart-contracts/kip-standard/KIP20/introduction'
                 ]
             },
             {
-                "title": "Delegators",
-                "children": [
-                    "dev/delegators/delegators-overview",
-                    "dev/delegators/delegators-guide-cli",
-                    "dev/delegators/delegators-staking-cli",
-                    "dev/delegators/sending-stakingtx-using-evmtx",
-                    "dev/delegators/delegators-faq"
+                title: 'CONTRACT DEVELOPMENT FAQ ',
+                collapsable: false,
+                children:[
+                    'dev/smart-contracts/contract-development-faq/Contract-Development-FAQ'
+                ]
+            }
+        ]
+    },
+    {
+        title: 'Developer Services',
+        children: [
+            {
+                title: 'GAS BACK',
+                collapsable: false,
+                children:[
+                    'dev/developer-services/gas-back/how-to-get-gas-back-on-okc'
+                ]
+            }
+        ]
+    },
+    {
+        title: 'OKC Solutions',
+        children: [
+            {
+                title: 'OKC LIQUID STAKING',
+                collapsable: false,
+                children:[
+                    'dev/okc-solutions/okc-liquid-staking/liquid-staking'
                 ]
             },
             {
-                "title": "Validators",
-                "children": [
-                    "dev/validators/validators-overview",
-                    "dev/validators/validators-guide-cli",
-                    {
-                        "title": "Detail",
-                        "children": [
-                            "dev/validators/detail/distr"
-                        ]
-                    },
-                    "dev/validators/validators-faq"
+                title: 'OKC SWAP',
+                collapsable: false,
+                children:[
+                    'dev/okc-solutions/okc-swap/OKC-swap'
                 ]
             },
             {
-                "title": "Gas Back",
-                "children": [
-                    "dev/gas-back/how-to-get-gas-back-on-okc"
+                title: 'OKC BRIDGE',
+                collapsable: false,
+                children:[
+                    'dev/okc-solutions/okc-bridge/OKC-Bridge'
                 ]
             },
             {
-                "title": "IBC",
-                "children": [
-                    "dev/ibc/ibc",
-                    "dev/ibc/ibc-cli"
+                title: 'OKC MULTISIG',
+                collapsable: false,
+                children:[
+                    'dev/okc-solutions/okc-multisig/OKC-Multisig'
                 ]
-            },
+            }
+        ]
+    },
+    {
+        title: 'Resources',
+        children: [
             {
-                "title": "Wasm",
-                "children": [
-                    "dev/wasm/overview",
-                    "dev/wasm/instruction-manual",
-                    "dev/wasm/vmbridge",
-                    "dev/wasm/cosmwasmjs",
-		    "dev/wasm/wasmknife"
-                ]
-            },
-            {
-                "title": "Concepts",
-                "children": [
-                    "dev/concepts/general-concepts",
-                    "dev/concepts/gov",
-                    "dev/concepts/sentry-nodes",
-                    "dev/concepts/two-format-address"
-                ]
-            },
-            {
-                "title": "Resources",
-                "children": [
-                    "dev/resources/genesis",
-                    "dev/resources/exchaincli",
-                    "dev/resources/service-providers",
-                    "dev/resources/snapshot"
-                ]
-            },
-            {
-                "title": "Tools",
-                "children": [
-                    "dev/tools/monitor"
-                ]
-            },
-            {
-                "title": "API",
-                "children": [
-                    {
-                        "title": "SDK",
-                        "children": [
-                            "dev/api/sdk/go-sdk",
-                            "dev/api/sdk/java-sdk",
-                            "dev/api/sdk/js-sdk"
-                        ]
-                    },
-                    "dev/api/http",
-                    "dev/api/json_rpc"
-                ]
-            },
-            {
-                "title": "Link",
-                "children": [
-                    "dev/references/link"
+                title: 'REFERENCES',
+                collapsable: false,
+                children:[
+                    'dev/resources/genesis-file/genesis',
+                    'dev/resources/official-kip20-tokens/kip20',
+                    'dev/resources/okc-snapshot/snapshot',
+                    'dev/resources/useful-references/evm-integration-guide',
+                    'dev/resources/useful-references/link'
                 ]
             }
         ]
     }
-]
+];
