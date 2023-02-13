@@ -12,7 +12,6 @@ the REST server (default `8546`):
 ```bash
 exchaind start --rest.laddr "tcp://localhost:8545" --wsport 8546 --chain-id <chain_id>
 ```
-
 Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws), or something else websocket clients
 
 ```bash
@@ -23,6 +22,15 @@ ws ws://localhost:8546/
 > {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 < {"jsonrpc":"2.0","result":"0x65eca2989ce064d141862c8b7138c1e","id":1}
 ```
+## Mainnet and Testnet Websocket URL
+```shell
+# Mainnet Websocket URL
+wss://exchainws.okex.org:8443
+
+## Testnet Websocket URL
+wss://exchaintestws.okex.org:8443
+```
+
 
 ## Create subscription
 
