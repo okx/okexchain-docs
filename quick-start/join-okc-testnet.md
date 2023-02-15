@@ -1,12 +1,5 @@
 # Join the Public Testnet 
 
-See the [testnet repo](https://github.com/okx/testnets) for
-information on the latest testnet, including the correct version
-of OKC to use and details about the genesis file.
-
-**You need to [install okc](/dev/quick-start/install-okc.html) before you go further**
-
-
 Details of deployment information: https://github.com/okx/testnets/blob/master/README.md
 ## Supported Platforms
 
@@ -18,7 +11,31 @@ The hardware must meet certain requirements to run `exchaind`.
 
 For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
 
-## Setting Up a New Node
+## Join the Public Testnet With binary
+
+### Build excahind
+
+1. clone the exchain repo
+
+latest_version can be viewed [here](https://github.com/okx/exchain/releases/latest)
+
+```
+git clone -b ${latest_version} https://github.com/okx/exchain.git
+cd exchain
+```
+
+2. build the exchain
+
+Rocksdb needs to be installed before running exchaind for the first time. OKC team has provided a command `make rocksdb`.
+
+```
+make rocksdb
+```
+
+```
+make testnet 
+```
+
 
 These instructions are for setting up a brand new full node from scratch.
 
@@ -56,33 +73,6 @@ minimum-gas-prices = ""
 
 Your full node has been initialized! 
 
-## Genesis & Seeds
-
-### Copy the Genesis File
-
-Fetch the testnet's `genesis.json` file into `exchaind`'s config directory.
-
-Note we use the `latest` directory in the [testnets repo](https://github.com/okx/testnets) which contains details for the testnet like the latest version and the genesis file. 
-
-To verify the correctness of the configuration run:
-
-```bash
-exchaind start --chain-id exchain-65
-```
-
-### Add Seed Nodes
-
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okx/testnets) contains links to some seed nodes.
-
-You can add `seeds` in the `~/.exchaind/config/config.toml` file:
-
-```toml
-# Comma separated list of seed nodes to connect to
-seeds = "b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:36656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:36656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:36656"
-```
-
-For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
-
 ## Starting a New Node
 
 Start the full node with this command:
@@ -98,9 +88,6 @@ exchaincli status
 ```
 
 See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKC to use and details about the genesis file.
-
-## JSON-RPC Endpoint
-[RPC URL](/dev/api/okc-api/grpc-api.html)
 
 ## Upgrading Your Node
 
