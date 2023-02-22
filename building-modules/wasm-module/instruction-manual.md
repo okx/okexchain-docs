@@ -23,7 +23,11 @@ rustup update stable
 
 rustup target list --installed
 rustup target add wasm32-unknown-unknown
+rustup target list --installed
+// output is expected to contain 'wasm32-unknown-unknown'  
 ```   
+
+Change Rust crates registry to speed up downloading rust library. Refer to this [blog](https://mirrors.ustc.edu.cn/help/crates.io-index.html). 
 
 #### Install command line tool
 ```Bash
@@ -38,18 +42,19 @@ Mainnet does not need to set up nodes; you can directly access RPC node services
 
 Configure your exchaincli
 ```Bash
-exchaincli config chain-id exchain-65
+exchaincli config chain-id exchain-66
 exchaincli config trust-node true
 # If you are building your own node, please refer to the following commands
 # exchaincli config node <host>:<port>
 exchaincli config node https://exchaintmrpc.okex.org
 ```
+> Wasm is not enabled on mainnet now.
 #### Testnet
 Testnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-okc-testnet.html).
 
 Configure your exchaincli
 ```Bash 
-exchaincli config chain-id exchain-66
+exchaincli config chain-id exchain-65
 exchaincli config trust-node true
 
 # If you are building your own node, please refer to the following commands
@@ -115,7 +120,7 @@ To keep gas costs down, the binary size should be as small as possible. This wil
 
 **Note: You need to install [Docker](https://www.docker.com/) before you can use rust-optimizer.**
 
-Navigate to the project root directory and run the following commands:
+Navigate to the project root directory of `cw-plus` and run the following commands:
 ```Bash
 docker run --rm -v "$(pwd)":/code \
 --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
@@ -130,6 +135,7 @@ After compilation optimization is complete, the optimized wasm file will be outp
 exchaincli tx wasm store ./cw-plus/target/wasm32-unknown-unknown/release/cw20_base.wasm --from captain --fees 0.001okt --gas 3000000 -b block -y
 ```
 You can query tx by hash to get the transaction receipt. The code id is `1` in the transaction receipt.
+Maybe you will see other number in your transaction receipt, because this number will increase for every transaction which calls `wasm store`.
 
 ```Bash
 {
@@ -191,6 +197,7 @@ After uploading the contract code, it only saves the code on the blockchain with
 exchaincli tx wasm instantiate 1 '{"decimals":10,"initial_balances":[{"address":"ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v","amount":"100000000"}],"name":"my test token", "symbol":"mtt"}' --label test --admin ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v --from ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v --fees 0.001okt --gas 3000000 -b block -y
 ```
 What is instantiate message? It is the parameters in JSON type to be used to instantiate the contract. And we can find the schema in `cw20-base.json`.
+The admin address can update the contract after instantiation.
 ```Bash 
 "instantiate": {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -414,7 +421,7 @@ The cw20 balance of `ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0` is expected to b
 ```
 
 ## Wasm contract upgrade
-Supporting contract upgrades is a unique feature of wasm contracts. Developers can call the Migrate method to upgrade contracts. For example, the developer uploads two sets of wasm codes, and the code IDs are divided into 1 and 2. The developer initializes a contract a based on code 1, and the developer can upgrade the underlying code of contract a to code 2, and the contract address remains unchanged. After the upgrade, users can use the calling interface and parameters defined in the schema file of code 2 to call the contract.
+Contract upgrades is a unique feature of wasm contracts. Developers can call the Migrate method to upgrade contracts. For example, the developer uploads two sets of wasm codes, and the code IDs are 1 and 2. The developer initializes a contract `A` based on code 1, and the developer can upgrade the underlying code of contract `A` to code 2, and the contract address remains unchanged. After the upgrade, users can use the calling interface and parameters defined in the schema file of code 2 to call the contract.
 ```Bash
 # migrate contract to new code id, <instantiate_message> is the instantiate message of the new code defined in json schema
 # e.g.
@@ -593,7 +600,7 @@ exchaincli query wasm code <code_id> <filename>
 # e.g.
 #    <code_id>=1
 
-exchaincli query wasm code-info <code_info>
+exchaincli query wasm code-info <code_id>
 ```
 #### 5. Query contract information, including the code id, code uploader address, admin account and other information respective to the contract
 ```Bash
@@ -634,6 +641,3 @@ exchaincli query wasm pinned
 ```Bash
   exchaincli query wasm libwasmvm-version
 ```
-
-## FAQ
-If there were any issues regarding any of the actions mentioned above that you were not able to solve, you can contact our technical support (technical support hyperlink here).

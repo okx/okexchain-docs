@@ -5,10 +5,10 @@ Wasm of OKC is developed based on [CosmWasm](https://docs.cosmwasm.com/docs/1.0/
 
 CosmWasm is written as a module that can be plugged into the Cosmos SDK. This means that anyone currently building a blockchain using the Cosmos SDK can quickly and easily add CosmWasm smart contracting support to their chain, without adjusting existing logic.
 
-[Rust](https://www.rust-lang.org/) is currently the most used programming language for CosmWasm, in the future, it is possible to have different programming languages like [AssemblyScript](https://www.assemblyscript.org/).
+[Rust](https://www.rust-lang.org/) is currently the most used programming language for CosmWasm. It is possible to have different programming languages like [AssemblyScript](https://www.assemblyscript.org/) in the future. Other programming languages are not recommended for now and will not be introduced.
 
 - [Architecture](#Architecture) explains much of the high-level design and architecture of CosmWasm. It is crucial to understand the mental model and capabilities of the system before designing products using it. However, if you prefer to learn by coding then you can skip this section and visit as you need it.
-- [Wasm Smart Contract](#Wasm Smart Contract) introduces what wasm contract is and how to develop wasm contract.
+- [Wasm Smart Contract](#Wasm-Smart-Contract) introduces what wasm contract is and how to develop wasm contract.
 
 ## Architecture
 
@@ -18,10 +18,10 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
 
 ### Wasm system ecosystem
    CosmoWasm is a Cosmos SDK module plugin, this project is responsible for helping Cosmos SDK support wasm virtual machine. CosmWasm is implemented in Rust and because the Go code runtime causes the contract to enlarge, the contract is mainly written with Rust then compiled to wasm bytecode. In order to facilitate the interaction between the contract and virtual machine, the virtual machine also uses Rust as a fundamental database. In its entirety, CosmWasm's ecology is mainly divided into the following 3 parts:
-- Contract standard database (similar to Ethereum's precompiled contract)
-   + [cosmwasm-std](https://github.com/CosmWasm/cosmwasm/tree/main/packages/std): fundamental contract database, contains fundamental category definitions, defined with Cosmos SDK's fundamental module interaction information, IBC interface definitions, fundamental storage definitions, etc.
-   + [cosmwasm-storage](https://github.com/CosmWasm/cosmwasm/tree/main/packages/storage): used in conjunction with cosmwasm-std, is the post-package for storing related data structures in cosmwasm-std.
-   + [cw-storage-plus](https://github.com/CosmWasm/cosmwasm-plus/tree/main/packages/storage-plus): the higher level post-package of cosmwasm-storage, used for compiling more complex modern contracts, but currently most are still unstable
+- Contract standard library (similar to Ethereum's precompiled contract)
+   + [cosmwasm-std](https://github.com/CosmWasm/cosmwasm/tree/main/packages/std): This fundamental contract library contains fundamental category definitions, defined with Cosmos SDK's fundamental module interaction information, IBC interface definitions, fundamental storage definitions, etc.
+   + [cosmwasm-sechma](https://github.com/CosmWasm/cosmwasm/tree/main/packages/schema): A dev-dependency for CosmWasm contracts to generate JSON Schema files.
+   + [cw-storage-plus](https://github.com/CosmWasm/cw-storage-plus): This optional addition to cosmwasm-std includes convenience helpers for interacting with storage.
 - Contract tools, includes contract template, contract sample and contract compilation optimization tools.
    + [cosmwasm-template](https://github.com/CosmWasm/cosmwasm-template): a tool used for generating wasm contract templates, can generate contract templates, unit testing templates, ABI interface templates, etc., all with one click.
    + [rust-optimizer](https://github.com/cosmwasm/rust-optimizer): a docker image, used for compiling and optimizing Rust contracts, and also outputting wasm bytecode. The size of the contract bytecode compiled in the image is smaller, and at the same time, it ensures that different developers have the same compilation environment for the same contract, thereby ensuring that the generated wasm contracts have the same checksum (for on-chain and contract interaction).
