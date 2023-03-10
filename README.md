@@ -5,7 +5,14 @@
 
 ## What is OKC？
 
-OKC is a set of open-source blockchain projects developed by OKX, aiming to promote the development of large-scale commercial applications based on blockchain technology. It gives each participating node the same rights, allowing users to launch a variety of decentralized applications smoothly, issue their digital assets, create their own digital asset trading pairs, and trade freely. The utilisation of cross-chain technology principles is essential to allow those features to be used by anyone. Through the cross-chain module, the value interconnectivity and user interconnectivity, interconnectivity of blockchain can be realized simply and efficiently, so that we can co-construct the ecosystem and the value-added system.
+### About OKX Chain
+A Super Scalable, Compatible L1 Blockchain OKX Chain (OKC) is an EVM-compatible L1 built on Cosmos with a focus on true interoperability (IBC) and maximized performance. At high scalability, developers can build and scale with low gas fees. The OKX Chain ecosystem and infrastructure, including the all-in-one multi-chain Web3 interface, enables a seamless experience for both developers and users.
+
+### Advantages of OKX Chain
+- High Scalability & Maximized Performance: Based on enhanced Tendermint and Delegated Proof of Stake (DPoS) consensus that can support up to 5000 Transactions per Second (TPS), Web3 applications shall reach their full potential at extremely low cost.
+- Enhanced Interoperability: OKX Chain supports Inter-Blockchain Communication (IBC)nprotocol that — together with the Tendermint consensus algorithm, featuring instant finality — can be used to realize value transmission between Cosmos ecosystem within seconds. Being fully EVM compatible, OKX Chain allows developers to build projects without any learning cost.
+- Developer Friendly: OKX Chain is completely open-source. Anyone can read it, check the progress, comment on it, and help build the ecosystem. OKX Chain also provides native oracle protocol and industry-leader Chainlink for maximum flexibility to access price feeds.
+- Secure: The OKX Chain team offers a reliable smart contract auditing service, making it a genuinely decentralized protocol that avoids the centralization risks of most blockchain networks today.
 
 ![OKC multichain framework](./img/okc2022ibc.png)
 
