@@ -2,8 +2,6 @@
 
 Subscription Manager User Interface
 
-You are viewing the **subscription method.**To learn how to request random numbers without a subscription, see the [direct funding method](../../Direct-Funding-Method/Direct-Funding-Method.md) guide.
-
 The Subscription Manager lets you create a subcription and pre-pay for VRF so you don’t need to provide funding each time your application requests randomness. This guide walks you through the main sections of the UI.
 
 ## **My subscription**
