@@ -215,8 +215,7 @@ The contract includes the following functions:
 After you are done with this contract and the subscription, you can retrieve the remaining OKT to use with other examples.
 
 1. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf) 待更改and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
-2. Under your subscription details, click **Cancel subscription**. A field opens asking which wallet address you want to send the remaining funds to.
-3. Enter your wallet address and click **Cancel subscription**. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, OKC VRF closes your subscription account and sends the remaining OKT to your wallet.
+2. Under your subscription details, click **Cancel subscription**. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, OKC VRF closes your subscription account and sends the remaining OKT to your wallet.
 
 ## What's next
 
