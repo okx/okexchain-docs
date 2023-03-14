@@ -71,11 +71,11 @@ Make sure that your consuming contracts are funded with enough OKT tokens to cov
        ```
      
  	3. The VRF coordinator emits an event.
-     - The event is picked up by the VRF service and waits for the specified number of block confirmations to respond back to the VRF coordinator with the random values and a proof (`requestConfirmations`).
+      - The event is picked up by the VRF service and waits for the specified number of block confirmations to respond back to the VRF coordinator with the random values and a proof (`requestConfirmations`).
 
-     - The VRF coordinator verifies the proof on-chain. Then, it calls back the wrapper contract `fulfillRandomWords` function.
+      - The VRF coordinator verifies the proof on-chain. Then, it calls back the wrapper contract `fulfillRandomWords` function.
 
-     - Finally, the VRF Wrapper calls back your consuming contract.
+      - Finally, the VRF Wrapper calls back your consuming contract.
 
   ## Limits
 
