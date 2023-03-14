@@ -20,22 +20,22 @@ OKC VRF  offers two methods for requesting randomness:
 
 Depending on your use case, one method might be more suitable than another. Consider the following characteristics when you choose a method:
 
-| [Subscription method](../Subscription Method/Subscription.md) | [Direct funding method](../Direct Funding Method/Direct Funding Method.md) |
+| [Subscription method](../Subscription-Method/Subscription.md) | [Direct funding method](../Direct-Funding-Method/Direct-Funding-Method.md) |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | Suitable for regular requests                                | Suitable for infrequent one-off requests                     |
 | Supports multiple VRF consuming contracts connected to one subscription account | Each VRF consuming contract directly pays for its requests   |
-| VRF costs are calculated after requests are fulfilled and then deducted from the subscription balance. Learn [how VRF costs are calculated for the subscription method](.../Subscription Method/Subscription.md). | VRF costs are estimated and charged at request time, which may make it easier to transfer the cost of VRF to the end user. Learn [how VRF costs are calculated for the direct funding method](../Direct Funding Method/Supported Networks.md). |
+| VRF costs are calculated after requests are fulfilled and then deducted from the subscription balance. Learn [how VRF costs are calculated for the subscription method](.../Subscription-Method/Subscription.md). | VRF costs are estimated and charged at request time, which may make it easier to transfer the cost of VRF to the end user. Learn [how VRF costs are calculated for the direct funding method](../Direct Funding Method/Supported Networks.md). |
 | Reduced gas overhead and more control over the maximum gas price for requests | Higher gas overhead than the subscription method             |
 | More random values returned per single request. See the maximum random values per request for the [Subscription supported networks](../Subscription Method/Supported Networks.md). | Fewer random values returned per single request than the subscription method, due to higher overhead. See the maximum random values per request and gas overhead for the [Direct funding supported networks](../Direct Funding Method/Supported Networks.md). |
 | You don’t have to estimate costs precisely for each request. Ensure that the subscription account has enough funds. | You must estimate transaction costs carefully for each request to ensure the consuming contract has enough funds to pay for the request. |
 | Requires a subscription account                              | No subscription account required                             |
-| VRF costs are billed to your subscription account. [Manage and monitor your balance](.../Subscription Method/Subscription.mdi) | No refunds for overpayment after requests are completed      |
+| VRF costs are billed to your subscription account. [Manage and monitor your balance](.../Subscription-Method/Subscription.mdi) | No refunds for overpayment after requests are completed      |
 
 
-  ## What's next
+## What's next
 
-  - [› Subscription Method](.../Subscription Method/Subscription.md)
-  - [› Direct Funding Method](../Direct Funding Method/Direct Funding Method.md)
+- [› Subscription Method](.../Subscription-Method/Subscription.md)
+- [› Direct Funding Method](../Direct-Funding-Method/Direct-Funding-Method.md)
 
   
 

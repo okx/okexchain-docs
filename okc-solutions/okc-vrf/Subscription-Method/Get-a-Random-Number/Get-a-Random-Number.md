@@ -11,7 +11,7 @@ This guide assumes that you know how to create and deploy smart contracts on OKT
 
 For this example, create a new subscription on the OKC Mainnet .
 
-1. Open MetaMask and set it to use the OKC Mainnet . The [Subscription Manager](../Subscription Manager UI/Subscription Manager UI.md) detects your network based on the active network in MetaMask.
+1. Open MetaMask and set it to use the OKC Mainnet . The [Subscription Manager](../Subscription-Manager-UI/Subscription-Manager-UI.md) detects your network based on the active network in MetaMask.
 
 2. Check MetaMask to make sure you have OKT on OKC Mainnet.
 
@@ -25,7 +25,7 @@ For this example, create a new subscription on the OKC Mainnet .
 
 7. Record your subscription ID, which you need for your consuming contract. You will add the consuming contract to your subscription later.
 
-You can always find your subscription IDs, balances, and consumers at [vrf.chain.OKT](/okc/oracle/vrf).//待更改为线上链接
+You can always find your subscription IDs, balances, and consumers at [vrf.chain.OKT](/okc/oracle/vrf).待更改为线上链接
 
 Now that you have a funded subscription account and your subscription ID, [create and deploy a VRF  compatible contract](#create-and-deploy-a-vrf--compatible-contract).
 
@@ -219,7 +219,7 @@ After you are done with this contract and the subscription, you can retrieve the
 
 ## What's next
 
-- [› Subscription Manager UI](../Subscription Manager UI/Subscription Manager UI.md)
-- [› Security Considerations](../../Security Considerations/Security Considerations.md)
-- [› Best Practices](../../Best Practices/Best Practices.md)
-- [› Supported Networks](../Supported Networks/Supported Networks.md#Configuration)
+- [› Subscription Manager UI](../Subscription-Manager-UI/Subscription-Manager-UI.md)
+- [› Security Considerations](../../Security-Considerations/Security-Considerations.md)
+- [› Best Practices](../../Best-Practices/Best-Practices.md)
+- [› Supported Networks](../Supported-Networks/Supported-Networks.md#Configuration)

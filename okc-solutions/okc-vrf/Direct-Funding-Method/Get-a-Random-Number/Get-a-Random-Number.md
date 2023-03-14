@@ -1,5 +1,3 @@
-
-
 # Get a Random Number
 
 This guide explains how to get random values using a simple contract to request and receive random values from OKC VRF  without managing a subscription. 
@@ -115,7 +113,7 @@ After you are done with this contract, you can retrieve the remaining  OKT to us
 
 ## What's next
 
-- [› Security Considerations](../../Security Considerations/Security Considerations.md)
-- [› Best Practices](../../Best Practices/Best Practices.md)
-- [› Supported Networks](../Supproted Networks/Supproted Networks.md)
+- [› Security Considerations](../../Security-Considerations/Security-Considerations.md)
+- [› Best Practices](../../Best-Practices/Best-Practices.md)
+- [› Supported Networks](../Supproted-Networks/Supproted-Networks.md)
 

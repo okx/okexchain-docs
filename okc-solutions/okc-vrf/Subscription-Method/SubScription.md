@@ -2,7 +2,7 @@
 
 ## Subscriptions
 
-VRF  requests receive funding from subscription accounts. The [Subscription Manager](./Subscription Manager UI/Subscription Manager UI.md) lets you create an account and pre-pay for VRF , so you don’t provide funding each time your application requests randomness. This reduces the total gas cost to use VRF . It also provides a simple way to fund your use of OKC products from a single location, so you don’t have to manage multiple wallets across several different systems and applications.
+VRF  requests receive funding from subscription accounts. The [Subscription Manager](./Subscription-Manager-UI/Subscription-Manager-UI.md) lets you create an account and pre-pay for VRF , so you don’t provide funding each time your application requests randomness. This reduces the total gas cost to use VRF . It also provides a simple way to fund your use of OKC products from a single location, so you don’t have to manage multiple wallets across several different systems and applications.
 
 Subscriptions have the following core concepts:
 
@@ -43,11 +43,11 @@ The VRF coordinator processes the request and determines the final charge to you
 
 1. The consuming contract must inherit [VRFConsumerBase](https://github.com/okx/OKC-VRF/blob/main/contracts/interfaces/VRFConsumerBaseV2.sol) and implement the `fulfillRandomWords` function, which is the *callback VRF function*. Submit your VRF request by calling `requestRandomWords` of the [VRF Coordinator](https://github.com/okx/OKC-VRF/blob/main/contracts/VRFCoordinatorV2.sol) with:
 
-   - `keyHash`: Identifier that maps to a job and a private key on the VRF service and that represents a specified gas lane. If your request is urgent, specify a gas lane with a higher gas price limit. The configuration for your network can be found [here](./Supported Networks/Supported Networks.md#configurations).
-   - `s_subscriptionId`: The subscription ID that the consuming contract is registered to. OKT funds are deducted from this subscription.
-   - `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](./Supported Networks/Supported Networks.md#configurations).
-   - `callbackGasLimit`: The maximum amount of gas a user is willing to pay for completing the callback VRF function. Note that you cannot put a value larger than maxGasLimit of the VRF Coordinator contract (read [coordinator contract limits](#limits) for more details).
-   - `numWords`: The number of random numbers to request. The maximum random values that can be requested for your network can be found [here](./Supported Networks/Supported Networks.md#configurations).
+- `keyHash`: Identifier that maps to a job and a private key on the VRF service and that represents a specified gas lane. If your request is urgent, specify a gas lane with a higher gas price limit. The configuration for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
+- `s_subscriptionId`: The subscription ID that the consuming contract is registered to. OKT funds are deducted from this subscription.
+- `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
+- `callbackGasLimit`: The maximum amount of gas a user is willing to pay for completing the callback VRF function. Note that you cannot put a value larger than maxGasLimit of the VRF Coordinator contract (read [coordinator contract limits](#limits) for more details).
+- `numWords`: The number of random numbers to request. The maximum random values that can be requested for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
 
 2. The VRF coordinator emits an event.
 
@@ -59,7 +59,7 @@ The VRF coordinator processes the request and determines the final charge to you
    (Gas price * (Verification gas + Callback gas)) = total gas cost
    ```
 
-   The OKT premium is added to the total gas cost. The premium is defined in the [coordinator contract](./Supported Networks/Supported Networks.md#configurations) with the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT.
+   The OKT premium is added to the total gas cost. The premium is defined in the [coordinator contract](./Supported-Networks/Supported-Networks.md#configurations) with the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT.
 
    ```plaintext
    (total gas cost + OKT premium) = total request cost
@@ -87,6 +87,6 @@ You can see the configuration for each network on the [Supported networks](./Sup
 
 ## What's next
 
-- [› Get a Random Number](./Get a Random Number/Get a Random Number.md#get-a-random-number/)
-- [› Supported Networks](./Supported Networks/Supported Networks.md#Configuration)
+- [› Get a Random Number](./Get-a-Random-Number/Get-a-Random-Number.md#get-a-random-number/)
+- [› Supported Networks](./Supported-Networks/Supported-Networks.md#Configuration)
 

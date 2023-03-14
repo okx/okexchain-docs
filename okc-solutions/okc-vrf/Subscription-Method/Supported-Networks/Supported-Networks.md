@@ -1,4 +1,3 @@
-
 # Configuration
 
 ## Coordinator Parameters
@@ -15,7 +14,7 @@ Fee parameters are configured in the coordinator contract and specify the premiu
 
 ## Configurations
 
-VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](../../Direct Funding Method/Supproted Networks/Supproted Networks.md#supported-networks) page.
+VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](../../Direct-Funding-Method/Supproted-Networks/Supproted-Networks.md#supported-networks) page.
 
 ### OKT Mainnet
 
