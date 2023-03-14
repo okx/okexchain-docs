@@ -79,9 +79,9 @@ The VRF wrapper calls the coordinator to process the request using the following
 
 You can see the configuration for each network on the [Supported networks](./Supproted-Networks/Supproted-Networks.md#supported-networks) page. You can also view the full configuration for each VRF  Wrapper contract directly in OKLink. As an example, view the [OKT Mainnet VRF  Wrapper contract](https://www.oklink.com/cn/okc/address/0xb1a0323e202b27300f8530740a37162b2d7e62cb) configuration by calling `getConfig` function.
 
-- Each wrapper has a `maxNumWords` parameter that limits the maximum number of random values you can receive in each request.
+Each wrapper has a `maxNumWords` parameter that limits the maximum number of random values you can receive in each request.
 
-The maximum allowed `callbackGasLimit` value for your requests is defined in the [Coordinator contract supported networks](./Supproted Networks/Supproted Networks.md#supported-networks) page. Because the VRF  Wrapper adds an overhead, your `callbackGasLimit` must not exceed `maxGasLimit - wrapperGasOverhead`.
+The maximum allowed `callbackGasLimit` value for your requests is defined in the [Coordinator contract supported networks](./Supproted-Networks/Supproted-Networks.md#supported-networks) page. Because the VRF  Wrapper adds an overhead, your `callbackGasLimit` must not exceed `maxGasLimit - wrapperGasOverhead`.
 
 ## What's next
 
