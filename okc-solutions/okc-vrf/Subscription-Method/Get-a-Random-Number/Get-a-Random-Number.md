@@ -15,7 +15,7 @@ For this example, create a new subscription on the OKC Mainnet .
 
 2. Check MetaMask to make sure you have OKT on OKC Mainnet.
 
-3. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf). //待更改为线上链接
+3. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf).
 
 4. Click **Create Subscription** and follow the instructions to create a new subscription account. MetaMask opens and asks you to confirm payment to create the account on-chain. After you approve the transaction, the network confirms the creation of your subscription account on-chain.
 
@@ -25,7 +25,7 @@ For this example, create a new subscription on the OKC Mainnet .
 
 7. Record your subscription ID, which you need for your consuming contract. You will add the consuming contract to your subscription later.
 
-You can always find your subscription IDs, balances, and consumers at [vrf.chain.OKT](/okc/oracle/vrf).待更改为线上链接
+You can always find your subscription IDs, balances, and consumers at [vrf.chain.OKT](/okc/oracle/vrf).
 
 Now that you have a funded subscription account and your subscription ID, [create and deploy a VRF  compatible contract](#create-and-deploy-a-vrf--compatible-contract).
 
@@ -59,7 +59,7 @@ Build and deploy the contract on OKC Mainnet.
 
 5. After you deploy your contract, copy the address from the **Deployed Contracts** list in Remix. Before you can request randomness from VRF , you must add this address as an approved consuming contract on your subscription account.
 
-6. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf) 待更改and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
+6. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf) and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
 
 7. Under the **Consumers** section, click **Add consumer**.
 
@@ -75,7 +75,7 @@ The deployed contract requests random values from OKC VRF, receives those values
 
 2. Click the `requestRandomWords()` function to send the request for random values to OKC VRF. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, OKC VRF processes your request. OKC VRF fulfills the request and returns the random values to your contract in a callback to the `fulfillRandomWords()` function. At this point, a new key `requestId` is added to the mapping `s_requests`.
 
-   Depending on current  conditions, it might take a few minutes for the callback to return the requested random values to your contract. You can see a list of pending requests for your subscription ID at [vrf.chain.OKT](/okc/oracle/vrf).待更改
+   Depending on current  conditions, it might take a few minutes for the callback to return the requested random values to your contract. You can see a list of pending requests for your subscription ID at [vrf.chain.OKT](/okc/oracle/vrf).
 
 3. To fetch the request ID of your request, call `lastRequestId()`.
 
@@ -214,7 +214,7 @@ The contract includes the following functions:
 
 After you are done with this contract and the subscription, you can retrieve the remaining OKT to use with other examples.
 
-1. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf) 待更改and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
+1. Open the Subscription Manager at [vrf.chain.OKT](/okc/oracle/vrf) and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
 2. Under your subscription details, click **Cancel subscription**. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, OKC VRF closes your subscription account and sends the remaining OKT to your wallet.
 
 ## What's next
