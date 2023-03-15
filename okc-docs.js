@@ -75,14 +75,14 @@ module.exports = [
             {
                 title: 'OKC CONSENSUS',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/core-concepts/okc-consensus/okc-consensus'
                 ]
             },
             {
                 title: 'STAKING REWARDS ALGORITHM',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/core-concepts/staking-rewards-algorithm/distr',
                     'dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli',
                     'dev/core-concepts/staking-rewards-algorithm/sending-stakingtx-using-evmtx',
@@ -115,7 +115,7 @@ module.exports = [
             {
                 title: 'TECHNICAL REQUIREMENT',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/nodes/node-requirement/node-requirement',
                     'dev/nodes/node-requirement/upgrade-node',
                     'dev/nodes/node-requirement/install-faq',
@@ -124,7 +124,7 @@ module.exports = [
             {
                 title: 'OPERATION',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/nodes/operation/how-to-start-mainnet-node',
                     'dev/nodes/operation/how-to-join-the-public-testnet'
                 ]
@@ -132,7 +132,7 @@ module.exports = [
             {
                 title: 'NODE CLIENT',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/nodes/node-client/exchaincli',
                     'dev/nodes/node-client/service-providers',
                     'dev/nodes/node-client/monitor',
@@ -147,7 +147,7 @@ module.exports = [
             {
                 title: 'IBC MODULE',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/building-modules/ibc-module/ibc',
                     'dev/building-modules/ibc-module/ibc-cli'
                 ]
@@ -155,7 +155,7 @@ module.exports = [
             {
                 title: 'WASM MODULE',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/building-modules/wasm-module/overview',
                     'dev/building-modules/wasm-module/instruction-manual',
                     'dev/building-modules/wasm-module/vmbridge',
@@ -166,7 +166,7 @@ module.exports = [
             {
                 title: 'GAS BACK MODULE',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/building-modules/gas-back-module/developer-dividend-project',
                     'dev/building-modules/gas-back-module/developer-dividend-project-operation-guide'
                 ]
@@ -179,7 +179,7 @@ module.exports = [
             {
                 title: 'OKC API',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/api/okc-api/http',
                     'dev/api/okc-api/json-rpc-api',
                     'dev/api/okc-api/websocket'
@@ -188,7 +188,7 @@ module.exports = [
             {
                 title: 'OKC SWAP API',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/api/okc-swap-api/api-overview',
                     'dev/api/okc-swap-api/entities',
                     'dev/api/okc-swap-api/queries'
@@ -197,7 +197,7 @@ module.exports = [
             {
                 title: 'OKC ORACLE API',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/api/okc-oracle-api/oracle'
                 ]
             }
@@ -209,7 +209,7 @@ module.exports = [
             {
                 title: 'SDK MODULES',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/sdk/go-sdk',
                     'dev/sdk/java-sdk',
                     'dev/sdk/js-sdk'
@@ -224,7 +224,7 @@ module.exports = [
             {
                 title: 'DEPLOYMENT',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/smart-contracts/deployment/remix',
                     'dev/smart-contracts/deployment/truffle'
                 ]
@@ -232,7 +232,7 @@ module.exports = [
             {
                 title: 'CONTRACT VERIFICATION',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/smart-contracts/verify-contract/verify-contract',
                     'dev/smart-contracts/verify-proxy-contract/verify-proxy-contract'
                 ]
@@ -240,14 +240,14 @@ module.exports = [
             {
                 title: 'KIP STANDARD',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/smart-contracts/kip-standard/KIP20/introduction'
                 ]
             },
             {
                 title: 'CONTRACT DEVELOPMENT FAQ ',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/smart-contracts/contract-development-faq/Contract-Development-FAQ'
                 ]
             }
@@ -259,7 +259,7 @@ module.exports = [
             {
                 title: 'GAS BACK',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/developer-services/gas-back/how-to-get-gas-back-on-okc'
                 ]
             }
@@ -271,29 +271,40 @@ module.exports = [
             {
                 title: 'OKC LIQUID STAKING',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/okc-solutions/okc-liquid-staking/liquid-staking'
                 ]
             },
             {
                 title: 'OKC SWAP',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/okc-solutions/okc-swap/OKC-swap'
                 ]
             },
             {
                 title: 'OKC BRIDGE',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/okc-solutions/okc-bridge/OKC-Bridge'
                 ]
             },
             {
                 title: 'OKC MULTISIG',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/okc-solutions/okc-multisig/OKC-Multisig'
+                ]
+            },
+            {
+                title: 'OKC VRF',
+                collapsable: false,
+                children: [
+                    'dev/okc-solutions/okc-vrf/Introduction-to-OKC-VRF',
+                    'dev/okc-solutions/okc-vrf/Subscription-Method',
+                    'dev/okc-solutions/okc-vrf/Direct-Funding-Method',
+                    'dev/okc-solutions/okc-vrf/Security-Considerations',
+                    'dev/okc-solutions/okc-vrf/Best-Practices',
                 ]
             }
         ]
@@ -304,7 +315,7 @@ module.exports = [
             {
                 title: 'REFERENCES',
                 collapsable: false,
-                children:[
+                children: [
                     'dev/resources/genesis-file/genesis',
                     'dev/resources/official-kip20-tokens/kip20',
                     'dev/resources/okc-snapshot/snapshot',
