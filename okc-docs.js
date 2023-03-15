@@ -300,11 +300,46 @@ module.exports = [
                 title: 'OKC VRF',
                 collapsable: false,
                 children: [
-                    'dev/okc-solutions/okc-vrf/Introduction-to-OKC-VRF',
-                    'dev/okc-solutions/okc-vrf/Subscription-Method',
-                    'dev/okc-solutions/okc-vrf/Direct-Funding-Method',
-                    'dev/okc-solutions/okc-vrf/Security-Considerations',
-                    'dev/okc-solutions/okc-vrf/Best-Practices',
+                    {
+                        title: 'Introduction to OKC VRF',
+                        collapsable: false,
+                        children: [
+                            'dev/okc-solutions/okc-vrf/Introduction-to-OKC-VRF/OKC-VRF',
+                        ]
+                    },
+                    {
+                        title: 'Subscription Method',
+                        collapsable: false,
+                        children: [
+                            'dev/okc-solutions/okc-vrf/Subscription-Method/SubScription',
+                            'dev/okc-solutions/okc-vrf/Subscription-Method/Get-a-Random-Number/Get-a-Random-Number',
+                            'dev/okc-solutions/okc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI',
+                            'dev/okc-solutions/okc-vrf/Subscription-Method/Supported-Networks/Supported-Networks',
+                        ]
+                    },
+                    {
+                        title: 'Direct Funding Method',
+                        collapsable: false,
+                        children: [
+                            'dev/okc-solutions/okc-vrf/Direct-Funding-Method/Direct-Funding-Method',
+                            'dev/okc-solutions/okc-vrf/Direct-Funding-Method/Get-a-Random-Number/Get-a-Random-Number',
+                            'dev/okc-solutions/okc-vrf/Direct-Funding-Method/Supproted-Networks/Supproted-Networks',
+                        ]
+                    },
+                    {
+                        title: 'Security Considerations',
+                        collapsable: false,
+                        children: [
+                            'dev/okc-solutions/okc-vrf/Security-Considerations/Security-Considerations',
+                        ]
+                    },
+                    {
+                        title: 'Best Practices',
+                        collapsable: false,
+                        children: [
+                            'dev/okc-solutions/okc-vrf/Best-Practices/Best-Practices',
+                        ]
+                    },
                 ]
             }
         ]
