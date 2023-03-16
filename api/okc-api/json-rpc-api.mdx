@@ -666,9 +666,9 @@ The sign method calculates an Ethereum specific signature with: sign(keccak256("
 
 By adding a prefix to the message makes the calculated signature recognisable as an Ethereum specific signature. This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
 
-::: warning 
+<Warning>
 the address to sign with must be unlocked.
-:::
+</Warning>
 
 #### Parameters
 
@@ -1415,9 +1415,9 @@ Imports the given unencrypted private key (hex string) into the key store, encry
 
 Returns the address of the new account.
 
-:::warning
+<Warning>
 Currently, this is not implemented since the feature is not supported by the keys
-:::
+</Warning>
 
 #### Parameters
 
@@ -1559,9 +1559,9 @@ Validate the given passphrase and submit transaction.
 
 The transaction is the same argument as for eth_sendTransaction and contains the from address. If the passphrase can be used to decrypt the private key belogging to tx.from the transaction is verified, signed and send onto the network. 
 
-:::warning
+<Warning>
 The account is not unlocked globally in the node and cannot be used in other RPC calls.
-:::
+</Warning>
 
 #### Parameters
 
