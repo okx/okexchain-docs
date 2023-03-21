@@ -195,6 +195,15 @@ module.exports = [
                 ]
             },
             {
+                title: 'OKC SWAP CONTRACT',
+                collapsable: false,
+                children: [
+                    'dev/api/okc-swap-contract/overview',
+                    'dev/api/okc-swap-contract/factory',
+                    'dev/api/okc-swap-contract/router'
+                ]
+            },
+            {
                 title: 'OKC ORACLE API',
                 collapsable: false,
                 children: [
