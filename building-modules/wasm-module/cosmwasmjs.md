@@ -1,5 +1,5 @@
 # CosmWasmJS
-This article focuses on how to use CosmoWasmJS for connectiong to OKC nodes and interacting with smart contracts. CosmWasmJS is an SDK that facilitates contract development for DApp developers. Combined with CosmJS, you can easily and conveniently develop OKCWasm smart contracts.
+This article focuses on how to use CosmoWasmJS for connectiong to OKBC nodes and interacting with smart contracts. CosmWasmJS is an SDK that facilitates contract development for DApp developers. Combined with CosmJS, you can easily and conveniently develop OKBCWasm smart contracts.
 > CosmWasmJS + CosmJS is equivalent to ETH's web3.js.
 
 | Project | Description | 
@@ -15,18 +15,18 @@ Need to install [Node](https://nodejs.org/en/download/) while using CosmoWasmJS
 You can choose between mainnet, testnet or local testnet.
 > Cosmwasm on mainnet is coming soon. Use testnet instead for now.
 ### Mainnet
-There is no need to build nodes on the main network, and the development of OKCWasm contracts can directly access the RPC node services provided by OKC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-okc-mainnet.html).
+There is no need to build nodes on the main network, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-okbc-mainnet.html).
 
 Below is the URL of the mainnet RPC node
-> const rpcEndpoint = "https://exchaintmrpc.okex.org"
+> const rpcEndpoint = "https://okbtmrpc.okbchain.org"
 ### Testnet
 
-There is no need to build nodes on testnet, and the development of OKCWasm contracts can directly access the RPC node services provided by OKC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-okc-testnet.html).
+There is no need to build nodes on testnet, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-okbc-testnet.html).
 
 Below is the URL of the testnet RPC node
-> const rpcEndpoint = "https://exchaintesttmrpc.okex.org"
+> const rpcEndpoint = "https://okbtesttmrpc.okbchain.org"
 ### Local testnet
-Download the OKC source code and set up the OKC local testnet through the script we provide
+Download the OKBC source code and set up the OKBC local testnet through the script we provide
 
 ```shell
 git clone https://github.com/okx/exchain.git
@@ -69,8 +69,8 @@ import { SigningCosmWasmClient, Secp256k1HdWallet, coin, parseCoins } from "cosm
 import { stringToPath } from "@cosmjs/crypto";
 
 // This is your rpc endpoint
-// If you choice mainnet ,please use "https://exchaintmrpc.okex.org"
-// If you choice testnet ,please use "https://exchaintesttmrpc.okex.org"
+// If you choice mainnet ,please use "https://okbtmrpc.okbchain.org"
+// If you choice testnet ,please use "https://okbtesttmrpc.okbchain.org"
 const rpcEndpoint = "http://localhost:26657";
 
 // Using mnemonic
@@ -88,7 +88,7 @@ const accs = await wallet.getAccounts();
         rpcEndpoint,
         wallet,
     );
-    const balance = await client.getBalance(accs[0].address,'okt')
+    const balance = await client.getBalance(accs[0].address,'okb')
     console.log("------------------------------------------------------------------------------------")
     console.log("SigningCosmWasmClient CONNECTION Success")
     console.log("account:",accs[0].address);
@@ -113,14 +113,14 @@ node client.mjs
 ```
 
 ## Contract interaction interface
-The above only shows how to connect OKC nodes through CosmWasmJS, the actions for querying account balances and all wasm contract code operations. If you want to conduct other smart contract actions, you can refer to the interfaces in the table below for uploading contract codes, deploying contracts and interacting with contracts.
+The above only shows how to connect OKBC nodes through CosmWasmJS, the actions for querying account balances and all wasm contract code operations. If you want to conduct other smart contract actions, you can refer to the interfaces in the table below for uploading contract codes, deploying contracts and interacting with contracts.
 
 **Notes**
 > CosmWasmClient : this client is only used for querying
 > 
 > SigningCosmWasmClient : this client is used for sending transactions
 
-| Order | Sdk interface name | Description | OKC support | Host Client| Remarks |
+| Order | Sdk interface name | Description | OKBC support | Host Client| Remarks |
 | :-----| :---- | :---- | :---| :---- | :---------- |
 | 1 | getChainId | Query chain ID | Y | CosmWasmClient |  |
 | 2 | getHeight | Query height | Y |CosmWasmClient  |  |
@@ -148,12 +148,12 @@ The above only shows how to connect OKC nodes through CosmWasmJS, the actions fo
 | 24 | migrate | Upgrade contract| Y |SigningCosmWasmClient  |  |
 | 25 | execute | Call contract| Y |SigningCosmWasmClient  |  |
 | 26 | sendTokens | Send transaction| Y |SigningCosmWasmClient  |  |
-| 27 | delegateTokens | -| N |SigningCosmWasmClient  | OKC does not support wasm call staking |
-| 28 | undelegateTokens | -| N |SigningCosmWasmClient  | OKC does not support wasm call staking |
-| 29 | withdrawRewards | -| N |SigningCosmWasmClient  | OKC does not support wasm call staking |
+| 27 | delegateTokens | -| N |SigningCosmWasmClient  | OKBC does not support wasm call staking |
+| 28 | undelegateTokens | -| N |SigningCosmWasmClient  | OKBC does not support wasm call staking |
+| 29 | withdrawRewards | -| N |SigningCosmWasmClient  | OKBC does not support wasm call staking |
 | 30 | signAndBroadcast | Sign and broadcast transaction| Y |SigningCosmWasmClient  |  |
 | 31 | sign | Sign  transaction| Y |SigningCosmWasmClient  |  |
 
 ## Example
-We provide a Webpack [demo](https://github.com/okx/comswasmjs-client) example. You can follow this example to interact with OKC through your browser and Keplr wallet using CosmWasmJS and Webpack.
+We provide a Webpack [demo](https://github.com/okx/comswasmjs-client) example. You can follow this example to interact with OKBC through your browser and Keplr wallet using CosmWasmJS and Webpack.
 And we also provide another [demo](https://github.com/okx/comswasmjs-demo) example. You can create evm compatible address with oks.js. 

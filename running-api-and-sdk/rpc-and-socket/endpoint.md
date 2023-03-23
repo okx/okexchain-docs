@@ -4,55 +4,55 @@
 - exchain-java-sdk
 - Metamask
 
-## Mainnet JSON-RPC Endpoint (chain-id: exchain-66)
-- https://exchainrpc.okex.org
+## Mainnet JSON-RPC Endpoint (chain-id: okbchaintest-196)
+- https://okbrpc.okbchain.org
 
 ## Mainnet Websocket Endpoint
-- wss://exchainws.okex.org:8443
+- wss://okbws.okex.org:8546
 
-### How to configure MetaMask with OKC(Mainnet) in one step
+### How to configure MetaMask with OKBC(Mainnet) in one step
 
 ```javascript
 currentProvider.send({
     "method": "wallet_addEthereumChain",
     "params": [
         {
-            "chainId": "0x42",
-            "chainName": "OKC Main",
-            "rpcUrls": ["https://exchainrpc.okex.org/"],
+            "chainId": "0xC4",
+            "chainName": "OKBC Main",
+            "rpcUrls": ["https://okbrpc.okbchain.org/"],
             "nativeCurrency": {
-                "name": "OKT",
-                "symbol": "OKT",
+                "name": "OKB",
+                "symbol": "OKB",
                 "decimals": 18
             },
-            "blockExplorerUrls": ["https://www.oklink.com/okc"]
+            "blockExplorerUrls": ["https://www.oklink.com/okbc"]
         }
     ]
 })
 ```
 
-## Testnet JSON-RPC Endpoint (chain-id: exchain-65):
-- https://exchaintestrpc.okex.org
+## Testnet JSON-RPC Endpoint (chain-id: okbchaintest-195):
+- https://okbtestrpc.okbchain.org
 
 ## Testnet Websocket Endpoint
-- wss://exchaintestws.okex.org:8443
+- wss://okbtestws.okex.org:8546
 
-### How to configure MetaMask with OKC(Testnet) in one step
+### How to configure MetaMask with OKBC(Testnet) in one step
 
 ```javascript
 currentProvider.send({
   "method": "wallet_addEthereumChain",
   "params": [
     {
-      "chainId": "0x41",
-      "chainName": "OKC Testnet",
-      "rpcUrls": ["https://exchaintestrpc.okex.org"],
+      "chainId": "0xC3",
+      "chainName": "OKBC Testnet",
+      "rpcUrls": ["https://okbtestrpc.okbchain.org"],
       "nativeCurrency": {
-        "name": "OKT",
-        "symbol": "OKT",
+        "name": "OKB",
+        "symbol": "OKB",
         "decimals": 18
       },
-      "blockExplorerUrls": ["https://www.oklink.com/okc-test"]
+      "blockExplorerUrls": ["https://www.oklink.com/okbc-test"]
     }
   ]
 })

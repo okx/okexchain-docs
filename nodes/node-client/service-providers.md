@@ -1,8 +1,8 @@
 # Service Providers
 
-We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKC blockchain. More specifically, this document will be focused around the interactions with tokens.
+We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKBC blockchain. More specifically, this document will be focused around the interactions with tokens.
 
-This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OKC blockchain end-users.
+This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OKBC blockchain end-users.
 
 ## High-level description of the architecture
 
@@ -16,24 +16,24 @@ There are three main pieces to consider:
 
 ### Installation and configuration
 
-We will describe the steps to run and interact with a full-node within the OKC network. For other SDK-based blockchain, the process should be similar.
+We will describe the steps to run and interact with a full-node within the OKBC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](/dev/quick-start/install-okc.html).
+First, you need to [install the software](/dev/quick-start/build-on-okbc/install-okbc.html).
 
-Then, you can start [running a full-node(testnet)](/dev/quick-start/join-okc-testnet.html).
+Then, you can start [running a full-node(testnet)](/dev/quick-start/build-on-okbc/join-public-testnet.html).
 
 ### Command-Line interface
 
-## Setting Up `exchaincli`
+## Setting Up `okbchaincli`
 
-**Please check that you are always using the latest stable release of `exchaincli`.**
+**Please check that you are always using the latest stable release of `okbchaincli`.**
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKC network, whether you run it yourself or not. Let us set it up properly.
+`okbchaincli` is the tool that enables you to interact with the node that runs on the OKBC network, whether you run it yourself or not. Let us set it up properly.
 
-In order to set up `exchaincli`, use the following command:
+In order to set up `okbchaincli`, use the following command:
 
 ```bash
-exchaincli config <flag> <value>
+okbchaincli config <flag> <value>
 ```
 
 It allows you to set a default value for each given flag.
@@ -41,18 +41,18 @@ It allows you to set a default value for each given flag.
 First, set up the address of the full-node you want to connect to:
 
 ```bash
-exchaincli config node <host>:<port
+okbchaincli config node <host>:<port
 
-// example: exchaincli config node https://35.176.62.211:26657
+// example: okbchaincli config node https://35.176.62.211:26657
 ```
-The ip address is for reference only, please use `https://exchaintmrpc.okex.org` for actual access
+The ip address is for reference only, please use `https://okbtmrpc.okbchain.org` for actual access
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
 
 Then, let us set the default value of the `--trust-node` flag:
 
 ```bash
-exchaincli config trust-node false
+okbchaincli config trust-node false
 
 // Set to true if you run a light-client node, false otherwise
 ```
@@ -60,7 +60,7 @@ exchaincli config trust-node false
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-exchaincli config chain-id exchain-65
+okbchaincli config chain-id okbchaintest-195
 ```
 
 Next you will find a few useful CLI commands to interact with the Full-Node.
@@ -70,7 +70,7 @@ Next you will find a few useful CLI commands to interact with the Full-Node.
 To generate a new key (default secp256k1 elliptic curve):
 
 ```bash
-exchaincli keys add <your_key_name>
+okbchaincli keys add <your_key_name>
 ```
 
 You will be asked to create a password (at least 8 characters) for this key-pair. This will return the information listed below:
@@ -84,7 +84,7 @@ You will be asked to create a password (at least 8 characters) for this key-pair
 You can see all your available keys by typing:
 
 ```bash
-exchaincli keys list
+okbchaincli keys list
 ```
 
 #### Checking your balance
@@ -92,7 +92,7 @@ exchaincli keys list
 After receiving tokens to your address, you can view your account’s balance by typing:
 
 ```bash
-exchaincli query account <YOUR_ADDRESS>
+okbchaincli query account <YOUR_ADDRESS>
 ```
 
 *Note: When you query an account balance with zero tokens, you will get this error: No account with address <YOUR_ADDRESS> was found in the state. This is expected! We’re working on improving our error messages.
@@ -102,7 +102,7 @@ exchaincli query account <YOUR_ADDRESS>
 Here is the command to send coins via the CLI:
 
 ```bash
-exchaincli tx send <from_key_or_address> <to_address> <amount> \
+okbchaincli tx send <from_key_or_address> <to_address> <amount> \
     --chain-id=<name_of_testnet_chain> 
 ```
 
@@ -120,22 +120,22 @@ Flags:
 If you need to do something else, the best command you can run is:
 
 ```bash
-exchaincli 
+okbchaincli 
 ```
 
 It will display all the available commands. For each command, you can use the `--help` flag to get further information.
 
 ## Rest API
 
-The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://exchainrpc.okex.org/docs/en/#overview).
+The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](../../api/okbc-api/rest-api.md).
 
-To give more flexibility to developers, the OKC community has included the ability to generate unsigned transactions, [sign](https://exchainrpc.okex.org/docs/en/#overview) and [broadcast](https://exchainrpc.okex.org/docs/en/#overview) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
+To give more flexibility to developers, the OKBC community has included the ability to generate unsigned transactions, sign and broadcast them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
 
-## OKC SDK Transaction Signing
+## OKBC SDK Transaction Signing
 
-OKC SDK transaction signing is a fairly simple process.
+OKBC SDK transaction signing is a fairly simple process.
 
-Every OKC transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
+Every OKBC transaction has a canonical JSON representation. The `okbchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
 
 Things to know when signing messages:
 

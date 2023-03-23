@@ -1,7 +1,7 @@
-# Get Gas Back on OKC
+# Get Gas Back on OKBC
 
 ## 1. Introduction
-The Gas Back feature allows contract deployers on OKC to proportionally distribute their contract's handling fees to other users. After the user deploys a contract on OKC and registers the contract, they can proceed to receive a handling fee distribution rate (Gas Back rate) according to the system, which will act as a handling fee for any user that calls this contract. Users can directly register this contract by sending an EVM transaction. 
+The Gas Back feature allows contract deployers on OKBC to proportionally distribute their contract's handling fees to other users. After the user deploys a contract on OKBC and registers the contract, they can proceed to receive a handling fee distribution rate (Gas Back rate) according to the system, which will act as a handling fee for any user that calls this contract. Users can directly register this contract by sending an EVM transaction. 
 
 ## 2. How to use
 
@@ -16,10 +16,10 @@ The Gas Back feature allows contract deployers on OKC to proportionally distribu
 1. According to the specific action that the user would like to perform, they should select the corresponding method from the proxy contract in StakingMSGHelper to generate the parameters
 2. Use the parameters generated from step 1, call SystemContract's invoke method, generate an EVM formatted transaction
 3. Sign and broadcast the assembled EVM transaction on the chain
-4. After completion, users can check their results on the [browser](https://www.oklink.com/okc) or their wallet
+4. After completion, users can check their results on the [browser](https://www.oklink.com/okbc) or their wallet
 
 ## 3. Sample code
-The codes use the OKC staking method as in the examples below, including multi-language version demos; all developers only need to change their private key, address, and parameters to their own: 
+The codes use the OKBC staking method as in the examples below, including multi-language version demos; all developers only need to change their private key, address, and parameters to their own: 
   - [Js version](https://github.com/okex/solidity-sample/tree/main/js/gasBack.js)
   - [Go version](https://github.com/okex/solidity-sample/tree/main/go/exchain-gasback)
   - [JAVA version](https://github.com/okex/solidity-sample/tree/main/java/exchain-web3-sample/src/main/java/com/exchain/web3/util/gasback)
@@ -28,6 +28,6 @@ The codes use the OKC staking method as in the examples below, including multi-l
 
 |  Interface   | Details  | Parameter details | This Msg functions as the corresponding command line of SystemContract's invoke interface parameters |
 |  ----  | ----  | ----  | ----  |
-|  genRegisterMsg()   | Register the contract, enjoy a share of the contract handling fee  | _contract: the contract that needs to be registered <br> _withdrawerAddress: contract handling fee recipient's address <br> _nonces: nonce that user uses during deploying of contract | exchaincli tx feesplit register |
-|  genUpdateMsg()   | Update contract handling fee recipient's address  | _contract: address of the registered contract <br> _withdrawerAddress: Updated contract handling recipient's address  | exchaincli tx feesplit update |
-|  genCancelMsg()   | Cancel handling fee distribution  | _contract: address of the registered contract | exchaincli tx feesplit cancel |
+|  genRegisterMsg()   | Register the contract, enjoy a share of the contract handling fee  | _contract: the contract that needs to be registered <br> _withdrawerAddress: contract handling fee recipient's address <br> _nonces: nonce that user uses during deploying of contract | okbchaincli tx feesplit register |
+|  genUpdateMsg()   | Update contract handling fee recipient's address  | _contract: address of the registered contract <br> _withdrawerAddress: Updated contract handling recipient's address  | okbchaincli tx feesplit update |
+|  genCancelMsg()   | Cancel handling fee distribution  | _contract: address of the registered contract | okbchaincli tx feesplit cancel |

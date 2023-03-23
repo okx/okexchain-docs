@@ -1,23 +1,23 @@
 
 # Accounts
 
-This document describes the in-built accounts system of OKC. 
+This document describes the in-built accounts system of OKBC.
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Accounts](https://docs.cosmos.network/v0.46/basics/accounts.html) 
-- [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts) 
+- [Cosmos SDK Accounts](https://docs.cosmos.network/v0.46/basics/accounts.html)
+- [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts)
 
-## OKC Accounts
+## OKBC Accounts
 
-OKC defines its own custom `Account` type that uses Ethereum's ECDSA secp256k1 curve for keys. This
+OKBC defines its own custom `Account` type that uses Ethereum's ECDSA secp256k1 curve for keys. This
 satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
-The root HD path for OKC-based accounts is `m/44'/60'/0'/0`.
+The root HD path for OKBC-based accounts is `m/44'/60'/0'/0`.
 
 
 ## Addresses and Public Keys
 
-There are 3 main types of `Addresses`/`PubKeys` available by default on OKC:
+There are 3 main types of `Addresses`/`PubKeys` available by default on OKBC:
 
 - Addresses and Keys for **accounts**, which identify users (e.g. the sender of a `message`). They are derived using the [eth_secp256k1](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages) curve.
 - Addresses and Keys for **validator operators**, which identify the operators of validators. They are derived using the [eth_secp256k1](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages) curve.
@@ -31,7 +31,7 @@ There are 3 main types of `Addresses`/`PubKeys` available by default on OKC:
 
 ## Address formats for clients
 
-`OKCAccount`s can be represented in both [Bech32](https://en.bitcoin.it/wiki/Bech32) and hex format for Ethereum's Web3 tooling compatibility.
+`OKBCAccount`s can be represented in both [Bech32](https://en.bitcoin.it/wiki/Bech32) and hex format for Ethereum's Web3 tooling compatibility.
 
 The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST
 clients. The hex format on the other hand, is the Ethereum `common.Address` representation of a
@@ -41,16 +41,16 @@ Cosmos `sdk.AccAddress`.
 - Address ([EIP55](https://eips.ethereum.org/EIPS/eip-55) Hex): `0xBE2684Afc84daf3388E99FFB215FdD4116FE89EC`
 - Compressed Public Key (Bech32): `expub17weu6qepqgantzvj79rywafrxmye524tpa8kp6akjct3nw7wel623lsnfwynqyfe75k`
 
-You can query an account address using the OKC CLI or REST clients:
+You can query an account address using the OKBC CLI or REST clients:
 
 ```bash
 # NOTE: the --output (-o) flag will define the output format in JSON or YAML (text)
-exchaincli q auth account $(exchaincli keys show <MYKEY> -a) -o text
+okbchaincli q auth account $(okbchaincli keys show <MYKEY> -a) -o text
 |
   address: ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme
   eth_address: 0xBE2684Afc84daf3388E99FFB215FdD4116FE89EC
   coins:
-  - denom: okt
+  - denom: okb
     amount: "10000000"
   public_key: expub17weu6qepqgantzvj79rywafrxmye524tpa8kp6akjct3nw7wel623lsnfwynqyfe75k
   account_number: 0
@@ -64,10 +64,10 @@ curl -X GET "<NODE_IP>/auth/accounts/ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme" 
 ```
 
 <Tip>
-The Cosmos SDK Keyring output (i.e `exchaincli keys`) only supports addresses and public keys in Bech32 format.
+The Cosmos SDK Keyring output (i.e `okbchaincli keys`) only supports addresses and public keys in Bech32 format.
 </Tip>
 
-To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`okc_accounts`](./json_rpc.md#eth_accounts) endpoint:
+To retrieve the Ethereum hex address using Web3, use the JSON-RPC [`okbc_accounts`](./json_rpc.md#eth_accounts) endpoint:
 
 ```bash
 # query against a local node
@@ -77,10 +77,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 # Two format address
 
 ## The relationship between ex and 0x address
-There are two address formats in ex, one is the address at the prefix of ex, such as: `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`;Another address starts with 0x, such as: `0x8aF3B04bF0400b16911b5A12360122148056d562`.The addresses prefix with 0x and ex are from the same mnemonic, the balance under their address is the same, the same number of okt for the owner under the two addresses. After the mnemonic is imported into the metamask, the address starting with 0x can be recovered;Use exchaincli to view addresses starting with 0x and ex. You can view the address prefix with ex on the dex web page and mobile client.
+There are two address formats in ex, one is the address at the prefix of ex, such as: `ex1hcngft7gfkhn8z8fnlajzh7agyt0az0v6ztmme`;Another address starts with 0x, such as: `0x8aF3B04bF0400b16911b5A12360122148056d562`.The addresses prefix with 0x and ex are from the same mnemonic, the balance under their address is the same, the same number of okb for the owner under the two addresses. After the mnemonic is imported into the metamask, the address starting with 0x can be recovered;Use okbchaincli to view addresses starting with 0x and ex. You can view the address prefix with ex on the dex web page and mobile client.
 
 ## How to use
-The address starting with ex can be used directly on the mobile client, web page or exchaincli for operations such as transfer, deposit, and voting.Addresses starting with 0x can only be used for transfer operations on metamasks at present.
+The address starting with ex can be used directly on the mobile client, web page or okbchaincli for operations such as transfer, deposit, and voting.Addresses starting with 0x can only be used for transfer operations on metamasks at present.
 
 `Note`: Using addresses prefix with ex can only transfer funds to addresses prefix with ex, and cannot be cross-transferred.
 

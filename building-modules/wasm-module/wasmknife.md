@@ -556,7 +556,7 @@ USAGE
   $ wasmknife contract:new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKX okc <core@okg.com>]
+  --authors=<value>  [default: OKX okbc <core@okg.com>]
   --path=<value>     [default: contracts] path to keep the contracts
   --version=<value>  [default: 1.0]
 
@@ -690,7 +690,7 @@ USAGE
   $ wasmknife new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKC <okc@okg.com>]
+  --authors=<value>  [default: OKBC <okbc@okg.com>]
   --path=<value>     [default: .] Path to create the workspace
   --version=<value>  [default: 1.0]
 
