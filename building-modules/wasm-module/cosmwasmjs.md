@@ -12,16 +12,11 @@ This article focuses on how to use CosmoWasmJS for connectiong to OKBC nodes and
 ## Preconditions
 Need to install [Node](https://nodejs.org/en/download/) while using CosmoWasmJS
 ## Choice of network
-You can choose between mainnet, testnet or local testnet.
+You can choose between testnet and local testnet.
 > Cosmwasm on mainnet is coming soon. Use testnet instead for now.
-### Mainnet
-There is no need to build nodes on the main network, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-okbc-mainnet.html).
-
-Below is the URL of the mainnet RPC node
-> const rpcEndpoint = "https://okbtmrpc.okbchain.org"
 ### Testnet
 
-There is no need to build nodes on testnet, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-okbc-testnet.html).
+There is no need to build nodes on testnet, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/build-on-okbc/join-public-testnet.html).
 
 Below is the URL of the testnet RPC node
 > const rpcEndpoint = "https://okbtesttmrpc.okbchain.org"
@@ -29,7 +24,7 @@ Below is the URL of the testnet RPC node
 Download the OKBC source code and set up the OKBC local testnet through the script we provide
 
 ```shell
-git clone https://github.com/okx/exchain.git
+git clone https://github.com/okx/okbchain.git
 cd exchain/dev
 sh ./wasm-test.sh 
 ```

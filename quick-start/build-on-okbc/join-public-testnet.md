@@ -4,7 +4,7 @@ See the [testnet repo](https://github.com/okx/testnets) for
 information on the latest testnet, including the correct version
 of OKBC to use and details about the genesis file.
 
-**You need to [install okbc](/dev/quick-start/install-okbc.html) before you go further**
+**You need to [install okbc](/dev/quick-start/build-on-okbc/install-okbc.html) before you go further**
 
 
 Details of deployment information: https://github.com/okx/testnets/blob/master/README.md
@@ -16,7 +16,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `okbchaind`.
 
-For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
+For node requirement details, please visit [Node Requirement](/dev/nodes/okbchain-nodes/hardware-requirement.html)
 
 ## Setting Up a New Node
 
@@ -128,7 +128,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/okx/exchain.git
+git clone https://github.com/okx/okbchain.git
 cd exchain
 git fetch --all && git checkout master
 make install
@@ -151,19 +151,19 @@ You now have an active full node. What's the next step? You can upgrade your ful
 ### 1. Download the docker image
 
 ```
-docker pull okexchain/fullnode-testnet:latest
+docker pull okbchain/fullnode-testnet:latest
 ```
 
 ### 2. Set the data directory
 
 
-Download the testnet snapshot from [here](/dev/resources/okbc-snapshot/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
+Download the testnet snapshot from [here](/dev/nodes/okbchain-nodes/node-data-snapshots.html), and unzip it into a data directory ${DATA_DIR}.
 
 
 
 ### 3. Run docker container
 ```
-docker run -d --name exchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okexchain/fullnode-testnet:latest
+docker run -d --name exchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okbchain/fullnode-testnet:latest
 ```
 `Notice: ${DATA_DIR} has to be an absolute path`
 

@@ -17,10 +17,9 @@ Unlike Nakamoto consensus where it’s subject to 51% attack (meaning that 51% o
 >💡If you want to understand in more detail how this concept works, check this link: [Delegated Byzantine Fault Tolerance (dBFT) - CryptoGraphics](https://cryptographics.info/cryptographics/blockchain/consensus-mechanisms/delegated-byzantine-fault-tolerance-dbft/ "Delegated Byzantine Fault Tolerance (dBFT) - CryptoGraphics") 
 
 ### Consensus
-The 3 main stakeholders that play the major roles in OKBC consensus are:
-1. [Validator](/dev/core-concepts/validator/validators-overview.html#introduction "Validator"): All nodes participating in consensus verification. 
+The 2 main stakeholders that play the major roles in OKBC consensus are:
+1. Validator: All nodes participating in consensus verification. 
 2. Proposer: The block producer node selected in the Validator.
-3. [Delegator](/dev/core-concepts/delegator/delegators-overview.html "Delegator"): OKB holders who delegate votes on nodes based on their reputation, stability, security and infrastructure.
 
 #### Delegators: Determining Validators by Delegating Voting Power
 Prior to defining the next block via BFT consensus, Delegators come in to determine the effective validators (the top 21 validators) to propose the next block, based on their reputation, stability, security and infrastructure. The amount of the native chain token owned and delegated to a validator represents its voting power, giving them the opportunity to be a new block proposer more often. Decentralization here is “measured” by the voting power distribution amongst the validators and not the number of validators.

@@ -2,8 +2,7 @@
 
 This guide will explain how to install the `okbchaind` and `okbchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-testnet as either a [Full Node](/dev/quick-start/join-okbc-mainnet.html) or a
-[Validator](/dev/core-concepts/validator/validators-guide-cli.html).
+testnet as a [Full Node](/dev/quick-start/build-on-okbc/join-public-testnet.html).
 
 ## Install Go
 
@@ -23,7 +22,7 @@ button on the "Advanced" tab of the "System" control panel. Some versions of Win
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
 
-> _NOTE_: **Go 1.17+** is required for the OKBC.
+> _NOTE_: **Go 1.20+** is required for the OKBC.
 
 
 ## Install the binaries
@@ -78,10 +77,10 @@ $ okbchaincli version --long
 name: exchain
 server_name: okbchaind
 client_name: okbchaincli
-version: v1.6.5
+version: v1.0.0
 commit: 4f496351ab3bdc4ce014706711f31589021dd0de
 build_tags: netgo
-go: go version go1.19.2 darwin/amd64
+go: go version go1.20 darwin/amd64
 ```
 
 ### Build Tags
@@ -108,4 +107,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the mainnet](/dev/quick-start/join-okbc-mainnet.html), [the public testnet](/dev/quick-start/join-okbc-testnet.html) or [create you own testnet](/dev/quick-start/deploy-you-own-okbc-testnet.html)
+Now you can [join the public testnet](/dev/quick-start/build-on-okbc/join-public-testnet.html) or [create you own testnet](/dev/quick-start/deploy-you-own-okbc-testnet.html)

@@ -96,7 +96,7 @@ rly config init
 
 ```Plaintext
 // Pull chain configuration from open source repository(https://github.com/cosmos/chain-registry)
-// eg: <chainName>=okexchain（okbc）
+// eg: <chainName>=okbchain（okbc）
 rly chains add <chainName>
 ```
 
@@ -165,7 +165,7 @@ When the configuration file of the chain pair (Path) is configured, it can be ad
 ```Bash
 // add the source chain and destination chain to the relayer configurations
 // --file points to the configuraiton file path created before
-// eg: <srcChainAlias>=okexchain,<destChainAlias>=ibc0,<pathName>=okbc66_ibc0
+// eg: <srcChainAlias>=okbchain,<destChainAlias>=ibc0,<pathName>=okbc66_ibc0
         <pathJsonFile>=./okbc66_ibc0.json
 rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 ```

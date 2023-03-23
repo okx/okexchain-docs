@@ -20,9 +20,9 @@ The Gas Back feature allows contract deployers on OKBC to proportionally distrib
 
 ## 3. Sample code
 The codes use the OKBC staking method as in the examples below, including multi-language version demos; all developers only need to change their private key, address, and parameters to their own: 
-  - [Js version](https://github.com/okex/solidity-sample/tree/main/js/gasBack.js)
-  - [Go version](https://github.com/okex/solidity-sample/tree/main/go/exchain-gasback)
-  - [JAVA version](https://github.com/okex/solidity-sample/tree/main/java/exchain-web3-sample/src/main/java/com/exchain/web3/util/gasback)
+  - [Js version](https://github.com/okx/solidity-sample/tree/main/js/gasBack.js)
+  - [Go version](https://github.com/okx/solidity-sample/tree/main/go/exchain-gasback)
+  - [JAVA version](https://github.com/okx/solidity-sample/tree/main/java/exchain-web3-sample/src/main/java/com/exchain/web3/util/gasback)
 
 ## 4. Interface list
 

@@ -89,10 +89,10 @@ For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551f
 name: exchain
 server_name: okbchaind
 client_name: okbchaincli
-version: v1.6.5
+version: v1.0.0
 commit: 4f496351ab3bdc4ce014706711f31589021dd0de
 build_tags: netgo
-go: go version go1.19.2 darwin/amd64
+go: go version go1.20 darwin/amd64
 ```
 
 

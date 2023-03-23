@@ -11,7 +11,7 @@ Wasm smart contracts are smart contracts that operated on wasm virtual machine. 
 ### Install essential tools
    In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKBC chain.
 #### Install OKBC
-   Make sure you have the OKBC application installed, [installation instructions](/dev/quick-start/install-okbc.html).
+   Make sure you have the OKBC application installed, [installation instructions](/dev/quick-start/build-on-okbc/install-okbc.html).
 #### Install Rust
    Install Rust environment (Linux or MacOS), [installation instructions](https://rustup.rs/).
    After installing Rust, you need to confirm your machine has wasm32 target
@@ -38,7 +38,7 @@ apt install jq curl
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
 #### Mainnet
-Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKBC for developing OKBC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-okbc-mainnet.html).
+Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKBC for developing OKBC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/build-on-okbc/join-public-testnet.html).
 
 Configure your okbchaincli
 ```Bash
@@ -50,7 +50,7 @@ okbchaincli config node https://okbtmrpc.okbchain.org
 ```
 > Wasm is not enabled on mainnet now.
 #### Testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKBC for developing OKBC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-okbc-testnet.html).
+Testnet does not need to set up nodes; you can directly access RPC node services provided by OKBC for developing OKBC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/build-on-okbc/join-okbc-testnet.html).
 
 Configure your okbchaincli
 ```Bash 
@@ -65,7 +65,7 @@ okbchaincli config node https://okbtesttmrpc.okbchain.org
 Download the OKBC source code and set up the OKBC local testnet through the script we provide.
 
 ```Bash
-git clone https://github.com/okx/exchain.git
+git clone https://github.com/okx/okbchain.git
 cd exchain/dev
 sh start.sh
 ```

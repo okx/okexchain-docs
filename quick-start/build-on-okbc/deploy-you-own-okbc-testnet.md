@@ -11,10 +11,10 @@ Supporting code can be found in the [networks directory](https://github.com/okx/
 
 In case you need to use or deploy okbc as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
-* `docker run -it -v ~/.okbchaind:/root/.okbchaind okexchain/node:$TAG okbchaind init mynode`
-* `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okbchaind:/root/.okbchaind okexchain/node:$TAG okbchaind start`
+* `docker run -it -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaind init mynode`
+* `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaind start`
 * ...
-* `docker run -it -v ~/.okbchaind:/root/.okbchaind okexchain/node:$TAG okbchaincli version`
+* `docker run -it -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaincli version`
 
 The same images can be used to build your own docker-compose stack.
 
@@ -24,7 +24,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install okbc](/dev/quick-start/install-okbc.html)
+- [Install okbc](/dev/quick-start/build-on-okbc/install-okbc.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create Genesis File and Start the Network
@@ -62,22 +62,22 @@ From the [networks/local directory](https://github.com/okx/exchain/tree/dev/netw
 
 ### Requirements
 
-- [Install okbc](/dev/quick-start/install-okbc.html)
+- [Install okbc](/dev/quick-start/build-on-okbc/install-okbc.html)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 
 ### Build
 
-Build the `okbchaind` binary (linux) and the `okexchain/node` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated rebuilding the image, so you only need to build the image once.
+Build the `okbchaind` binary (linux) and the `okbchain/fullnode-testnet` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated rebuilding the image, so you only need to build the image once.
 
 ```bash
 # Clone the exchain repo
-git clone https://github.com/okx/exchain.git
+git clone https://github.com/okx/okbchain.git
 
 # Work from the SDK repo
 cd exchain
 
-# Build okexchain/node image
+# Build okbchain/fullnode-testnet image
 make build-docker-exchainnode
 ```
 
@@ -94,10 +94,10 @@ The ports for each node are found in this table:
 
 | Node ID     | P2P Port | RPC Port |
 | ----------- | -------- | -------- |
-| `okexchainnode0` | `26656`  | `26657`  |
-| `okexchainnode1` | `26659`  | `26660`  |
-| `okexchainnode2` | `26661`  | `26662`  |
-| `okexchainnode3` | `26663`  | `26664`  |
+| `okbchainnode0` | `26656`  | `26657`  |
+| `okbchainnode1` | `26659`  | `26660`  |
+| `okbchainnode2` | `26661`  | `26662`  |
+| `okbchainnode3` | `26663`  | `26664`  |
 
 ### Configuration
 
@@ -116,28 +116,28 @@ build/
 ├── node0
 │   ├── okbchaincli
 │   │   ├── key_seed.json
-│   │   └── keyring-test-okexchain
+│   │   └── keyring-test-okbchain
 │   └── okbchaind
 │       ├── config
 │       └── data
 ├── node1
 │   ├── okbchaincli
 │   │   ├── key_seed.json
-│   │   └── keyring-test-okexchain
+│   │   └── keyring-test-okbchain
 │   └── okbchaind
 │       ├── config
 │       └── data
 ├── node2
 │   ├── okbchaincli
 │   │   ├── key_seed.json
-│   │   └── keyring-test-okexchain
+│   │   └── keyring-test-okbchain
 │   └── okbchaind
 │       ├── config
 │       └── data
 └── node3
     ├── okbchaincli
     │   ├── key_seed.json
-    │   └── keyring-test-okexchain
+    │   └── keyring-test-okbchain
     └── okbchaind
         ├── config
         └── data
