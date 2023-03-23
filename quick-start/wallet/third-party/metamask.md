@@ -53,7 +53,7 @@ If the user is using Metamask wallet, they should: Click on Ethereum's main site
 
 > - **Network name**: OKBC (can also customize)
 > - **New RPC URL88**: https://okbrpc.okbchain.org
-> - **Chain ID**: 66
+> - **Chain ID**: 196
 > - **Symbol**: OKB
 > - **Blockchain browser URL**: https://www.oklink.com/en/okbc
 
