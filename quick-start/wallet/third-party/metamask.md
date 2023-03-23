@@ -1,83 +1,40 @@
-# MetaMask
+# Overview of MetaMask
+MetaMask is a crypto wallet that you can use on your web browser or mobile devices to interact with the Ethereum network and other EVM compatible blockchains. With MetaMask, you can run Ethereum DApps without having to run a full Ethereum node.
 
-## Install the Wallet application
+>**Caution**
+It is important to backup your **Secret Recovery Phrase** as it is the only way to recover your MetaMask accounts if your device is lost, stolen, or experiences data corruption. Check more [Basic Safety and Security Tips for MetaMask](https://support.metamask.io/hc/en-us/articles/360015489591-Basic-Safety-and-Security-Tips-for-MetaMask "Basic Safety and Security Tips for MetaMask").
 
-1. To use Web3 wallet: visit [Web3 Wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
-2. To use Metamask: visit [Metamask](https://metamask.io/) , download Metamask, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups.
-3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKBC. For details, check the tutorials of each wallet's official website.
+## Guide to create a MetaMask wallet for OKB Chain
+If you are wondering how to create a new cryptocurrency wallet, consider creating one by installing the MetaMask extension.
 
-## Create a Wallet 
+### Step 1. Install MetaMask on your browser
+To create a new wallet with MetaMask, you need to install the extension first. You can install MetaMask for [Chrome](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn "Chrome"), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/ "Firefox") and Brave browsers.
+1. Open https://metamask.io or search for “Metamask extension” using your favorite search engine.
+> **NOTE**
+In this tutorial, we will be using Google Chrome as an example, but the workflow is the same for all browsers.
 
-1. Click on the MetaMask icon in the upper right corner to open the extension.
+![](./img/mw1.png)
+2. Click **Download** to install MetaMask as a Google Chrome extension.
+3. Click **Add to Chrome**.
+![](./img/mw2.png)
+4. Click** Add Extension**.
+![](./img/mw3.png)
+Voilà! You have successfully installed MetaMask extension!
 
-2. To install the latest version of MetaMask, click “**Try It Now**”.
+### Step 2. Create an account
+The next step is to create an account.
+1. When the download is finished, you will be able to either **restore a wallet** with a Secret Recovery Phrase or **create a new account**, by creating a new wallet and generating a new Secret Recovery Phrase.
+![](./img/mw4.png)
+2. You will be asked to create a new password. **Create** a strong password and click Create.
+![](./img/mw5.png)
+3. MetaMask will then provide some information about the Secret Recovery Phrase and on the next page you will see your phrase.
+![](./img/mw6.png)
+4. Write the 12-word phrase down on a piece of paper in the same order presented.
+> **Caution**
+Read carefully Metamask's instructions. Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2–3 different locations. You can even memorize this phrase.
 
-3. Click "**Continue**".
+5. Verify your secret phrase by selecting the previously generated phrase. When done, click Confirm.
+![](./img/mw7.gif)
 
-![](./img/3.gif)
-
-
-4. You will be asked to create a new password. Create a strong password and click "**Create**".
-
-![](./img/4.png)
-![](./img/4.2.png)
-
-
-5. Proceed by clicking "**Next**",  then accept the "**Terms of Use**".
-
-
-6. Click "**Reveal secret words**".
-
-
-7. You will see a 12 word seed phrase. Save seed words as a file or copy them to a safe place and click Next.
-
-
-8. Reveal secret words and copy your secret backup phrase to a safe place.
-![](./img/8.png)
-
-
-9. Verify your secret phrase by selecting the previously generated phrase. When done, click "**Confirm**".
-
-
-![](./img/9.gif)
-
-
-**Congratulations**! You have successfully created your MetaMask account. A new wallet address was automatically generated for you!
-
-## Add OKBC Network
-
-The Web3 wallet is a multi-chain wallet that has already been configured with the OKBC network by default, hence the user does not need to add it themselves.
-
-If the user is using Metamask wallet, they should: Click on Ethereum's main site; Select custom RPC in the drop-down menu; Click "**Add a network**"; Enter the following info below on the pop-up form：
-
-
-> - **Network name**: OKBC (can also customize)
-> - **New RPC URL88**: https://okbrpc.okbchain.org
-> - **Chain ID**: 196
-> - **Symbol**: OKB
-> - **Blockchain browser URL**: https://www.oklink.com/en/okbc
-
-
-
-![](./img/1.png)
-
-
-![](./img/2.png)
-
-## Get OKB
-
-OKB is the native token of OKBC, which is similar to Ether in Ethereum. To interact with OKBC, OKB payments act as gas fees.
-
-
-On the OKBC chain, OKBs function as native tokens. This means that a user can pay gas with OKB as well as send OKB to other accounts the same way they use ETH to pay gas fees on Ethereum and send ETH to others.
-
-> **OKB can be purchased from**: [OKB-USDT](https://www.okx.com/cn/trade-spot/okb-usdt)
-
-## OKBC Social Media
-
->- **OKBC Homepage**：[OKBC Homepage](https://www.okx.com/okbc)
->- **OKBC Docs**：[OKBC Docs](https://okbrpc.okbchain.org/docs/en/#overview)
->- **GitHub**: [OKBC Github](https://github.com/okx/exchain)
->- **Telegram**：[OKBC Telegram](https://t.me/OKBCNetwork)
->- **Discord**：[OKBC Discord](https://discord.com/invite/2rynEUqJxP)
->- **Medium**：[OKBC Medium](https://medium.com/okbc-okx-chain)
+By "solving this puzzle" you are confirming that you know your secret phrase.
+**Congratulations**! You have successfully created your MetaMask account. A new Ethereum wallet address was automatically generated for you!
