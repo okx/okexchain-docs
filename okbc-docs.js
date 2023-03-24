@@ -21,20 +21,30 @@ module.exports = [
                 collapsable: false,
                 children: [
                     'dev/quick-start/build-on-okbc/install-okbc',
-                    'dev/quick-start/build-on-okbc/deploy-you-own-okbc-testnet',
+                    'dev/quick-start/build-on-okbc/deploy-your-own-okbc-testnet',
                     'dev/quick-start/build-on-okbc/join-public-testnet',
-                ],
-            },
-            {
-                title: 'WALLET',
-                collapsable: false,
-                children: [
-                    'dev/quick-start/wallet/getting-started/overview',
-                    'dev/quick-start/wallet/third-party/metamask',
                 ],
             },
         ],
     },
+    {
+            title: 'WALLET',
+            children: [
+            {
+                title: 'GETTING STARTED',
+                collapsable: false,
+                children: [
+                    'dev/wallet/getting-started/overview',
+                ],
+            },
+            {
+                title: 'THIRD-PARTY APPS',
+                collapsable: false,
+                children: [
+                    'dev/wallet/third-party-apps/MetaMask',
+                ],
+            },
+        ],
     {
         title: 'Core Concepts',
         children: [
@@ -49,7 +59,7 @@ module.exports = [
                 title: 'GAS & FEES',
                 collapsable: false,
                 children: [
-                    'dev/core-concepts/gas-and-fees/gas'
+                    'dev/core-concepts/gas-and-fees/gas-and-fee'
                 ]
             },
             {
@@ -115,8 +125,8 @@ module.exports = [
                 title: 'IBC MODULE',
                 collapsable: false,
                 children: [
-                    'dev/building-modules/ibc-module/ibc',
-                    'dev/building-modules/ibc-module/ibc-cli'
+                    'dev/building-modules/ibc-module/ibc-overview',
+                    'dev/building-modules/ibc-module/okbc-ibc-cli-guide'
                 ]
             },
             {
