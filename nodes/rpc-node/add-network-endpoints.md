@@ -13,12 +13,12 @@ OKB Chain Testnet replicates the OKB Chain Mainnet and is used for testing. User
 | Properties  | Network Details  |
 | :------------ | :------------ |
 | Network Name  | OKB Chain Testnet  |
-| Parent Chain  | [Goërli](https://goerli.net/)  |
-| Chain ID  | ![img.png](img.png)  |
+| Parent Chain  |  [Goërli](https://goerli.net/)|
+| Chain ID  | 195(okbchaintest-195)  |
 | Gas Token  | OKB  |
-| RPC Endpoint  | https://okbtestrpc.okx.com  |
-| Node Endpoint  | https://okbtestrpc.okx.com  |
-| Block Explorer  |  https://www.oklink.com/cn/okbc-test  |
+| WebSocket Endpoint  | wss://okbtestws.okbchain.org:8443 |
+|Rest API | https://okbtestrpc.okbchain.org/v1  |
+| Block Explorer  | https://www.oklink.com/cn/okbc-test  |
 
 ## RPC API Methods
 Developers can utilize network endpoints to interact with on-chain data and send various transaction types to the network. The APIs adhere to a JSON-RPC standard, which is a lightweight, stateless remote procedure call (RPC) protocol frequently utilized when interacting with a blockchain network.
@@ -30,19 +30,5 @@ When interacting with the OKB Chain, a user has the option to either run their o
 
 ### Infrastructure Providers
 Public RPCs may have traffic or rate limitations based on usage. You can register for a dedicated free RPC URL at the following:
-- [Alchemy](https://www.alchemy.com/ "Alchemy")
-- [Ankr](https://www.ankr.com/ "Ankr")
-- [Blast (Bware Labs)](https://blastapi.io/ "Blast (Bware Labs)")
-- [BlockPI](https://blockpi.io/ "BlockPI")
-- [BlockSpaces](https://www.blockspaces.com/web3-infrastructure "BlockSpaces")
-- [Chainnodes](https://www.chainnodes.org/ "Chainnodes")
-- [Chainstack](https://chainstack.com/build-better-with-polygon/ "Chainstack")
-- [DataHub (Figment)](https://datahub.figment.io/ "DataHub (Figment)")
-- [Getblock](https://getblock.io/en/ "Getblock")
-- [Infura](https://infura.io/ "Infura")
-- [Moralis](https://moralis.io/ "Moralis")
 - [Pocket Network](https://www.portal.pokt.network/ "Pocket Network")
-- [QuickNode](https://www.quicknode.com/chains/matic "QuickNode")
-- [SettleMint](https://docs.settlemint.com/docs/polygon-connect-to-a-node "SettleMint")
-- [WatchData](https://docs.watchdata.io/blockchain-apis/polygon-api "WatchData")
-- [NOWNodes](https://nownodes.io/nodes/polygon-matic "NOWNodes")
+- [InfStones](https://infstones.com/apis)
