@@ -14,7 +14,7 @@
 You can also simply add network to MetaMask through [Chainlist](https://chainlist.org/chain/195 "Chainlist")
 
 ## OKB Chain API
-[OKB Chain API docs](/dev/api/okbc-api/build-on-okbc/rest-api.html)
+[OKB Chain API docs](/dev/api/okbc-api/rest-api.html)
 
 ## OKB Chain Infrastructures
 OKB Chain Explorer:

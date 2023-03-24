@@ -45,7 +45,7 @@ module.exports = [
                 ],
             },
         ],
-     },
+    },
     {
         title: 'Core Concepts',
         children: [

@@ -34,9 +34,9 @@ Now, We have to deploy our smart contract on OKBC Network. For that, we have to 
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/okbc-api/grpc-api.html) * ChainID: okbchaintest-195 * Symbol: OKB * Block Explorer:
+- Testnet * [RPC URLs](/dev/api/okbc-api/json-rpc-api.html) * ChainID: okbchaintest-195 * Symbol: OKB * Block Explorer:
 https://www.oklink.com/okbc-test
-- Mainnet * [RPC URLs](/dev/api/okbc-api/grpc-api.html) * ChainID: okbchaintest-196 * Symbol: OKB * Block Explorer: 
+- Mainnet * [RPC URLs](/dev/api/okbc-api/json-rpc-api.html) * ChainID: okbchaintest-196 * Symbol: OKB * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
