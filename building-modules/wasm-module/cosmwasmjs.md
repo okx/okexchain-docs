@@ -19,7 +19,7 @@ You can choose between testnet and local testnet.
 There is no need to build nodes on testnet, and the development of OKBCWasm contracts can directly access the RPC node services provided by OKBC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/build-on-okbc/join-public-testnet.html).
 
 Below is the URL of the testnet RPC node
-> const rpcEndpoint = "https://okbtesttmrpc.okbchain.org"
+> const rpcEndpoint = "https://okbtestrpc.okbchain.org"
 ### Local testnet
 Download the OKBC source code and set up the OKBC local testnet through the script we provide
 
@@ -64,8 +64,8 @@ import { SigningCosmWasmClient, Secp256k1HdWallet, coin, parseCoins } from "cosm
 import { stringToPath } from "@cosmjs/crypto";
 
 // This is your rpc endpoint
-// If you choice mainnet ,please use "https://okbtmrpc.okbchain.org"
-// If you choice testnet ,please use "https://okbtesttmrpc.okbchain.org"
+// If you choice mainnet ,please use "https://okbrpc.okbchain.org"
+// If you choice testnet ,please use "https://okbtestrpc.okbchain.org"
 const rpcEndpoint = "http://localhost:26657";
 
 // Using mnemonic

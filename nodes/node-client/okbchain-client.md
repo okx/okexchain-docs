@@ -19,17 +19,17 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 okbchaincli config node <host>:<port>
 
-# example: okbchaincli config node https://okbtesttmrpc.okbchain.org (testnet)
-# example: okbchaincli config node https://okbtmrpc.okbchain.org (mainnet)
+# example: okbchaincli config node https://okbtestrpc.okbchain.org (testnet)
+# example: okbchaincli config node https://okbrpc.okbchain.org (mainnet)
 ```
 
 Or any of the following address ports:
 ```bash
 # testnet
-https://okbtesttmrpc.okbchain.org
+https://okbtestrpc.okbchain.org
 
 # mainnet
-https://okbtmrpc.okbchain.org
+https://okbrpc.okbchain.org
 ```
 
 

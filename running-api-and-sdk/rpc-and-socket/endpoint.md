@@ -8,7 +8,7 @@
 - https://okbrpc.okbchain.org
 
 ## Mainnet Websocket Endpoint
-- wss://okbws.okex.org:8546
+- wss://okbws.okex.org:8443
 
 ### How to configure MetaMask with OKBC(Mainnet) in one step
 
@@ -35,7 +35,7 @@ currentProvider.send({
 - https://okbtestrpc.okbchain.org
 
 ## Testnet Websocket Endpoint
-- wss://okbtestws.okex.org:8546
+- wss://okbtestws.okex.org:8443
 
 ### How to configure MetaMask with OKBC(Testnet) in one step
 

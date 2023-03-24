@@ -16,7 +16,7 @@ Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws)
 
 ```bash
 # connect to websocet at port 8546 as defined above
-ws ws://localhost:8546/
+ws ws://localhost:8443/
 
 # subscribe to new Ethereum-formatted block Headers
 > {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
@@ -25,10 +25,10 @@ ws ws://localhost:8546/
 ## Mainnet and Testnet Websocket URL
 ```shell
 # Mainnet Websocket URL
-wss://okbws.okex.org:8546
+wss://okbws.okex.org:8443
 
 ## Testnet Websocket URL
-wss://okbtestws.okex.org:8546
+wss://okbtestws.okex.org:8443
 ```
 
 

@@ -46,7 +46,7 @@ okbchaincli config chain-id okbchaintest-196
 okbchaincli config trust-node true
 # If you are building your own node, please refer to the following commands
 # okbchaincli config node <host>:<port>
-okbchaincli config node https://okbtmrpc.okbchain.org
+okbchaincli config node https://okbrpc.okbchain.org
 ```
 > Wasm is not enabled on mainnet now.
 #### Testnet
@@ -59,7 +59,7 @@ okbchaincli config trust-node true
 
 # If you are building your own node, please refer to the following commands
 # okbchaincli config node <host>:<port>
-okbchaincli config node https://okbtesttmrpc.okbchain.org
+okbchaincli config node https://okbtestrpc.okbchain.org
 ```
 #### Local testnet
 Download the OKBC source code and set up the OKBC local testnet through the script we provide.
