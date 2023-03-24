@@ -1,7 +1,7 @@
 # Deploy with Remix
 ### Using Remix
 
-Deploys a KIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
+Deploys a OIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
 This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
 ### Setting up [Remix IDE](https://remix.ethereum.org/)
 - Remix is an online IDE to develop smart contracts.
@@ -12,7 +12,7 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
-- Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okx/KIPs/blob/master/docs/final/KIP-20.md/)
+- Create new contract OIP20Tokens.sol and copy contract code from the OIP20 token template [here](https://github.com/okx/KIPs/blob/master/docs/final/KIP-20.md/)
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
@@ -22,7 +22,7 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 
 ### Compile Smart Contract
 - Step1: Click button to switch to compile page
-- Step2: Select “KIP20Tokens” contract
+- Step2: Select “OIP20Tokens” contract
 - Step3: Check “Auto compile” and “Enable optimization” checkboxes
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
@@ -40,7 +40,7 @@ https://www.oklink.com/okbc-test
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
-- Head over to [Faucet](https://discord.gg/B5nMs6qK5F) and request test OKB
+- Head over to [Faucet](http://www.okx.com/okbc/faucet) and request test OKB
 - Now, let's Deploy the Smart Contract on OKBC Testnet
 - Select Injected Web3 in the Environment dropdown and your contract
 ![avatar](../../img/remix-06.png)
@@ -48,7 +48,7 @@ https://www.oklink.com/
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okbc-test
+Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okbc-test
 
 
 ### Remix FAQ

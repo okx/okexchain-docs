@@ -35,7 +35,7 @@ Once this operation is completed, you'll now have a project structure with the f
 - truffle-config.js: Truffle configuration file
 
 ## Create Contract
-You can write your own smart contract or download the KIP20 token smart contract template.
+You can write your own smart contract or download the OIP20 token smart contract template.
 
 ## Compile Contract
 To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
@@ -58,8 +58,8 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://okbtestrpc.okbchain.org`),
-      network_id: 65,
+      provider: () => new HDWalletProvider(mnemonic, `https://okbtestrpc.okx.com`),
+      network_id:195 ,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -123,6 +123,6 @@ Summary
 ```
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
-Congratulations! You have successfully deployed KIP20 Smart Contract. Now you can interact with the Smart Contract.
+Congratulations! You have successfully deployed OIP20 Smart Contract. Now you can interact with the Smart Contract.
 You can check the deployment status here: [https://www.oklink.com/](https://www.oklink.com/) or [https://www.oklink.com/okbc-test](https://www.oklink.com/okbc-test)
 
