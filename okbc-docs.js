@@ -13,7 +13,7 @@ module.exports = [
                 title: 'INTRODUCTION',
                 collapsable: false,
                 children: [
-                    'dev/introduction/introduction-to-okbchain',
+                    'dev/quick-start/introduction/introduction-to-okbchain',
                 ],
             },
             {
