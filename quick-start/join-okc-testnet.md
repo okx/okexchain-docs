@@ -100,7 +100,7 @@ exchaincli status
 See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKC to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-[RPC URL](/dev/api/okc-api/grpc-api.html)
+[RPC URL](/dev/api/okc-api/json-rpc-api.html)
 
 ## Upgrading Your Node
 
