@@ -34,9 +34,9 @@ Now, We have to deploy our smart contract on OKC Network. For that, we have to c
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/okc-api/grpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
+- Testnet * [RPC URLs](/dev/api/okc-api/json-rpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
 https://www.oklink.com/okc-test
-- Mainnet * [RPC URLs](/dev/api/okc-api/grpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
+- Mainnet * [RPC URLs](/dev/api/okc-api/json-rpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask

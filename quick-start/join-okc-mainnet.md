@@ -98,7 +98,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for information on mainne
 
 
 ## JSON-RPC Endpoint
-[RPC URL](/dev/api/okc-api/grpc-api.html)
+[RPC URL](/dev/api/okc-api/json-rpc-api.html)
 
 
 ## Upgrading Your Node
