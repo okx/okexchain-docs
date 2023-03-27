@@ -24,7 +24,7 @@ Then, you can start [running a full-node(testnet)](/dev/quick-start/build-on-okb
 
 ### Command-Line interface
 
-## Setting Up `okbchaincli`
+## Setting up OKB Chain CLI
 
 **Please check that you are always using the latest stable release of `okbchaincli`.**
 

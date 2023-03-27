@@ -28,7 +28,7 @@ module.exports = [
         ],
     },
     {
-            title: 'WALLET',
+            title: 'Wallet',
             children: [
             {
                 title: 'GETTING STARTED',
@@ -41,7 +41,7 @@ module.exports = [
                 title: 'THIRD-PARTY APPS',
                 collapsable: false,
                 children: [
-                    'dev/wallet/third-party-apps/MetaMask',
+                    'dev/wallet/third-party/metamask',
                 ],
             },
         ],
