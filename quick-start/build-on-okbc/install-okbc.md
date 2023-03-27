@@ -107,4 +107,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the public testnet](/dev/quick-start/build-on-okbc/join-public-testnet.html) or [create you own testnet](/dev/quick-start/deploy-you-own-okbc-testnet.html)
+Now you can [join the public testnet](/dev/quick-start/build-on-okbc/join-public-testnet.html) or [create you own testnet](/dev/quick-start/build-on-okbc/deploy-your-own-okbc-testnet.html)

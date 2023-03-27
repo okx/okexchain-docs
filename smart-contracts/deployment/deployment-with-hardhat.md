@@ -89,7 +89,7 @@ module.exports = {
     hardhat: {
     },
     OKBC: {
-      url: "https://okbtestrpc.okbchain.org",
+      url: "https://okbtestrpc.okx.com",
       accounts: [privateKey1, privateKey2, ...]
     }
   }

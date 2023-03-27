@@ -100,7 +100,7 @@ okbchaincli status
 See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKBC to use and details about the genesis file.
 
 ## JSON-RPC Endpoint
-[RPC URL](/dev/api/okbc-api/grpc-api.html)
+[RPC URL](/dev/api/okbc-api/json-rpc-api.html)
 
 ## Upgrading Your Node
 
@@ -141,10 +141,6 @@ See the [testnet repo](https://github.com/okx/testnets) for details on which ver
 
 Your full node has been cleanly upgraded!
 
-### Upgrade to Validator Node
-
-You now have an active full node. What's the next step? You can upgrade your full node to become a OKBC Validator. The top 100 validators have the ability to propose new blocks to the OKBC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.md).
-
 # Join the Public Testnet With Docker
 ## Run OKBC testnet fullnode with docker
 
@@ -157,7 +153,7 @@ docker pull okbchain/fullnode-testnet:latest
 ### 2. Set the data directory
 
 
-Download the testnet snapshot from [here](/dev/nodes/okbchain-nodes/node-data-snapshots.html), and unzip it into a data directory ${DATA_DIR}.
+Download the testnet snapshot from [here](/dev/nodes/rpc-node/node-data-snapshots.html), and unzip it into a data directory ${DATA_DIR}.
 
 
 

@@ -45,7 +45,7 @@ module.exports = [
                 ],
             },
         ],
-     },
+    },
     {
         title: 'Core Concepts',
         children: [
@@ -189,7 +189,6 @@ module.exports = [
                 collapsable: false,
                 children: [
                     'dev/smart-contracts/contract-verification/verify-contract',
-                    'dev/smart-contracts/contract-verification/verify-proxy-contract'
                 ]
             },
         ]

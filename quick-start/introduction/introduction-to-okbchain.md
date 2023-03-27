@@ -26,7 +26,7 @@ You can deploy decentralized applications to either OKB Chain Testnet or the Mai
 ### Wallets
 To interact with the OKB Chain, you need to have an Ethereum-based wallet because OKBC runs on Ethereum Virtual Machine (EVM). You can also access OKBC on Cosmos as well.
 You can choose to setup OKX Wallet (recommended) or MetaMask Wallet for EVM usage, and Keplr Wallet for Cosmos ecosystem usage.
-More wallet-related information and why you need one can be found in our [wallet guide](/dev/quick-start/wallet/getting-started/overview.html)
+More wallet-related information and why you need one can be found in our [wallet guide](/dev/wallet/getting-started/overview.html)
 ### Smart Contracts
 OKB Chain supports various services you can utilise to test, compile, debug, and deploy decentralized applications. These include deployment using [Remix](https://github.com/maticnetwork/matic-docs/blob/master/docs/develop/remix.md) and [Truffle](https://github.com/maticnetwork/matic-docs/blob/master/docs/develop/truffle.md).
 ### Connecting to OKB Chain
@@ -52,9 +52,9 @@ If you're new to building DApps, the resources below will help you get started w
 - [Full Stack dApp: Tutorial Series](https://kauri.io/full-stack-dapp-tutorial-series/5b8e401ee727370001c942e3/c)
 - [Web3.js](https://www.dappuniversity.com/articles/web3-js-intro)
 - [Ethers.js](https://docs.ethers.io/v5/)
-- [Remix](/dev/smart-contracts/deployment/deploy-with-remix.html)
-- [Truffle](/dev/smart-contracts/deployment/deploy-with-truffle.html)
-- [Metamask](/dev/quick-start/wallet/third-party/metamask.md.html)
+- [Remix](/dev/smart-contracts/deployment/deployment-with-remix.html)
+- [Truffle](/dev/smart-contracts/deployment/deployment-with-truffle.html)
+- [Metamask](/dev/wallet/third-party-apps/metamask.html)
 ### Already have a DApp?
 If you're searching for a way to scale your existing DApp effectively, you are in luck because OKB Chain has got you covered. Here are some benefits of using OKB Chain:
 - **Easy migration from Ethereum Virtual Machine (EVM)
