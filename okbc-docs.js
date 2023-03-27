@@ -41,7 +41,7 @@ module.exports = [
                 title: 'THIRD-PARTY APPS',
                 collapsable: false,
                 children: [
-                    'dev/wallet/third-party/metamask',
+                    'dev/wallet/third-party-apps/metamask',
                 ],
             },
         ],

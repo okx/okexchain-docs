@@ -4,11 +4,11 @@ OKB Chain (OKBC) is a Cosmos-based Ethereum sidechain that offers secured and us
 ## Key features & highlights
 -  **Highly Scalable, Low Fees**  
 100% EVM and Cosmos compatibility at a fraction of a cost, easy developer APIs for deployment
--  **Empowered by OKX** 
+-  **Empowered by OKX**  
 Seamless OKX product integrations, all-in-one web3 gateway, and access to 50 million users and $8B+ assets in OKX ecosystem
--  **Security** 
+-  **Security**    
 Offers a reliable smart contract auditing service to further the vision of building a trustless ecosystem
-- **Portal to Web3**
+- **Portal to Web3**  
 Enter the world of Web3 via OKX Wallet, build with compact infrastructure modules to create innovative DApps
 ## Proof of Authority
 PoA was proposed by Ethereum co-founder and former CTO Gavin Wood in 2017. Validators don’t stake coins.    
@@ -22,13 +22,13 @@ The consensus protocol of OKBC achieves the following goals:
 4. 100% compatible with Ethereum system
 ## Building on OKB Chain
 If you are an Ethereum developer, you are already a OKBC developer. Simply switch to [Install OKBC](/dev/quick-start/build-on-okbc/install-okbc.html) and get started. All the tools you are familiar with on the Ethereum blockchain are supported on OKBC by default, such as Truffle and Remix.
-You can deploy decentralized applications to either OKB Chain Testnet or the Mainnet. The OKB Chain Testnet connects with the Ethereum Goërli Testnet, which acts as its ParentChain. You can find all the network-related details in the [network documentation](https://github.com/maticnetwork/matic-docs/blob/master/docs/operate/network.md).
+You can deploy decentralized applications to either OKB Chain Testnet or the Mainnet. The OKB Chain Testnet connects with the Ethereum Goërli Testnet, which acts as its ParentChain. 
 ### Wallets
 To interact with the OKB Chain, you need to have an Ethereum-based wallet because OKBC runs on Ethereum Virtual Machine (EVM). You can also access OKBC on Cosmos as well.
 You can choose to setup OKX Wallet (recommended) or MetaMask Wallet for EVM usage, and Keplr Wallet for Cosmos ecosystem usage.
 More wallet-related information and why you need one can be found in our [wallet guide](/dev/wallet/getting-started/overview.html)
 ### Smart Contracts
-OKB Chain supports various services you can utilise to test, compile, debug, and deploy decentralized applications. These include deployment using [Remix](https://github.com/maticnetwork/matic-docs/blob/master/docs/develop/remix.md) and [Truffle](https://github.com/maticnetwork/matic-docs/blob/master/docs/develop/truffle.md).
+OKB Chain supports various services you can utilise to test, compile, debug, and deploy decentralized applications. These include deployment using [Remix](/dev/smart-contracts/deployment/deployment-with-remix.html) and [Truffle](/dev/smart-contracts/deployment/deployment-with-truffle.html).
 ### Connecting to OKB Chain
 You can add OKB Chain to MetaMask or directly use ethers.js, which allows you to connect to OKB Chain using [RPC](/dev/nodes/rpc-node/add-network-endpoints.html). In order to connect with the OKB Chain to read blockchain information, you can start with the following commands:
 ```
