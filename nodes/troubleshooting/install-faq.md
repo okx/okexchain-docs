@@ -77,7 +77,7 @@ $ okbchaincli config trust-node true
 ```
 
 ## 3. Make sure commitID is the latest version
-When you start your own node, to make sure that your commitID of okbchaind is consistent with the [official version](https://github.com/okx/exchain/releases), check it by:
+When you start your own node, to make sure that your commitID of okbchaind is consistent with the [official version](https://github.com/okx/okbchain/releases), check it by:
 ```shell script
 $ okbchaind version --long
 # or

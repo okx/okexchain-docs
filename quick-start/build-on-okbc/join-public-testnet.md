@@ -137,7 +137,7 @@ make install
 > _NOTE_: If you have issues at this step, please check that you have the latest stable version of GO installed.
 
 Note we use `master` here since it contains the latest stable release.
-See the [testnet repo](https://github.com/okx/testnets) for details on which version is needed for which testnet, and the [OKBC release page](https://github.com/okx/exchain/releases) for details on each release.
+See the [testnet repo](https://github.com/okx/testnets) for details on which version is needed for which testnet, and the [OKBC release page](https://github.com/okx/okbchain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!
 

@@ -27,12 +27,12 @@ provide this control panel through the "Advanced System Settings" option inside 
 
 ## Install the binaries
 
-Next, let's install the latest version of OKBC. Make sure you `git checkout` the [latest released version](https://github.com/okx/exchain/releases).
+Next, let's install the latest version of OKBC. Make sure you `git checkout` the [latest released version](https://github.com/okx/okbchain/releases).
 
 ```bash
-# mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases/latest
-# testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases, and use latest pre-release version
-git clone -b <latest-release-tag> https://github.com/okx/exchain
+# mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/okbchain/releases/latest
+# testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/okbchain/releases, and use latest pre-release version
+git clone -b <latest-release-tag> https://github.com/okx/okbchain
 export GO111MODULE=on
 cd exchain 
 # mainnet, use make mainnet

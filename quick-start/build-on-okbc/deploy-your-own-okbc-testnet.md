@@ -5,7 +5,7 @@ This document describes 2 ways to setup a network of `okbc` nodes, each serving 
 1. Single-node, local, manual testnet
 2. Multi-node, local, automated testnet
 
-Supporting code can be found in the [networks directory](https://github.com/okx/exchain/tree/dev/networks) and additionally the `local` sub-directories.
+Supporting code can be found in the [networks directory](https://github.com/okx/okbchain/tree/dev/networks) and additionally the `local` sub-directories.
 
 ## Available Docker images
 
@@ -58,7 +58,7 @@ This setup puts all the data for `okbchaind` in `~/.okbchaind`. You can examine 
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/okx/exchain/tree/dev/networks/local):
+From the [networks/local directory](https://github.com/okx/okbchain/tree/dev/networks/local):
 
 ### Requirements
 
