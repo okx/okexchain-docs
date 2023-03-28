@@ -8,7 +8,8 @@ Before you start services to sync, follow the steps below to use the snapshot:
 
 1. To download okbchain source code and compile, by running the following command:
 ~~~
-# 1. build okbchaind# latest_version can be viewed through this link https://github.com/okx/okbchain/releases/latest
+# 1. build okbchaind
+# latest_version can be viewed through this link https://github.com/okx/okbchain/releases/latest
 git clone -b ${latest_version} https://github.com/okx/okbchain.git
 cd okbchain
 make testnet 
@@ -17,7 +18,8 @@ make testnet
 2. To download, unpack the TAR GZ file in the data directory, and start the RPC node, run the following command:
 ~~~
 # 2. Initialize okbchain node configurationsexport OKBCHAIND_PATH=~/.okbchaind (or other directory)
-okbchaind init your_custom_moniker --chain-id okbchaintest-195 --home ${OKBCHAIND_PATH}# 3. download snapshot
+okbchaind init your_custom_moniker --chain-id okbchaintest-195 --home ${OKBCHAIND_PATH}
+# 3. download snapshot
 rm -rf ${OKBCHAIND_PATH}/data
 cd ${OKBCHAIND_PATH}
 wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okbc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
@@ -35,7 +37,8 @@ okbchaind start --home ${OKBCHAIND_PATH}
 Run the following commands to sync RPC node with docker and snapshot.
 ~~~
 # 1. Initialize okbchain node configurationsexport OKBCHAIND_PATH=~/.okbchaind (or other directory)
-okbchaind init your_custom_moniker --chain-id okbchaintest-195 --home ${OKBCHAIND_PATH}# 2. download snapshot
+okbchaind init your_custom_moniker --chain-id okbchaintest-195 --home ${OKBCHAIND_PATH}
+# 2. download snapshot
 rm -rf ${OKBCHAIND_PATH}/data
 cd ${OKBCHAIND_PATH}
 wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okbc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
