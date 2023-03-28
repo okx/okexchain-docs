@@ -1,4 +1,4 @@
-# OKBC Client
+# OKBChain Client
 
 ## OKBC CLI
 
@@ -61,18 +61,18 @@ okbchaincli config indent true
 
 ## okbchaincli user manual
 
-* [Keys](#keys)  
-* [Account](#account)  
-* [Token](#token)  
-* [Dex](#dex)  
-* [Orders](#orders)  
-* [Backend](#backend)  
-* [Staking](#staking)  
-* [Distribution](#distribution)  
-* [Governance](#governance)  
-* [Params](#params)  
-* [Slashing](#slashing)  
-* [Debug](#debug)  
+* [Keys](#Keys)  
+* [Account](#Account)  
+* [Token](#Token)  
+* [Dex](#Dex)  
+* [Orders](#Orders)  
+* [Backend](#Backend)  
+* [Staking](#Staking)  
+* [Distribution](#Distribution)  
+* [Governance](#Governance)  
+* [Params](#Params)  
+* [Slashing](#Slashing)  
+* [Debug](#Debug)  
 
 
 

@@ -26,7 +26,7 @@ You can deploy decentralized applications to either OKB Chain Testnet or the Mai
 ### Wallets
 To interact with the OKB Chain, you need to have an Ethereum-based wallet because OKBC runs on Ethereum Virtual Machine (EVM). You can also access OKBC on Cosmos as well.
 You can choose to setup OKX Wallet (recommended) or MetaMask Wallet for EVM usage, and Keplr Wallet for Cosmos ecosystem usage.
-More wallet-related information and why you need one can be found in our [wallet guide](/dev/wallet/getting-started/overview.html)
+More wallet-related information and why you need one can be found in our [wallet guide](/dev/wallet/getting-started/overview.html).
 ### Smart Contracts
 OKB Chain supports various services you can utilise to test, compile, debug, and deploy decentralized applications. These include deployment using [Remix](/dev/smart-contracts/deployment/deployment-with-remix.html) and [Truffle](/dev/smart-contracts/deployment/deployment-with-truffle.html).
 ### Connecting to OKB Chain

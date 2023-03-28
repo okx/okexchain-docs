@@ -17,9 +17,9 @@ WasmKnife allows you to:
 # Table of contents
 
 <!-- toc -->
-* [WasmKnife](#wasmknife)
-* [Table of contents](#table-of-contents)
-* [Setup](#setup)
+* [WasmKnife](#Wasmknife)
+* [Table of contents](#Table-of-contents)
+* [Setup](#Setup)
 * [Getting Started](#getting-started)
 * [Migrating CosmWasm Contracts](#migrating-cosmwasm-contracts)
 * [Use WasmKnife Main Branch Locally](#use-wasmknife-main-branch-locally)
