@@ -21,7 +21,7 @@ Your full node has been cleanly upgraded!
 
 ## Upgrade Genesis File
 
-If the new version you are upgrading to has breaking changes, you will have to restart your chain. If it is not breaking, you can skip to [Restart](#restart)
+If the new version you are upgrading to has breaking changes, you will have to restart your chain. 
 
 To upgrade the genesis file, you can either fetch it from a trusted source or export it locally.
 
