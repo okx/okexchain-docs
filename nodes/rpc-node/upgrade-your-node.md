@@ -7,7 +7,7 @@ This document describes the upgrade procedure of a `okbchaind` full-node to a ne
 First, stop your instance of `okbchaind`. Next, upgrade the software:
 
 ```bash
-cd exchain
+cd okbchain
 git fetch --all && git checkout <new_version>
 make install
 ```
