@@ -7,7 +7,7 @@ This document describes the upgrade procedure of a `okbchaind` full-node to a ne
 First, stop your instance of `okbchaind`. Next, upgrade the software:
 
 ```bash
-cd exchain
+cd okbchain
 git fetch --all && git checkout <new_version>
 make install
 ```
@@ -21,7 +21,7 @@ Your full node has been cleanly upgraded!
 
 ## Upgrade Genesis File
 
-If the new version you are upgrading to has breaking changes, you will have to restart your chain. If it is not breaking, you can skip to [Restart](#restart)
+If the new version you are upgrading to has breaking changes, you will have to restart your chain. 
 
 To upgrade the genesis file, you can either fetch it from a trusted source or export it locally.
 
@@ -37,7 +37,7 @@ cp -f genesis.json new_genesis.json
 mv new_genesis.json genesis.json
 ```
 
-Then, go to the [reset data](#reset-data) section.
+Then, go to the reset data section.
 
 ### Exporting State to a New Genesis Locally
 
@@ -59,7 +59,7 @@ mv new_genesis.json genesis.json
 
 ## Reset Data
 
-If the version <new_version> you are upgrading to is not breaking from the previous one, you should not reset the data. If it is not breaking, you can skip to [Restart](#restart)
+If the version <new_version> you are upgrading to is not breaking from the previous one, you should not reset the data. If it is not breaking, you can skip to Restart section.
 
 If you are running a **validator node** on the mainnet, always be careful when doing `okbchaind unsafe-reset-all`. You should never use this command if you are not switching `chain-id`.
 

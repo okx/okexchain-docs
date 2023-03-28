@@ -27,17 +27,18 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
-Now, We have to deploy our smart contract on OKBC Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
+Now, We have to deploy our smart contract on OKBC Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](/dev/wallet/third-party-apps/metamask.html).
 - Open Metamask and select Custom RPC from the networks dropdown
 - Go to setting page
 ![avatar](../../img/remix-04.png)
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/okbc-api/json-rpc-api.html) * ChainID: okbchaintest-195 * Symbol: OKB * Block Explorer:
-https://www.oklink.com/okbc-test
-- Mainnet * [RPC URLs](/dev/api/okbc-api/json-rpc-api.html) * ChainID: okbchaintest-196 * Symbol: OKB * Block Explorer: 
-https://www.oklink.com/
+- Testnet:   
+    [RPC URLs](/dev/api/okbc-api/json-rpc-api.html)   
+    ChainID: okbchaintest-195   
+    Symbol: OKB   
+    Block Explorer: https://www.oklink.com/okbc-test
 - Go ahead and click save
 - Copy your address from Metamask
 - Head over to [Faucet](http://www.okx.com/okbc/faucet) and request test OKB
