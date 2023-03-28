@@ -98,6 +98,6 @@ A decentralized exchange based on ZK-rollup
 A decentralized exchange based on ZK-rollup 
 - Full-fledged derivatives
 - Special ZK-circuit
-- Mainnet in 2023 Q2
+- Mainnet in 2023 Q4
 
 It is just the beginning and OKB Chain is not stopping here. More details on roadmap will be announced soon!
