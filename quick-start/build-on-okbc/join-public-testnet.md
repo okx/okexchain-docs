@@ -159,24 +159,24 @@ Download the testnet snapshot from [here](/dev/nodes/rpc-node/node-data-snapshot
 
 ### 3. Run docker container
 ```
-docker run -d --name exchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okbchain/fullnode-testnet:latest
+docker run -d --name okbchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okbchain/fullnode-testnet:latest
 ```
 `Notice: ${DATA_DIR} has to be an absolute path`
 
 
 ### 4. View the running log
 ```
-docker logs --tail 100 -f exchain-testnet-fullnode
+docker logs --tail 100 -f okbchain-testnet-fullnode
 ```
 
 ### 5. Stop and restart the fullnode
 - Stop
 ```
-docker stop exchain-testnet-fullnode
+docker stop okbchain-testnet-fullnode
 ```
 - Restart
 ```
-docker start exchain-testnet-fullnode
+docker start okbchain-testnet-fullnode
 ```
 
 ### 5. RPC

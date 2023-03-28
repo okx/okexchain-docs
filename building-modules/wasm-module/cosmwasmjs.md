@@ -25,7 +25,7 @@ Download the OKBC source code and set up the OKBC local testnet through the scri
 
 ```shell
 git clone https://github.com/okx/okbchain.git
-cd exchain/dev
+cd okbchain/dev
 sh ./wasm-test.sh 
 ```
 

@@ -66,7 +66,7 @@ Download the OKBC source code and set up the OKBC local testnet through the scri
 
 ```Bash
 git clone https://github.com/okx/okbchain.git
-cd exchain/dev
+cd okbchain/dev
 sh start.sh
 ```
 With start.sh, there is no need to configure `okbchaincli`
@@ -98,7 +98,7 @@ Use the standard IDE and Rust plugin for developing OKBC wasm contracts
 ### Contract compliation
 1. Pull cw20-base contract code offered by the official directory
 ```Bash
-# You are now in 'exchain/dev' derectory
+# You are now in 'okbchain/dev' derectory
 git clone https://github.com/CosmWasm/cw-plus.git
 cd cw-plus/contracts/cw20-base
 ```

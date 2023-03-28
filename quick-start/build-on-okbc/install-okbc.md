@@ -34,7 +34,7 @@ Next, let's install the latest version of OKBC. Make sure you `git checkout` the
 # testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/okbchain/releases, and use latest pre-release version
 git clone -b <latest-release-tag> https://github.com/okx/okbchain
 export GO111MODULE=on
-cd exchain 
+cd okbchain 
 # mainnet, use make mainnet
 make mainnet
 # testnet, use make testnet
@@ -49,7 +49,7 @@ $env:GO111MODULE="on"
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
 ```
-# github.com/okx/exchain/cmd/okbchaind
+# github.com/okx/okbchain/cmd/okbchaind
 flag provided but not defined: -L
 usage: link [options] main.o
 ...
@@ -74,7 +74,7 @@ $ okbchaincli version --long
 `okbchaincli` for instance should output something similar to:
 
 ```shell
-name: exchain
+name: okbchain
 server_name: okbchaind
 client_name: okbchaincli
 version: v1.0.0
@@ -107,4 +107,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the public testnet](/dev/quick-start/build-on-okbc/join-public-testnet.html) or [create you own testnet](/dev/quick-start/build-on-okbc/deploy-your-own-okbc-testnet.html)
+Now you can [join the public testnet](/dev/quick-start/build-on-okbc/join-public-testnet.html) or [create you own testnet](/dev/quick-start/build-on-okbc/deploy-your-own-okbc-localnet.html)

@@ -1,4 +1,4 @@
-# Deploy Your Own OKBC Testnet
+# Deploy Your Own OKBC Localnet
 
 This document describes 2 ways to setup a network of `okbc` nodes, each serving a different usecase:
 
@@ -75,10 +75,10 @@ Build the `okbchaind` binary (linux) and the `okbchain/fullnode-testnet` docker 
 git clone https://github.com/okx/okbchain.git
 
 # Work from the SDK repo
-cd exchain
+cd okbchain
 
 # Build okbchain/fullnode-testnet image
-make build-docker-exchainnode
+make build-docker-okbchainnode
 ```
 
 ### Run Your Testnet

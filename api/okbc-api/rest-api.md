@@ -929,7 +929,7 @@ None
 		}
 	},
 	"application_version": {
-		"name": "exchain",
+		"name": "okbchain",
 		"server_name": "okbchaind",
 		"client_name": "okbchaincli",
 		"version": "v0.18.6",

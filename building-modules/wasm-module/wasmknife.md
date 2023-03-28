@@ -28,13 +28,13 @@ WasmKnife allows you to:
 
 # Setup
 
-## Download exchain
+## Download okbchain
 
-For testing purposes, we recommend to install and run exchain on your personal computer. 
+For testing purposes, we recommend to install and run okbchain on your personal computer. 
 
-To run local exchain, do the following:
+To run local okbchain, do the following:
 
-1. Clone the exchain repo.
+1. Clone the okbchain repo.
 
 ```
 git clone https://github.com/okx/okbchain.git
@@ -46,7 +46,7 @@ git clone https://github.com/okx/okbchain.git
 cd dev
 ```
 
-3. Spin up an exchain instance with start.sh script.
+3. Spin up an okbchain instance with start.sh script.
 
 ```
 ./start.sh
@@ -129,9 +129,9 @@ To deploy your new my-wasm-dapp smart contract, run the following command in the
  wasmknife deploy my-wasm-dapp --signer test
 ```
 
-In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
+In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the okbchain blockchain and will be assigned as the owner of the project.
 
-You can also specify the network on which you would like to deploy your contract by adding the `--network` flag. If the network is not specified, as is the case in our above example, your contract will be deployed to `localnet` by default. If your deployment command in the prior step resulted in an error, you will need to ensure that localnet is up and running in the background and that you have properly spelled out your contract name and are utilizing the appropriate WasmKnife command. You may also deploy to `mainnet`, the live exchain blockchain, as well as `testnet`, a network similar to mainnet used for testing.
+You can also specify the network on which you would like to deploy your contract by adding the `--network` flag. If the network is not specified, as is the case in our above example, your contract will be deployed to `localnet` by default. If your deployment command in the prior step resulted in an error, you will need to ensure that localnet is up and running in the background and that you have properly spelled out your contract name and are utilizing the appropriate WasmKnife command. You may also deploy to `mainnet`, the live okbchain blockchain, as well as `testnet`, a network similar to mainnet used for testing.
 
 ### Step-by-step Deployment
 
@@ -181,7 +181,7 @@ Then, exit the wasmknife console and deploy the `my-wasm-dapp` smart contract to
 wasmknife deploy my-wasm-dapp --signer test --network testnet
 ```
 
-After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by wasmknife's utility functions. An example of `refs.json` can be found below:
+After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any okbchain network. This information is utilized by wasmknife's utility functions. An example of `refs.json` can be found below:
 
 ```json
 {
@@ -326,7 +326,7 @@ Now instead of running `wasmknife task:run deploy_counter` you can run `wasmknif
 
 # Migrating CosmWasm Contracts
 
-On Exchain, it is possible to initialize a contract as migratable. This functionality allows the administrator to upload a new version of the contract and then send a migrate message to move to the new code. Contracts that have been deployed before implementing the following changes will not be able to be migrated and implemented changes will only be realized when redeploying the contract.
+On OKB Chain, it is possible to initialize a contract as migratable. This functionality allows the administrator to upload a new version of the contract and then send a migrate message to move to the new code. Contracts that have been deployed before implementing the following changes will not be able to be migrated and implemented changes will only be realized when redeploying the contract.
 
 ## Adding MigrateMsg to the Contract
 

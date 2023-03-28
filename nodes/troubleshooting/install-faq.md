@@ -86,7 +86,7 @@ $ docker exec docker_container_name okbchaind version --long
 ```
 For example, the commitID of v0.16.8.3 is ee5068ccb54b464aeaff7eef69fb2e8611551fed.
 ```shell script
-name: exchain
+name: okbchain
 server_name: okbchaind
 client_name: okbchaincli
 version: v1.0.0

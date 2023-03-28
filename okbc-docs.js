@@ -21,7 +21,7 @@ module.exports = [
                 collapsable: false,
                 children: [
                     'dev/quick-start/build-on-okbc/install-okbc',
-                    'dev/quick-start/build-on-okbc/deploy-your-own-okbc-testnet',
+                    'dev/quick-start/build-on-okbc/deploy-your-own-okbc-localnet',
                     'dev/quick-start/build-on-okbc/join-public-testnet',
                 ],
             },
