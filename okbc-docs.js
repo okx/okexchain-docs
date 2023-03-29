@@ -191,6 +191,16 @@ module.exports = [
                     'dev/smart-contracts/contract-verification/verify-contract',
                 ]
             },
+            {
+                title: 'OIP STANDARD',
+                collapsable: false,
+                children: [
+                    'dev/smart-contracts/oip-standard/oip20',
+                    'dev/smart-contracts/oip-standard/oip721',
+                    'dev/smart-contracts/oip-standard/oip1155',
+                    'dev/smart-contracts/oip-standard/oip165',
+                ]
+            },
         ]
     },
     {
