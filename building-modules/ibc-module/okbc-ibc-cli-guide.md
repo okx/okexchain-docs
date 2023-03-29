@@ -2,7 +2,7 @@
 
 ## Background
 
-​     This paper aims to help IBC developers/ordinary users learn to use okbchaincli for IBC related operations in a quick and efficient way.
+This paper aims to help IBC developers/ordinary users learn to use okbchaincli for IBC related operations in a quick and efficient way.
 
 ## Preconditions
 
