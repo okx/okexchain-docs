@@ -6,7 +6,7 @@
 
 ## Preconditions
 
-&nbsp;&nbsp;&nbsp;&nbsp;IBC is a cross-chain operation, which means that if you want to test locally, you need to have cli binaries of other chains (such as gaia) and a relayer.
+IBC is a cross-chain operation, which means that if you want to test locally, you need to have cli binaries of other chains (such as gaia) and a relayer.
 
 - [Example of relayer in Go version](https://github.com/cosmos/relayer)
 - [OKBC binary](https://github.com/okx/okbchain/releases/tag/v1.6.4) (suggest using the newest version, size of version needs to be bigger than v1.6.1)
@@ -61,7 +61,7 @@ the IBC port is transfer
 
 #### Waiting for relayer
 
-&nbsp;&nbsp;&nbsp;&nbsp; For an IBC cross-chain connection that is already online (such as OKBC<=>Cosmos), it usually takes about 1-2 minutes for the corresponding transfer token to be relayed to the opposite chain. At this time, the blockchain explorer provided by the corresponding chain can be used to view address balance information, or view the balance information through the binary script of the corresponding chain.
+For an IBC cross-chain connection that is already online (such as OKBC<=>Cosmos), it usually takes about 1-2 minutes for the corresponding transfer token to be relayed to the opposite chain. At this time, the blockchain explorer provided by the corresponding chain can be used to view address balance information, or view the balance information through the binary script of the corresponding chain.
 
 ## How IBC developers can establish cross-chain connections with OKBC
 
