@@ -1,4 +1,4 @@
-# OKBChain Client
+# OKB Chain Client
 
 ## OKBC CLI
 

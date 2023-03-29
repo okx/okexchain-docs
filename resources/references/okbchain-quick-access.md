@@ -7,7 +7,7 @@
 | :------------ | :------------ |
 | Network Name  | OKB Chain Testnet  |
 | RPC URL  |  https://okbtestrpc.okbchain.org |
-| Chain ID  |  okbchaintest-195 |
+| Chain ID  |  195 |
 | Currency Symbol  | OKB  |
 | Block Explorer URL | https://www.oklink.com/cn/okbc-test  |
 

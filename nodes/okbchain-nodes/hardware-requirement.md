@@ -15,7 +15,7 @@ This is the minimum hardware configuration required to engage with OKB Chain as 
 
 ## Recommendations on Running Nodes
 ### Background
-OOKBC nodes use level db to store block data and state data. Frequently read disks will require a higher requirement for disk performance.
+OKBC nodes use level db to store block data and state data. Frequently read disks will require a higher requirement for disk performance.
 ### Problems
 Using the ordinary cloud disk of Alibaba Cloud will cause the node to lag behind in synchronizing blocks.
 ### Solutions

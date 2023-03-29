@@ -8,7 +8,7 @@ Validator nodes on OKB Chain are the authorised node operators of the OKB Chain 
 Only authorised nodes are selected as the validator node for OKB Chain
 ### RPC Node
 
-RPC nodes are RPC service providers that provide public RPC endpoints for developers to use. OKB Chain currently maintains a public RPC endpoint http://rpc.mainnet.near.org/ that is free for everyone to use. However, any participants are encouraged to run their own RPC node and offer RPC services.
+RPC nodes are RPC service providers that provide public RPC endpoints for developers to use. OKB Chain currently maintains a public RPC endpoint https://okbtestrpc.okbchain.org/ that is free for everyone to use. However, any participants are encouraged to run their own RPC node and offer RPC services.
 For more information, please check out the Community section in the documentation and reach out to us on [Discord](https://discord.gg/dbnUqPguNw) and on [Telegram](https://t.me/okbnetwork).
 
 ### Why run a Node?

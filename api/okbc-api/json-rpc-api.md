@@ -12,7 +12,7 @@ https://okbtestrpc.okbchain.org/
 
 ## 3rd Party Provider
 
--
+Currently there is no 3rd party provider for OKBC RPC. However, you can set up your RPC node based on our [hardware requirement](/dev/nodes/okbchain-nodes/hardware-requirement.html).
 
 ## Pre-requisite Readings
 
