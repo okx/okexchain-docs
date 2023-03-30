@@ -108,7 +108,7 @@ Now it is time to upgrade the software:
 
 ```bash
 git clone https://github.com/okx/okbchain.git
-cd exchain
+cd okbchain
 git fetch --all && git checkout dev
 make install
 # start your node with the new version
