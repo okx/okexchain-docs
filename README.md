@@ -47,6 +47,35 @@ Have questions, comments, or ideas? Feel free to participate and to become part 
 - [OKC Validator Chat](https://t.me/joinchat/HuUCNktBLftzEY1fZPStkw)
 - [OKC Developer Chat](https://t.me/okchaintech)
 
+## Contributing to this documentation
+
+As an open source project we appreciate contributions from our community. If you see any errors or ways to improve these docs please open an issue or Pull Request.
+
+This documentation can be run locally using `vuepress`:
+
+1. Fork this repo.
+2. Create and navigate into a new directory in your local dev environment:  `mkdir okc-docs`
+3. Install vuepress globally: `npm install -g vuepress`
+4. Create a new vuepress project setup using node v16: `npm init && npm install vue-template-compiler`
+5. Clone your fork into the directory and rename it `dev`: `gh repo clone your-github-name/okexchain-docs && mv okexchain-docs dev`
+6. Create a .vuepress dir and config.js in the top level directory: `mkdir .vuepress && touch .vuepress/config.js`
+
+The contents of `config.js` will be:
+
+```javascript
+const okcDocs = require('./okc-docs');
+
+module.exports = {
+  title: 'OKC Documentation',
+  description: 'A documentation site for OKC',
+  themeConfig: {
+    sidebar: okcDocs
+  }
+};
+```
+
+You can then run the project on localhost:8080 with the `vuepress dev` command. The formatting and stylings will be slightly different in standard vuepress but the content will be identical.
+
 ## Version
 
 The version of the program relating to this documentation is: 0.10
