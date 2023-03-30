@@ -10,7 +10,7 @@
 
 Note 1: Be sure to compile with **make mainnet**  
 Note 2: latest_version can be viewed [here](https://github.com/okx/exchain/releases/tag/v1.6.7.2 "here")  
-Note 3: If this is the first time to run exchaind, we should install rocksdb first. OKC team has provided a command to `make rocksdb` to help. You can try it in the exchain folder.  
+Note 3: If this is the first time to run exchaind, we should install rocksdb first. OKTC team has provided a command to `make rocksdb` to help. You can try it in the exchain folder.  
 Note 4: If you encounter problems in the process of compiling rocksdb, please refer to [this link](https://forum.okt.club/d/267-rocksdb "this link")
 
 ## 2. Using exchaind and genesis.json file
@@ -23,7 +23,7 @@ Note 4: If you encounter problems in the process of compiling rocksdb, please re
 
 Note 1: Be sure to compile with **make mainnet**  
 Note 2: latest_version can be viewed [here](https://github.com/okx/exchain/releases/tag/v1.6.7.2 "here")  
-Note 3: If this is the first time to run exchaind, we should install rocksdb first. OKC team has provided a command to `make rocksdb` to help. You can try it in the exchain folder.  
+Note 3: If this is the first time to run exchaind, we should install rocksdb first. OKTC team has provided a command to `make rocksdb` to help. You can try it in the exchain folder.  
 Note 4: If you encounter problems in the process of compiling rocksdb, please refer to [this link](https://forum.okt.club/d/267-rocksdb "this link")
 
 
@@ -74,7 +74,7 @@ After executing the exit command, if the following records appear in the log, it
     rm -rf ${EXCHAIND_PATH}/data
     cd ${EXCHAIND_PATH}
     # This image uses rocksdb data, so download the rocksdb snapshot corresponding to the mainnet.
-    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
+    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/oktc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
     tar -zxvf mainnet-$version-$date-$height-rocksdb.tar.gz
     
     # 3. download the docker image

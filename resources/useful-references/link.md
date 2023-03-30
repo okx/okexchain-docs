@@ -2,7 +2,7 @@
 
 ## Mainnet
 
-[OKC Source Code](https://github.com/okx/exchain)
+[OKTC Source Code](https://github.com/okx/exchain)
 
 ## Testnet
 
@@ -10,7 +10,7 @@
 
 [Testnet okt](https://www.okex.com/activities/pro/drawdex)
 
-[Testnet explorer](https://www.oklink.com/okc-test)
+[Testnet explorer](https://www.oklink.com/oktc-test)
 
 ## Cosmos
 

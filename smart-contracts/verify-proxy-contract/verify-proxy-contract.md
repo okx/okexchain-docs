@@ -24,7 +24,7 @@ $ truffle-flattener KIP20UpgradeableProxy.sol > KIP20UpgradeableProxyFlattened.s
 - Select “Injected Web3”
 - Select “KIP20TokenImplementation” contract
 - Click the “Deploy” button and Metamask will pop up
-- Click the “confirm” button to sign and broadcast the transaction to OKC.
+- Click the “confirm” button to sign and broadcast the transaction to OKTC.
 - Then, you need to initialize the token: fill in all the parameters and click on “transact”
 ![avatar](../../img/verify-proxy-contract-01.png)
 > Note: Owner should be the address who send the deploy transaction before.
@@ -45,7 +45,7 @@ $ truffle-flattener KIP20UpgradeableProxy.sol > KIP20UpgradeableProxyFlattened.s
 Logic: The address of KIP20Implementation contract Admin: admin cannot be KIP20 token owner
 Data: use the initialization data you saved before
 - Click the “Deploy” button and Metamask will pop up
-- Click the “confirm” button to sign and broadcast transaction to OKC.
+- Click the “confirm” button to sign and broadcast transaction to OKTC.
 ## Verify Proxy Contract on OKLink
 Note: The way to verify the KIP20TokenImplementation contract is the same as before.
 - Go to your contact page and click on “Verify and Publish”

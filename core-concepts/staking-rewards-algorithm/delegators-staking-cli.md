@@ -8,7 +8,7 @@ This guide explains how to use command-line interface (CLI) commands to earn sta
 
 ## What is staking?
 
-OKC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the command-line interface (CLI) tool to stake OKT and earn voting rights, and also have the option to give their votes to their desired validator node(s) for access to dividend rewards on the chain.
+OKTC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the command-line interface (CLI) tool to stake OKT and earn voting rights, and also have the option to give their votes to their desired validator node(s) for access to dividend rewards on the chain.
 
 
 
