@@ -159,5 +159,5 @@ docker stop okbchain-testnet-fullnode
 docker start okbchain-testnet-fullnode
 ```
 
-### 5. RPC
+### 6. RPC
 When docker gets to the latest block, local RPC can be used：`http://localhost:8545`
