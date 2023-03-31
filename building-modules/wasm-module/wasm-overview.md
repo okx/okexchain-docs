@@ -14,7 +14,7 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
 
 ### Wasm in OKBC
    This architecture diagram mainly introduces the position of wasm in the entire OKBC system. The bottom layer is Tendermint Core, on top of that is Cosmo's native module layer, then OKBC's custom module layer, and the top layer is the API interface layer. Wasm is a module in OKBC's custom module layer.
-   ![](../../img/wasm-architecture.png)
+   ![](../../img/wasm-architecture.jpeg)
 
 ### Wasm system ecosystem
    CosmoWasm is a Cosmos SDK module plugin, this project is responsible for helping Cosmos SDK support wasm virtual machine. CosmWasm is implemented in Rust and because the Go code runtime causes the contract to enlarge, the contract is mainly written with Rust then compiled to wasm bytecode. In order to facilitate the interaction between the contract and virtual machine, the virtual machine also uses Rust as a fundamental database. In its entirety, CosmWasm's ecology is mainly divided into the following 3 parts:
@@ -29,7 +29,7 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
    + [cosmwasm-vm](https://github.com/CosmWasm/cosmwasm/tree/main/packages/vm): Rust is based on wasmer engine virtual machine, used for fulfilling the contract execution needs of the host environment, calculating gas consumption; it is the core module for executing wasm contracts.
 
 The relationship of different parts and the internal framework of CosmWasm is as shown in the diagram below:
-![](../../img/wasm-module-architecture.png)
+![](../../img/wasm-module-architecture.jpeg)
 ### More information  
    For more information, please refer to [architecture](https://docs.cosmwasm.com/docs/1.0/architecture/multichain).
 
