@@ -19,7 +19,7 @@ A Super Scalable, Compatible L1 Blockchain OKX Chain (OKC) is an EVM-compatible 
 
 ## The OKT
 
-Do you have OKT tokens? With OKT, you have the unique ability to contribute to the security and governance of the OKC. Delegate your OKT to one or more of the 100 validators on the OKC blockchain to earn more OKT through Proof-of-Stake. You can also vote with your OKT to influence the future of the OKC through on-chain governance proposals.
+Do you have OKT tokens? With OKT, you have the unique ability to contribute to the security and governance of the OKC. Delegate your OKT to one or more of the 30 validators on the OKC blockchain to earn more OKT through Proof-of-Stake. You can also vote with your OKT to influence the future of the OKC through on-chain governance proposals.
 
 Learn more about [being a delegator](./delegators/delegators-faq.html).
 
