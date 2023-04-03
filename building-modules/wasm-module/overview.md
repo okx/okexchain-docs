@@ -29,7 +29,7 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
    + [cosmwasm-vm](https://github.com/CosmWasm/cosmwasm/tree/main/packages/vm): Rust is based on wasmer engine virtual machine, used for fulfilling the contract execution needs of the host environment, calculating gas consumption; it is the core module for executing wasm contracts.
 
 The relationship of different parts and the internal framework of CosmWasm is as shown in the diagram below:
-![](../../img/wasm-module-architecture.png)
+![](../../img/wasm-module-architecture.jpeg)
 ### More information  
    For more information, please refer to [architecture](https://docs.cosmwasm.com/docs/1.0/architecture/multichain).
 
