@@ -1,16 +1,18 @@
 # Basic Concepts
 
-## Types of OKC nodes
+## Types of OKTC nodes
 
 ### Full node
 
-A Full Node in Tendermint is a type of node that maintains a complete and up-to-date copy of the blockchain ledger. It validates all transactions, executes smart contracts and is capable of participating in the consensus process. Full nodes play a critical role in ensuring the security and resilience of the blockchain network by independently verifying all transactions and blocks. They provide other applications and nodes with access to the blockchain by providing necessary data and information. Full nodes can also interact with other nodes in the network to broadcast transactions and participate in the consensus process. In comparison with Light Nodes, Full Nodes carry more network and storage resources, but they provide a high level of decentralization and security.
+A Full Node in Tendermint maintains up-to-date copy of the blockchain ledger's state. It validates all transactions, executes smart contracts and is capable of delegating work for the Proof of Stake Consensus. Full nodes play a critical role in ensuring the security & resilience of the network by independently verifying blocks and transactions. They serve as data sources for other blockchain applications to use and operate in the OKTC ecosystem. In comparison with Light Nodes, Full Nodes carry more network and storage resources, but they improve decentralization and keep the validators honest.
+
+Not your keys, not your coins. And if you're not running a node yourself, you're trusting someone else's node.
 
 ### Validator
 
-A Validator in Tendermint is a node that participates in the consensus process of a Proof-of-Stake blockchain network. Validators are responsible for verifying and validating transactions, proposing new blocks to the network, and voting on proposed blocks. Validators ensure the security and consistency of the blockchain by providing their computing power and staking a certain amount of cryptocurrency as collateral. In return for their services, validators are rewarded with transaction fees and newly minted tokens. Validators play a crucial role in maintaining the integrity and decentralization of Tendermint-based blockchain networks.
+A Validator in Tendermint participates in the Proof-of-Stake consensus. Validators are full nodes who additionally choose to participate in consensus beyond being responsible for verifying and validating transactions. They propose new blocks, vote on proposed blocks, and provide cryptographic proofs used for slashing bad actors who attempt to break consensus or otherwise attack the network. Validators ensure the security and consistency of the blockchain by providing their computing power and staking a certain amount of cryptocurrency as collateral. In return for their services, validators are rewarded with transaction fees and newly minted tokens. Validators play a crucial role in maintaining the integrity and decentralization of Tendermint-based blockchain networks.
 
-## Types of OKC users
+## Types of OKTC users
 
 ### Normal user
 
@@ -47,21 +49,18 @@ The candidate proposer mechanism is an essential part of Tendermint's consensus 
 
 A proposer has two main duties:
 
--   Able to continuously run the correct version of the software:
-    Proposers need to ensure that their servers are always online and
-    their private keys are not compromised.
--   Actively participate in the governance: Proposers are required to
-    vote on each proposal.
+- Able to continuously run the correct version of the software: Proposers need to ensure that their servers are always online and their private keys are not compromised.
+- Actively participate in the governance: Proposers are required to vote on each proposal.
 
 In addition, proposers will be active members of the community. They
 should always be in sync with the current state of the ecosystem to
 easily adapt to any changes.
 
+## OKTC Consensus
 
-## OKC Consensus
-OKC Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
+OKT Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
 
-![](../../img/core-concept-1.png "")
+![ABCI](../../img/core-concept-1.png "")
 
 Unlike other blockchain and consensus solutions, which come pre-packaged with built-in state machines (like a fancy key-value store, or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in whatever programming language and development environment is right for them.
 
