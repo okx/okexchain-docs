@@ -36,7 +36,7 @@ Now, We have to deploy our smart contract on OKBC Network. For that, we have to 
 ![avatar](../../img/remix-05.png)
 - Testnet:   
     [RPC URLs](/dev/api/okbc-api/json-rpc-api.html)   
-    ChainID: okbchaintest-195   
+    ChainID: 195   
     Symbol: OKB   
     Block Explorer: https://www.oklink.com/okbc-test
 - Go ahead and click save
