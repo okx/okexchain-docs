@@ -360,7 +360,7 @@ Receive an exact amount of output tokens for as few input tokens as possible.
 // SPDX-License-Identifier: MIT
 pragma solidity =0.6.12;
 
-interface IOKTCSwapRouter01 {
+interface IOKCSwapRouter01 {
     function factory() external pure returns (address);
     function WOKT() external pure returns (address);
     function pairCodeHash() external pure returns (bytes32);
@@ -458,9 +458,9 @@ interface IOKTCSwapRouter01 {
 // SPDX-License-Identifier: MIT
 pragma solidity =0.6.12;
 
-import './IOKTCSwapRouter01.sol';
+import './IOKCSwapRouter01.sol';
 
-interface IOKTCSwapRouter02 is IOKTCSwapRouter01 {
+interface IOKCSwapRouter02 is IOKCSwapRouter01 {
     function removeLiquidityOKTSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
