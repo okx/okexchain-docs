@@ -160,7 +160,7 @@ module.exports = [
                     'dev/building-modules/wasm-module/instruction-manual',
                     'dev/building-modules/wasm-module/vmbridge',
                     'dev/building-modules/wasm-module/cosmwasmjs',
-                    'dev/building-modules/wasm-module/wasmknife'
+                    'dev/building-modules/wasm-module/bytecraft'
                 ]
             },
             {
