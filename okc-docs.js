@@ -164,7 +164,7 @@
                     "dev/wasm/instruction-manual",
                     "dev/wasm/vmbridge",
                     "dev/wasm/cosmwasmjs",
-		    "dev/wasm/wasmknife"
+		    "dev/wasm/bytecraft"
                 ]
             },
             {
