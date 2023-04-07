@@ -1,8 +1,5 @@
 # ByteCraft
-<p align="center">
-  <b>ByteCraft</b> - A Wasm development environment for seamless smart contract development.
-</p>
-
+A Wasm development environment for seamless smart contract development.
 
 ---
 
@@ -13,29 +10,11 @@ ByteCraft allows you to:
 
 ## Bytecraft initial setup
 
-### Download exchain
+### Install docker
 
-For testing purposes, we recommend to install and run exchain on your personal computer. 
+For building and optimizing WASM smart contracts, we recommend to install docker on your personal computer. 
 
-To run local exchain, do the following:
-
-1. Clone the exchain repo.
-
-```
-git clone https://github.com/okx/exchain.git
-```
-
-2. Navigate to the dev directory.
-
-```
-cd dev
-```
-
-3. Spin up an exchain instance with start.sh script.
-
-```
-./start.sh
-```
+we can download docker desktop from [here](https://www.docker.com/), then following official install guideline to install it.
 
 ### Setup Rust
 
@@ -63,26 +42,30 @@ cargo install cargo-run-script
 
 To run ByteCraft, you will need to install version 16 of Node.js and download Node Package Manager (npm). It is recommend that you install [Node.js v16 (LTS)](https://nodejs.org/en/download/). If you download the LTS version of Node.js v16, npm will be automatically installed along with your download.
 
-## Use Bytecraft with OKTC testnet
+### Install Bytecraft
 
+Now that you have completed the initial setup, you can install bytecraft using the procedure described below.
 
-### Getting Started
-
-Now that you have completed the initial setup, generate your first smart contract using the procedure described below.
-
-1. Install the bytecraft package globally.
+Install the bytecraft package globally.
 
 ```sh
 npm install -g @okexchain/bytecraft
 ```
 
-2. Generate your smart contract templates.
+## Use Bytecraft with OKTC testnet
+
+
+### Getting Started
+
+Now that you have installed bytecraft,  generate your first smart contract using the procedure described below.
+
+1. Generate your smart contract templates with `bytecraft new` command.
 
 ```sh
 bytecraft new my-wasm-dapp
 ```
 
-3. After the project is generated and all necessary Node dependencies are installed, navigate to the new `my-wasm-dapp` directory to interact with your app.
+2. After the project is generated and all necessary Node dependencies are installed, navigate to the new `my-wasm-dapp` directory to interact with your app.
 
 ```sh
 cd my-wasm-dapp
@@ -111,7 +94,7 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file, There predefined three networks for you:
+As you can see the `config.json` file in the project, There predefined three networks for you:
 
 ```json
 {
@@ -146,7 +129,7 @@ As you can see the `config.json` file, There predefined three networks for you:
 
 ```
 
-To deploy your new my-wasm-dapp smart contract, run the following command in the terminal with extral flag `--network testnet`.
+To deploy your new my-wasm-dapp smart contract on OKTC testnet, run the following command in the terminal with extral flag `--network testnet`.
 
 ```sh
  bytecraft deploy my-wasm-dapp --signer test --network testnet
@@ -154,7 +137,7 @@ To deploy your new my-wasm-dapp smart contract, run the following command in the
 
 In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
 
-You can also specify the network on which you would like to deploy your contract by adding the `--network` flag. If the network is not specified, as is the case in our above example, your contract will be deployed to `localnet` by default. If your deployment command in the prior step resulted in an error, you will need to ensure that localnet is up and running in the background and that you have properly spelled out your contract name and are utilizing the appropriate ByteCraft command. You may also deploy to `mainnet`, the live exchain blockchain, as well as `testnet`, a network similar to mainnet used for testing.
+The network is specified with `testnet`. your  contract will be deployed to OKTC `testnet`
 
 ### Deploying on OKTC Testnet
 
@@ -184,7 +167,7 @@ You can retrieve the wallet address associated with the `alice` account by execu
 ```sh
 bytecraft console 
 
-bytecraft > wallets.alice.accAddress
+bytecraft > wallets.alice.address
 'ex1g0xzwvmm7mwxck5fw9y8pygq98gep9lx6m2l6e'
 ```
 
@@ -224,7 +207,7 @@ Once you have successfully deployed your project, you can interact with the depl
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
 ```sh
-bytecraft console --network testnet
+bytecraft console --signer test --network testnet
 bytecraft > await lib.getCount()
 { count: 0 }
 bytecraft > await lib.increment()
@@ -255,7 +238,7 @@ task(async (env: Env) => {
 To run the example task shown above, which is located in the `tasks/example-with-lib.js` file, run the following command in the terminal.
 
 ```sh
-bytecraft task:run example-with-lib --network testnet
+bytecraft task:run example-with-lib --signer test --network testnet
 ```
 
 In order to create a new task, run the following command replacing `<task-name>` with the desired name for your new task.
@@ -327,30 +310,23 @@ It is possible to tell ByteCraft to use a custom deploy task instead of the defa
 }
 ```
 
-Now instead of running `bytecraft task:run deploy_counter --network testnet` you can run `bytecraft deploy counter --network testnet`.
+Now instead of running `bytecraft task:run deploy_counter --signer test --network testnet` you can run `bytecraft deploy counter --signer test --network testnet`.
 
 ## Use Bytecraft with OKTC mainnet
 
-
 ### Getting Started
 
-Now that you have completed the initial setup, generate your first smart contract using the procedure described below.
+Now that you have installed bytecraft,  generate your first smart contract using the procedure described below.
 
-1. Install the bytecraft package globally.
+1. Generate your smart contract templates with `bytecraft new` command.
 
-```sh
-npm install -g @okexchain/bytecraft
 ```
-
-2. Generate your smart contract templates.
-
-```sh
 bytecraft new my-wasm-dapp
 ```
 
-3. After the project is generated and all necessary Node dependencies are installed, navigate to the new `my-wasm-dapp` directory to interact with your app.
+1. After the project is generated and all necessary Node dependencies are installed, navigate to the new `my-wasm-dapp` directory to interact with your app.
 
-```sh
+```
 cd my-wasm-dapp
 ```
 
@@ -361,13 +337,13 @@ The `bytecraft new` command generates a project that contains a template smart c
 ```
 .
 ├── contracts              # the smart contract directory
-│   ├── my-wasm-dapp      # template smart contract
-│   └── ...
+│   ├── my-wasm-dapp      # template smart contract
+│   └── ...
 ├── lib                    # predefined task and console functions
 ├── tasks                  # predefined tasks
-├── keys.js        				# keys for signing transactions
-├── config.json    				# config for connections and contract deployments
-└── refs.json      				# deployed code and contract references
+├── keys.js               # keys for signing transactions
+├── config.json           # config for connections and contract deployments
+└── refs.json             # deployed code and contract references
 ```
 
 ### Deployment Contract
@@ -377,9 +353,9 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file, There predefined three network for you:
+As you can see the `config.json` file in the project, There predefined three networks for you:
 
-```json
+```
 {
   "_global": {
     "_base": {
@@ -412,23 +388,23 @@ As you can see the `config.json` file, There predefined three network for you:
 
 ```
 
-To deploy your new my-wasm-dapp smart contract, run the following command in the terminal with extral flag `--network mainnet`.
+To deploy your new my-wasm-dapp smart contract on OKTC mainnet, run the following command in the terminal with extral flag `--network mainnet`.
 
-```sh
+```
  bytecraft deploy my-wasm-dapp --signer test --network mainnet
 ```
 
 In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
 
-You can also specify the network on which you would like to deploy your contract by adding the `--network` flag. If the network is not specified, as is the case in our above example, your contract will be deployed to `localnet` by default. If your deployment command in the prior step resulted in an error, you will need to ensure that localnet is up and running in the background and that you have properly spelled out your contract name and are utilizing the appropriate ByteCraft command. You may also deploy to `mainnet`, the live exchain blockchain, as well as `testnet`, a network similar to mainnet used for testing.
+The network is specified with `mainnet`. your  contract will be deployed to OKTC `mainnet`
 
-### Deploying on OKTC Mainnet
+### Deploying on OKTC Testnet
 
 You should  add a personal account to the `keys.js` file by adding the account name as well as its corresponding private key. You can then use that account as the signer specifying the account name after the `--signer` flag in the `bytecraft deploy` command.
 
-<sub>**Warning:** _Utilizing a personal account for deployment requires the use of a private key or mnemonic. These are private keys that are generated upon the creation of your personal wallet. Saving or utilizing these keys on your personal computer may expose them to malicious actors who could gain access to your personal wallet if they are able to obtain them. You can create a wallet solely for testing purposes to eliminate risk. Alternatively, you can store your private keys as secret environment variables which you can then reference utilizing `process.env.SECRET_VAR` in `keys.json`. Use your private key or mnemonic at your own discretion._</sub>
+**Warning:** *Utilizing a personal account for deployment requires the use of a private key or mnemonic. These are private keys that are generated upon the creation of your personal wallet. Saving or utilizing these keys on your personal computer may expose them to malicious actors who could gain access to your personal wallet if they are able to obtain them. You can create a wallet solely for testing purposes to eliminate risk. Alternatively, you can store your private keys as secret environment variables which you can then reference utilizing `process.env.SECRET_VAR` in `keys.json`. Use your private key or mnemonic at your own discretion.*
 
-```js
+```
 // can use `process.env.SECRET_MNEMONIC` or `process.env.SECRET_PRIV_KEY`
 // to populate secret in CI environment instead of hardcoding
 
@@ -447,22 +423,22 @@ Prior to deploying your contract, ensure that your signer wallet contains the fu
 
 You can retrieve the wallet address associated with the `alice` account by executing the `bytecraft console` command in your terminal while in your project directory.
 
-```sh
-bytecraft console --network mainnet
+```
+bytecraft console 
 
-bytecraft > wallets.alice.accAddress
+bytecraft > wallets.alice.address
 'ex1g0xzwvmm7mwxck5fw9y8pygq98gep9lx6m2l6e'
 ```
 
 Then, exit the bytecraft console and deploy the `my-wasm-dapp` smart contract to testnet with the `test` account as the signer.
 
-```sh
+```
 bytecraft deploy my-wasm-dapp --signer test --network mainnet
 ```
 
 After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
 
-```json
+```
 {
   "localnet": {
     "counter": {
@@ -483,16 +459,14 @@ After deployment, the `refs.json` file will be updated in the project directory.
 }
 ```
 
-
-
 ### Run Contract Functions with Bytecraft
 
 Once you have successfully deployed your project, you can interact with the deployed contract and the underlying blockchain by utilizing functions defined in the `lib/index.js` file. You may also create your own abstractions in this file for querying or executing transactions. 
 
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
-```sh
-bytecraft console
+```
+bytecraft console --signer test --network mainnet
 bytecraft > await lib.getCount()
 { count: 0 }
 bytecraft > await lib.increment()
@@ -500,17 +474,11 @@ bytecraft > await lib.getCount()
 { count: 1 }
 ```
 
-You may also specify which network you would like to interact with by utilizing the `--network` flag with the `bytecraft console` command.
-
-```
-bytecraft console --network NETWORK
-```
-
 ### Creating Tasks
 
 You can utilize the functions available inside of the `lib/index.js` file to create tasks. Tasks are utilized in order to automate the execution of sequential functions or commands. An example task is provided for you in the `tasks/example-with-lib.js` file in your project directory.
 
-```js
+```
 // tasks/example-with-lib.js
 
 import { Env, task } from "@okexchain/bytecraft";
@@ -528,13 +496,13 @@ task(async (env: Env) => {
 
 To run the example task shown above, which is located in the `tasks/example-with-lib.js` file, run the following command in the terminal.
 
-```sh
-bytecraft task:run example-with-lib --network mainnet
+```
+bytecraft task:run example-with-lib --signer test --network mainnet
 ```
 
 In order to create a new task, run the following command replacing `<task-name>` with the desired name for your new task.
 
-```sh
+```
 bytecraft task:new <task-name>
 ```
 
@@ -542,7 +510,7 @@ bytecraft task:new <task-name>
 
 It is possible to deploy and instantiate contracts from tasks. This can be useful for multi-contract, or multi-stage deployments. 
 
-```js
+```
 const { task } = require("@okexchain/bytecraft");
 
 task(async ({ defaultWallet, client, deploy }) => {
@@ -593,7 +561,7 @@ task(async ({ defaultWallet, client, deploy }) => {
 
 It is possible to tell ByteCraft to use a custom deploy task instead of the default deploy process. To do this, add the following to the `_global` section in `config.json`:
 
-```json
+```
 "contracts": {
   "counter": {
     "deployTask": "deploy_counter"
@@ -601,11 +569,11 @@ It is possible to tell ByteCraft to use a custom deploy task instead of the defa
 }
 ```
 
-Now instead of running `bytecraft task:run deploy_counter --network mainnet` you can run `bytecraft deploy counter --netowrk mainnet`.
+Now instead of running `bytecraft task:run deploy_counter --signer test --network mainnet` you can run `bytecraft deploy counter --signer test --network mainnet`.
 
 ## Migrating CosmWasm Contracts
 
-On Exchain, it is possible to initialize a contract as migratable. This functionality allows the administrator to upload a new version of the contract and then send a migrate message to move to the new code. Contracts that have been deployed before implementing the following changes will not be able to be migrated and implemented changes will only be realized when redeploying the contract.
+On OKTC, it is possible to initialize a contract as migratable. This functionality allows the administrator to upload a new version of the contract and then send a migrate message to move to the new code. Contracts that have been deployed before implementing the following changes will not be able to be migrated and implemented changes will only be realized when redeploying the contract.
 
 ### Adding MigrateMsg to the Contract
 
@@ -635,7 +603,7 @@ pub fn migrate(_deps: DepsMut, _env: Env, _msg: MigrateMsg) -> StdResult<Respons
 
 ### Migrating the Contract
 
-Adding the MigrateMsg to the smart contract allows the contract's administrator to migrate the contract in the future.  When we deploy our contract, the wallet address of the signer will be automatically designated as the contract administrator.  In the following command, the contract is deployed with the preconfigured Localnet `test1` wallet as the signer and administrator of our counter contract. 
+Adding the MigrateMsg to the smart contract allows the contract's administrator to migrate the contract in the future.  When we deploy our contract, the wallet address of the signer will be automatically designated as the contract administrator.  In the following command, the contract is deployed with the preconfigured Localnet `test` wallet as the signer and administrator of our counter contract. 
 
 ```sh
 bytecraft deploy counter --signer test
@@ -660,7 +628,7 @@ Bytecraft console provide a javascript repl environment, you can interact with t
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
 ```sh
-bytecraft console --network testnet
+bytecraft console --signer test --network testnet
 bytecraft > await lib.getCount()
 { count: 0 }
 bytecraft > await lib.increment()
@@ -814,7 +782,7 @@ USAGE
   $ bytecraft contract:new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKX oktc <core@okg.com>]
+  --authors=<value>  [default: OKX okc <core@okg.com>]
   --path=<value>     [default: contracts] path to keep the contracts
   --version=<value>  [default: 1.0]
 
@@ -948,7 +916,7 @@ USAGE
   $ bytecraft new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKTC <oktc@okg.com>]
+  --authors=<value>  [default: OKC <okc@okg.com>]
   --path=<value>     [default: .] Path to create the workspace
   --version=<value>  [default: 1.0]
 
