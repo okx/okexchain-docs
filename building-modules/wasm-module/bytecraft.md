@@ -814,7 +814,7 @@ USAGE
   $ bytecraft contract:new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKX okc <core@okg.com>]
+  --authors=<value>  [default: OKX oktc <core@okg.com>]
   --path=<value>     [default: contracts] path to keep the contracts
   --version=<value>  [default: 1.0]
 
@@ -948,7 +948,7 @@ USAGE
   $ bytecraft new [NAME] [--path <value>] [--version <value>] [--authors <value>]
 
 FLAGS
-  --authors=<value>  [default: OKC <okc@okg.com>]
+  --authors=<value>  [default: OKTC <oktc@okg.com>]
   --path=<value>     [default: .] Path to create the workspace
   --version=<value>  [default: 1.0]
 

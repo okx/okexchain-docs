@@ -1,10 +1,10 @@
 # Developer Dividend Project Operation Guide
 
-This article introduces how to participate in the contract dividend distribution project on OKC.
+This article introduces how to participate in the contract dividend distribution project on OKTC.
 
 ## How do contract developers participate in Gas Back?
 
-*Note: the following operations all require OKC to updated to* *[v1.6.5.1](https://github.com/okx/exchain/tree/v1.6.5.1)* *or newer.*
+*Note: the following operations all require OKTC to updated to* *[v1.6.5.1](https://github.com/okx/exchain/tree/v1.6.5.1)* *or newer.*
 
 ### Register for contract dividend
 

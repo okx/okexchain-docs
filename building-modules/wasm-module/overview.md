@@ -1,7 +1,7 @@
 # Wasm Overview 
 WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications or working as a virtual machine on blockchain.
 
-Wasm of OKC is developed based on [CosmWasm](https://docs.cosmwasm.com/docs/1.0/). CosmWasm is a smart contracting platform built for the Cosmos ecosystem. Simply put, it's the Cosmos way of using WebAssembly hence the name.
+Wasm of OKTC is developed based on [CosmWasm](https://docs.cosmwasm.com/docs/1.0/). CosmWasm is a smart contracting platform built for the Cosmos ecosystem. Simply put, it's the Cosmos way of using WebAssembly hence the name.
 
 CosmWasm is written as a module that can be plugged into the Cosmos SDK. This means that anyone currently building a blockchain using the Cosmos SDK can quickly and easily add CosmWasm smart contracting support to their chain, without adjusting existing logic.
 
@@ -12,9 +12,9 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
 
 ## Architecture
 
-### Wasm in OKC
-   This architecture diagram mainly introduces the position of wasm in the entire OKC system. The bottom layer is Tendermint Core, on top of that is Cosmo's native module layer, then OKC's custom module layer, and the top layer is the API interface layer. Wasm is a module in OKC's custom module layer.
-   ![](../../img/wasm-architecture.jpeg)
+### Wasm in OKTC
+   This architecture diagram mainly introduces the position of wasm in the entire OKTC system. The bottom layer is Tendermint Core, on top of that is Cosmo's native module layer, then OKTC's custom module layer, and the top layer is the API interface layer. Wasm is a module in OKTC's custom module layer.
+   ![](../../img/wasm-architecture.png)
 
 ### Wasm system ecosystem
    CosmoWasm is a Cosmos SDK module plugin, this project is responsible for helping Cosmos SDK support wasm virtual machine. CosmWasm is implemented in Rust and because the Go code runtime causes the contract to enlarge, the contract is mainly written with Rust then compiled to wasm bytecode. In order to facilitate the interaction between the contract and virtual machine, the virtual machine also uses Rust as a fundamental database. In its entirety, CosmWasm's ecology is mainly divided into the following 3 parts:
