@@ -137,7 +137,7 @@ There are 4 different message categories in the connection layer, and each categ
 
 ### **Basic example**
 
-Users on the Cosmos chain making asset transfers to the OKC chain:
+Users on the Cosmos chain making asset transfers to the OKTC chain:
 
 ![example01](../../img/ibc-example-01.jpg)
 
@@ -145,11 +145,11 @@ Users on the Cosmos chain making asset transfers to the OKC chain:
 
 2. The relayer polls the transaction execution result from the Cosmos chain and packets it into RecvPacket.
 
-3. The relayer sends the RecvPacket transaction to OKC chain. After OKC chain receives it, the respective minted token amount is given to the respective OKC account, and an ack certificate is stored locally.
+3. The relayer sends the RecvPacket transaction to OKTC chain. After OKTC chain receives it, the respective minted token amount is given to the respective OKTC account, and an ack certificate is stored locally.
 
-4. The relayer polls the RecvPacket transaction execution result from OKC chain and packets it into Acknowledgemnt.
+4. The relayer polls the RecvPacket transaction execution result from OKTC chain and packets it into Acknowledgemnt.
 
-5. The relayer sends the Acknowledgemnt transaction to Cosmos chain. After that, Cosmos receives it and confirms if the OKC chain execution is normal or not, if not, a refund is executed.
+5. The relayer sends the Acknowledgemnt transaction to Cosmos chain. After that, Cosmos receives it and confirms if the OKTC chain execution is normal or not, if not, a refund is executed.
 
 In conclusion, the entire process of token transference is as shown below:
   - Handshake and create a connection (Client=> Connection => Channel)
@@ -158,11 +158,11 @@ In conclusion, the entire process of token transference is as shown below:
 
 The only step in the entire process that requires the user to participate is "Initiate a transfer".
 
-## **OKC and IBC**
+## **OKTC and IBC**
 
-&nbsp;&nbsp;&nbsp;&nbsp;    The bottom layer of OKC is the early cosmos-sdk (v0.39), while IBC involves the code of v0.40+, and there are major code changes from 39 to 40. After the version upgrade, OKC now not only supports the EVM system, but also supports IBC.
+&nbsp;&nbsp;&nbsp;&nbsp;    The bottom layer of OKTC is the early cosmos-sdk (v0.39), while IBC involves the code of v0.40+, and there are major code changes from 39 to 40. After the version upgrade, OKTC now not only supports the EVM system, but also supports IBC.
 
-### **OKC-ERC20**
+### **OKTC-ERC20**
 
-&nbsp;&nbsp;&nbsp;&nbsp;    Cross-chain native tokens are considered to have no commercial value on OKC, and so after the arrival of cross-chain transferring of native tokens to OKC, through the hooks function of IBC's application layer, the logic sunk down into the EVM layer. With ERC20, contracts were able to automatically generate the mapping of corresponding tokens, which caused everyone in the industry to focus on this one aspect. But finally, the barrier between Cosmos and EVM was broken down and a bridge between the two was built.
+&nbsp;&nbsp;&nbsp;&nbsp;    Cross-chain native tokens are considered to have no commercial value on OKTC, and so after the arrival of cross-chain transferring of native tokens to OKTC, through the hooks function of IBC's application layer, the logic sunk down into the EVM layer. With ERC20, contracts were able to automatically generate the mapping of corresponding tokens, which caused everyone in the industry to focus on this one aspect. But finally, the barrier between Cosmos and EVM was broken down and a bridge between the two was built.
 

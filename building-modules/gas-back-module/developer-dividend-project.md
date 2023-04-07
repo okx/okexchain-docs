@@ -2,15 +2,15 @@
 
 # Introduction
 
-This article is a detailed explanation of the principles of OKC's contract handling fee distribution project (Gas Back).
+This article is a detailed explanation of the principles of OKTC's contract handling fee distribution project (Gas Back).
 
 ## What is Gas Back?
 
-Gas Back is a new function added to OKC [v1.6.5.1](https://github.com/okx/exchain/tree/v1.6.5.1), which supports the proportional distribution of handling fees between block producers and contract deployers. The handling fee for calling a contract is distributed proportionally to the deployer of the contract.
+Gas Back is a new function added to OKTC [v1.6.5.1](https://github.com/okx/exchain/tree/v1.6.5.1), which supports the proportional distribution of handling fees between block producers and contract deployers. The handling fee for calling a contract is distributed proportionally to the deployer of the contract.
 
-Gas Back aims to encourage more developers to deploy contracts on OKC and enrichen the OKC ecosystem.
+Gas Back aims to encourage more developers to deploy contracts on OKTC and enrichen the OKTC ecosystem.
 
-## The influence of Gas Back on OKC participants
+## The influence of Gas Back on OKTC participants
 
 | Order | Participant type  | Action                                          | Effect                                                       |
 | ----- | ----------------- | ----------------------------------------------- | ------------------------------------------------------------ |

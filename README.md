@@ -1,4 +1,3 @@
-
 # Introduction
 
 ![Welcome to the OKC](./img/okc2022poster.png)
@@ -31,6 +30,7 @@ The OKTC block explorer allows you to search, view and analyze OKTC data—like 
 - [OKlink](https://www.oklink.com)
 
 ## OKTC CLI
+
 
 `exchaincli` is a command-line interface to interact with OKTChain. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
 

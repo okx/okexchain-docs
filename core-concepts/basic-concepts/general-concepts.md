@@ -1,6 +1,6 @@
 # Basic Concepts
 
-## Types of OKC nodes
+## Types of OKTC nodes
 
 ### Full node
 
@@ -10,7 +10,7 @@ A Full Node in Tendermint is a type of node that maintains a complete and up-to-
 
 A Validator in Tendermint is a node that participates in the consensus process of a Proof-of-Stake blockchain network. Validators are responsible for verifying and validating transactions, proposing new blocks to the network, and voting on proposed blocks. Validators ensure the security and consistency of the blockchain by providing their computing power and staking a certain amount of cryptocurrency as collateral. In return for their services, validators are rewarded with transaction fees and newly minted tokens. Validators play a crucial role in maintaining the integrity and decentralization of Tendermint-based blockchain networks.
 
-## Types of OKC users
+## Types of OKTC users
 
 ### Normal user
 
@@ -21,13 +21,13 @@ Tendermint depends on the participation of normal users to sustain the ecosystem
 
 ### Delegator
 
-OKC relies on a group of proposers to maintain network security. The
+OKTC relies on a group of proposers to maintain network security. The
 role of a validation node is to run a full node and participate in
 consensus through broadcast voting (including ciphertext signed by the
 sender's private key). Validation nodes are able to keep track of
 on-chain data, place new blocks on the blockchain and earn yields to
 incentivize their operation. Validation nodes can only be elected after
-successfully connecting to the OKC network.
+successfully connecting to the OKTC network.
 
 ### Proposer
 
@@ -58,8 +58,8 @@ should always be in sync with the current state of the ecosystem to
 easily adapt to any changes.
 
 
-## OKC Consensus
-OKC Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
+## OKTC Consensus
+OKTC Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
 
 ![](../../img/core-concept-1.png "")
 
