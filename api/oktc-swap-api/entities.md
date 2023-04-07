@@ -1,8 +1,8 @@
 # Entities
 Entities define the schema of the subgraph, and represent the data that can be queried. Within each entity are sets of fields that store useful information related to the entity. Below is a list of the available entities within the Subgraph, and descriptions for the available fields.  
 
-## OKTCswap Factory
-The OKTCswap Factory entity is responsible for storing aggregate information across all OKTCswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more. There is only one OKTCswap Factory entity in the subgraph.  
+## OKCSwap Factory
+The OKCSwap Factory entity is responsible for storing aggregate information across all OKCSwap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more. There is only one OKCSwap Factory entity in the subgraph.  
 | Field Name  | Value Type  |  Description  |
 |:---|:-----|:---|
 |id|ID|factory address|
@@ -31,7 +31,7 @@ Information about a pair. Includes references to each token within the pair, vol
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
 |id|ID|pair contract address|
-|factory|OKTCswapFactory|reference to OKTCswap factory entity|
+|factory|OKCSwapFactory|reference to OKCSwap factory entity|
 |token0|Token|reference to token0 as stored in pair contract|
 |token1|Token|reference to token1 as stored in pair contract|
 |reserve0|BigDecimal|reserve of token0|
@@ -50,14 +50,14 @@ Information about a pair. Includes references to each token within the pair, vol
 |liquidityPositions|[LiquidityPosition]|rray of liquidity providers, used as a reference to LP entities|
 
 ## User  
-A user entity is created for any address that provides liquidity to a pool on OKTCswap. This entity can be used to track open positions for users. LiquidyPosition entities can be referenced to get specific data about each position.  
+A user entity is created for any address that provides liquidity to a pool on OKCSwap. This entity can be used to track open positions for users. LiquidyPosition entities can be referenced to get specific data about each position.  
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
 |id|ID|user address|
 |liquidityPositions|[LiquidityPosition]|array of all liquidity positions user has open|
 |usdSwapped|BigDecimal|total USD value swapped|
 ## Transaction  
-Transaction entities are created for each OKT Chain transaction that contains an interaction within OKTCswap contracts. This subgraph tracks Mint, Burn, and Swap events on the OKTCswap core contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.  
+Transaction entities are created for each OKT Chain transaction that contains an interaction within OKCSwap contracts. This subgraph tracks Mint, Burn, and Swap events on the OKCSwap core contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.  
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
 |id|ID|OKT Chain transaction hash|
@@ -67,7 +67,7 @@ Transaction entities are created for each OKT Chain transaction that contains an
 |burns|[Burn]|array of Burn events within transaction, 0 or greater|
 |swaps|[Swap]|array of Swap events within transaction, 0 or greater|
 ## Mint
-Mint entities are created for every emitted Mint event on the OKTCswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.  
+Mint entities are created for every emitted Mint event on the OKCSwap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.  
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
 |id|ID|Transaction hash plus index in the transaction mint array|  
@@ -117,14 +117,14 @@ Burn entities are created for every emitted Burn event on the Uniswap core contr
 |logIndex|BigInt|event index within transaction|
 |amountUSD|BigDecimal|derived amount of tokens sold in USD|
 ## Bundle
-The Bundle is used as a global store of USDT. In OKTCswap, 1USDT is always equal to $1,thus we use USDT as our common base token to derive  USD values of other Tokens.  
+The Bundle is used as a global store of USDT. In OKCSwap, 1USDT is always equal to $1,thus we use USDT as our common base token to derive  USD values of other Tokens.  
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
 |id|ID|constant 1|
 |usdPrice|BigDecimal|always equal to 1|
 # Historical Entities
 The subgraph tracks information grouped in daily buckets, using timestamps provided by contract events. These entities can be used to query things like total volume on a given day, price of a token on a given day, etc.
-## OKTCswapDayData
+## OKCSwapDayData
 Tracks data across all pairs aggregated into a daily bucket.
 | Field Name  | Value Type  |  Description  |
 |:---|:---|:---|
@@ -134,7 +134,7 @@ Tracks data across all pairs aggregated into a daily bucket.
 |totalVolumeUSD|BigDecimal|all time volume across all pairs in USD up to and including this day|
 |totalLiquidityUSD|BigDecimal|total liquidity across all pairs in USD up to and including this day|
 |maxStored|Int|reference used to store most liquid tokens, used for historical liquidity charts|
-|mostLiquidTokens|[TokenDayData!]|tokens with most liquidity in OKTCswap|
+|mostLiquidTokens|[TokenDayData!]|tokens with most liquidity in OKCSwap|
 |txCount|BigInt|number of transactions throughout this day|
 ## PairDayData 
 Tracks pair data across each day.
