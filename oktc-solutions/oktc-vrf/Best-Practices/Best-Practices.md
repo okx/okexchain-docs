@@ -18,8 +18,8 @@ function fulfillRandomWords(
 
 If you want to get multiple random values from a single VRF request, you can request this directly with the `numWords` argument:
 
-- If you are using the VRF  subscription method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.md) guide for an example where one request returns multiple random values.
-- If you are using the VRF  direct funding method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.md) guide for an example where one request returns multiple random values.
+- If you are using the VRF  subscription method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html) guide for an example where one request returns multiple random values.
+- If you are using the VRF  direct funding method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html) guide for an example where one request returns multiple random values.
 
 ## Processing simultaneous VRF requests
 

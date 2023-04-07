@@ -18,7 +18,7 @@
 ![avatar](../../img/metamask-01-2.png)
 
 ### 3. Config ETHEREUM WEBSOCKET for OKTC Mainnet
-please refer to [detail config](./basics/websocket.md)
+please refer to [detail config](/dev/api/oktc-api/websocket.html)
 
 ___
 ## Blockchain Browser
