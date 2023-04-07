@@ -1,4 +1,3 @@
-
 # Introduction
 
 ![Welcome to the OKC](./img/okc2022poster.png)
@@ -20,8 +19,9 @@ OKTChain (OKTC) is an EVM-compatible L1 built on Cosmos with a focus on true int
 
 ## OKT Tokens
 
-Do you have OKT tokens? With OKT, you can contribute to the security and governance of OKTC. Delegate your OKT to one or more of the 100 validators on OKTC blockchain to earn more OKT through Delegated Proof-of-Stake. You can also vote with your OKT to influence the future of OKTC through on-chain governance proposals.
+## The OKT
 
+Do you have OKT tokens? With OKT, you have the unique ability to contribute to the security and governance of the OKC. Delegate your OKT to one or more of the 30 validators on the OKC blockchain to earn more OKT through Delegated Proof-of-Stake. You can also vote with your OKT to influence the future of OKT Chain through on-chain governance proposals.
 Learn more about [being a delegator](./delegators/delegators-faq.html).
 
 ## OKTC Explorer
@@ -31,6 +31,7 @@ The OKTC block explorer allows you to search, view and analyze OKTC data—like 
 - [OKlink](https://www.oklink.com)
 
 ## OKTC CLI
+
 
 `exchaincli` is a command-line interface to interact with OKTChain. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](./delegators/delegators-guide-cli.html).
 

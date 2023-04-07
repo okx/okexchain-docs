@@ -1,4 +1,4 @@
-# OKC IBC CLI Guide
+# OKTC IBC CLI Guide
 
 ## Background
 
@@ -9,16 +9,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;IBC is a cross-chain operation, which means that if you want to test locally, you need to have cli binaries of other chains (such as gaia) and a relayer.
 
 - [Example of relayer in Go version](https://github.com/cosmos/relayer)
-- [OKC binary](https://github.com/okx/exchain/releases/tag/v1.6.4) (suggest using the newest version, size of version needs to be bigger than v1.6.1)
+- [OKTC binary](https://github.com/okx/exchain/releases/tag/v1.6.4) (suggest using the newest version, size of version needs to be bigger than v1.6.1)
 - [Gaia binary](https://github.com/cosmos/gaia)
 
 ## How to transfer tokens across chains for ordinary users
 
-### OKC provides a [visual operating interface](https://www.okx.com/okc/ibc)
+### OKTC provides a [visual operating interface](https://www.okx.com/oktc/ibc)
 
 The process of a token transfer is broken down into 6 steps, along with screenshots of the operating interface below:
 
-1. Select a chain to transfer from, e.g., OKC
+1. Select a chain to transfer from, e.g., OKTC
 
 1. Select a chain to transfer to, e.g., CosmosHub
 
@@ -32,23 +32,23 @@ The process of a token transfer is broken down into 6 steps, along with screensh
 
 ![img](../../img/ibc-cli-01.png)
 
-### OKC also provides transfers in the form of manually sending commands through the command line
+### OKTC also provides transfers in the form of manually sending commands through the command line
 
-Example of cross-chain transfer from OKC to Cosmos
+Example of cross-chain transfer from OKTC to Cosmos
 
-- Get bidirectional channelId (OKC:channel-0,Cosmos:channel-361)
+- Get bidirectional channelId (OKTC:channel-0,Cosmos:channel-361)
 - Select the corresponding transfer recipient and wait for the relay
 
 #### Query to get channel information
 
 
-&nbsp;&nbsp;&nbsp;&nbsp; Channel information can be otained from the following [link](https://forum.okt.club/d/301-ibc-okc-document)
+&nbsp;&nbsp;&nbsp;&nbsp; Channel information can be otained from the following [link](https://forum.okt.club/d/301-ibc-oktc-document)
 
 #### Sending cross-chain transfer information
 
 ```Bash
 // IBC fungible token transfer transaction
-// e.g. Send token from OKC to Cosmos,
+// e.g. Send token from OKTC to Cosmos,
 //      <srcChannel>=channel-0,
 //      <receiveAddress>=cosmos1qucqm3swgur9jp49xtedq8ej2rm02jd64kh30c 
 //      <amount>=10000wei <fees>=1000000000000000wei,
@@ -61,19 +61,19 @@ the IBC port is transfer
 
 #### Waiting for relayer
 
-&nbsp;&nbsp;&nbsp;&nbsp; For an IBC cross-chain connection that is already online (such as OKC<=>Cosmos), it usually takes about 1-2 minutes for the corresponding transfer token to be relayed to the opposite chain. At this time, the blockchain explorer provided by the corresponding chain can be used to view address balance information, or view the balance information through the binary script of the corresponding chain.
+&nbsp;&nbsp;&nbsp;&nbsp; For an IBC cross-chain connection that is already online (such as OKTC<=>Cosmos), it usually takes about 1-2 minutes for the corresponding transfer token to be relayed to the opposite chain. At this time, the blockchain explorer provided by the corresponding chain can be used to view address balance information, or view the balance information through the binary script of the corresponding chain.
 
-## How IBC developers can establish cross-chain connections with OKC
+## How IBC developers can establish cross-chain connections with OKTC
 
-Here is an example of Gaia private chain <=> OKC mainnet and Go version of relayer
+Here is an example of Gaia private chain <=> OKTC mainnet and Go version of relayer
 
 1. Initiate relayer configuration
 
-1. Relayer adds OKC mainnet related configurations
+1. Relayer adds OKTC mainnet related configurations
 
 1. Relayer adds private chain information
 
-1. Relayer binds an account for OKC, and also binds an account for Gaia private chain that is used for sending gas payment transactions
+1. Relayer binds an account for OKTC, and also binds an account for Gaia private chain that is used for sending gas payment transactions
 
 1. Create an IBC chain pair (Path)
 
@@ -92,11 +92,11 @@ Here is an example of Gaia private chain <=> OKC mainnet and Go version of relay
 rly config init 
 ```
 
-### Relayer adds OKC mainnet related configurations
+### Relayer adds OKTC mainnet related configurations
 
 ```Plaintext
 // Pull chain configuration from open source repository(https://github.com/cosmos/chain-registry)
-// eg: <chainName>=okexchain（okc）
+// eg: <chainName>=okexchain（oktc）
 rly chains add <chainName>
 ```
 
@@ -165,8 +165,8 @@ When the configuration file of the chain pair (Path) is configured, it can be ad
 ```Bash
 // add the source chain and destination chain to the relayer configurations
 // --file points to the configuraiton file path created before
-// eg: <srcChainAlias>=okexchain,<destChainAlias>=ibc0,<pathName>=okc66_ibc0
-        <pathJsonFile>=./okc66_ibc0.json
+// eg: <srcChainAlias>=okexchain,<destChainAlias>=ibc0,<pathName>=oktc66_ibc0
+        <pathJsonFile>=./oktc66_ibc0.json
 rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 ```
 
@@ -176,7 +176,7 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 // send create client message to the source chain and destination chain 
 // -d means it is debug mode 
 // pathName means the path we created before
-// eg: <pathName>=okc66_ibc0
+// eg: <pathName>=oktc66_ibc0
  rly tx clients <pathName> -d 
 ```
 
@@ -186,7 +186,7 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 // send create connection message to the source chain and destination chain 
 // -d means it is debug mode 
 // pathName means the path we created before
-// eg: <pathName>=okc66_ibc0
+// eg: <pathName>=oktc66_ibc0
  rly tx connection <pathName> -d 
 ```
 
@@ -196,19 +196,19 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 // send create connection message to the source chain and destination chain 
 // -d means it is debug mode 
 // pathName means the path we created before
-// eg: <pathName>=okc66_ibc0
+// eg: <pathName>=oktc66_ibc0
  rly tx channel <pathName> -d   
 ```
 
 ### With this IBC chain pair (Path), initiate backend process and it will automatically relay the data packet
 
-This step shows that the private chain and OKC mainnet already created an IBC cross-chain connection, initiated the backend process and assisted the packet relay.
+This step shows that the private chain and OKTC mainnet already created an IBC cross-chain connection, initiated the backend process and assisted the packet relay.
 
 ```Bash
 // start the relayer monitor ,relayer will listen the event from source chain
 and dest chain so that it will dispatch the message automatically
  -d means it is debug mode 
-// eg:<pathName>=okc66_ibc0
+// eg:<pathName>=oktc66_ibc0
 rly start <pathName> -d
 ```
 

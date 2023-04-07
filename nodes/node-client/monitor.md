@@ -5,10 +5,10 @@
 Tendermint also supports the use of prometheus metrics. This function is
 enabled by setting `prometheus=true` in `config/config.toml`. Through
 setting `prometheus_listen_addr`, the default supervision address
-`:26660` is changed. The default status is set as enable on okc's
+`:26660` is changed. The default status is set as enable on oktc's
 testnet.
 
-## Metrics available on okc
+## Metrics available on oktc
 
 | Name                                                  | Type        | Tags             | Description                                                                |
 | -------------------------------------------------------|-------------|------------------|----------------------------------------------------------------------------| 
@@ -97,7 +97,7 @@ docker-compose -f monitor.yml up -d
 
 After enabling the above, you can see the information on prometheus via
 [http://localhost:9090](http://localhost:9090/). You can configure a
-dashboard (template id: 7044) suitable for okc via
+dashboard (template id: 7044) suitable for oktc via
 [http://localhost:3000](http://localhost:3000/)(the default account name
 and password are both admin) and adjust it by customizing the names of
 metrics.

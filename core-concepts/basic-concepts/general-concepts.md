@@ -23,13 +23,13 @@ Tendermint depends on the participation of normal users to sustain the ecosystem
 
 ### Delegator
 
-OKC relies on a group of proposers to maintain network security. The
+OKTC relies on a group of proposers to maintain network security. The
 role of a validation node is to run a full node and participate in
 consensus through broadcast voting (including ciphertext signed by the
 sender's private key). Validation nodes are able to keep track of
 on-chain data, place new blocks on the blockchain and earn yields to
 incentivize their operation. Validation nodes can only be elected after
-successfully connecting to the OKC network.
+successfully connecting to the OKTC network.
 
 ### Proposer
 
@@ -57,8 +57,8 @@ should always be in sync with the current state of the ecosystem to
 easily adapt to any changes.
 
 ## OKTC Consensus
+OKTC Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
 
-OKT Chain leverages Tendermint Core Byzantine Fault Tolerant (BFT) consensus for proposing block. Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
 
 ![ABCI](../../img/core-concept-1.png "")
 

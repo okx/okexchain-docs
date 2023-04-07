@@ -2,11 +2,11 @@
 
 ## Introduction
 
-[OKC](/dev/quick-start/overview.html) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
+[OKTC](/dev/quick-start/overview.html) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.
 
-Validator candidates can bond their own OKTs and have OKTs ["delegated"](/dev/core-concepts/delegator/delegators-guide-cli.html), or staked, to them by token holders. The OKC network will have 21 validators. The validators are determined by a ranking of those who  collected the highest number of staked OKTs— the top 21 validator candidates with the largest stakes will become OKC validators.
+Validator candidates can bond their own OKTs and have OKTs ["delegated"](/dev/core-concepts/delegator/delegators-guide-cli.html), or staked, to them by token holders. The OKTC network will have 21 validators. The validators are determined by a ranking of those who  collected the highest number of staked OKTs— the top 21 validator candidates with the largest stakes will become OKTC validators.
 
-Validators will earn OKTs as block provisions and tokens as transaction fees through execution of the Tendermint consensus protocol and delegators should get rewards from their target validators in their own ways. Initially, transaction fees will be paid in okts but in the future, any token in the OKC ecosystem will be valid as fee tender if it is whitelisted by governance. Note that validators can set commission on the fees their delegators receive as additional incentive.
+Validators will earn OKTs as block provisions and tokens as transaction fees through execution of the Tendermint consensus protocol and delegators should get rewards from their target validators in their own ways. Initially, transaction fees will be paid in okts but in the future, any token in the OKTC ecosystem will be valid as fee tender if it is whitelisted by governance. Note that validators can set commission on the fees their delegators receive as additional incentive.
 
 ## Hardware
 

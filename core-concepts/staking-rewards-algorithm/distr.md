@@ -1,18 +1,18 @@
-# OKC Staking Rewards Algorithm
+# OKTC Staking Rewards Algorithm
 
 ## Background
 
-OKC allows users to stake OKT and vote for one or more validators, thus allowing users to receive dividend rewards on the chain. This paper explains the principles and specific guidelines of dividend rewards obtained from staking OKT.
+OKTC allows users to stake OKT and vote for one or more validators, thus allowing users to receive dividend rewards on the chain. This paper explains the principles and specific guidelines of dividend rewards obtained from staking OKT.
 
 
 
 ## Example of an on-chain staking reward
 
-OKC allows anyone that stakes a minimum of atleast 10,000 OKT the ability to operate a full node to become a registered validator. After every epoch cycle (252 blocks), OKC will calculate the weight of every validator and the Top 21 weighted nodes will become the next epoch cycle’s block producers that participate in consensus, while the others become alternative nodes. Under Tendermint’s consensus algorithm, these 21 nodes will vote to produce the new block. Every validator that participates in the maintenance of the OKC network receives a corresponding block reward.
+OKTC allows anyone that stakes a minimum of atleast 10,000 OKT the ability to operate a full node to become a registered validator. After every epoch cycle (252 blocks), OKTC will calculate the weight of every validator and the Top 21 weighted nodes will become the next epoch cycle’s block producers that participate in consensus, while the others become alternative nodes. Under Tendermint’s consensus algorithm, these 21 nodes will vote to produce the new block. Every validator that participates in the maintenance of the OKTC network receives a corresponding block reward.
 
 The more vote shares a validator receives, the more weight that validator holds, therefore the bigger the reward that validator receives. In order to motivate users to vote for them, validators can set a favourable commission rate, and automatically distribute the rewards based on the ratio of voting shares. The values of commission rates range from [0,1], so if, for example, the commission rate is set to 0.6, that would mean that the validator receives 60% of the total reward, and the remaining 40% is distributed to the users based on the ratio of their voting shares.
 
-Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli.html).
+Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKTC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli.html).
 
 
 
@@ -65,7 +65,7 @@ Using the following website's data as an example, imagine a user holds 1000 OKT 
 
 ### Source of staking rewards
 
-OKCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 41.69M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.5 OKT reward, and the reward is halved every 3 years.
+OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 41.69M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.5 OKT reward, and the reward is halved every 3 years.
 
 | Year | Block Reward | Blocks   | Volume      |
 | ---- | ------------ | -------- | ----------- |
@@ -102,7 +102,7 @@ OKCs staking rewards come from block rewards and transaction fees. OKTs issuing 
 
 Below is a specific explanation of the distribution rules for block rewarding:
 
-- X% represents the community distribution rate (currently at 0%). Y% represents the commission rate of every validator node (defaulted at 100%). After the update goes live, validators can adjust this according to their own needs. More info on commission rate values can be viewed through CLI commands or on https://www.oklink.com/en/okc/bp-list.
+- X% represents the community distribution rate (currently at 0%). Y% represents the commission rate of every validator node (defaulted at 100%). After the update goes live, validators can adjust this according to their own needs. More info on commission rate values can be viewed through CLI commands or on https://www.oklink.com/en/oktc/bp-list.
 
 - Block rewards = block producers reward + total amount of all block’s transaction fees
 
@@ -119,7 +119,7 @@ Below is a specific explanation of the distribution rules for block rewarding:
 
 ### Voting weight decay mechanism
 
-In order to encourage users to actively participate in voting, OKC using a voting weight decay mechanism. If users do not participate in voting within a week, their voting weight will start to decay, and the voting weight will be doubled every 52 weeks (1 year). After re-voting (or staking, withdraw okt, withdraw rewards), the vote weight will be refreshed.
+In order to encourage users to actively participate in voting, OKTC using a voting weight decay mechanism. If users do not participate in voting within a week, their voting weight will start to decay, and the voting weight will be doubled every 52 weeks (1 year). After re-voting (or staking, withdraw okt, withdraw rewards), the vote weight will be refreshed.
 
 > Note: Refreshing the weight of votes will trigger automatic reward, and the portion less than 0.0001 OKT will be distributed to the community pool. Refer to [Withdrawing rewards](#withdrawing-rewards)
 
@@ -162,7 +162,7 @@ func calculateWeight(nowTime int64, tokens sdk.Dec) (shares types.Shares, sdkErr
 
 ### Exchange and multiple voting
 
-After staking OKT (minimum of 0.0001 OKT per stake), users can opt to exchange their voting rights for the validator node. It’s worth mentioning that OKC uses a multi-voting system, where users can vote for up to 30 validator nodes after completing their stakes (each node can only be voted for once). Furthermore, when users want to stake OKT again, they will not need to go through the voting process again, but will vote for their previous validator node by default.
+After staking OKT (minimum of 0.0001 OKT per stake), users can opt to exchange their voting rights for the validator node. It’s worth mentioning that OKTC uses a multi-voting system, where users can vote for up to 30 validator nodes after completing their stakes (each node can only be voted for once). Furthermore, when users want to stake OKT again, they will not need to go through the voting process again, but will vote for their previous validator node by default.
 
 ![](../../img/reward-2.png)
 

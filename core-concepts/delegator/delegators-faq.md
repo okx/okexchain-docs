@@ -15,7 +15,7 @@ You have the option to give their votes to their desired validator node(s) for a
 
 On the other hand, there is the community ecosystem aspect. Validators need to work together in case of there are any problems or topics that need to be debated.. They need to be able to work together, cooperate and remain highly transparent at all times.
 
-You will have the ability to choose if you want to become a delegator on the OKC ecosystem. the future of the network may depend on your  votes and those who will manage it.
+You will have the ability to choose if you want to become a delegator on the OKTC ecosystem. the future of the network may depend on your  votes and those who will manage it.
 
 ## Incentives
 
@@ -24,7 +24,7 @@ For more information on incentives, see [Staking Rewards Algorithm](/dev/core-co
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/okc-test) or other OKC block explorers.
+In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/oktc-test) or other OKTC block explorers.
 
 - **Validator’s moniker**: Name of the validator candidate.
 - **Validator’s description**: Description provided by the validator operator.

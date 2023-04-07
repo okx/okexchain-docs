@@ -3,10 +3,10 @@
 
 Descriptions:
 
-On OKC, there are some special parameters that can be modified through on-chain governance. OKT holdes can participate in on-chain governance of parameter modification. If the community is not satisfied with some modifiable parameters, the members can initiate a parameter change proposal. The processes involved in parameter upgrade proposals are the same as those involved in text proposals.
+On OKTC, there are some special parameters that can be modified through on-chain governance. OKT holdes can participate in on-chain governance of parameter modification. If the community is not satisfied with some modifiable parameters, the members can initiate a parameter change proposal. The processes involved in parameter upgrade proposals are the same as those involved in text proposals.
 
 Those parameters are divided into two categories, namely system parameters and business parameters.
-System parameters refer to the parameters specified on OKC, and the modification of business parameters are based on parameters of data created by OKC, such as the minimum precision of the unit of the cryptocurrency issued on OKC. The current business parameters are not subject to modification.
+System parameters refer to the parameters specified on OKTC, and the modification of business parameters are based on parameters of data created by OKTC, such as the minimum precision of the unit of the cryptocurrency issued on OKTC. The current business parameters are not subject to modification.
 
 1. The parameter change proposals in relation to system parameters can only be initiated by validation nodes.
 2. The parameter change proposals in relation to business parameters can only be initiated by token owners, and only owners can pay deposits.
