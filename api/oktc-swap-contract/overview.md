@@ -1,2 +1,2 @@
 # Overview
-OKCSwap is based on Uniswap V2 protocol. Read the [Uniswap v2 documentation](https://docs.uniswap.org/contracts/v2/overview). For more in-depth information on the core contract logic, read the [Uniswap v2 Core whitepaper](https://uniswap.org/whitepaper.pdf).
+Swap is based on Uniswap V2 protocol. Read the [Uniswap v2 documentation](https://docs.uniswap.org/contracts/v2/overview). For more in-depth information on the core contract logic, read the [Uniswap v2 Core whitepaper](https://uniswap.org/whitepaper.pdf).

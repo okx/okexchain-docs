@@ -11,7 +11,7 @@ This guide assumes that you know how to create and deploy smart contracts on OKT
 
 For this example, create a new subscription on the OKTC Mainnet .
 
-1. Open MetaMask and set it to use the OKTC Mainnet . The [Subscription Manager](../Subscription-Manager-UI/Subscription-Manager-UI.md) detects your network based on the active network in MetaMask.
+1. Open MetaMask and set it to use the OKTC Mainnet . The [Subscription Manager](/dev/oktc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI.md) detects your network based on the active network in MetaMask.
 
 2. Check MetaMask to make sure you have OKT on OKTC Mainnet.
 
