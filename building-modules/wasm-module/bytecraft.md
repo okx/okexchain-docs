@@ -52,7 +52,7 @@ Install the bytecraft package globally.
 npm install -g @okexchain/bytecraft
 ```
 
-## Use Bytecraft with OKTC testnet
+## Use Bytecraft with OKTC Testnet
 
 
 ### Getting Started
@@ -312,7 +312,7 @@ It is possible to tell ByteCraft to use a custom deploy task instead of the defa
 
 Now instead of running `bytecraft task:run deploy_counter --signer test --network testnet` you can run `bytecraft deploy counter --signer test --network testnet`.
 
-## Use Bytecraft with OKTC mainnet
+## Use Bytecraft with OKTC Mainnet
 
 ### Getting Started
 
