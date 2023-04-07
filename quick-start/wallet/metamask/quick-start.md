@@ -4,7 +4,7 @@
 
 1. To use Web3 wallet: visit [Web3 Wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
 2. To use Metamask: visit [Metamask](https://metamask.io/) , download Metamask, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups.
-3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKC. For details, check the tutorials of each wallet's official website.
+3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKTC. For details, check the tutorials of each wallet's official website.
 
 ## Create a Wallet 
 
@@ -44,18 +44,18 @@
 
 **Congratulations**! You have successfully created your MetaMask account. A new wallet address was automatically generated for you!
 
-## Add OKC Network
+## Add OKTC Network
 
-The Web3 wallet is a multi-chain wallet that has already been configured with the OKC network by default, hence the user does not need to add it themselves.
+The Web3 wallet is a multi-chain wallet that has already been configured with the OKTC network by default, hence the user does not need to add it themselves.
 
 If the user is using Metamask wallet, they should: Click on Ethereum's main site; Select custom RPC in the drop-down menu; Click "**Add a network**"; Enter the following info below on the pop-up form：
 
 
-> - **Network name**: OKC (can also customize)
+> - **Network name**: OKTC (can also customize)
 > - **New RPC URL88**: https://exchainrpc.okex.org
 > - **Chain ID**: 66
 > - **Symbol**: OKT
-> - **Blockchain browser URL**: https://www.oklink.com/en/okc
+> - **Blockchain browser URL**: https://www.oklink.com/en/oktc
 
 
 
@@ -66,18 +66,18 @@ If the user is using Metamask wallet, they should: Click on Ethereum's main site
 
 ## Get OKT
 
-OKT is the native token of OKC, which is similar to Ether in Ethereum. To interact with OKC, OKT payments act as gas fees.
+OKT is the native token of OKTC, which is similar to Ether in Ethereum. To interact with OKTC, OKT payments act as gas fees.
 
 
-On the OKC chain, OKTs function as native tokens. This means that a user can pay gas with OKT as well as send OKT to other accounts the same way they use ETH to pay gas fees on Ethereum and send ETH to others.
+On the OKTC chain, OKTs function as native tokens. This means that a user can pay gas with OKT as well as send OKT to other accounts the same way they use ETH to pay gas fees on Ethereum and send ETH to others.
 
 > **OKT can be purchased from**: [OKT-USDT](https://www.okx.com/cn/trade-spot/okt-usdt)
 
-## OKC Social Media
+## OKTC Social Media
 
->- **OKC Homepage**：[OKC Homepage](https://www.okx.com/okc)
->- **OKC Docs**：[OKC Docs](https://exchainrpc.okex.org/docs/en/#overview)
->- **GitHub**: [OKC Github](https://github.com/okx/exchain)
->- **Telegram**：[OKC Telegram](https://t.me/OKCNetwork)
->- **Discord**：[OKC Discord](https://discord.com/invite/2rynEUqJxP)
->- **Medium**：[OKC Medium](https://medium.com/okc-okx-chain)
+>- **OKTC Homepage**：[OKTC Homepage](https://www.okx.com/oktc)
+>- **OKTC Docs**：[OKTC Docs](https://exchainrpc.okex.org/docs/en/#overview)
+>- **GitHub**: [OKTC Github](https://github.com/okx/exchain)
+>- **Telegram**：[OKTC Telegram](https://t.me/OKTCNetwork)
+>- **Discord**：[OKTC Discord](https://discord.com/invite/2rynEUqJxP)
+>- **Medium**：[OKTC Medium](https://medium.com/oktc-okx-chain)

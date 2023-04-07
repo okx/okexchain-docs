@@ -3,7 +3,7 @@
 ## Proposal process
 
 The overall process of a proposal is shown below:
-![](../../img/OKCProposal.png)   
+![](../../img/OKTCProposal.png)   
 Details:  
 1. The proposer should pledge OKT when initiating a proposal to prevent malicious initiation of a proposal.
 2. The voting participants are bond OKT holders, except for the following two
@@ -16,7 +16,7 @@ Details:
    - c. if the delegator votes after the validator votes on his behalf, the weight of the voting result replaces the weight of the vote cast by the validator on behalf of the delegator.
 
 ## Proposal types
-OKC offers 4 types of proposals for different purposes:
+OKTC offers 4 types of proposals for different purposes:
 1. [Text Proposal](/dev/core-concepts/on-chain-governance/text.html)： to obtain network views of a topic.
 2. [Parameter Proposal](/dev/core-concepts/on-chain-governance/parameter.html)： to change system parameters.
 3. Software Upgrade Proposal： to support the entire network upgrade.
