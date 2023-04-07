@@ -398,7 +398,7 @@ In this case, `test`, as our signer. The signer account will be responsible for 
 
 The network is specified with `mainnet`. your  contract will be deployed to OKTC `mainnet`
 
-### Deploying on OKTC Testnet
+### Deploying on OKTC Mainnet
 
 You should  add a personal account to the `keys.js` file by adding the account name as well as its corresponding private key. You can then use that account as the signer specifying the account name after the `--signer` flag in the `bytecraft deploy` command.
 
