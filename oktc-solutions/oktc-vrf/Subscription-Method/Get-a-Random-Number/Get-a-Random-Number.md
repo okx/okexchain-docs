@@ -11,7 +11,7 @@ This guide assumes that you know how to create and deploy smart contracts on OKT
 
 For this example, create a new subscription on the OKTC Mainnet .
 
-1. Open MetaMask and set it to use the OKTC Mainnet . The [Subscription Manager](/dev/oktc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI.md) detects your network based on the active network in MetaMask.
+1. Open MetaMask and set it to use the OKTC Mainnet . The [Subscription Manager](/dev/oktc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI.html) detects your network based on the active network in MetaMask.
 
 2. Check MetaMask to make sure you have OKT on OKTC Mainnet.
 
@@ -219,7 +219,7 @@ After you are done with this contract and the subscription, you can retrieve the
 
 ## What's next
 
-- [› Subscription Manager UI](../Subscription-Manager-UI/Subscription-Manager-UI.md)
-- [› Security Considerations](../../Security-Considerations/Security-Considerations.md)
-- [› Best Practices](../../Best-Practices/Best-Practices.md)
-- [› Supported Networks](../Supported-Networks/Supported-Networks.md#Configuration)
+- [› Subscription Manager UI](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI.html)
+- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)
+- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices.html)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#Configuration)
