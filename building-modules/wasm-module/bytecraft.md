@@ -135,7 +135,7 @@ To deploy your new my-wasm-dapp smart contract on OKTC testnet, run the followin
  bytecraft deploy my-wasm-dapp --signer test --network testnet
 ```
 
-In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
+In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the OKTC blockchain and will be assigned as the owner of the project.
 
 The network is specified with `testnet`. your  contract will be deployed to OKTC `testnet`
 
@@ -177,7 +177,7 @@ Then, exit the bytecraft console and deploy the `my-wasm-dapp` smart contract to
 bytecraft deploy my-wasm-dapp --signer test --network testnet
 ```
 
-After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
+After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any OKTC network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
 
 ```json
 {
@@ -394,7 +394,7 @@ To deploy your new my-wasm-dapp smart contract on OKTC mainnet, run the followin
  bytecraft deploy my-wasm-dapp --signer test --network mainnet
 ```
 
-In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
+In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the OKTC blockchain and will be assigned as the owner of the project.
 
 The network is specified with `mainnet`. your  contract will be deployed to OKTC `mainnet`
 
@@ -436,7 +436,7 @@ Then, exit the bytecraft console and deploy the `my-wasm-dapp` smart contract to
 bytecraft deploy my-wasm-dapp --signer test --network mainnet
 ```
 
-After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
+After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any OKTC network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
 
 ```
 {
@@ -647,25 +647,27 @@ bytecraft console --network NETWORK
 
 Here are details about bytecarft commands you can read when you are confused about using it
 
-<!-- commands -->
+| command                                                      | description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [bytecraft console](#bytecraft-console)                      | Start a repl console that provides context and convenient utilities to interact with the blockchain and your contracts. |
+| [bytecraft contract:build](#bytecraft-contractbuild-contract) | Build wasm bytecode.                                         |
+| [bytecraft contract:generateClient](#bytecraft-contractgenerateclient-contract) | Generate a Chain TypeScript client.                          |
+| [bytecraft contract:instantiate](#bytecraft-contractinstantiate-contract) | Instantiate the contract.                                    |
+| [bytecraft contract:migrate](#bytecraft-contractmigrate-contract) | Migrate the contract.                                        |
+| [bytecraft contract:new](#bytecraft-contractnew-name)        | Generate new contract.                                       |
+| [bytecraft contract:optimize](#bytecraft-contractoptimize-contract) | Optimize wasm bytecode.                                      |
+| [bytecraft contract:store](#bytecraft-contractstore-contract) | Store code on chain.                                         |
+| [bytecraft contract:updateAdmin](#bytecraft-contractupdateadmin-contract-admin) | Update the admin of a contract.                              |
+| [bytecraft deploy](#bytecraft-deploy-contract)               | Build wasm bytecode, store code on chain and instantiate.    |
+| [bytecraft help](#bytecraft-help-command)                    | Display help for bytecraft                                   |
+| [bytecraft new](#bytecraft-new-name)                         | Create new dapp from template.                               |
+| [bytecraft task:new](#bytecraft-tasknew-task)                | Create new task                                              |
+| [bytecraft task:run](#bytecraft-taskrun-task)                | Run predefined task                                          |
+| [bytecraft test](#bytecraft-test-contract-name)              | Runs unit tests for a contract directory.                    |
+| [bytecraft test:coverage](#bytecraft-testcoverage-contract-name) | Runs unit tests for a contract directory with coverage       |
+| [bytecraft wallet](#bytecraft-walletnew)                     | Generate a new wallet to use for signing contracts           |
 
-* [`bytecraft console`](#bytecraft-console)
-* [`bytecraft contract:build CONTRACT`](#bytecraft-contractbuild-contract)
-* [`bytecraft contract:generateClient CONTRACT`](#bytecraft-contractgenerateclient-contract)
-* [`bytecraft contract:instantiate CONTRACT`](#bytecraft-contractinstantiate-contract)
-* [`bytecraft contract:migrate CONTRACT`](#bytecraft-contractmigrate-contract)
-* [`bytecraft contract:new NAME`](#bytecraft-contractnew-name)
-* [`bytecraft contract:optimize CONTRACT`](#bytecraft-contractoptimize-contract)
-* [`bytecraft contract:store CONTRACT`](#bytecraft-contractstore-contract)
-* [`bytecraft contract:updateAdmin CONTRACT ADMIN`](#bytecraft-contractupdateadmin-contract-admin)
-* [`bytecraft deploy CONTRACT`](#bytecraft-deploy-contract)
-* [`bytecraft help [COMMAND]`](#bytecraft-help-command)
-* [`bytecraft new NAME`](#bytecraft-new-name)
-* [`bytecraft task:new [TASK]`](#bytecraft-tasknew-task)
-* [`bytecraft task:run [TASK]`](#bytecraft-taskrun-task)
-* [`bytecraft test CONTRACT-NAME`](#bytecraft-test-contract-name)
-* [`bytecraft test:coverage [CONTRACT-NAME]`](#bytecraft-testcoverage-contract-name)
-* [`bytecraft wallet:new`](#bytecraft-walletnew)
+<!-- commands -->
 
 ### `bytecraft console`
 
@@ -889,7 +891,7 @@ _See code: [src/commands/deploy.ts](https://github.com/okx/bytecraft/blob/v0.1.7
 
 ### `bytecraft help [COMMAND]`
 
-display help for bytecraft
+Display help for bytecraft
 
 ```
 USAGE
@@ -935,7 +937,7 @@ _See code: [src/commands/new.ts](https://github.com/okx/bytecraft/blob/v0.1.7/sr
 
 ### `bytecraft task:new [TASK]`
 
-create new task
+Create new task
 
 ```
 USAGE
@@ -949,7 +951,7 @@ _See code: [src/commands/task/new.ts](https://github.com/okx/bytecraft/blob/v0.1
 
 ### `bytecraft task:run [TASK]`
 
-run predefined task
+Run predefined task
 
 ```
 USAGE
@@ -993,7 +995,7 @@ _See code: [src/commands/test.ts](https://github.com/okx/bytecraft/blob/v0.1.7/s
 
 ### `bytecraft test:coverage [CONTRACT-NAME]`
 
-Runs unit tests for a contract directory.
+Runs unit tests for a contract directory with coverage.
 
 ```
 USAGE
