@@ -1,12 +1,13 @@
-# MetaMask
+# Connecting Your Wallet
 
-## Install the Wallet application
+## Install a Web3 Compatible Wallet
 
 1. To use Web3 wallet: visit [Web3 Wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
 2. To use Metamask: visit [Metamask](https://metamask.io/) , download Metamask, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups.
 3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKTC. For details, check the tutorials of each wallet's official website.
 
-## Create a Wallet 
+
+## Creating a Wallet with Metamask
 
 1. Click on the MetaMask icon in the upper right corner to open the extension.
 
@@ -14,41 +15,36 @@
 
 3. Click "**Continue**".
 
-![](./img/3.gif)
+![metamask download](./img/3.gif)
 
+4. You will be asked to create a new password. Use a strong password and click "**Create**".
 
-4. You will be asked to create a new password. Create a strong password and click "**Create**".
-
-![](./img/4.png)
-![](./img/4.2.png)
-
+![create password](./img/4.png)
+![account image](./img/4.2.png)
 
 5. Proceed by clicking "**Next**",  then accept the "**Terms of Use**".
 
-
 6. Click "**Reveal secret words**".
 
+7. You will see a 12 word seed phrase. Your seed words are an encoding of your private key, NEVER give your seed words to anyone. (Not your keys, not your coins.)
 
-7. You will see a 12 word seed phrase. Save seed words as a file or copy them to a safe place and click Next.
+8. Reveal the secret seed phrase and securely back them up either in writing, on steel, or using a hardware wallet like Ledger.
 
+![secret backup phrase](./img/8.png)
 
-8. Reveal secret words and copy your secret backup phrase to a safe place.
-![](./img/8.png)
+9. Verify your secret phrase by selecting the proper words in the verification prompts. When done, click "**Confirm**".
 
-
-9. Verify your secret phrase by selecting the previously generated phrase. When done, click "**Confirm**".
-
-
-![](./img/9.gif)
-
+![verify backup](./img/9.gif)
 
 **Congratulations**! You have successfully created your MetaMask account. A new wallet address was automatically generated for you!
 
 ## Add OKTC Network
 
-The Web3 wallet is a multi-chain wallet that has already been configured with the OKTC network by default, hence the user does not need to add it themselves.
 
-If the user is using Metamask wallet, they should: Click on Ethereum's main site; Select custom RPC in the drop-down menu; Click "**Add a network**"; Enter the following info below on the pop-up form：
+The OKX Wallet supports multiple chains and will already be compatible with the OKTC network by default, no further configuration required.
+
+
+If the user is using Metamask wallet, they should: Click on Settings; Select custom RPC in the drop-down menu; Click "**Add a network**"; Enter the following info below on the pop-up form：
 
 
 > - **Network name**: OKTC (can also customize)
@@ -59,21 +55,21 @@ If the user is using Metamask wallet, they should: Click on Ethereum's main site
 
 
 
-![](./img/1.png)
+![add a network](./img/1.png)
 
-
-![](./img/2.png)
+![add a network manually](./img/2.png)
 
 ## Get OKT
 
 OKT is the native token of OKTC, which is similar to Ether in Ethereum. To interact with OKTC, OKT payments act as gas fees.
 
-
 On the OKTC chain, OKTs function as native tokens. This means that a user can pay gas with OKT as well as send OKT to other accounts the same way they use ETH to pay gas fees on Ethereum and send ETH to others.
+
 
 > **OKT can be purchased from**: [OKT-USDT](https://www.okx.com/cn/trade-spot/okt-usdt)
 
 ## OKTC Social Media
+
 
 >- **OKTC Homepage**：[OKTC Homepage](https://www.okx.com/oktc)
 >- **OKTC Docs**：[OKTC Docs](https://exchainrpc.okex.org/docs/en/#overview)
@@ -81,3 +77,4 @@ On the OKTC chain, OKTs function as native tokens. This means that a user can pa
 >- **Telegram**：[OKTC Telegram](https://t.me/OKTCNetwork)
 >- **Discord**：[OKTC Discord](https://discord.com/invite/2rynEUqJxP)
 >- **Medium**：[OKTC Medium](https://medium.com/oktc-okx-chain)
+
