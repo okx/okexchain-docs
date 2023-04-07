@@ -66,7 +66,7 @@ If you would like to run a validator node, follow the [validator setup guide](/d
 Have questions, comments, or ideas? Feel free to participate and to become part of the OKTC community through one of the following channels.
 
 * [OKTC Validator Chat](https://t.me/joinchat/HuUCNktBLftzEY1fZPStkw)
-* [OKTC Developer Chat](https://t.me/oktchaintech)
+* [OKTC Developer Chat](https://t.me/okchaintech)
 
 
 

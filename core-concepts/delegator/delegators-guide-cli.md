@@ -217,13 +217,13 @@ exchaincli query account <yourAddress>
 // query the list of validators
 exchaincli query staking validators
 
-// query the information of a validator given their address (e.g. oktchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
+// query the information of a validator given their address (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5)
 exchaincli query staking validator <validatorAddress>
 
 // query all information of delegations and all shares recently added by a delegator (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn)
 exchaincli query staking delegator <delegatorAddress>
 
-// query the information of all shares recently added to a validator (e.g. oktchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
+// query the information of all shares recently added to a validator (e.g. okchainvaloper1alq9na49n9yycysh889rl90g9nhe58lcs50wu5) 
 exchaincli query staking shares-added-to <validatorAddress>
 
 // query the addresses of delegators by a specific proxy (e.g. ex19n6w5l0htdgn2zwet9rtgvrzuf4a3qp4znwfcn) 

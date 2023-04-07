@@ -74,7 +74,7 @@ After executing the exit command, if the following records appear in the log, it
     rm -rf ${EXCHAIND_PATH}/data
     cd ${EXCHAIND_PATH}
     # This image uses rocksdb data, so download the rocksdb snapshot corresponding to the mainnet.
-    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/oktc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
+    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
     tar -zxvf mainnet-$version-$date-$height-rocksdb.tar.gz
     
     # 3. download the docker image

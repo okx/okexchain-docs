@@ -174,5 +174,5 @@ If you have multiple binaries with different names, you can specify which one to
 
 ```
 # Run with custom binary
-BINARY=oktchainfoo make localnet-start
+BINARY=okchainfoo make localnet-start
 ```

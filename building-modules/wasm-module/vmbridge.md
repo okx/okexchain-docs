@@ -23,7 +23,7 @@ To make your contract initiate CW20 exchange for ERC20, you must develop an EVM 
 ### EVM contract rules
 Rid of the following actions in order to exchange ERC20 for CW20 tokens. (equivalent to calling the mintCW20 method of the CW20 contract, wasmAddr is the wasm contract address, recipient is the cw20 token receiving address, and amount is the number of cw20 tokens)
 ```solidity
-event __OKTCSendToWasm(string wasmAddr, string recipient, uint256 amount);
+event __OKCSendToWasm(string wasmAddr, string recipient, uint256 amount);
 ```
 Define unique module account in OKTC
 ```solidity
