@@ -1,8 +1,8 @@
 # Service Providers
 
-We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKC blockchain. More specifically, this document will be focused around the interactions with tokens.
+We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKTC blockchain. More specifically, this document will be focused around the interactions with tokens.
 
-This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OKC blockchain end-users.
+This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact for all the OKTC blockchain end-users.
 
 ## High-level description of the architecture
 
@@ -16,11 +16,11 @@ There are three main pieces to consider:
 
 ### Installation and configuration
 
-We will describe the steps to run and interact with a full-node within the OKC network. For other SDK-based blockchain, the process should be similar.
+We will describe the steps to run and interact with a full-node within the OKTC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](/dev/quick-start/install-okc.html).
+First, you need to [install the software](/dev/quick-start/install-oktc.html).
 
-Then, you can start [running a full-node(testnet)](/dev/quick-start/join-okc-testnet.html).
+Then, you can start [running a full-node(testnet)](/dev/quick-start/join-oktc-testnet.html).
 
 ### Command-Line interface
 
@@ -28,7 +28,7 @@ Then, you can start [running a full-node(testnet)](/dev/quick-start/join-okc-tes
 
 **Please check that you are always using the latest stable release of `exchaincli`.**
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKC network, whether you run it yourself or not. Let us set it up properly.
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKTC network, whether you run it yourself or not. Let us set it up properly.
 
 In order to set up `exchaincli`, use the following command:
 
@@ -129,13 +129,13 @@ It will display all the available commands. For each command, you can use the `-
 
 The Rest API documents gather all the available endpoints that you can use to interact with your full node. It can be found [here](https://exchainrpc.okex.org/docs/en/#overview).
 
-To give more flexibility to developers, the OKC community has included the ability to generate unsigned transactions, [sign](https://exchainrpc.okex.org/docs/en/#overview) and [broadcast](https://exchainrpc.okex.org/docs/en/#overview) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
+To give more flexibility to developers, the OKTC community has included the ability to generate unsigned transactions, [sign](https://exchainrpc.okex.org/docs/en/#overview) and [broadcast](https://exchainrpc.okex.org/docs/en/#overview) them with different API endpoints. This allows service providers to use their own signing mechanism for instance.
 
-## OKC SDK Transaction Signing
+## OKTC SDK Transaction Signing
 
-OKC SDK transaction signing is a fairly simple process.
+OKTC SDK transaction signing is a fairly simple process.
 
-Every OKC transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
+Every OKTC transaction has a canonical JSON representation. The `exchaincli` and Stargate REST interfaces provide canonical JSON representations of transactions and their  “broadcast” functions will encode translations through amino (a protobuf-like encoder/decoder). 
 
 Things to know when signing messages:
 

@@ -27,28 +27,28 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
-Now, We have to deploy our smart contract on OKC Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
+Now, We have to deploy our smart contract on OKTC Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
 - Open Metamask and select Custom RPC from the networks dropdown
 - Go to setting page
 ![avatar](../../img/remix-04.png)
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/okc-api/json-rpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
-https://www.oklink.com/okc-test
-- Mainnet * [RPC URLs](/dev/api/okc-api/json-rpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
+- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
+https://www.oklink.com/oktc-test
+- Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
 https://www.oklink.com/
 - Go ahead and click save
 - Copy your address from Metamask
 - Head over to [Faucet](https://discord.gg/B5nMs6qK5F) and request test OKT
-- Now, let's Deploy the Smart Contract on OKC Testnet
+- Now, let's Deploy the Smart Contract on OKTC Testnet
 - Select Injected Web3 in the Environment dropdown and your contract
 ![avatar](../../img/remix-06.png)
 - Accept the Connection Request!
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okc-test
+Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/oktc-test
 
 
 ### Remix FAQ

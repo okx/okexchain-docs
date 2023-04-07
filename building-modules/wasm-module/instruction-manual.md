@@ -1,5 +1,5 @@
-# OKC Wasm Instruction Manual
-This manual will mainly discuss how to use CLI commands on OKC for all actions regarding wasm smart contracts.
+# OKTC Wasm Instruction Manual
+This manual will mainly discuss how to use CLI commands on OKTC for all actions regarding wasm smart contracts.
 ## What is wasm smart contract?
 Wasm smart contracts are smart contracts that operated on wasm virtual machine. More advanced than EVM, wasm virtual machine possesses the following advantages:
 1. Faster speed, lower gas consumption
@@ -9,9 +9,9 @@ Wasm smart contracts are smart contracts that operated on wasm virtual machine. 
 > Currently speaking, Rust is the main programming language used for developing wasm contracts
 ## Environment configuration
 ### Install essential tools
-   In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKC chain.
-#### Install OKC
-   Make sure you have the OKC application installed, [installation instructions](/dev/quick-start/install-okc.html).
+   In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKTC chain.
+#### Install OKTC
+   Make sure you have the OKTC application installed, [installation instructions](/dev/quick-start/install-oktc.html).
 #### Install Rust
    Install Rust environment (Linux or MacOS), [installation instructions](https://rustup.rs/).
    After installing Rust, you need to confirm your machine has wasm32 target
@@ -38,7 +38,7 @@ apt install jq curl
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
 #### Mainnet
-Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-okc-mainnet.html).
+Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet.html).
 
 Configure your exchaincli
 ```Bash
@@ -50,7 +50,7 @@ exchaincli config node https://exchaintmrpc.okex.org
 ```
 > Wasm is not enabled on mainnet now.
 #### Testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKC for developing OKC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-okc-testnet.html).
+Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet.html).
 
 Configure your exchaincli
 ```Bash 
@@ -62,7 +62,7 @@ exchaincli config trust-node true
 exchaincli config node https://exchaintesttmrpc.okex.org
 ```
 #### Local testnet
-Download the OKC source code and set up the OKC local testnet through the script we provide.
+Download the OKTC source code and set up the OKTC local testnet through the script we provide.
 
 ```Bash
 git clone https://github.com/okx/exchain.git
@@ -75,7 +75,7 @@ With start.sh, there is no need to configure `exchaincli`
 ### Set up IDE
 We need a decent IDE in order to use Rust for developing smart contracts. We strongly recommend using the following development environments; along with the Rust plugin, they provide users with a beginner friendly program language learning environment.
 
-Use the standard IDE and Rust plugin for developing OKC wasm contracts
+Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 
 | IDE | Plugin | Description |
 | :-----| :------------------- | :----: |
@@ -84,7 +84,7 @@ Use the standard IDE and Rust plugin for developing OKC wasm contracts
 
 
 ## Deploying CW20 taught by hand
-[CW20's](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw20) contract standard is similar to that of ERC20, and [cw20-base](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-base) is a basic implementation of the CW20 standard. Next, we will take the cw20-base contract as an example to introduce the entire process of smart contracts on OKCWasm from compilation to deployment and interaction. Content is applicable to all learners, regardless of experience with Rust and Go. The goal of this section is to provide easy to understand instructions and a first-hand experience for first-time users with the following step-by-step guide.
+[CW20's](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw20) contract standard is similar to that of ERC20, and [cw20-base](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-base) is a basic implementation of the CW20 standard. Next, we will take the cw20-base contract as an example to introduce the entire process of smart contracts on OKTCWasm from compilation to deployment and interaction. Content is applicable to all learners, regardless of experience with Rust and Go. The goal of this section is to provide easy to understand instructions and a first-hand experience for first-time users with the following step-by-step guide.
 - **Compile contract**: demonstrate how to download and compile wasm bytecode file from smart contract code.
 - **Optimize compilation**: demonstrate how to optimize a wasm bytecode file to the most suitable size.
 - **Upload contract code**: demonstrate how to upload compiled contract code (wasm file) to blockchain.
@@ -93,7 +93,7 @@ Use the standard IDE and Rust plugin for developing OKC wasm contracts
 - **Query contract**: demonstrate how to query contract's internal state.  
 
 
-  You may have already noticed some areas of smart contract compilation we have yet to mention in this section. This section has been deliberately tailored to make it as easy to understand as possible, avoiding the risk of falling victim to the hardships of smart contract development. If you want to learn more about OKCWasm contract code development, you can refer to [CosmWasm](https://docs.cosmwasm.com/docs/1.0/getting-started/intro) document, because OKCWasm is developed based on CosmWasm.
+  You may have already noticed some areas of smart contract compilation we have yet to mention in this section. This section has been deliberately tailored to make it as easy to understand as possible, avoiding the risk of falling victim to the hardships of smart contract development. If you want to learn more about OKTCWasm contract code development, you can refer to [CosmWasm](https://docs.cosmwasm.com/docs/1.0/getting-started/intro) document, because OKTCWasm is developed based on CosmWasm.
 
 ### Contract compliation
 1. Pull cw20-base contract code offered by the official directory
@@ -116,7 +116,7 @@ The final deployment and interaction of the contract only requires `cw20_base.wa
 > If the size of the wasm file compiled by your own contract through the above operations is too large, it will consume a high amount of gas when uploading the contract code. So in order to reduce gas costs, you need to use the optimized compiler (hyperlink in subsection below) wasm file.
 
 ### Optimized compiler (optional)
-To keep gas costs down, the binary size should be as small as possible. This will lower deployment costs and lower the cost per interaction. You can use [rust-optimizer](https://github.com/CosmWasm/rust-optimizer) to optimize the production code. Generate repeatable builds of OKCWasm smart contracts. This means that a third party can verify that the contract is actually the declared code.
+To keep gas costs down, the binary size should be as small as possible. This will lower deployment costs and lower the cost per interaction. You can use [rust-optimizer](https://github.com/CosmWasm/rust-optimizer) to optimize the production code. Generate repeatable builds of OKTCWasm smart contracts. This means that a third party can verify that the contract is actually the declared code.
 
 **Note: You need to install [Docker](https://www.docker.com/) before you can use rust-optimizer.**
 
@@ -130,7 +130,7 @@ cosmwasm/rust-optimizer:0.12.6
 After compilation optimization is complete, the optimized wasm file will be outputted to ./artifacts/cw20-base.wasm
 ### Upload contract code
 ```Bash
-# upload the wasm code to OKC and you will get a code id.
+# upload the wasm code to OKTC and you will get a code id.
 
 exchaincli tx wasm store ./cw-plus/target/wasm32-unknown-unknown/release/cw20_base.wasm --from captain --fees 0.001okt --gas 3000000 -b block -y
 ```
@@ -487,7 +487,7 @@ The admin account can clear the admin account, after which no account can upgrad
 
 exchaincli tx wasm clear-contract-admin <contractAddr> --from <admin_address> --fees <fees> --gas <gas> -b block -y
 ```
-In addition, OKC also provides a proposal function, and validators can upgrade contracts and clear the admin account of a specific contract through proposals and voting.
+In addition, OKTC also provides a proposal function, and validators can upgrade contracts and clear the admin account of a specific contract through proposals and voting.
 
 ### Who can call a contract?
 Generally speaking, anyone can initiate a call to any contract, but the contract upgrade may cause the interface to change and cause the old contract interface to render invalid, so the old interface will no longer be able to be called.
@@ -501,7 +501,7 @@ Or when there is a loophole in the contract, the validator can add a specific in
 ### Transaction related actions
 #### 1. Upload a wasm binary
 ```Bash
-# upload the wasm code to OKC and you will get a code id.
+# upload the wasm code to OKTC and you will get a code id.
 # e.g.
 #    <path_to_wasm_file>=./cw-plus/target/wasm32-unknown-unknown/release/cw20_base.wasm
 #    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
