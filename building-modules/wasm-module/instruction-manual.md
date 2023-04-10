@@ -1,12 +1,5 @@
 # OKTC Wasm Instruction Manual
 This manual will mainly discuss how to use CLI commands on OKTC for all actions regarding wasm smart contracts.
-## What is wasm smart contract?
-Wasm smart contracts are smart contracts that operated on wasm virtual machine. More advanced than EVM, wasm virtual machine possesses the following advantages:
-1. Faster speed, lower gas consumption
-2. Supports more complex contracts
-3. Supports Rust, Go, C/C++ and other popular programming languages for developing contracts
-4. Cosmos IBC Can seamlessly connect with Cosmos IBC
-> Currently speaking, Rust is the main programming language used for developing wasm contracts
 ## Environment configuration
 ### Install essential tools
    In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKTC chain.
@@ -37,7 +30,7 @@ apt install jq curl
 
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
-#### Mainnet
+#### OKTC Mainnet
 Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet.html).
 
 Configure your exchaincli
@@ -49,7 +42,7 @@ exchaincli config trust-node true
 exchaincli config node https://exchaintmrpc.okex.org
 ```
 > Wasm is not enabled on mainnet now.
-#### Testnet
+#### OKTC Testnet
 Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet.html).
 
 Configure your exchaincli
@@ -61,8 +54,8 @@ exchaincli config trust-node true
 # exchaincli config node <host>:<port>
 exchaincli config node https://exchaintesttmrpc.okex.org
 ```
-#### Local testnet
-Download the OKTC source code and set up the OKTC local testnet through the script we provide.
+#### Local net
+Download the OKTC source code and set up the OKTC local net through the script we provide.
 
 ```Bash
 git clone https://github.com/okx/exchain.git
@@ -71,7 +64,7 @@ sh start.sh
 ```
 With start.sh, there is no need to configure `exchaincli`
 
-**Note: the following actions are all done with the local testnet, if you would like to use mainnet/testnet, please modify `--from` flag.**
+**Note: the following actions are all done with the local net, if you would like to use mainnet/testnet, please modify `--from` flag.**
 ### Set up IDE
 We need a decent IDE in order to use Rust for developing smart contracts. We strongly recommend using the following development environments; along with the Rust plugin, they provide users with a beginner friendly program language learning environment.
 
@@ -420,224 +413,3 @@ The cw20 balance of `ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0` is expected to b
 {"data":{"balance":"100"}}
 ```
 
-## Wasm contract upgrade
-Contract upgrades is a unique feature of wasm contracts. Developers can call the Migrate method to upgrade contracts. For example, the developer uploads two sets of wasm codes, and the code IDs are 1 and 2. The developer initializes a contract `A` based on code 1, and the developer can upgrade the underlying code of contract `A` to code 2, and the contract address remains unchanged. After the upgrade, users can use the calling interface and parameters defined in the schema file of code 2 to call the contract.
-```Bash
-# migrate contract to new code id, <instantiate_message> is the instantiate message of the new code defined in json schema
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <new_code_id>=2
-#    <instantiate_message>="" (refer to the schema file of the new code)
-#    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm migrate <contractAddr> <new_code_id> <instantiate_message> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-## Permissions management for wasm smart contracts
-### Who can upload the wasm code?
-   It is controlled by the wasm contract deployment whitelist, which can be updated through proposals, and only addresses in the whitelist can upload the wasm code.
-### Who can initialize a contract?
-   Ownership can usually be specified when uploading a contract, and there are 3 kinds of ownership that can be specified.
-1. Anyone can use this code to initialize the contract, which defaults to this owner when no explicit owner is specified
-```Bash
-exchaincli tx wasm store <path_to_wasm_file> --instantiate-everybody=true --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-2. A specific address can initialize the contract with this code. For example, only `ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3vcan` can initialize
-```Bash
-exchaincli tx wasm store <path_to_wasm_file> --instantiate-only-address=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-3. No one can use this code to initialize contracts
-```Bash
-exchaincli tx wasm store <path_to_wasm_file> --instantiate-nobody=true --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-### Who can upgrade a contract?
-   When the developer initializes the contract, he/she can usually specify an admin address, which is usually the from address of the initialized contract. Only the admin account can upgrade the contract.
-```Bash
-# migrate contract to new code id, <instantiate_message> is the instantiate message of the new code defined in json schema
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <new_code_id>=2
-#    <instantiate_message>="{}"
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm migrate <contractAddr> <new_code_id> <instantiate_message> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-The admin account can be transferred, but only the admin account can initiate this action. After the transfer, the old admin account will lose the admin rights, and the new admin account will gain all the admin rights.
-```Bash
-# transfer admin to a new address
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <new_admin_address>=ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm set-contract-admin <contractAddr> <new_admin_address> --from <admin_address> --fees <fees> --gas <gas> -b block -y
-```
-The admin account can clear the admin account, after which no account can upgrade the contract
-```Bash
-# clear admin of the contract
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm clear-contract-admin <contractAddr> --from <admin_address> --fees <fees> --gas <gas> -b block -y
-```
-In addition, OKTC also provides a proposal function, and validators can upgrade contracts and clear the admin account of a specific contract through proposals and voting.
-
-### Who can call a contract?
-Generally speaking, anyone can initiate a call to any contract, but the contract upgrade may cause the interface to change and cause the old contract interface to render invalid, so the old interface will no longer be able to be called.
-   
-Or when there is a loophole in the contract, the validator can add a specific interface of a specific contract to the blacklist through proposals and voting, and subsequent calls to the contract interface will render invalid.
-   
-## Pin Codes
-   The underlying principle of pin operation is to load wasm code into memory. The validator can pin the specified wasm code through the proposal and the specified code ID. Subsequent contract initialization and contract invocation based on the wasm code will significantly reduce gas consumption and achieve faster execution speed. Unpin is the inverse operation of pin. 
-
-## Wasm smart contract developer operational repertoire
-### Transaction related actions
-#### 1. Upload a wasm binary
-```Bash
-# upload the wasm code to OKTC and you will get a code id.
-# e.g.
-#    <path_to_wasm_file>=./cw-plus/target/wasm32-unknown-unknown/release/cw20_base.wasm
-#    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm store <path_to_wasm_file> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-#### 2. Instantiate a wasm contract
-```Bash
-# Instantiate a contract with the uploaded code. We can use the code we upload in previous step.
-# e.g.
-#    <code_id>=1
-#    <instantiate_message>
-#    <label>=test (label can be any human readable string)
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v (usually same as <from_address_or_name>)
-#    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm instantiate <code_id> <instantiate_message> --label <label> --admin <admin_address> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-#### 3. Execute a command on a wasm contract
-```Bash
-# Call the contract with execute message defined in schema json.
-# e.g.
-#    <contract_address>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <execute_message>=?
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v (usually same as <from_address_or_name>)
-#    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm execute <contract_address> <execute_message> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-#### 4. Migrate a wasm contract to a new code version
-```Bash
-# migrate contract to new code id, <instantiate_message> is the instantiate message of the new code defined in json schema
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <new_code_id>=2
-#    <instantiate_message>="" (refer to the schema file)
-#    <from_address_or_name>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm migrate <contractAddr> <new_code_id> <instantiate_message> --from <from_address_or_name> --fees <fees> --gas <gas> -b block -y
-```
-#### 5. Set new admin for a contract
-```Bash
-# transfer admin to a new address
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <new_admin_address>=ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm set-contract-admin <contractAddr> <new_admin_address> --from <admin_address> --fees <fees> --gas <gas> -b block -y
-```
-#### 6. Clear admin for a contract to prevent further migrations
-```Bash
-# clear admin of the contract
-# e.g.
-#    <contractAddr>=ex1eyfccmjm6732k7wp4p6gdjwhxjwsvje44j0hfx8nkgrm8fs7vqfsfxfyxv
-#    <admin_address>=ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
-#    <fees>=0.01okt
-#    <gas>=3000000
-
-exchaincli tx wasm clear-contract-admin <contractAddr> --from <admin_address> --fees <fees> --gas <gas> -b block -y
-```
-
-### Query related actions
-#### 1. Query all code information on the chain, including code_id, uploader address, code_hash and contract initialization authority
-```Bash
-exchaincli query wasm list-code
-```
-#### 2. Query all contracts corresponding to a given code id (a single wasm code can initialize multiple contracts)
-```Bash
-# e.g.
-#    <code_id>=1
-
-exchaincli query wasm list-contract-by-code <code_id>
-```
-#### 3. Download wasm code to local
-```Bash
-# Download wasm bytecode and save to file
-# e.g.
-#    <code_id>=1
-#    <filename>=test.wasm
-
-exchaincli query wasm code <code_id> <filename>
-```
-#### 4. Query code information, including code_id, uploader address, code_hash and contract initialization authority
-```Bash
-# e.g.
-#    <code_id>=1
-
-exchaincli query wasm code-info <code_id>
-```
-#### 5. Query contract information, including the code id, code uploader address, admin account and other information respective to the contract
-```Bash
-# e.g.
-#    <contract_address>=ex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27
-
-exchaincli query wasm contract <contract_address>
-```
-#### 6. Query the history of contract actions, including contract initialization actions and contract upgrade actions
-```Bash
-# e.g.
-#    <contract_address>=ex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27
-
-exchaincli query wasm contract-history <contract_address>
-```
-#### 7. Query contract status
-- List all status information of this contract
-```Bash
-# e.g.
-#    <contract_address>=ex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27
-
-exchaincli query wasm contract-state all <contract_address>
-```
-- Specify query parameters to query the status of the contract
-```Bash
-# e.g.
-#    <contract_address>=ex14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s6fqu27
-#    <query_message>='{"balance":{"address":"ex190227rqaps5nplhg2tg8hww7slvvquzy0qa0l0"}}'
-# you should refer to the schema file for query message
-
-exchaincli query wasm contract-state smart <contract_address> <query_message>
-```
-#### 8. List all pinned codes
-```Bash
-exchaincli query wasm pinned
-```
-#### 9. Query version number of wasmvm
-```Bash
-  exchaincli query wasm libwasmvm-version
-```

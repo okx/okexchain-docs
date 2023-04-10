@@ -155,5 +155,5 @@ The above only shows how to connect OKTC nodes through CosmWasmJS, the actions f
 | 31 | sign | Sign  transaction| Y |SigningCosmWasmClient  |  |
 
 ## Example
-We provide a Webpack [demo](https://github.com/okx/comswasmjs-client) example. You can follow this example to interact with OKTC through your browser and Keplr wallet using CosmWasmJS and Webpack.
-And we also provide another [demo](https://github.com/okx/comswasmjs-demo) example. You can create evm compatible address with oks.js. 
+We provide a Webpack [demo](https://github.com/okx/cosmwasmjs-client) example. You can follow this example to interact with OKTC through your browser and Keplr wallet using CosmWasmJS and Webpack.
+And we also provide another [demo](https://github.com/okx/cosmwasmjs-demo) example. You can create evm compatible address with oks.js. 
