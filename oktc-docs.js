@@ -138,6 +138,7 @@ module.exports = [
         children: [
           "dev/building-modules/ibc-module/ibc",
           "dev/building-modules/ibc-module/ibc-cli",
+          "dev/building-modules/ibc-module/ibc-erc20",
         ],
       },
       {
