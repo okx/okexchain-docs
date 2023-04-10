@@ -1,4 +1,4 @@
-# Wasm Overview 
+# Overview 
 WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications or working as a virtual machine on blockchain.
 
 Wasm of OKTC is developed based on [CosmWasm](https://docs.cosmwasm.com/docs/1.0/). CosmWasm is a smart contracting platform built for the Cosmos ecosystem. Simply put, it's the Cosmos way of using WebAssembly hence the name.
@@ -32,21 +32,3 @@ The relationship of different parts and the internal framework of CosmWasm is as
 ![](../../img/wasm-module-architecture.jpeg)
 ### More information  
    For more information, please refer to [architecture](https://docs.cosmwasm.com/docs/1.0/architecture/multichain).
-
-## Wasm Smart Contract
-### Advantages compared to EVM and solidity
-   Wasm's smart contract operates on wasm virtual machine's smart contract. Wasm virtual machine is more advanced than EVM, these are its main advantages:
-1. Faster speed, lower gas consumption
-2. Can operate more complex contracts
-3. Supports Rust, Go, C/C++ and other popular programming languages for developing contracts
-4. Cosmos IBC Can seamlessly link with Cosmos IBC
-   Currently speaking, Rust is the main programming language used for developing wasm contracts
-### Advanced tutorials for further learning
-   Smart contract aims to clarify the semantics of how a CosmWasm contract interacts with its environment and data structure of a CosmWasm contract. Learn demonstrates developing smart contracts from zero to production with step by step explanations, code snippets, scripts and more.
-- [Dev Academy](https://docs.cosmwasm.com/dev-academy/intro) provides structured learning content starting from basics of blockchains and smart contracts to Cosmos SDK, CosmWasm smart contracts and clients.
-- [Tutorials](https://docs.cosmwasm.com/tutorials/hijack-escrow/intro) demonstrates developing smart contracts from zero to production with step by step explanations, code snippets, scripts, and more.
-- [Workshops](https://docs.cosmwasm.com/tutorials/videos-workshops) has a great collection of demonstrations and verbal explanations of CosmWasm tech stack recorded in various events and organizations.
-- [Plus](https://docs.cosmwasm.com/cw-plus/0.9.0/overview) is for state-of-the-art, production ready CosmWasm smart contracts.
-- [Repository](https://github.com/CosmWasm/cosmwasm) has more code details for CosmWasm.   
-
-> Wasm has no gas refund compared to evm.

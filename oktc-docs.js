@@ -141,17 +141,6 @@ module.exports = [
         ],
       },
       {
-        title: "WASM MODULE",
-        collapsable: false,
-        children: [
-          "dev/building-modules/wasm-module/overview",
-          "dev/building-modules/wasm-module/instruction-manual",
-          "dev/building-modules/wasm-module/vmbridge",
-          "dev/building-modules/wasm-module/cosmwasmjs",
-          'dev/building-modules/wasm-module/bytecraft'
-        ],
-      },
-      {
         title: "GAS BACK MODULE",
         collapsable: false,
         children: [
@@ -212,32 +201,80 @@ module.exports = [
     title: "Smart Contract",
     children: [
       {
-        title: "DEPLOYMENT",
-        collapsable: false,
+        title: "EVM SMART CONTRACT",
+        collapsable: true,
         children: [
-          "dev/smart-contracts/deployment/remix",
-          "dev/smart-contracts/deployment/truffle",
-        ],
+          {
+            title: "DEPLOYMENT",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/deployment/remix",
+              "dev/smart-contracts/deployment/truffle"
+            ]
+          },
+          {
+            title: "CONTRACT VERIFICATION",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/verify-contract/verify-contract",
+              "dev/smart-contracts/verify-proxy-contract/verify-proxy-contract"
+            ]
+          },
+          {
+            title: "KIP STANDARD",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/kip-standard/KIP20/introduction"
+            ]
+          },
+          {
+            title: "CONTRACT DEVELOPMENT FAQ ",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ"
+            ]
+          }
+        ]
       },
       {
-        title: "CONTRACT VERIFICATION",
-        collapsable: false,
+        title: "WASM SMART CONTRACT",
+        collapsable: true,
         children: [
-          "dev/smart-contracts/verify-contract/verify-contract",
-          "dev/smart-contracts/verify-proxy-contract/verify-proxy-contract",
-        ],
-      },
-      {
-        title: "KIP STANDARD",
-        collapsable: false,
-        children: ["dev/smart-contracts/kip-standard/KIP20/introduction"],
-      },
-      {
-        title: "CONTRACT DEVELOPMENT FAQ ",
-        collapsable: false,
-        children: [
-          "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ",
-        ],
+          {
+            title: "Get started",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/overview",
+              "dev/building-modules/wasm-module/wasm-contract",
+              "dev/building-modules/wasm-module/instruction-manual"
+            ]
+          },
+          {
+            title: "Developer Guides",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/cosmwasmcli",
+              "dev/building-modules/wasm-module/cosmwasmjs",
+              "dev/building-modules/wasm-module/bytecraft"
+            ]
+          },
+          {
+            title: "Best Practices",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/vmbridge"
+            ]
+          },
+          {
+            title: "FAQs",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/contract-upgrade",
+              "dev/building-modules/wasm-module/contract-permissions",
+              "dev/building-modules/wasm-module/pincode"
+            ]
+          }
+        ]
       },
     ],
   },
