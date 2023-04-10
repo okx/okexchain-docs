@@ -18,7 +18,7 @@ We anticipate that network requirements will be low initially. The current testn
 
 ## Set Up a Website
 
-Set up a dedicated validator website and signal your intention to become a validator on our [chat](https://t.me/OKExChainValidator). This is an important point since delegators will want to access essential information about the entity they are delegating their OKTs to.
+Set up a dedicated validator website and signal your intention to become a validator. This is an important point since delegators will want to access essential information about the entity they are delegating their OKTs to.
 
 
 ## Community

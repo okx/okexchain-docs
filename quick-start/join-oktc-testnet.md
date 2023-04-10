@@ -143,7 +143,7 @@ Your full node has been cleanly upgraded!
 
 ### Upgrade to Validator Node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.md).
+You now have an active full node. What's the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.html).
 
 # Join the Public Testnet With Docker
 ## Run OKTC testnet fullnode with docker
