@@ -177,6 +177,12 @@ Then, exit the bytecraft console and deploy the `my-wasm-dapp` smart contract to
 bytecraft deploy my-wasm-dapp --signer test --network testnet
 ```
 
+By the way, there is no admin of  my-wasm-dapp contract by default, if you want to specifiy the admin, you can use `--admin-address` flag, for example:
+
+```shell
+bytecraft deploy my-wasm-dapp --signer test --network testnet --admin-address ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
+```
+
 After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any OKTC network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
 
 ```json
@@ -428,6 +434,12 @@ bytecraft console
 
 bytecraft > wallets.alice.address
 'ex1g0xzwvmm7mwxck5fw9y8pygq98gep9lx6m2l6e'
+```
+
+By the way, there is no admin of  my-wasm-dapp contract by default, if you want to specifiy the admin, you can use `--admin-address` flag, for example:
+
+```shell
+bytecraft deploy my-wasm-dapp --signer test --network mainnet --admin-address ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v
 ```
 
 Then, exit the bytecraft console and deploy the `my-wasm-dapp` smart contract to testnet with the `test` account as the signer.
