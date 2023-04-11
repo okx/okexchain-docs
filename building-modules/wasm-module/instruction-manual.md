@@ -77,7 +77,7 @@ Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 
 
 ## Deploying CW20 taught by hand
-[CW20's](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw20) contract standard is similar to that of ERC20, and [cw20-base](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-base) is a basic implementation of the CW20 standard. Next, we will take the cw20-base contract as an example to introduce the entire process of smart contracts on OKTCWasm from compilation to deployment and interaction. Content is applicable to all learners, regardless of experience with Rust and Go. The goal of this section is to provide easy to understand instructions and a first-hand experience for first-time users with the following step-by-step guide.
+[CW20's](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw20) contract standard is similar to that of ERC20, and [cw20-base](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-base) is a basic implementation of the CW20 standard. Next, we will take the cw20-base contract as an example to introduce the entire process of smart contracts on OKTC wasm from compilation to deployment and interaction. Content is applicable to all learners, regardless of experience with Rust and Go. The goal of this section is to provide easy to understand instructions and a first-hand experience for first-time users with the following step-by-step guide.
 - **Compile contract**: demonstrate how to download and compile wasm bytecode file from smart contract code.
 - **Optimize compilation**: demonstrate how to optimize a wasm bytecode file to the most suitable size.
 - **Upload contract code**: demonstrate how to upload compiled contract code (wasm file) to blockchain.
@@ -86,7 +86,7 @@ Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 - **Query contract**: demonstrate how to query contract's internal state.  
 
 
-  You may have already noticed some areas of smart contract compilation we have yet to mention in this section. This section has been deliberately tailored to make it as easy to understand as possible, avoiding the risk of falling victim to the hardships of smart contract development. If you want to learn more about OKTCWasm contract code development, you can refer to [CosmWasm](https://docs.cosmwasm.com/docs/1.0/getting-started/intro) document, because OKTCWasm is developed based on CosmWasm.
+  You may have already noticed some areas of smart contract compilation we have yet to mention in this section. This section has been deliberately tailored to make it as easy to understand as possible, avoiding the risk of falling victim to the hardships of smart contract development. If you want to learn more about OKTC wasm contract code development, you can refer to [CosmWasm](https://github.com/CosmWasm/docs/blob/archive/docs/02-getting-started/01-intro.md) document, because OKTCWasm is developed based on CosmWasm.
 
 ### Contract compliation
 1. Pull cw20-base contract code offered by the official directory
@@ -109,7 +109,7 @@ The final deployment and interaction of the contract only requires `cw20_base.wa
 > If the size of the wasm file compiled by your own contract through the above operations is too large, it will consume a high amount of gas when uploading the contract code. So in order to reduce gas costs, you need to use the optimized compiler (hyperlink in subsection below) wasm file.
 
 ### Optimized compiler (optional)
-To keep gas costs down, the binary size should be as small as possible. This will lower deployment costs and lower the cost per interaction. You can use [rust-optimizer](https://github.com/CosmWasm/rust-optimizer) to optimize the production code. Generate repeatable builds of OKTCWasm smart contracts. This means that a third party can verify that the contract is actually the declared code.
+To keep gas costs down, the binary size should be as small as possible. This will lower deployment costs and lower the cost per interaction. You can use [rust-optimizer](https://github.com/CosmWasm/rust-optimizer) to optimize the production code. Generate repeatable builds of OKTC wasm smart contracts. This means that a third party can verify that the contract is actually the declared code.
 
 **Note: You need to install [Docker](https://www.docker.com/) before you can use rust-optimizer.**
 

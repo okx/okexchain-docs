@@ -1,14 +1,14 @@
 # Overview 
 WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications or working as a virtual machine on blockchain.
 
-Wasm of OKTC is developed based on [CosmWasm](https://docs.cosmwasm.com/docs/1.0/). CosmWasm is a smart contracting platform built for the Cosmos ecosystem. Simply put, it's the Cosmos way of using WebAssembly hence the name.
+Wasm of OKTC is developed based on [CosmWasm](https://github.com/CosmWasm/cosmwasm). CosmWasm is a smart contracting platform built for the Cosmos ecosystem. Simply put, it's the Cosmos way of using WebAssembly hence the name.
 
 CosmWasm is written as a module that can be plugged into the Cosmos SDK. This means that anyone currently building a blockchain using the Cosmos SDK can quickly and easily add CosmWasm smart contracting support to their chain, without adjusting existing logic.
 
 [Rust](https://www.rust-lang.org/) is currently the most used programming language for CosmWasm. It is possible to have different programming languages like [AssemblyScript](https://www.assemblyscript.org/) in the future. Other programming languages are not recommended for now and will not be introduced.
 
 - [Architecture](#Architecture) explains much of the high-level design and architecture of CosmWasm. It is crucial to understand the mental model and capabilities of the system before designing products using it. However, if you prefer to learn by coding then you can skip this section and visit as you need it.
-- [Wasm Smart Contract](#Wasm-Smart-Contract) introduces what wasm contract is and how to develop wasm contract.
+- [Wasm Smart Contract](/dev/building-modules/wasm-module/wasm-contract.html) introduces what wasm contract is and how to develop wasm contract.
 
 ## Architecture
 
@@ -31,4 +31,4 @@ CosmWasm is written as a module that can be plugged into the Cosmos SDK. This me
 The relationship of different parts and the internal framework of CosmWasm is as shown in the diagram below:
 ![](../../img/wasm-module-architecture.jpeg)
 ### More information  
-   For more information, please refer to [architecture](https://docs.cosmwasm.com/docs/1.0/architecture/multichain).
+For more information, please refer to [architecture](https://github.com/CosmWasm/docs/tree/archive/docs/03-architecture).
