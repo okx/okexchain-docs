@@ -94,39 +94,70 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file in the project, There predefined three networks for you:
+About Instantiating wasm contract, we need provide a instantiate msg, it is defined in the `config.json` file. There is a default msg in `_global._base` section, is for all contracts. If you want to specify instantiate msg for different contrats, you can add the bleow content to `_global` section in the `config.json` file, also add it to the network section in the `config.json` file.
+
+```json
+"contracts": {
+	"mydapp": {
+	"instantiation": {
+        "instantiateMsg": {
+          "count": 1
+        }
+      }	
+	}	
+ }
+```
+
+The config.json
 
 ```json
 {
-  "_global": {
-    "_base": {
-      "instantiation": {
-        "instantiateMsg": {
-          "count": 0
+    "_global":{
+        "_base":{
+            "instantiation":{
+                "instantiateMsg":{
+                    "count":0
+                }
+            }
+        },
+        "contracts":{
+            "mydapp":{
+                "instantiation":{
+                    "instantiateMsg":{
+                        "count":1
+                    }
+                }
+            }
         }
-      }
+    },
+    "mainnet":{
+        "_connection":{
+            "chainID":"exchain-66",
+            "URL":"https://exchaintmrpc.okex.org"
+        }
+    },
+    "testnet":{
+        "_connection":{
+            "chainID":"exchain-65",
+            "URL":"https://exchaintesttmrpc.okex.org"
+        }
+    },
+    "localnet":{
+        "_connection":{
+            "chainID":"exchain-67",
+            "URL":"http://localhost:26657"
+        },
+        "contracts":{
+            "mydapp":{
+                "instantiation":{
+                    "instantiateMsg":{
+                        "count":1
+                    }
+                }
+            }
+        }
     }
-  },
-  "mainnet": {
-    "_connection": {
-      "chainID": "exchain-66",
-      "URL": "https://exchaintmrpc.okex.org"
-    }
-  },
-  "testnet": {
-    "_connection": {
-      "chainID": "exchain-65",
-      "URL": "https://exchaintesttmrpc.okex.org"
-    }
-  },
-  "localnet": {
-    "_connection": {
-      "chainID": "exchain-67",
-      "URL": "http://localhost:26657"
-    }
-  }
 }
-
 ```
 
 To deploy your new my-wasm-dapp smart contract on OKTC testnet, run the following command in the terminal with extral flag `--network testnet`.
@@ -191,7 +222,7 @@ After deployment, the `refs.json` file will be updated in the project directory.
     "counter": {
       "codeId": "1",
       "contractAddresses": {
-        "default": "ex10qt8wg0n7z740ssvf3urmvgtjhxpyp74hxqvqt7z226gykuus7equ3f4hk"
+        "default": "0xf30CFD51817C35b87e6897a0d66553827cf35479"
       }
     }
   },
@@ -199,7 +230,7 @@ After deployment, the `refs.json` file will be updated in the project directory.
     "my-wasm-dapp": {
       "codeId": "18160",
       "contractAddresses": {
-        "default": "ex1wr6vc3g4caz9aclgjacxewr0pjlre9wl2uhq73rp8mawwmqaczsq6p3y6f"
+        "default": "0xf30CFD51817C35b87e6897a0d66553827cf35479"
       }
     }
   }
@@ -359,39 +390,70 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file in the project, There predefined three networks for you:
+About Instantiating wasm contract, we need provide a instantiate msg, it is defined in the `config.json` file. There is a default msg in `_global._base` section, is for all contracts. If you want to specify instantiate msg for different contrats, you can add the bleow content to `_global` section in the `config.json` file, also add it to the network section in the `config.json` file.
 
-```
-{
-  "_global": {
-    "_base": {
-      "instantiation": {
+```json
+"contracts": {
+	"mydapp": {
+	"instantiation": {
         "instantiateMsg": {
-          "count": 0
+          "count": 1
         }
-      }
-    }
-  },
-  "mainnet": {
-    "_connection": {
-      "chainID": "exchain-66",
-      "URL": "https://exchaintmrpc.okex.org"
-    }
-  },
-  "testnet": {
-    "_connection": {
-      "chainID": "exchain-65",
-      "URL": "https://exchaintesttmrpc.okex.org"
-    }
-  },
-  "localnet": {
-    "_connection": {
-      "chainID": "exchain-67",
-      "URL": "http://localhost:26657"
-    }
-  }
-}
+      }	
+	}	
+ }
+```
 
+The config.json
+
+```json
+{
+    "_global":{
+        "_base":{
+            "instantiation":{
+                "instantiateMsg":{
+                    "count":0
+                }
+            }
+        },
+        "contracts":{
+            "mydapp":{
+                "instantiation":{
+                    "instantiateMsg":{
+                        "count":1
+                    }
+                }
+            }
+        }
+    },
+    "mainnet":{
+        "_connection":{
+            "chainID":"exchain-66",
+            "URL":"https://exchaintmrpc.okex.org"
+        }
+    },
+    "testnet":{
+        "_connection":{
+            "chainID":"exchain-65",
+            "URL":"https://exchaintesttmrpc.okex.org"
+        }
+    },
+    "localnet":{
+        "_connection":{
+            "chainID":"exchain-67",
+            "URL":"http://localhost:26657"
+        },
+        "contracts":{
+            "mydapp":{
+                "instantiation":{
+                    "instantiateMsg":{
+                        "count":1
+                    }
+                }
+            }
+        }
+    }
+}
 ```
 
 To deploy your new my-wasm-dapp smart contract on OKTC mainnet, run the following command in the terminal with extral flag `--network mainnet`.
@@ -456,15 +518,15 @@ After deployment, the `refs.json` file will be updated in the project directory.
     "counter": {
       "codeId": "1",
       "contractAddresses": {
-        "default": "ex10qt8wg0n7z740ssvf3urmvgtjhxpyp74hxqvqt7z226gykuus7equ3f4hk"
+        "default": "0xf30CFD51817C35b87e6897a0d66553827cf35479"
       }
     }
   },
-  "testnet": {
+  "mainnet": {
     "my-wasm-dapp": {
-      "codeId": "18160",
+      "codeId": "1999",
       "contractAddresses": {
-        "default": "ex1wr6vc3g4caz9aclgjacxewr0pjlre9wl2uhq73rp8mawwmqaczsq6p3y6f"
+        "default": "0xf30CFD51817C35b87e6897a0d66553827cf35479"
       }
     }
   }
