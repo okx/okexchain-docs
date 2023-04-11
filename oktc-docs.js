@@ -206,7 +206,7 @@ module.exports = [
         collapsable: true,
         children: [
           {
-            title: "DEPLOYMENT",
+            title: "Deployment",
             collapsable: false,
             children: [
               "dev/smart-contracts/deployment/remix",
@@ -214,7 +214,7 @@ module.exports = [
             ]
           },
           {
-            title: "CONTRACT VERIFICATION",
+            title: "Contract Verification",
             collapsable: false,
             children: [
               "dev/smart-contracts/verify-contract/verify-contract",
@@ -222,14 +222,14 @@ module.exports = [
             ]
           },
           {
-            title: "KIP STANDARD",
+            title: "KIP Standard",
             collapsable: false,
             children: [
               "dev/smart-contracts/kip-standard/KIP20/introduction"
             ]
           },
           {
-            title: "CONTRACT DEVELOPMENT FAQ ",
+            title: "Contract Development FAQs",
             collapsable: false,
             children: [
               "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ"
@@ -242,7 +242,7 @@ module.exports = [
         collapsable: true,
         children: [
           {
-            title: "Get started",
+            title: "Getting Started",
             collapsable: true,
             children: [
               "dev/building-modules/wasm-module/overview",
@@ -272,7 +272,8 @@ module.exports = [
             children: [
               "dev/building-modules/wasm-module/contract-upgrade",
               "dev/building-modules/wasm-module/contract-permissions",
-              "dev/building-modules/wasm-module/pincode"
+              "dev/building-modules/wasm-module/pincode",
+              "dev/building-modules/wasm-module/contract-tutorial",
             ]
           }
         ]
