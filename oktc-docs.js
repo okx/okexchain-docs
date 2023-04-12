@@ -323,7 +323,7 @@ module.exports = [
             title: "Introduction to OKTC VRF",
             collapsable: false,
             children: [
-              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKTC-VRF/OKTC-VRF",
+              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKC-VRF/OKC-VRF",
             ],
           },
           {
@@ -342,7 +342,7 @@ module.exports = [
             children: [
               "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method",
               "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Get-a-Random-Number/Get-a-Random-Number",
-              "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supproted-Networks/Supproted-Networks",
+              "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks",
             ],
           },
           {
