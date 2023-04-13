@@ -1,5 +1,5 @@
 # Queries 
-The subgraph can be queried to retrieve important information about OKCSwap, pairs, tokens, transactions, users, and more. This page will provide examples for common queries.
+The subgraph can be queried to retrieve important information about Swap, pairs, tokens, transactions, users, and more. This page will provide examples for common queries.
 To try these queries and run your own visit the [graphql page](https://www.okx.com/oktc/subgraph/name/OKCSwap/oktc-swap-subgraph-open/graphql?query=%0A++++%23%0A++++%23+Welcome+to+The+GraphiQL%0A++++%23%0A++++%23+GraphiQL+is+an+in-browser+tool+for+writing%2C+validating%2C+and%0A++++%23+testing+GraphQL+queries.%0A++++%23%0A++++%23+Type+queries+into+this+side+of+the+screen%2C+and+you+will+see+intelligent%0A++++%23+typeaheads+aware+of+the+current+GraphQL+type+schema+and+live+syntax+and%0A++++%23+validation+errors+highlighted+within+the+text.%0A++++%23%0A++++%23+GraphQL+queries+typically+start+with+a+%22%7B%22+character.+Lines+that+start%0A++++%23+with+a+%23+are+ignored.%0A++++%23%0A++++%23+An+example+GraphQL+query+might+look+like%3A%0A++++%23%0A++++%23+++++%7B%0A++++%23+++++++field%28arg%3A+%22value%22%29+%7B%0A++++%23+++++++++subField%0A++++%23+++++++%7D%0A++++%23+++++%7D%0A++++%23%0A++++%23+Keyboard+shortcuts%3A%0A++++%23%0A++++%23++Prettify+Query%3A++Shift-Ctrl-P+%28or+press+the+prettify+button+above%29%0A++++%23%0A++++%23+++++Merge+Query%3A++Shift-Ctrl-M+%28or+press+the+merge+button+above%29%0A++++%23%0A++++%23+++++++Run+Query%3A++Ctrl-Enter+%28or+press+the+play+button+above%29%0A++++%23%0A++++%23+++Auto+Complete%3A++Ctrl-Space+%28or+just+start+typing%29%0A++++%23%0A++)
 To learn more about graphql query refer to [GraphQL API](https://thegraph.com/docs/en/querying/graphql-api/)
 ## Block
@@ -54,7 +54,7 @@ Fetch a snapshot of the current state of the pair with common values. This examp
  }
 }
 ```
-### All pairs in OKCSwap
+### All pairs in Swap
 The Graph limits entity return amounts to 1000 per query as of now. To get all pairs on OKTC swapuse a loop and graphql skip query to fetch multiple chunks of 1000 pairs. The query would look like this (where skip is some incrementing variable passed into your query).
 ```
 {
@@ -66,7 +66,7 @@ The Graph limits entity return amounts to 1000 per query as of now. To get all p
 }
 ```
 ### Most liquid pairs
-Order by liquidity to get the most liquid pairs in OKCSwap.
+Order by liquidity to get the most liquid pairs in Swap.
 ```
 {
  pairs(first: 1000, orderBy: reserveUSD, orderDirection: desc) {
@@ -117,9 +117,9 @@ Day data is useful for building charts and historical views around entities. To 
 }
 ```
 ## Token Data
-Token data can be fetched using the token contract address as an ID. Token data is aggregated across all pairs the token is included in. Any token that is included in some pair in OKCSwap can be queried.
+Token data can be fetched using the token contract address as an ID. Token data is aggregated across all pairs the token is included in. Any token that is included in some pair in Swap can be queried.
 ### Token Overview
-Get a snapshot of the current stats on a token in OKCSwap. This query fetches current stats on WOKT. The allPairs field gets the first 200 pairs WOKT is included in sorted by liquidity in derived USD.
+Get a snapshot of the current stats on a token in Swap. This query fetches current stats on WOKT. The allPairs field gets the first 200 pairs WOKT is included in sorted by liquidity in derived USD.
 ```
 {
  token(id: "0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15"){
@@ -132,8 +132,8 @@ Get a snapshot of the current stats on a token in OKCSwap. This query fetches cu
  }
 }
 ```
-#### All Tokens in OKCSwap
-Similar to fetching all pairs (see above), you can query all tokens in OKCSwap. Because The Graph service limits return size to 1000 entities use graphql skip query. (Note this query will not work in the graph sandbox and more resembles the structure of a query you'd pass to some graphql middleware like [Apollo](https://www.apollographql.com/).
+#### All Tokens in Swap
+Similar to fetching all pairs (see above), you can query all tokens in Swap. Because The Graph service limits return size to 1000 entities use graphql skip query. (Note this query will not work in the graph sandbox and more resembles the structure of a query you'd pass to some graphql middleware like [Apollo](https://www.apollographql.com/).
 ```
 {
  query tokens($skip: Int!) {

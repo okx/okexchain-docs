@@ -74,7 +74,6 @@ On the OKTC chain, OKTs function as native tokens. This means that a user can pa
 >- **OKTC Homepage**：[OKTC Homepage](https://www.okx.com/oktc)
 >- **OKTC Docs**：[OKTC Docs](https://exchainrpc.okex.org/docs/en/#overview)
 >- **GitHub**: [OKTC Github](https://github.com/okx/exchain)
->- **Telegram**：[OKTC Telegram](https://t.me/OKTCNetwork)
 >- **Discord**：[OKTC Discord](https://discord.com/invite/2rynEUqJxP)
 >- **Medium**：[OKTC Medium](https://medium.com/oktc-okx-chain)
 

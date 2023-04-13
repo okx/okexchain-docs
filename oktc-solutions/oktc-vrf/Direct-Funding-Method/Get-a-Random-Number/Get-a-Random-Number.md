@@ -92,9 +92,9 @@ contract VRFV2WrapperConsumerExample is VRFV2WrapperConsumerBase {
 
 ```
 
-The parameters define how your requests will be processed. You can find the values for your network in the [Supported networks](./Supproted-Networks/Supproted-Networks.md) page.
+The parameters define how your requests will be processed. You can find the values for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html) page.
 
-- `uint32 callbackGasLimit`: The limit for how much gas to use for the callback request to your contract’s `fulfillRandomWords()` function. It must be less than the `maxGasLimit` limit on the coordinator contract minus the `wrapperGasOverhead`. See the [VRF  Direct funding limits](./Direct-Funding-Method/Direct-Funding-Method.md#limits) for more details. Adjust this value for larger requests depending on how your `fulfillRandomWords()` function processes and stores the received random values. If your `callbackGasLimit` is not sufficient, the callback will fail and your consuming contract is still charged for the work done to generate your requested random values.
+- `uint32 callbackGasLimit`: The limit for how much gas to use for the callback request to your contract’s `fulfillRandomWords()` function. It must be less than the `maxGasLimit` limit on the coordinator contract minus the `wrapperGasOverhead`. See the [VRF  Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html#limits) for more details. Adjust this value for larger requests depending on how your `fulfillRandomWords()` function processes and stores the received random values. If your `callbackGasLimit` is not sufficient, the callback will fail and your consuming contract is still charged for the work done to generate your requested random values.
 - `uint16 requestConfirmations`: How many confirmations the OKTC node should wait before responding. The longer the node waits, the more secure the random value is. It must be greater than the `minimumRequestBlockConfirmations` limit on the coordinator contract.
 - `uint32 numWords`: How many random values to request. If you can use several random values in a single callback, you can reduce the amount of gas that you spend per random value. The total cost of the callback request depends on how your `fulfillRandomWords()` function processes and stores the received random values, so adjust your `callbackGasLimit` accordingly.
 
@@ -113,7 +113,7 @@ After you are done with this contract, you can retrieve the remaining  OKT to us
 
 ## What's next
 
-- [› Security Considerations](../../Security-Considerations/Security-Considerations.md)
-- [› Best Practices](../../Best-Practices/Best-Practices.md)
-- [› Supported Networks](../Supproted-Networks/Supproted-Networks.md)
+- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)
+- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices.html)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Suppo rted-Networks/Supported-Networks.html)
 

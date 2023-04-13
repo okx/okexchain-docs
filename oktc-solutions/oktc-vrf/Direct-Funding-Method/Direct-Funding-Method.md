@@ -4,7 +4,7 @@ This guide explains how to generate random numbers using the Direct funding meth
 
 ## VRF Direct funding
 
-Unlike the [subscription method](../Subscription-Method/SubScription.md), the Direct funding method does not require you to create subscriptions and pre-fund them. Instead, you must directly fund consuming contracts with OKT before they request randomness.
+Unlike the [subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html), the Direct funding method does not require you to create subscriptions and pre-fund them. Instead, you must directly fund consuming contracts with OKT before they request randomness.
 
 For OKTC VRF  to fulfill your requests, you must have a sufficient amount of OKT in your consuming contract. Gas cost calculation includes the following variables:
 
@@ -14,7 +14,7 @@ For OKTC VRF  to fulfill your requests, you must have a sufficient amount of OKT
 
 - **Verification gas:** The amount of gas used to verify randomness on-chain.
 
-- VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](./Supproted-Networks/Supproted-Networks.md#supported-networks) page.
+- VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page.
 
 
 The gas price depends on current network conditions. The callback gas depends on your callback function and the number of random values in your request. You define the limits that you are willing to spend for the request with the following variable:
@@ -49,9 +49,9 @@ The VRF wrapper calls the coordinator to process the request using the following
 
 1. The consuming contract must inherit [VRFWrapperConsumerBase](https://github.com/okx/OKTC-VRF/blob/main/contracts/interfaces/VRFV2WrapperConsumerBase.sol) and implement the `fulfillRandomWords` function, which is the *callback VRF function*. Submit your VRF request by calling the `requestRandomness` function in the [VRFWrapperConsumerBase](https://github.com/okx/OKTC-VRF/blob/main/contracts/interfaces/VRFV2WrapperConsumerBase.sol) contract. Include the following parameters in your request:
 
-- `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](./Direct-Funding-Method/Supproted-Networks/Supproted-Networks.md).
+- `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html).
 - `callbackGasLimit`: The maximum amount of gas to pay for completing the callback VRF function.
-- `numWords`: The number of random numbers to request. You can find the maximum number of random values per request for your network in the [Supported networks](./Direct-Funding-Method/Supproted-Networks/Supproted-Networks.md) page.
+- `numWords`: The number of random numbers to request. You can find the maximum number of random values per request for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html) page.
 
 2. The consuming contract calls the [VRFWrapper](https://github.com/okx/OKTC-VRF/blob/main/contracts/VRFV2Wrapper.sol) `calculateRequestPrice` function to estimate the total transaction cost to fulfill randomness. This triggers the VRF [VRF Coordinator](https://github.com/okx/OKTC-VRF/blob/main/contracts/VRFCoordinatorV2.sol) `requestRandomWords` function to request randomness. The final gas cost to fulfill randomness is estimated based on how much gas is expected for the verification and callback. The total gas cost in wei uses the following formula:
 
@@ -61,9 +61,9 @@ The VRF wrapper calls the coordinator to process the request using the following
 
    A OKT premium is then added to the total gas cost. The premium is divided in two parts:
 
-- Wrapper premium: The premium percentage. You can find the percentage for your network in the [Supported networks](./Direct-Funding Method/Supproted-Networks/Supproted-Networks.md) page.
+- Wrapper premium: The premium percentage. You can find the percentage for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding Method/Supported-Networks/Supported-Networks.html) page.
 
-- Coordinator premium: A flat fee. This premium is defined in the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT. You can find the flat fee of the coordinator for your network in the [Supported networks](./Direct-Funding-Method/Supproted-Networks/Supproted-Networks.md) page.
+- Coordinator premium: A flat fee. This premium is defined in the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT. You can find the flat fee of the coordinator for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html) page.
 
    ```plaintext
    ((total gas cost * Wrapper premium) + Coordinator premium) = total request cost
@@ -77,13 +77,13 @@ The VRF wrapper calls the coordinator to process the request using the following
 
 ## Limits
 
-You can see the configuration for each network on the [Supported networks](./Supproted-Networks/Supproted-Networks.md#supported-networks) page. You can also view the full configuration for each VRF  Wrapper contract directly in OKLink. As an example, view the [OKT Mainnet VRF  Wrapper contract](https://www.oklink.com/cn/oktc/address/0xb1a0323e202b27300f8530740a37162b2d7e62cb) configuration by calling `getConfig` function.
+You can see the configuration for each network on the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page. You can also view the full configuration for each VRF  Wrapper contract directly in OKLink. As an example, view the [OKT Mainnet VRF  Wrapper contract](https://www.oklink.com/cn/oktc/address/0xb1a0323e202b27300f8530740a37162b2d7e62cb) configuration by calling `getConfig` function.
 
 Each wrapper has a `maxNumWords` parameter that limits the maximum number of random values you can receive in each request.
 
-The maximum allowed `callbackGasLimit` value for your requests is defined in the [Coordinator contract supported networks](./Supproted-Networks/Supproted-Networks.md#supported-networks) page. Because the VRF  Wrapper adds an overhead, your `callbackGasLimit` must not exceed `maxGasLimit - wrapperGasOverhead`.
+The maximum allowed `callbackGasLimit` value for your requests is defined in the [Coordinator contract supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page. Because the VRF  Wrapper adds an overhead, your `callbackGasLimit` must not exceed `maxGasLimit - wrapperGasOverhead`.
 
 ## What's next
 
-- [› Get a Random Number](./Get-a-Random-Number/Get-a-Random-Number.md#get-a-random-number/)
-- [› Supported Networks](./Supproted-Networks/Supproted-Networks.md#supported-networks)
+- [› Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Get-a-Random-Number/Get-a-Random-Number.html#get-a-random-number/)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks)

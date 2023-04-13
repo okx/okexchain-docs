@@ -2,7 +2,7 @@
 
 ## Subscriptions
 
-VRF  requests receive funding from subscription accounts. The [Subscription Manager](./Subscription-Manager-UI/Subscription-Manager-UI.md) lets you create an account and pre-pay for VRF , so you don’t provide funding each time your application requests randomness. This reduces the total gas cost to use VRF . It also provides a simple way to fund your use of OKTC products from a single location, so you don’t have to manage multiple wallets across several different systems and applications.
+VRF  requests receive funding from subscription accounts. The [Subscription Manager](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription-Manager-UI/Subscription-Manager-UI.html) lets you create an account and pre-pay for VRF , so you don’t provide funding each time your application requests randomness. This reduces the total gas cost to use VRF . It also provides a simple way to fund your use of OKTC products from a single location, so you don’t have to manage multiple wallets across several different systems and applications.
 
 Subscriptions have the following core concepts:
 
@@ -43,11 +43,11 @@ The VRF coordinator processes the request and determines the final charge to you
 
 1. The consuming contract must inherit [VRFConsumerBase](https://github.com/okx/OKTC-VRF/blob/main/contracts/interfaces/VRFConsumerBaseV2.sol) and implement the `fulfillRandomWords` function, which is the *callback VRF function*. Submit your VRF request by calling `requestRandomWords` of the [VRF Coordinator](https://github.com/okx/OKTC-VRF/blob/main/contracts/VRFCoordinatorV2.sol) with:
 
-- `keyHash`: Identifier that maps to a job and a private key on the VRF service and that represents a specified gas lane. If your request is urgent, specify a gas lane with a higher gas price limit. The configuration for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
+- `keyHash`: Identifier that maps to a job and a private key on the VRF service and that represents a specified gas lane. If your request is urgent, specify a gas lane with a higher gas price limit. The configuration for your network can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations).
 - `s_subscriptionId`: The subscription ID that the consuming contract is registered to. OKT funds are deducted from this subscription.
-- `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
+- `requestConfirmations`: The number of block confirmations the VRF service will wait to respond. The minimum and maximum confirmations for your network can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations).
 - `callbackGasLimit`: The maximum amount of gas a user is willing to pay for completing the callback VRF function. Note that you cannot put a value larger than maxGasLimit of the VRF Coordinator contract (read [coordinator contract limits](#limits) for more details).
-- `numWords`: The number of random numbers to request. The maximum random values that can be requested for your network can be found [here](./Supported-Networks/Supported-Networks.md#configurations).
+- `numWords`: The number of random numbers to request. The maximum random values that can be requested for your network can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations).
 
 2. The VRF coordinator emits an event.
 
@@ -59,7 +59,7 @@ The VRF coordinator processes the request and determines the final charge to you
    (Gas price * (Verification gas + Callback gas)) = total gas cost
    ```
 
-   The OKT premium is added to the total gas cost. The premium is defined in the [coordinator contract](./Supported-Networks/Supported-Networks.md#configurations) with the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT.
+   The OKT premium is added to the total gas cost. The premium is defined in the [coordinator contract](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations) with the `fulfillmentFlatFeeOKTPPMTier1` parameter in millionths of OKT.
 
    ```plaintext
    (total gas cost + OKT premium) = total request cost
@@ -80,13 +80,13 @@ Each subscription has the following limits:
 
 ### Coordinator contract limits
 
-You can see the configuration for each network on the [Supported networks](./Supported-Networks/Supported-Networks.md#configurations) page. You can also view the full configuration for each coordinator contract directly in OKLink. As an example, view the [OKT Mainnet VRF  coordinator contract](https://www.oklink.com/zh-cn/oktc/address/0x37c50d866cbc39f8f74dad711121c205d645097b) configuration.
+You can see the configuration for each network on the [Supported networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations) page. You can also view the full configuration for each coordinator contract directly in OKLink. As an example, view the [OKT Mainnet VRF  coordinator contract](https://www.oklink.com/zh-cn/oktc/address/0x37c50d866cbc39f8f74dad711121c205d645097b) configuration.
 
 - Each coordinator has a `MAX_NUM_WORDS` parameter that limits the maximum number of random values you can receive in each request.
 - Each coordinator has a `maxGasLimit` parameter, which is the maximum allowed `callbackGasLimit` value for your requests. You must specify a sufficient `callbackGasLimit` to fund the callback request to your consuming contract. This depends on the number of random values you request and how you process them in your `fulfillRandomWords()` function. If your `callbackGasLimit` is not sufficient, the callback fails but your subscription is still charged for the work done to generate your requested random values.
 
 ## What's next
 
-- [› Get a Random Number](./Get-a-Random-Number/Get-a-Random-Number.md#get-a-random-number/)
-- [› Supported Networks](./Supported-Networks/Supported-Networks.md#Configuration)
+- [› Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Get-a-Random-Number/Get-a-Random-Number.html#get-a-random-number/)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#Configuration)
 

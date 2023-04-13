@@ -138,17 +138,7 @@ module.exports = [
         children: [
           "dev/building-modules/ibc-module/ibc",
           "dev/building-modules/ibc-module/ibc-cli",
-        ],
-      },
-      {
-        title: "WASM MODULE",
-        collapsable: false,
-        children: [
-          "dev/building-modules/wasm-module/overview",
-          "dev/building-modules/wasm-module/instruction-manual",
-          "dev/building-modules/wasm-module/vmbridge",
-          "dev/building-modules/wasm-module/cosmwasmjs",
-          'dev/building-modules/wasm-module/bytecraft'
+          "dev/building-modules/ibc-module/ibc-erc20",
         ],
       },
       {
@@ -212,32 +202,81 @@ module.exports = [
     title: "Smart Contract",
     children: [
       {
-        title: "DEPLOYMENT",
-        collapsable: false,
+        title: "EVM SMART CONTRACT",
+        collapsable: true,
         children: [
-          "dev/smart-contracts/deployment/remix",
-          "dev/smart-contracts/deployment/truffle",
-        ],
+          {
+            title: "Deployment",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/deployment/remix",
+              "dev/smart-contracts/deployment/truffle"
+            ]
+          },
+          {
+            title: "Contract Verification",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/verify-contract/verify-contract",
+              "dev/smart-contracts/verify-proxy-contract/verify-proxy-contract"
+            ]
+          },
+          {
+            title: "KIP Standard",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/kip-standard/KIP20/introduction"
+            ]
+          },
+          {
+            title: "Contract Development FAQs",
+            collapsable: false,
+            children: [
+              "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ"
+            ]
+          }
+        ]
       },
       {
-        title: "CONTRACT VERIFICATION",
-        collapsable: false,
+        title: "WASM SMART CONTRACT",
+        collapsable: true,
         children: [
-          "dev/smart-contracts/verify-contract/verify-contract",
-          "dev/smart-contracts/verify-proxy-contract/verify-proxy-contract",
-        ],
-      },
-      {
-        title: "KIP STANDARD",
-        collapsable: false,
-        children: ["dev/smart-contracts/kip-standard/KIP20/introduction"],
-      },
-      {
-        title: "CONTRACT DEVELOPMENT FAQ ",
-        collapsable: false,
-        children: [
-          "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ",
-        ],
+          {
+            title: "Getting Started",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/overview",
+              "dev/building-modules/wasm-module/wasm-contract",
+              "dev/building-modules/wasm-module/instruction-manual"
+            ]
+          },
+          {
+            title: "Developer Guides",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/cosmwasmcli",
+              "dev/building-modules/wasm-module/cosmwasmjs",
+              "dev/building-modules/wasm-module/bytecraft"
+            ]
+          },
+          {
+            title: "Best Practices",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/vmbridge"
+            ]
+          },
+          {
+            title: "FAQs",
+            collapsable: true,
+            children: [
+              "dev/building-modules/wasm-module/contract-upgrade",
+              "dev/building-modules/wasm-module/contract-permissions",
+              "dev/building-modules/wasm-module/pincode",
+              "dev/building-modules/wasm-module/contract-tutorial",
+            ]
+          }
+        ]
       },
     ],
   },
@@ -284,7 +323,7 @@ module.exports = [
             title: "Introduction to OKTC VRF",
             collapsable: false,
             children: [
-              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKTC-VRF/OKTC-VRF",
+              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKC-VRF/OKC-VRF",
             ],
           },
           {
@@ -303,7 +342,7 @@ module.exports = [
             children: [
               "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method",
               "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Get-a-Random-Number/Get-a-Random-Number",
-              "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supproted-Networks/Supproted-Networks",
+              "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks",
             ],
           },
           {

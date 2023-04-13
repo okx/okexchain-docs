@@ -10,11 +10,11 @@ These parameters are configured in the coordinator contract. You can view these 
 
 ## Fee Parameters
 
-Fee parameters are configured in the coordinator contract and specify the premium you pay per request in addition to the gas cost for the transaction. You can view them by running `getFeeConfig` on the coordinator. The `uint32 fulfillmentFlatFeeOKTPPMTier1` parameter defines the fees per request specified in millionths of OKT. The details for calculating the total transaction cost can be found [here](../SubScription.md#request-and-receive-data).
+Fee parameters are configured in the coordinator contract and specify the premium you pay per request in addition to the gas cost for the transaction. You can view them by running `getFeeConfig` on the coordinator. The `uint32 fulfillmentFlatFeeOKTPPMTier1` parameter defines the fees per request specified in millionths of OKT. The details for calculating the total transaction cost can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html#request-and-receive-data).
 
 ## Configurations
 
-VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](../../Direct-Funding-Method/Supproted-Networks/Supproted-Networks.md#supported-networks) page.
+VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page.
 
 ### OKT Mainnet
 
