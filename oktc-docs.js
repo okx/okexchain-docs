@@ -303,12 +303,12 @@ module.exports = [
       {
         title: "OKTC SWAP",
         collapsable: false,
-        children: ["dev/oktc-solutions/oktc-swap/OKTC-swap"],
+        children: ["dev/oktc-solutions/oktc-swap/OKC-swap"],
       },
       {
         title: "OKTC BRIDGE",
         collapsable: false,
-        children: ["dev/oktc-solutions/oktc-bridge/OKTC-Bridge"],
+        children: ["dev/oktc-solutions/oktc-bridge/OKC-Bridge"],
       },
       {
         title: "OKTC MULTISIG",
