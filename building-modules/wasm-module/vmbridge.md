@@ -1,84 +1,75 @@
 # VMBridge
-VMBridge provides OKTC with a channel for exchanging EVM's ERC20 tokens and WASM's CW20 tokens. You can circulate your tokens in EVM and WASM by compiling a contract pair. Below is a schematic design diagram of VMBridge:
+VMBridge provides OKTC with a channel for EVM contracts and WASM contracts to call each other. Contract developers only need to implement simple code to use VMBridge for cross-virtual machine calls.
+1. If you need to call a WASM contract from an EVM contract, you can simply throw the `__OKCCallToWasm` event in the EVM contract to complete the WASM contract call.
+2. If you need to call an EVM contract from a WASM contract, you can simply throw the `CallToEvmMsg` event in the WASM contract to complete the EVM contract call.
+
+Below is a diagram illustrating the principles of VMBridge:
 ![](../../img/vmbridge-architecture.png)
-
-EVM contracts follow 2 kinds of protocols:  
-1. When the contract converts ERC20 to CW20, it must throw out SendToWasmEvent (WASM contract address, mintCW20 method, method input parameter), mintCW20 used for calling wasm contracts from EVM contracts.
-2. When the contract accepts CW20 to exchange to ERC20, the contract must implement the mintERC20 method. Used for receiving calls from wasm contracts.
-
-Wasm contracts follow 2 kinds of protocols:  
-1. When the contract converts CW20 to ERC20, it must throw out SubCustomEVMMsg (ERC contract address, mintERC20 method, method input parameter), mintERC20 method is used for calling EVM contract from wasm contract.
-2. When the contract accepts ERC20 to exchange to CW20, the contract must implement the mintCW20 method. Used for receiving calls from EVM contracts.
-
 ## Example of application
-**We provide an [example](https://github.com/okx/VMTokenBridge) contract of how to use VMBridge**
+**We have provided an [example](https://github.com/okx/vmbridge-examples) that demonstrates how to use VMBridge.**
+
+This example contract is a counter application. You can call the `add` method of the WASM contract in the EVM contract to perform addition operations on the WASM contract. You can also call the `add` method of the EVM in the WASM contract to perform addition operations on the EVM contract.
+
+The following diagram illustrates how EVM calls WASM:
 ![](../../img/vmbridge-example.png)
-### Example 1
-ERC20 and CW20 contracts follow VMBridge rules (suitable for newly issued token projects). When the user exchanges ERC20 for CW20 tokens, the call for the method of exchanging CW20 tokens in the ERC20 contract is initiated. The ERC20 side burns the corresponding token and calls the CW20 contract, and the CW20 side mints the corresponding token. The same applies vice versa.
-### Example 2
-For the existing ERC20 contracts on the chain, if you do not want to upgrade the ERC20 contracts, you can choose the method in example 2. To implement an exchange contract, when the user needs to exchange ERC20 for CW20, approve the corresponding tokens to the exchange contract. Then, when the user calls the exchange contract to exchange with the CW20 token method, the user's ERC20 token is transferred into the lock account by means of transferfrom, and the CW20 contract is called, causing the CW20 side contract to mint out the corresponding token. The same applies vice versa.
 
 ## Detailed explanation of development rules
-To make your contract initiate CW20 exchange for ERC20, you must develop an EVM ERC20 contract and a wasm CW20 contract; each contract must obey the following rules.
-### EVM contract rules
-Rid of the following actions in order to exchange ERC20 for CW20 tokens. (equivalent to calling the mintCW20 method of the CW20 contract, wasmAddr is the wasm contract address, recipient is the cw20 token receiving address, and amount is the number of cw20 tokens)
-```solidity
-event __OKCSendToWasm(string wasmAddr, string recipient, uint256 amount);
-```
-Define unique module account in OKTC
-```solidity
-address public constant moduleAddress = address(0xc63cf6c8E1f3DF41085E9d8Af49584dae1432b4f);
-```
-The EVM contract must define the mintERC20 method for receiving the ERC20 request for CW20 token conversion. Caller is the caller's address (usually the wasm contract address), recipient is the erc20 token receiving address, and amount is the number of erc20 tokens.
-- Note: You must judge whether the method of msg.sender is moduleAddress, otherwise call this method for non-wasm contracts.
-- Note: It must be determined whether the caller of this method is the specified wasmContractAddress, otherwise the method is called for a non-specified wasm contract.
+To enable cross-virtual machine calls for your contract through VMBridge, it must comply with the following rules.
+
+### EVM  call WASM
+Throw out the following events to call a WASM contract:
 
 ```solidity
-function mintERC20(string calldata caller, address recipient,uint256 amount) public returns (bool) {
-        require(msg.sender == moduleAddress); 
-        require(keccak256(abi.encodePacked(caller)) == keccak256(abi.encodePacked(wasmContractAddress)));
-        _mint(recipient, amount);
-        return true;
-  }
+event __OKCCallToWasm(string wasmAddr, uint256 value，string calldata);
 ```
+- `wasmAddr`: The called WASM contract. It should be string. (For example 0x5A8D648DEE57b2fc90D98DC17fa887159b69638b)
+- `value`: When calling a WASM contract, the amount of OKT tokens to be transferred to the contract can be specified. It's important to note that a WASM contract does not have a **payable** concept like EVM contracts do.
+- `calldata`: To call a WASM contract, parameters such as the method name and its parameters should be specified. It's similar to an **ABI**.
 
-### Wasm contract rules
-The execution of the wasm contract is to throw out the Msg type to exchange CW20 for ERC20 (equivalent to calling the mintERC20 method of ERC20)
+**Notice:**
+> 1.  EVM calls to WASM can only confirm if the call was successful but can not return the value of the called WASM method.
+> 2. Multiple instances of __OKCCallToWasm can be thrown, and this will result in multiple calls to the WASM contract.
+> 3. The called WASM contract will only execute after all the logic in the internal EVM contract has been completed.
+> 4. After EVM calls a WASM contract, the WASM contract may use CallToEvmMsg to call an EVM contract. Even if the EVM contract throws __OKCCallToWasm, the WASM contract will not be called.
+> 5. calldata is the **hex-encoded message** received by the WASM contract.
 
-- Wasm contract must initiate SendToEvmMsg, and make this Msg to CosmosMsg::Custom subclass
-- Sender is wasm contract address (call the caller of the EVM contract)
-- Contract is EVM contract address
-- Recipient is recipient for erc20 tokens
-- Amount is amount for erc20 tokens
+```solidity
+//follow is example of hex-encoded which is call wasm a method that is named transfer 
+//{"transfer":{"amount":"100","recipient":"ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq"}}
+calldata = hex.DecodeString([]byte("{\"transfer\":{\"amount\":\"100\",\"recipient\":\"ex1eutyuqqase3eyvwe92caw8dcx5ly8s544q3hmq\"}}"))
+```
+### Wasm call EVM
+Once a WASM contract throws CallToEvmMsg, the corresponding EVM contract method can be called, and the result of the execution will be returned to the reply method of the WASM contract once the EVM contract execution is complete.
+
 
 ```rust
-pub struct SendToEvmMsg {
+pub struct CallToEvmMsg {
     pub sender: String, 
-    pub contract: String, 
-    pub recipient: String, 
-    pub amount: Uint128,
+    pub evmaddr: String,
+    pub calldata: String, 
+    pub value: Uint128, 
 }
 
-impl Into<CosmosMsg<SendToEvmMsg>> for SendToEvmMsg {
-    fn into(self) -> CosmosMsg<SendToEvmMsg> {
+impl Into<CosmosMsg<CallToEvmMsg>> for CallToEvmMsg {
+    fn into(self) -> CosmosMsg<CallToEvmMsg> {
         CosmosMsg::Custom(self)
     }
 }
 
-impl CustomMsg for SendToEvmMsg {}
-```
+impl CustomMsg for CallToEvmMsg {}
 
-Wasm contract must initiate this method to be used for receiving the request of exchanging ERC20 to CW20.
-
-- Inside the method, it is necessary to judge whether info.sender (method caller) is the specified evmContractAddress, otherwise the method is called for the non-specified evm contract.
-- Recipient is for erc20 token receiving address
-- Amount is for erc20 token amount
-
-```rust
-pub enum ExecuteMsg {
-    MintCW20 {
-        recipient: String, 
-        amount: Uint128,  
-    }
+pub struct CallToEvmMsgResponse {
+    pub response: String,
 }
 ```
+- A WASM contract must implement CallToEvmMsg, and this Msg must be a subclass of **CosmosMsg::Custom**.
+- `sender`: The address of the WASM contract.The sender's address must be the address of the calling contract. You can find _env.contract.address by using env.
+- `evmaddr`: The address of the EVM contract.
+- `calldata`: The parameters for calling the EVM contract, such as the method name and parameters, must be specified as an ABI and **hex-encoded**.
+- `value`: The amount of OKT tokens to be transferred to the EVM contract when calling its methods can also be specified. It's important to note that EVM contract methods may or may not be payable, so it's essential to check before sending any tokens.
+
+**Notice:**
+> 1. When calling an EVM contract from a WASM contract, it's necessary to obtain CallToEvmMsgResponse to confirm if the call was successful.
+> 2. The response of CallToEvmMsgResponse is encoded as an **ABI**, which means that you need to decode the result if you require specific values.
+> 3. If an EVM contract throws a __OKCCallToWasm event after being called from a WASM contract, it won't call the WASM contract.
+> 4. When calling an EVM contract from a WASM contract, the calldata must be hex-encoded ABI data corresponding to the method call of the EVM contract without the "0x" prefix.
