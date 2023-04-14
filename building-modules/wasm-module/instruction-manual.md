@@ -118,7 +118,7 @@ Navigate to the project root directory of `cw-plus` and run the following comman
 docker run --rm -v "$(pwd)":/code \
 --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
 --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
-cosmwasm/rust-optimizer:0.12.6
+cosmwasm/rust-optimizer:0.12.11
 ```
 After compilation optimization is complete, the optimized wasm file will be outputted to ./artifacts/cw20-base.wasm
 ### Upload contract code
