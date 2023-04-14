@@ -66,7 +66,7 @@ The chart below shows the client's recorded metadata:
 
 Connection is the upper layer protocol of client and IBC protocol's transitional state. Connection layers connection creating process is similar to that of client's, both containing certain timed out sends which are reliant on relayer. Connection layer's connection structure is as shown in the chart below:
 
-![connection](../../img/ibc-connection.jpg)
+![connection](../../img/ibc-connection.png)
 
 There are 4 different message categories in the connection layer, and each category's logic is described in the chart below:
 
@@ -81,7 +81,7 @@ There are 4 different message categories in the connection layer, and each categ
 
 Channel layer is an application layer protocol, and all business developments can be found in this dimension. Taking place after the connection is created and reliant on relayer, a chart of channel layer protocol's connection structure is as shown below:
 
-![channel](../../img/ibc-channel.jpg)
+![channel](../../img/ibc-channel.png)
 
 Below are 4 kinds of message categories in the channel layer and their corresponding logic's:
 
@@ -139,7 +139,7 @@ Below are 4 kinds of message categories in the channel layer and their correspon
 
 Users on the Cosmos chain making asset transfers to the OKBC chain:
 
-![example01](../../img/ibc-example-01.jpg)
+![example01](../../img/ibc-example-01.png)
 
 1. User A initiates an IBC transfer directed at the Cosmos chain. After Cosmos receives the transaction, it locks the corresponding balance in the A account, and generates a certificate, which is stored locally.
 
