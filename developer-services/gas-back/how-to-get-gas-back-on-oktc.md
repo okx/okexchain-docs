@@ -3,7 +3,7 @@
 ## 1. Introduction
 The Gas Back feature allows contract deployers on OKTC to proportionally distribute their contract's handling fees to other users. After the user deploys a contract on OKTC and registers the contract, they can proceed to receive a handling fee distribution rate (Gas Back rate) according to the system, which will act as a handling fee for any user that calls this contract. Users can directly register this contract by sending an EVM transaction. 
 
-## 2. How to use
+## 2. How to use a
 
 |  Contract name   | Contract role  | Contract address  |
 |  ----  | ----  | ----  |
