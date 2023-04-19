@@ -33,7 +33,7 @@ IBC is a combination of the notary scheme and side chain mechanisms, with a fram
 
 As the chart below shows, IBC's connecting mechanism is similar to TCP's three-way handshake, but one major difference between the two is that while the TCP/IP handshake is a direct end-to-end data interaction between two directly connected parties, IBC's connecting mechanism is done through a third party component called the relayer. The relayer conducts additional relay control and is different than TCP/IP in that IBC's connection/channel layer (chart above) needs to go through an additional connection creating process.
 
-![handshake](../../img/ibc-handshake.jpg)
+![handshake](../../img/ibc-handshake.jpeg)
 
 #### **Client layer protocol**
 
