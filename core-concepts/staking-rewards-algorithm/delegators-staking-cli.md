@@ -17,7 +17,7 @@ OKTC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the comm
 1. Stake OKT, obtain voting rights
 1. Choose validator(s) to vote for, and if the chosen validator has set up a share ratio, the user will receive a dividend reward on the chain.
 
-> Note: Refer to [Voting Weight Calculation](/dev/core-concepts/staking-rewards-algorithm/distr.html#withdrawing-rewards).
+> Note: Refer to [Voting Weight Calculation](/dev/core-concepts/staking-rewards-algorithm/distr.html#voting-weight-calculation).
 
 ### Staking
 
