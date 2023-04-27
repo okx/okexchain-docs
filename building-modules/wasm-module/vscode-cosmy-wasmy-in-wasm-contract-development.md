@@ -160,7 +160,7 @@ You can import the address of any contract that was deployed on your chain here:
 
 ## Step-by-step on How to Deploy Wasmy-counter
 
-Wasmy-counter is a counting contract with (`Add`), (`Subtract`), and (`GetCounter`) functions. This article will use the Wasmy-counter contract as an example to introduce the entire process of developing, compiling, deploying, and interacting with smart contracts on OKTCWasm using the Cosmy Wasmy plugin. The content is suitable for all learners, regardless of their experience in Rust or Go. The goal of this article is to provide easy-to-understand instructions and first-hand experience for first-time users through the following step-by-step guide:
+[Wasmy-counter](https://github.com/okx/wasmy-counter) is a counting contract with (`Add`), (`Subtract`), and (`GetCounter`) functions. This article will use the Wasmy-counter contract as an example to introduce the entire process of developing, compiling, deploying, and interacting with smart contracts on OKTCWasm using the Cosmy Wasmy plugin. The content is suitable for all learners, regardless of their experience in Rust or Go. The goal of this article is to provide easy-to-understand instructions and first-hand experience for first-time users through the following step-by-step guide:
 
 - Contract compilation: Demonstrate how to download and compile smart contract code into a Wasm bytecode file.
 - Optimization compilation: Demonstrate how to optimize the Wasm bytecode file to an appropriate size.

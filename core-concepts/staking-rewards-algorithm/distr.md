@@ -117,47 +117,19 @@ Below is a specific explanation of the distribution rules for block rewarding:
 
 
 
-### Voting weight decay mechanism
+### Voting Weight Calculation
 
-In order to encourage users to actively participate in voting, OKTC using a voting weight decay mechanism. If users do not participate in voting within a week, their voting weight will start to decay, and the voting weight will be doubled every 52 weeks (1 year). After re-voting (or staking, withdraw okt, withdraw rewards), the vote weight will be refreshed.
+The voting weight is multiplication result of voting OKT and fixed weight(11700000).
 
-> Note: Refreshing the weight of votes will trigger automatic reward, and the portion less than 0.0001 OKT will be distributed to the community pool. Refer to [Withdrawing rewards](#withdrawing-rewards)
+> Note: 11700000 is the weight of 1 okt, calculated by calculateWeight before venus6 (nowTime=2023-06-01 00:00:00 GMT+0). After v1.7.2, OKTC adopts fixed weight calculation, and the original voting decay mechanism will be discarded and no longer used. 
 
-Taking 1000OKT voting as an example, the weight changes as follows:
 
-| **time**                 | **Weight after re-voting** |
-| ------------------------ | -------------------------- |
-| current (2023.2.7)       | 9457824384                 |
-| after 1 week (2023.2.14) | 9584738842                 |
-| after 1 month (2023.3.7) | 9975792318                 |
-| After 1 year (2024.2.7)  | 18915648769                |
-| After 2 years (2025.2.7) | 37831297539                |
-
-The specific algorithm is as follows:
-
-```Go
-const (
-   // UTC Time: 2000/1/1 00:00:00
-   blockTimestampEpoch = int64(946684800)
-   secondsPerWeek      = int64(60 * 60 * 24 * 7)
-   weeksPerYear        = float64(52)
-)
-
-func calculateWeight(nowTime int64, tokens sdk.Dec) (shares types.Shares, sdkErr error) {
-   nowWeek := (nowTime - blockTimestampEpoch) / secondsPerWeek
-   rate := float64(nowWeek) / weeksPerYear
-   weight := math.Pow(float64(2), rate)
-
-   precision := fmt.Sprintf("%d", sdk.Precision)
-
-   weightByDec, sdkErr := sdk.NewDecFromStr(fmt.Sprintf("%."+precision+"f", weight))
-   if sdkErr == nil {
-      shares = tokens.Mul(weightByDec)
-   }
-   return
-}
-```
-
+Taking OKT voting as an example, the weight as follows:
+| **OKT**                 | **Weight** |
+| ------------------------ | --------------------- |
+| 1                        | 11700000              |
+| 10                       | 117000000             |
+| 100                      | 1170000000            |
 
 
 ### Exchange and multiple voting
