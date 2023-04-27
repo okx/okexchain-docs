@@ -258,8 +258,8 @@ You can retrieve the wallet address associated with the `alice` account by execu
 ```sh
 bytecraft console 
 
-bytecraft > wallets.alice.address
-'ex1g0xzwvmm7mwxck5fw9y8pygq98gep9lx6m2l6e'
+bytecraft > wallets.test.address
+'0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A'
 ```
 
 Then, exit the bytecraft console and deploy the `mydapp` smart contract to testnet with the `test` account as the signer.
@@ -300,6 +300,7 @@ You can call the functions defined in `lib/index.js` inside of the `bytecraft co
 ```sh
 bytecraft console --signer test --network testnet
 bytecraft > lib.freeze()
+#output
 {
   logs: [ { msg_index: 0, log: '', events: [Array] } ],
   height: 789,
@@ -348,7 +349,7 @@ It is possible to deploy and instantiate contracts from tasks. This can be usefu
 const { task } = require("@okexchain/bytecraft");
 
 task(async ({ defaultWallet, client, deploy }) => {
-    // First deploy the counter smart contract.
+    // First deploy the mydapp smart contract.
     await deploy.storeCode('mydapp', defaultWallet);
     const accounts = await defaultWallet.getAccounts()
     
@@ -604,8 +605,8 @@ You can retrieve the wallet address associated with the `alice` account by execu
 ```
 bytecraft console 
 
-bytecraft > wallets.alice.address
-'ex1g0xzwvmm7mwxck5fw9y8pygq98gep9lx6m2l6e'
+bytecraft > wallets.test.address
+'0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A'
 ```
 
 Then, exit the bytecraft console and deploy the `mydapp` smart contract to testnet with the `test` account as the signer.
@@ -646,6 +647,7 @@ You can call the functions defined in `lib/index.js` inside of the `bytecraft co
 ```
 bytecraft console --signer test --network mainnet
 bytecraft > lib.freeze()
+#output
 {
   logs: [ { msg_index: 0, log: '', events: [Array] } ],
   height: 789,
@@ -694,7 +696,7 @@ It is possible to deploy and instantiate contracts from tasks. This can be usefu
 const { task } = require("@okexchain/bytecraft");
 
 task(async ({ defaultWallet, client, deploy }) => {
-    // First deploy the counter smart contract.
+    // First deploy the mydapp smart contract.
     await deploy.storeCode('mydapp', defaultWallet);
     const accounts = await defaultWallet.getAccounts()
     
@@ -763,11 +765,15 @@ You can call the functions defined in `lib/index.js` inside of the `bytecraft co
 
 ```sh
 bytecraft console --signer test --network testnet
-bytecraft > await lib.getCount()
-{ count: 0 }
-bytecraft > await lib.increment()
-bytecraft > await lib.getCount()
-{ count: 1 }
+bytecraft > lib.freeze()
+#output
+{
+  logs: [ { msg_index: 0, log: '', events: [Array] } ],
+  height: 789,
+  transactionHash: '204F26178715664FE3B3E3660961D0A5C3517C4710258005F65D189EE68CE87E',
+  gasWanted: 281616,
+  gasUsed: 152504
+}
 ```
 
 You may also specify which network you would like to interact with by utilizing the `--network` flag with the `bytecraft console` command.
