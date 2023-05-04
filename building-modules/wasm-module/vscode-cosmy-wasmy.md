@@ -9,11 +9,11 @@ In this section, we'll prepare our machines and install the necessary tools for 
 
 ### Install OKTC
 
-Make sure you've installed the OKTC application: [Installation tutorial](https://www.okx.com/okbc/docs/dev/quick-start/build-on-okbc/install-okbc).
+Make sure you've installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc.html).
 
 ### Install Rust
 
-Install the Rust environment (Linux or MacOS):  [Installation tutorial](https://www.okx.com/okbc/docs/dev/quick-start/build-on-okbc/install-okbc).
+Install the Rust environment (Linux or MacOS): [installation instructions](https://rustup.rs/)..
 
 After successfully installing Rust, make sure your machine has the Wasm32 target.
 
