@@ -1,7 +1,7 @@
 # Bytecraft and Sylvia
 ## Bytecraft
 ### Introduction
-Bytecraft is a WASM smart contract development scaffold, similar to hardhat, the EVM development tool. It can help developers quickly create WASM contract development templates, speed up contract development, deployment and testing.
+[Bytecraft](https://github.com/okx/bytecraft) is a WASM smart contract development scaffold, similar to hardhat, the EVM development tool. It can help developers quickly create WASM contract development templates, speed up contract development, deployment and testing.
 ### Installation
 #### Environment installation
 Install the rust environment, [Node 16](https://nodejs.org/en/download) and Node Package Manager (npm).
@@ -202,7 +202,7 @@ run predefined task
 ## Sylvia
 ### Introduction
 
-Sylvia builds a contract development framework on this basis and encapsulates some functions and macros.  It can help contract developers quickly develop contracts.
+[Sylvia](https://cosmwasm.github.io/sylvia-book/index.html) builds a contract development framework on this basis and encapsulates some functions and macros.  It can help contract developers quickly develop contracts.
 
 
 The advantages of sylvia:
