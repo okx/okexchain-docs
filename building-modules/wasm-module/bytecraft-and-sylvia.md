@@ -1,5 +1,5 @@
 # Bytecraft and Sylvia
-## [Bytecraft](https://github.com/okx/bytecraft)
+## Bytecraft
 ### Introduction
 Bytecraft is a WASM smart contract development scaffold, similar to hardhat, the EVM development tool. It can help developers quickly create WASM contract development templates, speed up contract development, deployment and testing.
 ### Installation
