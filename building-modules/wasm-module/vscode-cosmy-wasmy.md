@@ -1,4 +1,4 @@
-# VSCode + Cosmy Wasmy in WASM contract development
+# VSCode and Cosmy Wasmy
 This article provides a guide on how to develop, compile, and optimize Wasm smart contracts on OKT Chain (OKTC) by using VSCode and the Cosmy Wasmy plugin. It also covers how to call and query these contracts on OKTC.
 
 Cosmy Wasmy simplifies the development and interactions of CosmWasm smart contracts. By using a preconfigured file to connect to the OKTC network, testing and interacting with OKTC becomes much easier. With Cosmy Wasmy, you can perform all OKTC interactions without having to use the CLI.
