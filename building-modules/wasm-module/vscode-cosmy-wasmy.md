@@ -1,4 +1,4 @@
-# VSCode + Cosmy Wasmy in WASM contract development
+# VSCode and Cosmy Wasmy
 This article provides a guide on how to develop, compile, and optimize Wasm smart contracts on OKT Chain (OKTC) by using VSCode and the Cosmy Wasmy plugin. It also covers how to call and query these contracts on OKTC.
 
 Cosmy Wasmy simplifies the development and interactions of CosmWasm smart contracts. By using a preconfigured file to connect to the OKTC network, testing and interacting with OKTC becomes much easier. With Cosmy Wasmy, you can perform all OKTC interactions without having to use the CLI.
@@ -9,11 +9,11 @@ In this section, we'll prepare our machines and install the necessary tools for 
 
 ### Install OKTC
 
-Make sure you've installed the OKTC application: [Installation tutorial](https://www.okx.com/okbc/docs/dev/quick-start/build-on-okbc/install-okbc).
+Make sure you've installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc.html).
 
 ### Install Rust
 
-Install the Rust environment (Linux or MacOS):  [Installation tutorial](https://www.okx.com/okbc/docs/dev/quick-start/build-on-okbc/install-okbc).
+Install the Rust environment (Linux or MacOS): [installation instructions](https://rustup.rs/)..
 
 After successfully installing Rust, make sure your machine has the Wasm32 target.
 
@@ -160,7 +160,7 @@ You can import the address of any contract that was deployed on your chain here:
 
 ## Step-by-step on How to Deploy Wasmy-counter
 
-Wasmy-counter is a counting contract with (`Add`), (`Subtract`), and (`GetCounter`) functions. This article will use the Wasmy-counter contract as an example to introduce the entire process of developing, compiling, deploying, and interacting with smart contracts on OKTCWasm using the Cosmy Wasmy plugin. The content is suitable for all learners, regardless of their experience in Rust or Go. The goal of this article is to provide easy-to-understand instructions and first-hand experience for first-time users through the following step-by-step guide:
+[Wasmy-counter](https://github.com/okx/wasmy-counter) is a counting contract with (`Add`), (`Subtract`), and (`GetCounter`) functions. This article will use the Wasmy-counter contract as an example to introduce the entire process of developing, compiling, deploying, and interacting with smart contracts on OKTCWasm using the Cosmy Wasmy plugin. The content is suitable for all learners, regardless of their experience in Rust or Go. The goal of this article is to provide easy-to-understand instructions and first-hand experience for first-time users through the following step-by-step guide:
 
 - Contract compilation: Demonstrate how to download and compile smart contract code into a Wasm bytecode file.
 - Optimization compilation: Demonstrate how to optimize the Wasm bytecode file to an appropriate size.

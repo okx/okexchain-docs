@@ -253,14 +253,16 @@ module.exports = [
             children: [
               "dev/building-modules/wasm-module/cosmwasmcli",
               "dev/building-modules/wasm-module/cosmwasmjs",
-              "dev/building-modules/wasm-module/bytecraft"
+              "dev/building-modules/wasm-module/bytecraft",
+              "dev/building-modules/wasm-module/vscode-cosmy-wasmy"
             ]
           },
           {
             title: "Best Practices",
             collapsable: true,
             children: [
-              "dev/building-modules/wasm-module/vmbridge"
+              "dev/building-modules/wasm-module/vmbridge",
+              "dev/building-modules/wasm-module/bytecraft-and-sylvia"
             ]
           },
           {
