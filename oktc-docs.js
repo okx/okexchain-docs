@@ -36,7 +36,9 @@ module.exports = [
       {
         title: "BASIC CONCEPTS",
         collapsable: false,
-        children: ["dev/core-concepts/basic-concepts/general-concepts"],
+        children: [
+          "dev/core-concepts/basic-concepts/general-concepts",
+          "dev/core-concepts/basic-concepts/oktc-consensus"],
       },
       {
         title: "GOVERNANCE",
@@ -50,7 +52,7 @@ module.exports = [
         ],
       },
       {
-        title: "GAS & FEES",
+        title: "GAS AND FEES",
         collapsable: false,
         children: ["dev/core-concepts/gas-and-fees/gas"],
       },
@@ -63,11 +65,6 @@ module.exports = [
         title: "ACCOUNTS",
         collapsable: false,
         children: ["dev/core-concepts/accounts/accounts"],
-      },
-      {
-        title: "OKTC CONSENSUS",
-        collapsable: false,
-        children: ["dev/core-concepts/oktc-consensus/oktc-consensus"],
       },
       {
         title: "STAKING REWARDS ALGORITHM",
