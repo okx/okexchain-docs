@@ -44,11 +44,11 @@ module.exports = [
         title: "GOVERNANCE",
         collapsable: false,
         children: [
-          // 'dev/core-concepts/on-chain-governance/overview',
-          "dev/core-concepts/on-chain-governance/gov",
-          // 'dev/core-concepts/on-chain-governance/parameter',
-          // 'dev/core-concepts/on-chain-governance/text',
-          // 'dev/core-concepts/on-chain-governance/upgrade'
+          // 'dev/core-concepts/governance/overview',
+          "dev/core-concepts/governance/gov",
+          // 'dev/core-concepts/governance/parameter',
+          // 'dev/core-concepts/governance/text',
+          // 'dev/core-concepts/governance/upgrade'
         ],
       },
       {
