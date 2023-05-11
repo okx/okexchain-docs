@@ -65,40 +65,21 @@ Using the following website's data as an example, imagine a user holds 1000 OKT 
 
 ### Source of staking rewards
 
-OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 41.69M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.5 OKT reward, and the reward is halved every 3 years.
+OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 21M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.125 OKT reward from 2023-3-18 15:45(0.5 OKT reward before), and the reward is **halved every 9 months**.
 
-| Year | Block Reward | Blocks   | Volume      |
-| ---- | ------------ | -------- | ----------- |
-| 3    | 0.5          | 31557600 | 15778800    |
-| 6    | 0.25         | 31557600 | 7889400     |
-| 9    | 0.125        | 31557600 | 3944700     |
-| 12   | 0.0625       | 31557600 | 1972350     |
-| 15   | 0.03125      | 31557600 | 986175      |
-| 18   | 0.015625     | 31557600 | 493087.5    |
-| 21   | 0.0078125    | 31557600 | 246543.75   |
-| 24   | 0.00390625   | 31557600 | 123271.875  |
-| 27   | 0.001953125  | 31557600 | 61635.9375  |
-| 30   | 0.000976563  | 31557600 | 30817.96875 |
-| 33   | 0.000488281  | 31557600 | 15408.98438 |
-| 36   | 0.000244141  | 31557600 | 7704.492188 |
-| 39   | 0.00012207   | 31557600 | 3852.246094 |
-| 42   | 6.10E-05     | 31557600 | 1926.123047 |
-| 45   | 3.05E-05     | 31557600 | 963.0615234 |
-| 48   | 1.53E-05     | 31557600 | 481.5307617 |
-| 51   | 7.63E-06     | 31557600 | 240.7653809 |
-| 54   | 3.81E-06     | 31557600 | 120.3826904 |
-| 57   | 1.91E-06     | 31557600 | 60.19134521 |
-| 60   | 9.54E-07     | 31557600 | 30.09567261 |
-| 63   | 4.77E-07     | 31557600 | 15.0478363  |
-| 66   | 2.38E-07     | 31557600 | 7.523918152 |
-| 69   | 1.19E-07     | 31557600 | 3.761959076 |
-| 72   | 5.96E-08     | 31557600 | 1.880979538 |
-| 75   | 2.98E-08     | 31557600 | 0.940489769 |
-| 78   | 1.49E-08     | 31557600 | 0.470244884 |
-| 81   | 7.45E-09     | 31557600 | 0.235122442 |
-| 84   | 3.73E-09     | 31557600 | 0.117561221 |
-| 87   | 1.86E-09     | 31557600 | 0.058780611 |
-| 90   | 9.31E-10     | 31557600 | 0.029390305 |
+| **Deflation Date** | **Block Reward** | **Blocks** | **Volume** |
+| ------------------ | ---------------- | ---------- | ---------- |
+| -                  | 0.5              | 18123191   | 19470636   |
+| 2023-3-18 15:45    | 0.125            | 6228477    | 778559     |
+| 2023-12-17 14:15   | 0.0625           | 6228477    | 389279     |
+| 2024-09-16 12:45   | 0.03125          | 6228477    | 194639     |
+| 2025-06-17 11:15   | 0.015625         | 6228477    | 97319      |
+| 2026-03-18 09:45   | 0.0078125        | 6228477    | 48659      |
+| 2026-12-17 08:16   | 0.00390625       | 6228477    | 24329      |
+| 2027-09-17 06:46   | 0.001953125      | 6228477    | 12164      |
+| 2028-06-17 05:16   | 0.000976563      | 6228477    | 6082       |
+| others             | -                | -          | 6082       |
+| Total              | -                | -          | 21027748   |
 
 Below is a specific explanation of the distribution rules for block rewarding:
 
