@@ -360,6 +360,40 @@ module.exports = [
           },
         ],
       },
+      {
+        title: "OKTC SUBGRAPH",
+        collapsable: false,
+        children: [
+          {
+            title: "Get started",
+            collapsable: false,
+            children: [
+              "dev/oktc-solutions/oktc-subgraph/Get-started/Get-started",
+            ],
+          },
+          {
+            title: "How to deploy OKTC Subgraph",
+            collapsable: false,
+            children: [
+              "dev/oktc-solutions/oktc-subgraph/How-to-deploy-OKTC-Subgraph/How-to-deploy-OKTC-Subgraph",
+            ],
+          },
+          {
+            title: "Sample Queries",
+            collapsable: false,
+            children: [
+              "dev/oktc-solutions/oktc-subgraph/Sample-Queries/Sample-Queries",
+            ],
+          },
+          {
+            title: "FAQ",
+            collapsable: false,
+            children: [
+              "dev/oktc-solutions/oktc-subgraph/FAQ/FAQ",
+            ],
+          },
+        ],
+      },
     ],
   },
   {
