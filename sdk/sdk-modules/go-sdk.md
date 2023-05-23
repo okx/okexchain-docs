@@ -1,15 +1,15 @@
 # Go SDK
 
-github: https://github.com/okx/exchain-go-sdk
+github: https://github.com/okx/okbchain-go-sdk
 
 ---
 
 ## 1 utils function
 
-All utils functions are defined in the package `utils` under path `exchain-go-sdk/utils`. They can be invoked by the way like:
+All utils functions are defined in the package `utils` under path `okbchain-go-sdk/utils`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk/utils"
+import "github.com/okx/okbchain-go-sdk/utils"
 
 _, _, _ = utils.CreateAccountWithMnemo(defaultMnemo, "turing", defaultPassWd)
 ```
@@ -204,10 +204,10 @@ Printed results:
 
 ## 2 Auth module
 
-All auth functions are defined in the package `auth` under path `exchain-go-sdk/module/auth`. They can be invoked by the way like:
+All auth functions are defined in the package `auth` under path `okbchain-go-sdk/module/auth`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -258,10 +258,10 @@ type Account interface {
 
 ## 3 Token module
 
-All token functions are defined in the package `token` under path `exchain-go-sdk/module/token`. They can be invoked by the way like:
+All token functions are defined in the package `token` under path `okbchain-go-sdk/module/token`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -537,10 +537,10 @@ type TxResponse struct {
 
 ## 4 Staking module
 
-All staking functions are defined in the package `staking` under path `exchain-go-sdk/module/staking`. They can be invoked by the way like:
+All staking functions are defined in the package `staking` under path `okbchain-go-sdk/module/staking`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1013,10 +1013,10 @@ type TxResponse struct {
 
 ## 5 Distribution module
 
-All distribution functions are defined in the package `distribution` under path `exchain-go-sdk/module/distribution`. They can be invoked by the way like:
+All distribution functions are defined in the package `distribution` under path `okbchain-go-sdk/module/distribution`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1103,10 +1103,10 @@ type TxResponse struct {
 
 ## 6 Slashing module
 
-All slashing functions are defined in the package `slashing` under path `exchain-go-sdk/module/slashing`. They can be invoked by the way like:
+All slashing functions are defined in the package `slashing` under path `okbchain-go-sdk/module/slashing`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1155,10 +1155,10 @@ type TxResponse struct {
 
 ## 7 Dex module
 
-All dex functions are defined in the package `dex` under path `exchain-go-sdk/module/dex`. They can be invoked by the way like:
+All dex functions are defined in the package `dex` under path `okbchain-go-sdk/module/dex`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1472,10 +1472,10 @@ type TxResponse struct {
 
 ## 8 Order module
 
-All order functions are defined in the package `order` under path `exchain-go-sdk/module/order`. They can be invoked by the way like:
+All order functions are defined in the package `order` under path `okbchain-go-sdk/module/order`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1645,10 +1645,10 @@ type TxResponse struct {
 
 ## 9 Backend module
 
-All order functions are defined in the package `backend` under path `exchain-go-sdk/module/backend`. They can be invoked by the way like:
+All order functions are defined in the package `backend` under path `okbchain-go-sdk/module/backend`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -1887,10 +1887,10 @@ type Transaction struct {
 
 ## 10 Ammswap module
 
-All ammswap functions are defined in the package `ammswap` under path `exchain-go-sdk/module/ammswap`. They can be invoked by the way like:
+All ammswap functions are defined in the package `ammswap` under path `okbchain-go-sdk/module/ammswap`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -2123,10 +2123,10 @@ type TxResponse struct {
 
 ## 11 Farm module
 
-All farm functions are defined in the package `farm` under path `exchain-go-sdk/module/farm`. They can be invoked by the way like:
+All farm functions are defined in the package `farm` under path `okbchain-go-sdk/module/farm`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -2480,10 +2480,10 @@ type TxResponse struct {
 
 ## 12 Governance module
 
-All governance functions are defined in the package `governance` under path `exchain-go-sdk/module/governance`. They can be invoked by the way like:
+All governance functions are defined in the package `governance` under path `okbchain-go-sdk/module/governance`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
@@ -2876,10 +2876,10 @@ type TxResponse struct {
 
 ## 13 Tendermint module
 
-All tendermint functions are defined in the package `tendermint` under path `exchain-go-sdk/module/tendermint`. They can be invoked by the way like:
+All tendermint functions are defined in the package `tendermint` under path `okbchain-go-sdk/module/tendermint`. They can be invoked by the way like:
 
 ```go
-import "github.com/okx/exchain-go-sdk"
+import "github.com/okx/okbchain-go-sdk"
 
 config, _ := gosdk.NewClientConfig(rpcURL, chainID, gosdk.BroadcastBlock, "0.02okb", 200000, "")
 cli := gosdk.NewClient(config)
