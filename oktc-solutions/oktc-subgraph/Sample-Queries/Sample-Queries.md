@@ -118,15 +118,16 @@ Using Graph Explorer will help you query data more easily
 
 1. Click "Explorer" in the upper left corner to expand
 
-![img](../../img/Subgraph-Explorer.png)
+![img](../../../img/Subgraph-Explorer.png)
 
 2. Select the query entity and filter
 
-![img](../../img/Subgraph-Filter.png)
+![img](../../../img/Subgraph-Filter.png)
 
 3. Click this button to get results
 
-![img](../../img/Subgraph-Query.png)
+![img](../../../img/Subgraph-Query.png)
+
 
 ### more
 
