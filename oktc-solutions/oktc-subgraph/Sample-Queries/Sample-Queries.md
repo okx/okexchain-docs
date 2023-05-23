@@ -128,6 +128,7 @@ Using Graph Explorer will help you query data more easily
 
 ![img](../../../img/Subgraph-Query.png)
 
+
 ### more
 
 Query from the application can refer to: https://thegraph.com/docs/zh/querying/querying-from-an-application/
