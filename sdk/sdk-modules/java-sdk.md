@@ -1,13 +1,13 @@
 # Java SDK
 
-github: https://github.com/okx/exchain-java-sdk
+github: https://github.com/okx/okbchain-java-sdk
 
 ## 1. package utils
 
 ### 1.1  Class Utils
 
 ```java
-import com.okexchain.utils.Utils;
+import com.okbchain.utils.Utils;
 ```
 
 #### 1.1.1 Complement 18-bit accuracy
@@ -27,7 +27,7 @@ public static byte[] BigIntegerToBytes(BigInteger value)
 ### 2.1 Class AddressUtil
 
 ```java
-import com.okexchain.utils.crypto.AddressUtil;
+import com.okbchain.utils.crypto.AddressUtil;
 ```
 
 #### 2.1.1 generate bech32 address from pubkey
@@ -57,7 +57,7 @@ public static String convertAddressFromBech32ToHex(String bech32Address)
 ### 2.2 Class Crypto
 
 ```java
-import com.okexchain.utils.crypto.Crypto;
+import com.okbchain.utils.crypto.Crypto;
 ```
 
 #### 2.2.1 sign the msg with hex string private key
@@ -99,7 +99,7 @@ public static String generateValidatorAddressFromPub(String pubKey)
 ### 2.3 Class PrivateKey
 
 ```java
-import com.okexchain.utils.crypto.PrivateKey;
+import com.okbchain.utils.crypto.PrivateKey;
 ```
 
 #### 2.3.1 PrivateKey constructor
@@ -112,23 +112,23 @@ parameter `mnemonic` could be mnemonic or hex string pivate key.
 
 ## 3. package msg
 
-Package msg defines the message types according to module in OKBC, and the example is the main function in class Msgxxx not end with "value" or in sample package. Take transfer coins as example as follows or you can also refer to the main fuction in class MsgSend in package `import com.okexchain.msg.common.Token`.
+Package msg defines the message types according to module in OKBC, and the example is the main function in class Msgxxx not end with "value" or in sample package. Take transfer coins as example as follows or you can also refer to the main fuction in class MsgSend in package `import com.okbchain.msg.common.Token`.
 
 ##### 1. environment setting
 
 ```java
-import com.okexchain.env.EnvInstance;
+import com.okbchain.env.EnvInstance;
 // set chainid
-EnvInstance.getEnv().setChainID("okbchain-1");
+EnvInstance.getEnv().setChainID("okbchain-67");
 // set rest url
-EnvInstance.getEnv().setRestServerUrl("http://localhost:8080");
+EnvInstance.getEnv().setRestServerUrl("http://localhost:8545");
 ```
 
 ##### 2. transfer tokens between accounts
 
 ```java
-import com.okexchain.msg.common.Message;
-import com.okexchain.msg.common.Token;
+import com.okbchain.msg.common.Message;
+import com.okbchain.msg.common.Token;
 
 // create send msg
 MsgSend msg = new MsgSend();
