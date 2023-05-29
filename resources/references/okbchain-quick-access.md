@@ -1,18 +1,5 @@
 # OKB Chain Quick Access
 
-> Mainnet network info will be updated after OKB Chain is live on Mainnet.
-
-## OKB Chain Network
-| Properties  | Network Details  |
-| :------------ | :------------ |
-| Network Name  | OKB Chain Testnet  |
-| RPC URL  |  https://okbtestrpc.okbchain.org |
-| Chain ID  |  195 |
-| Currency Symbol  | OKB  |
-| Block Explorer URL | https://www.oklink.com/cn/okbc-test  |
-
-You can also simply add network to MetaMask through [Chainlist](https://chainlist.org/chain/195 "Chainlist")
-
 ## OKB Chain API
 [OKB Chain API docs](/dev/api/okbc-api/rest-api.html)
 
