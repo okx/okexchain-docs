@@ -14,6 +14,7 @@ module.exports = [
                 collapsable: false,
                 children: [
                     'dev/quick-start/introduction/introduction-to-okbchain',
+                    'dev/quick-start/introduction/rpc-network',
                 ],
             },
             {
