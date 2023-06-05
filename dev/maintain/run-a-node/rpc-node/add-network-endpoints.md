@@ -23,7 +23,7 @@ OKB Chain Testnet replicates the OKB Chain Mainnet and is used for testing. User
 ## RPC API Methods
 Developers can utilize network endpoints to interact with on-chain data and send various transaction types to the network. The APIs adhere to a JSON-RPC standard, which is a lightweight, stateless remote procedure call (RPC) protocol frequently utilized when interacting with a blockchain network.
 >**GET STARTED WITH RPC CALLS**
-Start by accessing the comprehensive API documentation for standard [JSON-RPC calls](/dev/build/okbc-api/json-rpc-api.html).
+Start by accessing the comprehensive API documentation for standard [JSON-RPC calls](/dev/build-dapps/okbc-api/json-rpc-api.html).
 If you wish to initiate API requests without any preliminary configuration, troubleshoot unsuccessful requests, or test new methods on the OKB Chain network, try out the [Composer App](https://composer.alchemyapi.io/?composer_state=%7B%22chain%22%3A2%2C%22network%22%3A401%2C%22methodName%22%3A%22eth_getBlockByNumber%22%2C%22paramValues%22%3A%5B%22latest%22%2Cfalse%5D%7D "Composer App").
 
 When interacting with the OKB Chain, a user has the option to either run their own node or use one of the public endpoints offered by infrastructure and API service providers to connect to the network. If you require real-time updates from the chain, Dagger is the ideal solution. This platform allows your dApps and backend system to receive blockchain events in real-time through a socket or websocket.

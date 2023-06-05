@@ -2,7 +2,7 @@
 
 ## OKBC CLI
 
-`okbchaincli` is the tool that enables you to interact with the node that runs on the OKBC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/build/build-on-okbc/get-started/install-okbc.html).
+`okbchaincli` is the tool that enables you to interact with the node that runs on the OKBC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/build-dapps/build-on-okbc/get-started/install-okbc.html).
 
 ## Setting up okbchaincli
 

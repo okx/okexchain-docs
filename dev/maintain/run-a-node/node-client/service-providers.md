@@ -18,9 +18,9 @@ There are three main pieces to consider:
 
 We will describe the steps to run and interact with a full-node within the OKBC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](/dev/build/build-on-okbc/get-started/install-okbc.html).
+First, you need to [install the software](/dev/build-dapps/build-on-okbc/get-started/install-okbc.html).
 
-Then, you can start [running a full-node(testnet)](/dev/build/build-on-okbc/get-started/join-public-testnet.html).
+Then, you can start [running a full-node(testnet)](/dev/build-dapps/build-on-okbc/get-started/join-public-testnet.html).
 
 ### Command-Line interface
 
