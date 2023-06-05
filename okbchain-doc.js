@@ -35,7 +35,7 @@ module.exports = [
                                 'dev/build/build-on-okbc/wallet/metamask/create-and-import-accounts',
                                 'dev/build/build-on-okbc/wallet/metamask/set-up-metamask-for-okbc'
                             ],
-                            title: 'okx-web3-wallet',
+                            title: 'OKX Web3 Wallet',
                             chidren: [
                                 'dev/build/build-on-okbc/wallet/okx-web3-wallet/web3-wallet-101'
                             ]
