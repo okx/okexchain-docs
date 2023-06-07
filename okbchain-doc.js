@@ -65,9 +65,9 @@ module.exports = [
                             'dev/build/build-on-okbc/bridge/okbc-ibc-cli-guide',
                             ]
                         ],
-                        title: 'Bridge',
+                        title: 'Resources',
                         children: [
-                            'dev/build/build-on-okbc/resouces/okbchain-quick-access',
+                            'dev/build/build-on-okbc/resources/okbchain-quick-access',
                         ]   
                     }
                 ]
