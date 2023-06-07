@@ -24,11 +24,13 @@ ws ws://localhost:8443/
 ```
 ## Mainnet and Testnet Websocket URL
 ```shell
-# Mainnet Websocket URL
+# Mainnet Websocket URL (Available after mainnet launch)
 wss://okbws.okx.org:8443
+wss://okbws.okbchain.org:8443
 
 ## Testnet Websocket URL
 wss://okbtestws.okx.org:8443
+wss://okbtestws.okbchain.org:8443
 ```
 
 
