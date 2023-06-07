@@ -27,6 +27,7 @@ module.exports = [
                         title: 'Wallet',
                         children: [
                             'dev/build-dapps/build-on-okbc/wallet/get-started',
+                             {
                             title: 'Metamask',
                             chidren: [
                                 'dev/build-dapps/build-on-okbc/wallet/metamask/overview',
@@ -39,16 +40,19 @@ module.exports = [
                             chidren: [
                                 'dev/build-dapps/build-on-okbc/wallet/okx-web3-wallet/web3-wallet-101'
                             ]
+                        }
                         ],
                         title: 'Smart Contracts',
                         children: [
+                            {
                             title: 'Deploy Contracts',
                             children: [
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-remix',
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-truffle',
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-hardhat',
                             ],
-                            'dev/build-dapps/build-on-okbc/smart-contracts/verify-contracts',
+                            'dev/build-dapps/build-on-okbc/smart-contracts/verify-contracts'
+                        }
                         ],
                         title: 'Assets',
                         children: [
@@ -59,11 +63,13 @@ module.exports = [
                         ],
                         title: 'Bridge',
                         children: [
+                            {
                             title: 'IBC',
                             children: [
                             'dev/build-dapps/build-on-okbc/bridge/ibc-overview',
                             'dev/build-dapps/build-on-okbc/bridge/okbc-ibc-cli-guide',
                             ]
+                        }
                         ],
                         title: 'Resources',
                         children: [
@@ -94,6 +100,7 @@ module.exports = [
                         {
                         title: 'APIs',
                         children: [
+                            {
                             title: 'Go SDK',
                             children: [
                                 'dev/build-dapps/okbc-sdk/apis/go-sdk/client-setup',
@@ -119,6 +126,7 @@ module.exports = [
                                 'dev/build-dapps/okbc-sdk/apis/javascript-sdk/client-apis',
                                 'dev/build-dapps/okbc-sdk/apis/javascript-sdk/crypto'
                             ]
+                        }
                         ]
                     }
                 ],
@@ -128,6 +136,7 @@ module.exports = [
                         title: 'Rest API',
                         children: [
                             'dev/build-dapps/okbc-api/rest-api/overview',
+                            {
                             title: 'API References',
                             children: [
                                 'dev/build-dapps/okbc-api/rest-api/api-references/account',
@@ -137,10 +146,12 @@ module.exports = [
                                 'dev/build-dapps/okbc-api/rest-api/api-references/wasm',
                                 'dev/build-dapps/okbc-api/rest-api/api-references/gov'
                             ]
+                        }
                         ],
                         title: 'JSON-RPC API',
                         children: [
                             'dev/build-dapps/okbc-api/json-rpc-api/overview',
+                            {
                             title: 'API References',
                             children: [
                                 'dev/build-dapps/okbc-api/json-rpc-api/api-references/web3',
@@ -149,16 +160,19 @@ module.exports = [
                                 'dev/build-dapps/okbc-api/json-rpc-api/api-references/websocket',
                                 'dev/build-dapps/okbc-api/json-rpc-api/api-references/personal'
                             ]
+                        }
                         ],
                         title: 'Websocket API',
                         children: [
                             'dev/build-dapps/okbc-api/websocket-api/overview',
+                            {
                             title: 'API References',
                             children: [
                                 'dev/build-dapps/okbc-api/websocket-api/api-references/create-subscription',
                                 'dev/build-dapps/okbc-api/websocket-api/api-references/cancel-subscription',
                                 'dev/build-dapps/okbc-api/websocket-api/api-references/supported-subscriptions'
                             ]
+                        }
                         ]
                     }
                 ],
@@ -190,7 +204,6 @@ module.exports = [
                         ],
                         'dev/maintain/run-a-node/faq'
                     }
-
                 ],
            }
         ],
