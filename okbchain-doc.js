@@ -1,7 +1,7 @@
 /*
- * @Author: xiaojun.liu
- * @Date: 2023-03-23 12:40:21
- * @LastEditTime: 2023-03-23 12:40:21
+ * @Author: Karen.Wong
+ * @Date: 2023-06-08 16:00:19
+ * @LastEditTime: 2023-06-08 16:00:19
  * @Description:
  */
 
@@ -17,17 +17,21 @@ module.exports = [
                         children: [
                             'dev/build-dapps/build-on-okbc/welcome/introduction-to-okbc',
                             'dev/build-dapps/build-on-okbc/welcome/rpc-network'
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Get Started',
                         children: [
                             'dev/build-dapps/build-on-okbc/get-started/install-okbc',
                             'dev/build-dapps/build-on-okbc/get-started/deploy-your-okbc-localnet',
                             'dev/build-dapps/build-on-okbc/get-started/join-public-testnet'
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Wallet',
                         children: [
                             'dev/build-dapps/build-on-okbc/wallet/get-started',
-                             {
+                            {
                             title: 'Metamask',
                             chidren: [
                                 'dev/build-dapps/build-on-okbc/wallet/metamask/overview',
@@ -35,13 +39,17 @@ module.exports = [
                                 'dev/build-dapps/build-on-okbc/wallet/metamask/configure-custom-tokens',
                                 'dev/build-dapps/build-on-okbc/wallet/metamask/create-and-import-accounts',
                                 'dev/build-dapps/build-on-okbc/wallet/metamask/set-up-metamask-for-okbc'
-                            ],
+                            ]
+                        },
+                        {
                             title: 'OKX Web3 Wallet',
                             chidren: [
                                 'dev/build-dapps/build-on-okbc/wallet/okx-web3-wallet/web3-wallet-101'
                             ]
                         }
-                        ],
+                        ]
+                    },
+                    {   
                         title: 'Smart Contracts',
                         children: [
                             {
@@ -50,17 +58,26 @@ module.exports = [
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-remix',
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-truffle',
                                 'dev/build-dapps/build-on-okbc/smart-contracts/deploy-contracts/using-hardhat',
-                            ],
+                            ]
+                        },
+                        {
+                            title: 'Verify Contracts',
+                            children: [
                             'dev/build-dapps/build-on-okbc/smart-contracts/verify-contracts'
-                        }
-                        ],
+                            ]
+                            }
+                        ]
+                    },
+                        {
                         title: 'Assets',
                         children: [
                             'dev/build-dapps/build-on-okbc/assets/oip20',
                             'dev/build-dapps/build-on-okbc/assets/oip721',
                             'dev/build-dapps/build-on-okbc/assets/oip1155',
                             'dev/build-dapps/build-on-okbc/assets/oip165',
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Bridge',
                         children: [
                             {
@@ -70,13 +87,17 @@ module.exports = [
                             'dev/build-dapps/build-on-okbc/bridge/okbc-ibc-cli-guide',
                             ]
                         }
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Resources',
                         children: [
                             'dev/build-dapps/build-on-okbc/resouces/okbchain-quick-access',
                         ]   
                     }
-                ],
+                ]
+            },
+            {
                 title: 'Build with WASM',
                 children: [
                     {
@@ -84,7 +105,9 @@ module.exports = [
                         children: [
                             'dev/build-dapps/build-with-wasm/get-started/wasm-overview',
                             'dev/build-dapps/build-with-wasm/get-started/okbc-wasm-instruction-manual'
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Developer Guides',
                         children: [
                             'dev/build-dapps/build-with-wasm/developer-guides/vmbridge',
@@ -92,7 +115,9 @@ module.exports = [
                             'dev/build-dapps/build-with-wasm/developer-guides/deploy-with-bytecraft'
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 title: 'OKBC SDK',
                 children: [
                         'dev/build-dapps/okbc-sdk/get-started',
@@ -113,13 +138,17 @@ module.exports = [
                                 'dev/build-dapps/okbc-sdk/apis/go-sdk/backend',
                                 'dev/build-dapps/okbc-sdk/apis/go-sdk/governance',
                                 'dev/build-dapps/okbc-sdk/apis/go-sdk/tendermint',
-                            ],
+                            ]
+                        },
+                        {
                             title: 'Java SDK',
                             children: [
                                 'dev/build-dapps/okbc-sdk/apis/java-sdk/package-utils',
                                 'dev/build-dapps/okbc-sdk/apis/java-sdk/package-crypto',
                                 'dev/build-dapps/okbc-sdk/apis/java-sdk/package-msg'
-                            ],
+                            ]
+                        },
+                        {
                             title: 'JavaScript SDK',
                             children: [
                                 'dev/build-dapps/okbc-sdk/apis/javascript-sdk/client-setup',
@@ -129,7 +158,9 @@ module.exports = [
                         }
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 title: 'OKBC API',
                 children: [
                     {
@@ -147,7 +178,9 @@ module.exports = [
                                 'dev/build-dapps/okbc-api/rest-api/api-references/gov'
                             ]
                         }
-                        ],
+                        ]
+                    },
+                    {
                         title: 'JSON-RPC API',
                         children: [
                             'dev/build-dapps/okbc-api/json-rpc-api/overview',
@@ -161,7 +194,9 @@ module.exports = [
                                 'dev/build-dapps/okbc-api/json-rpc-api/api-references/personal'
                             ]
                         }
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Websocket API',
                         children: [
                             'dev/build-dapps/okbc-api/websocket-api/overview',
@@ -175,9 +210,11 @@ module.exports = [
                         }
                         ]
                     }
-                ],
+                ]
                 }
-            ],
+            ]
+        },
+        {
         title: 'Maintain',
         children: [
             {
@@ -188,25 +225,36 @@ module.exports = [
                         children: [
                             'dev/maintain/run-a-node/node-overview/types-of-nodes',
                             'dev/maintain/run-a-node/node-overview/hardware-requirement',
-                        ],
+                        ]
+                    },
+                    {
                         title: 'RPC Node',
                         children: [
                             'dev/maintain/run-a-node/rpc-node/add-network-endpoints',
                             'dev/maintain/run-a-node/rpc-node/node-data-snapshot',
                             'dev/maintain/run-a-node/rpc-node/run-a-testnet-node',
                             'dev/maintain/run-a-node/rpc-node/upgrade-your-node',
-                        ],
+                        ]
+                    },
+                    {
                         title: 'Node Client',
                         children: [
                             'dev/maintain/run-a-node/node-client/okb-chain-client',
                             'dev/maintain/run-a-node/node-client/service-providers',
                             'dev/maintain/run-a-node/node-client/supervision-tool',
-                        ],
+                        ]
+                    },
+                    {
+                        title: 'FAQs',
+                        children: [
                         'dev/maintain/run-a-node/faq'
+                        ]
                     }
-                ],
+                ]
            }
-        ],
+        ]
+    },
+    {
         title: 'Protocols',
         children: [
             {
@@ -219,7 +267,7 @@ module.exports = [
                             'dev/protocols/okbc-network/core-concepts/accounts',
                             'dev/protocols/okbc-network/core-concepts/gas-and-fees',
                             'dev/protocols/okbc-network/core-concepts/transactions',
-                        ],
+                        ]
                     }
                 ]            
             }
