@@ -25,9 +25,9 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
 **Block Explorer URL:** [OKTC testnet block explorer](https://www.oklink.com/oktc-test/)
 
-Or add network to metamask though [Chianlist](https://chainlist.org/chain/65)
+Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
-# OKTC API  Document
+# OKTC API Document
 
 [OKTC API docs](https://exchainrpc.okex.org/docs/en/#overview)
 
