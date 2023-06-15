@@ -139,7 +139,10 @@ Download the testnet snapshot from [here](/dev/nodes/rpc-node/node-data-snapshot
 
 ### 3. Run docker container
 ```
-docker run -d --name okbchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okbchain/fullnode-testnet:latest
+# p2p.seeds help to connect to testnet
+# rest.laddr expose rest service
+
+docker run -d --name okbchain-testnet-fullnode -v ${DATA_DIR}:/root/.okbchaind/data/ -p 8545:8545 okbchain/fullnode-testnet:latest sh -c "okbchaind start --p2p.seeds=f0721bd46ff3a9f9186cfe208c344d11ff918cd6@35.72.48.121:26656 --rest.laddr=tcp://0.0.0.0:8545"
 ```
 `Notice: ${DATA_DIR} has to be an absolute path`
 
