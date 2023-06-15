@@ -28,6 +28,7 @@ provide this control panel through the "Advanced System Settings" option inside 
 ## Install the binaries
 
 Next, let's install the latest version of OKBC. Make sure you `git checkout` the [latest released version](https://github.com/okx/okbchain/releases).
+Before you install OKBC node, you should install rocksdb first.
 
 ```bash
 # mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/okbchain/releases/latest
@@ -35,6 +36,8 @@ Next, let's install the latest version of OKBC. Make sure you `git checkout` the
 git clone -b <latest-release-tag> https://github.com/okx/okbchain
 export GO111MODULE=on
 cd okbchain 
+# install rocksdb
+make rocksdb
 # mainnet, use make mainnet
 make mainnet
 # testnet, use make testnet
