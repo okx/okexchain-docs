@@ -38,16 +38,7 @@ For testnet only.
 
 |       Symbol       |    Contract Address   |    Decimals   |
 |--------------------|-----------------------|-----------------------|
-|        OKB         |    [0xDa9d14072Ef2262c64240Da3A93fea2279253611](https://www.oklink.com/oktc-test/address/0xDa9d14072Ef2262c64240Da3A93fea2279253611)    |  10  |
-|        USDT        |    [0xDD5A98C55594dc942fd870D3B7F835680D1Bd5FB](https://www.oklink.com/oktc-test/address/0xDD5A98C55594dc942fd870D3B7F835680D1Bd5FB)    |  6  |
-|        USDK        |    [0x533367b864D9b9AA59D0DCB6554DF0C89feEF1fF](https://www.oklink.com/oktc-test/address/0x533367b864D9b9AA59D0DCB6554DF0C89feEF1fF)    |  10  |
-|        USDC        |    [0xb23AE8b65073CDB2643D82B7F790FF352245deD3](https://www.oklink.com/oktc-test/address/0xb23AE8b65073CDB2643D82B7F790FF352245deD3)    |  6  |
-|        BTCK        |    [0xEDa012ED1A7e1b3F5060a12f8c3f9B295D2Bc12F](https://www.oklink.com/oktc-test/address/0xEDa012ED1A7e1b3F5060a12f8c3f9B295D2Bc12F)    |  8  |
-|        ETHK        |    [0x347eA4EE14BDF98e546CFe01D801316cD6fbB5Fe](https://www.oklink.com/oktc-test/address/0x347eA4EE14BDF98e546CFe01D801316cD6fbB5Fe)    |  18  |
-|        DOTK        |    [0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f](https://www.oklink.com/oktc-test/address/0x72f8fa5da80dc6e20e00d02724cf05ebd302c35f)    |  10  |
-|        FILK        |    [0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93](https://www.oklink.com/oktc-test/address/0xf6a0Dc1fD1d2c0122ab075d7ef93aD79F02CcB93)    |  10  |
-|        LTCK        |    [0xd616388f6533B6f1c31968a305FbEE1727F55850](https://www.oklink.com/oktc-test/address/0xd616388f6533B6f1c31968a305FbEE1727F55850)    |  10  |
-|        WOKT        |    [0x70c1c53E991F31981d592C2d865383AC0d212225](https://www.oklink.com/oktc-test/address/0x70c1c53E991F31981d592C2d865383AC0d212225)    |  18  |
-|        DOGEK       |    [0x24639bE8F95f0A37457188F32668b3eE211325f0](https://www.oklink.com/oktc-test/address/0x24639bE8F95f0A37457188F32668b3eE211325f0)    |  10  |
-|        UNIK        |    [0x71D685EA395b336142D2Eec0234B63F47D98eC8b](https://www.oklink.com/oktc-test/address/0x71D685EA395b336142D2Eec0234B63F47D98eC8b)    |  10  |
-|        SUSHIK      |    [0x998B66fb675c1D267f80Ae08d6618Bc8b97C4715](https://www.oklink.com/oktc-test/address/0x998B66fb675c1D267f80Ae08d6618Bc8b97C4715)    |  10  |
+|        WBTC        |    [0xaDAfE8e1f4887E8220c0706B07B973e410Db1Ffc](https://www.oklink.com/oktc-test/address/0xaDAfE8e1f4887E8220c0706B07B973e410Db1Ffc)    |  8  |
+|        WETH        |    [0x8C78F39f69b5c49AfebF4BC00f1a7c24Af294cA5](https://www.oklink.com/oktc-test/address/0x8C78F39f69b5c49AfebF4BC00f1a7c24Af294cA5)    |  16  |
+|        USDT        |    [0x5dAf7Aee05367f7eBCB86B1EcfbbD9678bB1Ef7f](https://www.oklink.com/oktc-test/address/0x5dAf7Aee05367f7eBCB86B1EcfbbD9678bB1Ef7f)    |  6  |
+|        USDC        |    [0xf8616348fB444479BC84F65F61c410843407860D](https://www.oklink.com/oktc-test/address/0xf8616348fB444479BC84F65F61c410843407860D)    |  6  |
