@@ -51,14 +51,15 @@ This guide helps you create 4 validator nodes and 1 rpc node runs a network loca
 
 ```
 # Enter the okbchain's dev/testnet folder 
-# Run ./run4v1r.sh if the nodes do not run successfully, please check the `okb.profile` and set the `OKCHAIN_TOP` to proper location.
+# Run ./run4v1r.sh. this script will run 4 validator nodes and 1 rpc node.
+# If the nodes do not run successfully, please check the `okb.profile` and set the `OKCHAIN_TOP` to correct location.
 
 ./run4v1r.sh
 ```
 you can show validators through the following command
 
 ```
-exchaincli query staking validators|grep moniker
+okbchaincli query staking validators | grep moniker
 ```
 
 This setup puts all the data  in `cache` folder. 
@@ -109,7 +110,7 @@ cache/
 └── val4.log
 ```
 
-You can find logs in cache.
+You can find logs in cache folder.
 
 ```
 # Check val0's logs
