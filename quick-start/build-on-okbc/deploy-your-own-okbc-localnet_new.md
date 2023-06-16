@@ -17,10 +17,9 @@ This guide helps you create a single validator node that runs a network locally 
 ### Start Single-node Localnet
 
 1. Open a terminal or command prompt and navigate to the okbchain dev folder.
-
 2. Run the following command to start the single-node localnet:
 
-```base
+```bash
 ./start.sh
 ```
 
@@ -36,8 +35,10 @@ This script will perform the following operations:
 The data for okbchaind will be stored in the `_cache_evm` folder, and you can check the localnet's log in the okb.txt file.
 
 To monitor the logs, you can use the following command:
-```
+
+```bash
 tail -f okb.txt
+```
 
 Please note that you need to execute the start.sh script in the okbchain dev folder to set up the single-node localnet.
 
@@ -57,7 +58,7 @@ To set up a multi-node, automated localnet for okbc, you can follow the steps ou
 ```
 This script will start 4 validator nodes and 1 RPC node for the localnet.
 
-If the nodes do not run successfully, please check the okb.profile file and ensure that the OKCHAIN_TOP variable is set to the correct location.
+If the nodes do not run successfully, please check the `okb.profile` file and ensure that the `OKCHAIN_TOP` variable is set to the correct location.
 
 The data for the localnet will be stored in the cache folder, which will have the following structure:
 
