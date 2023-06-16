@@ -24,8 +24,8 @@ This guide helps you create a single validator node that runs a network locally 
 # 2. Set moniker and chain-id for Ethermint (Moniker can be anything, chain-id must be an integer)
 # okbchaind init $MONIKER --chain-id $CHAINID --home $HOME_SERVER
 # 3. Allocate genesis accounts (cosmos formatted addresses)
-# okbchaind add-genesis-account $(okbchaincli keys show $KEY    -a) 100000000okb --home $HOME_SERVER
-# 4. Sign genesis transactio that creates your validator
+# okbchaind add-genesis-account $(okbchaincli keys show $KEY -a) 100000000okb --home $HOME_SERVER
+# 4. Sign genesis transaction that creates your validator
 # okbchaind gentx --name $KEY --keyring-backend test --home $HOME_SERVER
 # 5. Add the generated bonding transaction to the genesis file
 # okbchaind collect-gentxs --home $HOME_SERVER
@@ -36,7 +36,7 @@ This guide helps you create a single validator node that runs a network locally 
 ./start.sh
 ```
 
-This setup puts all the data for `okbchaind` in `_cache_evm` folder. you can find the localnet's log in `okb.txt` which is also in the `dev` folder.
+This setup puts all the data for `okbchaind` in `_cache_evm` folder. And you can find the localnet's log in `okb.txt`.
 
 ```
 # Check the logs
@@ -51,12 +51,12 @@ This guide helps you create 4 validator nodes and 1 rpc node runs a network loca
 
 ```
 # Enter the okbchain's dev/testnet folder 
-# Run ./run4v1r.sh. this script will run 4 validator nodes and 1 rpc node.
+# Run ./run4v1r.sh. The script will run 4 validator nodes and 1 rpc node.
 # If the nodes do not run successfully, please check the `okb.profile` and set the `OKCHAIN_TOP` to correct location.
 
 ./run4v1r.sh
 ```
-you can show validators through the following command
+You can show validators through the following command
 
 ```
 okbchaincli query staking validators | grep moniker
