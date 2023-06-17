@@ -1,118 +1,74 @@
 # Deploy Your Own OKBC Localnet
 
-This document describes 2 ways to setup a network of `okbc` nodes, each serving a different usecase:
+This document describes 2 ways to setup a network of `okbc` nodes
 
-1. Single-node, local, manual testnet
-2. Multi-node, local, automated testnet
+1. Single-node, automated localnet
+2. Multi-node, automated localnet
 
-Supporting code can be found in the [networks directory](https://github.com/okx/okbchain/tree/dev/networks) and additionally the `local` sub-directories.
-
-## Available Docker images
-
-In case you need to use or deploy okbc as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
-
-* `docker run -it -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaind init mynode`
-* `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaind start`
-* ...
-* `docker run -it -v ~/.okbchaind:/root/.okbchaind okbchain/fullnode-testnet:$TAG okbchaincli version`
-
-The same images can be used to build your own docker-compose stack.
-
-## Single-node, Local, Manual Testnet
-
-This guide helps you create a single validator node that runs a network locally for testing and other development related uses.
-
-### Requirements
+## Requirements
 
 - [Install okbc](/dev/quick-start/build-on-okbc/install-okbc.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
-### Create Genesis File and Start the Network
+## Single-node, Automated Localnet
+
+This guide helps you create a single validator node that runs a network locally for testing and other development related uses.
+
+### Start Single-node Localnet
+
+1. Open a terminal or command prompt and navigate to the okbchain dev folder.
+2. Run the following command to start the single-node localnet:
 
 ```bash
-# You can run all of these commands from your home directory
-cd $HOME
-
-# Initialize the genesis.json file that will help you to bootstrap the network
-okbchaind init <your_custom_moniker> --chain-id testchain-1
-
-# Create a key to hold your validator account
-okbchaincli keys add validator
-
-# Add that key into the genesis.app_state.accounts array in the genesis file
-# NOTE: this command lets you set the number of coins. Make sure this account has some coins
-# with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-okbchaind add-genesis-account $(okbchaincli keys show validator -a) 1000000000okb
-
-# Generate the transaction that creates your validator
-okbchaind gentx --name validator
-
-# Add the generated bonding transaction to the genesis file
-okbchaind collect-gentxs
-
-# Now its safe to start `okbchaind`
-okbchaind start --chain-id testchain-1
+./start.sh
 ```
 
-This setup puts all the data for `okbchaind` in `~/.okbchaind`. You can examine the genesis file you created at `~/.okbchaind/config/genesis.json`. With this configuration `okbchaincli` is also ready to use and has an account with tokens (both staking and custom).
+This script will perform the following operations:
 
-## Multi-node, Local, Automated Testnet
+* Add an encrypted private key using the `okbchaincli keys add` command. You need to provide a mnemonic for key recovery.
+* Initialize `okbchaind` with a moniker and chain ID using the `okbchaind init` command.
+* Allocate genesis accounts using the `okbchaind add-genesis-account` command.
+* Sign the genesis transaction to create your validator using the `okbchaind gentx` command.
+* Add the generated bonding transaction to the genesis file using the `okbchaind collect-gentxs` command.
+* Finally, it starts the `okbchaind` localnet.
 
-From the [networks/local directory](https://github.com/okx/okbchain/tree/dev/networks/local):
+The data for okbchaind will be stored in the `_cache_evm` folder, and you can check the localnet's log in the okb.txt file.
 
-### Requirements
-
-- [Install okbc](/dev/quick-start/build-on-okbc/install-okbc.html)
-- [Install docker](https://docs.docker.com/engine/installation/)
-- [Install docker-compose](https://docs.docker.com/compose/install/)
-
-### Build
-
-Build the `okbchaind` binary (linux) and the `okbchain/fullnode-testnet` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated rebuilding the image, so you only need to build the image once.
+To monitor the logs, you can use the following command:
 
 ```bash
-# Clone the exchain repo
-git clone https://github.com/okx/okbchain.git
-
-# Work from the SDK repo
-cd okbchain
-
-# Build okbchain/fullnode-testnet image
-make build-docker-okbchainnode
+tail -f okb.txt
 ```
 
-### Run Your Testnet
+Please note that you need to execute the start.sh script in the okbchain dev folder to set up the single-node localnet.
 
-To start a 4 node testnet run:
+## Multi-node, Automated Localnet
+
+This guide helps you create 4 validator nodes and 1 rpc node runs a network locally for testing and other development related uses.
+
+### Start Multi-node Localnet
+
+To set up a multi-node, automated localnet for okbc, you can follow the steps outlined below:
+
+1. Open a terminal or command prompt and navigate to the okbchain dev/testnet folder.
+2. Run the following command to start the multi-node localnet:
 
 ```
-make localnet-start
+./run4v1r.sh
 ```
+This script will start 4 validator nodes and 1 RPC node for the localnet.
 
-This command creates a 4-node network using the okbchaindnode image.
-The ports for each node are found in this table:
+If the nodes do not run successfully, please check the `okb.profile` file and ensure that the `OKCHAIN_TOP` variable is set to the correct location.
 
-| Node ID     | P2P Port | RPC Port |
-| ----------- | -------- | -------- |
-| `okbchainnode0` | `26656`  | `26657`  |
-| `okbchainnode1` | `26659`  | `26660`  |
-| `okbchainnode2` | `26661`  | `26662`  |
-| `okbchainnode3` | `26663`  | `26664`  |
+The data for the localnet will be stored in the cache folder, which will have the following structure:
 
-### Configuration
-
-The `make localnet-start` creates files for a 4-node testnet in `./build` by
-calling the `okbchaind testnet` command. This outputs a handful of files in the
-`./build` directory:
-
-```bash
-$ tree -L 3 build/
-build/
+```
+cache/
 ├── gentxs
-│   ├── node0.json
-│   ├── node1.json
-│   ├── node2.json
-│   └── node3.json
+│   ├── node0-0.json
+│   ├── node1-0.json
+│   ├── node2-0.json
+│   └── node3-0.json
 ├── node0
 │   ├── okbchaincli
 │   │   ├── key_seed.json
@@ -134,45 +90,34 @@ build/
 │   └── okbchaind
 │       ├── config
 │       └── data
-└── node3
-    ├── okbchaincli
-    │   ├── key_seed.json
-    │   └── keyring-test-okbchain
-    └── okbchaind
-        ├── config
-        └── data
+├── node3
+│   ├── okbchaincli
+│   │   ├── key_seed.json
+│   │   └── keyring-test-okbchain
+│   └── okbchaind
+│       ├── config
+│       └── data
+├── node4
+│   └── okbchaind
+│       ├── config
+│       └── data
+├── val0.log
+├── val1.log
+├── val2.log
+├── val3.log
+└── val4.log
 ```
 
-Each `./build/nodeN` directory is mounted to the `/okbchaind` directory in each container.
+You can find logs for each node in the cache folder, named val0.log, val1.log, etc.
 
-### Logging
-
-Logs are saved under each `./build/nodeN/okbchaind/okbchaind.log`. You can also watch logs
-directly via Docker, for example:
+To monitor the logs, you can use the following command:
+```
+tail -f ./cache/val0.log
+```
+To show the validators in the localnet, you can use the following command:
 
 ```
-docker logs -f okbchaindnode0
+okbchaincli query staking validators | grep moniker
 ```
 
-### Keys & Accounts
-
-To interact with `okbchaincli` and start querying state or creating txs, you use the
-`okbchaincli` directory of any given node as your `home`, for example:
-
-```shell
-okbchaincli keys list --home ./build/node0/okbchaincli
-```
-
-Now that accounts exists, you may create new accounts and send those accounts
-funds!
-
-> _NOTE_: Each node's seed is located at `./build/nodeN/okbchaincli/key_seed.json` and can be restored to the CLI using the `okbchaincli keys add --restore` command
-
-### Special Binaries
-
-If you have multiple binaries with different names, you can specify which one to run with the BINARY environment variable. The path of the binary is relative to the attached volume. For example:
-
-```
-# Run with custom binary
-BINARY=okbchainfoo make localnet-start
-```
+Please note that you need to execute the run4v1r.sh script in the okbchain dev/testnet folder to set up the multi-node localnet.
