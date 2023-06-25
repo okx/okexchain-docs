@@ -102,7 +102,7 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file in the project, There predefined three networks for you:
+As you can see the `config.json` file in the project, There predefined  networks for you:
 
 ```json
 {
@@ -130,7 +130,7 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "mainnet": {
+  "oktc-mainnet": {
     "_connection": {
       "chainID": "exchain-66",
       "URL": "https://exchaintmrpc.okex.org"
@@ -158,7 +158,7 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "testnet": {
+  "oktc-testnet": {
     "_connection": {
       "chainID": "exchain-65",
       "URL": "https://exchaintesttmrpc.okex.org"
@@ -186,9 +186,65 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "localnet": {
+  "oktc-localnet": {
     "_connection": {
       "chainID": "exchain-67",
+      "URL": "http://localhost:26657"
+    },
+    "_base": {
+      "instantiation": {
+        "instantiateMsg": {
+          "admins": [
+            "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+          ],
+          "mutable": true
+        }
+      }
+    },
+    "contracts": {
+      "mydapp": {
+        "instantiation": {
+          "instantiateMsg": {
+            "admins": [
+              "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+            ],
+            "mutable": true
+          }
+        }
+      }
+    }
+  },
+  "okbc-testnet": {
+    "_connection": {
+      "chainID": "okbchaintest-195",
+      "URL": "https://okbtesttmrpc.okbchain.org"
+    },
+    "_base": {
+      "instantiation": {
+        "instantiateMsg": {
+          "admins": [
+            "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+          ],
+          "mutable": true
+        }
+      }
+    },
+    "contracts": {
+      "mydapp": {
+        "instantiation": {
+          "instantiateMsg": {
+            "admins": [
+              "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+            ],
+            "mutable": true
+          }
+        }
+      }
+    }
+  },
+  "okbc-localnet": {
+    "_connection": {
+      "chainID": "okbchain-67",
       "URL": "http://localhost:26657"
     },
     "_base": {
@@ -223,7 +279,7 @@ also  there predefined instantiateMsg for mydapp contract.
 To deploy your new mydapp smart contract on OKTC testnet, run the following command in the terminal with extral flag `--network testnet`.
 
 ```sh
- bytecraft deploy mydapp --signer test --network testnet
+ bytecraft deploy mydapp --signer test --network oktc-testnet
 ```
 
 In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
@@ -265,7 +321,7 @@ bytecraft > wallets.test.address
 Then, exit the bytecraft console and deploy the `mydapp` smart contract to testnet with the `test` account as the signer.
 
 ```sh
-bytecraft deploy mydapp --signer test --network testnet
+bytecraft deploy mydapp --signer test --network oktc-testnet
 ```
 
 After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
@@ -298,7 +354,7 @@ Once you have successfully deployed your project, you can interact with the depl
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
 ```sh
-bytecraft console --signer test --network testnet
+bytecraft console --signer test --network oktc-testnet
 bytecraft > lib.freeze()
 #output
 {
@@ -332,7 +388,7 @@ task(async (env:Env) => {
 To run the example task shown above, which is located in the `tasks/example-with-lib.js` file, run the following command in the terminal.
 
 ```sh
-bytecraft task:run template --signer test --network testnet
+bytecraft task:run template --signer test --network oktc-testnet
 ```
 
 In order to create a new task, run the following command replacing `<task-name>` with the desired name for your new task.
@@ -408,7 +464,7 @@ It is possible to tell ByteCraft to use a custom deploy task instead of the defa
 }
 ```
 
-Now instead of running `bytecraft task:run deploy_counter --signer test --network testnet` you can run `bytecraft deploy mydapp --signer test --network testnet`.
+Now instead of running `bytecraft task:run deploy_counter --signer test --network oktc-testnet` you can run `bytecraft deploy mydapp --signer test --network testnet`.
 
 ## Use Bytecraft with OKTC Mainnet
 
@@ -451,7 +507,7 @@ The `bytecraft deploy` command does the following:
 - Builds, optimizes, and stores the wasm code on the blockchain.
 - Instantiates the contract.
 
-As you can see the `config.json` file in the project, There predefined three networks for you:
+As you can see the `config.json` file in the project, There predefined networks for you:
 
 ```
 {
@@ -479,7 +535,7 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "mainnet": {
+  "oktc-mainnet": {
     "_connection": {
       "chainID": "exchain-66",
       "URL": "https://exchaintmrpc.okex.org"
@@ -507,7 +563,7 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "testnet": {
+  "oktc-testnet": {
     "_connection": {
       "chainID": "exchain-65",
       "URL": "https://exchaintesttmrpc.okex.org"
@@ -535,7 +591,7 @@ As you can see the `config.json` file in the project, There predefined three net
       }
     }
   },
-  "localnet": {
+  "oktc-localnet": {
     "_connection": {
       "chainID": "exchain-67",
       "URL": "http://localhost:26657"
@@ -562,15 +618,70 @@ As you can see the `config.json` file in the project, There predefined three net
         }
       }
     }
+  },
+  "okbc-testnet": {
+    "_connection": {
+      "chainID": "okbchaintest-195",
+      "URL": "https://okbtesttmrpc.okbchain.org"
+    },
+    "_base": {
+      "instantiation": {
+        "instantiateMsg": {
+          "admins": [
+            "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+          ],
+          "mutable": true
+        }
+      }
+    },
+    "contracts": {
+      "mydapp": {
+        "instantiation": {
+          "instantiateMsg": {
+            "admins": [
+              "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+            ],
+            "mutable": true
+          }
+        }
+      }
+    }
+  },
+  "okbc-localnet": {
+    "_connection": {
+      "chainID": "okbchain-67",
+      "URL": "http://localhost:26657"
+    },
+    "_base": {
+      "instantiation": {
+        "instantiateMsg": {
+          "admins": [
+            "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+          ],
+          "mutable": true
+        }
+      }
+    },
+    "contracts": {
+      "mydapp": {
+        "instantiation": {
+          "instantiateMsg": {
+            "admins": [
+              "0x7aB9aC66DdA0D1b8F22275262DAcACb10185CA3A"
+            ],
+            "mutable": true
+          }
+        }
+      }
+    }
   }
 }
-
 ```
 
 To deploy your new my-wasm-dapp smart contract on OKTC mainnet, run the following command in the terminal with extral flag `--network mainnet`.
 
 ```
- bytecraft deploy mydapp --signer test --network mainnet
+ bytecraft deploy mydapp --signer test --network oktc-mainnet
 ```
 
 In this case, `test`, as our signer. The signer account will be responsible for paying the gas fee associated with deploying the contract to the exchain blockchain and will be assigned as the owner of the project.
@@ -612,7 +723,7 @@ bytecraft > wallets.test.address
 Then, exit the bytecraft console and deploy the `mydapp` smart contract to testnet with the `test` account as the signer.
 
 ```
-bytecraft deploy mydapp --signer test --network mainnet
+bytecraft deploy mydapp --signer test --network oktc-mainnet
 ```
 
 After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
@@ -645,7 +756,7 @@ Once you have successfully deployed your project, you can interact with the depl
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
 ```
-bytecraft console --signer test --network mainnet
+bytecraft console --signer test --network oktc-mainnet
 bytecraft > lib.freeze()
 #output
 {
@@ -679,7 +790,7 @@ task(async (env:Env) => {
 To run the example task shown above, which is located in the `tasks/example-with-lib.js` file, run the following command in the terminal.
 
 ```
-bytecraft task:run template --signer test --network mainnet
+bytecraft task:run template --signer test --network oktc-mainnet
 ```
 
 In order to create a new task, run the following command replacing `<task-name>` with the desired name for your new task.
@@ -755,7 +866,7 @@ It is possible to tell ByteCraft to use a custom deploy task instead of the defa
 }
 ```
 
-Now instead of running `bytecraft task:run deploy_counter --signer test --network mainnet` you can run `bytecraft deploy mydapp --signer test --network mainnet`.
+Now instead of running `bytecraft task:run deploy_counter --signer test --network oktc-mainnet` you can run `bytecraft deploy mydapp --signer test --network mainnet`.
 
 ## ByteCraft console
 
@@ -764,7 +875,7 @@ Bytecraft console provide a javascript repl environment, you can interact with t
 You can call the functions defined in `lib/index.js` inside of the `bytecraft console`. An example using the template counter smart contract is shown below.
 
 ```sh
-bytecraft console --signer test --network testnet
+bytecraft console --signer test --network oktc-testnet
 bytecraft > lib.freeze()
 #output
 {
