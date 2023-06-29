@@ -77,27 +77,16 @@ In order to interact with the OKB Chain network, you will need to have some OKB 
 - Buy OKB from OKX, and transfer via OKB Chain to your wallets
 ## Roadmap
 OKBC sets its goal to provide up-to-date infrastructure to support mass adoption of web3 applications and explore unforeseen innovations in blockchain development. Let's start with the fundamentals and take little but solid steps ahead to building OKBC together!
-#### OKB Chain 1.0
-- Ethereum sidechain
-- Testnet in 2023 Q1
+### 2023 | Q3
+#### Stable, Lighting-Fast Interoperable L1 Blockchain
+The upcoming OKBC Mainnet launch in the coming months will be a L1 blockchain that is stable, enjoys EVM, IBC and Wasm compatibility, and has processing of 6,000 TPS.
 
-#### ZK Dex 1.0
-A decentralized exchange based on ZK-rollup 
-- StarkEx Technology
-- On Ethereum
-- Mainnet in 2023 Q2
+### 2023 | Q4
+#### Stable, Lighting-Fast Interoperable ZK L2 Blockchain
+Subsequently, in 2023 Q4, we will transform the L1 blockchain into a ZK L2 scaleup blockchain that enjoys the same EVM, IBC and Wasm compatibility, and processing of 6,000 TPS.
 
-#### OKB Chain 2.0
-- ZK-rollup network on Ethereum
-- Web2 developer-friendly tool kits:
-  - Account abstraction
-  - Web3 identity (DID)
-- Testnet in 2023 Q4
-
-#### ZK Dex 2.0
-A decentralized exchange based on ZK-rollup 
-- Full-fledged derivatives
-- Special ZK-circuit
-- Mainnet in 2023 Q4
+### 2023 | Q4
+#### Augment the Ecosystem with ZK DEX
+Once OKBC is transformed into a ZK L2 blockchain, we will then rollout a decentralized exchange based on ZK-rollup (ZK DEX) that enhances user's privacy and supports High-Frequency Trading (HFT).
 
 It is just the beginning and OKB Chain is not stopping here. More details on roadmap will be announced soon!
