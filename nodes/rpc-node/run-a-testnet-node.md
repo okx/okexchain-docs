@@ -7,7 +7,7 @@ There are 2 methods to sync your testnet node.
 For more information on installation and launch, please [see here](/dev/quick-start/build-on-okbc/join-public-testnet.md).
 
 ### 2. Sync from Snapshot (Recommended)
-Before you start services to sync, follow the steps below to use the [Snapshot](https://static.okex.org/cdn/okbc/snapshot/index.html):
+Before you start services to sync, follow the steps below to use the [snapshot](https://static.okex.org/cdn/okbc/snapshot/index.html):
 
 1. To download okbchain source code and compile.
 
