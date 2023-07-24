@@ -1,6 +1,6 @@
 # Join the Public Testnet 
 
-**You need to [install okbc](/dev/quick-start/build-on-okbc/install-okbc.html) before you go further**
+**You need to [install OKBC](/dev/quick-start/build-on-okbc/install-okbc.html) before you go further**
 
 ## Supported Platforms
 
