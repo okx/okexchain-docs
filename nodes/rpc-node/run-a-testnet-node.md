@@ -15,6 +15,7 @@ Before you start services to sync, follow the steps below to use the [snapshot](
 ~~~
 # 1. Initialize okbchain node configurationsexport OKBCHAIND_PATH=~/.okbchaind (or other directory)
 okbchaind init your_custom_moniker --chain-id okbchaintest-195 --home ${OKBCHAIND_PATH}
+
 # 2. download snapshot
 rm -rf ${OKBCHAIND_PATH}/data
 cd ${OKBCHAIND_PATH}
@@ -22,6 +23,7 @@ wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/chain/okbc/snapshot/tes
 tar -zxvf testnet-$version-$date-$height-rocksdb.tar.gz
     
 # 3. start okbchaind
+okbchaind start --home ${OKBCHAIND_PATH}
 ~~~
 
 For more information on installation and launch, please [see here](/dev/quick-start/build-on-okbc/join-public-testnet.md).
