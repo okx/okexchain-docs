@@ -14,6 +14,6 @@ According to the snapshot size, it is divided into S0, S1, S2 and S3:
 ## Snapshot Links
 | Node Type and Network Type  | Download Snapshot File  | Link to Latest Version  |
 | :------------------------------------------ | :------------ | :------------ |
-| RPC Testnet  | Not available currently  | [GitHub release](https://static.okex.org/cdn/okbc/snapshot/index.html "GitHub release")  |
+| RPC Testnet  | Not available currently  | [GitHub release](https://static.okex.org/cdn/chain/okbc/snapshot/index.html "GitHub release")  |
 | RPC Mainnet  | Available after Mainnet launch  | Available after Mainnet launch  |
 | Archive Mainnet  | Available after Mainnet launch  | Available after Mainnet launch  |
