@@ -1,4 +1,4 @@
-# Run A Testnet Node
+# Run a Testnet Node
 
 ## Steps to Sync with Testnet
 There are 2 methods to sync your testnet node. 

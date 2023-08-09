@@ -1,5 +1,6 @@
 # Client Setup
 Go SDK is a light weight Go library that provides `Client` to interact with the OKTC network. 
+Inititate `Client` with Go SDK:
 ```
 package gosdk
 

@@ -1,6 +1,6 @@
 # Supervision Tool
 
-## prometheus
+## Prometheus Metrics
 
 Tendermint also supports the use of prometheus metrics. This function is
 enabled by setting `prometheus=true` in `config/config.toml`. Through
@@ -8,7 +8,7 @@ setting `prometheus_listen_addr`, the default supervision address
 `:26660` is changed. The default status is set as enable on okbc's
 testnet.
 
-## Metrics available on okbc
+## Metrics available on OKBC
 
 | Name                                                  | Type        | Tags             | Description                                                                |
 | -------------------------------------------------------|-------------|------------------|----------------------------------------------------------------------------| 
@@ -48,7 +48,7 @@ testnet.
 | x\_order\_partial\_filled                             | Gauge       | √                | order partially filled                                                     |
 | x\_order\_pending                                     | Gauge       | √                | order pending                                                              |
 
-## Supervision tool
+## Supervision Tool
 
 Create `monitor.yml`
 

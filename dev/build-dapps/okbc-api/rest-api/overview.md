@@ -1,5 +1,5 @@
 # Overview
-This document guides you on how to use the OKBC Rest API. The following are the Rest API methods for OKBC.
+This document guides you on how to use the OKBC REST API. The following are the REST API methods for OKBC.
 
 ### Mainnet
 https://okbrpc.okbchain.org/v1/auth/accounts/0x11941B5f5A1BD39bc3Da48f3815C877800bb73c1
