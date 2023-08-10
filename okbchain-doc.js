@@ -311,9 +311,12 @@ module.exports = [
         children: [
             {
                 title: 'OKBC Network',
+                path: ['dev/protocols/okbc-network'],
                 children: [
                     {
                         title: 'Core Concepts',
+                        path: ['dev/protocols/okbc-network/core-concepts'],
+                        descriptionList: ['Introduction to OKBC consensus architecture', 'In-built OKBC account systems', 'Differences between Gas and Fees in Ethereum and OKBC', 'Introduction to routing, transaction formats, and signatures'],
                         children: [
                             'dev/protocols/okbc-network/core-concepts/consensus-overview',
                             'dev/protocols/okbc-network/core-concepts/accounts',
