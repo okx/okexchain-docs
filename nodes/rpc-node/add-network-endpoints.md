@@ -18,7 +18,7 @@ OKB Chain Testnet replicates the OKB Chain Mainnet and is used for testing. User
 | Gas Token  | OKB  |
 | WebSocket Endpoint  | wss://okbtestws.okbchain.org:8443 |
 |Rest API | https://okbtestrpc.okbchain.org/v1  |
-| Block Explorer  | https://www.oklink.com/cn/okbc-test  |
+| Block Explorer  | https://www.okx.com/explorer/okbc-test  |
 
 ## RPC API Methods
 Developers can utilize network endpoints to interact with on-chain data and send various transaction types to the network. The APIs adhere to a JSON-RPC standard, which is a lightweight, stateless remote procedure call (RPC) protocol frequently utilized when interacting with a blockchain network.

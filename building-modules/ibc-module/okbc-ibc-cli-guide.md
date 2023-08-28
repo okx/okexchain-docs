@@ -14,25 +14,7 @@ IBC is a cross-chain operation, which means that if you want to test locally, yo
 
 ## How to transfer tokens across chains for ordinary users
 
-### OKBC provides a [visual operating interface](https://www.okx.com/okbc/ibc)
-
-The process of a token transfer is broken down into 6 steps, along with screenshots of the operating interface below:
-
-1. Select a chain to transfer from, e.g., OKBC
-
-1. Select a chain to transfer to, e.g., CosmosHub
-
-1. Enter the receiving address of the receiving chain
-
-1. Enter transfer amount
-
-1. Click the transfer button
-
-1. Wait for relayer to relay data (approx. 1-2 mins)
-
-![img](../../img/ibc-cli-01.png)
-
-### OKBC also provides transfers in the form of manually sending commands through the command line
+### OKBC provides transfers in the form of manually sending commands through the command line
 
 Example of cross-chain transfer from OKBC to Cosmos
 
