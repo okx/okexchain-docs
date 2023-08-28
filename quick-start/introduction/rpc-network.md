@@ -8,7 +8,7 @@ You can add OKB Chain Testnet by inputting the following network info:
 | RPC URL  |  https://okbtestrpc.okbchain.org |
 | Chain ID  |  195 |
 | Currency Symbol  | OKB  |
-| Block Explorer URL | https://www.oklink.com/okbc-test  |
+| Block Explorer URL | https://www.okx.com/explorer/okbc-test  |
 
 You can also simply add network to MetaMask through [Chainlist](https://chainlist.org/chain/195 "Chainlist")
 
