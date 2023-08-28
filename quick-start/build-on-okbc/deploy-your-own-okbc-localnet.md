@@ -1,13 +1,13 @@
 # Deploy Your Own OKBC Localnet
 
-This document describes 2 ways to setup a network of `okbc` nodes
+This document describes 2 ways to setup a network of `OKBC` nodes
 
 1. Single-node, automated localnet
 2. Multi-node, automated localnet
 
 ## Requirements
 
-- [Install okbc](/dev/quick-start/build-on-okbc/install-okbc.html)
+- [Install OKBC](/dev/quick-start/build-on-okbc/install-okbc.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ## Single-node, Automated Localnet
@@ -48,7 +48,7 @@ This guide helps you create 4 validator nodes and 1 rpc node runs a network loca
 
 ### Start Multi-node Localnet
 
-To set up a multi-node, automated localnet for okbc, you can follow the steps outlined below:
+To set up a multi-node, automated localnet for OKBC, you can follow the steps outlined below:
 
 1. Open a terminal or command prompt and navigate to the okbchain dev/testnet folder.
 2. Run the following command to start the multi-node localnet:

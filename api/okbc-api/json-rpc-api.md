@@ -4,7 +4,7 @@ JSON-RPC methods and namespaces supported on OKBC.
 
 ## Mainnet (chain-id: 0xC4, 196 in decimal)
 
-https://okbrpc.okbchain.org/
+https://okbrpc.okbchain.org/ (coming soon)
 
 ## Testnet (chain-id: 0xC3, 195 in decimal)
 

@@ -60,6 +60,12 @@ Install the bytecraft package globally.
 npm install -g @okexchain/bytecraft
 ```
 
+### Install cosmwasm-check
+It allows checking if the Wasm binary is a proper smart contract that's ready to be uploaded to the blockchain.
+```sh
+cargo install cosmwasm-check
+```
+
 ## Use Bytecraft with OKBC Testnet
 
 
