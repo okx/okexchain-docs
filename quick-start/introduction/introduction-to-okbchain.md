@@ -1,6 +1,6 @@
 # Introduction to OKB Chain (OKBC)
 ## Introduction to OKB Chain
-OKB Chain (OKBC) is a Cosmos-based Ethereum sidechain that offers secured and user-friendly blockchain experience to all users. OKBC is a scaling solution that supports Cosmos and EVM compatible smart contracts and protocols, and offers fast-finality from Tendermint Core BFT consensus. 
+OKB Chain (OKBC) is a zkEVM L2 network that offers secured and user-friendly blockchain experience to all users. OKBC offers 100% EVM compatibility, high-performance, low cost and top security, achieved with seamless integration.
 ## Key features & highlights
 -  **Highly Scalable, Low Fees**  
 100% EVM and Cosmos compatibility at a fraction of a cost, easy developer APIs for deployment
@@ -77,16 +77,22 @@ In order to interact with the OKB Chain network, you will need to have some OKB 
 - Buy OKB from OKX, and transfer via OKB Chain to your wallets
 ## Roadmap
 OKBC sets its goal to provide up-to-date infrastructure to support mass adoption of web3 applications and explore unforeseen innovations in blockchain development. Let's start with the fundamentals and take little but solid steps ahead to building OKBC together!
-### 2023 | Q3
-#### Stable, Lighting-Fast Interoperable L1 Blockchain
-The upcoming OKBC Mainnet launch in the coming months will be a L1 blockchain that is stable, enjoys EVM, IBC and Wasm compatibility, and has processing of 6,000 TPS.
-
 ### 2023 | Q4
-#### Stable, Lighting-Fast Interoperable ZK L2 Blockchain
-Subsequently, in 2023 Q4, we will transform the L1 blockchain into a ZK L2 scaleup blockchain that enjoys the same EVM, IBC and Wasm compatibility, and processing of 6,000 TPS.
-
+#### Testnet Launch of new OKBC based on zkEVM L2 Network
+- Dapp seamless integration
+- Sequencer stability test
+- Performance stress test
+- Allowing Goerli assets to bridge to OKBC
 ### 2023 | Q4
-#### Augment the Ecosystem with ZK DEX
-Once OKBC is transformed into a ZK L2 blockchain, we will then rollout a decentralized exchange based on ZK-rollup (ZK DEX) that enhances user's privacy and supports High-Frequency Trading (HFT).
+#### Development of the most advanced features for OKBC Testnet
+- Transcend from EVM to Ethereum equivalent compatibility
+- Scaling based on Ethereum L1
+- Enhance proof generation time
+- Iterative testing and optimization
+### 2024 | Q1
+#### OKBC Mainnet Launch
+- Transition from testnet to mainnet
+- Launch of ZK Bridge, ZK Oracle, ZK Graph, ZK DEX
+- OKB as native token on OKBC
 
 It is just the beginning and OKB Chain is not stopping here. More details on roadmap will be announced soon!
