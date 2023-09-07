@@ -78,21 +78,21 @@ In order to interact with the OKB Chain network, you will need to have some OKB 
 ## Roadmap
 OKBC sets its goal to provide up-to-date infrastructure to support mass adoption of web3 applications and explore unforeseen innovations in blockchain development. Let's start with the fundamentals and take little but solid steps ahead to building OKBC together!
 ### 2023 | Q4
-#### Testnet Launch of new OKBC based on zkEVM L2 Network
-- Dapp seamless integration
+#### Testnet launch of OKBC based on zkEVM
+- Seamless DApp integration
 - Sequencer stability test
 - Performance stress test
 - Allowing Goerli assets to bridge to OKBC
 ### 2023 | Q4
-#### Development of the most advanced features for OKBC Testnet
-- Transcend from EVM to Ethereum equivalent compatibility
+#### Development of advanced features for OKBC Testnet
+- Transition from EVM compatibility to Ethereum compatibility
 - Scaling based on Ethereum L1
 - Enhance proof generation time
 - Iterative testing and optimization
 ### 2024 | Q1
-#### OKBC Mainnet Launch
+#### OKBC Mainnet launch
 - Transition from testnet to mainnet
-- Launch of ZK Bridge, ZK Oracle, ZK Graph, ZK DEX
-- OKB as native token on OKBC
+- Launch of zkBridge, zkOracle, zkGraph, zkDEX
+- Establish OKB as native token on OKBC
 
 It is just the beginning and OKB Chain is not stopping here. More details on roadmap will be announced soon!
