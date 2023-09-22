@@ -289,6 +289,13 @@ module.exports = [
           "dev/developer-services/gas-back/how-to-get-gas-back-on-oktc",
         ],
       },
+      {
+        title: "Data Indexing",
+        collapsable: false,
+        children: [
+          "dev/developer-services/data-indexing/indexing-okc-onchain-data",
+        ],
+      },
     ],
   },
   {
