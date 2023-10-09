@@ -61,7 +61,7 @@ If you're searching for a way to scale your existing DApp effectively, you are i
  based chain**: As the ultimate Layer-2 scaling solution for Ethereum, OKB Chain makes it simple to move or deploy your DApps to the OKB Chain as long as it's EVM-compatible. You won't have to worry about the underlying architecture.
 - **Faster transaction layer**: By deploying your DApp to the OKB Chain Mainnet, you can use OKB Chain as a faster transaction layer, enhancing your DApp's speed. Additionally, we can map your tokens. Join our technical discussions group on Telegram to learn more.
 ## Economy Model
-### OKB burning mechnism
+### OKB burning mechanism
 OKB has a total supply of 300 million.
 On May 4, 2019, OKX initiated the OKB Buy-Back & Burn program where 30% of the spot market transaction fees are used to buy back OKB. Check the [OKB Buy-Back & Burn program](https://www.okx.com/support/hc/en-us/sections/360004542951-OKB-Buy-back-Burn) report to learn more.
 As the Mainnet launches, burn OKB (ERC20) and release OKB on OKBC as native token will be carried out. For detailed timeline, process and operation, an announcement will be before Mainnet launches.
