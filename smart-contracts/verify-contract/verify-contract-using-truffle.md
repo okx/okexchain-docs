@@ -2,9 +2,7 @@
 ## Verify Your Contract on OKLink
 The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 
-Verified using Truffle
-
-## Truffle
+## Verified using Truffle
 Truffle has an OKLink plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
 
 You need to deploy with Truffle to verify with the Truffle verify plugin.
