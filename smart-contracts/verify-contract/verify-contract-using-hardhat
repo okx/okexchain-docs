@@ -1,6 +1,6 @@
 # Verify Contract using Hardhat
 ## Verify your contract on OKLink
-[OKLink](https://www.okx.com/explorer/oktc "OKLink") has created a plugin for developers working with OKC (presumably a blockchain or cryptocurrency project) that helps them verify their smart contracts more efficiently. This plugin integrates with a development tool called hardhat, and provides an example of how to use the "verify" command in hardhat to quickly verify your smart contracts. To use the plugin, you'll need to install hardhat-etherscan and configure it appropriately.
+[OKLink](https://www.oklink.com/cn/oktc "OKLink") has created a plugin for developers working with OKC (presumably a blockchain or cryptocurrency project) that helps them verify their smart contracts more efficiently. This plugin integrates with a development tool called hardhat, and provides an example of how to use the "verify" command in hardhat to quickly verify your smart contracts. To use the plugin, you'll need to install hardhat-etherscan and configure it appropriately.
 
 ## Usage Instructions
 To verify your code on OKLink, you just need to modify one file (hardhat.config.js), following the same process and commands outlined in Hardhat's official documentation.
