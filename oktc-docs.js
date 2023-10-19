@@ -214,7 +214,8 @@ module.exports = [
             title: "Contract Verification",
             collapsable: false,
             children: [
-              "dev/smart-contracts/verify-contract/verify-contract",
+              "dev/smart-contracts/verify-contract/verify-contract-using-truffle",
+              "dev/smart-contracts/verify-contract/verify-contract-using-hardhat",
               "dev/smart-contracts/verify-proxy-contract/verify-proxy-contract"
             ]
           },
