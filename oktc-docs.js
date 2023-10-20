@@ -306,11 +306,6 @@ module.exports = [
         children: ["dev/oktc-solutions/oktc-swap/OKC-swap"],
       },
       {
-        title: "OKTC BRIDGE",
-        collapsable: false,
-        children: ["dev/oktc-solutions/oktc-bridge/OKC-Bridge"],
-      },
-      {
         title: "OKTC MULTISIG",
         collapsable: false,
         children: ["dev/oktc-solutions/oktc-multisig/OKTC-Multisig"],
