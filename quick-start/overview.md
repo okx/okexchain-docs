@@ -21,7 +21,7 @@ A Super Scalable, Compatible L1 Blockchain OKT Chain (OKTC) is an EVM-compatible
 
 Blockchain developers normally fall into one of three buckets:
 
-- Base Layer Developer or Core Contributor: responsible for developing the underlying technology for blockains. Public chain development has a long R&D cycle & high barrier to entry because of the cryptography, security, and distributed consensus backgrounds required to meaningfully contribute.
+- Base Layer Developer or Core Contributor: responsible for developing the underlying technology for blockchains. Public chain development has a long R&D cycle & high barrier to entry because of the cryptography, security, and distributed consensus backgrounds required to meaningfully contribute.
 
 
 As the development of the Internet, public chains would undertake more complex business with the maturity of blockchain technology. Therefore, decentralized business will require an in-depth development environment. OKTC is just designed for these developers.
