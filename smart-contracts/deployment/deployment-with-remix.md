@@ -38,7 +38,7 @@ Now, We have to deploy our smart contract on OKBC Network. For that, we have to 
     [RPC URLs](/dev/api/okbc-api/json-rpc-api.html)   
     ChainID: 195   
     Symbol: OKB   
-    Block Explorer: https://www.okx.com/explorer/okbc-test
+    Block Explorer: https://www.oklink.com/okbc-test
 - Go ahead and click save
 - Copy your address from Metamask
 - Head over to [Faucet](http://www.okx.com/okbc/faucet) and request test OKB
@@ -49,7 +49,7 @@ Now, We have to deploy our smart contract on OKBC Network. For that, we have to 
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.okx.com/explorer/okbc-test
+Congratulations! You have successfully deployed a OIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.oklink.com/okbc-test
 
 
 ### Remix FAQ
