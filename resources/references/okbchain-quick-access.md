@@ -5,7 +5,7 @@
 
 ## OKB Chain Infrastructures
 OKB Chain Explorer:
-- [Testnet](https://www.okx.com/explorer/okbc-test)
+- [Testnet](https://www.oklink.com/okbc-test)
 
 ## Wallet
 Download links:
