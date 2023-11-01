@@ -25,7 +25,7 @@ currentProvider.send({
                 "symbol": "OKB",
                 "decimals": 18
             },
-            "blockExplorerUrls": ["https://www.okx.com/explorer/okbc"]
+            "blockExplorerUrls": ["https://www.oklink.com/okbc"]
         }
     ]
 })
@@ -52,7 +52,7 @@ currentProvider.send({
         "symbol": "OKB",
         "decimals": 18
       },
-      "blockExplorerUrls": ["https://www.okx.com/explorer/okbc-test"]
+      "blockExplorerUrls": ["https://www.oklink.com/okbc-test"]
     }
   ]
 })
