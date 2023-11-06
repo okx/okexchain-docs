@@ -6,6 +6,6 @@
 
 2. Input **OKTC** in the search bar and select OKTC network.
 
-![OKX wallet all network](./img/okxwallet-all-network.png)
+![OKX wallet on OKTC](./img/okxwallet-oktc.png)
 
 You are now on the OKTC network.
