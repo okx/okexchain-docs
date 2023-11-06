@@ -4,7 +4,7 @@
 
 ![OKX wallet all network](./img/okxwallet-all-network.png)
 
-2. Input **OKTC** in the search bar and select OKTC network. Click the bottom to switch network.
+2. Input **OKTC** in the search bar and select OKTC network.
 
 ![OKX wallet all network](./img/okxwallet-all-network.png)
 
