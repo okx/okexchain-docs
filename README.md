@@ -5,6 +5,7 @@
 ## What is OKT Chain？
 
 ### About OKX Chain
+hello
 
 OKTChain (OKTC) is an EVM-compatible L1 built on Cosmos with a focus on true interoperability (IBC) and maximal performance. OKTC lets developers build cross-chain applications that can scale with low gas fees. The OKTChain ecosystem and infrastructure, including the all-in-one multi-chain Web3 interface, enables a seamless experience for both developers and users.
 
