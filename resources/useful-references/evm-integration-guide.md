@@ -27,42 +27,34 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
-# OKTC API Document
+## OKTC API Document
 
 [OKTC API docs](https://exchainrpc.okex.org/docs/en/#overview)
-
-# OKTC Infrastrctures
 
 ## OKTC Explorer
 
 > **Mainnet:** [OKTC mainnet](https://www.oklink.com/zh-cn/oktc)
 > **Testnet: **[OKTC testnet](https://www.oklink.com/zh-cn/oktc-test)
 
-##   OKTC Bridge
-
-**[OKTC bridge](https://www.okx.com/oktc/bridge)**
-
- ## OKTC Swap
+## OKTC Swap
 
 **[OKTC swap](https://www.okx.com/oktc/swap)**
 
- ## OKTC Testnet Faucet
+## OKTC Testnet Faucet
 
 **[OKTC testnet faucet](https://www.okx.com/oktc/faucet)**
 
- ## OKTC Oracle
+## OKTC Oracle
 
 **[OKTC oracle](https://www.okx.com/oktc/oracle)**
 
- ## OKTC Subgraph
+## OKTC Subgraph
 
 **[OKTC subgraph](https://www.okx.com/oktc/subgraph)**
 
- ## OKTC Multisig
+## OKTC Multisig
 
 **[OKTC multisig](https://oktctools.okx.com)**
-
-# Development Smart Contract
 
 ## Wallet
 
@@ -78,18 +70,17 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 **Truffle:** [Truffle download](https://trufflesuite.com/truffle/)
 
-**Other Dev Tools**
-> [the-tools-of-smart-contract-developer](https://forum.okt.club/d/347-the-tools-of-smart-contract-developer)
+**Other Dev Tools:** [the-tools-of-smart-contract-developer](https://forum.okt.club/d/347-the-tools-of-smart-contract-developer)
 
-# EVM Trace on OKTC
+## EVM Trace on OKTC
 
-> [Tutorial: Debugging contracts using EVM tracing](https://forum.okt.club/d/355-tutorial-debugging-contracts-using-evm-tracing)
+[Tutorial: Debugging contracts using EVM tracing](https://forum.okt.club/d/355-tutorial-debugging-contracts-using-evm-tracing)
 
-# Gas Back Initiative for Smart Contract Deployer
+## Gas Back Initiative for Smart Contract Deployer
 
-> [OKTC Gas Back Developer Dividend Project](https://forum.okt.club/d/342-oktc-gas-back-developer-dividend-project)
+[OKTC Gas Back Developer Dividend Project](https://forum.okt.club/d/342-oktc-gas-back-developer-dividend-project)
 
-# FAQs
+## FAQs
 
 **How to fork OKTC network using Hardhat or Truffe**
   - [Tutorial: Using ganache-cli fork and hardhat fork on OKTC mainnet](https://forum.okt.club/d/351-tutorial-using-ganache-cli-fork-and-hardhat-fork-on-oktc-mainnet)
