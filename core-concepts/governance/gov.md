@@ -28,42 +28,42 @@ Except for text proposals, there are four proposal stages, including initiation,
 ![](../../img/gov-tally.png)
 
 Meanings of variables:   
-* 1. totalBonded： the sum of bonded OKT that can be used to vote on the entire network.
-* 2. totalVotingPower： the sum of bonded OKT that participate in voting.
-* 3. percentVoting = totalVotingPower / totalBonded.
-* 4. Quorum： voting weight threshold for participating voters (0.334).
-* 5. Threshold： weight threshold for the proportion of Yes votes to all non-abstained votes (0.5).
-* 6. Veto： weight threshold for the proportion of NoWithVeto votes to all votes (0.334).
-* 7. YesInVotePeriod： weight threshold for the proportion of Yes votes to totalBonded before the voting ends (0.667).
-* 8. Yes： the sum of bonded OKT voting Yes.
-* 9. No： the sum of bonded OKT voting No.
-* 10. NoWithVeto： the sum of bonded OKT voting NoWithVeto.
-* 11. Abstain： the sum of bonded OKT voting Abstain.
+1. totalBonded： the sum of bonded OKT that can be used to vote on the entire network.
+2. totalVotingPower： the sum of bonded OKT that participate in voting.
+3. percentVoting = totalVotingPower / totalBonded.
+4. Quorum： voting weight threshold for participating voters (0.334).
+5. Threshold： weight threshold for the proportion of Yes votes to all non-abstained votes (0.5).
+6. Veto： weight threshold for the proportion of NoWithVeto votes to all votes (0.334).
+7. YesInVotePeriod： weight threshold for the proportion of Yes votes to totalBonded before the voting ends (0.667).
+8. Yes： the sum of bonded OKT voting Yes.
+9. No： the sum of bonded OKT voting No.
+10. NoWithVeto： the sum of bonded OKT voting NoWithVeto.
+11. Abstain： the sum of bonded OKT voting Abstain.
 
 ## Proposal parameters
-###Text proposal parameters
-&emsp;&emsp;deposit period(`TextMaxDepositPeriod`): 24h   
-&emsp;&emsp;minimum deposit(`TextMinDeposit`): 100okt  
-&emsp;&emsp;voting period(`TextVotingPeriod`): 72h
+### Text proposal parameters
+* deposit period(`TextMaxDepositPeriod`): 24h   
+* minimum deposit(`TextMinDeposit`): 100okt  
+* voting period(`TextVotingPeriod`): 72h
 
 ### Parameter proposal parameters
-&emsp;&emsp;deposit period(`ParamChangeMaxDepositPeriod`): 24h   
-&emsp;&emsp;minimum deposit(`ParamChangeMinDeposit`): 100okt  
-&emsp;&emsp;voting period(`ParamChangeVotingPeriod`): 72h   
-&emsp;&emsp;maximum block height(`ParamChangeMaxBlockHeight`)：100000
+* deposit period(`ParamChangeMaxDepositPeriod`): 24h   
+* minimum deposit(`ParamChangeMinDeposit`): 100okt  
+* voting period(`ParamChangeVotingPeriod`): 72h   
+* maximum block height(`ParamChangeMaxBlockHeight`)：100000
 
 ### Delist proposal parameters
-&emsp;&emsp;deposit period(`ParamChangeMaxDepositPeriod`): 24h   
-&emsp;&emsp;minimum deposit(`ParamChangeMinDeposit`): 100okt  
-&emsp;&emsp;voting period(`ParamChangeVotingPeriod`): 72h
+* deposit period(`ParamChangeMaxDepositPeriod`): 24h   
+* minimum deposit(`ParamChangeMinDeposit`): 100okt  
+* voting period(`ParamChangeVotingPeriod`): 72h
 
 ### Software upgrade proposal parameters
-&emsp;&emsp;deposit period(`AppUpgradeMaxDepositPeriod`): 24h   
-&emsp;&emsp;minimum deposit(`AppUpgradeMinDeposit`): 100okt   
-&emsp;&emsp;voting period(`AppUpgradeVotingPeriod`): 72h
+* deposit period(`AppUpgradeMaxDepositPeriod`): 24h   
+* minimum deposit(`AppUpgradeMinDeposit`): 100okt   
+* voting period(`AppUpgradeVotingPeriod`): 72h
 
 ### Voting parameters of all proposals
-&emsp;&emsp;voting weight threshold for participating voters (`Quorum`)：0.334   
-&emsp;&emsp;weight threshold for the proportion of Yes votes to all non-abstained votes (`Threshold`)：0.5   
-&emsp;&emsp;weight threshold for the proportion of NoWithVeto votes to all votes (`Veto`)：0.334  
-&emsp;&emsp;weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends (`YesInVotePeriod`)：0.667
+* voting weight threshold for participating voters (`Quorum`)：0.334   
+* weight threshold for the proportion of Yes votes to all non-abstained votes (`Threshold`)：0.5   
+* weight threshold for the proportion of NoWithVeto votes to all votes (`Veto`)：0.334  
+* weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends (`YesInVotePeriod`)：0.667
