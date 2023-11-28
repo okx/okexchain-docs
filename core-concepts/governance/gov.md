@@ -41,6 +41,7 @@ Meanings of variables:
 11. Abstain： the sum of bonded OKT voting Abstain.
 
 ## Proposal parameters
+
 ### Text proposal parameters
 * deposit period(`TextMaxDepositPeriod`): 24h   
 * minimum deposit(`TextMinDeposit`): 100okt  
