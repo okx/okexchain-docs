@@ -1,8 +1,8 @@
 # Governance Parameter Proposal
+
 ![text](../../img/gov-parameter.png)
 
 Descriptions:
-
 On OKTC, there are some special parameters that can be modified through on-chain governance. OKT holdes can participate in on-chain governance of parameter modification. If the community is not satisfied with some modifiable parameters, the members can initiate a parameter change proposal. The processes involved in parameter upgrade proposals are the same as those involved in text proposals.
 
 Those parameters are divided into two categories, namely system parameters and business parameters.
@@ -16,7 +16,6 @@ System parameters refer to the parameters specified on OKTC, and the modificatio
 6. After business parameter change proposals are passed, deposits are collected by validation nodes.
 
 ## System parameters
-
 ### Modifiable parameters on gov module:
 
 | Parameters              | Type | Descriptions                                                                                               |
