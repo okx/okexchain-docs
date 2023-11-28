@@ -1,8 +1,7 @@
 # On-chain Governance
-
 ## Proposal process
-
 The overall process of a proposal is shown below:
+
 ![](../../img/OKCProposal.png)   
 Details:  
 1. The proposer should pledge OKT when initiating a proposal to prevent malicious initiation of a proposal.
@@ -17,14 +16,17 @@ Details:
 
 ## Proposal types
 OKTC offers 4 types of proposals for different purposes:
-1. [Text Proposal](/dev/core-concepts/on-chain-governance/text.html)： to obtain network views of a topic.
-2. [Parameter Proposal](/dev/core-concepts/on-chain-governance/parameter.html)： to change system parameters.
-3. Software Upgrade Proposal： to support the entire network upgrade.
+1. [Text Proposal](#text-proposal-parameters): to obtain network views of a topic.
+2. [Parameter Proposal](#parameter-proposal-parameters): to change system parameters.
+3. [Software Upgrade Proposal](#software-upgrade-proposal-parameters): to support the entire network upgrade.
+4. [Delist Proposal](#delist-proposal-parameters): to cancel a software upgrade
 
 Except for text proposals, there are four proposal stages, including initiation, deposit_period, vote_period and execution. Execution is not a text proposal’s stage.
 
 ## Proposal voting statistics
-![](../../img/gov-tally.png) 
+
+![](../../img/gov-tally.png)
+
 Meanings of variables:   
 * 1. totalBonded： the sum of bonded OKT that can be used to vote on the entire network.
 * 2. totalVotingPower： the sum of bonded OKT that participate in voting.
@@ -39,27 +41,31 @@ Meanings of variables:
 * 11. Abstain： the sum of bonded OKT voting Abstain.
 
 ## Proposal parameters
-text proposal parameters  
+###Text proposal parameters
 &emsp;&emsp;deposit period(`TextMaxDepositPeriod`): 24h   
 &emsp;&emsp;minimum deposit(`TextMinDeposit`): 100okt  
-&emsp;&emsp;voting period(`TextVotingPeriod`): 72h   
-parameter proposal parameters   
+&emsp;&emsp;voting period(`TextVotingPeriod`): 72h
+
+### Parameter proposal parameters
 &emsp;&emsp;deposit period(`ParamChangeMaxDepositPeriod`): 24h   
 &emsp;&emsp;minimum deposit(`ParamChangeMinDeposit`): 100okt  
 &emsp;&emsp;voting period(`ParamChangeVotingPeriod`): 72h   
 &emsp;&emsp;maximum block height(`ParamChangeMaxBlockHeight`)：100000
-delist proposal parameters   
+
+### Delist proposal parameters
 &emsp;&emsp;deposit period(`ParamChangeMaxDepositPeriod`): 24h   
 &emsp;&emsp;minimum deposit(`ParamChangeMinDeposit`): 100okt  
 &emsp;&emsp;voting period(`ParamChangeVotingPeriod`): 72h
-software upgrade proposal parameters
+
+### Software upgrade proposal parameters
 &emsp;&emsp;deposit period(`AppUpgradeMaxDepositPeriod`): 24h   
 &emsp;&emsp;minimum deposit(`AppUpgradeMinDeposit`): 100okt   
-&emsp;&emsp;voting period(`AppUpgradeVotingPeriod`): 72h   
-voting parameters of all proposals:
+&emsp;&emsp;voting period(`AppUpgradeVotingPeriod`): 72h
+
+### Voting parameters of all proposals
 &emsp;&emsp;voting weight threshold for participating voters (`Quorum`)：0.334   
 &emsp;&emsp;weight threshold for the proportion of Yes votes to all non-abstained votes (`Threshold`)：0.5   
 &emsp;&emsp;weight threshold for the proportion of NoWithVeto votes to all votes (`Veto`)：0.334  
 &emsp;&emsp;weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends (`YesInVotePeriod`)：0.667
 
-Refer to [Proposal parameter](/dev/core-concepts/on-chain-governance/parameter.html) for details.
+Refer to [Proposal parameter](/core-concepts/governance/parameter) for details.

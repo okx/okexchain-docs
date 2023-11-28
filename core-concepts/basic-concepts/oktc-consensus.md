@@ -1,5 +1,4 @@
 # Consensus Architecture
-
 Learn how OKTC consensus architecture leverages the Cosmos SDK Proof-of-Stake functionality, EVM compatibility and fast-finality from Tendermint Core BFT consensus.
 
 ## Cosmos SDK
@@ -7,9 +6,12 @@ OKTC enables the full composability and modularity of the [Cosmos SDK](http://do
 
 ## Tendermint
 More formally, Tendermint Core performs Byzantine Fault Tolerant (BFT) State Machine Replication (SMR) for arbitrary deterministic, finite state machines.
-Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language. 
+Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the transactions to be processed in any programming language.
+
 ![](./img/abci1.png)
+
 Unlike other blockchain and consensus solutions, which come pre-packaged with built-in state machines (like a fancy key-value store, or a quirky scripting language), developers can use Tendermint for BFT state machine replication of applications written in whatever programming language and development environment is right for them.
+
 ## Byzantine-Fault-Tolerance (BFT)
 BFT can only tolerate up to a 1/3 of failures, those failures can include arbitrary behaviour, including hacking and malicious attacks. Tendermint never forks in the presence of asynchrony if less than 1/3 of  processes are faulty. This property is what makes Tendermint a BFT-based PoS protocol, in which it strictly prefers safety over  liveness. Tendermint blockchain will halt momentarily until a supermajority, i.e. more than 2/3, of the validator set comes to consensus.
 Unlike Nakamoto consensus where it’s subject to 51% attack (meaning that 51% of the actors acting maliciously could attack and alter the blockchain), Tendermint is more resistant as it is subject to a 66% attack.
@@ -33,6 +35,7 @@ Consensus process goes through these 5 steps: NewHeigh -> Propose -> Pre-vote ->
 The 2 steps **Newheigh** and **Commit** at the beginning and end are called special steps, while the 3 steps (Propose, Pre-vote and Pre-commit) in the middle of the cylce are called a **Round**, which is the consensus stage and the core principal of the algorthm. 
 
 Participants in the protocol are called **validators**; they take turns proposing blocks of transactions and voting on them. Blocks are committed in a chain, with one block at each **height**. A block may fail to be committed, in which case the protocol moves to the next **round**, and a new validator gets to propose a block for that height. Two stages of voting are required to successfully commit a block; we call them **pre-vote** and **pre-commit**. A block is committed when more than 2/3 of validators pre-commit for the same block in the same round.
+
 ![](./img/cs1.png)
 1. **Propose** - a validator is chosen in a round-robin format. The validator will send a proposal for the new block to be added to the blockchain with their signature to the other validators.
 2. **Pre-vote** - All the validators will receive the proposal, decide whether to accept the block and send a message to all the validators.
