@@ -9,8 +9,8 @@ OKC Subgraph currently provides the Hosted Service. If you want to deploy a subg
 | **Information**                                          | **Sample**                                  |
 | ------------------------------------------------------------ | ------------------------------------------- |
 | Name of project                                              | OKC Test Project                            |
-| Official website (if any)                                    | https://okctestproject.io/                  |
-| Github (if any)                                              | https://github.com/okctestproject           |
+| Official website (if any)                                    | https://www.okx.com/oktc/subgraph           |
+| Github (if any)                                              | https://github.com/okx-subgraph/oktc-subgraph-example|
 | Type of project                                              | DeFi，GameFi，NFT...                        |
 | Introduction to project                                      | Okctestproject is an AMM swap               |
 | Uses of the Subgraph service                                 | Query business data and present it to users |
