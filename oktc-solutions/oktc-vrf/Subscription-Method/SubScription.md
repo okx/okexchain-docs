@@ -80,7 +80,7 @@ Each subscription has the following limits:
 
 ### Coordinator contract limits
 
-You can see the configuration for each network on the [Supported networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations) page. You can also view the full configuration for each coordinator contract directly in OKLink. As an example, view the [OKT Mainnet VRF  coordinator contract](https://www.oklink.com/zh-cn/oktc/address/0x37c50d866cbc39f8f74dad711121c205d645097b) configuration.
+You can see the configuration for each network on the [Supported networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#configurations) page. You can also view the full configuration for each coordinator contract directly in OKLink. As an example, view the [OKT Mainnet VRF  coordinator contract](https://www.oklink.com/oktc/address/0x37c50d866cbc39f8f74dad711121c205d645097b) configuration.
 
 - Each coordinator has a `MAX_NUM_WORDS` parameter that limits the maximum number of random values you can receive in each request.
 - Each coordinator has a `maxGasLimit` parameter, which is the maximum allowed `callbackGasLimit` value for your requests. You must specify a sufficient `callbackGasLimit` to fund the callback request to your consuming contract. This depends on the number of random values you request and how you process them in your `fulfillRandomWords()` function. If your `callbackGasLimit` is not sufficient, the callback fails but your subscription is still charged for the work done to generate your requested random values.

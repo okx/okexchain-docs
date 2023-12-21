@@ -3,14 +3,14 @@
 **Contract name**: SwapRouter
 View on github:[SwapRouter.sol on GitHub](https://github.com/okex/OKCSwap/blob/main/contracts/router/OKCSwapRouter02.sol).  
 **Contract address**: 0xc97b81B8a38b9146010Df85f1Ac714aFE1554343
-View on Oklink: [Router  contract on OkLink](https://www.oklink.com/en/oktc/address/0xc97b81B8a38b9146010Df85f1Ac714aFE1554343).
+View on Oklink: [Router  contract on OkLink](https://www.oklink.com/oktc/address/0xc97b81B8a38b9146010Df85f1Ac714aFE1554343).
 ## Read functions
 ### WOKT
 `function WOKT() external pure returns (address);`
-Returns the canonical address for OKX: [WOKT Token](https://www.oklink.com/en/oktc/token/0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15).
+Returns the canonical address for OKX: [WOKT Token](https://www.oklink.com/oktc/token/0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15).
 ### factory
 `function factory() external pure returns (address);`
-Returns the canonical address for [SwapFactory](https://www.oklink.com/en/oktc/address/0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539).
+Returns the canonical address for [SwapFactory](https://www.oklink.com/oktc/address/0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539).
 For explanations of the following, view the [Uniswap v2 Internal Functions documentation](https://uniswap.org/docs/v2/smart-contracts/library/#internal-functions).
 ### getAmountOut
 `function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut);`
