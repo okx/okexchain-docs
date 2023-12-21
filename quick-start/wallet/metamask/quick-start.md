@@ -51,7 +51,7 @@ If the user is using Metamask wallet, they should: Click on Settings; Select cus
 > - **New RPC URL88**: https://exchainrpc.okex.org
 > - **Chain ID**: 66
 > - **Symbol**: OKT
-> - **Blockchain browser URL**: https://www.oklink.com/en/oktc
+> - **Blockchain browser URL**: https://www.oklink.com/oktc
 
 
 

@@ -33,8 +33,8 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 ## OKTC Explorer
 
-> **Mainnet:** [OKTC mainnet](https://www.oklink.com/zh-cn/oktc)
-> **Testnet: **[OKTC testnet](https://www.oklink.com/zh-cn/oktc-test)
+> **Mainnet:** [OKTC mainnet](https://www.oklink.com/oktc)
+> **Testnet: **[OKTC testnet](https://www.oklink.com/oktc-test)
 
 ## OKTC Swap
 
