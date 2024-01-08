@@ -1,9 +1,9 @@
 # Factory
 ## Contract info
 **Contract name**: SwapFactory
-View on github:[SwapFactory.sol on GitHub.](https://github.com/okx/OKCSwap/blob/main/contracts/pair/OKCSwapFactory.sol)
+View on github:[SwapFactory.sol on GitHub.](https://github.com/okx/oktcSwap/blob/main/contracts/pair/oktcSwapFactory.sol)
 **Contract address**:0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539
-View on Oklink:[Swap: Factory contract on OkLink.](https://www.oklink.com/oktc/address/0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539)
+View on Oklink:[Swap: Factory contract on OkLink.](https://www.okx.com/explorer/oktc/address/0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539)
 ## Read functions
 ### getHash
 `function getHash() public pure returns(bytes32)；`

@@ -18,7 +18,7 @@ Note 4: If you encounter problems in the process of compiling rocksdb, please re
     exchaind init your_custom_moniker --chain-id exchain-65 --home ${EXCHAIND_PATH}# 3. download snapshot
     rm -rf ${EXCHAIND_PATH}/data
     cd ${EXCHAIND_PATH}
-    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/chain/okc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
+    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/chain/oktc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
     tar -zxvf testnet-$version-$date-$height-rocksdb.tar.gz
     
     # 4. start exchaind
@@ -31,7 +31,7 @@ Note 4: If you encounter problems in the process of compiling rocksdb, please re
     exchaind init your_custom_moniker --chain-id exchain-65 --home ${EXCHAIND_PATH}# 2. download snapshot
     rm -rf ${EXCHAIND_PATH}/data
     cd ${EXCHAIND_PATH}
-    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/chain/okc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
+    wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/chain/oktc/snapshot/testnet-$version-$date-$height-rocksdb.tar.gz
     tar -zxvf testnet-$version-$date-$height-rocksdb.tar.gz
     
     # 3. download the docker image

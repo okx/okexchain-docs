@@ -10,7 +10,7 @@
 
 [Testnet okt](https://www.okex.com/activities/pro/drawdex)
 
-[Testnet explorer](https://www.oklink.com/oktc-test)
+[Testnet explorer](https://www.okx.com/explorer/oktc-test)
 
 ## Cosmos
 

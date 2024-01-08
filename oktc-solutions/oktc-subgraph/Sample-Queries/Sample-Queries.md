@@ -1,7 +1,7 @@
 # Sample Queries
 
-- Query URL ：https://www.okx.com/okc/subgraph-hosted/name/<Subgraph_name>
-- Query Playground：https://www.okx.com/okc/subgraph-hosted/name/<Subgraph_name>/graphql
+- Query URL ：https://www.okx.com/oktc/subgraph-hosted/name/<Subgraph_name>
+- Query Playground：https://www.okx.com/oktc/subgraph-hosted/name/<Subgraph_name>/graphql
 
 Please replace `<Subgraph_name>` in the example with your own Subgraph name
 

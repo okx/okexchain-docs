@@ -1,6 +1,6 @@
 # Verify Contract using Hardhat
 ## Verify your contract on OKLink
-[OKLink](https://www.oklink.com/oktc "OKLink") has created a plugin for developers working with OKC (presumably a blockchain or cryptocurrency project) that helps them verify their smart contracts more efficiently. This plugin integrates with a development tool called hardhat, and provides an example of how to use the "verify" command in hardhat to quickly verify your smart contracts. To use the plugin, you'll need to install hardhat-etherscan and configure it appropriately.
+[OKLink](https://www.okx.com/explorer/oktc "OKLink") has created a plugin for developers working with OKC (presumably a blockchain or cryptocurrency project) that helps them verify their smart contracts more efficiently. This plugin integrates with a development tool called hardhat, and provides an example of how to use the "verify" command in hardhat to quickly verify your smart contracts. To use the plugin, you'll need to install hardhat-etherscan and configure it appropriately.
 
 ## Usage Instructions
 To verify your code on OKLink, you just need to modify one file (hardhat.config.js), following the same process and commands outlined in Hardhat's official documentation.
@@ -31,8 +31,8 @@ module.exports = {
         network: "okc",
         chainId: 66,
         urls: {
-          apiURL: "https://www.oklink.com/api/explorer/v1/contract/verify/async/api",
-          browserURL: "https://www.oklink.com/okc/"
+          apiURL: "https://www.okx.com/explorer/api/explorer/v1/contract/verify/async/api",
+          browserURL: "https://www.okx.com/explorer/oktc/"
         }
       }
     ]
@@ -58,8 +58,8 @@ module.exports = {
         network: "okcTest",
         chainId: 65,
         urls: {
-          apiURL: "https://www.oklink.com/api/explorer/v1/contract/verify/async/api/okctest",
-          browserURL: "https://www.oklink.com/okc-test/"
+          apiURL: "https://www.okx.com/explorer/api/explorer/v1/contract/verify/async/api/oktctest",
+          browserURL: "https://www.okx.com/explorer/oktc-test/"
         }
       }
     ]
@@ -77,4 +77,4 @@ Step 4: Wait for two minutes and then verify the contract by running the followi
 [upl-image-preview url=https://forum.okt.club/assets/files/2023-03-20/1679306358-853528-image.png]
 
 
-Step 5: Check if the contract has been successfully verified by visiting https://www.oklink.com/okc/address/0x2F7795A8417b4226B9627c0000461e644aD7C6d8.Ω
+Step 5: Check if the contract has been successfully verified by visiting https://www.okx.com/explorer/oktc/address/0x2F7795A8417b4226B9627c0000461e644aD7C6d8.Ω

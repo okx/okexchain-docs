@@ -24,7 +24,7 @@ For more information on incentives, see [Staking Rewards Algorithm](/dev/core-co
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.oklink.com/oktc-test) or other OKTC block explorers.
+In order to choose their validators, delegators have access to a range of information directly on [OKLink](https://www.okx.com/explorer/oktc-test) or other OKTC block explorers.
 
 - **Validator’s moniker**: Name of the validator candidate.
 - **Validator’s description**: Description provided by the validator operator.

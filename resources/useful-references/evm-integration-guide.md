@@ -9,7 +9,7 @@
 > - **wss://exchainws.okex.org:8443**
 > - **Chain ID:** 66
 > - **Currency Symbol:** OKT
-> - **Block Explorer URL:** [OKTC block explorer](https://www.oklink.com/oktc/)
+> - **Block Explorer URL:** [OKTC block explorer](https://www.okx.com/explorer/oktc/)
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
@@ -23,7 +23,7 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
 **Currency Symbol:** OKT
 
-**Block Explorer URL:** [OKTC testnet block explorer](https://www.oklink.com/oktc-test/)
+**Block Explorer URL:** [OKTC testnet block explorer](https://www.okx.com/explorer/oktc-test/)
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
@@ -33,8 +33,8 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 ## OKTC Explorer
 
-> **Mainnet:** [OKTC mainnet](https://www.oklink.com/oktc)
-> **Testnet: **[OKTC testnet](https://www.oklink.com/oktc-test)
+> **Mainnet:** [OKTC mainnet](https://www.okx.com/explorer/oktc)
+> **Testnet: **[OKTC testnet](https://www.okx.com/explorer/oktc-test)
 
 ## OKTC Swap
 

@@ -44,7 +44,7 @@ This also means that over time, the value of 1 **stOKT** will not be equivalent 
 
 In short, holding 1 **stOKT** is a representation of a share of the total staked and staking rewards pool of OKT.
 
-**stOKT** contract address: [0x97b05e6c5026d5480c4b6576a8699866eb58003b](https://www.oklink.com/oktc/token/0x97b05e6c5026d5480c4b6576a8699866eb58003b)
+**stOKT** contract address: [0x97b05e6c5026d5480c4b6576a8699866eb58003b](https://www.okx.com/explorer/oktc/token/0x97b05e6c5026d5480c4b6576a8699866eb58003b)
 
 ### What can you do with **stOKT**?
 
@@ -78,7 +78,7 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
 1.  Go to the OKTC Liquid Staking protocol page's **Unstake** tab: [here](https://www.okx.com/oktc/liquid-staking/unstake)
 2.  Connect your wallet and make sure you switch to the OKTC network.
 3.  Enter the amount of **stOKT** tokens you want to unstake, click the [Unstake] button, and confirm the transaction in your wallet.
-4.  The OKTC Liquid Staking protocol will burn the **stOKT** tokens once you redeem them and issue an NFT([OKTCLST](https://www.oklink.com/oktc/address/0x07CB2ce543bF5204DAaF1e62c183BBD08752609E)) as a receipt for OKT tokens.
+4.  The OKTC Liquid Staking protocol will burn the **stOKT** tokens once you redeem them and issue an NFT([OKTCLST](https://www.okx.com/explorer/oktc/address/0x07CB2ce543bF5204DAaF1e62c183BBD08752609E)) as a receipt for OKT tokens.
 5.  You need to hold the NFT receipt and wait for 14-28 days to then claim your OKTs.
 
 ## How to claim OKT

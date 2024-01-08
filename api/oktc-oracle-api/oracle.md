@@ -16,8 +16,8 @@ For example, one use for data feeds is to enable smart contracts to retrieve the
 
 |Name|Address|
 |--|--|
-|Oracle|[0xF77596928f0823959c2caF4810834FD227244871](https://www.oklink.com/oktc/address/0xf77596928f0823959c2caf4810834fd227244871)|
-| dataSource |[0x8B83D77C1584e9E1D81d3172608c045E6E5876e5](https://www.oklink.com/oktc/address/0x8B83D77C1584e9E1D81d3172608c045E6E5876e5)|
+|Oracle|[0xF77596928f0823959c2caF4810834FD227244871](https://www.okx.com/explorer/oktc/address/0xf77596928f0823959c2caf4810834fd227244871)|
+| dataSource |[0x8B83D77C1584e9E1D81d3172608c045E6E5876e5](https://www.okx.com/explorer/oktc/address/0x8B83D77C1584e9E1D81d3172608c045E6E5876e5)|
 
 
 
@@ -26,8 +26,8 @@ For example, one use for data feeds is to enable smart contracts to retrieve the
 
 | Name | Address|
 |--|--|
-| Oracle |[0x8825446B7881F54d296AF704c1050BdBB08A2589](https://www.oklink.com/oktc-test/address/0x8825446B7881F54d296AF704c1050BdBB08A2589)|
-| dataSource |[0xF4E0D270c864eE527ff73d1afC558778570dae8B](https://www.oklink.com/oktc-test/address/0xF4E0D270c864eE527ff73d1afC558778570dae8B)|
+| Oracle |[0x8825446B7881F54d296AF704c1050BdBB08A2589](https://www.okx.com/explorer/oktc-test/address/0x8825446B7881F54d296AF704c1050BdBB08A2589)|
+| dataSource |[0xF4E0D270c864eE527ff73d1afC558778570dae8B](https://www.okx.com/explorer/oktc-test/address/0xF4E0D270c864eE527ff73d1afC558778570dae8B)|
 
 
 

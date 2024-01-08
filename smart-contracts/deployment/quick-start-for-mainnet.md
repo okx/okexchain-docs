@@ -10,7 +10,7 @@
     - https://exchainrpc.okex.org
 - Chain ID: 66
 - Currency Symbol: OKT
-- Block Explorer URL: https://www.oklink.com/oktc/
+- Block Explorer URL: https://www.okx.com/explorer/oktc/
 
 ![avatar](../../img/metamask-01.for-mainnet-en.jpeg)
 
@@ -22,7 +22,7 @@ please refer to [detail config](/dev/api/oktc-api/websocket.html)
 
 ___
 ## Blockchain Browser
-[OKTC Mainnet Browser](https://www.oklink.com/oktc)
+[OKTC Mainnet Browser](https://www.okx.com/explorer/oktc)
 ___
 
 ## Remix
