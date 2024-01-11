@@ -303,7 +303,7 @@ module.exports = [
       {
         title: "OKTC SWAP",
         collapsable: false,
-        children: ["dev/oktc-solutions/oktc-swap/oktc-swap"],
+        children: ["dev/oktc-solutions/oktc-swap/OKC-swap"],
       },
       {
         title: "OKTC MULTISIG",
@@ -318,7 +318,7 @@ module.exports = [
             title: "Introduction to OKTC VRF",
             collapsable: false,
             children: [
-              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKC-VRF/oktc-VRF",
+              "dev/oktc-solutions/oktc-vrf/Introduction-to-OKC-VRF/OKC-VRF",
             ],
           },
           {

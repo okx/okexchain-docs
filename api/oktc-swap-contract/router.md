@@ -1,7 +1,7 @@
 # Router
 ## Contract info
 **Contract name**: SwapRouter
-View on github:[SwapRouter.sol on GitHub](https://github.com/okex/oktcSwap/blob/main/contracts/router/oktcSwapRouter02.sol).  
+View on github:[SwapRouter.sol on GitHub](https://github.com/okex/OKCSwap/blob/main/contracts/router/OKCSwapRouter02.sol).  
 **Contract address**: 0xc97b81B8a38b9146010Df85f1Ac714aFE1554343
 View on Oklink: [Router  contract on OkLink](https://www.okx.com/explorer/oktc/address/0xc97b81B8a38b9146010Df85f1Ac714aFE1554343).
 ## Read functions
