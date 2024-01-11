@@ -16,7 +16,7 @@ The Gas Back feature allows contract deployers on OKTC to proportionally distrib
 1. According to the specific action that the user would like to perform, they should select the corresponding method from the proxy contract in StakingMSGHelper to generate the parameters
 2. Use the parameters generated from step 1, call SystemContract's invoke method, generate an EVM formatted transaction
 3. Sign and broadcast the assembled EVM transaction on the chain
-4. After completion, users can check their results on the [browser](https://www.oklink.com/oktc) or their wallet
+4. After completion, users can check their results on the [browser](https://www.okx.com/explorer/oktc) or their wallet
 
 ## 3. Sample code
 The codes use the OKTC staking method as in the examples below, including multi-language version demos; all developers only need to change their private key, address, and parameters to their own: 

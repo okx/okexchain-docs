@@ -51,7 +51,7 @@ If the user is using Metamask wallet, they should: Click on Settings; Select cus
 > - **New RPC URL88**: https://exchainrpc.okex.org
 > - **Chain ID**: 66
 > - **Symbol**: OKT
-> - **Blockchain browser URL**: https://www.oklink.com/oktc
+> - **Blockchain browser URL**: https://www.okx.com/explorer/oktc
 
 
 
@@ -75,5 +75,5 @@ On the OKTC chain, OKTs function as native tokens. This means that a user can pa
 >- **OKTC Docs**：[OKTC Docs](https://exchainrpc.okex.org/docs/en/#overview)
 >- **GitHub**: [OKTC Github](https://github.com/okx/exchain)
 >- **Discord**：[OKTC Discord](https://discord.com/invite/2rynEUqJxP)
->- **Medium**：[OKTC Medium](https://medium.com/okc-okx-chain)
+>- **Medium**：[OKTC Medium](https://medium.com/oktc-okx-chain)
 

@@ -25,7 +25,7 @@ currentProvider.send({
                 "symbol": "OKT",
                 "decimals": 18
             },
-            "blockExplorerUrls": ["https://www.oklink.com/oktc"]
+            "blockExplorerUrls": ["https://www.okx.com/explorer/oktc"]
         }
     ]
 })
@@ -52,7 +52,7 @@ currentProvider.send({
         "symbol": "OKT",
         "decimals": 18
       },
-      "blockExplorerUrls": ["https://www.oklink.com/oktc-test"]
+      "blockExplorerUrls": ["https://www.okx.com/explorer/oktc-test"]
     }
   ]
 })

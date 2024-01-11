@@ -124,5 +124,5 @@ Summary
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
 Congratulations! You have successfully deployed KIP20 Smart Contract. Now you can interact with the Smart Contract.
-You can check the deployment status here: [https://www.oklink.com/](https://www.oklink.com/) or [https://www.oklink.com/oktc-test](https://www.oklink.com/oktc-test)
+You can check the deployment status here: [https://www.okx.com/explorer/](https://www.okx.com/explorer/) or [https://www.okx.com/explorer/oktc-test](https://www.okx.com/explorer/oktc-test)
 

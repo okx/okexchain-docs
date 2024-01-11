@@ -83,7 +83,7 @@ OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing
 
 Below is a specific explanation of the distribution rules for block rewarding:
 
-- X% represents the community distribution rate (currently at 0%). Y% represents the commission rate of every validator node (defaulted at 100%). After the update goes live, validators can adjust this according to their own needs. More info on commission rate values can be viewed through CLI commands or on https://www.oklink.com/oktc/bp-list.
+- X% represents the community distribution rate (currently at 0%). Y% represents the commission rate of every validator node (defaulted at 100%). After the update goes live, validators can adjust this according to their own needs. More info on commission rate values can be viewed through CLI commands or on https://www.okx.com/explorer/oktc/bp-list.
 
 - Block rewards = block producers reward + total amount of all block’s transaction fees
 
