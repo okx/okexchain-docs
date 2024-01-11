@@ -4,7 +4,7 @@
 
 ### Code specification
 
-Refer to https://github.com/oktc-subgraph/subgraph-example/blob/main/docs/Developing.md
+Refer to https://github.com/okc-subgraph/subgraph-example/blob/main/docs/Developing.md
 
 ### Version requirement
 
@@ -15,7 +15,7 @@ Refer to https://github.com/oktc-subgraph/subgraph-example/blob/main/docs/Develo
 ### Block height requirement
 
 - The query block height can't be lower than 13,400,000
-- Sample：https://github.com/oktc-subgraph/subgraph-example
+- Sample：https://github.com/okc-subgraph/subgraph-example
 
 ## Upload Subgraph code to Github
 
