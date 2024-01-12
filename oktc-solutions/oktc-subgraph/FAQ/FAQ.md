@@ -10,7 +10,7 @@ A subgraph is a custom API built on blockchain data. Subgraphs are queried using
 - "@graphprotocol/graph-ts": "^0.20.1"
 - "npm": "^7.20.5"
 
-For more code specifications, refer to https://github.com/okc-subgraph/subgraph-example/blob/main/docs/Developing.md
+For more code specifications, refer to https://github.com/okx-subgraph/subgraph-example/blob/main/docs/Developing.md
 
 ## Is it possible to deploy subgraphs with the same name？
 
