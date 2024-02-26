@@ -54,7 +54,7 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 ## OKTC Multisig
 
-**[OKTC multisig](https://oktctools.okx.com)**
+**[OKTC multisig](https://oktcsafe.okx.com/#/welcome)**
 
 ## Wallet
 
