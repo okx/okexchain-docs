@@ -1,7 +1,4 @@
 # Introduction to OKT Chain (OKTC)
-
-![Welcome to the OKTC](../img/oktc2022poster.png)
-
 ## What is OKTC？
 
 ### About OKT Chain
