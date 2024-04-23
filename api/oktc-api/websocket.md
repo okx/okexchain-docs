@@ -61,7 +61,7 @@ was cancelled successful.
     >> {"id": 1, "method": "eth_unsubscribe", "params": ["0x65eca2989ce064d141862c8b7138c1e"]}
     << {"jsonrpc":"2.0","id":1,"result":true}
 
-## Supported Subscriptions
+## Supported subscriptions
 
 ### newHeads
 

@@ -10,7 +10,7 @@ exchaind init <moniker> --chain-id <chain-id>
 
 The genesis file is stored in `~/.exchaind/config/genesis.toml`.
 
-## What is a Genesis file
+## What is a genesis file
 
 A genesis file is a JSON file which defines the initial state of your blockchain. It can be seen as height `0` of your blockchain. The first block, at height `1`, will reference the genesis file as its parent.
 
@@ -31,7 +31,7 @@ The `chain_id` is a unique identifier for your chain. It helps differentiate bet
 "chain_id": "exchain-65", // OKTC testnet
 ```
 
-## Consensus Parameters
+## Consensus parameters
 
 Next, the genesis file defines consensus parameters. Consensus parameters regroup all the parameters that are related to the consensus layer, which is `Tendermint` in the case of `oktc`. Let us look at these parameters:
 
@@ -60,11 +60,11 @@ Next, the genesis file defines consensus parameters. Consensus parameters regrou
   },
 ```
 
-## Application State
+## Application state
 
 The application state defines the initial state of the state-machine.
 
-### Genesis Accounts
+### Genesis accounts
 
 In this section, initial allocation of tokens is defined. It is possible to add accounts manually by directly editing the genesis file, but it is also possible to use the following command:
 
