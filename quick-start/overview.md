@@ -7,7 +7,7 @@ A Super Scalable, Compatible layer 1 blockchain OKT chain (OKTC) is an EVM-compa
 ### Advantages of OKT chain
 
 - High scalability & maximized performance: Based on enhanced Tendermint and Delegated Proof of Stake (DPoS) consensus that can support up to 5000 Transactions per Second (TPS), Web3 applications shall reach their full potential at extremely low cost.
-- Enhanced interoperability: OKT chain supports Inter-blockchain communication (IBC)protocol that — together with the Tendermint consensus algorithm, featuring instant finality — can be used to realize value transmission between Cosmos ecosystem within seconds. Being fully EVM compatible, OKT chain allows developers to build projects without any learning cost.
+- Enhanced interoperability: OKT chain supports Inter-blockchain communication (IBC) protocol that — together with the Tendermint consensus algorithm, featuring instant finality — can be used to realize value transmission between Cosmos ecosystem within seconds. Being fully EVM compatible, OKT chain allows developers to build projects without any learning cost.
 - Developer friendly: OKT chain is completely open-source. Anyone can read it, check the progress, comment on it, and help build the ecosystem. OKT chain also provides native oracle protocol and industry-leader Chainlink for maximum flexibility to access price feeds.
 - Secure: The OKT chain team offers a reliable smart contract auditing service, making it a genuinely decentralized protocol that avoids the centralization risks of most blockchain networks today.
 
