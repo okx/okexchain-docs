@@ -20,7 +20,7 @@ This manual will mainly discuss how to use CLI commands on OKTC for all actions 
 ### Install essential tools
    In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKTC chain.
 #### Install OKTC
-   Make sure you have the OKTC application installed, [installation instructions](/dev/quick-start/install-oktc.html).
+   Make sure you have the OKTC application installed, [installation instructions](/dev/quick-start/install-oktc).
 #### Install Rust
    Install Rust environment (Linux or MacOS), [installation instructions](https://rustup.rs/).
    After installing Rust, you need to confirm your machine has wasm32 target
@@ -36,7 +36,7 @@ rustup target list --installed
 // output is expected to contain 'wasm32-unknown-unknown'  
 ```   
 
-Change Rust crates registry to speed up downloading rust library. Refer to this [blog](https://mirrors.ustc.edu.cn/help/crates.io-index.html). 
+Change Rust crates registry to speed up downloading rust library. Refer to this [blog](https://mirrors.ustc.edu.cn/help/crates.io-index). 
 
 #### Install command line tool
 ```Bash
@@ -47,7 +47,7 @@ apt install jq curl
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
 #### OKTC Mainnet
-Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet.html).
+Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet).
 
 Configure your exchaincli
 ```Bash
@@ -59,7 +59,7 @@ exchaincli config node https://exchaintmrpc.okex.org
 ```
 > Wasm is not enabled on mainnet now.
 #### OKTC testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet.html).
+Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet).
 
 Configure your exchaincli
 ```Bash 

@@ -16,9 +16,9 @@ This DApp implements a "Hello World" style application that echoes a message pas
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
-The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
+The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
-A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
+A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts#storage-memory-and-the-stack) in the docs.
 
 ### Compile smart contract
 - Step1: Click button to switch to compile page
@@ -34,9 +34,9 @@ Now, We have to deploy our smart contract on OKTC Network. For that, we have to 
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block explorer:
+- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-65 * Symbol: OKT * Block explorer:
 https://www.okx.com/explorer/oktc-test
-- Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block explorer: 
+- Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-66 * Symbol: OKT * Block explorer: 
 https://www.okx.com/explorer/
 - Go ahead and click save
 - Copy your address from Metamask

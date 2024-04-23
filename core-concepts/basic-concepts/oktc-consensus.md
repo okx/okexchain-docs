@@ -20,9 +20,9 @@ Unlike Nakamoto consensus where it’s subject to 51% attack (meaning that 51% o
 
 ### Consensus
 The 3 main stakeholders that play the major roles in OKTC consensus are:
-1. [Validator](/dev/core-concepts/validator/validators-overview.html#introduction "Validator"): All nodes participating in consensus verification. 
+1. [Validator](/dev/core-concepts/validator/validators-overview#introduction "Validator"): All nodes participating in consensus verification. 
 2. Proposer: The block producer node selected in the Validator.
-3. [Delegator](/dev/core-concepts/delegator/delegators-overview.html "Delegator"): OKT holders who delegate votes on nodes based on their reputation, stability, security and infrastructure.
+3. [Delegator](/dev/core-concepts/delegator/delegators-overview "Delegator"): OKT holders who delegate votes on nodes based on their reputation, stability, security and infrastructure.
 
 #### Delegators: Determining validators by delegating voting power
 Prior to defining the next block via BFT consensus, Delegators come in to determine the effective validators (the top 21 validators) to propose the next block, based on their reputation, stability, security and infrastructure. The amount of the native chain token owned and delegated to a validator represents its voting power, giving them the opportunity to be a new block proposer more often. Decentralization here is “measured” by the voting power distribution amongst the validators and not the number of validators.
@@ -64,4 +64,4 @@ OKTC enables EVM compatibility by implementing various components that together 
 - Ethereum transaction format as a Cosmos SDK ‘Tx’ and ‘Msg’ interface
 - ‘secp256k1’ curve for the Cosmos Keyring
 - ‘StateDB’ interface for state updates and queries
-- [JSON-RPC](/dev/api/oktc-api/json-rpc-api.html "JSON-RPC") client for interacting with the EVM
+- [JSON-RPC](/dev/api/oktc-api/json-rpc-api "JSON-RPC") client for interacting with the EVM

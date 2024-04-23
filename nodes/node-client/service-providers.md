@@ -18,9 +18,9 @@ There are three main pieces to consider:
 
 We will describe the steps to run and interact with a full-node within the OKTC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](/dev/quick-start/install-oktc.html).
+First, you need to [install the software](/dev/quick-start/install-oktc).
 
-Then, you can start [running a full-node(testnet)](/dev/quick-start/join-oktc-testnet.html).
+Then, you can start [running a full-node(testnet)](/dev/quick-start/join-oktc-testnet).
 
 ### Command-Line interface
 

@@ -2,7 +2,7 @@
 
 ## OKTC CLI
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKTC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/quick-start/install-oktc.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKTC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/quick-start/install-oktc).
 
 ## Setting up exchaincli
 

@@ -24,7 +24,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install oktc](/dev/quick-start/install-oktc.html)
+- [Install oktc](/dev/quick-start/install-oktc)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create genesis file and start the network
@@ -62,7 +62,7 @@ From the [networks/local directory](https://github.com/okx/exchain/tree/dev/netw
 
 ### Requirements
 
-- [Install oktc](/dev/quick-start/install-oktc.html)
+- [Install oktc](/dev/quick-start/install-oktc)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 

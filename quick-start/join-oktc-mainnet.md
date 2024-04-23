@@ -4,7 +4,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for
 information on the latest mainnet, including the correct version
 of OKTC to use and details about the genesis file.
 
-**You need to [install oktc](/dev/quick-start/install-oktc.html) before you go further**
+**You need to [install oktc](/dev/quick-start/install-oktc) before you go further**
 
 ## Supported platforms
 
@@ -14,7 +14,7 @@ We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
+For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement)
 ## Setting up a new node
 
 These instructions are for setting up a brand new full node from scratch.
@@ -78,7 +78,7 @@ You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/co
 seeds = "e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@175.41.191.69:26656,c8f32b793871b56a11d94336d9ce6472f893524b@35.74.8.189:26656"
 ```
 
-For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
+For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer).
 
 ## Starting a new node
 
@@ -98,7 +98,7 @@ See the [mainnet repo](https://github.com/okx/mainnet) for information on mainne
 
 
 ## JSON-RPC endpoint
-[RPC URL](/dev/api/oktc-api/json-rpc-api.html)
+[RPC URL](/dev/api/oktc-api/json-rpc-api)
 
 
 ## Upgrading your node
@@ -142,4 +142,4 @@ Your full node has been cleanly upgraded!
 
 ### Upgrade to validator node
 
-You now have an active full node. What’s the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.html).
+You now have an active full node. What’s the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli).

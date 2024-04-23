@@ -1,6 +1,6 @@
 # Quick start for mainnet
 ## Metamask
-- [What’s the Metamask](https://metamask.io/index.html)
+- [What’s the Metamask](https://metamask.io/index)
 - [Guide for Metamask](https://docs.metamask.io/guide/)
 
 ### 1. Config metamask for OKTC mainnet
@@ -18,7 +18,7 @@
 ![avatar](../../img/metamask-01-2.png)
 
 ### 3. Config ETHEREUM WEBSOCKET for OKTC mainnet
-please refer to [detail config](/dev/api/oktc-api/websocket.html)
+please refer to [detail config](/dev/api/oktc-api/websocket)
 
 ___
 ## Blockchain browser

@@ -13,13 +13,13 @@ Meaning of [pruning parameter](https://forum.okt.club/d/58-pruning)
 
 
 ## Testnet
-Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index.html](https://static.okex.org/cdn/chain/okc/snapshot/index.html)
+Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index](https://static.okex.org/cdn/chain/okc/snapshot/index)
 
 For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
 
 
 ## Mainnet
-Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index.html](https://static.okex.org/cdn/chain/okc/snapshot/index.html)
+Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index](https://static.okex.org/cdn/chain/okc/snapshot/index)
 
 For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
 

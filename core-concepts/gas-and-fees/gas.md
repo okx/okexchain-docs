@@ -52,7 +52,7 @@ In the Cosmos SDK, gas is tracked in the main `GasMeter` and the `BlockGasMeter`
 - `GasMeter`: keeps track of the gas consumed during executions that lead to state transitions. It is reset on every transaction  execution.
 - `BlockGasMeter`: keeps track of the gas consumed in a block and enforces that the gas does not go over a predefined limit. This limit is defined in the Tendermint consensus parameters and can be changed via governance parameter change proposals.
 
-More information regarding gas in Cosmos SDK can be found [here](https://docs.cosmos.network/master/basics/gas-fees.html).
+More information regarding gas in Cosmos SDK can be found [here](https://docs.cosmos.network/master/basics/gas-fees).
 
 ## Matching EVM gas consumption
 
@@ -68,7 +68,7 @@ These operations are defined by the Tendermint Core’s Application Blockchain I
 
 ### `AnteHandler`
 
-The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fees.html#antehandler)
+The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fees#antehandler)
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 

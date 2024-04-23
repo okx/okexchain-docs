@@ -43,11 +43,11 @@ If your `fulfillRandomWords()` implementation reverts, the VRF service will not 
 
 ## Use `VRFConsumerBase` in your contract, to interact with the VRF service
 
-If you implement the [subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html), use `VRFConsumerBase`. It includes a check to ensure the randomness is fulfilled by `VRFCoordinator`. For this reason, it is a best practice to inherit from `VRFConsumerBase`. Similarly, don’t override `rawFulfillRandomness`.
+If you implement the [subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription), use `VRFConsumerBase`. It includes a check to ensure the randomness is fulfilled by `VRFCoordinator`. For this reason, it is a best practice to inherit from `VRFConsumerBase`. Similarly, don’t override `rawFulfillRandomness`.
 
 ## Use `VRFWrapperConsumer.sol` in your contract, to interact with the VRF service
 
-If you implement the [direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html), use `VRFWrapperConsumer`. It includes a check to ensure the randomness is fulfilled by the `VRFWrapper`. For this reason, it is a best practice to inherit from `VRFWrapperConsumer`. Similarly, don’t override `rawFulfillRandomWords`.
+If you implement the [direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method), use `VRFWrapperConsumer`. It includes a check to ensure the randomness is fulfilled by the `VRFWrapper`. For this reason, it is a best practice to inherit from `VRFWrapperConsumer`. Similarly, don’t override `rawFulfillRandomWords`.
 
 
 

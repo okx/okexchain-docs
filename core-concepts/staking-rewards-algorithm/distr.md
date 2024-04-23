@@ -12,7 +12,7 @@ OKTC allows anyone that stakes a minimum of atleast 10,000 OKT the ability to op
 
 The more vote shares a validator receives, the more weight that validator holds, therefore the bigger the reward that validator receives. In order to motivate users to vote for them, validators can set a favourable commission rate, and automatically distribute the rewards based on the ratio of voting shares. The values of commission rates range from [0,1], so if, for example, the commission rate is set to 0.6, that would mean that the validator receives 60% of the total reward, and the remaining 40% is distributed to the users based on the ratio of their voting shares.
 
-Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKTC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli.html).
+Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKTC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli).
 
 
 

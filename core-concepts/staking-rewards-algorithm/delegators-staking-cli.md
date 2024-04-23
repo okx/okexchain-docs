@@ -2,9 +2,9 @@
 
 This guide explains how to use command-line interface (CLI) commands to earn staking rewards as a validator or delegator.
 
-> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](/dev/core-concepts/delegator/delegators-guide-cli.html) first. If you need to get OKT, you can get it [here](https://discord.gg/B5nMs6qK5F).
+> _NOTE_: Before reading the following documents, it is recommended that you read [delegators-guide-cli](/dev/core-concepts/delegator/delegators-guide-cli) first. If you need to get OKT, you can get it [here](https://discord.gg/B5nMs6qK5F).
 >
-> For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr.html).
+> For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr).
 
 ## What is staking?
 
@@ -17,7 +17,7 @@ OKTC employs Tendermint’s (BFT-DPoS) consensus algorithm. Users can use the co
 1. Stake OKT, obtain voting rights
 1. Choose validator(s) to vote for, and if the chosen validator has set up a share ratio, the user will receive a dividend reward on the chain.
 
-> Note: Refer to [Voting Weight Calculation](/dev/core-concepts/staking-rewards-algorithm/distr.html#voting-weight-calculation).
+> Note: Refer to [Voting Weight Calculation](/dev/core-concepts/staking-rewards-algorithm/distr#voting-weight-calculation).
 
 ### Staking
 
@@ -139,7 +139,7 @@ Validators can reference the following commands below to set up a commission rat
 
 Note: On every command, users can write ` -h or --help` to get more help info.
 
-To manage the validator, you can read  [validators-guide-cli](/dev/core-concepts/validator/validators-guide-cli.html), it contains the following commands:
+To manage the validator, you can read  [validators-guide-cli](/dev/core-concepts/validator/validators-guide-cli), it contains the following commands:
 
 * create-validator：create a validator
 * edit-validator：update a validator

@@ -46,7 +46,7 @@ Validator requirements: Validators are required to stake at least 10,000 OKT. Ad
 
 OKT holders obtain voting rights by staking their tokens. One address can vote for up to 30 different validator candidates, and the number of votes for each validator candidate that the address has supported is equivalent to the amount of OKT the address has staked (1 OKT = 1 vote).
 
-Learn more about [being a delegator](/dev/core-concepts/delegator/delegators-faq.html).
+Learn more about [being a delegator](/dev/core-concepts/delegator/delegators-faq).
 
 
 
@@ -55,18 +55,18 @@ Learn more about [being a delegator](/dev/core-concepts/delegator/delegators-faq
 The OKTC block explorer allows you to search, view and analyze OKTC data—like blocks, transactions, validators as well as other key information.
 - [OKlink](https://www.oklink.com)
 
-`exchaincli` is a command-line interface that lets you interact with the OKT chain. `exchaincli` is the only tool that supports 100% of the OKT chain features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator’s CLI guide](/dev/core-concepts/delegator/delegators-guide-cli.html).
+`exchaincli` is a command-line interface that lets you interact with the OKT chain. `exchaincli` is the only tool that supports 100% of the OKT chain features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator’s CLI guide](/dev/core-concepts/delegator/delegators-guide-cli).
 
 
 
 ## OKTC CLI
 
-`exchaincli` is a command-line interface that lets you interact with the OKTC. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator’s CLI guide](/dev/core-concepts/delegator/delegators-guide-cli.html).
+`exchaincli` is a command-line interface that lets you interact with the OKTC. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator’s CLI guide](/dev/core-concepts/delegator/delegators-guide-cli).
 
 
 ## Running a full-node on the OKTC testnet
 
-In order to run a full-node on the OKTC testnet, you must first [install `exchaind`](/dev/quick-start/install-oktc.html). Then, follow [the guide](/dev/quick-start/install-oktc.html).
+In order to run a full-node on the OKTC testnet, you must first [install `exchaind`](/dev/quick-start/install-oktc). Then, follow [the guide](/dev/quick-start/install-oktc).
 
-If you would like to run a validator node, follow the [validator setup guide](/dev/core-concepts/validator/validators-guide-cli.html).
+If you would like to run a validator node, follow the [validator setup guide](/dev/core-concepts/validator/validators-guide-cli).
 

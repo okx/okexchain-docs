@@ -20,22 +20,22 @@ OKTC VRF  offers two methods for requesting randomness:
 
 Depending on your use case, one method might be more suitable than another. Consider the following characteristics when you choose a method:
 
-| [Subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html) | [Direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html) |
+| [Subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription) | [Direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method) |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | Suitable for regular requests                                | Suitable for infrequent one-off requests                     |
 | Supports multiple VRF consuming contracts connected to one subscription account | Each VRF consuming contract directly pays for its requests   |
-| VRF costs are calculated after requests are fulfilled and then deducted from the subscription balance. Learn [how VRF costs are calculated for the subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html). | VRF costs are estimated and charged at request time, which may make it easier to transfer the cost of VRF to the end user. Learn [how VRF costs are calculated for the direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html). |
+| VRF costs are calculated after requests are fulfilled and then deducted from the subscription balance. Learn [how VRF costs are calculated for the subscription method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription). | VRF costs are estimated and charged at request time, which may make it easier to transfer the cost of VRF to the end user. Learn [how VRF costs are calculated for the direct funding method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks). |
 | Reduced gas overhead and more control over the maximum gas price for requests | Higher gas overhead than the subscription method             |
-| More random values returned per single request. See the maximum random values per request for the [Subscription supported networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html). | Fewer random values returned per single request than the subscription method, due to higher overhead. See the maximum random values per request and gas overhead for the [Direct funding supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html). |
+| More random values returned per single request. See the maximum random values per request for the [Subscription supported networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks). | Fewer random values returned per single request than the subscription method, due to higher overhead. See the maximum random values per request and gas overhead for the [Direct funding supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks). |
 | You don’t have to estimate costs precisely for each request. Ensure that the subscription account has enough funds. | You must estimate transaction costs carefully for each request to ensure the consuming contract has enough funds to pay for the request. |
 | Requires a subscription account                              | No subscription account required                             |
-| VRF costs are billed to your subscription account. [Manage and monitor your balance](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html) | No refunds for overpayment after requests are completed      |
+| VRF costs are billed to your subscription account. [Manage and monitor your balance](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription) | No refunds for overpayment after requests are completed      |
 
 
 ## What’s next
 
-- [› Subscription Method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html)
-- [› Direct Funding Method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html)
+- [› Subscription Method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription)
+- [› Direct Funding Method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method)
 
   
 

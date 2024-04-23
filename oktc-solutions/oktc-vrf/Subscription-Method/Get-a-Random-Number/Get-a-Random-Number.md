@@ -220,6 +220,6 @@ After you are done with this contract and the subscription, you can retrieve the
 ## What’s next
 
 - [› Subscription Manager UI](https://www.okx.com/oktc/oracle/vrf)
-- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)
-- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices.html)
-- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#Configuration)
+- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations)
+- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks#Configuration)

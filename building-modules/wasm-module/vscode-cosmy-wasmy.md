@@ -9,7 +9,7 @@ In this section, we’ll prepare our machines and install the necessary tools fo
 
 ### Install OKTC
 
-Make sure you’ve installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc.html).
+Make sure you’ve installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc).
 
 ### Install Rust
 

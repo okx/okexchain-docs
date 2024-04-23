@@ -15,7 +15,7 @@ These parameters are configured in the VRF  Wrapper contract. You can view these
 Some parameters are important to know and are configured in the coordinator contract. You can view these values by running `getConfig` on the coordinator or by viewing the coordinator contract in a blockchain explorer.
 
 - `uint16 minimumRequestConfirmations`: The minimum number of confirmation blocks on VRF requests before oracles respond
-- `uint32 maxGasLimit`: The maximum gas limit supported for a `fulfillRandomWords` callback. Note that you still need to substract the `wrapperGasOverhead` for the accurate limit, as explained in [Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html#limits).
+- `uint32 maxGasLimit`: The maximum gas limit supported for a `fulfillRandomWords` callback. Note that you still need to substract the `wrapperGasOverhead` for the accurate limit, as explained in [Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method#limits).
 
 ## Fee parameters
 
@@ -23,7 +23,7 @@ Fee parameters are configured in the VRF  Wrapper and the VRF  Coordinator contr
 
 - The `uint8 wrapperPremiumPercentage` parameter defines the premium ratio in percentage. For example, a value of *0* indicates no premium. A value of *15* indicates a *15%* premium.
 
-The details for calculating the total transaction cost can be found [here](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html#request-and-receive-data).
+The details for calculating the total transaction cost can be found [here](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method#request-and-receive-data).
 
 ## Configurations
 
