@@ -66,7 +66,7 @@ Adds liquidity to a KIP20⇄WOKT pool.
 |amountTokenDesired|uint|The amount of the token you’d like to provide as liquidity.|
 |amountTokenMin|uint|The minimum amount of the token to provide (slippage impact).|
 |amountOKTMin|uint|The minimum amount of OKT to provide (slippage impact).|
-|to|address|Address of LP Token recipient.|
+|to|address|Address of LP token recipient.|
 |deadline|uint|Unix timestamp deadline by which the transaction must confirm.|
 ### removeLiquidity
 ```
@@ -88,7 +88,7 @@ Removes liquidity from a KIP20⇄KIP20 pool.
 |liquidity|uint|The amount of LP Tokens to remove.|
 |amountAMin|uint|The minimum amount of tokenA to remove (slippage impact).|
 |amountBMin|uint|The minimum amount of tokenB to remove (slippage impact).|
-|to|address|Address of LP Token recipient.|
+|to|address|Address of LP token recipient.|
 |deadline|uint|Unix timestamp deadline by which the transaction must confirm.|
 ### removeLiquidityOKT
 ```

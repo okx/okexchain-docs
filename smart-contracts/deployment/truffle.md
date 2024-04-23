@@ -84,7 +84,7 @@ Run this command in root of the project directory:
 ```
 $ truffle migrate --network testnet
 ```
-Contract will be deployed on OKTC Chapel Testnet, it look like this:
+Contract will be deployed on OKTC chapel testnet, it look like this:
 ```
 1_initial_migration.js
 ======================
@@ -123,6 +123,6 @@ Summary
 ```
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
-Congratulations! You have successfully deployed KIP20 Smart Contract. Now you can interact with the Smart Contract.
+Congratulations! You have successfully deployed KIP20 smart contract. Now you can interact with the smart contract.
 You can check the deployment status here: [https://www.okx.com/explorer/](https://www.okx.com/explorer/) or [https://www.okx.com/explorer/oktc-test](https://www.okx.com/explorer/oktc-test)
 

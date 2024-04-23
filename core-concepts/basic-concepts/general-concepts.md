@@ -1,4 +1,4 @@
-# Basic Concepts
+# Basic concepts
 ## Types of OKTC nodes
 ### Full node
 A Full Node in Tendermint maintains up-to-date copy of the blockchain ledger’s state. It validates all transactions, executes smart contracts and is capable of delegating work for the Proof of Stake Consensus. Full nodes play a critical role in ensuring the security & resilience of the network by independently verifying blocks and transactions. They serve as data sources for other blockchain applications to use and operate in the OKTC ecosystem. In comparison with Light Nodes, Full Nodes carry more network and storage resources, but they improve decentralization and keep the validators honest.

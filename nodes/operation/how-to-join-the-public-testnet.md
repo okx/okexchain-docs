@@ -1,4 +1,4 @@
-# How to Join the Public Testnet
+# How to join the public testnet
 There are two ways to start exchaind testnet node.Please note that testnet node only supports snapshots startup.
 ## 1. Using exchaind and snapshots
 

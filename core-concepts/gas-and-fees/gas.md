@@ -85,7 +85,7 @@ In OKTC, there are two types of transactions, EVM and Cosmos. The EVM type trans
 
 If you are using a Cosmos type transaction, it is extremely important to use the correct gas. To prevent overspending on fees, providing the `--gas-adjustment` flag for a Cosmos transaction will determine the fees automatically. 
 
-## 0 Fee transactions
+## 0 fee transactions
 
 In Cosmos, a minimum gas price is not enforced by the `AnteHandler` as the `min-gas-prices` is
 checked against the local node/validator. In other words, the minimum fees accepted are determined

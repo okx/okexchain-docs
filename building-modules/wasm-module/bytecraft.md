@@ -66,7 +66,7 @@ It allows checking if the Wasm binary is a proper smart contract that’s ready 
 cargo install cosmwasm-check
 ```
 
-## Use Bytecraft with OKTC Testnet
+## Use Bytecraft with OKTC testnet
 
 
 ### Getting Started

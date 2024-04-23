@@ -8,8 +8,8 @@ This DApp implements a "Hello World" style application that echoes a message pas
 - You need to choose Solidity Compiler and Deploy and Run Transactions.
 
 ![avatar](../../img/remix-01.png)
-- Go to File Explorers, And Create a new file, Name it MegaCoin.sol
-- Copy/Paste the Smart contract below into the newly created file MegaCoin.sol
+- Go to file explorers, and create a new file, name it MegaCoin.sol
+- Copy/Paste the smart contract below into the newly created file MegaCoin.sol
 
 ### The smart contract
 - Create new contract KIP20Tokens.sol and copy contract code from the KIP20 token template [here](https://github.com/okx/KIPs/blob/master/docs/final/KIP-20.md/)

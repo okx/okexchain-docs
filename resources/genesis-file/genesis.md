@@ -10,7 +10,7 @@ exchaind init <moniker> --chain-id <chain-id>
 
 The genesis file is stored in `~/.exchaind/config/genesis.toml`.
 
-## What is a Genesis File
+## What is a Genesis file
 
 A genesis file is a JSON file which defines the initial state of your blockchain. It can be seen as height `0` of your blockchain. The first block, at height `1`, will reference the genesis file as its parent.
 

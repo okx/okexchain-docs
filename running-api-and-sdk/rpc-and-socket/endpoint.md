@@ -7,7 +7,7 @@
 ## Mainnet JSON-RPC Endpoint (chain-id: exchain-66)
 - https://exchainrpc.okex.org
 
-## Mainnet Websocket Endpoint
+## Mainnet websocket Endpoint
 - wss://exchainws.okex.org:8443
 
 ### How to configure MetaMask with OKTC(Mainnet) in one step
@@ -34,7 +34,7 @@ currentProvider.send({
 ## Testnet JSON-RPC Endpoint (chain-id: exchain-65):
 - https://exchaintestrpc.okex.org
 
-## Testnet Websocket Endpoint
+## Testnet websocket Endpoint
 - wss://exchaintestws.okex.org:8443
 
 ### How to configure MetaMask with OKTC(Testnet) in one step

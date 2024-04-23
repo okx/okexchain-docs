@@ -25,13 +25,13 @@ Blockchain developers normally fall into one of three buckets:
 As the development of the Internet, public chains would undertake more complex business with the maturity of blockchain technology. Therefore, decentralized business will require an in-depth development environment. OKTC is just designed for these developers.
 
 
-- App developer: uses the tools developed by blockchain Infrastructure developers to build user facing (consumer or enterprise) applications. Primarily relies on Web2 skills like frontend, design, product sense, to integrate blockchain technology or create new use cases for it.
+- App developer: uses the tools developed by blockchain infrastructure developers to build user facing (consumer or enterprise) applications. Primarily relies on Web2 skills like frontend, design, product sense, to integrate blockchain technology or create new use cases for it.
 
 
 Based on that, OKTC proposes the concept of "blockchain middleware" to reduce the development cost for application developers.
 
 
-In a Web App, middleware enables applications to share information and resources between different technical architectures,such as process scheduling, message queue, data storage, transaction processing, etc., and it is widely used in energy, telecommunications, finance, banking, medical care, education and other industry software, reducing the software development cost.
+In a Web app, middleware enables applications to share information and resources between different technical architectures,such as process scheduling, message queue, data storage, transaction processing, etc., and it is widely used in energy, telecommunications, finance, banking, medical care, education and other industry software, reducing the software development cost.
 
 OKTC can be best thought of as "blockchain middleware", reducing the development cost for application developers up and down the stack.
 
