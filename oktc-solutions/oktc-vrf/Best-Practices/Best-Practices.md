@@ -1,8 +1,8 @@
-# VRF Best Practices
+# VRF best practices
 
 ## Getting a random number within a range
 
-If you need to generate a random number within a given range, use [modulo](https://docs.soliditylang.org/en/v0.8.7/types.html#modulo) to define the limits of your range. Below you can see how to get a random number in a range from 1 to 50.
+If you need to generate a random number within a given range, use [modulo](https://docs.soliditylang.org/en/v0.8.7/types#modulo) to define the limits of your range. Below you can see how to get a random number in a range from 1 to 50.
 
 ```solidity
 function fulfillRandomWords(
@@ -18,8 +18,8 @@ function fulfillRandomWords(
 
 If you want to get multiple random values from a single VRF request, you can request this directly with the `numWords` argument:
 
-- If you are using the VRF  subscription method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html) guide for an example where one request returns multiple random values.
-- If you are using the VRF  direct funding method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html) guide for an example where one request returns multiple random values.
+- If you are using the VRF  subscription method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription) guide for an example where one request returns multiple random values.
+- If you are using the VRF  direct funding method, see the [Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method) guide for an example where one request returns multiple random values.
 
 ## Processing simultaneous VRF requests
 

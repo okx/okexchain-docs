@@ -1,21 +1,21 @@
-# Join the Public Mainnet 
+# Join the public mainnet 
 
 See the [mainnet repo](https://github.com/okx/mainnet) for
 information on the latest mainnet, including the correct version
 of OKTC to use and details about the genesis file.
 
-**You need to [install oktc](/dev/quick-start/install-oktc.html) before you go further**
+**You need to [install oktc](/dev/quick-start/install-oktc) before you go further**
 
-## Supported Platforms
+## Supported platforms
 
 We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
-## Minimum System Requirements
+## Minimum system requirements
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
-## Setting Up a New Node
+For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement)
+## Setting up a new node
 
 These instructions are for setting up a brand new full node from scratch.
 
@@ -45,7 +45,7 @@ You can edit the `~/.exchaind/config/exchaind.toml` file in order to enable the 
 ##### main base config options #####
 
 # The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
+# transaction. A transaction’s fees must meet the minimum of any denomination
 # specified in this config (Our recommended quantity is  10^-9 okt).
 
 minimum-gas-prices = "0.000000001okt"
@@ -53,11 +53,11 @@ minimum-gas-prices = "0.000000001okt"
 
 Your full node has been initialized! 
 
-## Genesis & Seeds
+## Genesis & seeds
 
-### Copy the Genesis File
+### Copy the genesis file
 
-Fetch the mainnet's `genesis.json` file into `exchaind`'s config directory.
+Fetch the mainnet’s `genesis.json` file into `exchaind`’s config directory.
 
 Note we use the `latest` directory in the [mainnet repo](https://github.com/okx/mainnet) which contains details for the mainnet like the latest version and the genesis file. 
 
@@ -67,9 +67,9 @@ To verify the correctness of the configuration run:
 exchaind validate-genesis
 ```
 
-### Add Seed Nodes
+### Add seed nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [mainnet repo's](https://github.com/okx/mainnet) README.md contains some seed nodes.
+Your node needs to know how to find peers. You’ll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [mainnet repo’s](https://github.com/okx/mainnet) README.md contains some seed nodes.
 
 You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/config.toml` file:
 
@@ -78,9 +78,9 @@ You can add those seeds nodes to the `seeds` filed in the `~/.exchaind/config/co
 seeds = "e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@175.41.191.69:26656,c8f32b793871b56a11d94336d9ce6472f893524b@35.74.8.189:26656"
 ```
 
-For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
+For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer).
 
-## Starting a New Node
+## Starting a new node
 
 Start the full node with this command:
 
@@ -97,15 +97,15 @@ exchaincli status
 See the [mainnet repo](https://github.com/okx/mainnet) for information on mainnet, including the correct version of the OKTC to use and details about the genesis file.
 
 
-## JSON-RPC Endpoint
-[RPC URL](/dev/api/oktc-api/json-rpc-api.html)
+## JSON-RPC endpoint
+[RPC URL](/dev/api/oktc-api/json-rpc-api)
 
 
-## Upgrading Your Node
+## Upgrading your node
 
 These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest mainnet.
 
-### Reset Data
+### Reset data
 
 First, remove the outdated files and reset the data.
 
@@ -115,7 +115,7 @@ exchaind unsafe-reset-all
 ```
 
 Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before,
-your node will still try to connect to them, but may fail if they haven't also
+your node will still try to connect to them, but may fail if they haven’t also
 been upgraded.
 
 > _NOTE_:
@@ -140,6 +140,6 @@ See the [mainnet repo](https://github.com/okx/mainnet) for details on which vers
 
 Your full node has been cleanly upgraded!
 
-### Upgrade to Validator Node
+### Upgrade to validator node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.html).
+You now have an active full node. What’s the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli).

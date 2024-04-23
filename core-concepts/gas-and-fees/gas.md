@@ -1,4 +1,4 @@
-# Gas and Fees
+# Gas and fees
 
 Learn about the differences between `Gas` and `Fees` in Ethereum and OKTC. 
 
@@ -19,7 +19,7 @@ their value in Wei. Following a common (although somewhat ambiguous) pattern, et
 
 
 
-## Pre-requisite Readings
+## Pre-requisite readings
 
 - [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees)
 - [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) 
@@ -33,7 +33,7 @@ user to pay for these operations. These operations consist in state transitions 
 transaction or calling a contract.
 
 Exactly like Ethereum, Cosmos utilizes the concept of gas and this is how Cosmos tracks the resource
-usage of operations during execution. Operations on Cosmos are represented as read or writes done to the chain's store.
+usage of operations during execution. Operations on Cosmos are represented as read or writes done to the chain’s store.
 
 In Cosmos, a fee is calculated and charged to the user during a message execution. This fee is
 calculated from the sum of all gas consumed in an message execution:
@@ -52,9 +52,9 @@ In the Cosmos SDK, gas is tracked in the main `GasMeter` and the `BlockGasMeter`
 - `GasMeter`: keeps track of the gas consumed during executions that lead to state transitions. It is reset on every transaction  execution.
 - `BlockGasMeter`: keeps track of the gas consumed in a block and enforces that the gas does not go over a predefined limit. This limit is defined in the Tendermint consensus parameters and can be changed via governance parameter change proposals.
 
-More information regarding gas in Cosmos SDK can be found [here](https://docs.cosmos.network/master/basics/gas-fees.html).
+More information regarding gas in Cosmos SDK can be found [here](https://docs.cosmos.network/master/basics/gas-fees).
 
-## Matching EVM Gas consumption
+## Matching EVM gas consumption
 
 OKTC is an EVM-compatible chain that supports Ethereum Web3 tooling. For this reason, gas
 consumption must be equitable in order to accurately calculate the state transition hashes and exact
@@ -64,11 +64,11 @@ In Cosmos, there are types of operations that are not triggered by transactions 
 
 ### `BeginBlock` and `EndBlock`
 
-These operations are defined by the Tendermint Core's Application Blockchain Interface (ABCI) and are defined by each Cosmos SDK module. As their name suggest, they are executed at the beginning and at the end of each block processing respectively (i.e pre and post transaction execution). Since these operations are not reflected on Ethereum, to match the the gas consumption we reset the main `GasMeter` to 0 on OKTC's EVM module.
+These operations are defined by the Tendermint Core’s Application Blockchain Interface (ABCI) and are defined by each Cosmos SDK module. As their name suggest, they are executed at the beginning and at the end of each block processing respectively (i.e pre and post transaction execution). Since these operations are not reflected on Ethereum, to match the the gas consumption we reset the main `GasMeter` to 0 on OKTC’s EVM module.
 
 ### `AnteHandler`
 
-The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fees.html#antehandler)
+The Cosmos SDK [`AnteHandler`](https://docs.cosmos.network/master/basics/gas-fees#antehandler)
 performs basic checks prior to transaction execution. These checks are usually signature
 verification, transaction field validation, transaction fees, etc.
 
@@ -77,7 +77,7 @@ special `AnteHandler` that is customized for EVM transaction fee verification is
 allows OKTC to generate the expected gas costs for operations done in the network and scale the
 gas costs as it would in the Ethereum network.
 
-## Gas Refunds
+## Gas refunds
 
 In Ethereum, gas can be specified prior to execution and the remaining gas will be refunded back to the user if any gas is left over - should fail if not enough gas was provided. 
 
@@ -85,7 +85,7 @@ In OKTC, there are two types of transactions, EVM and Cosmos. The EVM type trans
 
 If you are using a Cosmos type transaction, it is extremely important to use the correct gas. To prevent overspending on fees, providing the `--gas-adjustment` flag for a Cosmos transaction will determine the fees automatically. 
 
-## 0 Fee Transactions
+## 0 Fee transactions
 
 In Cosmos, a minimum gas price is not enforced by the `AnteHandler` as the `min-gas-prices` is
 checked against the local node/validator. In other words, the minimum fees accepted are determined

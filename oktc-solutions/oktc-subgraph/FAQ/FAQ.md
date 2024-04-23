@@ -14,7 +14,7 @@ For more code specifications, refer to: https://github.com/okx-subgraph/oktc-sub
 
 ## Is it possible to deploy subgraphs with the same name？
 
-No, duplicate subgraph names aren't allowed.
+No, duplicate subgraph names aren’t allowed.
 
 ## Can I delete my subgraph?
 

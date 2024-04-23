@@ -1,4 +1,4 @@
-# On-chain Governance
+# On-chain governance
 ## Proposal process
 The overall process of a proposal is shown below:
 

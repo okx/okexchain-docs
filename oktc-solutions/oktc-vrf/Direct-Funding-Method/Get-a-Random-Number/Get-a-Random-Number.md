@@ -1,4 +1,4 @@
-# Get a Random Number
+# Get a random number
 
 This guide explains how to get random values using a simple contract to request and receive random values from OKTC VRF  without managing a subscription. 
 
@@ -17,7 +17,7 @@ For this example, use the [VRFDirectFundingConsumer.sol](https://github.com/okx/
 
 The contract also includes pre-configured values for the necessary request parameters such as `callbackGasLimit`, `requestConfirmations`, the number of random words `numWords`, the VRF  Wrapper address `wrapperAddress`, and the OKT token address `OKTAddress`. You can change these parameters if you want to experiment on different .
 
-Build and deploy the contract on OKTC Mainnet.
+Build and deploy the contract on OKTC mainnet.
 
 1. Open the [`VRFDirectFundingConsumer.sol` contract](https://github.com/okx/OKTC-VRF/blob/addSomeFeatureBeforeOnline/contracts/flat/VRFWrapperConsumerExampleFlat.sol) in Remix.
 
@@ -25,7 +25,7 @@ Build and deploy the contract on OKTC Mainnet.
 
 3. Configure your deployment. On the **Deploy** tab in Remix, select the **Injected Web3 Environment** and select the `VRFDirectFundingConsumer` contract from the contract list.
 
-4. Fill the constructor arguments like below and Click the **Deploy** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
+4. Fill the constructor arguments like below and Click the **‘Deploy’** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
 
    | Item                  | Value                                      |
    | :-------------------- | :----------------------------------------- |
@@ -92,9 +92,9 @@ contract VRFV2WrapperConsumerExample is VRFV2WrapperConsumerBase {
 
 ```
 
-The parameters define how your requests will be processed. You can find the values for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html) page.
+The parameters define how your requests will be processed. You can find the values for your network in the [Supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks) page.
 
-- `uint32 callbackGasLimit`: The limit for how much gas to use for the callback request to your contract’s `fulfillRandomWords()` function. It must be less than the `maxGasLimit` limit on the coordinator contract minus the `wrapperGasOverhead`. See the [VRF  Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html#limits) for more details. Adjust this value for larger requests depending on how your `fulfillRandomWords()` function processes and stores the received random values. If your `callbackGasLimit` is not sufficient, the callback will fail and your consuming contract is still charged for the work done to generate your requested random values.
+- `uint32 callbackGasLimit`: The limit for how much gas to use for the callback request to your contract’s `fulfillRandomWords()` function. It must be less than the `maxGasLimit` limit on the coordinator contract minus the `wrapperGasOverhead`. See the [VRF  Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method#limits) for more details. Adjust this value for larger requests depending on how your `fulfillRandomWords()` function processes and stores the received random values. If your `callbackGasLimit` is not sufficient, the callback will fail and your consuming contract is still charged for the work done to generate your requested random values.
 - `uint16 requestConfirmations`: How many confirmations the OKTC node should wait before responding. The longer the node waits, the more secure the random value is. It must be greater than the `minimumRequestBlockConfirmations` limit on the coordinator contract.
 - `uint32 numWords`: How many random values to request. If you can use several random values in a single callback, you can reduce the amount of gas that you spend per random value. The total cost of the callback request depends on how your `fulfillRandomWords()` function processes and stores the received random values, so adjust your `callbackGasLimit` accordingly.
 
@@ -111,9 +111,9 @@ After you are done with this contract, you can retrieve the remaining  OKT to us
 
 1. Call `withdrawOKT()` function. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, the remaining OKT will be transfered from your consuming contract to your wallet address.
 
-## What's next
+## What’s next
 
-- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)
-- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices.html)
-- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Suppo rted-Networks/Supported-Networks.html)
+- [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations)
+- [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices)
+- [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Suppo rted-Networks/Supported-Networks)
 

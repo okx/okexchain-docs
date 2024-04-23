@@ -30,7 +30,7 @@ The address with permission to set the feeTo address.
 ## Write functions
 ### createPair
 `function createPair(address tokenA, address tokenB) external returns (address pair);`
-Creates a pair for `tokenA` and `tokenB` where a pair doesn't already exist.
+Creates a pair for `tokenA` and `tokenB` where a pair doesn’t already exist.
 `tokenA` and `tokenB` order is interchangeable.
 Emits `PairCreated` (see Events sector).
 ### setFeeTo

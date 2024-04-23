@@ -1,7 +1,7 @@
-# OKTC Wasm Instruction Manual
+# OKTC Wasm instruction manual
 This manual will mainly discuss how to use CLI commands on OKTC for all actions regarding wasm smart contracts.
 
-## Terminologies and Operations
+## Terminologies and operations
 | No.| OKTC Wasm Terminologies and Operations | Function | Return | Must be the contract admin | Counterpart in EVM |
 | --- | --- | --- | --- | --- | --- |
 | 1 | bytecode | a wasm binary file compiled from rust or c++ code by a traditional cargo building pipeline | | | bytecode |
@@ -20,7 +20,7 @@ This manual will mainly discuss how to use CLI commands on OKTC for all actions 
 ### Install essential tools
    In this section, we will discuss how to set up our machine and install the prerequisites for developing, deploying and interacting with smart contracts on OKTC chain.
 #### Install OKTC
-   Make sure you have the OKTC application installed, [installation instructions](/dev/quick-start/install-oktc.html).
+   Make sure you have the OKTC application installed, [installation instructions](/dev/quick-start/install-oktc).
 #### Install Rust
    Install Rust environment (Linux or MacOS), [installation instructions](https://rustup.rs/).
    After installing Rust, you need to confirm your machine has wasm32 target
@@ -36,7 +36,7 @@ rustup target list --installed
 // output is expected to contain 'wasm32-unknown-unknown'  
 ```   
 
-Change Rust crates registry to speed up downloading rust library. Refer to this [blog](https://mirrors.ustc.edu.cn/help/crates.io-index.html). 
+Change Rust crates registry to speed up downloading rust library. Refer to this [blog](https://mirrors.ustc.edu.cn/help/crates.io-index). 
 
 #### Install command line tool
 ```Bash
@@ -47,7 +47,7 @@ apt install jq curl
 ### Configure network
 You can choose to test on mainnet, testnet or local testnet.
 #### OKTC Mainnet
-Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet.html).
+Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet).
 
 Configure your exchaincli
 ```Bash
@@ -58,8 +58,8 @@ exchaincli config trust-node true
 exchaincli config node https://exchaintmrpc.okex.org
 ```
 > Wasm is not enabled on mainnet now.
-#### OKTC Testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet.html).
+#### OKTC testnet
+Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet).
 
 Configure your exchaincli
 ```Bash 
@@ -89,7 +89,7 @@ Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 | IDE | Plugin | Description |
 | :-----| :------------------- | :----: |
 | [VSCode](https://code.visualstudio.com/download) | [RLS for VSCode](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) | Recommended to use |
-| [IntelliJ IDEA community version](https://www.jetbrains.com/idea/download/) | [IntelliJ Rust](https://intellij-rust.github.io/) | Recommended to use if you're an IntelliJ product user
+| [IntelliJ IDEA community version](https://www.jetbrains.com/idea/download/) | [IntelliJ Rust](https://intellij-rust.github.io/) | Recommended to use if you’re an IntelliJ product user
 
 
 ## Deploying CW20 taught by hand
@@ -111,7 +111,7 @@ Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 git clone https://github.com/CosmWasm/cw-plus.git
 cd cw-plus/contracts/cw20-base
 ```
-2. Compile contract bytecode and schema file (schema is similar to Ethereum's abi)
+2. Compile contract bytecode and schema file (schema is similar to Ethereum’s abi)
 ```Bash
 # compile to wasm code
 RUSTFLAGS="-C link-arg=-s" cargo wasm
@@ -191,7 +191,7 @@ Maybe you will see other number in your transaction receipt, because this number
 }
 ```
 ### Initialize contract
-After uploading the contract code, it only saves the code on the blockchain without actually initializing a specific contract. Developers can use the code previously uploaded to the chain and the corresponding initialization parameters to initialize a wasm smart contract and get a contract address.
+After uploading the contract code, it only saves the code on the blockchain without actually initializing a specific contract. developers can use the code previously uploaded to the chain and the corresponding initialization parameters to initialize a wasm smart contract and get a contract address.
 ```Bash
 # Instantiate a contract with the uploaded code. We can use the code we upload in previous step.
 # e.g.

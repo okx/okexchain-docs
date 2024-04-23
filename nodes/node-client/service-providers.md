@@ -1,4 +1,4 @@
-# Service Providers
+# Service providers
 
 We define ‘service providers’ as entities providing services for end-users that involve some form of interaction within the OKTC blockchain. More specifically, this document will be focused around the interactions with tokens.
 
@@ -12,15 +12,15 @@ There are three main pieces to consider:
 * **Rest Server**: This acts as a relayer for HTTP calls.
 * **Rest API**: Define available endpoints for the Rest Server.
 
-## Running a Full-Node
+## Running a full-node
 
 ### Installation and configuration
 
 We will describe the steps to run and interact with a full-node within the OKTC network. For other SDK-based blockchain, the process should be similar.
 
-First, you need to [install the software](/dev/quick-start/install-oktc.html).
+First, you need to [install the software](/dev/quick-start/install-oktc).
 
-Then, you can start [running a full-node(testnet)](/dev/quick-start/join-oktc-testnet.html).
+Then, you can start [running a full-node(testnet)](/dev/quick-start/join-oktc-testnet).
 
 ### Command-Line interface
 

@@ -2,13 +2,13 @@
 
 This content is not yet presented under its final version. Mechanisms and values are susceptible to change.
 
-## General Concepts
+## General concepts
 
 ### What is a validator?
 
-The [OKTC](/dev/quick-start/overview.html) is based on [Tendermint](https://docs.tendermint.com/), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The [OKTC](/dev/quick-start/overview) is based on [Tendermint](https://docs.tendermint.com/), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator’s private key.Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
-### What's staking?
+### What’s staking?
 
 The OKTC blockchain utilises a public Proof-Of-Stake (PoS)  mechanism. The weight of each validator is determined by the amount of  tokens staked (OKT) and bonded as collateral. These OKTs can be self-delegated directly by the validator or delegated to them by other OKT holders.
 
@@ -22,17 +22,17 @@ A full-node is a program that fully validates transactions and blocks of a block
 
 Of course, it is possible and encouraged for users to run full-nodes even if they do not plan to become validators.
 
-## Becoming a Validator
+## Becoming a validator
 
 ### How to become a validator?
 
 Any participant in the network can signal their willingness to become a validator by sending a `create-validator` transaction, where they must fill out the following parameters:
 
-- **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign prevotes and precommits.
-- **Validator's Address:** Application level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-- **Validator's name (moniker)**
-- **Validator's website (Optional)**
-- **Validator's description (Optional)**
+- **Validator’s `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign prevotes and precommits.
+- **Validator’s Address:** Application level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
+- **Validator’s name (moniker)**
+- **Validator’s website (Optional)**
+- **Validator’s description (Optional)**
 
 Once a validator is created, OKT holders can delegate OKTs to them, effectively adding stake to their pool. The total stake of an address is the combination of OKTs bonded by delegators and OKTs self-bonded by the entity that designated themselves.
 
@@ -42,9 +42,9 @@ Out of all validator candidates that signaled themselves, the 21 with the highes
 
 ### How can I join the testnet?
 
-The Testnet is a great environment to test your validator setup before launch.
+The testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](/dev/quick-start/join-oktc-testnet.html) and [here](https://github.com/okx/testnets).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](/dev/quick-start/join-oktc-testnet) and [here](https://github.com/okx/testnets).
 
 ### What are the different types of keys?
 
@@ -95,7 +95,7 @@ Validators have two main responsibilities:
 
 Additionally, validators are expected to be active members of the community. They should always remain up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
 
-### What does 'participate in governance' entail?
+### What does ‘participate in governance’ entail?
 
 Validators and delegators on the OKTC can vote on proposals to change operational parameters (such as the block gas limit), coordinate upgrades, or make a decision on any given matter.
 
@@ -121,7 +121,7 @@ The validator that is selected to propose the next block is called **proposer**.
 
 ## Incentives
 
-For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr.html).
+For more information on incentives, see [Staking Rewards Algorithm](/dev/core-concepts/staking-rewards-algorithm/distr).
 
 
 

@@ -181,7 +181,7 @@ type TransferUnit struct {
 
 ### 1.3 Order utils function
 
-#### 1.3.1 Filter the order IDs from the new order's tx response
+#### 1.3.1 Filter the order IDs from the new order’s tx response
 
 ```go
 func GetOrderIDsFromResponse(txResp *sdk.TxResponse) (orderIDs []string, err error) 
@@ -191,7 +191,7 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| txResp  | *sdk.TxResponse |the pointer of the new order's tx response|
+| txResp  | *sdk.TxResponse |the pointer of the new order’s tx response|
 
 Printed results:
 
@@ -312,12 +312,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| toAddrStr  | string |receiver's account address in bech32|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| toAddrStr  | string |receiver’s account address in bech32|
 | coinsStr  | string |transfer amount, e.g. "1024.1024okt" |
 
 Printed results:
@@ -350,11 +350,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | transfers  | []types.TransferUnit |set of data struct containing the receivers and transfer amount. A build function is shown on 1.2.1|
 
 Printed results:
@@ -387,11 +387,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | orgSymbol  | string |symbol of the new token|
 | wholeName  | string | whole name of the new token|
 | totalSupply  | string | total supply of the new token|
@@ -428,11 +428,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | coinsStr  | string | amount to mint, e.g. "1024.1024okt" |
 
 Printed results:
@@ -465,11 +465,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | coinsStr  | string | amount to burn, e.g. "1024.1024okt" |
 
 Printed results:
@@ -502,11 +502,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | symbol  | string | symbol of the token to modify |
 | description  | string | new description to change |
 | wholeName  | string | new whole name to change |
@@ -646,16 +646,16 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | pubkeyStr  | string |bech32 encoded pubkey of the validator|
-| moniker  | string |validator's name|
-| identity  | string |validator's identity|
-| website  | string |validator's website |
-| details  | string | validator's details |
+| moniker  | string |validator’s name|
+| identity  | string |validator’s identity|
+| website  | string |validator’s website |
+| details  | string | validator’s details |
 
 Printed results:
 
@@ -687,15 +687,15 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| moniker  | string |validator's new name to change|
-| identity  | string |validator's new identity to change|
-| website  | string |validator's new website to change |
-| details  | string | validator's new details to change |
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| moniker  | string |validator’s new name to change|
+| identity  | string |validator’s new identity to change|
+| website  | string |validator’s new website to change |
+| details  | string | validator’s new details to change |
 
 Printed results:
 
@@ -727,11 +727,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 
 Printed results:
 
@@ -763,11 +763,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | coinsStr  | string |amount to deposit, e.g. "1024.1024okt"|
 
 Printed results:
@@ -800,11 +800,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | coinsStr  | string |amount to withdraw, e.g. "1024.1024okt"|
 
 Printed results:
@@ -837,12 +837,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| valAddrsStr  | []string |set of target validators' addresses in bech32|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| valAddrsStr  | []string |set of target validators’ addresses in bech32|
 
 Printed results:
 
@@ -874,11 +874,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 
 Printed results:
 
@@ -910,11 +910,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 
 Printed results:
 
@@ -946,12 +946,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| proxyAddrStr  | string |proxy's address in bech32|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| proxyAddrStr  | string |proxy’s address in bech32|
 
 Printed results:
 
@@ -983,11 +983,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 
 Printed results:
 
@@ -1035,11 +1035,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | withdrawAddrStr  | string | account address in bech32 to receive the rewards of validator|
 
 Printed results:
@@ -1072,12 +1072,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| valAddrStr  | string | target validator's address in bech32|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| valAddrStr  | string | target validator’s address in bech32|
 
 Printed results:
 
@@ -1125,11 +1125,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 
 Printed results:
 
@@ -1177,7 +1177,7 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| ownerAddr  | string |owner account address in bech32 of a token pair. If it's set empty, all token pairs' info will be returned|
+| ownerAddr  | string |owner account address in bech32 of a token pair. If it’s set empty, all token pairs’ info will be returned|
 | page  | int |page number|
 | perPage  | int | items number per page|
 
@@ -1212,12 +1212,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| handleFeeAddrStr  | string |account address in bech32 to receive fees of tokenpair's matched order|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| handleFeeAddrStr  | string |account address in bech32 to receive fees of tokenpair’s matched order|
 | website  | string |a valid http link to describe DEXOperator which ends with "operator.json" defined in KIP-{xxx}，and its length should be less than 1024|
 
 Printed results:
@@ -1250,12 +1250,12 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
-| handleFeeAddrStr  | string |new account address in bech32 to receive fees of tokenpair's matched order to change|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
+| handleFeeAddrStr  | string |new account address in bech32 to receive fees of tokenpair’s matched order to change|
 | website  | string |a new valid http link to describe DEXOperator which ends with "operator.json" defined in KIP-{xxx} to change|
 
 Printed results:
@@ -1288,11 +1288,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | baseAsset  | string |token symbol as base asset|
 | quoteAsset  | string |token symbol as quote asset|
 | initPriceStr  | string |initial price of the trading pair on dex|
@@ -1327,11 +1327,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | product  | string |the name of target token pair|
 | amountStr  | string |amount of okt to deposit to the product |
 
@@ -1365,11 +1365,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | product  | string |the name of target token pair|
 | amountStr  | string |amount of okt to withdraw from the product |
 
@@ -1403,11 +1403,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | product  | string |the name of target token pair|
 | toAddrStr  | string |account address in bech32 to transfer the ownership to |
 
@@ -1441,11 +1441,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | product  | string |the name of target token pair to confirm|
 
 Printed results:
@@ -1559,11 +1559,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | products  | string |target products in order|
 | sides  | string |the sides of each order in order. Side is the choice between "BUY" and "SELL"|
 | prices  | string |the prices in order|
@@ -1596,7 +1596,7 @@ type TxResponse struct {
 ```
 
 Note:
-The order IDs will be returned in TxResponse's Log. It's recommended to use order utils function to filter the order IDs out at 1.3.1.
+The order IDs will be returned in TxResponse’s Log. It’s recommended to use order utils function to filter the order IDs out at 1.3.1.
 
 #### 8.2.2 Cancel orders by orderIDs
 
@@ -1608,11 +1608,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | orderIDs  | string |the set of order IDs to cancel the orders|
 
 for example:
@@ -1678,7 +1678,7 @@ Printed results:
 [][]string
 ```
 
-#### 9.1.2 Get all tickers' data
+#### 9.1.2 Get all tickers’ data
 
 ```go
 func (bc backendClient) QueryTickers(product string, count ...int) (tickers []types.Ticker, err error) 
@@ -1710,7 +1710,7 @@ type Ticker struct {
 }
 ```
 
-#### 9.1.3 Get the specific product's record of recent transactions
+#### 9.1.3 Get the specific product’s record of recent transactions
 
 ```go
 func (bc backendClient) QueryRecentTxRecord(product string, start, end, page, perPage int) (record []types.MatchResult, err error) 
@@ -1724,7 +1724,7 @@ Enter parameters:
 | start  | int |filter txs by start timestamp|
 | end  | int |filter txs by end timestamp|
 | page  | int |page number|
-| perPage  | int | item's number per page|
+| perPage  | int | item’s number per page|
 
 Printed results:
 
@@ -1755,7 +1755,7 @@ Enter parameters:
 | start  | int |filter txs by start timestamp|
 | end  | int |filter txs by end timestamp|
 | page  | int |page number|
-| perPage  | int | item's number per page|
+| perPage  | int | item’s number per page|
 
 Printed results:
 
@@ -1792,7 +1792,7 @@ Enter parameters:
 | start  | int |filter txs by start timestamp|
 | end  | int |filter txs by end timestamp|
 | page  | int |page number|
-| perPage  | int | item's number per page|
+| perPage  | int | item’s number per page|
 
 Printed results:
 
@@ -1829,7 +1829,7 @@ Enter parameters:
 | start  | int |filter txs by start timestamp|
 | end  | int |filter txs by end timestamp|
 | page  | int |page number|
-| perPage  | int | item's number per page|
+| perPage  | int | item’s number per page|
 
 Printed results:
 
@@ -1865,7 +1865,7 @@ Enter parameters:
 | start  | int |filter txs by start timestamp|
 | end  | int |filter txs by end timestamp|
 | page  | int |page number|
-| perPage  | int | item's number per page|
+| perPage  | int | item’s number per page|
 
 Printed results:
 
@@ -1971,11 +1971,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | baseToken  | string |the base token name required to create an AMM swap pair|
 | quoteToken  | string |the quote token name required to create an AMM swap pair|
 
@@ -2009,11 +2009,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | minLiquidity  | string |minimum number of sender will mint if total pool token supply is greater than 0|
 | maxBaseAmount  | string |maximum number of base amount deposited. deposits max amount if total pool token supply is 0|
 | quoteAmount  | string |the number of quote amount to add liquidity|
@@ -2049,11 +2049,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | liquidity  | string | number of liquidity to burn|
 | minBaseAmount  | string |minimum number of base amount withdrawn|
 | minQuoteAmount  | string |minimum number of quote amount withdrawn|
@@ -2089,11 +2089,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | soldTokenAmount  | string | amount of token expected to sell|
 | minBoughtTokenAmount  | string |minimum amount of token expected to buy|
 | recipient  | string |account address in bech32 to receive the amount bought|
@@ -2259,11 +2259,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name|
 | minLockAmountStr  | string |minimum amount of token to lock in this pool|
 | yieldToken  | string |the symbol of token as yield|
@@ -2298,11 +2298,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name to destroy|
 
 Printed results:
@@ -2335,11 +2335,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name|
 | amountStr  | string |amount of yield token to provide to the target farm pool|
 | yieldPerBlockStr  | string |amount of yield token to release per block|
@@ -2375,11 +2375,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name|
 | amountStr  | string |amount of token to lock to the target farm pool|
 
@@ -2413,11 +2413,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name|
 | amountStr  | string |amount of token to unlock from the target farm pool|
 
@@ -2451,11 +2451,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | poolName  | string |pool name|
 
 Printed results:
@@ -2504,7 +2504,7 @@ Enter parameters:
 |  ----  | ----  |----|
 | depositorAddrStr  | string |filter by proposals deposited on by depositor. defaults to all proposals by ""|
 | voterAddrStr  | string |filter by proposals voted on by voted. defaults to all proposals by ""|
-| status  | string |filter by proposals' status: DepositPeriod/VotingPeriod/Passed/Rejected. defaults to all proposals by ""|
+| status  | string |filter by proposals’ status: DepositPeriod/VotingPeriod/Passed/Rejected. defaults to all proposals by ""|
 | numLimit  | uint64 |limit to latest [numLimit] proposals. defaults to all proposals by 0|
 
 Printed results:
@@ -2536,11 +2536,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | proposalPath  | string | the path pf proposal file|
 
 text proposal file template:
@@ -2583,11 +2583,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | proposalPath  | string | the path pf proposal file|
 
 text proposal file template:
@@ -2642,11 +2642,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | proposalPath  | string | the path pf proposal file|
 
 text proposal file template:
@@ -2695,11 +2695,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | proposalPath  | string | the path pf proposal file|
 
 text proposal file template:
@@ -2753,11 +2753,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | proposalPath  | string | the path pf proposal file|
 
 text proposal file template:
@@ -2806,11 +2806,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | depositCoinsStr  | string | amount to deposit to the proposal|
 | proposalID  | uint64 | target proposal ID|
 
@@ -2844,11 +2844,11 @@ Enter parameters:
 
 |  Name   | Type  |Mark|
 |  ----  | ----  |----|
-| fromInfo  | keys.Info |sender's key info|
-| passWd  | string |sender's password|
+| fromInfo  | keys.Info |sender’s key info|
+| passWd  | string |sender’s password|
 | memo  | string |memo to note|
-| accNum  | uint64 |account number of sender's account on chain|
-| seqNum  | uint64 |sequence number of sender's account on chain|
+| accNum  | uint64 |account number of sender’s account on chain|
+| seqNum  | uint64 |sequence number of sender’s account on chain|
 | voteOption  | string | option to vote: yes/no/no_with_veto/abstain|
 | proposalID  | uint64 | target proposal ID|
 

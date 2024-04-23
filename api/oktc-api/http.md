@@ -1,6 +1,6 @@
 # Rest API
 
-Rest api methords for oktc.
+Rest api methords for OKTC.
 
 ```wiki
 # Mainnet
@@ -87,7 +87,7 @@ https://exchainrpc.okex.org/okexchain/v1/accounts/ex1508d7eq592kg2lh9d46xvv3r4sm
 
 ### Get accountNumber and sequence
 
-The API endpoints of get user's account_number and sequence.
+The API endpoints of get user’s account_number and sequence.
 
 #### HTTP Request
 
@@ -1096,9 +1096,9 @@ None
 | :--------------------- | :------- | :------------------------------------------ |
 | is_proxy               | String   | Proxy or not                                |
 | tokens                 | String   | Delegation of okt                           |
-| proxy_address          | String   | The proxy's address                         |
+| proxy_address          | String   | The proxy’s address                         |
 | validator_address      | Array    | Validator address                           |
-| total_delegated_tokens | String   | Total delegated tokens for it's proxy users |
+| total_delegated_tokens | String   | Total delegated tokens for it’s proxy users |
 | delegator_address      | String   | Delegator address                           |
 | shares                 | String   | Shares,  voting rights from okt             |
 
@@ -1916,7 +1916,7 @@ None
 
 ### Get withdraw address
 
-Query delegator's withdraw address
+Query delegator’s withdraw address
 
 #### HTTP Request
 
@@ -2050,7 +2050,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code?page=1&count_total=true&rever
 | code_info.instantiate_permission.permission | String       | Permission type             |
 | pagination                                  | Object       | Page response	parameters |
 | pagination.next_key                         | String       | The next page start key     |
-| pagination.total                            | String       | It's a number format        |
+| pagination.total                            | String       | It’s a number format        |
 
 ### Get contract code
 
@@ -2184,7 +2184,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/3/contracts?page=1&count_tota
 | contracts           | Array    | Contract Address Array      |
 | pagination          | Object   | Page response	parameters |
 | pagination.next_key | String   | The next page start key     |
-| pagination.total    | String   | It's a number format        |
+| pagination.total    | String   | It’s a number format        |
 
 ###  Query contract history information
 
@@ -2255,7 +2255,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1ufs3tlq4umljk0qfe8k5ya
 | entries.msg.symbol                  | String       | Contract symbol              |
 | pagination                          | Object       | Page response parameters     |
 | pagination.next_key                 | String       | The next page start key      |
-| pagination.total                    | String       | It's a number format         |
+| pagination.total                    | String       | It’s a number format         |
 
 ### Query contract data through key
 
@@ -2387,7 +2387,7 @@ coderID
 | model.value         | String       | Data value which is base64 |
 | pagination          | Object       | Page response parameters   |
 | pagination.next_key | String       | The next page start key    |
-| pagination.total    | String       | It's a number format       |
+| pagination.total    | String       | It’s a number format       |
 
 ## Gov
 

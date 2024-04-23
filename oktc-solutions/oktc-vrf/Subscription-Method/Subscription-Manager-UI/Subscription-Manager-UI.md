@@ -1,4 +1,4 @@
-# Subscription Manager User Interface
+# Subscription manager user interface
 
 Subscription Manager User Interface
 
@@ -55,7 +55,7 @@ The Pending list appears if there are requests currently being processed.
 
 <4> **Status**: A timer that informs you how long a pending VRF request has been waiting.
 
-<5> **Max Cost(OKT)**: The calculated total gas cost in OKT based on the configuration. See [VRF v2 Subscription Limits](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html) for details.
+<5> **Max Cost(OKT)**: The calculated total gas cost in OKT based on the configuration. See [VRF v2 Subscription Limits](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription) for details.
 
 ## Transaction history
 

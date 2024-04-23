@@ -1,11 +1,11 @@
-# Quick Start for Mainnet
+# Quick start for mainnet
 ## Metamask
-- [What's the Metamask](https://metamask.io/index.html)
+- [What’s the Metamask](https://metamask.io/index)
 - [Guide for Metamask](https://docs.metamask.io/guide/)
 
-### 1. Config Metamask for OKTC Mainnet
+### 1. Config metamask for OKTC mainnet
 
-- NetWork Name: OKTC Mainnet
+- NetWork Name: OKTC mainnet
 - RPC URL: 
     - https://exchainrpc.okex.org
 - Chain ID: 66
@@ -17,17 +17,17 @@
 ### 2. Create a new account or import an existing account
 ![avatar](../../img/metamask-01-2.png)
 
-### 3. Config ETHEREUM WEBSOCKET for OKTC Mainnet
-please refer to [detail config](/dev/api/oktc-api/websocket.html)
+### 3. Config ETHEREUM WEBSOCKET for OKTC mainnet
+please refer to [detail config](/dev/api/oktc-api/websocket)
 
 ___
-## Blockchain Browser
-[OKTC Mainnet Browser](https://www.okx.com/explorer/oktc)
+## Blockchain browser
+[OKTC mainnet browser](https://www.okx.com/explorer/oktc)
 ___
 
 ## Remix
-Set up a Remix OKTC Mainnet development environment.    
-Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKTC Mainnet through Remix and interact with it.   
+Set up a Remix OKTC mainnet development environment.    
+Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKTC mainnet through Remix and interact with it.   
 ### 1. Connect OKTC account to Remix
 Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
@@ -41,8 +41,8 @@ You should see your account show up in the left-hand panel.
 ![avatar](../../img/metamask-03.png)
 
 
-### 2. Deploy and Interact
-Now that your account is connected, you are able to deploy the contract. Press the Deploy button. A metamask pop-up will appear asking you to confirm. Confirm the transaction   
+### 2. Deploy and interact
+Now that your account is connected, you are able to deploy the contract. Press the **‘Deploy’** button. A metamask pop-up will appear asking you to confirm. Confirm the transaction   
 
 Once the contract has been successfully deployed, you will see it show up in the Deployed Contracts section in the left-hand side, as well as a green check in the Remix console showing the transaction details.   
 

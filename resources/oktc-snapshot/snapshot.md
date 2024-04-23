@@ -1,4 +1,4 @@
-# OKTC Snapshot
+# OKTC snapshot
 
 Quick instructions on how to install the OKTC snapshots.
 
@@ -12,14 +12,14 @@ According to the snapshot size, it is divided into S0, S1, S2 and S3:
 Meaning of [pruning parameter](https://forum.okt.club/d/58-pruning)
 
 
-## testnet
-Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index.html](https://static.okex.org/cdn/chain/okc/snapshot/index.html)
+## Testnet
+Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index](https://static.okex.org/cdn/chain/okc/snapshot/index)
 
 For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
 
 
-## mainnet
-Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index.html](https://static.okex.org/cdn/chain/okc/snapshot/index.html)
+## Mainnet
+Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index](https://static.okex.org/cdn/chain/okc/snapshot/index)
 
 For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
 

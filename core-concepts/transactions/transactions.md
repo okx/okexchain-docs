@@ -3,7 +3,7 @@
 ## Routing
 
 OKTC needs to parse and handle transactions routed for both the EVM and for the Cosmos hub. We
-attempt to achieve this by mimicking [Geth's](https://github.com/ethereum/go-ethereum) `Transaction`
+attempt to achieve this by mimicking [Geth’s](https://github.com/ethereum/go-ethereum) `Transaction`
 structure and treat it as a unique Cosmos SDK message type. An Ethereum transaction is a single
 [`sdk.Msg`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#Msg) contained in an
 [`auth.StdTx`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx). All relevant Ethereum

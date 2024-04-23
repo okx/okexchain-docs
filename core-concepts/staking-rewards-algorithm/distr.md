@@ -1,4 +1,4 @@
-# OKTC Staking Rewards Algorithm
+# OKTC staking rewards algorithm
 
 ## Background
 
@@ -12,15 +12,15 @@ OKTC allows anyone that stakes a minimum of atleast 10,000 OKT the ability to op
 
 The more vote shares a validator receives, the more weight that validator holds, therefore the bigger the reward that validator receives. In order to motivate users to vote for them, validators can set a favourable commission rate, and automatically distribute the rewards based on the ratio of voting shares. The values of commission rates range from [0,1], so if, for example, the commission rate is set to 0.6, that would mean that the validator receives 60% of the total reward, and the remaining 40% is distributed to the users based on the ratio of their voting shares.
 
-Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKTC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli.html).
+Note: After registering as a new validator, the commission rate is defaulted at 1. The validator can set their preferred rate by initiating a transaction; for a more detailed explanation, refer to [OKTC CLI staking manual](/dev/core-concepts/staking-rewards-algorithm/delegators-staking-cli).
 
 
 
-Using the following website's data as an example, imagine a user holds 1000 OKT and voted for 15 different validator nodes; now imagine this user has a commission rate set at 0.6; the staking dividend reward would look like this: 
+Using the following website’s data as an example, imagine a user holds 1000 OKT and voted for 15 different validator nodes; now imagine this user has a commission rate set at 0.6; the staking dividend reward would look like this: 
 
 - The user would receive a staking reward from each of the 15 validators voted for; for example, Chillcrypto would provide an estimated annual reward of 13.0986997 OKT with a 1.31% APR; Unicorn would provide an estimated annual reward of 13.1002434 OKT with a 1.31% APR. 
 
-- Because the user voted for 15 different validator nodes, the total staking reward would be a sum of the total of all 15 nodes' estimated annual rewards, which is 196.4920921 OKT with a 19.64% APR.
+- Because the user voted for 15 different validator nodes, the total staking reward would be a sum of the total of all 15 nodes’ estimated annual rewards, which is 196.4920921 OKT with a 19.64% APR.
 
 | name           | shares         | commissionRate | depositOKTNums (OKT) | depositOKTRewardPerYear (OKT) | APR   | top21 |
 | -------------- | -------------- | -------------- | -------------------- | ----------------------------- | ----- | ----- |
@@ -92,7 +92,7 @@ Below is a specific explanation of the distribution rules for block rewarding:
   -  (1-x%) of block reward * 75% of vote shares distributed to 21 producer nodes (validators) and candidate nodes (candidate validator)
   - X% of block reward + surplus of distributed balance (mentioned above), then all poured into the community fund pool
 
-- As a reward to users, the validator node will distribute (1-y%) of their earnings to users according to the proportions of user's votes.
+- As a reward to users, the validator node will distribute (1-y%) of their earnings to users according to the proportions of user’s votes.
 
 ![1](../../img/reward-1.png)
 
@@ -126,8 +126,8 @@ After staking OKT (minimum of 0.0001 OKT per stake), users can opt to exchange t
 | **Term**                       | **Description**                                              |
 | ------------------------------ | ------------------------------------------------------------ |
 | Period                         | If the voting shares of a validator node within N blocks does not change, then these N blocks are defined as a period. Whenever the validator node’s share of votes changes, a new epoch is automatically recorded.Each epoch has a starting block and an ending block. |
-| Validator's current rewards    | Record of the amount awarded during the current period.      |
-| Validator's historical rewards | Whenever the number of votes of the validator node changes, a new historical reward period is stored and recorded, used to help users calculate their earnings. |
+| Validator’s current rewards    | Record of the amount awarded during the current period.      |
+| Validator’s historical rewards | Whenever the number of votes of the validator node changes, a new historical reward period is stored and recorded, used to help users calculate their earnings. |
 | Reward ratio                   | In a specific period, the reward ratio can be calculated due to fixed share of votes: reward ratio = total rewards/total shares |
 | Cumulative reward ratio        | Sum of reward ratio accumulated over previous epochs         |
 
@@ -143,13 +143,13 @@ The rationale for calculating user earnings is to track a single share over cons
 
 ![](../../img/reward-3.png)
 
-Below is delegator A's process of staking, voting, revoking stake and explanation of rewards.
+Below is delegator A’s process of staking, voting, revoking stake and explanation of rewards.
 
 |                                  | **Historical period m-4** | **Historical period m-3** | **Historical period m-2** | **Historical period m-1** |
 | -------------------------------- | ------------------------- | ------------------------- | ------------------------- | ------------------------- |
-| **Current period's reward**      |                           | 10 OKT                    | 10 OKT                    | 10 OKT                    |
-| **Delegator A's votes**          |                           | 50 shares                 | 50 shares                 | 0shares                   |
-| **Validator node's total votes** |                           | 100 shares                | 500 shares                | 450 shares                |
+| **Current period’s reward**      |                           | 10 OKT                    | 10 OKT                    | 10 OKT                    |
+| **Delegator A’s votes**          |                           | 50 shares                 | 50 shares                 | 0shares                   |
+| **Validator node’s total votes** |                           | 100 shares                | 500 shares                | 450 shares                |
 | **Reward ratio**                 |                           | 0.1 OKT                   | 0.02 OKT                  | 0.0222 OKT                |
 | **Cumulative reward ratio**      | 0 OKT                     | 0.1 OKT                   | 0.12 OKT                  | 0.2422 OKT                |
 
@@ -175,7 +175,7 @@ Users who have accumulated a certain amount of earnings can claim their earnings
 
 - Active withdrawal: the user initiates an on-chain claim transaction, receiving rewards from a single validator node.
 
-- Passive withdrawal: after the user has voted and attempts to stake or vote again, a change in number of votes triggers withdrawal of rewards (only the user's own actions can trigger this).
+- Passive withdrawal: after the user has voted and attempts to stake or vote again, a change in number of votes triggers withdrawal of rewards (only the user’s own actions can trigger this).
 
 Put briefly, active withdrawal is when the user actively conducts the withdrawal transaction themselves, while passive withdrawal conversely means that the user conducts an action not related to withdrawing, for example staking or voting, that triggers a change to the validator and triggers an automatic withdrawal.
 

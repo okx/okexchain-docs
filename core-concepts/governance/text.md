@@ -1,4 +1,4 @@
-# Governance Text Proposal
+# Governance text proposal
 
 ![text](../../img/gov-text.png)  
 Description:  

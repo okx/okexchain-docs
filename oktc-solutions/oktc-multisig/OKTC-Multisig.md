@@ -1,4 +1,4 @@
-# OKTC Multisig
+# OKTC multisig
 
 Official link to OKTC Multisig: [https://oktctools.okx.com/](https://oktctools.okx.com/)
 

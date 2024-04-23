@@ -1,8 +1,8 @@
 # Websocket API
 
-Since OKTC uses Tendermint Core as it's consensus Engine and it's built with the Cosmos
+Since OKTC uses Tendermint Core as it’s consensus Engine and it’s built with the Cosmos
 SDK framework, it inherits the event format from them. However, in order to support the native Web3
-compatibility for websockets of the [Ethereum's
+compatibility for websockets of the [Ethereum’s
 PubSubAPI](https://geth.ethereum.org/docs/rpc/pubsub), OKTC needs to cast the Tendermint
 responses retreived into the Ethereum types.
 
@@ -22,7 +22,7 @@ ws ws://localhost:8546/
 > {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 < {"jsonrpc":"2.0","result":"0x65eca2989ce064d141862c8b7138c1e","id":1}
 ```
-## Mainnet and Testnet Websocket URL
+## Mainnet and testnet websocket URL
 ```shell
 # Mainnet Websocket URL
 wss://exchainws.okex.org:8443
@@ -102,7 +102,7 @@ none
              }
         }
 
-### logs
+### Logs
 
 Returns logs that are included in new imported blocks and match the given filter criteria.
 
@@ -147,7 +147,7 @@ In case of a chain reorganization previous sent logs that are on the old chain w
 
 Returns the hash for all transactions that are added to the pending state and are signed with a key that is available in the node.
 
-When a transaction that was previously part of the canonical chain isn't part of the new canonical chain after a reogranization its again emitted.
+When a transaction that was previously part of the canonical chain isn’t part of the new canonical chain after a reogranization its again emitted.
 
 #### Parameters
 

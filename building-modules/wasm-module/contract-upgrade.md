@@ -1,5 +1,5 @@
 # Wasm contract upgrade
-Contract upgrades is a unique feature of wasm contracts. Developers can call the Migrate method to upgrade contracts. For example, the developer uploads two sets of wasm codes, and the code IDs are 1 and 2. The developer initializes a contract `A` based on code 1, and the developer can upgrade the underlying code of contract `A` to code 2, and the contract address remains unchanged. After the upgrade, users can use the calling interface and parameters defined in the schema file of code 2 to call the contract.
+Contract upgrades is a unique feature of wasm contracts. developerss can call the Migrate method to upgrade contracts. For example, the developers uploads two sets of wasm codes, and the code IDs are 1 and 2. The developers initializes a contract `A` based on code 1, and the developers can upgrade the underlying code of contract `A` to code 2, and the contract address remains unchanged. After the upgrade, users can use the calling interface and parameters defined in the schema file of code 2 to call the contract.
 ```Bash
 # migrate contract to new code id, <instantiate_message> is the instantiate message of the new code defined in json schema
 # e.g.

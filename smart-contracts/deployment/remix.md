@@ -1,10 +1,10 @@
-# Deploy with Remix
-### Using Remix
+# Deploy with remix
+### Using remix
 
 Deploys a KIP20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
-This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
-### Setting up [Remix IDE](https://remix.ethereum.org/)
-- Remix is an online IDE to develop smart contracts.
+This DApp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [remix IDE](https://remix.ethereum.org/).
+### Setting up [remix IDE](https://remix.ethereum.org/)
+- remix is an online IDE to develop smart contracts.
 - You need to choose Solidity Compiler and Deploy and Run Transactions.
 
 ![avatar](../../img/remix-01.png)
@@ -16,37 +16,37 @@ This dapp implements a "Hello World" style application that echoes a message pas
 - Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
 ![avatar](../../img/remix-02.png)
 
-The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
+The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
-A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
+A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts#constructor) and [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts#storage-memory-and-the-stack) in the docs.
 
-### Compile Smart Contract
+### Compile smart contract
 - Step1: Click button to switch to compile page
 - Step2: Select “KIP20Tokens” contract
 - Step3: Check “Auto compile” and “Enable optimization” checkboxes
 - Step4: Click “ABI” to copy the contract abi and save it.
 ![avatar](../../img/remix-03.png)
 
-Now, We have to deploy our smart contract on OKTC Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
+Now, We have to deploy our smart contract on OKTC Network. For that, we have to connect to Web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account]().
 - Open Metamask and select Custom RPC from the networks dropdown
 - Go to setting page
 ![avatar](../../img/remix-04.png)
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-65 * Symbol: OKT * Block Explorer:
+- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-65 * Symbol: OKT * Block explorer:
 https://www.okx.com/explorer/oktc-test
-- Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api.html) * ChainID: exchain-66 * Symbol: OKT * Block Explorer: 
+- Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-66 * Symbol: OKT * Block explorer: 
 https://www.okx.com/explorer/
 - Go ahead and click save
 - Copy your address from Metamask
 - Head over to [Faucet](https://discord.gg/B5nMs6qK5F) and request test OKT
-- Now, let's Deploy the Smart Contract on OKTC Testnet
-- Select Injected Web3 in the Environment dropdown and your contract
+- Now, let’s deploy the smart contract on OKTC testnet
+- Select injected Web3 in the environment dropdown and your contract
 ![avatar](../../img/remix-06.png)
-- Accept the Connection Request!
+- Accept the connection request!
 ![avatar](../../img/remix-07.png)
-- Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
+- Once Metamask is connected to remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
 Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.okx.com/explorer/oktc-test
 

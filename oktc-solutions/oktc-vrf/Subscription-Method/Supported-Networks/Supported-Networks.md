@@ -1,6 +1,6 @@
 # Configuration
 
-## Coordinator Parameters
+## Coordinator parameters
 
 These parameters are configured in the coordinator contract. You can view these values by running `getConfig` on the coordinator or by viewing the coordinator contracts in a blockchain explorer.
 
@@ -8,15 +8,15 @@ These parameters are configured in the coordinator contract. You can view these 
 - `uint32 maxGasLimit`: The maximum gas limit supported for a `fulfillRandomWords` callback.
 - `uint32 gasAfterPaymentCalculation`: How much gas is used outside of the payment calculation. This covers the additional operations required to decrement the subscription balance and increment the balance for the oracle that handled the request.
 
-## Fee Parameters
+## Fee parameters
 
-Fee parameters are configured in the coordinator contract and specify the premium you pay per request in addition to the gas cost for the transaction. You can view them by running `getFeeConfig` on the coordinator. The `uint32 fulfillmentFlatFeeOKTPPMTier1` parameter defines the fees per request specified in millionths of OKT. The details for calculating the total transaction cost can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription.html#request-and-receive-data).
+Fee parameters are configured in the coordinator contract and specify the premium you pay per request in addition to the gas cost for the transaction. You can view them by running `getFeeConfig` on the coordinator. The `uint32 fulfillmentFlatFeeOKTPPMTier1` parameter defines the fees per request specified in millionths of OKT. The details for calculating the total transaction cost can be found [here](/dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription#request-and-receive-data).
 
 ## Configurations
 
-VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page.
+VRF  coordinators for subscription funding are available on several networks. To see a list of coordinators for direct funding, see the [Direct Funding Configurations](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks#supported-networks) page.
 
-### OKT Mainnet
+### OKT mainnet
 
 | Item                  | Value                                                        |
 | :-------------------- | :----------------------------------------------------------- |

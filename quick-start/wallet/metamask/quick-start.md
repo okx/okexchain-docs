@@ -4,7 +4,7 @@
 
 1. To use Web3 wallet: visit [Web3 Wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
 2. To use Metamask: visit [Metamask](https://metamask.io/) , download Metamask, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups.
-3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKTC. For details, check the tutorials of each wallet's official website.
+3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKTC. For details, check the tutorials of each wallet’s official website.
 
 
 ## Creating a Wallet with Metamask

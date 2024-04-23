@@ -1,10 +1,10 @@
-# Join the Public Testnet 
+# Join the public testnet 
 
 See the [testnet repo](https://github.com/okx/testnets) for
 information on the latest testnet, including the correct version
 of OKTC to use and details about the genesis file.
 
-**You need to [install oktc](/dev/quick-start/install-oktc.html) before you go further**
+**You need to [install oktc](/dev/quick-start/install-oktc) before you go further**
 
 
 Details of deployment information: https://github.com/okx/testnets/blob/master/README.md
@@ -12,13 +12,13 @@ Details of deployment information: https://github.com/okx/testnets/blob/master/R
 
 We support running a full node on `Mac OS X`, `Windows` and `Linux`.
 
-## Minimum System Requirements
+## Minimum system requirements
 
 The hardware must meet certain requirements to run `exchaind`.
 
-For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement.html)
+For node requirement details, please visit [Node Requirement](/dev/nodes/node-requirement/node-requirement)
 
-## Setting Up a New Node
+## Setting up a new node
 
 These instructions are for setting up a brand new full node from scratch.
 
@@ -48,7 +48,7 @@ You can edit the `~/.exchaind/config/exchaind.toml` file in order to enable the 
 ##### main base config options #####
 
 # The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
+# transaction. A transaction’s fees must meet the minimum of any denomination
 # specified in this config (Our recommended quantity is  10^-9 okt).
 
 minimum-gas-prices = ""
@@ -56,11 +56,11 @@ minimum-gas-prices = ""
 
 Your full node has been initialized! 
 
-## Genesis & Seeds
+## Genesis & seeds
 
-### Copy the Genesis File
+### Copy the genesis file
 
-Fetch the testnet's `genesis.json` file into `exchaind`'s config directory.
+Fetch the testnet’s `genesis.json` file into `exchaind`’s config directory.
 
 Note we use the `latest` directory in the [testnets repo](https://github.com/okx/testnets) which contains details for the testnet like the latest version and the genesis file. 
 
@@ -70,9 +70,9 @@ To verify the correctness of the configuration run:
 exchaind start --chain-id exchain-65
 ```
 
-### Add Seed Nodes
+### Add seed nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okx/testnets) contains links to some seed nodes.
+Your node needs to know how to find peers. You’ll need to add healthy seed nodes to `$HOME/.exchaind/config/config.toml`. The [testnets repo](https://github.com/okx/testnets) contains links to some seed nodes.
 
 You can add `seeds` in the `~/.exchaind/config/config.toml` file:
 
@@ -81,9 +81,9 @@ You can add `seeds` in the `~/.exchaind/config/config.toml` file:
 seeds = "b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:36656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:36656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:36656"
 ```
 
-For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer.html).
+For more information on seeds and peers, you can [read this](https://docs.tendermint.com/master/spec/p2p/peer).
 
-## Starting a New Node
+## Starting a new node
 
 Start the full node with this command:
 
@@ -99,14 +99,14 @@ exchaincli status
 
 See the [testnet repo](https://github.com/okx/testnets) for information on testnets, including the correct version of the OKTC to use and details about the genesis file.
 
-## JSON-RPC Endpoint
-[RPC URL](/dev/api/oktc-api/json-rpc-api.html)
+## JSON-RPC endpoint
+[RPC URL](/dev/api/oktc-api/json-rpc-api)
 
-## Upgrading Your Node
+## Upgrading your node
 
 These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest testnet.
 
-### Reset Data
+### Reset data
 
 First, remove the outdated files and reset the data.
 
@@ -116,14 +116,14 @@ exchaind unsafe-reset-all
 ```
 
 Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before,
-your node will still try to connect to them, but may fail if they haven't also
+your node will still try to connect to them, but may fail if they haven’t also
 been upgraded.
 
 > _NOTE_:
 Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
 
 
-### Software Upgrade
+### Software upgrade
 
 Now it is time to upgrade the software:
 
@@ -141,11 +141,11 @@ See the [testnet repo](https://github.com/okx/testnets) for details on which ver
 
 Your full node has been cleanly upgraded!
 
-### Upgrade to Validator Node
+### Upgrade to validator node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli.html).
+You now have an active full node. What’s the next step? You can upgrade your full node to become a OKTC Validator. The top 100 validators have the ability to propose new blocks to the OKTC. Continue onto [the Validator Setup](/dev/core-concepts/validator/validators-guide-cli).
 
-# Join the Public Testnet With Docker
+# Join the public testnet With docker
 ## Run OKTC testnet fullnode with docker
 
 ### 1. Download the docker image
@@ -157,7 +157,7 @@ docker pull okexchain/fullnode-testnet:latest
 ### 2. Set the data directory
 
 
-Download the testnet snapshot from [here](/dev/resources/oktc-snapshot/snapshot.html), and unzip it into a data directory ${DATA_DIR}.
+Download the testnet snapshot from [here](/dev/resources/oktc-snapshot/snapshot), and unzip it into a data directory ${DATA_DIR}.
 
 
 

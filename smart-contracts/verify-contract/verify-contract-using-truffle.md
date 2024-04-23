@@ -1,11 +1,11 @@
-# Verify Contract using Truffle
-## Verify Your Contract on OKLink
+# Verify contract using truffle
+## Verify your contract on OKLink
 The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
 
-## Truffle Verification
-Truffle has an OKLink plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
+## truffle verification
+truffle has an OKLink plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
 
-You need to deploy with Truffle to verify with the Truffle verify plugin.
+You need to deploy with truffle to verify with the truffle verify plugin.
 - Install the plugin
 
 ```npm install -D truffle-plugin-verify```
@@ -45,8 +45,8 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle’s version)
+      // docker: true,        // Use "0.5.1" you’ve installed locally with docker (default: false)
       settings: {          // See the solidity docs for advice about optimization and evmVersion
        optimizer: {
          enabled: false,

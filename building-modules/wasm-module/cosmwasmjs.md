@@ -15,13 +15,13 @@ Need to install [Node](https://nodejs.org/en/download/) while using CosmoWasmJS
 You can choose between mainnet, testnet or local testnet.
 > Cosmwasm on mainnet is coming soon. Use testnet instead for now.
 ### Mainnet
-There is no need to build nodes on the main network, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-oktc-mainnet.html).
+There is no need to build nodes on the main network, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-oktc-mainnet).
 
 Below is the URL of the mainnet RPC node
 > const rpcEndpoint = "https://exchaintmrpc.okex.org"
 ### Testnet
 
-There is no need to build nodes on testnet, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet.html).
+There is no need to build nodes on testnet, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet).
 
 Below is the URL of the testnet RPC node
 > const rpcEndpoint = "https://exchaintesttmrpc.okex.org"

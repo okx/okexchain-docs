@@ -1,4 +1,4 @@
-# Sample Queries
+# Sample queries
 
 - Query URL ：https://www.okx.com/okc/subgraph-hosted/name/<Subgraph_name>
 - Query Playground：https://www.okx.com/okc/subgraph-hosted/name/<Subgraph_name>/graphql
@@ -19,7 +19,7 @@ query [operationName]([variableName]: [variableType]) {
 }
 ```
 
-While the list of syntactic do's and don'ts is long, here are the essential rules to keep in mind when it comes to writing GraphQL queries:
+While the list of syntactic do’s and don’ts is long, here are the essential rules to keep in mind when it comes to writing GraphQL queries:
 
 - Each `queryName` must only be used once per operation.
 - Each `field` must be used only once in a selection (we cannot query `id` twice under `token`)

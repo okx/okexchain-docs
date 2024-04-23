@@ -1,4 +1,4 @@
-# Governance Parameter Proposal
+# Governance parameter proposal
 
 ![text](../../img/gov-parameter.png)
 
@@ -30,10 +30,10 @@ System parameters refer to the parameters specified on OKTC, and the modificatio
 | AppUpgradeMaxDepositPeriod        | time     | deposit period for app upgrade proposal                                                                          |
 | AppUpgradeMinDeposit              | DecCoins | deposit limit for app upgrade proposal<br>if the proposal deposit exceeds this value, the Voting Period will be effective                               |
 | AppUpgradeVotingPeriod            | time     | voting period for app upgrade proposal                                                                          |
-| Quorum                  | Dec      | weight threshold for voting on the entire network when the voting period ends used for [voting statistics](/dev/core-concepts/on-chain-governance/overview.html#proposal-voting-statistics)                                                                                     |
-| Threshold               | Dec      | weight threshold for the proportion of Yes votes to all non-abstained votes when the voting period ends used for [voting statistics](/dev/core-concepts/on-chain-governance/overview.html#proposal-voting-statistics)                                                                        |
-| Veto                    | Dec      | weight threshold for the proportion of NoWithVeto votes to all votes used for [voting statistics](/dev/core-concepts/on-chain-governance/overview.html#proposal-voting-statistics)                                                                       |
-| YesInVotePeriod         | Dec      | weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends, <br> used for [voting statistics](/dev/core-concepts/on-chain-governance/overview.html#proposal-voting-statistics)                                                                       |
+| Quorum                  | Dec      | weight threshold for voting on the entire network when the voting period ends used for [voting statistics](/dev/core-concepts/on-chain-governance/overview#proposal-voting-statistics)                                                                                     |
+| Threshold               | Dec      | weight threshold for the proportion of Yes votes to all non-abstained votes when the voting period ends used for [voting statistics](/dev/core-concepts/on-chain-governance/overview#proposal-voting-statistics)                                                                        |
+| Veto                    | Dec      | weight threshold for the proportion of NoWithVeto votes to all votes used for [voting statistics](/dev/core-concepts/on-chain-governance/overview#proposal-voting-statistics)                                                                       |
+| YesInVotePeriod         | Dec      | weight threshold for the proportion of Yes votes to all votes (including the voted and unvoted) before the voting ends, <br> used for [voting statistics](/dev/core-concepts/on-chain-governance/overview#proposal-voting-statistics)                                                                       |
 | MaxTxNumPerBlock        | int64    | maximum number of transactions contained in each block                                                                                 |
 
 

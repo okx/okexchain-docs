@@ -202,7 +202,7 @@ run predefined task
 ## Sylvia
 ### Introduction
 
-[Sylvia](https://cosmwasm.github.io/sylvia-book/index.html) builds a contract development framework on this basis and encapsulates some functions and macros.  It can help contract developers quickly develop contracts.
+[Sylvia](https://cosmwasm.github.io/sylvia-book/index) builds a contract development framework on this basis and encapsulates some functions and macros.  It can help contract developers quickly develop contracts.
 
 
 The advantages of sylvia:
@@ -328,4 +328,4 @@ ExecuteMsg::Mint { recipient, amount } => execute_mint(deps, env, info, recipien
 ## bytecraft and sylvia combined example  
 https://github.com/okx/wasm-sylvia-template
 
-(A whitelist sample contract using the Sylvia programming framework and bytecraft's compilation, deployment and task testing) 
+(A whitelist sample contract using the Sylvia programming framework and bytecraft’s compilation, deployment and task testing) 

@@ -1,8 +1,8 @@
-# OKTC Client
+# OKTC client
 
 ## OKTC CLI
 
-`exchaincli` is the tool that enables you to interact with the node that runs on the OKTC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/quick-start/install-oktc.html).
+`exchaincli` is the tool that enables you to interact with the node that runs on the OKTC network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](/dev/quick-start/install-oktc).
 
 ## Setting up exchaincli
 
@@ -551,7 +551,7 @@ exchaincli keys add --pubkey=expub1addwnpepqd7jd60n88tk98hyh72xsw48pjpfhdw0cd77j
 
 #### 7.2. Generate multi-signature public keys:
 
-* Aggregate multi-signature public keys p1, p2 and p3 and set the signature threshold as N, which means the transfer is effective after obtaining N people's signatures.
+* Aggregate multi-signature public keys p1, p2 and p3 and set the signature threshold as N, which means the transfer is effective after obtaining N people’s signatures.
 
 * Set the signature threshold as 2 in the example:
 ```bash  
@@ -1129,7 +1129,7 @@ Flags:
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -1251,7 +1251,7 @@ Flags:
   -q, --quantity string         The quantity of the order
       --sequence uint           The sequence number of the signing account (offline mode only)
   -s, --side string             BUY or SELL (default "SELL")
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -1354,7 +1354,7 @@ exchaincli tx order cancel ID0000000373-1,ID0000000373-2 --from captain --gas-pr
 
 ### 2. Operation query:
 
-Dex supports various functions including order query, depthbook and users' order books. Commands are as follows:
+Dex supports various functions including order query, depthbook and users’ order books. Commands are as follows:
 
 ```bash
 exchaincli query order
@@ -1373,7 +1373,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -1422,7 +1422,7 @@ Flags:
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
       --size int      depth book single-side size (default 200)
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -1459,7 +1459,7 @@ Flags:
       --indent          Add indent to JSON response
       --ledger          Use a connected Ledger device
       --node string     <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-      --trust-node      Trust connected full node (don't verify proofs for responses)
+      --trust-node      Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -1497,7 +1497,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -1536,7 +1536,7 @@ exchaincli backend
 
 Secondary sub-commands have the following functions
 
-### 1. Users' order books:
+### 1. Users’ order books:
 #### Example:
 ```bash
 exchaincli backend orders [open/closed] [addr] [flags]
@@ -1956,7 +1956,7 @@ Usage:
     exchaincli tx staking create-validator [flags]
 
 Flags:
-    -- moniker  	The validator's name
+    -- moniker  	The validator’s name
     -- pubkey  		The Bech32 encoded PubKey of the validator  
 ```
 
@@ -1996,10 +1996,10 @@ Usage:
     exchaincli tx staking edit-validator [flags]
 
 Flags:
-	  -- moniker		The validator's name (default "[do-not-modify]")
+	  -- moniker		The validator’s name (default "[do-not-modify]")
 	  -- identity		The  (optional) identity signature (ex. UPort or Keybase) (default "[do-not-modify]")
-	  -- website		The validator's (optional) website (default "[do-not-modify]")
-	  -- details 		The validator's (optional) details (default "[do-not-modify]")
+	  -- website		The validator’s (optional) website (default "[do-not-modify]")
+	  -- details 		The validator’s (optional) details (default "[do-not-modify]")
 ```
 
 ### Delegate & vote
@@ -2305,7 +2305,7 @@ Usage:
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don’t broadcast it
       --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
@@ -2318,7 +2318,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
       --sequence uint           The sequence number of the signing account (offline mode only)
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -2372,7 +2372,7 @@ Flags:
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
       --deposit string          deposit of proposal
       --description string      description of proposal
-      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don’t broadcast it
       --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
@@ -2387,7 +2387,7 @@ Flags:
       --proposal string         proposal file path (if this path is given, other proposal flags are ignored)
       --sequence uint           The sequence number of the signing account (offline mode only)
       --title string            title of proposal
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
       --type string             proposalType of proposal, types: text/parameter_change/software_upgrade
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
@@ -2464,7 +2464,7 @@ Usage:
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don’t broadcast it
       --fees string             Fees to pay along with transaction; eg: 1 okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
@@ -2477,7 +2477,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
       --sequence uint           The sequence number of the signing account (offline mode only)
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -2524,7 +2524,7 @@ Usage:
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don’t broadcast it
       --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
@@ -2537,7 +2537,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
       --sequence uint           The sequence number of the signing account (offline mode only)
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -2570,7 +2570,7 @@ Usage:
 Flags:
   -a, --account-number uint     The account number of the signing account (offline mode only)
   -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
-      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --dry-run                 ignore the --gas flag and perform a simulation of a transaction, but don’t broadcast it
       --fees string             Fees to pay along with transaction; eg: 1okt
       --from string             Name or address of private key with which to sign
       --gas string              gas limit to set per-transaction; set to "auto" to calculate required gas automatically (default 200000) (default "200000")
@@ -2583,7 +2583,7 @@ Flags:
       --memo string             Memo to send along with transaction
       --node string             <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
       --sequence uint           The sequence number of the signing account (offline mode only)
-      --trust-node              Trust connected full node (don't verify proofs for responses) (default true)
+      --trust-node              Trust connected full node (don’t verify proofs for responses) (default true)
   -y, --yes                     Skip tx broadcasting prompt confirmation
 
 Global Flags:
@@ -2656,7 +2656,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -2694,7 +2694,7 @@ Flags:
       --limit string       (optional) limit to latest [number] proposals. Defaults to all proposals
       --node string        <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
       --status string      (optional) filter proposals by proposal status, status: deposit_period/voting_period/passed/rejected
-      --trust-node         Trust connected full node (don't verify proofs for responses)
+      --trust-node         Trust connected full node (don’t verify proofs for responses)
       --voter string       (optional) filter by proposals voted on by voted
 
 Global Flags:
@@ -2731,7 +2731,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -2772,7 +2772,7 @@ Flags:
 ```sh
 exchaincli query slashing signing-info -h
 
-Use a validators' consensus public key to find the signing-info for that validator:
+Use a validators’ consensus public key to find the signing-info for that validator:
 
 Example:
     exchaincli query slashing signing-info exvalconspub1zcjduepqfhvwcmt7p06fvdgexxhmz0l8c7sgswl7ulv7aulk364x4g5xsw7sr0k2g5
@@ -2786,7 +2786,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 ```
 
 ###  Query params from slashing module
@@ -2807,7 +2807,7 @@ Flags:
       --indent        Add indent to JSON response
       --ledger        Use a connected Ledger device
       --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 ```
 
 
@@ -2832,7 +2832,7 @@ Flags:
   -h, --help          help for set-loglevel
       --indent        Add indent to JSON response
       --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-      --trust-node    Trust connected full node (don't verify proofs for responses)
+      --trust-node    Trust connected full node (don’t verify proofs for responses)
 
 Global Flags:
       --chain-id string   Chain ID of tendermint node
@@ -2859,7 +2859,7 @@ Flags:
   -h, --help          help for dump
      --indent        Add indent to JSON response
      --node string   <host>:<port> to Tendermint RPC interface for this chain (default "tcp://localhost:26657")
-     --trust-node    Trust connected full node (don't verify proofs for responses)
+     --trust-node    Trust connected full node (don’t verify proofs for responses)
    
   Global Flags:
      --chain-id string   Chain ID of tendermint node
