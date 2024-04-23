@@ -1,4 +1,4 @@
-# Subscription Manager User Interface
+# Subscription manager user interface
 
 Subscription Manager User Interface
 

@@ -1,4 +1,4 @@
-# VRF Best Practices
+# VRF best practices
 
 ## Getting a random number within a range
 

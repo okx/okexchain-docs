@@ -6,25 +6,25 @@
 
 ### About OKX Chain
 
-OKTChain (OKTC) is an EVM-compatible L1 built on Cosmos with a focus on true interoperability (IBC) and maximal performance. OKTC lets developers build cross-chain applications that can scale with low gas fees. The OKTChain ecosystem and infrastructure, including the all-in-one multi-chain Web3 interface, enables a seamless experience for both developers and users.
+OKTChain (OKTC) is an EVM-compatible layer 1 built on Cosmos with a focus on true interoperability (IBC) and maximal performance. OKTC lets developers build cross-chain applications that can scale with low gas fees. The OKTChain ecosystem and infrastructure, including the all-in-one multi-chain Web3 interface, enables a seamless experience for both developers and users.
 
 ### Advantages of OKTChain
 
-- High Scalability & Performance: Based on enhanced Tendermint and Delegated Proof of Stake (DPoS) consensus, OKTC supports up to 5000 Transactions per Second (TPS), letting Web3 applications reach their full potential at extremely low cost.
-- Enhanced Interoperability: OKTChain supports Inter-Blockchain Communication (IBC)protocol that — together with instant finality of Tendermint consensus — allows real time value transmission between EVM chains and the Cosmos ecosystem. Being fully EVM compatible, OKTC allows developers to build projects using standard Solidity developer tooling and deployment workflows.
-- Developer Friendly: OKTChain is completely open-source. Anyone can read it, check the progress, comment on it, and help build the ecosystem. OKTChain also provides a native oracle protocol and Chainlink interop for maximum flexibility to access price feeds.
+- High scalability & Performance: Based on enhanced Tendermint and Delegated Proof of Stake (DPoS) consensus, OKTC supports up to 5000 Transactions per Second (TPS), letting Web3 applications reach their full potential at extremely low cost.
+- Enhanced interoperability: OKTChain supports Inter-blockchain communication (IBC)protocol that — together with instant finality of Tendermint consensus — allows real time value transmission between EVM chains and the Cosmos ecosystem. Being fully EVM compatible, OKTC allows developers to build projects using standard Solidity developer tooling and deployment workflows.
+- Developer friendly: OKTChain is completely open-source. Anyone can read it, check the progress, comment on it, and help build the ecosystem. OKTChain also provides a native oracle protocol and Chainlink interop for maximum flexibility to access price feeds.
 - Secure: The OKTChain team offers a reliable smart contract auditing service, making it a genuinely decentralized protocol that avoids the centralization risks of most blockchain networks today.
 
 ![OKTC multichain framework](./img/oktc2022ibc.png)
 
-## OKT Tokens
+## OKT tokens
 
 ## The OKT
 
 Do you have OKT tokens? With OKT, you have the unique ability to contribute to the security and governance of the OKTC. Delegate your OKT to one or more of the 30 validators on the OKTC blockchain to earn more OKT through Delegated Proof-of-Stake. You can also vote with your OKT to influence the future of OKT Chain through on-chain governance proposals.
 Learn more about [being a delegator](/dev/core-concepts/delegator/delegators-faq.html).
 
-## OKTC Explorer
+## OKTC explorer
 
 The OKTC block explorer allows you to search, view and analyze OKTC data—like blocks, transactions, validators as well as other key information.
 
@@ -35,18 +35,18 @@ The OKTC block explorer allows you to search, view and analyze OKTC data—like 
 
 `exchaincli` is a command-line interface to interact with OKTChain. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](/dev/core-concepts/delegator/delegators-guide-cli.html).
 
-## Running a full-node on the OKTC Testnet
+## Running a full-node on the OKTC testnet
 
 In order to run a full-node on the OKTC testnet, you must first [install `exchaind`](/dev/getting-start/install-oktc.html). Then, follow [the guide](/dev/getting-start/install-oktc.html).
 
 If you would like to run a validator node, follow the [validator setup guide](/dev/validators/validators-guide-cli.html).
 
-## Join the Community
+## Join the community
 
 Have questions, comments, or ideas? Feel free to participate and to become part of the OKTC community through one of the following channels.
 - [OKT Chain Community](https://linktr.ee/oktchain)
 
-## Contributing to this Documentation
+## Contributing to this documentation
 
 As an open source project we appreciate contributions from our community. If you see any errors or ways to improve these docs please open an issue or Pull Request.
 

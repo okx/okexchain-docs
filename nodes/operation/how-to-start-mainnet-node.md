@@ -1,4 +1,4 @@
-# How to Start the Mainnet Node
+# How to Start the mainnet node
 ## 1. Using exchaind and snapshots
 [Snapshot link](https://forum.okt.club/d/154 "Snapshot link")
 

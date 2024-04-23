@@ -1,4 +1,4 @@
-# Genesis File
+# Genesis file
 
 This document explains how the genesis file of the OKTC testnet is structured. It also explains how you can build a genesis file for your own `oktc` testnet.
 
@@ -16,7 +16,7 @@ A genesis file is a JSON file which defines the initial state of your blockchain
 
 The state defined in the genesis file contains all the necessary information, like initial token allocation, genesis time, default parameters, and more. Let us break down this information.
 
-## Genesis Time and Chain_id
+## Genesis time and chain_id
 
 The `genesis_time` is defined at the top of the genesis file. It is a UTC timestamps which specifies when the blockchain is due to start. At this time, genesis validators are supposed to come online and start participating in the consensus process. The blockchain starts when more than 2/3rd of the genesis validators (weighted by voting power) are online.
 
@@ -148,7 +148,7 @@ The `staking` module handles the bulk of the Proof-of-Stake logic of the state-m
 
 Let us break down the parameters:
 - `params`
-  - `unbonding_time`: Time in nanosecond it takes for tokens to complete unbonding.
+  - `unbonding_time`: time in nanosecond it takes for tokens to complete unbonding.
   - `max_validators`: Maximum number of active validators.
   - `bond_denom`: Denomination of the staking token.
   - `min_delegation`: The minimum amount of token in an operation of delegating or unbonding.
@@ -358,7 +358,7 @@ Let us break down the parameters:
 - `locked_fees`: ignored.
 
 
-### Genesis Transactions
+### Genesis transactions
 
 By default, the genesis file does not contain any `gentxs`. A `gentx` is a transaction creating a validator in the genesis file. The chain will start as soon as more than 2/3rds of the validators (weighted by voting power) that are the recipient of a valid `gentx` come online after `genesis_time`.
 

@@ -1,4 +1,4 @@
-# Subscription Method
+# Subscription method
 
 ## Subscriptions
 
@@ -23,9 +23,9 @@ The gas price depends on current network conditions. The callback gas depends on
 - **Gas lane:** The maximum gas price you are willing to pay for a request in wei. Define this limit by specifying the appropriate `keyHash` in your request. The limits of each gas lane are important for handling gas price spikes when OKTC VRF bumps the gas price to fulfill your request quickly.
 - **Callback gas limit:** Specifies the maximum amount of gas you are willing to spend on the callback request. Define this limit by specifying the `callbackGasLimit` value in your request.
 
-## Request and Receive Data
+## Request and receive data
 
-### End To End Diagram
+### End to end diagram
 
 Two types of accounts exist in the OKT ecosystem:
 
@@ -85,7 +85,7 @@ You can see the configuration for each network on the [Supported networks](/dev/
 - Each coordinator has a `MAX_NUM_WORDS` parameter that limits the maximum number of random values you can receive in each request.
 - Each coordinator has a `maxGasLimit` parameter, which is the maximum allowed `callbackGasLimit` value for your requests. You must specify a sufficient `callbackGasLimit` to fund the callback request to your consuming contract. This depends on the number of random values you request and how you process them in your `fulfillRandomWords()` function. If your `callbackGasLimit` is not sufficient, the callback fails but your subscription is still charged for the work done to generate your requested random values.
 
-## What's next
+## What’s next
 
 - [› Get a Random Number](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Get-a-Random-Number/Get-a-Random-Number.html#get-a-random-number/)
 - [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Supported-Networks/Supported-Networks.html#Configuration)

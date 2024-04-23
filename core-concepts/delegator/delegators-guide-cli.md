@@ -1,4 +1,4 @@
-# Delegator Guide (CLI)
+# Delegator guide (CLI)
 
 This document contains all the necessary information for delegators to interact with OKTC through the Command-Line Interface (CLI).
 
@@ -22,7 +22,7 @@ conditions of any kind.
 
 Please exercise extreme caution!
 
-## Table of Contents
+## Table of contents
 
 - [Installing `exchaincli`](#installing-exchaincli)
 - [OKTC Accounts](#oktchian-accounts)

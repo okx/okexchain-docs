@@ -1,4 +1,4 @@
-# Get a Random Number
+# Get a random number
 
 ## Requirements
 
@@ -9,11 +9,11 @@ This guide assumes that you know how to create and deploy smart contracts on OKT
 
 ## Create and fund a subscription
 
-For this example, create a new subscription on the OKTC Mainnet .
+For this example, create a new subscription on the OKTC mainnet .
 
-1. Open MetaMask and set it to use the OKTC Mainnet . The [Subscription Manager](https://www.okx.com/oktc/oracle/vrf) detects your network based on the active network in MetaMask.
+1. Open MetaMask and set it to use the OKTC mainnet . The [Subscription Manager](https://www.okx.com/oktc/oracle/vrf) detects your network based on the active network in MetaMask.
 
-2. Check MetaMask to make sure you have OKT on OKTC Mainnet.
+2. Check MetaMask to make sure you have OKT on OKTC mainnet.
 
 3. Open the Subscription Manager at [vrf.chain.OKT](https://www.okx.com/oktc/oracle/vrf).
 
@@ -38,7 +38,7 @@ For this example, use the [VRFConsumer.sol](https://github.com/okx/OKTC-VRF/blob
 
 The contract also includes pre-configured values for the necessary request parameters such as `vrfCoordinator` address, gas lane `keyHash`, `callbackGasLimit`, `requestConfirmations` and number of random words `numWords`. You can change these parameters if you want to experiment on different , but for this example you only need to specify `subscriptionId` when you deploy the contract.
 
-Build and deploy the contract on OKTC Mainnet.
+Build and deploy the contract on OKTC mainnet.
 
 1. Open the [`VRFConsumer.sol` contract](https://github.com/okx/OKTC-VRF/blob/addSomeFeatureBeforeOnline/contracts/flat/VRFConsumerExampleFlat.sol) in Remix.
 
@@ -46,7 +46,7 @@ Build and deploy the contract on OKTC Mainnet.
 
 3. Configure your deployment. On the **Deploy** tab in Remix, select the **Injected Provider** environment, select the `VRFConsumer` contract from the contract list, and specify your `subscriptionId` so the constructor can set it.
 
-4. Fill the constructor arguments like below and Click the **Deploy** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
+4. Fill the constructor arguments like below and Click the **‘Deploy’** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
 
    | Item                                  | Value                                                        |
    | :------------------------------------ | :----------------------------------------------------------- |
@@ -217,7 +217,7 @@ After you are done with this contract and the subscription, you can retrieve the
 1. Open the Subscription Manager at [vrf.chain.OKT](https://www.okx.com/oktc/oracle/vrf) and click the ID of your new subscription under the **My Subscriptions** list. The subscription details page opens.
 2. Under your subscription details, click **Cancel subscription**. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, OKTC VRF closes your subscription account and sends the remaining OKT to your wallet.
 
-## What's next
+## What’s next
 
 - [› Subscription Manager UI](https://www.okx.com/oktc/oracle/vrf)
 - [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)

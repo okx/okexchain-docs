@@ -32,7 +32,7 @@ Depending on your use case, one method might be more suitable than another. Cons
 | VRF costs are billed to your subscription account. [Manage and monitor your balance](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html) | No refunds for overpayment after requests are completed      |
 
 
-## What's next
+## What’s next
 
 - [› Subscription Method](/dev/oktc-solutions/oktc-vrf/Subscription-Method/Subscription.html)
 - [› Direct Funding Method](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html)

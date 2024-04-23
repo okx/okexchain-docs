@@ -1,4 +1,4 @@
-# Get a Random Number
+# Get a random number
 
 This guide explains how to get random values using a simple contract to request and receive random values from OKTC VRF  without managing a subscription. 
 
@@ -17,7 +17,7 @@ For this example, use the [VRFDirectFundingConsumer.sol](https://github.com/okx/
 
 The contract also includes pre-configured values for the necessary request parameters such as `callbackGasLimit`, `requestConfirmations`, the number of random words `numWords`, the VRF  Wrapper address `wrapperAddress`, and the OKT token address `OKTAddress`. You can change these parameters if you want to experiment on different .
 
-Build and deploy the contract on OKTC Mainnet.
+Build and deploy the contract on OKTC mainnet.
 
 1. Open the [`VRFDirectFundingConsumer.sol` contract](https://github.com/okx/OKTC-VRF/blob/addSomeFeatureBeforeOnline/contracts/flat/VRFWrapperConsumerExampleFlat.sol) in Remix.
 
@@ -25,7 +25,7 @@ Build and deploy the contract on OKTC Mainnet.
 
 3. Configure your deployment. On the **Deploy** tab in Remix, select the **Injected Web3 Environment** and select the `VRFDirectFundingConsumer` contract from the contract list.
 
-4. Fill the constructor arguments like below and Click the **Deploy** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
+4. Fill the constructor arguments like below and Click the **‘Deploy’** button to deploy your contract on-chain. MetaMask opens and asks you to confirm the transaction.
 
    | Item                  | Value                                      |
    | :-------------------- | :----------------------------------------- |
@@ -111,7 +111,7 @@ After you are done with this contract, you can retrieve the remaining  OKT to us
 
 1. Call `withdrawOKT()` function. MetaMask opens and asks you to confirm the transaction. After you approve the transaction, the remaining OKT will be transfered from your consuming contract to your wallet address.
 
-## What's next
+## What’s next
 
 - [› Security Considerations](/dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations.html)
 - [› Best Practices](/dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices.html)

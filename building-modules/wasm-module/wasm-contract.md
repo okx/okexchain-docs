@@ -1,4 +1,4 @@
-# Wasm Smart Contract
+# Wasm smart contract
 ## What is wasm smart contract?
 
 Wasm smart contracts are smart contracts that operated on wasm virtual machine. Wasm virtual machine is more advanced than EVM, these are its main advantages:

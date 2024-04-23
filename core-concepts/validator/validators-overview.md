@@ -1,4 +1,4 @@
-# Validator Overview
+# Validator overview
 
 ## Introduction
 
@@ -16,7 +16,7 @@ Validators should expect to equip their datacenter with redundant power, connect
 
 We anticipate that network requirements will be low initially. The current testnet requires minimal resources. Bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommended for storing complete blockchain histories.
 
-## Set Up a Website
+## Set up a website
 
 Set up a dedicated validator website and signal your intention to become a validator. This is an important point since delegators will want to access essential information about the entity they are delegating their OKTs to.
 

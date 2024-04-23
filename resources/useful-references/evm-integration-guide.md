@@ -1,58 +1,58 @@
-# OKTC Network
+# OKTC network
 
 ## Mainnet
 
-**Network Name:** OKTC Mainnet
+**Network name:** OKTC Mainnet
 
 > - **RPC URL:**
 > - **https://exchainrpc.okex.org**
 > - **wss://exchainws.okex.org:8443**
 > - **Chain ID:** 66
-> - **Currency Symbol:** OKT
-> - **Block Explorer URL:** [OKTC block explorer](https://www.okx.com/explorer/oktc/)
+> - **Currency symbol:** OKT
+> - **Block explorer URL:** [OKTC block explorer](https://www.okx.com/explorer/oktc/)
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
 ## Testnet
 
-**Network Name:** OKTC Testnet
+**Network name:** OKTC Testnet
 
 **RPC URL:** https://exchaintestrpc.okex.org
 
 **Chain ID:** 65
 
-**Currency Symbol:** OKT
+**Currency symbol:** OKT
 
-**Block Explorer URL:** [OKTC testnet block explorer](https://www.okx.com/explorer/oktc-test/)
+**Block explorer URL:** [OKTC testnet block explorer](https://www.okx.com/explorer/oktc-test/)
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
-## OKTC API Document
+## OKTC API document
 
 [OKTC API docs](https://exchainrpc.okex.org/docs/en/#overview)
 
-## OKTC Explorer
+## OKTC explorer
 
 > **Mainnet:** [OKTC mainnet](https://www.okx.com/explorer/oktc)
 > **Testnet: **[OKTC testnet](https://www.okx.com/explorer/oktc-test)
 
-## OKTC Swap
+## OKTC swap
 
 **[OKTC swap](https://www.okx.com/oktc/swap)**
 
-## OKTC Testnet Faucet
+## OKTC testnet faucet
 
 **[OKTC testnet faucet](https://www.okx.com/oktc/faucet)**
 
-## OKTC Oracle
+## OKTC oracle
 
 **[OKTC oracle](https://www.okx.com/oktc/oracle)**
 
-## OKTC Subgraph
+## OKTC subgraph
 
 **[OKTC subgraph](https://www.okx.com/oktc/subgraph)**
 
-## OKTC Multisig
+## OKTC multisig
 
 **[OKTC multisig](https://oktcsafe.okx.com/#/welcome)**
 
@@ -62,7 +62,7 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 **Metamask:** [Metamask download](https://metamask.io/)
 
-## Development Tools
+## Development tools
 
 **Remix:** [Remix download](https://remix.ethereum.org/)
 
@@ -70,15 +70,15 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 **Truffle:** [Truffle download](https://trufflesuite.com/truffle/)
 
-**Other Dev Tools:** [the-tools-of-smart-contract-developer](https://forum.okt.club/d/347-the-tools-of-smart-contract-developer)
+**Other dev tools:** [the-tools-of-smart-contract-developer](https://forum.okt.club/d/347-the-tools-of-smart-contract-developer)
 
-## EVM Trace on OKTC
+## EVM trace on OKTC
 
 [Tutorial: Debugging contracts using EVM tracing](https://forum.okt.club/d/355-tutorial-debugging-contracts-using-evm-tracing)
 
-## Gas Back Initiative for Smart Contract Deployer
+## Gas back initiative for smart contract deployer
 
-[OKTC Gas Back Developer Dividend Project](https://forum.okt.club/d/342-oktc-gas-back-developer-dividend-project)
+[OKTC gas back developer dividend project](https://forum.okt.club/d/342-oktc-gas-back-developer-dividend-project)
 
 ## FAQs
 
@@ -86,4 +86,4 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
   - [Tutorial: Using ganache-cli fork and hardhat fork on OKTC mainnet](https://forum.okt.club/d/351-tutorial-using-ganache-cli-fork-and-hardhat-fork-on-oktc-mainnet)
 
 **How to use infstones to set up an rpc address for oktc**
-  - [Tutorial: How to use infstones to create oktc's rpc address](https://forum.okt.club/d/352-tutorial-how-to-use-infstones-to-create-oktcs-rpc-address)›
+  - [Tutorial: How to use infstones to create OKTC’s rpc address](https://forum.okt.club/d/352-tutorial-how-to-use-infstones-to-create-oktcs-rpc-address)›

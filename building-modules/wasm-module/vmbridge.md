@@ -23,8 +23,8 @@ Throw out the following events to call a WASM contract:
 event __OKCCallToWasm(string wasmAddr, uint256 value，string calldata);
 ```
 - `wasmAddr`: The called WASM contract. It should be string. (For example 0x5A8D648DEE57b2fc90D98DC17fa887159b69638b)
-- `value`: When calling a WASM contract, the amount of OKT tokens to be transferred to the contract can be specified. It's important to note that a WASM contract does not have a **payable** concept like EVM contracts do.
-- `calldata`: To call a WASM contract, parameters such as the method name and its parameters should be specified. It's similar to an **ABI**.
+- `value`: When calling a WASM contract, the amount of OKT tokens to be transferred to the contract can be specified. It’s important to note that a WASM contract does not have a **payable** concept like EVM contracts do.
+- `calldata`: To call a WASM contract, parameters such as the method name and its parameters should be specified. It’s similar to an **ABI**.
 
 **Notice:**
 > 1.  EVM calls to WASM can only confirm if the call was successful but can not return the value of the called WASM method.
@@ -63,13 +63,13 @@ pub struct CallToEvmMsgResponse {
 }
 ```
 - A WASM contract must implement CallToEvmMsg, and this Msg must be a subclass of **CosmosMsg::Custom**.
-- `sender`: The address of the WASM contract.The sender's address must be the address of the calling contract. You can find _env.contract.address by using env.
+- `sender`: The address of the WASM contract.The sender’s address must be the address of the calling contract. You can find _env.contract.address by using env.
 - `evmaddr`: The address of the EVM contract.
 - `calldata`: The parameters for calling the EVM contract, such as the method name and parameters, must be specified as an ABI and **hex-encoded**.
-- `value`: The amount of OKT tokens to be transferred to the EVM contract when calling its methods can also be specified. It's important to note that EVM contract methods may or may not be payable, so it's essential to check before sending any tokens.
+- `value`: The amount of OKT tokens to be transferred to the EVM contract when calling its methods can also be specified. It’s important to note that EVM contract methods may or may not be payable, so it’s essential to check before sending any tokens.
 
 **Notice:**
-> 1. When calling an EVM contract from a WASM contract, it's necessary to obtain CallToEvmMsgResponse to confirm if the call was successful.
+> 1. When calling an EVM contract from a WASM contract, it’s necessary to obtain CallToEvmMsgResponse to confirm if the call was successful.
 > 2. The response of CallToEvmMsgResponse is encoded as an **ABI**, which means that you need to decode the result if you require specific values.
-> 3. If an EVM contract throws a __OKCCallToWasm event after being called from a WASM contract, it won't call the WASM contract.
+> 3. If an EVM contract throws a __OKCCallToWasm event after being called from a WASM contract, it won’t call the WASM contract.
 > 4. When calling an EVM contract from a WASM contract, the calldata must be hex-encoded ABI data corresponding to the method call of the EVM contract without the "0x" prefix.

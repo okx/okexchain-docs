@@ -1,5 +1,5 @@
-# Node Requirement
-## Minimum Hardware Configurations
+# Node requirement
+## Minimum hardware configurations
 These are the minimum hardware configurations required to setup a Validator Node, Full Node and Archinve Node.
 
 | | Validator Node | Full Node | Archive Node

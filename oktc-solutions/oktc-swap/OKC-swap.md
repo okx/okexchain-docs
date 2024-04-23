@@ -1,4 +1,4 @@
-# OKTC Swap
+# OKTC swap
 
 Official link to OKTC Swap: [https://www.okx.com/oktc/swap](https://www.okx.com/oktc/swap)
 

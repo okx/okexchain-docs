@@ -1,18 +1,18 @@
 # OKTC Price Feeds 
 
 
-# Introduction to OKTC Price Feeds
+# Introduction to OKTC price feeds
 
-OKTC Price Feeds is the quickest way to connect your smart contracts to the real-world market prices of crypto assets. 
+OKTC price feeds is the quickest way to connect your smart contracts to the real-world market prices of crypto assets. 
 
 For example, one use for data feeds is to enable smart contracts to retrieve the latest pricing data of a crypto asset in a single call.
 
 
 
-## 1.Using OKTC Price Feeds
+## 1.Using OKTC price feeds
 
-### Contract Address
-**OKTC Mainnet：**
+### Contract address
+**OKTC mainnet：**
 
 |Name|Address|
 |--|--|
@@ -31,7 +31,7 @@ For example, one use for data feeds is to enable smart contracts to retrieve the
 
 
 
-### Code Example
+### Code example
 
 ```
 pragma solidity ^0.5.17;
@@ -80,7 +80,7 @@ contract Demo {
 ```
 
 
-### Price Feeds API Reference
+### Price feeds API reference
 
 Import this interface to your contract and use it to run functions in the proxy contract. Create the interface object by pointing to the proxy address. 
 

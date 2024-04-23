@@ -1,4 +1,4 @@
-# Proposal Module
+# Proposal module
 ## Introduction
 
 OKTC adopts the concept of on-chain governance.

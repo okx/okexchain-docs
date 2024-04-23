@@ -7,10 +7,10 @@
 
 module.exports = [
   {
-    title: "Quick Start",
+    title: "Quick start",
     children: [
       {
-        title: "INTRODUCTION",
+        title: "Introduction",
         collapsable: false,
         children: [
           "dev/quick-start/overview",
@@ -21,7 +21,7 @@ module.exports = [
         ],
       },
       {
-        title: "WALLET",
+        title: "Wallet",
         collapsable: false,
         children: [
           "dev/quick-start/wallet/metamask/quick-start",
@@ -31,7 +31,7 @@ module.exports = [
     ],
   },
   {
-    title: "Core Concepts",
+    title: "Core concepts",
     children: [
       {
         title: "BASIC CONCEPTS",
@@ -41,7 +41,7 @@ module.exports = [
           "dev/core-concepts/basic-concepts/oktc-consensus"],
       },
       {
-        title: "GOVERNANCE",
+        title: "Governance",
         collapsable: false,
         children: [
           // 'dev/core-concepts/governance/overview',
@@ -52,22 +52,22 @@ module.exports = [
         ],
       },
       {
-        title: "GAS AND FEES",
+        title: "Gas and fees",
         collapsable: false,
         children: ["dev/core-concepts/gas-and-fees/gas"],
       },
       {
-        title: "TRANSACTIONS",
+        title: "Transactions",
         collapsable: false,
         children: ["dev/core-concepts/transactions/transactions"],
       },
       {
-        title: "ACCOUNTS",
+        title: "Accounts",
         collapsable: false,
         children: ["dev/core-concepts/accounts/accounts"],
       },
       {
-        title: "STAKING REWARDS ALGORITHM",
+        title: "Staking rewards algorithm",
         collapsable: false,
         children: [
           "dev/core-concepts/staking-rewards-algorithm/distr",
@@ -76,7 +76,7 @@ module.exports = [
         ],
       },
       {
-        title: "VALIDATOR",
+        title: "Validator",
         collapsable: false,
         children: [
           "dev/core-concepts/validator/validators-overview",
@@ -85,7 +85,7 @@ module.exports = [
         ],
       },
       {
-        title: "DELEGATOR",
+        title: "Delegator",
         collapsable: false,
         children: [
           "dev/core-concepts/delegator/delegators-overview",
@@ -99,7 +99,7 @@ module.exports = [
     title: "Nodes",
     children: [
       {
-        title: "TECHNICAL REQUIREMENT",
+        title: "Technical requirement",
         collapsable: false,
         children: [
           "dev/nodes/node-requirement/node-requirement",
@@ -108,7 +108,7 @@ module.exports = [
         ],
       },
       {
-        title: "OPERATION",
+        title: "Operation",
         collapsable: false,
         children: [
           "dev/nodes/operation/how-to-start-mainnet-node",
@@ -116,7 +116,7 @@ module.exports = [
         ],
       },
       {
-        title: "NODE CLIENT",
+        title: "Node client",
         collapsable: false,
         children: [
           "dev/nodes/node-client/exchaincli",
@@ -127,7 +127,7 @@ module.exports = [
     ],
   },
   {
-    title: "Building Modules",
+    title: "Building modules",
     children: [
       {
         title: "IBC MODULE",
@@ -139,7 +139,7 @@ module.exports = [
         ],
       },
       {
-        title: "GAS BACK MODULE",
+        title: "Gas back module",
         collapsable: false,
         children: [
           "dev/building-modules/gas-back-module/developer-dividend-project",
@@ -161,7 +161,7 @@ module.exports = [
         ],
       },
       {
-        title: "OKTC SWAP API",
+        title: "OKTC swap API",
         collapsable: false,
         children: [
           "dev/api/oktc-swap-api/api-overview",
@@ -170,7 +170,7 @@ module.exports = [
         ],
       },
       {
-        title: "OKTC SWAP CONTRACT",
+        title: "OKTC swap contract",
         collapsable: false,
         children: [
           "dev/api/oktc-swap-contract/overview",
@@ -179,7 +179,7 @@ module.exports = [
         ],
       },
       {
-        title: "OKTC ORACLE API",
+        title: "OKTC oracle API",
         collapsable: false,
         children: ["dev/api/oktc-oracle-api/oracle"],
       },
@@ -189,17 +189,17 @@ module.exports = [
     title: "SDK",
     children: [
       {
-        title: "SDK MODULES",
+        title: "SDK modules",
         collapsable: false,
         children: ["dev/sdk/go-sdk", "dev/sdk/java-sdk", "dev/sdk/js-sdk"],
       },
     ],
   },
   {
-    title: "Smart Contract",
+    title: "Smart contract",
     children: [
       {
-        title: "EVM SMART CONTRACT",
+        title: "EVM smart contract",
         collapsable: true,
         children: [
           {
@@ -211,7 +211,7 @@ module.exports = [
             ]
           },
           {
-            title: "Contract Verification",
+            title: "Contract verification",
             collapsable: false,
             children: [
               "dev/smart-contracts/verify-contract/verify-contract-using-truffle",
@@ -220,14 +220,14 @@ module.exports = [
             ]
           },
           {
-            title: "KIP Standard",
+            title: "KIP standard",
             collapsable: false,
             children: [
               "dev/smart-contracts/kip-standard/KIP20/introduction"
             ]
           },
           {
-            title: "Contract Development FAQs",
+            title: "Contract development FAQs",
             collapsable: false,
             children: [
               "dev/smart-contracts/contract-development-faq/Contract-Development-FAQ"
@@ -236,11 +236,11 @@ module.exports = [
         ]
       },
       {
-        title: "WASM SMART CONTRACT",
+        title: "WASM smart contract",
         collapsable: true,
         children: [
           {
-            title: "Getting Started",
+            title: "Getting started",
             collapsable: true,
             children: [
               "dev/building-modules/wasm-module/overview",
@@ -249,7 +249,7 @@ module.exports = [
             ]
           },
           {
-            title: "Developer Guides",
+            title: "Developer guides",
             collapsable: true,
             children: [
               "dev/building-modules/wasm-module/cosmwasmcli",
@@ -259,7 +259,7 @@ module.exports = [
             ]
           },
           {
-            title: "Best Practices",
+            title: "Best practices",
             collapsable: true,
             children: [
               "dev/building-modules/wasm-module/vmbridge",
@@ -281,10 +281,10 @@ module.exports = [
     ],
   },
   {
-    title: "Developer Services",
+    title: "Developer services",
     children: [
       {
-        title: "GAS BACK",
+        title: "Gas back",
         collapsable: false,
         children: [
           "dev/developer-services/gas-back/how-to-get-gas-back-on-oktc",
@@ -293,20 +293,20 @@ module.exports = [
     ],
   },
   {
-    title: "OKTC Solutions",
+    title: "OKTC solutions",
     children: [
       {
-        title: "OKTC LIQUID STAKING",
+        title: "OKTC liquid staking",
         collapsable: false,
         children: ["dev/oktc-solutions/oktc-liquid-staking/liquid-staking"],
       },
       {
-        title: "OKTC SWAP",
+        title: "OKTC swap",
         collapsable: false,
         children: ["dev/oktc-solutions/oktc-swap/OKC-swap"],
       },
       {
-        title: "OKTC MULTISIG",
+        title: "OKTC multisig",
         collapsable: false,
         children: ["dev/oktc-solutions/oktc-multisig/OKTC-Multisig"],
       },
@@ -322,7 +322,7 @@ module.exports = [
             ],
           },
           {
-            title: "Subscription Method",
+            title: "Subscription method",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-vrf/Subscription-Method/SubScription",
@@ -332,7 +332,7 @@ module.exports = [
             ],
           },
           {
-            title: "Direct Funding Method",
+            title: "Direct funding method",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method",
@@ -341,14 +341,14 @@ module.exports = [
             ],
           },
           {
-            title: "Security Considerations",
+            title: "Security considerations",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-vrf/Security-Considerations/Security-Considerations",
             ],
           },
           {
-            title: "Best Practices",
+            title: "Best practices",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-vrf/Best-Practices/Best-Practices",
@@ -357,7 +357,7 @@ module.exports = [
         ],
       },
       {
-        title: "OKTC SUBGRAPH",
+        title: "OKTC subgraph",
         collapsable: false,
         children: [
           {
@@ -368,14 +368,14 @@ module.exports = [
             ],
           },
           {
-            title: "How to deploy OKTC Subgraph",
+            title: "How to deploy OKTC subgraph",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-subgraph/How-to-deploy-OKTC-Subgraph/How-to-deploy-OKTC-Subgraph",
             ],
           },
           {
-            title: "Sample Queries",
+            title: "Sample queries",
             collapsable: false,
             children: [
               "dev/oktc-solutions/oktc-subgraph/Sample-Queries/Sample-Queries",
@@ -396,7 +396,7 @@ module.exports = [
     title: "Resources",
     children: [
       {
-        title: "REFERENCES",
+        title: "References",
         collapsable: false,
         children: [
           "dev/resources/genesis-file/genesis",

@@ -1,6 +1,6 @@
-# Tutorial on Liquid Staking OKT
+# Tutorial on liquid staking OKT
 
-**OKTC's Liquid Staking protocol of OKT is now live!**
+**OKTC’s liquid staking protocol of OKT is now live!**
 
 Liquid Staking allows users to access and deploy their staked assets, namely OKT.
 
@@ -68,23 +68,23 @@ In short, holding 1 **stOKT** is a representation of a share of the total staked
 
 ## How to liquid stake OKT
 
-1.  Go to the OKTC Liquid Staking protocol page's **Stake** tab: [here](https://www.okx.com/oktc/liquid-staking/stake)
+1.  Go to the OKTC Liquid Staking protocol page’s **Stake** tab: [here](https://www.okx.com/oktc/liquid-staking/stake)
 2.  Connect your wallet and make sure you switch to the OKTC network.
-3.  Enter the amount of OKT tokens you want to stake, click the `Stake` button, and confirm the transaction in the wallet.
+3.  Enter the amount of OKT tokens you want to stake, click the **‘Stake’** button, and confirm the transaction in the wallet.
 4.  The OKTC Liquid Staking protocol will send you the corresponding amount of **stOKT** based on the latest exchange ratio between OKT and **stOKT**.
 
 ## How to unstake
 
-1.  Go to the OKTC Liquid Staking protocol page's **Unstake** tab: [here](https://www.okx.com/oktc/liquid-staking/unstake)
+1.  Go to the OKTC Liquid Staking protocol page’s **Unstake** tab: [here](https://www.okx.com/oktc/liquid-staking/unstake)
 2.  Connect your wallet and make sure you switch to the OKTC network.
-3.  Enter the amount of **stOKT** tokens you want to unstake, click the [Unstake] button, and confirm the transaction in your wallet.
+3.  Enter the amount of **stOKT** tokens you want to unstake, click the **‘Unstake’** button, and confirm the transaction in your wallet.
 4.  The OKTC Liquid Staking protocol will burn the **stOKT** tokens once you redeem them and issue an NFT([OKTCLST](https://www.okx.com/explorer/oktc/address/0x07CB2ce543bF5204DAaF1e62c183BBD08752609E)) as a receipt for OKT tokens.
 5.  You need to hold the NFT receipt and wait for 14-28 days to then claim your OKTs.
 
 ## How to claim OKT
 
-1.  After the waiting period, head to the OKTC Liquid Staking protocol page's **Claim** tab: [here](https://www.okx.com/oktc/liquid-staking/claim)
+1.  After the waiting period, head to the OKTC Liquid Staking protocol page’s **Claim** tab: [here](https://www.okx.com/oktc/liquid-staking/claim)
 2.  Connect your wallet and make sure you switch to the OKTC network.
 3.  You could see `Total claimable funds` and `Pending amount` OKT amounts in the `Claim` tab.
-4.  Click the `Claim All` button, and confirm the transaction in the wallet.
+4.  Click the **‘Claim All’** button, and confirm the transaction in the wallet.
 5.  The OKTC Liquid Staking protocol will burn the NFT receipt, and you will receive the corresponding amount of OKT tokens.

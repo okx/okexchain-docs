@@ -1,6 +1,6 @@
 # Get started
 
-This guide will quickly take you through how to initialize, create, and deploy your subgraph with OKC's Subgraph service.
+This guide will quickly take you through how to initialize, create, and deploy your subgraph with OKC’s subgraph service.
 
 By deploying the subgraph, you can explore the subgraph GraphQL API by issuing queries and viewing the schema.
 

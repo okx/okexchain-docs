@@ -1,4 +1,4 @@
-# Deploy Your Own OKTC Testnet
+# Deploy your own OKTC testnet
 
 This document describes 2 ways to setup a network of `oktc` nodes, each serving a different usecase:
 
@@ -7,7 +7,7 @@ This document describes 2 ways to setup a network of `oktc` nodes, each serving 
 
 Supporting code can be found in the [networks directory](https://github.com/okx/exchain/tree/dev/networks) and additionally the `local` sub-directories.
 
-## Available Docker images
+## Available docker images
 
 In case you need to use or deploy oktc as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
@@ -18,7 +18,7 @@ In case you need to use or deploy oktc as a container you could skip the `build`
 
 The same images can be used to build your own docker-compose stack.
 
-## Single-node, Local, Manual Testnet
+## Single-node, local, manual testnet
 
 This guide helps you create a single validator node that runs a network locally for testing and other development related uses.
 
@@ -27,7 +27,7 @@ This guide helps you create a single validator node that runs a network locally 
 - [Install oktc](/dev/quick-start/install-oktc.html)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
-### Create Genesis File and Start the Network
+### Create genesis file and start the network
 
 ```bash
 # You can run all of these commands from your home directory
@@ -56,7 +56,7 @@ exchaind start --chain-id testchain-1
 
 This setup puts all the data for `exchaind` in `~/.exchaind`. You can examine the genesis file you created at `~/.exchaind/config/genesis.json`. With this configuration `exchaincli` is also ready to use and has an account with tokens (both staking and custom).
 
-## Multi-node, Local, Automated Testnet
+## Multi-node, local, automated testnet
 
 From the [networks/local directory](https://github.com/okx/exchain/tree/dev/networks/local):
 
@@ -81,7 +81,7 @@ cd exchain
 make build-docker-exchainnode
 ```
 
-### Run Your Testnet
+### Run your testnet
 
 To start a 4 node testnet run:
 
@@ -154,7 +154,7 @@ directly via Docker, for example:
 docker logs -f exchaindnode0
 ```
 
-### Keys & Accounts
+### Keys & accounts
 
 To interact with `exchaincli` and start querying state or creating txs, you use the
 `exchaincli` directory of any given node as your `home`, for example:
@@ -166,9 +166,9 @@ exchaincli keys list --home ./build/node0/exchaincli
 Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
-> _NOTE_: Each node's seed is located at `./build/nodeN/exchaincli/key_seed.json` and can be restored to the CLI using the `exchaincli keys add --restore` command
+> _NOTE_: Each node’s seed is located at `./build/nodeN/exchaincli/key_seed.json` and can be restored to the CLI using the `exchaincli keys add --restore` command
 
-### Special Binaries
+### Special binaries
 
 If you have multiple binaries with different names, you can specify which one to run with the BINARY environment variable. The path of the binary is relative to the attached volume. For example:
 

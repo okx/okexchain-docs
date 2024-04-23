@@ -328,4 +328,4 @@ ExecuteMsg::Mint { recipient, amount } => execute_mint(deps, env, info, recipien
 ## bytecraft and sylvia combined example  
 https://github.com/okx/wasm-sylvia-template
 
-(A whitelist sample contract using the Sylvia programming framework and bytecraft's compilation, deployment and task testing) 
+(A whitelist sample contract using the Sylvia programming framework and bytecraft’s compilation, deployment and task testing) 

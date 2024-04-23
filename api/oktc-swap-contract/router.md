@@ -41,8 +41,8 @@ Adds liquidity to a KIP20⇄KIP20 pool.
 |----|----|----|
 |tokenA|address|The contract address of one token from your liquidity pair.|
 |tokenB|address|The contract address of the other token from your liquidity pair.|
-|amountADesired|uint|The amount of tokenA you'd like to provide as liquidity.|
-|amountBDesired|uint|The amount of tokenA you'd like to provide as liquidity.|
+|amountADesired|uint|The amount of tokenA you’d like to provide as liquidity.|
+|amountBDesired|uint|The amount of tokenA you’d like to provide as liquidity.|
 |amountAMin|uint|The minimum amount of tokenA to provide (slippage impact).|
 |amountBMin|uint|The minimum amount of tokenB to provide (slippage impact).|
 |to|address|Address of LP Token recipient.|
@@ -63,7 +63,7 @@ Adds liquidity to a KIP20⇄WOKT pool.
 |----|----|----|
 |addLiquidityOKT|uint|The payable amount in OKT.|
 |token|address|The contract address of the token to add liquidity.|
-|amountTokenDesired|uint|The amount of the token you'd like to provide as liquidity.|
+|amountTokenDesired|uint|The amount of the token you’d like to provide as liquidity.|
 |amountTokenMin|uint|The minimum amount of the token to provide (slippage impact).|
 |amountOKTMin|uint|The minimum amount of OKT to provide (slippage impact).|
 |to|address|Address of LP Token recipient.|

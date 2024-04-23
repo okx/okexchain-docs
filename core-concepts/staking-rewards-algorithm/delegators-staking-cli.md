@@ -1,4 +1,4 @@
-# Staking Rewards Manual (CLI)
+# Staking rewards manual (CLI)
 
 This guide explains how to use command-line interface (CLI) commands to earn staking rewards as a validator or delegator.
 
@@ -8,7 +8,7 @@ This guide explains how to use command-line interface (CLI) commands to earn sta
 
 ## What is staking?
 
-OKTC employs Tendermint's (BFT-DPoS) consensus algorithm. Users can use the command-line interface (CLI) tool to stake OKT and earn voting rights, and also have the option to give their votes to their desired validator node(s) for access to dividend rewards on the chain.
+OKTC employs Tendermint’s (BFT-DPoS) consensus algorithm. Users can use the command-line interface (CLI) tool to stake OKT and earn voting rights, and also have the option to give their votes to their desired validator node(s) for access to dividend rewards on the chain.
 
 
 
@@ -115,7 +115,7 @@ exchaincli query staking delegator <delegatorAddress>
 exchaincli query distr rewards <delegatorAddr> [validatorAddr]
 ```
 
-### Withdraw a single validator's staking reward
+### Withdraw a single validator’s staking reward
 
 ```Shell
 // Withdraw rewards from a given validator address.

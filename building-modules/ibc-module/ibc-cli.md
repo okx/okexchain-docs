@@ -170,7 +170,7 @@ When the configuration file of the chain pair (Path) is configured, it can be ad
 rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
 ```
 
-### IBC chain pair (Path) create client
+### IBC chain pair (path) create client
 
 ```Bash
 // send create client message to the source chain and destination chain 
@@ -180,7 +180,7 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
  rly tx clients <pathName> -d 
 ```
 
-### IBC chain pair (Path) create connection
+### IBC chain pair (path) create connection
 
 ```Bash
 // send create connection message to the source chain and destination chain 
@@ -190,7 +190,7 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
  rly tx connection <pathName> -d 
 ```
 
-### IBC chain pair (Path) create channel
+### IBC chain pair (path) create channel
 
 ```Bash
 // send create connection message to the source chain and destination chain 
@@ -200,7 +200,7 @@ rly paths add <srcChainAlias> <destChainAlias> <pathName> --file <pathJsonFile>
  rly tx channel <pathName> -d   
 ```
 
-### With this IBC chain pair (Path), initiate backend process and it will automatically relay the data packet
+### With this IBC chain pair (path), initiate backend process and it will automatically relay the data packet
 
 This step shows that the private chain and OKTC mainnet already created an IBC cross-chain connection, initiated the backend process and assisted the packet relay.
 

@@ -1,6 +1,6 @@
-# How to deploy OKTC Subgraph
+# How to deploy OKTC subgraph
 
-## Develop Subgraph
+## Develop subgraph
 
 ### Code specification
 
@@ -14,20 +14,20 @@ Refer to: https://github.com/okx-subgraph/oktc-subgraph-example/blob/main/docs/D
 
 ### Block height requirement
 
-- The query block height can't be lower than 13,400,000
+- The query block height can’t be lower than 13,400,000
 - Sample：https://github.com/okx-subgraph/oktc-subgraph-example/
 
-## Upload Subgraph code to Github
+## Upload subgraph code to Github
 
 Special notes
 
-- If the code repository is a private repository, you need to add your OKC Github account subgraph@okx.com. (This step isn't required for public code repositories)
-- Before uploading the subgraph code, please make sure it's been compiled
+- If the code repository is a private repository, you need to add your OKC Github account subgraph@okx.com. (This step isn’t required for public code repositories)
+- Before uploading the subgraph code, please make sure it’s been compiled
 
-## Deploy the Subgraph on the Hosted Service
+## Deploy the subgraph on the hosted service
 
 OKC will help you with the deployment
 
-## With the Subgraph deployed, you can query the Graph
+## With the subgraph deployed, you can query the Graph
 
 After the subgraph is deployed, it takes some time to synchronize the block height before it can be queried.

@@ -1,7 +1,7 @@
-# Official KIP20 Tokens
+# Official KIP20 tokens
 ## Mainnet KIP20
 
-For Mainnet only.
+For mainnet only.
 
 |       Symbol       |    Contract Address   |    Decimals   |
 |--------------------|-----------------------|-----------------------|

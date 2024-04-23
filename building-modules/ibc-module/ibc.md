@@ -1,21 +1,21 @@
-# IBC Overview
+# IBC overview
 
 ## **What is IBC?**
 
-&nbsp;&nbsp;&nbsp;&nbsp;IBC, short for Inter-Blockchain Communication, was developed by Tendermint, Interchain Foundation, Agoric Systems and others, represents a portion of the broader Cosmos network ecosystem. The purpose of IBC is to help connect different blockchains all together with the simplest method possible. Currently speaking, some of the most popular blockchains-like Bitcoin or Ethereum-function on their own "islands", isolated from each other and the outside world. The IBC protocol comes in to solve this issue, acting as a social networking system for these blockchains, providing a means for them to communicate, exchange tokens and info with each other.
+&nbsp;&nbsp;&nbsp;&nbsp;IBC, short for Inter-blockchain communication, was developed by Tendermint, Interchain Foundation, Agoric Systems and others, represents a portion of the broader Cosmos network ecosystem. The purpose of IBC is to help connect different blockchains all together with the simplest method possible. Currently speaking, some of the most popular blockchains-like Bitcoin or Ethereum-function on their own "islands", isolated from each other and the outside world. The IBC protocol comes in to solve this issue, acting as a social networking system for these blockchains, providing a means for them to communicate, exchange tokens and info with each other.
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;IBC is somewhat similar to the TCP protocol. Before the advent of TCP, the internet was a collection of individual computer networks, all lacking the means to effectively communicate with each other. But along with IP, TCP/IP was able to standardize the method of sending and routing data between separate computer networks, resulting in the seamless sharing of info on the modern internet we've all learned to enjoy. On that same note, IBC has done the same with the blockchain, hence why Cosmos is often referred to as "the internet of the blockchain".
+&nbsp;&nbsp;&nbsp;&nbsp;IBC is somewhat similar to the TCP protocol. Before the advent of TCP, the internet was a collection of individual computer networks, all lacking the means to effectively communicate with each other. But along with IP, TCP/IP was able to standardize the method of sending and routing data between separate computer networks, resulting in the seamless sharing of info on the modern internet we’ve all learned to enjoy. On that same note, IBC has done the same with the blockchain, hence why Cosmos is often referred to as "the internet of the blockchain".
 
 &nbsp;&nbsp;&nbsp;&nbsp;The following are some of the common solutions used in regards to cross-chaining:
 
 - Notary schemes: In essence, this is when two parties entrust a third party to validate and relay cross-chain data or interactions between the two parties. This method works well for supporting heterogeneous blockchains, but is considered a centralized method.
-- Hash locking: first used in Bitcoin's Lighting Network, hash locking is a combination of hash lock and time lock in order to protect inter-blockchain asset transactions. Time lock is a time restriction set on transactions, cancelling out expired transactions; however, this method can only support asset trading but not transfers.
+- Hash locking: first used in Bitcoin’s Lighting Network, hash locking is a combination of hash lock and time lock in order to protect Inter-blockchain asset transactions. Time lock is a time restriction set on transactions, cancelling out expired transactions; however, this method can only support asset trading but not transfers.
 - Side chains: simply put, side chains are new chains built on existing chains, potentially different but still reliant on the original chains. Side chains work in tandem with their original chains, making up for areas in which the other chain lacks, thereby facilitating the transfer of assets between the two chains.
 
 ## **IBC core principles**
 
-&nbsp;&nbsp;&nbsp;&nbsp;IBC is a combination of the notary scheme and side chain mechanisms, with a framework based on the multi-chain and multi-layer development of the relay chain. IBC's protocol is similar to that of TCP's, applying the layering design, as shown in the chart below:
+&nbsp;&nbsp;&nbsp;&nbsp;IBC is a combination of the notary scheme and side chain mechanisms, with a framework based on the multi-chain and multi-layer development of the relay chain. IBC’s protocol is similar to that of TCP’s, applying the layering design, as shown in the chart below:
 
 ![protocol](../../img/ibc-protocol.png)
 
@@ -31,13 +31,13 @@
 
 ### **Handshake**
 
-&nbsp;&nbsp;&nbsp;&nbsp;As the chart below shows, IBC's connecting mechanism is similar to TCP's three-way handshake, but one major difference between the two is that while the TCP/IP handshake is a direct end-to-end data interaction between two directly connected parties, IBC's connecting mechanism is done through a third party component called the relayer. The relayer conducts additional relay control and is different than TCP/IP in that IBC's connection/channel layer (chart above) needs to go through an additional connection creating process.
+&nbsp;&nbsp;&nbsp;&nbsp;As the chart below shows, IBC’s connecting mechanism is similar to TCP’s three-way handshake, but one major difference between the two is that while the TCP/IP handshake is a direct end-to-end data interaction between two directly connected parties, IBC’s connecting mechanism is done through a third party component called the relayer. The relayer conducts additional relay control and is different than TCP/IP in that IBC’s connection/channel layer (chart above) needs to go through an additional connection creating process.
 
 ![handshake](../../img/ibc-handshake.jpeg)
 
 #### **Client layer protocol**
 
-&nbsp;&nbsp;&nbsp;&nbsp;The client layer is IBC protocol's initial state and lowest layer, responsible for storing its peer network's metadata. The connection creating process of the client layer is as shown in the chart below:
+&nbsp;&nbsp;&nbsp;&nbsp;The client layer is IBC protocol’s initial state and lowest layer, responsible for storing its peer network’s metadata. The connection creating process of the client layer is as shown in the chart below:
 
 ![client](../../img/ibc-create-client.png)
 
@@ -45,18 +45,18 @@
 
 |      | message            | Use                                                          | Trigger time                               | Caller                |
 | ---- | ------------------ | ------------------------------------------------------------ | ------------------------------------------ | --------------------- |
-| 1    | CreateClient       | Create a client, generate a unique client ID to store peer chain's metadata | While attempting to create the client      | Host chain/peer chain |
-| 2    | UpdateClient       | Update client, maintain IBC client's vigor and security      | Anytime after creation of client           | Host chain/peer chain |
-| 3    | UpgradeClient      | Upgrade peer chain's metadata, host chain executes synchronized update after receiving connection | If metadata needs to be modified           | Host chain            |
+| 1    | CreateClient       | Create a client, generate a unique client ID to store peer chain’s metadata | While attempting to create the client      | Host chain/peer chain |
+| 2    | UpdateClient       | Update client, maintain IBC client’s vigor and security      | Anytime after creation of client           | Host chain/peer chain |
+| 3    | UpgradeClient      | Upgrade peer chain’s metadata, host chain executes synchronized update after receiving connection | If metadata needs to be modified           | Host chain            |
 | 4    | SubmitMisbehaviour | Freeze client, renders status inactive                       | When the client exudes suspicious activity | Host chain            |
 
-&nbsp;&nbsp;&nbsp;&nbsp;The chart below shows the client's recorded metadata:
+&nbsp;&nbsp;&nbsp;&nbsp;The chart below shows the client’s recorded metadata:
 
 |      | ChainId        | Use                                                          |
 | ---- | -------------- | ------------------------------------------------------------ |
-| 1    | ChainId        | peer block's ID, for example exchain-66                      |
+| 1    | ChainId        | peer block’s ID, for example exchain-66                      |
 | 2    | TrustLevel     | Percentage of trusted node signatures, defaulted at 1/3      |
-| 3    | TrustingPeriod | Client's validity period, judgement of peer chain's activity on host chain is determined by the analysis of this metadata |
+| 3    | TrustingPeriod | Client’s validity period, judgement of peer chain’s activity on host chain is determined by the analysis of this metadata |
 | 4    | FrozenHeight   | Client exudes wrongful behavior, this field expresses that the Client is no longer valid |
 | 5    | LatestHeight   | The most recent height of the peer chain on the host chain   |
 | 6    | ProofSpecs     | metadata related to proof verification, for example hash algorithmn |
@@ -64,11 +64,11 @@
 
 #### **Connection layer protocol**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Connection is the upper layer protocol of client and IBC protocol's transitional state. Connection layers connection creating process is similar to that of client's, both containing certain timed out sends which are reliant on relayer. Connection layer's connection structure is as shown in the chart below:
+&nbsp;&nbsp;&nbsp;&nbsp;Connection is the upper layer protocol of client and IBC protocol’s transitional state. Connection layers connection creating process is similar to that of client’s, both containing certain timed out sends which are reliant on relayer. Connection layer’s connection structure is as shown in the chart below:
 
 ![connection](../../img/ibc-connection.png)
 
-There are 4 different message categories in the connection layer, and each category's logic is described in the chart below:
+There are 4 different message categories in the connection layer, and each category’s logic is described in the chart below:
 
 |      | message               | use                                                          | trigger time                                                 | caller     |
 | ---- | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------- |
@@ -79,11 +79,11 @@ There are 4 different message categories in the connection layer, and each categ
 
 #### **Channel layer protocol**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Channel layer is an application layer protocol, and all business developments can be found in this dimension. Taking place after the connection is created and reliant on relayer, a chart of channel layer protocol's connection structure is as shown below:
+&nbsp;&nbsp;&nbsp;&nbsp;Channel layer is an application layer protocol, and all business developments can be found in this dimension. Taking place after the connection is created and reliant on relayer, a chart of channel layer protocol’s connection structure is as shown below:
 
 ![channel](../../img/ibc-channel.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Below are 4 kinds of message categories in the channel layer and their corresponding logic's:
+&nbsp;&nbsp;&nbsp;&nbsp;Below are 4 kinds of message categories in the channel layer and their corresponding logic’s:
 
 |      | message            | use                           | Trigger time                                              | Caller     |
 | ---- | ------------------ | ----------------------------- | --------------------------------------------------------- | ---------- |
@@ -105,7 +105,7 @@ There are 4 different message categories in the connection layer, and each categ
 
 - Client activity verification
 
-     &nbsp;&nbsp;&nbsp;&nbsp; There is a validity period field in the metadata of the client, which ensures that both clients are active and valid at the time. When the transaction is not active, in order to guarantee the client won't expire, there often will be regular updating intervals set up in the backend and program, as shown in the chart below:
+     &nbsp;&nbsp;&nbsp;&nbsp; There is a validity period field in the metadata of the client, which ensures that both clients are active and valid at the time. When the transaction is not active, in order to guarantee the client won’t expire, there often will be regular updating intervals set up in the backend and program, as shown in the chart below:
 
      ![security01](../../img/ibc-security-01.jpg)
 
@@ -162,7 +162,7 @@ The only step in the entire process that requires the user to participate is "In
 
 &nbsp;&nbsp;&nbsp;&nbsp;    The bottom layer of OKTC is the early cosmos-sdk (v0.39), while IBC involves the code of v0.40+, and there are major code changes from 39 to 40. After the version upgrade, OKTC now not only supports the EVM system, but also supports IBC.
 
-### **OKTC-ERC20**
+### **OKTC-ERC-20**
 
-&nbsp;&nbsp;&nbsp;&nbsp;    Cross-chain native tokens are considered to have no commercial value on OKTC, and so after the arrival of cross-chain transferring of native tokens to OKTC, through the hooks function of IBC's application layer, the logic sunk down into the EVM layer. With ERC20, contracts were able to automatically generate the mapping of corresponding tokens, which caused everyone in the industry to focus on this one aspect. But finally, the barrier between Cosmos and EVM was broken down and a bridge between the two was built.
+&nbsp;&nbsp;&nbsp;&nbsp;    Cross-chain native tokens are considered to have no commercial value on OKTC, and so after the arrival of cross-chain transferring of native tokens to OKTC, through the hooks function of IBC’s application layer, the logic sunk down into the EVM layer. With ERC-20, contracts were able to automatically generate the mapping of corresponding tokens, which caused everyone in the industry to focus on this one aspect. But finally, the barrier between Cosmos and EVM was broken down and a bridge between the two was built.
 

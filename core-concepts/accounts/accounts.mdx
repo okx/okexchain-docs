@@ -2,18 +2,18 @@
 
 This document describes the in-built accounts system of OKTC.
 
-## Pre-requisite Readings
+## Pre-requisite readings
 
 - [Cosmos SDK Accounts](https://docs.cosmos.network/v0.46/basics/accounts.html)
 - [Ethereum Accounts](https://ethereum.org/en/whitepaper/#ethereum-accounts)
 
-## OKTC Accounts
+## OKTC accounts
 
-OKTC defines its own custom `Account` type that uses Ethereum's ECDSA secp256k1 curve for keys. This
+OKTC defines its own custom `Account` type that uses Ethereum’s ECDSA secp256k1 curve for keys. This
 satisfies the [EIP84](https://github.com/ethereum/EIPs/issues/84) for full [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) paths.
 The root HD path for OKTC-based accounts is `m/44'/60'/0'/0`.
 
-## Addresses and Public Keys
+## Addresses and public keys
 
 There are 3 main types of `Addresses`/`PubKeys` available by default on OKTC:
 

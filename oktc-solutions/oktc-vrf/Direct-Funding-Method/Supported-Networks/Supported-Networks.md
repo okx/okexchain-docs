@@ -1,6 +1,6 @@
-# Supported Networks
+# Supported networks
 
-## Wrapper Parameters
+## Wrapper parameters
 
 These parameters are configured in the VRF  Wrapper contract. You can view these values by running `getConfig` and call other view function on the VRF  Wrapper or by viewing the VRF  Wrapper contract in a blockchain explorer.
 
@@ -10,14 +10,14 @@ These parameters are configured in the VRF  Wrapper contract. You can view these
 - `uint32 wrapperGasOverhead`: The gas overhead of the VRF  Wrapper’s `fulfillRandomWords` function.
 - `uint32 s_minGasPrice`: The min gas price for consumer request randomwords transaction.
 
-## Coordinator Parameters
+## Coordinator parameters
 
 Some parameters are important to know and are configured in the coordinator contract. You can view these values by running `getConfig` on the coordinator or by viewing the coordinator contract in a blockchain explorer.
 
 - `uint16 minimumRequestConfirmations`: The minimum number of confirmation blocks on VRF requests before oracles respond
 - `uint32 maxGasLimit`: The maximum gas limit supported for a `fulfillRandomWords` callback. Note that you still need to substract the `wrapperGasOverhead` for the accurate limit, as explained in [Direct funding limits](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Direct-Funding-Method.html#limits).
 
-## Fee Parameters
+## Fee parameters
 
 Fee parameters are configured in the VRF  Wrapper and the VRF  Coordinator contracts and specify the premium you pay per request in addition to the gas cost for the transaction. You can view them by running `getConfig` on the VRF  Wrapper:
 

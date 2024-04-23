@@ -1,7 +1,7 @@
 # Entities
 Entities define the schema of the subgraph, and represent the data that can be queried. Within each entity are sets of fields that store useful information related to the entity. Below is a list of the available entities within the Subgraph, and descriptions for the available fields.  
 
-## Swap Factory
+## Swap factory
 The Swap Factory entity is responsible for storing aggregate information across all Swap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more. There is only one Swap Factory entity in the subgraph.  
 | Field Name  | Value Type  |  Description  |
 |:---|:-----|:---|

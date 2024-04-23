@@ -18,7 +18,7 @@ echo "export GOBIN=$GOPATH/bin" >> ~/.bash_profile
 echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
 source ~/.bash_profile
 ```
-Under Windows, you may set environment variables(`HOME` or `GO111MODULE`) through the "Environment Variables" 
+Under Windows, you may set environment variables(`HOME` or `GO111MODULE`) through the **‘Environment variables’** 
 button on the "Advanced" tab of the "System" control panel. Some versions of Windows 
 provide this control panel through the "Advanced System Settings" option inside the 
 "System" control panel.
@@ -28,7 +28,7 @@ provide this control panel through the "Advanced System Settings" option inside 
 
 ## Install the binaries
 
-Next, let's install the latest version of OKTC. Make sure you `git checkout` the [latest released version](https://github.com/okx/exchain/releases).
+Next, let\’s install the latest version of OKTC. Make sure you `git checkout` the [latest released version](https://github.com/okx/exchain/releases).
 
 ```bash
 # mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases/latest
@@ -84,7 +84,7 @@ build_tags: netgo
 go: go version go1.19.2 darwin/amd64
 ```
 
-### Build Tags
+### Build tags
 
 Build tags indicate special features that have been enabled in the binary.
 
@@ -97,7 +97,7 @@ Build tags indicate special features that have been enabled in the binary.
 
 **Do not use snap at this time to install the binaries for production until we have a reproducible binary system.**
 
-## Developer Workflow
+## Developer workflow
 
 To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause needs to be added to `go.mod` providing the correct import path.
 

@@ -1,6 +1,6 @@
-# OKX Wallet
+# OKX wallet
 
-## Switching to OKTC in OKX Wallet
+## Switching to OKTC in OKX wallet
 
 1. Unlock your OKX Wallet and click the network selection icon in the upper right corner, which is selected as All networks by default.
 

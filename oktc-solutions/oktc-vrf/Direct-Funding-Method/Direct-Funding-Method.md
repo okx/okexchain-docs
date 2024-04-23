@@ -1,4 +1,4 @@
-# Direct Funding Method
+# Direct funding method
 
 This guide explains how to generate random numbers using the Direct funding method. This method doesn’t require a subscription and is optimal for one-off requests for randomness. This method also works best for applications where your end-users must pay the fees for VRF because the cost of the request is determined at request time.
 
@@ -28,9 +28,9 @@ Because the consuming contract directly pays the OKT for the request, the cost i
 
 Make sure that your consuming contracts are funded with enough OKT tokens to cover the transaction costs. If the consuming contract doesn’t have enough OKT tokens, your request will revert.
 
-## Request and Receive Data
+## Request and receive data
 
-### End To End Diagram
+### End to end diagram
 
 Two types of accounts exist in the OKT ecosystem:
 
@@ -83,7 +83,7 @@ Each wrapper has a `maxNumWords` parameter that limits the maximum number of ran
 
 The maximum allowed `callbackGasLimit` value for your requests is defined in the [Coordinator contract supported networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks) page. Because the VRF  Wrapper adds an overhead, your `callbackGasLimit` must not exceed `maxGasLimit - wrapperGasOverhead`.
 
-## What's next
+## What’s next
 
 - [› Get a Random Number](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Get-a-Random-Number/Get-a-Random-Number.html#get-a-random-number/)
 - [› Supported Networks](/dev/oktc-solutions/oktc-vrf/Direct-Funding-Method/Supported-Networks/Supported-Networks.html#supported-networks)

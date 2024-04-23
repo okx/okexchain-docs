@@ -1,5 +1,5 @@
 # KIP20
-## KIP20 Token
+## KIP20 token
 A KIP20 token must implement the interface IKIP20 in IKIP20.sol. This is a template contract KIP20Token.template. Users just need to fill in _name, _symbol, _decimals and _totalSupply according to their own requirements:
 ```
   constructor() public {
@@ -13,9 +13,9 @@ A KIP20 token must implement the interface IKIP20 in IKIP20.sol. This is a templ
   }
 ```
 Then users can use [Remix IDE](https://remix.ethereum.org/) and Metamask to compile and deploy the KIP20 contract to OKTC.
-## Contract Interaction with Web3 and NodeJS
+## Contract interaction with Web3 and NodeJS
 
-Connect to OKTC's public RPC endpoint
+Connect to OKTC’s public RPC endpoint
 ```
 const Web3 = require('web3');
 

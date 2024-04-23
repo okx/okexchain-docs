@@ -61,7 +61,7 @@ npm install -g @okexchain/bytecraft
 ```
 
 ### Install cosmwasm-check
-It allows checking if the Wasm binary is a proper smart contract that's ready to be uploaded to the blockchain.
+It allows checking if the Wasm binary is a proper smart contract that’s ready to be uploaded to the blockchain.
 ```sh
 cargo install cosmwasm-check
 ```
@@ -330,7 +330,7 @@ Then, exit the bytecraft console and deploy the `mydapp` smart contract to testn
 bytecraft deploy mydapp --signer test --network oktc-testnet
 ```
 
-After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
+After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft’s utility functions. An example of `refs.json` can be found below:
 
 ```json
 {
@@ -732,7 +732,7 @@ Then, exit the bytecraft console and deploy the `mydapp` smart contract to testn
 bytecraft deploy mydapp --signer test --network oktc-mainnet
 ```
 
-After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft's utility functions. An example of `refs.json` can be found below:
+After deployment, the `refs.json` file will be updated in the project directory. These files contain references to all contracts inside of your project which have been stored on any exchain network. This information is utilized by bytecraft’s utility functions. An example of `refs.json` can be found below:
 
 ```
 {
@@ -1146,7 +1146,7 @@ DESCRIPTION
 
 ### `bytecraft new NAME`
 
-Create new dapp from template.
+Create new DApp from template.
 
 ```
 USAGE
@@ -1158,7 +1158,7 @@ FLAGS
   --version=<value>  [default: 1.0]
 
 DESCRIPTION
-  Create new dapp from template.
+  Create new DApp from template.
 
 EXAMPLES
   $ bytecraft new awesome-dapp

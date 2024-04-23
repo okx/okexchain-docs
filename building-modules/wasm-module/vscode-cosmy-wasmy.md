@@ -5,11 +5,11 @@ Cosmy Wasmy simplifies the development and interactions of CosmWasm smart contra
 
 ## Environment configuration
 
-In this section, we'll prepare our machines and install the necessary tools for developing, deploying, and interacting with smart contracts on OKTC.
+In this section, we’ll prepare our machines and install the necessary tools for developing, deploying, and interacting with smart contracts on OKTC.
 
 ### Install OKTC
 
-Make sure you've installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc.html).
+Make sure you’ve installed the OKTC application: [Installation tutorial](/dev/quick-start/install-oktc.html).
 
 ### Install Rust
 
@@ -41,11 +41,11 @@ newgrp docker
 
 ### Install plugin
 
-You can install `Cosmy Wasmy` from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy), or you can search for `Cosmy Wasmy` in the sidebar next to vscode Extensions. The following should appear on your screen when you've completed the installation:
+You can install `Cosmy Wasmy` from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy), or you can search for `Cosmy Wasmy` in the sidebar next to vscode Extensions. The following should appear on your screen when you’ve completed the installation:
 
 ![img](./image/wasmy-1.png)
 
-After completing the installation, it's recommended that you configure your plugin settings; the following are the next steps you would take to do this.
+After completing the installation, it’s recommended that you configure your plugin settings; the following are the next steps you would take to do this.
 
 #### 1.Select your destination chain
 
@@ -61,7 +61,7 @@ If you already have test accounts, you can add a new account in the Account side
 
 ![img](./image/wasmy-3.gif)
 
-> Note: Please don't use your mainnet account here; and mnemonics are stored in vscode as plain text.
+> Note: Please don’t use your mainnet account here; and mnemonics are stored in vscode as plain text.
 
 ####  3.Import contract  
 
@@ -82,7 +82,7 @@ You can import the address of any contract that was deployed on your chain here:
 | Reload chain config     | cosmy-wasmy.reloadConfig     |                 | Opens a quick pick menu for the user to pick a new chain for the current workspace |
 | Reset data              | cosmy-wasmy.resetData        |                 | Deletes all the extension stored data, like accounts and contracts. |
 | Show Cosmwasm history   | cosmy-wasmy.history          | ctrl+shift+a    | Shows latest queries and transactions and with saved inputs. Allows easy re-execution of same queries. The number of saved queries is configurable in the settings. |
-| Export Cosmy Wasmy data | cosmy-wasmy.export           |                 | Export imported accounts, all imported contracts, and history as a JSON file. Be careful sharing this file with others as it'll include your seed phrase. |
+| Export Cosmy Wasmy data | cosmy-wasmy.export           |                 | Export imported accounts, all imported contracts, and history as a JSON file. Be careful sharing this file with others as it’ll include your seed phrase. |
 
 ## Using plugin
 
@@ -169,7 +169,7 @@ You can import the address of any contract that was deployed on your chain here:
 - Contract invocation: Show how to deploy the contract to the testnet, instantiate it, and execute the smart contract functions.
 - Contract query: Demonstrate how to query the internal state of the contract.
 
-You may have noticed that writing smart contracts isn't within the scope of this section. This section is intentionally customized to make it as easy to understand as possible and avoid the complex risks of smart contract development. If you want to learn more about OKCWasm contract code development, you can refer to the [CosmWasm documents](https://docs.cosmwasm.com/docs/), as OKCWasm is developed based on CosmWasm.
+You may have noticed that writing smart contracts isn’t within the scope of this section. This section is intentionally customized to make it as easy to understand as possible and avoid the complex risks of smart contract development. If you want to learn more about OKCWasm contract code development, you can refer to the [CosmWasm documents](https://docs.cosmwasm.com/docs/), as OKCWasm is developed based on CosmWasm.
 
 ### Contract compilation
 
@@ -205,14 +205,14 @@ There are 3 methods for uploading code
    
    2. Select an account
    
-   3. Click Upload contract button, select the optimized Wasm folder, e.g. `./artifacts/wasm_counter.wasm`
+   3. Click **Upload Contract** button, select the optimized Wasm folder, e.g. `./artifacts/wasm_counter.wasm`
    
       ![img](./image/wasmy-21.png)
    
 2. Right-click to upload contract
    1. Select Cosmy Wasmy plugin in the panel to the left
    2. Select an account
-   3. In the file bar, right-click the `Upload Contract` button
+   3. In the file bar, right-click the **‘Upload Contract’** button
 
 ![img](./image/wasmy-22.png)
 

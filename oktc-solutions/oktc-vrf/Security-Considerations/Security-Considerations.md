@@ -1,5 +1,5 @@
 
-# VRF Security Considerations
+# VRF Security considerations
 
 Gaining access to high quality randomness on-chain requires a solution like OKTC’s VRF, but it also requires you to understand some of the ways that miners or validators can potentially manipulate randomness generation. Here are some of the top security considerations you should review in your project.
 

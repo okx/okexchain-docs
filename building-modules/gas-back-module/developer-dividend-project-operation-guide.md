@@ -1,8 +1,8 @@
-# Developer Dividend Project Operation Guide
+# Developer dividend project operation guide
 
 This article introduces how to participate in the contract dividend distribution project on OKTC.
 
-## How do contract developers participate in Gas Back?
+## How do contract developers participate in gas back?
 
 *Note: the following operations all require OKTC to updated to* *[v1.6.5.1](https://github.com/okx/exchain/tree/v1.6.5.1)* *or newer.*
 
@@ -12,9 +12,9 @@ This article introduces how to participate in the contract dividend distribution
 
 - Contract address: after registering, call this contract (initiate transaction) to proportionally distribute the handling fee dividend to the designated recipient.
 
-- Deployer address: contract deployer. The deployer has to be this registered contract's initiator (deployer address: that is, the currently connected wallet address).
+- Deployer address: contract deployer. The deployer has to be this registered contract’s initiator (deployer address: that is, the currently connected wallet address).
 
-- Withdrawer address: address of the recipient, handling fee dividend is transferred to this account; if this is not set up, the payment will directly go to the deployer's address.
+- Withdrawer address: address of the recipient, handling fee dividend is transferred to this account; if this is not set up, the payment will directly go to the deployer’s address.
 
 - Nonce: nonce value of the deploying contract transaction.`Nonce`and`deployer`can accurately deduce and judge the accuracy of`contract`. The input format supports Arabic numerals, or a string of Arabic numerals separated by English commas.（i.e.,`3or100,3,1,9`）.
 
@@ -28,11 +28,11 @@ This article introduces how to participate in the contract dividend distribution
 
 - `contract`: contract address. After registering, call this contract (initiate transaction) to proportionally distribute the handling fee dividend to the designated recipient.
 
-- `deployer`: contract deployer. The deployer has to be this registered contract's initiator (for the currently connected wallet address).
+- `deployer`: contract deployer. The deployer has to be this registered contract’s initiator (for the currently connected wallet address).
 
 - `nonces`: nonce value of the deploying contract transaction.`Nonce`and`deployer`can accurately deduce and judge the accuracy of`contract`. The input format supports Arabic numerals, or a string of Arabic numerals separated by English commas. (i.e.,`3，100,3,1,9`).
 
-- `withdraw`: recipient's address. The handling fee dividend goes into this account; if this is not set up, the dividend will automatically go into the deployer's address.
+- `withdraw`: recipient’s address. The handling fee dividend goes into this account; if this is not set up, the dividend will automatically go into the deployer’s address.
 
 ```Python
 exchaincli tx feesplit register \
@@ -52,9 +52,9 @@ After registering for Gas Back, you can modify your receiving address by clickin
 
 - `contract`: contract address. After registering, call this contract (initiate transaction) to proportionally distribute the handling fee dividend to the designated recipient.
 
-- `withdraw`: recipient's address. Handling fee dividend goes into this account; if it is not set up,the payment will automatically be sent to the deployer's address.
+- `withdraw`: recipient’s address. Handling fee dividend goes into this account; if it is not set up,the payment will automatically be sent to the deployer’s address.
 
-- `deployer`: contract deployer. The deployer has to be this registered contract's initiator (for currently connected wallet address).
+- `deployer`: contract deployer. The deployer has to be this registered contract’s initiator (for currently connected wallet address).
 
 ```Python
 exchaincli tx feesplit update \
@@ -73,7 +73,7 @@ After registering for Gas Back, you can opt to stop participating in the handlin
 
 - `contract`: contract address. After registering, call this contract (initiate transaction) to proportionally distribute the handling fee dividend to the designated recipient.
 
-- `deployer`: contract deployer. The deployer has to be this registered contract's initiator (for the currently connected wallet address).
+- `deployer`: contract deployer. The deployer has to be this registered contract’s initiator (for the currently connected wallet address).
 
 ```Python
 exchaincli tx feesplit cancel \
@@ -153,4 +153,4 @@ Only transactions in pure EVM format are supported, that is, transactions in whi
 
 The project supports contract address derivation in EVM `CREATE` mode, but does not support contract address deriving in `CREATE2` mode.
 
-The project supports deriving smart contract addresses from the deployer's address, and the `nonces` value input cannot exceed 20 digits.
+The project supports deriving smart contract addresses from the deployer’s address, and the `nonces` value input cannot exceed 20 digits.

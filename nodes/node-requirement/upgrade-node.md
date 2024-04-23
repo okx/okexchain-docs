@@ -1,8 +1,8 @@
-# Upgrade Your Node
+# Upgrade your node
 
 This document describes the upgrade procedure of a `exchaind` full-node to a new version.
 
-## Software Upgrade
+## Software upgrade
 
 First, stop your instance of `exchaind`. Next, upgrade the software:
 
@@ -19,13 +19,13 @@ See the [testnet repo](https://github.com/okx/testnets) for details on which ver
 
 Your full node has been cleanly upgraded!
 
-## Upgrade Genesis File
+## Upgrade genesis file
 
 If the new version you are upgrading to has breaking changes, you will have to restart your chain. If it is not breaking, you can skip to [Restart](#restart)
 
 To upgrade the genesis file, you can either fetch it from a trusted source or export it locally.
 
-### Fetching from a Trusted Source
+### Fetching from a trusted source
 
 If you are joining a public testnet, fetch the genesis from the appropriate testnet in the [testnet repo](https://github.com/okx/testnets). Otherwise, fetch it from your trusted source.
 
@@ -39,7 +39,7 @@ mv new_genesis.json genesis.json
 
 Then, go to the [reset data](#reset-data) section.
 
-### Exporting State to a New Genesis Locally
+### Exporting state to a new genesis locally
 
 If you were running a node in the previous version of the network and want to build your new genesis locally from a state of this previous network, use the following command:
 
@@ -57,7 +57,7 @@ cp -f genesis.json new_genesis.json
 mv new_genesis.json genesis.json
 ```
 
-## Reset Data
+## Reset data
 
 If the version <new_version> you are upgrading to is not breaking from the previous one, you should not reset the data. If it is not breaking, you can skip to [Restart](#restart)
 
@@ -72,7 +72,7 @@ First, remove the outdated files and reset the data. **If you are running a vali
 exchaind unsafe-reset-all
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven’t also been upgraded.
 
 ## Restart
 
