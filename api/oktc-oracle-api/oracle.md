@@ -1,4 +1,4 @@
-# OKTC Price Feeds 
+# OKTC price feeds 
 
 
 # Introduction to OKTC price feeds

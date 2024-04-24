@@ -58,7 +58,7 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 ## Wallet
 
-**OKX Wallet:** [OKTC wallet download](https://chrome.google.com/webstore/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge)
+**OKX wallet:** [OKTC wallet download](https://chrome.google.com/webstore/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge)
 
 **Metamask:** [Metamask download](https://metamask.io/)
 

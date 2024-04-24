@@ -15,19 +15,19 @@ exchaind start --rest.laddr "tcp://localhost:8545" --wsport 8546 --chain-id <cha
 Then, start a websocket subscription with [ws](https://github.com/hashrocket/ws), or something else websocket clients
 
 ```bash
-# connect to websocet at port 8546 as defined above
+# Connect to websocet at port 8546 as defined above
 ws ws://localhost:8546/
 
-# subscribe to new Ethereum-formatted block Headers
+# Subscribe to new Ethereum-formatted block Headers
 > {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 < {"jsonrpc":"2.0","result":"0x65eca2989ce064d141862c8b7138c1e","id":1}
 ```
 ## Mainnet and testnet websocket URL
 ```shell
-# Mainnet Websocket URL
+# Mainnet websocket URL
 wss://exchainws.okex.org:8443
 
-## Testnet Websocket URL
+## Testnet websocket URL
 wss://exchaintestws.okex.org:8443
 ```
 
@@ -61,7 +61,7 @@ was cancelled successful.
     >> {"id": 1, "method": "eth_unsubscribe", "params": ["0x65eca2989ce064d141862c8b7138c1e"]}
     << {"jsonrpc":"2.0","id":1,"result":true}
 
-## Supported Subscriptions
+## Supported subscriptions
 
 ### newHeads
 

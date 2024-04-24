@@ -1,4 +1,4 @@
-# Developer Dividend Project 
+# Developer dividend project 
 
 # Introduction
 

@@ -65,7 +65,7 @@ Using the following website’s data as an example, imagine a user holds 1000 OK
 
 ### Source of staking rewards
 
-OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 21M OKT in circulation, including 10M OKT allocated by Genesis Mining; each new block corresponds to a 0.125 OKT reward from 2023-3-18 15:45(0.5 OKT reward before), and the reward is **halved every 9 months**.
+OKTCs staking rewards come from block rewards and transaction fees. OKTs issuing mechanism is similar to that of BTC, which takes a fixed total amount and periodically reduces tokens. OKT has a total of 21M OKT in circulation, including 10M OKT allocated by genesis mining; each new block corresponds to a 0.125 OKT reward from 2023-3-18 15:45(0.5 OKT reward before), and the reward is **halved every 9 months**.
 
 | **Deflation Date** | **Block Reward** | **Blocks** | **Volume** |
 | ------------------ | ---------------- | ---------- | ---------- |

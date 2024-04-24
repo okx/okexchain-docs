@@ -10,7 +10,7 @@
     - https://exchainrpc.okex.org
 - Chain ID: 66
 - Currency Symbol: OKT
-- Block Explorer URL: https://www.okx.com/explorer/oktc/
+- Block explorer URL: https://www.okx.com/explorer/oktc/
 
 ![avatar](../../img/metamask-01.for-mainnet-en.jpeg)
 
@@ -29,7 +29,7 @@ ___
 Set up a Remix OKTC mainnet development environment.    
 Remix is an in-browser IDE for Solidity smart contracts. In this guide, we will learn how to deploy a contract to a running OKTC mainnet through Remix and interact with it.   
 ### 1. Connect OKTC account to Remix
-Go to [Remix](http://remix.ethereum.org/). There are some contracts in the File Explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
+Go to [Remix](http://remix.ethereum.org/). There are some contracts in the file explorer. Select any of these contracts. In this example, we use `Storage.sol`. On the left-most bar, select the Solidity Compiler and compile the contract.
 
 
 ![avatar](../../img/metamask-02.png)
@@ -44,7 +44,7 @@ You should see your account show up in the left-hand panel.
 ### 2. Deploy and interact
 Now that your account is connected, you are able to deploy the contract. Press the **‘Deploy’** button. A metamask pop-up will appear asking you to confirm. Confirm the transaction   
 
-Once the contract has been successfully deployed, you will see it show up in the Deployed Contracts section in the left-hand side, as well as a green check in the Remix console showing the transaction details.   
+Once the contract has been successfully deployed, you will see it show up in the deployed contracts section in the left-hand side, as well as a green check in the Remix console showing the transaction details.   
 
 ![avatar](../../img/metamask-04.png)
 

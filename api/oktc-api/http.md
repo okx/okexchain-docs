@@ -35,7 +35,7 @@ https://exchainrpc.okex.org/okexchain/v1/staking/delegators/0x11941B5f5A1BD39bc3
 The API endpoints of Get Balance of all currencies for a single Address .
 By default, just show currencies partially, you can use parameter of `show=all` to see all; you can use the parameter of `symbol=btc` to see just one.
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/accounts/{address}`
 
@@ -49,7 +49,7 @@ https://exchainrpc.okex.org/okexchain/v1/accounts/ex1508d7eq592kg2lh9d46xvv3r4sm
 
 ```
 
-#### Request Parameters
+#### Request parameters
 
 | **Parameter** | **Type** | **Required** | **Description**                                           |
 | :------------ | :------- | :----------- | :-------------------------------------------------------- |
@@ -57,7 +57,7 @@ https://exchainrpc.okex.org/okexchain/v1/accounts/ex1508d7eq592kg2lh9d46xvv3r4sm
 | show          | String   | No           | Type: <br> `all`: show all <br> `partial`: show part <br> |
 | symbol        | String   | No           | for example `btc`                                         |
 
-> Example Response
+> Example response
 
 ```json
 {
@@ -75,7 +75,7 @@ https://exchainrpc.okex.org/okexchain/v1/accounts/ex1508d7eq592kg2lh9d46xvv3r4sm
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**    |
 | :------------ | :------- | :----------------- |
@@ -89,7 +89,7 @@ https://exchainrpc.okex.org/okexchain/v1/accounts/ex1508d7eq592kg2lh9d46xvv3r4sm
 
 The API endpoints of get user’s account_number and sequence.
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/auth/accounts/{address}`
 
@@ -99,7 +99,7 @@ The API endpoints of get user’s account_number and sequence.
 https://exchainrpc.okex.org/okexchain/v1/auth/accounts/ex1xkl5agjzqnjnptyat2dng2asmx8g5kll7evelk
 ```
 
-#### Request Parameters
+#### Request parameters
 
 | **Parameter** | **Type** | **Required** | **Description**    |
 | :------------ | :------- | :----------- | :----------------- |
@@ -125,7 +125,7 @@ https://exchainrpc.okex.org/okexchain/v1/auth/accounts/ex1xkl5agjzqnjnptyat2dng2
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**  | **Type** | **Description**                         |
 | :------------- | :------- | :-------------------------------------- |
@@ -145,7 +145,7 @@ https://exchainrpc.okex.org/okexchain/v1/auth/accounts/ex1xkl5agjzqnjnptyat2dng2
 
 Get the latest information on blocks
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/blocks/latest`
 
@@ -156,7 +156,7 @@ https://exchainrpc.okex.org/okexchain/v1/blocks/latest
 
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -348,7 +348,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response arameters
 
 | **Parameter**           | **Type** | **Description**                        |
 | :---------------------- | :------- | :------------------------------------- |
@@ -401,7 +401,7 @@ None
 
 Get information on by block height
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/blocks/{height}`
 
@@ -411,7 +411,7 @@ Get information on by block height
 https://exchainrpc.okex.org/okexchain/v1/blocks/2322601
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -474,7 +474,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**           | **Type** | **Description**                        |
 | :---------------------- | :------- | :------------------------------------- |
@@ -523,11 +523,11 @@ None
 | >> height               | String   | Block height.                          |
 | >> last_commit_hash     | String   | Last commit hash.                      |
 
-### Get Tx Info
+### Get tx info
 
 Get Tx information by Tx hash
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/txs/{hash}`
 
@@ -537,7 +537,7 @@ Get Tx information by Tx hash
 https://exchainrpc.okex.org/okexchain/v1/txs/0x9C19D09361F01296EE5FB910634C08C8329414A90965317605B34C209DB19624
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -562,7 +562,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**    | **Type** | **Description**         |
 | :--------------- | :------- | :---------------------- |
@@ -585,7 +585,7 @@ None
 
 Get the latest validator set
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/validatorsets/latest`
 
@@ -595,7 +595,7 @@ Get the latest validator set
 https://exchainrpc.okex.org/okexchain/v1/validatorsets/latest
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -713,7 +713,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**       | **Type** | **Description**                 |
 | :------------------ | :------- | :------------------------------ |
@@ -728,7 +728,7 @@ None
 
 Get the latest validator set
 
-#### HTTP Request
+#### HTTP request
 
 `GET okexchain/v1/validatorsets/{height}`
 
@@ -738,7 +738,7 @@ Get the latest validator set
 https://exchainrpc.okex.org/okexchain/v1/validatorsets/2697221
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -878,7 +878,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**       | **Type** | **Description**                 |
 | :------------------ | :------- | :------------------------------ |
@@ -889,7 +889,7 @@ None
 | > pub_key           | String   | Pub key of validator.           |
 | > voting_power      | String   | Voting power of validator.      |
 
-### Get node Info
+### Get node info
 
 Get Information about the connected node
 
@@ -943,7 +943,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**       | **Type** | **Description**      |
 | :------------------ | :------- | :------------------- |
@@ -987,7 +987,7 @@ GET if the node is currently syning with other nodes
 https://exchainrpc.okex.org/okexchain/v1/syncing
 ```
 
-#### Request Parameters
+#### Request parameters
 
 None
 
@@ -999,7 +999,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**                 |
 | :------------ | :------- | :------------------------------ |
@@ -1038,7 +1038,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**                | **Type** | **Description**                             |
 | :--------------------------- | :------- | :------------------------------------------ |
@@ -1090,7 +1090,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**          | **Type** | **Description**                             |
 | :--------------------- | :------- | :------------------------------------------ |
@@ -1131,7 +1131,7 @@ None
 
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**     | **Type** | **Description**           |
 | :---------------- | :------- | :------------------------ |
@@ -1189,7 +1189,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**                               | **Type** | **Description**                                    |
 | :------------------------------------------ | :------- | :------------------------------------------------- |
@@ -1262,7 +1262,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 See the response of Get validators api
 
@@ -1305,7 +1305,7 @@ None
 
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**             |
 | :------------ | :------- | :-------------------------- |
@@ -1336,7 +1336,7 @@ None
 "ex1q9nct2gska2yutx24starv6s63xz022fmf8vxk"
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**           |
 | :------------ | :------- | :------------------------ |
@@ -1369,7 +1369,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description** |
 | :------------ | :------- | :-------------- |
@@ -1402,7 +1402,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**     | **Type** | **Description**                   |
 | :---------------- | :------- | :-------------------------------- |
@@ -1433,7 +1433,7 @@ None
 "exvaloper1q9nct2gska2yutx24starv6s63xz022fdwdgzv"
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**   |
 | :------------ | :------- | :---------------- |
@@ -1679,7 +1679,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**     | **Type** | **Description**               |
 | :---------------- | :------- | :---------------------------- |
@@ -1718,7 +1718,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**             | **Type** | **Description**                                              |
 | :------------------------ | :------- | :----------------------------------------------------------- |
@@ -1797,7 +1797,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**     | **Type** | **Description**               |
 | :---------------- | :------- | :---------------------------- |
@@ -1835,7 +1835,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description** |
 | :------------ | :------- | :-------------- |
@@ -1871,7 +1871,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**                |
 | :------------ | :------- | :----------------------------- |
@@ -1907,7 +1907,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**                 |
 | :------------ | :------- | :------------------------------ |
@@ -1938,7 +1938,7 @@ None
 "ex1h0j8x0v9hs4eq6ppgamemfyu4vuvp2sl0q9p3v"
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**  |
 | :------------ | :------- | :--------------- |
@@ -1973,7 +1973,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**          |
 | :------------ | :------- | :----------------------- |
@@ -2038,7 +2038,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code?page=1&count_total=true&rever
 
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**                               | **Type**     | **Description**             |
 | :------------------------------------------ | :----------- | :-------------------------- |
@@ -2086,7 +2086,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/1
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**                     | **Type** | **Description**        |
 | :-------------------------------- | :------- | :--------------------- |
@@ -2128,7 +2128,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex14hj2tavq8fpesdwxxcu44r
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**          |
 | :------------ | :------- | :----------------------- |
@@ -2177,7 +2177,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/code/3/contracts?page=1&count_tota
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**       | **Type** | **Description**             |
 | :------------------ | :------- | :-------------------------- |
@@ -2240,7 +2240,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1ufs3tlq4umljk0qfe8k5ya
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**                       | **Type**     | **Description**              |
 | :---------------------------------- | :----------- | :--------------------------- |
@@ -2288,7 +2288,7 @@ Response is Base64
 # base64Code represent{"name":"my test token","symbol":"MTT","decimals":10}
 ```
 
-#### Response Parameters
+#### Response parameters
 
 None
 
@@ -2321,7 +2321,7 @@ https://exchainrpc.okex.org/okexchain/v1/wasm/contract/ex1qg5ega6dykkxc307y25pec
 # eyJiYWxhbmNlIjoiOTk5OTk5MDAifQ== represent {"balance":"99999900"}
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description** |
 | :------------ | :------- | :-------------- |
@@ -2378,7 +2378,7 @@ coderID
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**       | **Type**     | **Description**            |
 | :------------------ | :----------- | :------------------------- |
@@ -2423,7 +2423,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**      | **Type** | **Description**                 |
 | :----------------- | :------- | :------------------------------ |
@@ -2450,7 +2450,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**               |
 | :------------ | :------- | :---------------------------- |
@@ -2477,7 +2477,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**      | **Type** | **Description**         |
 | :----------------- | :------- | :---------------------- |
@@ -2545,7 +2545,7 @@ None
  }]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**              | **Type** | **Description**                                              |
 | :------------------------- | :------- | :----------------------------------------------------------- |
@@ -2604,7 +2604,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**  |
 | :------------ | :------- | :--------------- |
@@ -2642,7 +2642,7 @@ None
 }
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter**     | **Type** | **Description**             |
 | :---------------- | :------- | :-------------------------- |
@@ -2743,7 +2743,7 @@ None
 ]
 ```
 
-#### Response Parameters
+#### Response parameters
 
 | **Parameter** | **Type** | **Description**                    |
 | :------------ | :------- | :--------------------------------- |

@@ -1,18 +1,18 @@
-# Connecting Your Wallet
+# Connecting your wallet
 
-## Install a Web3 Compatible Wallet
+## Install a Web3 compatible wallet
 
-1. To use Web3 wallet: visit [Web3 Wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
+1. To use Web3 wallet: visit [Web3 wallet](https://www.okx.com/cn/web3), download Web3 wallet, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups. 
 2. To use Metamask: visit [Metamask](https://metamask.io/) , download Metamask, follow the instructions to create an account, and do not forget your login password and mnemonic phrases etc, also create backups.
 3. Currently, TokenPocket, Bitkeep, ONTO and HyperPay already support OKTC. For details, check the tutorials of each wallet’s official website.
 
 
-## Creating a Wallet with Metamask
+## Creating a wallet with Metamask
 
 1. Click on the MetaMask icon in the upper right corner to open the extension.
 
 2. To install the latest version of MetaMask, click “**Try It Now**”.
-
++
 3. Click "**Continue**".
 
 ![metamask download](./img/3.gif)
@@ -41,7 +41,7 @@
 ## Add OKTC Network
 
 
-The OKX Wallet supports multiple chains and will already be compatible with the OKTC network by default, no further configuration required.
+The OKX wallet supports multiple chains and will already be compatible with the OKTC network by default, no further configuration required.
 
 
 If the user is using Metamask wallet, they should: Click on Settings; Select custom RPC in the drop-down menu; Click "**Add a network**"; Enter the following info below on the pop-up form：
@@ -68,7 +68,7 @@ On the OKTC chain, OKTs function as native tokens. This means that a user can pa
 
 > **OKT can be purchased from**: [OKT-USDT](https://www.okx.com/cn/trade-spot/okt-usdt)
 
-## OKTC Social Media
+## OKTC Social media
 
 
 >- **OKTC Homepage**：[OKTC Homepage](https://www.okx.com/oktc)
