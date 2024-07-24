@@ -31,7 +31,7 @@ Output:
 web3.eth.accounts.create();
 {
   address: '0x03975c070801D6110EBD8301a0F159f89FB7a4C0',
-  privateKey: 'BB1C835AB9770454318D8F19079AA1498EFE3B57654E8084134ADB7854969D93',
+  privateKey: '',
   signTransaction: [Function: signTransaction],
   sign: [Function: sign],
   encrypt: [Function: encrypt]
