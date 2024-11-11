@@ -22,14 +22,6 @@ For example, one use for data feeds is to enable smart contracts to retrieve the
 
 
 
-**OKTC Testnet：**
-
-| Name | Address|
-|--|--|
-| Oracle |[0x8825446B7881F54d296AF704c1050BdBB08A2589](https://www.okx.com/explorer/oktc-test/address/0x8825446B7881F54d296AF704c1050BdBB08A2589)|
-| dataSource |[0xF4E0D270c864eE527ff73d1afC558778570dae8B](https://www.okx.com/explorer/oktc-test/address/0xF4E0D270c864eE527ff73d1afC558778570dae8B)|
-
-
 
 ### Code example
 

@@ -19,15 +19,11 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 exchaincli config node <host>:<port>
 
-# example: exchaincli config node https://exchaintesttmrpc.okex.org (testnet)
 # example: exchaincli config node https://exchaintmrpc.okex.org (mainnet)
 ```
 
 Or any of the following address ports:
 ```bash
-# testnet
-https://exchaintesttmrpc.okex.org
-
 # mainnet
 https://exchaintmrpc.okex.org
 ```
@@ -46,9 +42,6 @@ exchaincli config trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-# testnet
-exchaincli config chain-id exchain-65
-
 # mainnet
 exchaincli config chain-id exchain-66
 ```
@@ -577,7 +570,7 @@ Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
 exchaincli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
-  --chain-id=exchain-65 \
+  --chain-id=exchain-66 \
   --from=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --generate-only > unsignedTx.json
 ```

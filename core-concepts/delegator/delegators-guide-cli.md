@@ -151,7 +151,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `exchaind` [here](/dev/quick-start/install-oktc) and the guide to run a full-node [here](/dev/quick-start/join-oktc-testnet).
+You will find the tutorial on how to install `exchaind` [here](/dev/quick-start/install-oktc) .
 
 ### Connecting to a Remote Full-Node
 
@@ -200,7 +200,7 @@ exchaincli config trust-node false
 Finally, set the `chain-id` of the blockchain you want to interact with:
 
 ```bash
-exchaincli config chain-id exchain-65
+exchaincli config chain-id exchain-66
 ```
 
 ## Querying the State
@@ -249,7 +249,6 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
 
-On OKTC testnet, the accepted denom is OKT, If you need to get OKT, you can get it [here](https://discord.gg/B5nMs6qK5F).
 
 ### A Note on Gas and Fees
 
@@ -265,7 +264,6 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block.
 
-For testnet, the recommended `gas-prices` is `0.005okt`.
 
 
 ### Sending Tokens
@@ -347,7 +345,7 @@ In order to sign, you will also need the `chain-id`, `account-number` and `seque
 Get the chain-id from the genesis file (`oktc`), and the two other fields using the account query:
 
 ```bash
-exchaincli query account <yourAddress> --chain-id exchain-65
+exchaincli query account <yourAddress> --chain-id exchain-66
 ```
 
 Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, [create an account on the offline computer](#using-a-computer). For additional security, you can double check the parameters of your transaction before signing it using the following command:
@@ -359,7 +357,7 @@ cat unsignedTx.json
 Now, sign the transaction using the following command. You will need the `chain-id`, `sequence` and `account-number` obtained earlier:
 
 ```bash
-exchaincli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id exchain-65 --sequence <sequence> --account-number <account-number> > signedTx.json
+exchaincli tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id exchain-66 --sequence <sequence> --account-number <account-number> > signedTx.json
 ```
 
 Copy `signedTx.json` and transfer it back to the online computer. Finally, use the following command to broadcast the transaction:

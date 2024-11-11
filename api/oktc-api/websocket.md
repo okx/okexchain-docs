@@ -22,13 +22,11 @@ ws ws://localhost:8546/
 > {"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 < {"jsonrpc":"2.0","result":"0x65eca2989ce064d141862c8b7138c1e","id":1}
 ```
-## Mainnet and testnet websocket URL
+## Mainnet websocket URL
 ```shell
 # Mainnet websocket URL
 wss://exchainws.okex.org:8443
 
-## Testnet websocket URL
-wss://exchaintestws.okex.org:8443
 ```
 
 

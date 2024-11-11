@@ -2,7 +2,7 @@
 
 This guide will explain how to install the `exchaind` and `exchaincli` entrypoints
 onto your system. With these installed on a server, you can participate in the
-testnet as either a [Full Node](/dev/quick-start/join-oktc-mainnet) or a
+mainnet as either a [Full Node](/dev/quick-start/join-oktc-mainnet) or a
 [Validator](/dev/core-concepts/validator/validators-guide-cli).
 
 ## Install Go
@@ -32,14 +32,13 @@ Next, let\’s install the latest version of OKTC. Make sure you `git checkout` 
 
 ```bash
 # mainnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases/latest
-# testnet, <latest-release-tag> can be viewed through this link https://github.com/okx/exchain/releases, and use latest pre-release version
+
 git clone -b <latest-release-tag> https://github.com/okx/exchain
 export GO111MODULE=on
 cd exchain 
 # mainnet, use make mainnet
 make mainnet
-# testnet, use make testnet
-make testnet
+
 ```
 Under Windows, you can execute the below commands on PowerShell to set the environment variable `GO111MODULE`.
 ```shell script
@@ -108,4 +107,4 @@ To test any changes made in the Cosmos-SDK or Tendermint, a `replace` clause nee
 
 ## Next
 
-Now you can [join the mainnet](/dev/quick-start/join-oktc-mainnet), [the public testnet](/dev/quick-start/join-oktc-testnet) or [create you own testnet](/dev/quick-start/deploy-you-own-oktc-testnet)
+Now you can [join the mainnet](/dev/quick-start/join-oktc-mainnet)

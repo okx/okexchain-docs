@@ -57,9 +57,9 @@ module.exports = {
       port: 8545,            // Standard OKTC port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://exchaintestrpc.okex.org`),
-      network_id: 65,
+    mainnet: {
+      provider: () => new HDWalletProvider(mnemonic, `https://exchainrpc.okex.org`),
+      network_id: 66,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -82,9 +82,9 @@ Notice, it requires mnemonic to be passed in for Provider, this is the seed phra
 ## Deploying on OKTC Network
 Run this command in root of the project directory:
 ```
-$ truffle migrate --network testnet
+$ truffle migrate --network mainnet
 ```
-Contract will be deployed on OKTC chapel testnet, it look like this:
+Contract will be deployed on OKTC chapel mainnet, it look like this:
 ```
 1_initial_migration.js
 ======================
@@ -124,5 +124,5 @@ Summary
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
 Congratulations! You have successfully deployed KIP20 smart contract. Now you can interact with the smart contract.
-You can check the deployment status here: [https://www.okx.com/explorer/](https://www.okx.com/explorer/) or [https://www.okx.com/explorer/oktc-test](https://www.okx.com/explorer/oktc-test)
+You can check the deployment status here: [https://www.okx.com/explorer/](https://www.okx.com/explorer/) 
 

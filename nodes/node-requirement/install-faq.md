@@ -68,11 +68,11 @@ ERROR: chain ID required but not specified
 You should use the flag
 ```shell script
 $ exchaincli query block 6547302 --trust-node
-$ exchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id exchain-65
+$ exchaincli tx send boos ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 1okt -y --fees 0.002okt --chain-id exchain-66
 ```
 or local configuration
 ```shell script
-$ exchaincli config chain-id exchain-65
+$ exchaincli config chain-id exchain-66
 $ exchaincli config trust-node true
 ```
 

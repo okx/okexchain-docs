@@ -12,34 +12,18 @@ This article focuses on how to use CosmoWasmJS for connectiong to OKTC nodes and
 ## Preconditions
 Need to install [Node](https://nodejs.org/en/download/) while using CosmoWasmJS
 ## Choice of network
-You can choose between mainnet, testnet or local testnet.
-> Cosmwasm on mainnet is coming soon. Use testnet instead for now.
+You can choose between mainnet or local testnet.
+> Cosmwasm on mainnet is coming soon. Use local testnet instead for now.
 ### Mainnet
-There is no need to build nodes on the main network, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [mainnet node set up](/dev/quick-start/join-oktc-mainnet).
+There is no need to build nodes on the main network, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own mainnet node, please refer to [mainnet node set up](/dev/quick-start/join-oktc-mainnet).
 
 Below is the URL of the mainnet RPC node
 > const rpcEndpoint = "https://exchaintmrpc.okex.org"
-### Testnet
 
-There is no need to build nodes on testnet, and the development of OKTC wasm contracts can directly access the RPC node services provided by OKTC. If you need to build your own testnet node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet).
-
-Below is the URL of the testnet RPC node
-> const rpcEndpoint = "https://exchaintesttmrpc.okex.org"
-### Local testnet
-Download the OKTC source code and set up the OKTC local testnet through the script we provide
-
-```shell
-git clone https://github.com/okx/exchain.git
-cd exchain/dev
-sh ./wasm-test.sh 
-```
-
-Below is the URL of the testnet RPC node
-
-> const rpcEndpoint = "https://localhost:26657"
 
 ## Install Node.js
 https://nodejs.org/en/download/
+
 ## Create project
 **Note: everything in this subsection uses local testnet**
 
@@ -70,7 +54,6 @@ import { stringToPath } from "@cosmjs/crypto";
 
 // This is your rpc endpoint
 // If you choice mainnet ,please use "https://exchaintmrpc.okex.org"
-// If you choice testnet ,please use "https://exchaintesttmrpc.okex.org"
 const rpcEndpoint = "http://localhost:26657";
 
 // Using mnemonic

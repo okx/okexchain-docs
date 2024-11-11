@@ -38,13 +38,6 @@ Once a validator is created, OKT holders can delegate OKTs to them, effectively 
 
 Out of all validator candidates that signaled themselves, the 21 with the highest stake are the ones who are designated as **validators**. If a validator’s total stake falls below the top 21 then that validator loses the validator privileges: therefore they can’t participate in consensus and generate rewards any more.
 
-## Testnet
-
-### How can I join the testnet?
-
-The testnet is a great environment to test your validator setup before launch.
-
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](/dev/quick-start/join-oktc-testnet) and [here](https://github.com/okx/testnets).
 
 ### What are the different types of keys?
 
@@ -131,7 +124,7 @@ For more information on incentives, see [Staking Rewards Algorithm](/dev/core-co
 
 Validators should expect to provision one or more data center locations with redundant power, networking, firewalls, HSMs and servers.
 
-We expect that a modest level of hardware specifications will be needed initially and that they might rise as network use increases. Participating in the testnet is the best way to learn more.
+We expect that a modest level of hardware specifications will be needed initially and that they might rise as network use increases. 
 
 ### What are software requirements?
 

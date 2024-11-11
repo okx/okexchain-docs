@@ -4,13 +4,6 @@
 
 [OKTC Source Code](https://github.com/okx/exchain)
 
-## Testnet
-
-[Testnet](https://www.okex.com/dex-test)
-
-[Testnet okt](https://www.okex.com/activities/pro/drawdex)
-
-[Testnet explorer](https://www.okx.com/explorer/oktc-test)
 
 ## Cosmos
 
