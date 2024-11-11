@@ -35,11 +35,6 @@ The OKTC block explorer allows you to search, view and analyze OKTC data—like 
 
 `exchaincli` is a command-line interface to interact with OKTChain. `exchaincli` is the only tool that supports 100% of the OKTC features, including accounts, transfers, delegation, and governance. Learn more about exchaincli with the [delegator's CLI guide](/dev/core-concepts/delegator/delegators-guide-cli).
 
-## Running a full-node on the OKTC testnet
-
-In order to run a full-node on the OKTC testnet, you must first [install `exchaind`](/dev/getting-start/install-oktc). Then, follow [the guide](/dev/getting-start/install-oktc).
-
-If you would like to run a validator node, follow the [validator setup guide](/dev/validators/validators-guide-cli).
 
 ## Join the community
 
