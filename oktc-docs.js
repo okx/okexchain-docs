@@ -15,8 +15,6 @@ module.exports = [
         children: [
           "dev/quick-start/overview",
           "dev/quick-start/install-oktc",
-          "dev/quick-start/deploy-you-own-oktc-testnet",
-          "dev/quick-start/join-oktc-testnet",
           "dev/quick-start/join-oktc-mainnet",
         ],
       },
@@ -112,7 +110,6 @@ module.exports = [
         collapsable: false,
         children: [
           "dev/nodes/operation/how-to-start-mainnet-node",
-          "dev/nodes/operation/how-to-join-the-public-testnet",
         ],
       },
       {

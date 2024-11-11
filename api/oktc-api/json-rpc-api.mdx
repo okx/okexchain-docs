@@ -6,10 +6,6 @@ JSON-RPC methods and namespaces supported on OKTC.
 
 https://exchainrpc.okex.org/
 
-## Testnet (chain-id: 0x41, 65 in decimal)
-
-https://exchaintestrpc.okex.org/
-
 ## 3rd Party provider
 
 -
@@ -26,8 +22,6 @@ We recommend you start the HTTP JSON-RPC with curl.
 ## mainnet
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchainrpc.okex.org/
 
-## testnet
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H "Content-Type: application/json" https://exchaintestrpc.okex.org/
 ```
 
 Moreover, you also can start the HTTP JSON-RPC with geth. For getting geth you can [download](https://geth.ethereum.org/downloads) or building with [source ](https://github.com/ethereum/go-ethereum) self.
@@ -36,8 +30,6 @@ Moreover, you also can start the HTTP JSON-RPC with geth. For getting geth you c
 ## mainnet
 geth attach https://exchainrpc.okex.org/
 
-## testnet
-geth attach https://exchaintestrpc.okex.org/
 ```
 
 ## JSON-RPC methods

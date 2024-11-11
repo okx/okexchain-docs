@@ -19,15 +19,11 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 exchaincli config node <host>:<port>
 
-# example: exchaincli config node https://exchaintesttmrpc.okex.org (testnet)
 # example: exchaincli config node https://exchaintmrpc.okex.org (mainnet)
 ```
 
 Or any of the following address ports:
 ```bash
-# testnet
-https://exchaintesttmrpc.okex.org
-
 # mainnet
 https://exchaintmrpc.okex.org
 ```
@@ -46,9 +42,6 @@ exchaincli config trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-# testnet
-exchaincli config chain-id exchain-65
-
 # mainnet
 exchaincli config chain-id exchain-66
 ```

@@ -14,7 +14,7 @@ There currently exists no appropriate cloud solution for validator key managemen
 
 Validators should expect to equip their datacenter with redundant power, connectivity, and storage backups. Having several redundant networking boxes for fiber, firewall and switching is recommended, as well as small servers with redundant hard drive and failover. 
 
-We anticipate that network requirements will be low initially. The current testnet requires minimal resources. Bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommended for storing complete blockchain histories.
+We anticipate that network requirements will be low initially. Large hard drives are recommended for storing complete blockchain histories.
 
 ## Set up a website
 

@@ -28,8 +28,8 @@ module.exports = {
   },
   networks: {
 
-    testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `https://exchaintestrpc.okex.org`),
+    mainnet: {
+        provider: () => new HDWalletProvider(mnemonic, `https://exchainrpc.okex.org`),
         network_id: 66,
         timeoutBlocks: 200,
         confirmations: 5,
@@ -60,6 +60,6 @@ module.exports = {
 ```
 - Verify
 ```
-truffle run verify KIP20Tokens@{contract-address} --network testnet
+truffle run verify KIP20Tokens@{contract-address} --network mainnet
 ```
 You should see the following output:

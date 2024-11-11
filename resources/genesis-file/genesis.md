@@ -1,15 +1,5 @@
 # Genesis file
 
-This document explains how the genesis file of the OKTC testnet is structured. It also explains how you can build a genesis file for your own `oktc` testnet.
-
-Note that you can generate a default genesis file for your own testnet by running the following command:
-
-```bash
-exchaind init <moniker> --chain-id <chain-id>
-```
-
-The genesis file is stored in `~/.exchaind/config/genesis.toml`.
-
 ## What is a genesis file
 
 A genesis file is a JSON file which defines the initial state of your blockchain. It can be seen as height `0` of your blockchain. The first block, at height `1`, will reference the genesis file as its parent.
@@ -28,7 +18,7 @@ The `chain_id` is a unique identifier for your chain. It helps differentiate bet
 
 ```json
 "chain_id": "exchain-66", // OKTC mainnet
-"chain_id": "exchain-65", // OKTC testnet
+
 ```
 
 ## Consensus parameters

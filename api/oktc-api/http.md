@@ -6,8 +6,6 @@ Rest api methords for OKTC.
 # Mainnet
 https://exchainrpc.okex.org/okexchain/v1/auth/accounts/0x11941B5f5A1BD39bc3Da48f3815C877800bb73c1
 
-# Testnet
-https://exchaintestrpc.okex.org/okexchain-test/v1/auth/accounts/0x9536354AE32852A7E7C4BFe7415b104016d5Fb04
 ```
 
 Rate Limit: 6 requests per second.

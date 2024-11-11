@@ -49,7 +49,7 @@ After completing the installation, it’s recommended that you configure your pl
 
 #### 1.Select your destination chain
 
-This extension pre-configures some chain lists that support Cosmsm Wasm, and you can choose `OKTC localnet` or `OKTC testnet`
+This extension pre-configures some chain lists that support Cosmsm Wasm, and you can choose `OKTC localnet`
 
 ![img](./image/wasmy-2.gif)
 
@@ -166,7 +166,7 @@ You can import the address of any contract that was deployed on your chain here:
 - Optimization compilation: Demonstrate how to optimize the Wasm bytecode file to an appropriate size.
 - Contract code upload: Demonstrate how to upload the compiled contract code (Wasm file) to the blockchain. 
 - Contract initialization: Demonstrate how to initialize a contract based on the contract code.
-- Contract invocation: Show how to deploy the contract to the testnet, instantiate it, and execute the smart contract functions.
+- Contract invocation: Show how to deploy the contract to the mainnet, instantiate it, and execute the smart contract functions.
 - Contract query: Demonstrate how to query the internal state of the contract.
 
 You may have noticed that writing smart contracts isn’t within the scope of this section. This section is intentionally customized to make it as easy to understand as possible and avoid the complex risks of smart contract development. If you want to learn more about OKCWasm contract code development, you can refer to the [CosmWasm documents](https://docs.cosmwasm.com/docs/), as OKCWasm is developed based on CosmWasm.

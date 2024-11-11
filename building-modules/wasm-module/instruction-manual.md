@@ -45,7 +45,7 @@ apt install jq curl
 ```
 
 ### Configure network
-You can choose to test on mainnet, testnet or local testnet.
+You can choose to test on mainnet.
 #### OKTC Mainnet
 Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet).
 
@@ -58,29 +58,9 @@ exchaincli config trust-node true
 exchaincli config node https://exchaintmrpc.okex.org
 ```
 > Wasm is not enabled on mainnet now.
-#### OKTC testnet
-Testnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [testnet node set up](/dev/quick-start/join-oktc-testnet).
 
-Configure your exchaincli
-```Bash 
-exchaincli config chain-id exchain-65
-exchaincli config trust-node true
 
-# If you are building your own node, please refer to the following commands
-# exchaincli config node <host>:<port>
-exchaincli config node https://exchaintesttmrpc.okex.org
-```
-#### Local net
-Download the OKTC source code and set up the OKTC local net through the script we provide.
-
-```Bash
-git clone https://github.com/okx/exchain.git
-cd exchain/dev
-sh start.sh
-```
-With start.sh, there is no need to configure `exchaincli`
-
-**Note: the following actions are all done with the local net, if you would like to use mainnet/testnet, please modify `--from` flag.**
+**Note: the following actions are all done with the local net, if you would like to use mainnet, please modify `--from` flag.**
 ### Set up IDE
 We need a decent IDE in order to use Rust for developing smart contracts. We strongly recommend using the following development environments; along with the Rust plugin, they provide users with a beginner friendly program language learning environment.
 
@@ -98,7 +78,7 @@ Use the standard IDE and Rust plugin for developing OKTC wasm contracts
 - **Optimize compilation**: demonstrate how to optimize a wasm bytecode file to the most suitable size.
 - **Upload contract code**: demonstrate how to upload compiled contract code (wasm file) to blockchain.
 - **Initialize contract**: demonstrate how to initialize a contract according to its contract code.
-- **Call contract**: demonstrate how to deploy contract to testnet, instantiate and execute smart contract functions.
+- **Call contract**: demonstrate how to deploy contract to mainnet, instantiate and execute smart contract functions.
 - **Query contract**: demonstrate how to query contract's internal state.  
 
 

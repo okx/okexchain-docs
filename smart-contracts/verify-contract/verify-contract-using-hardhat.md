@@ -39,7 +39,7 @@ module.exports = {
   }
 };
 ```
-OKC testnet
+OKC mainnet
 ```require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config();
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -47,7 +47,7 @@ module.exports = {
   solidity: "0.8.17",
   networks: {
     okcTest: {
-      url: "https://exchaintestrpc.okex.org",
+      url: "https://exchainrpc.okex.org",
       accounts:[process.env.PRIVKEY]
     }
   },

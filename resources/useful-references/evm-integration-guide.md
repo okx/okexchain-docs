@@ -13,19 +13,6 @@
 
 Or add network to metamask though [Chainlist](https://chainlist.org/chain/66)
 
-## Testnet
-
-**Network name:** OKTC Testnet
-
-**RPC URL:** https://exchaintestrpc.okex.org
-
-**Chain ID:** 65
-
-**Currency symbol:** OKT
-
-**Block explorer URL:** [OKTC testnet block explorer](https://www.okx.com/explorer/oktc-test/)
-
-Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 ## OKTC API document
 
@@ -34,15 +21,12 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 ## OKTC explorer
 
 > **Mainnet:** [OKTC mainnet](https://www.okx.com/explorer/oktc)
-> **Testnet: **[OKTC testnet](https://www.okx.com/explorer/oktc-test)
+
 
 ## OKTC swap
 
 **[OKTC swap](https://www.okx.com/oktc/swap)**
 
-## OKTC testnet faucet
-
-**[OKTC testnet faucet](https://www.okx.com/oktc/faucet)**
 
 ## OKTC oracle
 
@@ -52,9 +36,6 @@ Or add network to metamask though [Chainlist](https://chainlist.org/chain/65)
 
 **[OKTC subgraph](https://www.okx.com/oktc/subgraph)**
 
-## OKTC multisig
-
-**[OKTC multisig](https://oktcsafe.okx.com/#/welcome)**
 
 ## Wallet
 

@@ -34,21 +34,18 @@ Now, We have to deploy our smart contract on OKTC Network. For that, we have to 
 
 - Add a new network
 ![avatar](../../img/remix-05.png)
-- Testnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-65 * Symbol: OKT * Block explorer:
-https://www.okx.com/explorer/oktc-test
 - Mainnet * [RPC URLs](/dev/api/oktc-api/json-rpc-api) * ChainID: exchain-66 * Symbol: OKT * Block explorer: 
 https://www.okx.com/explorer/
 - Go ahead and click save
 - Copy your address from Metamask
-- Head over to [Faucet](https://discord.gg/B5nMs6qK5F) and request test OKT
-- Now, let’s deploy the smart contract on OKTC testnet
+- Now, let’s deploy the smart contract on OKTC mainnet
 - Select injected Web3 in the environment dropdown and your contract
 ![avatar](../../img/remix-06.png)
 - Accept the connection request!
 ![avatar](../../img/remix-07.png)
 - Once Metamask is connected to remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 ![avatar](../../img/remix-08.png)
-Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.okx.com/explorer/oktc-test
+Congratulations! You have successfully deployed a KIP20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://www.okx.com/explorer/oktc
 
 
 ### Remix FAQ

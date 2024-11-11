@@ -169,9 +169,7 @@ FLAGS
 DESCRIPTION
 Build wasm bytecode, store code on chain and instantiate.
 
-//example
-$ bytecraft deploy my-wasm-dapp --signer test --network testnet
-```
+
 #### Custom script deployment
 The above deployment method is very convenient when using a single contract, but when encountering multiple contracts, it is still troublesome to upload and deploy at one time. Bytecraft has task functionality that can execute custom scripts.
 ```

@@ -30,15 +30,3 @@ For mainnet only.
 |        SHIBK        |    [0xaa27badaa3c9ec9081b8f6c9cdd2bf375f143780](https://www.okx.com/explorer/oktc/address/0xaa27badaa3c9ec9081b8f6c9cdd2bf375f143780)    |  18  |
 |        WBTCK        |    [0x506f731f7656e2fb34b587b912808f2a7ab640bd](https://www.okx.com/explorer/oktc/address/0x506f731f7656e2fb34b587b912808f2a7ab640bd)    |  18  |
 
-
-
-## Testnet KIP20
-
-For testnet only.
-
-|       Symbol       |    Contract Address   |    Decimals   |
-|--------------------|-----------------------|-----------------------|
-|        WBTC        |    [0xaDAfE8e1f4887E8220c0706B07B973e410Db1Ffc](https://www.okx.com/explorer/oktc-test/address/0xaDAfE8e1f4887E8220c0706B07B973e410Db1Ffc)    |  8  |
-|        WETH        |    [0x8C78F39f69b5c49AfebF4BC00f1a7c24Af294cA5](https://www.okx.com/explorer/oktc-test/address/0x8C78F39f69b5c49AfebF4BC00f1a7c24Af294cA5)    |  16  |
-|        USDT        |    [0x5dAf7Aee05367f7eBCB86B1EcfbbD9678bB1Ef7f](https://www.okx.com/explorer/oktc-test/address/0x5dAf7Aee05367f7eBCB86B1EcfbbD9678bB1Ef7f)    |  6  |
-|        USDC        |    [0xf8616348fB444479BC84F65F61c410843407860D](https://www.okx.com/explorer/oktc-test/address/0xf8616348fB444479BC84F65F61c410843407860D)    |  6  |

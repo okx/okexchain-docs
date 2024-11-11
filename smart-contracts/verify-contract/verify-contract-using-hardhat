@@ -39,33 +39,7 @@ module.exports = {
   }
 };
 ```
-OKC testnet
-```require("@nomiclabs/hardhat-etherscan");
-require('dotenv').config();
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.17",
-  networks: {
-    okcTest: {
-      url: "https://exchaintestrpc.okex.org",
-      accounts:[process.env.PRIVKEY]
-    }
-  },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_KEY,
-    customChains: [
-      {
-        network: "okcTest",
-        chainId: 65,
-        urls: {
-          apiURL: "https://www.oklink.com/api/explorer/v1/contract/verify/async/api/okctest",
-          browserURL: "https://www.okx.com/explorer/oktc-test/"
-        }
-      }
-    ]
-  }
-};
-```
+
 Replace "process.env.PRIVKEY" with your own deployment address’s private key, and set "process.env.ETHERSCAN_KEY" to "OKLINK" (which does not need verification at this time). 
 
 Step 3: Compile your hardhat contract code and deploy it with this command(here is an example of the main network): 

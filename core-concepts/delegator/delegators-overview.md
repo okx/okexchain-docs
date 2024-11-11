@@ -56,10 +56,9 @@ The best staking management strategy consists in increasing the level of staking
 ## Punishment
 OKTC has an automatic penalty mechanism on-chain, that is currently implemented for two types of behavior:
 * When the block node is used as a validator, the block is not signed.
-   - In the current testnet, when a total of 9500 block signatures are accumulated, an automatic penalty will be executed.
    - Penalty: Jail validator 600s. 
    - The validator cannot participate in the block rotation during the Jail period.
-* Once a double signed block is found in the test network, an automatic penalty will be executed immediately.
+* Once a double signed block is found in the network, an automatic penalty will be executed immediately.
    - Penalty: Permanent Jai
    - The validator cannot participate in the block rotation during the Jail period.
 
