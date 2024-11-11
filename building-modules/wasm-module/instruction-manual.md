@@ -45,7 +45,7 @@ apt install jq curl
 ```
 
 ### Configure network
-You can choose to test on mainnet.
+You can choose to test on mainnet or local testnet.
 #### OKTC Mainnet
 Mainnet does not need to set up nodes; you can directly access RPC node services provided by OKTC for developing OKTC wasm contracts. If you need to build your own test network node, please refer to [mainnnet node set up](/dev/quick-start/join-oktc-mainnet).
 

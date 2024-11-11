@@ -166,7 +166,7 @@ As you can see the `config.json` file in the project, There predefined networks 
   "oktc-mainnet": {
     "_connection": {
       "chainID": "exchain-66",
-      "URL": "https://exchaintesttmrpc.okex.org"
+      "URL": "https://exchaintmrpc.okex.org"
     },
     "_base": {
       "instantiation": {

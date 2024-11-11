@@ -570,7 +570,7 @@ Create an unsigned transaction `unsignedTx.json`
 ###### Example:
 ```bash
 exchaincli tx send ex1fh9tpkqka29n0mj307cu5cvp5ts0p4dl3mkv7r 10okt \
-  --chain-id=exchain-65 \
+  --chain-id=exchain-66 \
   --from=ex14tytg8a9fascnr4ruhszlflunyew5rw9qclx4n \
   --generate-only > unsignedTx.json
 ```
