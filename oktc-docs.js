@@ -15,6 +15,7 @@ module.exports = [
         children: [
           "dev/quick-start/overview",
           "dev/quick-start/install-oktc",
+          "dev/quick-start/deploy-you-own-oktc-testnet",
           "dev/quick-start/join-oktc-mainnet",
         ],
       },
