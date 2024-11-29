@@ -17,6 +17,7 @@ module.exports = [
           "dev/quick-start/install-oktc",
           "dev/quick-start/deploy-you-own-oktc-testnet",
           "dev/quick-start/join-oktc-mainnet",
+          "dev/quick-start/subquery",
         ],
       },
       {
