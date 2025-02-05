@@ -9,14 +9,9 @@ According to the snapshot size, it is divided into S0, S1, S2 and S3:
  - S2. --pruning default: larger than S1 size
  - S3. --pruning nothing: maximum size
 
-Meaning of [pruning parameter](https://forum.okt.club/d/58-pruning)
-
-
 
 ## Mainnet
-Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/index](https://static.okex.org/cdn/chain/okc/snapshot/index)
-
-For the differences between snapshots, please refer to：[this](https://forum.okt.club/d/169-oec)
+Download URL: [https://static.okex.org/cdn/chain/okc/snapshot/history.html](https://static.okex.org/cdn/chain/okc/snapshot/history.html)
 
 
 ## Unpack the snapshot file for cosmos
